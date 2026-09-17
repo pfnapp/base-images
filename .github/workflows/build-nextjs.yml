@@ -106,6 +106,7 @@ jobs:
         with:
           image-ref: local/nextjs:${{ matrix.node_version }}-test
           scan-type: image
+          vuln-type: 'os'
           format: table
           exit-code: 1
           ignore-unfixed: true

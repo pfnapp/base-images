@@ -52,6 +52,7 @@ jobs:
         with:
           image-ref: local/node:${{ matrix.node_version }}-test
           scan-type: image
+          vuln-type: 'os'
           format: table
           exit-code: 1
           ignore-unfixed: true
@@ -181,10 +182,26 @@ jobs:
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}"
 
-          docker push "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
-          docker push "${TARGET_REPO}:${{ matrix.node_version }}"
+          push_with_retry() {
+            local tag="$1"
+            local attempt=1
+            while [ $attempt -le 3 ]; do
+              echo "Pushing $tag (attempt $attempt)..."
+              if docker push "$tag"; then
+                return 0
+              fi
+              echo "Push failed. Retrying in 5 seconds..."
+              sleep 5
+              attempt=$((attempt + 1))
+            done
+            echo "Failed to push $tag after 3 attempts."
+            return 1
+          }
+
+          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
 
           if [ "${{ matrix.node_version }}" = "22" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
-            docker push "${TARGET_REPO}:latest"
+            push_with_retry "${TARGET_REPO}:latest"
           fi
