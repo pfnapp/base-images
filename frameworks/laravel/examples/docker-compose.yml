@@ -12,11 +12,6 @@ services:
       dockerfile: templates/Dockerfile.managed
       args:
         PHP_VERSION: "8.4"
-        # For fullstack Laravel apps with Vite/npm frontend assets, switch to:
-        # dockerfile: templates/Dockerfile.managed-node
-        # args:
-        #   PHP_VERSION: "8.4"
-        #   NODE_VERSION: "22"
     restart: unless-stopped
     ports:
       - "8080:8080"

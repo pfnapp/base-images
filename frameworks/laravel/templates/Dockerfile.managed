@@ -2,30 +2,34 @@
 ARG PHP_VERSION=8.4
 
 # ==============================================================================
-# Platform-Managed Laravel Dockerfile (Standard API / Backend)
+# Platform-Managed Laravel Dockerfile (Unified: API + Fullstack Vite/Node.js)
 # ==============================================================================
 # Managed by the platform / PaaS (App Hosting engine / Jenkins).
 # Developers NEVER create or maintain a Dockerfile in their Laravel repository.
 # Built 100% unprivileged (UID 10001 / GID 10001) on Alpine Linux.
+#
+# Supports:
+# 1. API-only Laravel backends (runs composer install).
+# 2. Fullstack Laravel applications with Vite, Tailwind, Inertia, React, Vue
+#    (auto-detects package.json, compiles assets in-place, and cleans node_modules).
 # ==============================================================================
 FROM ghcr.io/pfnapp/base/frameworks/laravel:${PHP_VERSION}-alpine
 
 WORKDIR /var/www/html
 
-# Leverage Docker layer caching for Composer dependencies
-COPY --chown=10001:10001 composer.json composer.lock* ./
-RUN composer install \
-    --no-dev \
-    --no-interaction \
-    --prefer-dist \
-    --no-scripts \
-    --no-autoloader
-
 # Copy application source code with non-root ownership
 COPY --chown=10001:10001 . /var/www/html
 
-# Optimize Composer autoloader
-RUN composer dump-autoload --optimize --no-dev
+# Build dependencies in-place:
+# 1. Composer install for production
+# 2. If package.json exists, install npm packages, compile frontend assets (Vite/Mix),
+#    and purge node_modules & cache to keep the final image slim.
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
+    && if [ -f package.json ]; then \
+         npm ci --prefer-offline 2>/dev/null || npm install --no-audit; \
+         npm run build; \
+         rm -rf node_modules /tmp/* ~/.npm; \
+       fi
 
 # Unprivileged HTTP port
 EXPOSE 8080

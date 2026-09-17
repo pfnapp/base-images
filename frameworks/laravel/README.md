@@ -16,8 +16,8 @@ This framework image sits on top of our foundational PHP language base images:
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
 │           ghcr.io/pfnapp/base/frameworks/laravel            │
-│  Composer 2, pcntl, exif, git, unzip, bash, Laravel storage │
-│   Role-based Supervisor entrypoint (Web / Worker / Cron)    │
+│  Composer 2, Node.js & npm, pcntl, exif, git, unzip, bash   │
+│   Laravel storage, Role-based Supervisor (Web/Worker/Cron)  │
 └──────────────────────────────┬──────────────────────────────┘
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
@@ -48,27 +48,45 @@ Published to **GitHub Container Registry (`ghcr.io`)**:
 In the PFN App Hosting platform and Jenkins CI/CD (`pfnapp/Jenkins`), the build process is **100% managed by the platform**:
 
 - **No Dockerfile in application repositories**: Application developers maintain clean Laravel code without worrying about Dockerfile maintenance, base image updates, or security patches.
-- **Automated Containerization**: The platform wraps standard Laravel repositories using centralized, hardened Dockerfile templates:
-  - [`templates/Dockerfile.managed`](templates/Dockerfile.managed): Standard backend and REST API applications (Composer layer caching, optimized autoloader).
-  - [`templates/Dockerfile.managed-node`](templates/Dockerfile.managed-node): Fullstack applications (multi-stage build compiling Vite, Tailwind, or Inertia frontend assets, copying PHP vendor dependencies for Blade template scanning, and dumping production autoloader).
+- **Unified Zero-Config Containerization**: The platform wraps standard Laravel repositories using a single, unified template [`templates/Dockerfile.managed`](templates/Dockerfile.managed).
+  - Handles both **API backends** and **Fullstack applications** (Vite, Tailwind, Inertia, Vue, React).
+  - Because `ghcr.io/pfnapp/base/frameworks/laravel` includes both Composer and Node.js/npm natively, asset compilation happens **in-place** inside the Laravel project context.
+  - **Zero brittle multi-stage juggling**: Tailwind/Vite can scan `resources/`, `routes/`, and `vendor/` natively without cross-container copies, and output directories (`public/build`, `public/css`, `public/dist`) are respected automatically.
+  - **Automatic pruning**: After frontend compilation, `node_modules` and npm cache are removed in the same layer to keep production images slim.
 
 ### Platform Build Invocation
 
 When deploying, the platform hosting engine runs:
 
 ```bash
-# Standard API / Backend application
+# Unified build for both API-only and Fullstack (Vite/npm) applications
 docker build \
   -f templates/Dockerfile.managed \
   --build-arg PHP_VERSION=8.4 \
   -t my-laravel-app:latest .
+```
 
-# Fullstack application with Vite / npm frontend assets
-docker build \
-  -f templates/Dockerfile.managed-node \
-  --build-arg PHP_VERSION=8.4 \
-  --build-arg NODE_VERSION=22 \
-  -t my-laravel-app:latest .
+### Optional: Clean 2-Stage Multi-Stage Build
+
+While `templates/Dockerfile.managed` is the zero-config default that handles both backend and fullstack builds, if a team explicitly requires a separated build environment (e.g. build cache isolation without carrying any build-time artifacts into the final runtime), it can be achieved cleanly without brittle cross-stage juggling:
+
+```dockerfile
+# Stage 1: Build dependencies & frontend in-place
+FROM ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine AS builder
+WORKDIR /var/www/html
+COPY --chown=10001:10001 . /var/www/html
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
+    && if [ -f package.json ]; then \
+         npm ci --prefer-offline 2>/dev/null || npm install --no-audit; \
+         npm run build; \
+       fi
+
+# Stage 2: Clean runtime container
+FROM ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+WORKDIR /var/www/html
+COPY --from=builder --chown=10001:10001 /var/www/html /var/www/html
+# node_modules can be excluded or removed before copying
+USER 10001:10001
 ```
 
 ---
@@ -83,7 +101,7 @@ docker build \
 | **Permission Management** | Runtime `chmod 775` & `chown` in build | **Pre-configured UID 10001 ownership and permissions** |
 | **Process Model** | Monolithic (Web + Cron + Worker as root) | **Role-based (`CONTAINER_ROLE=app\|worker\|scheduler\|horizon`)** |
 | **Scheduler (Cron)** | System cron daemon (`/usr/sbin/cron`) as root | **Unprivileged `schedule:work` daemon (no root cron needed)** |
-| **Frontend Assets** | Debian Bullseye/Bookworm OpenSSL hacks | **Clean multi-stage Alpine Node builder with lockfile autodetection** |
+| **Frontend Assets** | Debian Bullseye/Bookworm OpenSSL hacks | **Native Node.js/npm in Alpine base with automated in-place Vite/Mix compilation** |
 | **Vulnerability Gating** | Unscanned base images | **Automated Aqua Trivy scanning in CI (zero CRITICAL/HIGH)** |
 
 ---

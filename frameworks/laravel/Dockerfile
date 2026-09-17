@@ -7,12 +7,14 @@ ARG GID=10001
 
 USER root
 
-# Install system utilities needed for Laravel and Composer workflows
+# Install system utilities needed for Laravel and Composer workflows, plus Node.js/npm for frontend builds
 RUN apk update && apk upgrade --no-cache && \
     apk add --no-cache \
     git \
     unzip \
-    bash
+    bash \
+    nodejs \
+    npm
 
 # Install essential Laravel PHP extensions
 # pcntl: Required for Laravel asynchronous signals, queue workers, and Horizon

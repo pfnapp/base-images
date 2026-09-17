@@ -140,7 +140,9 @@ test-laravel:
 	@docker run --rm $(LARAVEL_IMAGE_TAG) php -m | grep -q "pcntl" || { echo "Missing pcntl extension!"; exit 1; }
 	@docker run --rm $(LARAVEL_IMAGE_TAG) php -m | grep -q "exif" || { echo "Missing exif extension!"; exit 1; }
 	@docker run --rm $(LARAVEL_IMAGE_TAG) composer --version > /dev/null || { echo "Composer failed!"; exit 1; }
-	@echo "Verified: pcntl, exif, and Composer v2"
+	@docker run --rm $(LARAVEL_IMAGE_TAG) node -v > /dev/null || { echo "Node.js failed!"; exit 1; }
+	@docker run --rm $(LARAVEL_IMAGE_TAG) npm -v > /dev/null || { echo "npm failed!"; exit 1; }
+	@echo "Verified: pcntl, exif, Composer v2, Node.js, and npm"
 
 	@echo "==> 2. Testing Web Role (HTTP 8080 & /healthz)..."
 	@docker rm -f $(LARAVEL_CONTAINER_NAME)-web 2>/dev/null || true
