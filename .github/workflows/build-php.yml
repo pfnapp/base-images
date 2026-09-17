@@ -15,6 +15,7 @@ permissions:
   contents: read
   packages: write
   security-events: write
+  issues: write
 
 jobs:
   build-and-audit:
@@ -46,6 +47,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Run Aqua Trivy vulnerability scanner
+        id: trivy_scan
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: local/php:${{ matrix.php_version }}-test
@@ -54,6 +56,101 @@ jobs:
           exit-code: 1
           ignore-unfixed: true
           severity: CRITICAL,HIGH
+          output: trivy-report.txt
+
+      - name: Create GitHub Issue on Trivy CVE detection
+        if: failure() && steps.trivy_scan.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in php:${{ matrix.php_version }}-alpine"
+
+          if [ -f trivy-report.txt ]; then
+            echo "=== Trivy Scan Report ==="
+            cat trivy-report.txt
+          fi
+
+          TARGET_IMAGE="php:${{ matrix.php_version }}-alpine"
+          ISSUE_TITLE="[Security Alert] Actionable CVEs detected in ${TARGET_IMAGE}"
+
+          echo "Checking for existing open issue for ${TARGET_IMAGE}..."
+          EXISTING_ISSUE=$(gh issue list \
+            --repo "${{ github.repository }}" \
+            --state open \
+            --limit 100 \
+            --json number,title \
+            --jq ".[] | select((.title | contains(\"${TARGET_IMAGE}\")) and (.title | (contains(\"Security\") or contains(\"CVE\")))) | .number" | head -n 1)
+
+          if [ -n "$EXISTING_ISSUE" ]; then
+            echo "An open issue (#${EXISTING_ISSUE}) already exists tracking vulnerabilities for ${TARGET_IMAGE}. Skipping issue creation to avoid duplicates."
+            exit 0
+          fi
+
+          echo "No open issue found. Preparing issue body..."
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MAX_LINES=250
+          REPORT_FILE="trivy-report.txt"
+
+          cat <<EOF > issue-body.md
+          ## 🚨 Security Alert: Actionable CVEs Detected
+
+          Aqua Trivy detected actionable **CRITICAL** or **HIGH** vulnerabilities in image: \`${TARGET_IMAGE}\`.
+
+          ### Build & Run Metadata
+          - **Target Image:** \`${TARGET_IMAGE}\`
+          - **PHP Matrix Version:** \`${{ matrix.php_version }}\`
+          - **Workflow:** \`${{ github.workflow }}\`
+          - **Trigger:** \`${{ github.event_name }}\`
+          - **Run URL:** [GitHub Actions Run #${{ github.run_id }}](${RUN_URL})
+          - **Commit:** \`${{ github.sha }}\`
+          - **Timestamp:** \`${TIMESTAMP}\`
+
+          ---
+
+          ### Trivy Scan Report
+          EOF
+
+          echo '```text' >> issue-body.md
+
+          if [ -f "$REPORT_FILE" ] && [ -s "$REPORT_FILE" ]; then
+            TOTAL_LINES=$(wc -l < "$REPORT_FILE")
+            if [ "$TOTAL_LINES" -gt "$MAX_LINES" ]; then
+              head -n "$MAX_LINES" "$REPORT_FILE" >> issue-body.md
+              echo "" >> issue-body.md
+              echo "... [Report truncated. Showing first ${MAX_LINES} lines of ${TOTAL_LINES}. See full workflow log for complete details] ..." >> issue-body.md
+            else
+              cat "$REPORT_FILE" >> issue-body.md
+            fi
+          else
+            echo "No detailed scan report was generated or scan failed before writing." >> issue-body.md
+          fi
+
+          echo '```' >> issue-body.md
+
+          cat << 'EOF' >> issue-body.md
+
+          ---
+          *Automated alert created by CI/CD CVE Governance pipeline.*
+          EOF
+
+          echo "Ensuring required labels exist..."
+          for label in "security" "cve" "automated"; do
+            gh label create "$label" --repo "${{ github.repository }}" --force 2>/dev/null || true
+          done
+
+          echo "Creating new GitHub Issue..."
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "$ISSUE_TITLE" \
+            --body-file issue-body.md \
+            --label "security" \
+            --label "cve" \
+            --label "automated" || \
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "$ISSUE_TITLE" \
+            --body-file issue-body.md
 
       - name: Run container verification test
         run: |
