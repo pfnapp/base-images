@@ -3,6 +3,7 @@
 Hardened, unprivileged container base images designed for multi-tenant Kubernetes platforms and modern microservices.
 
 [![Build and Audit PHP Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-php.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-php.yml)
+[![Build and Audit Laravel Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-laravel.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-laravel.yml)
 [![Nightly CVE Audit](https://github.com/pfnapp/base-images/actions/workflows/nightly-cve-audit.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/nightly-cve-audit.yml)
 [![Security: Aqua Trivy](https://img.shields.io/badge/Security-Aqua%20Trivy%20Gated-blue.svg)](https://github.com/aquasecurity/trivy)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -33,7 +34,7 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 | **Languages** | [`languages/php/`](languages/php/) | [PHP Guide](languages/php/README.md) | PHP 8.5, 8.4, 8.3, 8.2, 8.1, 7.4 (Alpine + Nginx + PHP-FPM) |
 | **Languages** | `languages/node/` | *Coming soon* | Node.js 18, 20, 22 (Alpine) |
 | **Languages** | `languages/python/` | *Coming soon* | Python 3.11, 3.12 (Slim) |
-| **Frameworks** | `frameworks/laravel/` | *Coming soon* | Laravel Standard & Extended (with ffmpeg, zip) |
+| **Frameworks** | [`frameworks/laravel/`](frameworks/laravel/) | [Laravel Guide](frameworks/laravel/README.md) | Laravel 8.4, 8.3, 8.2, 8.1, 7.4 (Web, Worker, Horizon, Cron) |
 | **Frameworks** | `frameworks/nextjs/` | *Coming soon* | Next.js Standalone Runner |
 
 ---
@@ -47,6 +48,11 @@ All images are published to **GitHub Container Registry (GHCR)**:
 docker pull ghcr.io/pfnapp/base/languages/php:8.4-alpine
 docker pull ghcr.io/pfnapp/base/languages/php:8.4
 docker pull ghcr.io/pfnapp/base/languages/php:latest
+
+# Pull Laravel 8.4 Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4
+docker pull ghcr.io/pfnapp/base/frameworks/laravel:latest
 ```
 
 ---
@@ -56,10 +62,16 @@ docker pull ghcr.io/pfnapp/base/languages/php:latest
 This repository includes a `Makefile` for testing and scanning images locally:
 
 ```bash
-make build       # Build local/php:8.4-test
-make test        # Run container, test port 8080 health, and verify UID 10001
-make scan        # Run Aqua Security Trivy vulnerability scan locally
-make clean       # Remove test containers and images
+# Language Images (PHP)
+make build               # Build local/php:8.4-test
+make test                # Run container, test port 8080 health, and verify UID 10001
+make scan                # Run Aqua Security Trivy vulnerability scan locally
+
+# Framework Images (Laravel)
+make build-laravel       # Build local/laravel:8.4-test
+make test-laravel        # Verify web, worker, and scheduler roles for Laravel
+make scan-laravel        # Run Aqua Security Trivy scan on Laravel image
+make clean               # Remove test containers and images
 ```
 
 ---

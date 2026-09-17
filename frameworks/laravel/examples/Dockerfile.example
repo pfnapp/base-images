@@ -1,0 +1,53 @@
+# ==============================================================================
+# Stage 1: Build Frontend Assets (Vite / Tailwind / Vue / React)
+# ==============================================================================
+FROM node:22-alpine AS frontend-builder
+
+WORKDIR /app
+
+# Cache package dependencies
+COPY package.json package-lock.json* ./
+RUN npm ci --prefer-offline --no-audit
+
+# Copy frontend source files and configuration
+COPY vite.config.js* tailwind.config.js* postcss.config.js* ./
+COPY resources/ resources/
+COPY public/ public/
+
+# Compile production assets into /app/public/build
+RUN npm run build
+
+# ==============================================================================
+# Stage 2: Production Application Runtime (Hardened Non-Root Laravel)
+# ==============================================================================
+FROM ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+
+# Set working directory (already owned by appuser 10001 in base image)
+WORKDIR /var/www/html
+
+# Install Composer PHP dependencies first (leveraging Docker layer cache)
+COPY --chown=10001:10001 composer.json composer.lock ./
+RUN composer install \
+    --no-dev \
+    --no-interaction \
+    --prefer-dist \
+    --optimize-autoloader \
+    --no-scripts
+
+# Copy full application source code with non-root ownership
+COPY --chown=10001:10001 . /var/www/html
+
+# Copy compiled frontend assets from Stage 1
+COPY --from=frontend-builder --chown=10001:10001 /app/public/build /var/www/html/public/build
+
+# Complete Composer autoloader optimization and post-autoload scripts
+RUN composer dump-autoload --optimize --no-dev
+
+# Unprivileged HTTP port
+EXPOSE 8080
+
+# Enforce non-root execution (UID 10001 / GID 10001)
+USER 10001:10001
+
+# Entrypoint automatically starts Nginx + PHP-FPM, Worker, or Scheduler based on CONTAINER_ROLE
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

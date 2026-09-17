@@ -1,0 +1,289 @@
+---
+# ==============================================================================
+# ConfigMap & Secret Reference: Application Environment
+# ==============================================================================
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: laravel-config
+  namespace: default
+data:
+  APP_ENV: "production"
+  APP_DEBUG: "false"
+  DB_CONNECTION: "mysql"
+  DB_HOST: "mysql.default.svc.cluster.local"
+  DB_PORT: "3306"
+  DB_DATABASE: "laravel"
+  QUEUE_CONNECTION: "redis"
+  REDIS_HOST: "redis.default.svc.cluster.local"
+  REDIS_PORT: "6379"
+  CACHE_STORE: "redis"
+  SESSION_DRIVER: "redis"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: laravel-secrets
+  namespace: default
+type: Opaque
+stringData:
+  APP_KEY: "base64:YourAppKeyGoesHere="
+  DB_USERNAME: "laravel"
+  DB_PASSWORD: "secretpassword"
+
+---
+# ==============================================================================
+# Web Service: Multi-replica HTTP runner with Ingress, Service, Probes
+# ==============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-web
+  namespace: default
+  labels:
+    app.kubernetes.io/name: laravel
+    app.kubernetes.io/component: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: laravel
+      app.kubernetes.io/component: web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: laravel
+        app.kubernetes.io/component: web
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: web
+          image: ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: laravel-config
+            - secretRef:
+                name: laravel-secrets
+          env:
+            - name: CONTAINER_ROLE
+              value: "app"
+            - name: LARAVEL_STORAGE_LINK
+              value: "true"
+            - name: LARAVEL_RUN_OPTIMIZE
+              value: "true"
+            - name: PHP_MEMORY_LIMIT
+              value: "256M"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 5
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 2
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-web-svc
+  namespace: default
+  labels:
+    app.kubernetes.io/name: laravel
+    app.kubernetes.io/component: web
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: laravel
+    app.kubernetes.io/component: web
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: laravel-ingress
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/proxy-body-size: "64m"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - app.example.com
+      secretName: app-example-tls
+  rules:
+    - host: app.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: laravel-web-svc
+                port:
+                  number: 80
+
+---
+# ==============================================================================
+# Queue Worker Service: Scalable Asynchronous Queue Workers
+# ==============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-worker
+  namespace: default
+  labels:
+    app.kubernetes.io/name: laravel
+    app.kubernetes.io/component: worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: laravel
+      app.kubernetes.io/component: worker
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: laravel
+        app.kubernetes.io/component: worker
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: worker
+          image: ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: laravel-config
+            - secretRef:
+                name: laravel-secrets
+          env:
+            - name: CONTAINER_ROLE
+              value: "worker"
+            - name: LARAVEL_QUEUE_NUMPROCS
+              value: "4"
+            - name: LARAVEL_QUEUE_SLEEP
+              value: "3"
+            - name: LARAVEL_QUEUE_TRIES
+              value: "3"
+            - name: LARAVEL_QUEUE_TIMEOUT
+              value: "60"
+            - name: LARAVEL_QUEUE_MEMORY
+              value: "256"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+
+---
+# ==============================================================================
+# Scheduler Service: Singleton Cron Daemon (Recreate Strategy)
+# ==============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-scheduler
+  namespace: default
+  labels:
+    app.kubernetes.io/name: laravel
+    app.kubernetes.io/component: scheduler
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: laravel
+      app.kubernetes.io/component: scheduler
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: laravel
+        app.kubernetes.io/component: scheduler
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: scheduler
+          image: ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: laravel-config
+            - secretRef:
+                name: laravel-secrets
+          env:
+            - name: CONTAINER_ROLE
+              value: "scheduler"
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL

@@ -1,0 +1,161 @@
+name: pfn-laravel-microservices
+
+services:
+  # ============================================================================
+  # Web Ingress Service: Nginx + PHP-FPM handling HTTP traffic on port 8080
+  # ============================================================================
+  web:
+    image: my-laravel-app:latest
+    build:
+      context: ..
+      dockerfile: examples/Dockerfile.example
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - CONTAINER_ROLE=app
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_KEY=base64:YourAppKeyGoesHere=
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=laravel
+      - DB_PASSWORD=secret
+      - QUEUE_CONNECTION=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CACHE_STORE=redis
+      - SESSION_DRIVER=redis
+      - LARAVEL_RUN_MIGRATIONS=true
+      - LARAVEL_RUN_OPTIMIZE=true
+      - LARAVEL_STORAGE_LINK=true
+    volumes:
+      - storage-data:/var/www/html/storage
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  # ============================================================================
+  # Queue Worker Service: Dedicated asynchronous worker pool (No Nginx/PHP-FPM)
+  # ============================================================================
+  queue-worker:
+    image: my-laravel-app:latest
+    restart: unless-stopped
+    environment:
+      - CONTAINER_ROLE=worker
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_KEY=base64:YourAppKeyGoesHere=
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=laravel
+      - DB_PASSWORD=secret
+      - QUEUE_CONNECTION=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - LARAVEL_QUEUE_NUMPROCS=4
+      - LARAVEL_QUEUE_SLEEP=3
+      - LARAVEL_QUEUE_TRIES=3
+      - LARAVEL_QUEUE_TIMEOUT=60
+      - LARAVEL_QUEUE_MEMORY=256
+    volumes:
+      - storage-data:/var/www/html/storage
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - app-net
+
+  # ============================================================================
+  # Scheduler Service: Periodic cron daemon running schedule:work as non-root
+  # ============================================================================
+  scheduler:
+    image: my-laravel-app:latest
+    restart: unless-stopped
+    environment:
+      - CONTAINER_ROLE=scheduler
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_KEY=base64:YourAppKeyGoesHere=
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=laravel
+      - DB_PASSWORD=secret
+      - QUEUE_CONNECTION=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - storage-data:/var/www/html/storage
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - app-net
+
+  # ============================================================================
+  # Cache & Queue Store: Redis 7 Alpine
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ============================================================================
+  # Primary Database: MySQL 8.0
+  # ============================================================================
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootsecret
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "laravel", "-psecret"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 15s
+
+volumes:
+  storage-data:
+  mysql-data:
+  redis-data:
+
+networks:
+  app-net:
+    driver: bridge
