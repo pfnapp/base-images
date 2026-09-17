@@ -37,8 +37,16 @@ mkdir -p \
     /var/www/html/storage/logs \
     /var/www/html/bootstrap/cache 2>/dev/null || true
 
+# Normalize supervisord invocation if passed as command
+if [ "$1" = "supervisord" ] || [ "$1" = "/usr/bin/supervisord" ]; then
+    shift
+    if [ "$1" = "-c" ]; then
+        shift 2
+    fi
+fi
+
 # Check for direct CLI execution (e.g., docker run image php -v or artisan tinker)
-if [ "$#" -gt 0 ] && [ "$1" != "supervisord" ] && [ "${1#-}" = "$1" ]; then
+if [ "$#" -gt 0 ] && [ "${1#-}" = "$1" ]; then
     if [ "$1" = "artisan" ]; then
         shift
         exec php /var/www/html/artisan "$@"

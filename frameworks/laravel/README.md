@@ -43,9 +43,54 @@ Published to **GitHub Container Registry (`ghcr.io`)**:
 
 ---
 
+## 🚀 Platform-Managed Integration (Zero-Config PaaS Pattern)
+
+In the PFN App Hosting platform and Jenkins CI/CD (`pfnapp/Jenkins`), the build process is **100% managed by the platform**:
+
+- **No Dockerfile in application repositories**: Application developers maintain clean Laravel code without worrying about Dockerfile maintenance, base image updates, or security patches.
+- **Automated Containerization**: The platform wraps standard Laravel repositories using centralized, hardened Dockerfile templates:
+  - [`templates/Dockerfile.managed`](templates/Dockerfile.managed): Standard backend and REST API applications (Composer layer caching, optimized autoloader).
+  - [`templates/Dockerfile.managed-node`](templates/Dockerfile.managed-node): Fullstack applications (multi-stage build compiling Vite, Tailwind, or Inertia frontend assets, copying PHP vendor dependencies for Blade template scanning, and dumping production autoloader).
+
+### Platform Build Invocation
+
+When deploying, the platform hosting engine runs:
+
+```bash
+# Standard API / Backend application
+docker build \
+  -f templates/Dockerfile.managed \
+  --build-arg PHP_VERSION=8.4 \
+  -t my-laravel-app:latest .
+
+# Fullstack application with Vite / npm frontend assets
+docker build \
+  -f templates/Dockerfile.managed-node \
+  --build-arg PHP_VERSION=8.4 \
+  --build-arg NODE_VERSION=22 \
+  -t my-laravel-app:latest .
+```
+
+---
+
+## ⚖️ Architecture Comparison: Legacy Jenkins vs. Modern App Hosting
+
+| Feature | Legacy Jenkins (`php-laravel`) | Modern App Hosting (`frameworks/laravel`) |
+| :--- | :--- | :--- |
+| **Base OS** | Ubuntu / Debian (heavyweight) | **Alpine Linux (minimal attack surface)** |
+| **Security Execution** | Root container with `su www-data` | **100% Non-root UID 10001 (`appuser`) throughout build & runtime** |
+| **Ingress Port** | Port 80 (privileged) | **Port 8080 (unprivileged)** |
+| **Permission Management** | Runtime `chmod 775` & `chown` in build | **Pre-configured UID 10001 ownership and permissions** |
+| **Process Model** | Monolithic (Web + Cron + Worker as root) | **Role-based (`CONTAINER_ROLE=app\|worker\|scheduler\|horizon`)** |
+| **Scheduler (Cron)** | System cron daemon (`/usr/sbin/cron`) as root | **Unprivileged `schedule:work` daemon (no root cron needed)** |
+| **Frontend Assets** | Debian Bullseye/Bookworm OpenSSL hacks | **Clean multi-stage Alpine Node builder with lockfile autodetection** |
+| **Vulnerability Gating** | Unscanned base images | **Automated Aqua Trivy scanning in CI (zero CRITICAL/HIGH)** |
+
+---
+
 ## 🔒 Security & Non-Root Execution
 
-1. **Non-Root User (UID 10001)**: All processes run under `appuser:appgroup` (`UID 10001` / `GID 10001`). No runtime `sudo`, `su`, or `chown`.
+1. **Non-Root User (UID 10001)**: All processes run strictly under `appuser:appgroup` (`UID 10001` / `GID 10001`). No runtime `sudo`, `su`, or `chown`.
 2. **Unprivileged Ingress (Port 8080)**: Nginx and internal endpoints bind strictly to unprivileged ports `> 1024`.
 3. **Pre-Initialized Storage**: `/var/www/html/storage` and `/var/www/html/bootstrap/cache` are pre-created with `775` permissions and `10001:10001` ownership.
 4. **Read-Only RootFS Compatible**: Temporary PID files and buffers write to `/tmp/`.
@@ -107,28 +152,20 @@ Deploy the **exact same container image** across your entire infrastructure by s
 
 ---
 
-## 🚀 Migration Guide (From Old Jenkins Monolith)
+## 🛠️ Local Orchestration with Docker Compose
 
-In legacy setups (such as `pfnapp/Jenkins/builds/php/entrypoint.sh`), Laravel deployments were monolithic and ran as `root`:
-- Queue workers ran with `user=root` directly inside web containers.
-- Schedulers required system `cron` daemon (`/usr/sbin/cron -f`) writing to `/etc/cron.d/`, demanding root privileges.
-- Nginx ran on privileged port 80.
+The [`examples/docker-compose.yml`](examples/docker-compose.yml) demonstrates orchestrating a full microservice stack (Web, Queue Worker, Scheduler, Redis, MySQL) using the platform-managed Dockerfile:
 
-### What Changed:
-1. **Separation of Concerns**: Instead of running web, workers, and cron together as root in a single bloated container, separate deployments/services are created from the **exact same container image** using `CONTAINER_ROLE=app`, `CONTAINER_ROLE=worker`, and `CONTAINER_ROLE=scheduler`.
-2. **Cron Without Root**: Laravel 8+ native `schedule:work` is used (with non-root 60s fallback daemon). No root `/usr/sbin/cron` or `/etc/cron.d` needed!
-3. **Graceful Worker Termination**: Worker configs include `stopwaitsecs=3600` and `killasgroup=true`, preventing job data loss during Kubernetes pod termination.
-4. **Port 8080**: Service and ingress configs target port `8080` instead of port `80`.
+```bash
+# Start all services using the managed Dockerfile template
+docker compose -f examples/docker-compose.yml up --build
+```
 
----
-
-## 🛠️ Usage Examples
-
-See the [`examples/`](examples/) directory for complete, ready-to-use manifests:
-
-- [Multi-stage Dockerfile](examples/Dockerfile.example) with Vite asset compilation.
-- [Docker Compose](examples/docker-compose.yml) demonstrating Web, Worker, Scheduler, Redis, and MySQL.
-- [Production Kubernetes Deployment](examples/k8s-deployment.yaml) with Ingress, Service, Probes, and non-root securityContext.
+In `examples/docker-compose.yml`:
+- The `web` service builds the application using `templates/Dockerfile.managed`.
+- The `queue-worker` service runs the same built image with `CONTAINER_ROLE=worker`.
+- The `scheduler` service runs the same built image with `CONTAINER_ROLE=scheduler`.
+- Redis and MySQL provide caching, queuing, and persistence.
 
 ---
 

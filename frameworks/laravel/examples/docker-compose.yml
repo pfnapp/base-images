@@ -3,12 +3,20 @@ name: pfn-laravel-microservices
 services:
   # ============================================================================
   # Web Ingress Service: Nginx + PHP-FPM handling HTTP traffic on port 8080
+  # Builds using the platform-managed Dockerfile template
   # ============================================================================
   web:
     image: my-laravel-app:latest
     build:
       context: ..
-      dockerfile: examples/Dockerfile.example
+      dockerfile: templates/Dockerfile.managed
+      args:
+        PHP_VERSION: "8.4"
+        # For fullstack Laravel apps with Vite/npm frontend assets, switch to:
+        # dockerfile: templates/Dockerfile.managed-node
+        # args:
+        #   PHP_VERSION: "8.4"
+        #   NODE_VERSION: "22"
     restart: unless-stopped
     ports:
       - "8080:8080"
@@ -49,6 +57,7 @@ services:
 
   # ============================================================================
   # Queue Worker Service: Dedicated asynchronous worker pool (No Nginx/PHP-FPM)
+  # Uses the exact same image built by web service with CONTAINER_ROLE=worker
   # ============================================================================
   queue-worker:
     image: my-laravel-app:latest
@@ -75,6 +84,8 @@ services:
     volumes:
       - storage-data:/var/www/html/storage
     depends_on:
+      web:
+        condition: service_started
       mysql:
         condition: service_healthy
       redis:
@@ -84,6 +95,7 @@ services:
 
   # ============================================================================
   # Scheduler Service: Periodic cron daemon running schedule:work as non-root
+  # Uses the exact same image built by web service with CONTAINER_ROLE=scheduler
   # ============================================================================
   scheduler:
     image: my-laravel-app:latest
@@ -105,6 +117,8 @@ services:
     volumes:
       - storage-data:/var/www/html/storage
     depends_on:
+      web:
+        condition: service_started
       mysql:
         condition: service_healthy
       redis:
