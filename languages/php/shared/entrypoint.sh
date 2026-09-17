@@ -8,6 +8,15 @@ PHP_POST_MAX_SIZE="${PHP_POST_MAX_SIZE:-$PHP_UPLOAD_MAX_FILESIZE}"
 PHP_MAX_EXECUTION_TIME="${PHP_MAX_EXECUTION_TIME:-60}"
 PHP_TIMEZONE="${PHP_TIMEZONE:-Asia/Jakarta}"
 
+# Export PHP-FPM environment variables with defaults for pool configuration across all PHP versions
+export PHP_FPM_PM="${PHP_FPM_PM:-dynamic}"
+export PHP_FPM_MAX_CHILDREN="${PHP_FPM_MAX_CHILDREN:-50}"
+export PHP_FPM_START_SERVERS="${PHP_FPM_START_SERVERS:-5}"
+export PHP_FPM_MIN_SPARE_SERVERS="${PHP_FPM_MIN_SPARE_SERVERS:-5}"
+export PHP_FPM_MAX_SPARE_SERVERS="${PHP_FPM_MAX_SPARE_SERVERS:-35}"
+export PHP_FPM_MAX_REQUESTS="${PHP_FPM_MAX_REQUESTS:-500}"
+export PHP_FPM_REQUEST_TERMINATE_TIMEOUT="${PHP_FPM_REQUEST_TERMINATE_TIMEOUT:-300s}"
+
 # Write 99-overrides.ini into /etc/php/conf.d/custom/
 cat <<EOF > /etc/php/conf.d/custom/99-overrides.ini
 ; Runtime overrides generated dynamically by entrypoint.sh (UID: $(id -u))

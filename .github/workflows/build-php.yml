@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php_version: ['8.4']
+        php_version: ['8.5', '8.4', '8.3', '8.2', '8.1', '7.4']
 
     steps:
       - name: Checkout repository
@@ -83,8 +83,11 @@ jobs:
 
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
 
           docker push "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
           docker push "${TARGET_REPO}:${{ matrix.php_version }}"
-          docker push "${TARGET_REPO}:latest"
+
+          if [ "${{ matrix.php_version }}" = "8.4" ]; then
+            docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
+            docker push "${TARGET_REPO}:latest"
+          fi

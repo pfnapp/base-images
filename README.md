@@ -30,7 +30,7 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 
 | Layer | Path | Documentation | Target Runtimes |
 |---|---|---|---|
-| **Languages** | [`languages/php/`](languages/php/) | [PHP Guide](languages/php/README.md) | PHP 8.4 (Alpine + Nginx + PHP-FPM) |
+| **Languages** | [`languages/php/`](languages/php/) | [PHP Guide](languages/php/README.md) | PHP 8.5, 8.4, 8.3, 8.2, 8.1, 7.4 (Alpine + Nginx + PHP-FPM) |
 | **Languages** | `languages/node/` | *Coming soon* | Node.js 18, 20, 22 (Alpine) |
 | **Languages** | `languages/python/` | *Coming soon* | Python 3.11, 3.12 (Slim) |
 | **Frameworks** | `frameworks/laravel/` | *Coming soon* | Laravel Standard & Extended (with ffmpeg, zip) |

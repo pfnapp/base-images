@@ -8,9 +8,12 @@ Production-ready, hardened PHP runtime images with integrated Nginx and PHP-FPM 
 
 | Version | Base OS | Status | Pull Tag |
 |---|---|---|---|
-| **8.4** | Alpine 3.21 | Active | `ghcr.io/pfnapp/base/languages/php:8.4-alpine`, `ghcr.io/pfnapp/base/languages/php:8.4` |
-| **8.3** | Alpine 3.21 | Planned | `languages/php/8.3/` |
-| **8.2** | Alpine 3.21 | Planned | `languages/php/8.2/` |
+| **8.5** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.5-alpine`, `ghcr.io/pfnapp/base/languages/php:8.5` |
+| **8.4** | Alpine 3.24 | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/php:8.4-alpine`, `ghcr.io/pfnapp/base/languages/php:8.4`, `ghcr.io/pfnapp/base/languages/php:latest` |
+| **8.3** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.3-alpine`, `ghcr.io/pfnapp/base/languages/php:8.3` |
+| **8.2** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.2-alpine`, `ghcr.io/pfnapp/base/languages/php:8.2` |
+| **8.1** | Alpine 3.21 | Active | `ghcr.io/pfnapp/base/languages/php:8.1-alpine`, `ghcr.io/pfnapp/base/languages/php:8.1` |
+| **7.4** | Alpine 3.16 | Active (Legacy Patched) | `ghcr.io/pfnapp/base/languages/php:7.4-alpine`, `ghcr.io/pfnapp/base/languages/php:7.4` |
 
 ---
 
