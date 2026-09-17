@@ -77,6 +77,9 @@ RUN chmod +x /usr/local/bin/entrypoint.sh && \
 
 WORKDIR /var/www/html
 
+# Drop SUID/SGID permissions to eliminate local privilege escalation paths
+RUN find / -perm /6000 -type f -exec chmod a-s {} + 2>/dev/null || true
+
 EXPOSE 8080
 
 USER 10001:10001

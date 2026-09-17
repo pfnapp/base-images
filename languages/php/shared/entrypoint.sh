@@ -27,6 +27,11 @@ max_execution_time = ${PHP_MAX_EXECUTION_TIME}
 date.timezone = ${PHP_TIMEZONE}
 EOF
 
+# Append dynamic disable_functions if configured
+if [ -n "${PHP_DISABLE_FUNCTIONS}" ]; then
+    echo "disable_functions = ${PHP_DISABLE_FUNCTIONS}" >> /etc/php/conf.d/custom/99-overrides.ini
+fi
+
 # Ensure fallback health check index.php exists if missing
 if [ ! -f /var/www/html/public/index.php ]; then
     cat <<'EOF' > /var/www/html/public/index.php

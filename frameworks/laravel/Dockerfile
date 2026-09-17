@@ -1,6 +1,7 @@
 # Syntax: docker/dockerfile:1
 ARG PHP_VERSION=8.4
-FROM ghcr.io/pfnapp/base/languages/php:${PHP_VERSION}-alpine
+ARG BASE_IMAGE=ghcr.io/pfnapp/base/languages/php:${PHP_VERSION}-alpine
+FROM ${BASE_IMAGE}
 
 ARG UID=10001
 ARG GID=10001
@@ -66,6 +67,9 @@ RUN chmod +x \
     /usr/local/bin/entrypoint.sh
 
 WORKDIR /var/www/html
+
+# Drop SUID/SGID permissions to eliminate local privilege escalation paths
+RUN find / -perm /6000 -type f -exec chmod a-s {} + 2>/dev/null || true
 
 EXPOSE 8080
 

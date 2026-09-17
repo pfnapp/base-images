@@ -28,6 +28,11 @@ max_execution_time = ${PHP_MAX_EXECUTION_TIME}
 date.timezone = ${PHP_TIMEZONE}
 EOF
 
+# Append dynamic disable_functions if configured
+if [ -n "${PHP_DISABLE_FUNCTIONS}" ]; then
+    echo "disable_functions = ${PHP_DISABLE_FUNCTIONS}" >> /etc/php/conf.d/custom/99-overrides.ini
+fi
+
 # Ensure required Laravel storage and bootstrap cache directories exist
 mkdir -p \
     /var/www/html/storage/app/public \
