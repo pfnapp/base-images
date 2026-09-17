@@ -8,7 +8,8 @@ ARG UID=10001
 ARG GID=10001
 
 # Install runtime utilities, web server, and process supervisor
-RUN apk add --no-cache \
+RUN apk update && apk upgrade --no-cache && \
+    apk add --no-cache \
     nginx \
     supervisor \
     curl \
