@@ -7,8 +7,10 @@ on:
     paths:
       - 'frameworks/laravel/**'
       - '.github/workflows/build-laravel.yml'
-  schedule:
-    - cron: '0 4 * * 1'
+  workflow_run:
+    workflows: ['Build and Audit PHP Base Images']
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -18,8 +20,55 @@ permissions:
   issues: write
 
 jobs:
+  check-trigger:
+    name: Check Build Trigger
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      should_build: ${{ steps.check.outputs.should_build }}
+    steps:
+      - name: Checkout repository
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for base image modifications
+        if: github.event_name == 'push'
+        id: check
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git rev-parse --verify "$BEFORE" >/dev/null 2>&1; then
+            DIFF_BASE="$BEFORE"
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            DIFF_BASE="HEAD~1"
+          else
+            DIFF_BASE="4b825dc642cb6eb9a060e54bf8d69288fbee4904"
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$DIFF_BASE" HEAD)
+          echo "Files changed in push:"
+          echo "$CHANGED_FILES"
+
+          if echo "$CHANGED_FILES" | grep -q '^languages/php/'; then
+            echo "languages/php/** modified in this push."
+            echo "Deferring Laravel build until PHP base images are built and pushed via workflow_run."
+            echo "should_build=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "No base PHP image modifications detected. Proceeding with immediate Laravel build."
+            echo "should_build=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set output for non-push events
+        if: github.event_name != 'push'
+        run: |
+          echo "Triggered by ${{ github.event_name }}. Proceeding with build."
+          echo "should_build=true" >> "$GITHUB_OUTPUT"
+
   build-and-audit:
     name: Laravel ${{ matrix.php_version }} Alpine Build & Audit
+    needs: check-trigger
+    if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -29,6 +78,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -209,7 +260,7 @@ jobs:
           echo "==> All container verification tests passed successfully!"
 
       - name: Log in to GitHub Container Registry
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -217,7 +268,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tag and push production images to GHCR
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
         run: |
           TARGET_REPO="ghcr.io/pfnapp/base/frameworks/laravel"
           SRC_IMAGE="local/laravel:${{ matrix.php_version }}-test"

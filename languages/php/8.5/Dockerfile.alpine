@@ -66,6 +66,7 @@ RUN ln -sf /etc/php/conf.d/custom /usr/local/etc/php/conf.d/custom
 # Copy unified shared configurations
 COPY shared/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY shared/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY shared/nginx/proxy.conf /etc/nginx/conf.d/proxy.conf
 COPY shared/php.ini /usr/local/etc/php/php.ini
 COPY shared/php-fpm.conf /usr/local/etc/php-fpm.conf
 COPY shared/supervisord.conf /etc/supervisor/supervisord.conf

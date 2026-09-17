@@ -55,7 +55,12 @@ Tune PHP and PHP-FPM dynamically at container startup using environment variable
 
 ### Custom Overrides:
 - **PHP Config**: Mount custom `.ini` files to `/etc/php/conf.d/custom/` (e.g. `my-tuning.ini`).
-- **Nginx Config**: Mount custom `.conf` files to `/etc/nginx/conf.d/custom/`.
+- **Nginx Route/Location Overrides**: Mount custom route configs to `/etc/nginx/conf.d/custom/routes-*.conf` (e.g. `routes-api.conf` with custom location / proxy-pass blocks).
+- **Nginx Server Overrides**: Mount custom server configs to `/etc/nginx/conf.d/custom/server-*.conf`.
+- **Enterprise Reverse Proxy & Real IP**: Pre-configured in `/etc/nginx/conf.d/proxy.conf` with RFC1918 and Cloudflare CIDR support, restoring true client IPs via `X-Forwarded-For`.
+- **ACME Challenge**: Built-in support for `/.well-known/acme-challenge/` returning HTTP 200.
+- **Static Asset Caching**: 1-year immutable caching for CSS, JS, images, and webfonts.
+- **HTTPoxy Mitigation**: Strips untrusted `HTTP_PROXY` FastCGI headers automatically.
 
 ---
 

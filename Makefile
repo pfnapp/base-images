@@ -15,6 +15,7 @@ LARAVEL_DOCKERFILE ?= frameworks/laravel/Dockerfile
 LARAVEL_BUILD_CONTEXT ?= frameworks/laravel
 LARAVEL_CONTAINER_NAME ?= laravel-test-runner
 LARAVEL_TEST_PORT ?= 8080
+LARAVEL_BASE_IMAGE ?= local/php:$(LARAVEL_PHP_VERSION)-test
 
 .PHONY: all build test scan build-all test-all clean \
         build-laravel build-laravel-all test-laravel scan-laravel
@@ -117,6 +118,7 @@ build-laravel:
 	@echo "==> Building Laravel (PHP $(LARAVEL_PHP_VERSION)) Alpine framework image..."
 	docker build -t $(LARAVEL_IMAGE_TAG) \
 		--build-arg PHP_VERSION=$(LARAVEL_PHP_VERSION) \
+		--build-arg BASE_IMAGE=$(LARAVEL_BASE_IMAGE) \
 		-f $(LARAVEL_DOCKERFILE) $(LARAVEL_BUILD_CONTEXT)
 
 build-laravel-all:
@@ -125,6 +127,7 @@ build-laravel-all:
 		echo "===> Building Laravel PHP $$v..."; \
 		docker build -t local/laravel:$$v-test \
 			--build-arg PHP_VERSION=$$v \
+			--build-arg BASE_IMAGE=local/php:$$v-test \
 			-f $(LARAVEL_DOCKERFILE) $(LARAVEL_BUILD_CONTEXT) || exit 1; \
 	done
 	@echo "==> All Laravel framework images built successfully!"

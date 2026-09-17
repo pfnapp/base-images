@@ -45,7 +45,7 @@ Published to **GitHub Container Registry (`ghcr.io`)**:
 
 ## 🚀 Platform-Managed Integration (Zero-Config PaaS Pattern)
 
-In the PFN App Hosting platform and Jenkins CI/CD (`pfnapp/Jenkins`), the build process is **100% managed by the platform**:
+In the PFN App Hosting platform and enterprise CI/CD, the build process is **100% managed by the platform**:
 
 - **No Dockerfile in application repositories**: Application developers maintain clean Laravel code without worrying about Dockerfile maintenance, base image updates, or security patches.
 - **Unified Zero-Config Containerization**: The platform wraps standard Laravel repositories using a single, unified template [`templates/Dockerfile.managed`](templates/Dockerfile.managed).
@@ -91,9 +91,9 @@ USER 10001:10001
 
 ---
 
-## ⚖️ Architecture Comparison: Legacy Jenkins vs. Modern App Hosting
+## ⚖️ Architecture Comparison: Legacy Infrastructure vs. Modern App Hosting
 
-| Feature | Legacy Jenkins (`php-laravel`) | Modern App Hosting (`frameworks/laravel`) |
+| Feature | Legacy Infrastructure (`php-laravel`) | Modern App Hosting (`frameworks/laravel`) |
 | :--- | :--- | :--- |
 | **Base OS** | Ubuntu / Debian (heavyweight) | **Alpine Linux (minimal attack surface)** |
 | **Security Execution** | Root container with `su www-data` | **100% Non-root UID 10001 (`appuser`) throughout build & runtime** |
