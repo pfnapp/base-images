@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     outputs:
-      should_build: ${{ steps.check.outputs.should_build }}
+      should_build: ${{ steps.check.outputs.should_build || steps.check_other.outputs.should_build }}
     steps:
       - name: Checkout repository
         if: github.event_name == 'push'
@@ -61,6 +61,7 @@ jobs:
 
       - name: Set output for non-push events
         if: github.event_name != 'push'
+        id: check_other
         run: |
           echo "Triggered by ${{ github.event_name }}. Proceeding with build."
           echo "should_build=true" >> "$GITHUB_OUTPUT"
