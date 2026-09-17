@@ -1,0 +1,59 @@
+name: pfn-nextjs-app
+
+services:
+  # ============================================================================
+  # Next.js Application Service: Hardened standalone runner on port 8080
+  # Builds using the platform-managed Dockerfile template (Node.js engine)
+  # ============================================================================
+  nextjs:
+    image: my-nextjs-app:latest
+    build:
+      context: ..
+      dockerfile: templates/Dockerfile.managed
+      args:
+        NODE_VERSION: "22"
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - HOSTNAME=0.0.0.0
+      - NEXT_TELEMETRY_DISABLED=1
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  # ============================================================================
+  # Cache & Session Store: Redis 7 Alpine
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+networks:
+  app-net:
+    driver: bridge
+
+volumes:
+  redis-data:
+    driver: local

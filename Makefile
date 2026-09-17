@@ -1,4 +1,8 @@
 SHELL := /bin/bash
+
+# ==============================================================================
+# PHP Language Configurations
+# ==============================================================================
 PHP_VERSIONS ?= 8.5 8.4 8.3 8.2 8.1 7.4
 PHP_VERSION ?= 8.4
 IMAGE_TAG ?= local/php:$(PHP_VERSION)-test
@@ -7,7 +11,9 @@ BUILD_CONTEXT ?= languages/php
 CONTAINER_NAME ?= php-test-runner
 TEST_PORT ?= 8080
 
+# ==============================================================================
 # Laravel Framework Configurations
+# ==============================================================================
 LARAVEL_VERSIONS ?= 8.4 8.3 8.2 8.1 7.4
 LARAVEL_PHP_VERSION ?= 8.4
 LARAVEL_IMAGE_TAG ?= local/laravel:$(LARAVEL_PHP_VERSION)-test
@@ -17,11 +23,51 @@ LARAVEL_CONTAINER_NAME ?= laravel-test-runner
 LARAVEL_TEST_PORT ?= 8080
 LARAVEL_BASE_IMAGE ?= local/php:$(LARAVEL_PHP_VERSION)-test
 
+# ==============================================================================
+# Node.js Language Configurations
+# ==============================================================================
+NODE_VERSIONS ?= 22 20 18
+NODE_VERSION ?= 22
+NODE_IMAGE_TAG ?= local/node:$(NODE_VERSION)-test
+NODE_DOCKERFILE ?= languages/node/$(NODE_VERSION)/Dockerfile.alpine
+NODE_BUILD_CONTEXT ?= languages/node
+NODE_CONTAINER_NAME ?= node-test-runner
+NODE_TEST_PORT ?= 8080
+
+# ==============================================================================
+# Bun Language Configurations
+# ==============================================================================
+BUN_VERSIONS ?= 1.2
+BUN_VERSION ?= 1.2
+BUN_IMAGE_TAG ?= local/bun:$(BUN_VERSION)-test
+BUN_DOCKERFILE ?= languages/bun/$(BUN_VERSION)/Dockerfile.alpine
+BUN_BUILD_CONTEXT ?= languages/bun
+BUN_CONTAINER_NAME ?= bun-test-runner
+BUN_TEST_PORT ?= 8080
+
+# ==============================================================================
+# Next.js Framework Configurations
+# ==============================================================================
+NEXTJS_VERSIONS ?= 22 20 18
+NEXTJS_NODE_VERSION ?= 22
+NEXTJS_IMAGE_TAG ?= local/nextjs:$(NEXTJS_NODE_VERSION)-test
+NEXTJS_DOCKERFILE ?= frameworks/nextjs/Dockerfile
+NEXTJS_BUILD_CONTEXT ?= frameworks/nextjs
+NEXTJS_CONTAINER_NAME ?= nextjs-test-runner
+NEXTJS_TEST_PORT ?= 8080
+NEXTJS_BASE_IMAGE ?= local/node:$(NEXTJS_NODE_VERSION)-test
+
 .PHONY: all build test scan build-all test-all clean \
-        build-laravel build-laravel-all test-laravel scan-laravel
+        build-laravel build-laravel-all test-laravel scan-laravel \
+        build-node build-node-all test-node test-node-all scan-node \
+        build-bun test-bun scan-bun \
+        build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs
 
 all: build test scan
 
+# ==============================================================================
+# PHP Language Targets
+# ==============================================================================
 build:
 	@echo "==> Building PHP $(PHP_VERSION) Alpine base image..."
 	docker build -t $(IMAGE_TAG) -f $(DOCKERFILE) $(BUILD_CONTEXT)
@@ -219,9 +265,249 @@ scan-laravel:
 	fi
 	@echo "==> Trivy scan passed for $(LARAVEL_IMAGE_TAG)!"
 
+# ==============================================================================
+# Node.js Language Targets
+# ==============================================================================
+build-node:
+	@echo "==> Building Node.js $(NODE_VERSION) Alpine base image..."
+	docker build -t $(NODE_IMAGE_TAG) -f $(NODE_DOCKERFILE) $(NODE_BUILD_CONTEXT)
+
+build-node-all:
+	@echo "==> Building all Node.js versions: $(NODE_VERSIONS)..."
+	@for v in $(NODE_VERSIONS); do \
+		echo "===> Building Node.js $$v..."; \
+		docker build -t local/node:$$v-test -f languages/node/$$v/Dockerfile.alpine $(NODE_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Node.js base images built successfully!"
+
+test-node:
+	@echo "==> Testing runtime environment for $(NODE_IMAGE_TAG)..."
+	@docker rm -f $(NODE_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(NODE_CONTAINER_NAME) -p $(NODE_TEST_PORT):8080 $(NODE_IMAGE_TAG)
+	@echo "Waiting for container services to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(NODE_TEST_PORT)/ > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response..."
+	@curl -fsS http://127.0.0.1:$(NODE_TEST_PORT)/ | grep -q '"status":"healthy"' || curl -fsS http://127.0.0.1:$(NODE_TEST_PORT)/ | grep -q '"status": "healthy"' || { \
+		echo "Health verification failed!"; \
+		docker logs $(NODE_CONTAINER_NAME); \
+		docker rm -f $(NODE_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(NODE_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(NODE_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(NODE_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(NODE_IMAGE_TAG) passed successfully!"
+
+test-node-all:
+	@echo "==> Testing runtime environments for all Node.js versions..."
+	@for v in $(NODE_VERSIONS); do \
+		echo "===> Testing Node.js $$v..."; \
+		C_NAME="$(NODE_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(NODE_TEST_PORT):8080 local/node:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(NODE_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Node.js $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(NODE_TEST_PORT)/ | grep -q 'healthy' || { \
+			echo "Health check failed for Node.js $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Node.js $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Node.js $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Node.js runtime tests passed successfully!"
+
+scan-node:
+	@echo "==> Running Aqua Trivy vulnerability scanner for $(NODE_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NODE_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NODE_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(NODE_IMAGE_TAG)!"
+
+# ==============================================================================
+# Bun Language Targets
+# ==============================================================================
+build-bun:
+	@echo "==> Building Bun $(BUN_VERSION) Alpine base image..."
+	docker build -t $(BUN_IMAGE_TAG) -f $(BUN_DOCKERFILE) $(BUN_BUILD_CONTEXT)
+
+test-bun:
+	@echo "==> Testing runtime environment for $(BUN_IMAGE_TAG)..."
+	@docker rm -f $(BUN_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(BUN_CONTAINER_NAME) -p $(BUN_TEST_PORT):8080 $(BUN_IMAGE_TAG)
+	@echo "Waiting for container services to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(BUN_TEST_PORT)/ > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response..."
+	@curl -fsS http://127.0.0.1:$(BUN_TEST_PORT)/ | grep -q '"status":"healthy"' || curl -fsS http://127.0.0.1:$(BUN_TEST_PORT)/ | grep -q '"status": "healthy"' || { \
+		echo "Health verification failed!"; \
+		docker logs $(BUN_CONTAINER_NAME); \
+		docker rm -f $(BUN_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(BUN_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(BUN_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(BUN_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(BUN_IMAGE_TAG) passed successfully!"
+
+scan-bun:
+	@echo "==> Running Aqua Trivy vulnerability scanner for $(BUN_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(BUN_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(BUN_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(BUN_IMAGE_TAG)!"
+
+# ==============================================================================
+# Next.js Framework Targets
+# ==============================================================================
+build-nextjs:
+	@echo "==> Building Next.js (Node $(NEXTJS_NODE_VERSION)) Alpine framework image..."
+	docker build -t $(NEXTJS_IMAGE_TAG) \
+		--build-arg NODE_VERSION=$(NEXTJS_NODE_VERSION) \
+		--build-arg BASE_IMAGE=$(NEXTJS_BASE_IMAGE) \
+		-f $(NEXTJS_DOCKERFILE) $(NEXTJS_BUILD_CONTEXT)
+
+build-nextjs-all:
+	@echo "==> Building all Next.js Node versions: $(NEXTJS_VERSIONS)..."
+	@for v in $(NEXTJS_VERSIONS); do \
+		echo "===> Building Next.js Node $$v..."; \
+		docker build -t local/nextjs:$$v-test \
+			--build-arg NODE_VERSION=$$v \
+			--build-arg BASE_IMAGE=local/node:$$v-test \
+			-f $(NEXTJS_DOCKERFILE) $(NEXTJS_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Next.js framework images built successfully!"
+
+test-nextjs:
+	@echo "==> Testing runtime environment for $(NEXTJS_IMAGE_TAG)..."
+	@docker rm -f $(NEXTJS_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(NEXTJS_CONTAINER_NAME) -p $(NEXTJS_TEST_PORT):8080 $(NEXTJS_IMAGE_TAG)
+	@echo "Waiting for container services to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(NEXTJS_TEST_PORT)/ > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response..."
+	@curl -fsS http://127.0.0.1:$(NEXTJS_TEST_PORT)/ | grep -q '"framework":"Next.js Standalone Runner"' || curl -fsS http://127.0.0.1:$(NEXTJS_TEST_PORT)/ | grep -q '"framework": "Next.js Standalone Runner"' || { \
+		echo "Health verification failed!"; \
+		docker logs $(NEXTJS_CONTAINER_NAME); \
+		docker rm -f $(NEXTJS_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(NEXTJS_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(NEXTJS_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(NEXTJS_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(NEXTJS_IMAGE_TAG) passed successfully!"
+
+test-nextjs-all:
+	@echo "==> Testing runtime environments for all Next.js versions..."
+	@for v in $(NEXTJS_VERSIONS); do \
+		echo "===> Testing Next.js Node $$v..."; \
+		C_NAME="$(NEXTJS_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(NEXTJS_TEST_PORT):8080 local/nextjs:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(NEXTJS_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Next.js Node $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(NEXTJS_TEST_PORT)/ | grep -q 'Next.js Standalone Runner' || { \
+			echo "Health check failed for Next.js Node $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Next.js Node $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Next.js Node $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Next.js runtime tests passed successfully!"
+
+scan-nextjs:
+	@echo "==> Running Aqua Trivy scanner for $(NEXTJS_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NEXTJS_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NEXTJS_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(NEXTJS_IMAGE_TAG)!"
+
+# ==============================================================================
+# Clean Target
+# ==============================================================================
 clean:
 	@echo "==> Cleaning up test containers and images..."
-	@docker rm -f $(CONTAINER_NAME) $(LARAVEL_CONTAINER_NAME)-web $(LARAVEL_CONTAINER_NAME)-worker $(LARAVEL_CONTAINER_NAME)-scheduler 2>/dev/null || true
+	@docker rm -f $(CONTAINER_NAME) $(LARAVEL_CONTAINER_NAME)-web $(LARAVEL_CONTAINER_NAME)-worker $(LARAVEL_CONTAINER_NAME)-scheduler \
+		$(NODE_CONTAINER_NAME) $(BUN_CONTAINER_NAME) $(NEXTJS_CONTAINER_NAME) 2>/dev/null || true
 	@for v in $(PHP_VERSIONS); do \
 		docker rm -f $(CONTAINER_NAME)-$$v 2>/dev/null || true; \
 		docker rmi local/php:$$v-test 2>/dev/null || true; \
@@ -229,5 +515,17 @@ clean:
 	@for v in $(LARAVEL_VERSIONS); do \
 		docker rmi local/laravel:$$v-test 2>/dev/null || true; \
 	done
-	@docker rmi $(IMAGE_TAG) $(LARAVEL_IMAGE_TAG) 2>/dev/null || true
+	@for v in $(NODE_VERSIONS); do \
+		docker rm -f $(NODE_CONTAINER_NAME)-$$v 2>/dev/null || true; \
+		docker rmi local/node:$$v-test 2>/dev/null || true; \
+	done
+	@for v in $(BUN_VERSIONS); do \
+		docker rm -f $(BUN_CONTAINER_NAME)-$$v 2>/dev/null || true; \
+		docker rmi local/bun:$$v-test 2>/dev/null || true; \
+	done
+	@for v in $(NEXTJS_VERSIONS); do \
+		docker rm -f $(NEXTJS_CONTAINER_NAME)-$$v 2>/dev/null || true; \
+		docker rmi local/nextjs:$$v-test 2>/dev/null || true; \
+	done
+	@docker rmi $(IMAGE_TAG) $(LARAVEL_IMAGE_TAG) $(NODE_IMAGE_TAG) $(BUN_IMAGE_TAG) $(NEXTJS_IMAGE_TAG) 2>/dev/null || true
 	@echo "Clean completed."

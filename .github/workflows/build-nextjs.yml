@@ -1,0 +1,267 @@
+name: Build and Audit Next.js Base Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frameworks/nextjs/**'
+      - '.github/workflows/build-nextjs.yml'
+  workflow_run:
+    workflows: ['Build and Audit Node Base Images']
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  security-events: write
+  issues: write
+
+jobs:
+  check-trigger:
+    name: Check Build Trigger
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      should_build: ${{ steps.check.outputs.should_build || steps.check_other.outputs.should_build }}
+    steps:
+      - name: Checkout repository
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check for base image modifications
+        if: github.event_name == 'push'
+        id: check
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git rev-parse --verify "$BEFORE" >/dev/null 2>&1; then
+            DIFF_BASE="$BEFORE"
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            DIFF_BASE="HEAD~1"
+          else
+            DIFF_BASE="4b825dc642cb6eb9a060e54bf8d69288fbee4904"
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$DIFF_BASE" HEAD)
+          echo "Files changed in push:"
+          echo "$CHANGED_FILES"
+
+          if echo "$CHANGED_FILES" | grep -q '^languages/node/'; then
+            echo "languages/node/** modified in this push."
+            echo "Deferring Next.js build until Node base images are built and pushed via workflow_run."
+            echo "should_build=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "No base Node image modifications detected. Proceeding with immediate Next.js build."
+            echo "should_build=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set output for non-push events
+        if: github.event_name != 'push'
+        id: check_other
+        run: |
+          echo "Triggered by ${{ github.event_name }}. Proceeding with build."
+          echo "should_build=true" >> "$GITHUB_OUTPUT"
+
+  build-and-audit:
+    name: Next.js Node ${{ matrix.node_version }} Alpine Build & Audit
+    needs: check-trigger
+    if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node_version: ['22', '20', '18']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build local image for testing and CVE scanning
+        uses: docker/build-push-action@v6
+        with:
+          context: frameworks/nextjs
+          file: frameworks/nextjs/Dockerfile
+          build-args: |
+            NODE_VERSION=${{ matrix.node_version }}
+          load: true
+          tags: local/nextjs:${{ matrix.node_version }}-test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run Aqua Trivy vulnerability scanner
+        id: trivy_scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: local/nextjs:${{ matrix.node_version }}-test
+          scan-type: image
+          format: table
+          exit-code: 1
+          ignore-unfixed: true
+          severity: CRITICAL,HIGH
+          output: trivy-report.txt
+
+      - name: Create GitHub Issue on Trivy CVE detection
+        if: failure() && steps.trivy_scan.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in nextjs:${{ matrix.node_version }}-alpine"
+
+          if [ -f trivy-report.txt ]; then
+            echo "=== Trivy Scan Report ==="
+            cat trivy-report.txt
+          fi
+
+          TARGET_IMAGE="nextjs:${{ matrix.node_version }}-alpine"
+          ISSUE_TITLE="[Security Alert] Actionable CVEs detected in ${TARGET_IMAGE}"
+
+          echo "Checking for existing open issue for ${TARGET_IMAGE}..."
+          EXISTING_ISSUE=$(gh issue list \
+            --repo "${{ github.repository }}" \
+            --state open \
+            --limit 100 \
+            --json number,title \
+            --jq ".[] | select((.title | contains(\"${TARGET_IMAGE}\")) and (.title | (contains(\"Security\") or contains(\"CVE\")))) | .number" | head -n 1)
+
+          if [ -n "$EXISTING_ISSUE" ]; then
+            echo "An open issue (#${EXISTING_ISSUE}) already exists tracking vulnerabilities for ${TARGET_IMAGE}. Skipping issue creation to avoid duplicates."
+            exit 0
+          fi
+
+          echo "No open issue found. Preparing issue body..."
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MAX_LINES=250
+          REPORT_FILE="trivy-report.txt"
+
+          cat <<EOF > issue-body.md
+          ## 🚨 Security Alert: Actionable CVEs Detected
+
+          Aqua Trivy detected actionable **CRITICAL** or **HIGH** vulnerabilities in image: \`${TARGET_IMAGE}\`.
+
+          ### Build & Run Metadata
+          - **Target Image:** \`${TARGET_IMAGE}\`
+          - **Node Matrix Version:** \`${{ matrix.node_version }}\`
+          - **Workflow:** \`${{ github.workflow }}\`
+          - **Trigger:** \`${{ github.event_name }}\`
+          - **Run URL:** [GitHub Actions Run #${{ github.run_id }}](${RUN_URL})
+          - **Commit:** \`${{ github.sha }}\`
+          - **Timestamp:** \`${TIMESTAMP}\`
+
+          ---
+
+          ### Trivy Scan Report
+          EOF
+
+          echo '```text' >> issue-body.md
+
+          if [ -f "$REPORT_FILE" ] && [ -s "$REPORT_FILE" ]; then
+            TOTAL_LINES=$(wc -l < "$REPORT_FILE")
+            if [ "$TOTAL_LINES" -gt "$MAX_LINES" ]; then
+              head -n "$MAX_LINES" "$REPORT_FILE" >> issue-body.md
+              echo "" >> issue-body.md
+              echo "... [Report truncated. Showing first ${MAX_LINES} lines of ${TOTAL_LINES}. See full workflow log for complete details] ..." >> issue-body.md
+            else
+              cat "$REPORT_FILE" >> issue-body.md
+            fi
+          else
+            echo "No detailed scan report was generated or scan failed before writing." >> issue-body.md
+          fi
+
+          echo '```' >> issue-body.md
+
+          cat << 'EOF' >> issue-body.md
+
+          ---
+          *Automated alert created by CI/CD CVE Governance pipeline.*
+          EOF
+
+          echo "Ensuring required labels exist..."
+          for label in "security" "cve" "automated"; do
+            gh label create "$label" --repo "${{ github.repository }}" --force 2>/dev/null || true
+          done
+
+          echo "Creating new GitHub Issue..."
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "$ISSUE_TITLE" \
+            --body-file issue-body.md \
+            --label "security" \
+            --label "cve" \
+            --label "automated" || \
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "$ISSUE_TITLE" \
+            --body-file issue-body.md
+
+      - name: Run container verification test
+        run: |
+          IMAGE="local/nextjs:${{ matrix.node_version }}-test"
+
+          echo "==> 1. Verifying non-root execution..."
+          UID_VAL=$(docker run --rm "$IMAGE" id -u)
+          if [ "$UID_VAL" != "10001" ]; then
+            echo "Security check failed: Process running as UID $UID_VAL (expected 10001)"
+            exit 1
+          fi
+
+          echo "==> 2. Verifying HTTP 8080 & Healthcheck..."
+          docker run -d --name test-nextjs -p 8080:8080 "$IMAGE"
+          sleep 3
+          curl -fsS http://127.0.0.1:8080/ || (docker logs test-nextjs && exit 1)
+          docker rm -f test-nextjs
+
+          echo "==> All container verification tests passed successfully!"
+
+      - name: Log in to GitHub Container Registry
+        if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag and push production images to GHCR
+        if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
+        run: |
+          TARGET_REPO="ghcr.io/pfnapp/base/frameworks/nextjs"
+          SRC_IMAGE="local/nextjs:${{ matrix.node_version }}-test"
+
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}"
+
+          push_with_retry() {
+            local tag="$1"
+            local attempt=1
+            while [ $attempt -le 3 ]; do
+              echo "Pushing $tag (attempt $attempt)..."
+              if docker push "$tag"; then
+                return 0
+              fi
+              echo "Push failed. Retrying in 5 seconds..."
+              sleep 5
+              attempt=$((attempt + 1))
+            done
+            echo "Failed to push $tag after 3 attempts."
+            return 1
+          }
+
+          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
+
+          if [ "${{ matrix.node_version }}" = "22" ]; then
+            docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
+            push_with_retry "${TARGET_REPO}:latest"
+          fi

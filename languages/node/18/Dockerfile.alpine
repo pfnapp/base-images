@@ -1,0 +1,44 @@
+# Syntax: docker/dockerfile:1
+FROM node:18-alpine
+
+# Set build arguments for non-root runtime UID/GID
+ARG UID=10001
+ARG GID=10001
+
+# Install runtime utilities, process reaper, and security certificates
+RUN apk update && apk upgrade --no-cache && \
+    apk add --no-cache \
+    dumb-init \
+    curl \
+    ca-certificates \
+    tzdata
+
+# Create dedicated non-root user and group
+RUN addgroup -g ${GID} -S appgroup && \
+    adduser -u ${UID} -S appuser -G appgroup
+
+# Pre-create application root directory with non-root ownership
+RUN mkdir -p /app && \
+    chown -R ${UID}:${GID} /app
+
+# Copy unified runtime entrypoint
+COPY shared/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh && \
+    chown ${UID}:${GID} /usr/local/bin/entrypoint.sh
+
+WORKDIR /app
+
+# Drop SUID/SGID permissions to eliminate local privilege escalation paths
+RUN find / -perm /6000 -type f -exec chmod a-s {} + 2>/dev/null || true
+
+# Default unprivileged networking and environment
+ENV PORT=8080 \
+    HOSTNAME=0.0.0.0 \
+    NODE_ENV=production
+
+EXPOSE 8080
+
+USER 10001:10001
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+CMD ["/usr/local/bin/entrypoint.sh"]
