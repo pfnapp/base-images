@@ -1,0 +1,90 @@
+name: Build and Audit PHP Base Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'languages/php/**'
+      - '.github/workflows/build-php.yml'
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  security-events: write
+
+jobs:
+  build-and-audit:
+    name: PHP ${{ matrix.php_version }} Alpine Build & Audit
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php_version: ['8.4']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build local image for testing and CVE scanning
+        uses: docker/build-push-action@v6
+        with:
+          context: languages/php
+          file: languages/php/${{ matrix.php_version }}/Dockerfile.alpine
+          load: true
+          tags: local/php:${{ matrix.php_version }}-test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run Aqua Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: local/php:${{ matrix.php_version }}-test
+          scan-type: image
+          format: table
+          exit-code: 1
+          ignore-unfixed: true
+          severity: CRITICAL,HIGH
+
+      - name: Run container verification test
+        run: |
+          docker run -d --name test-container -p 8080:8080 local/php:${{ matrix.php_version }}-test
+          sleep 3
+          curl -fsS http://127.0.0.1:8080/healthz || (docker logs test-container && exit 1)
+          UID_CHECK=$(docker exec test-container id -u)
+          if [ "$UID_CHECK" != "10001" ]; then
+            echo "Security check failed: Process running as UID $UID_CHECK (expected 10001)"
+            exit 1
+          fi
+          docker rm -f test-container
+
+      - name: Log in to GitHub Container Registry
+        if: github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag and push production images to GHCR
+        if: github.ref == 'refs/heads/main'
+        run: |
+          TARGET_REPO="ghcr.io/pfnapp/base/languages/php"
+          SRC_IMAGE="local/php:${{ matrix.php_version }}-test"
+
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
+
+          docker push "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
+          docker push "${TARGET_REPO}:${{ matrix.php_version }}"
+          docker push "${TARGET_REPO}:latest"
