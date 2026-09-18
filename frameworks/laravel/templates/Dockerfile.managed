@@ -17,6 +17,9 @@ FROM ghcr.io/pfnapp/base/frameworks/laravel:${PHP_VERSION}-alpine
 
 WORKDIR /var/www/html
 
+ENV COMPOSER_POLICY_ADVISORIES_BLOCK=false \
+    COMPOSER_ALLOW_SUPERUSER=1
+
 # Copy application source code with non-root ownership
 COPY --chown=10001:10001 . /var/www/html
 
@@ -28,7 +31,7 @@ RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoload
     && if [ -f package.json ]; then \
          npm ci --prefer-offline 2>/dev/null || npm install --no-audit; \
          npm run build; \
-         rm -rf node_modules /tmp/* ~/.npm; \
+         rm -rf node_modules ~/.npm; \
        fi
 
 # Unprivileged HTTP port

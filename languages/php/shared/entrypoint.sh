@@ -50,5 +50,8 @@ echo json_encode([
 EOF
 fi
 
+# Ensure unprivileged Nginx temporary directories exist
+mkdir -p /tmp/nginx/client_temp /tmp/nginx/proxy_temp /tmp/nginx/fastcgi_temp /tmp/nginx/uwsgi_temp /tmp/nginx/scgi_temp 2>/dev/null || true
+
 # Execute process manager
 exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf "$@"

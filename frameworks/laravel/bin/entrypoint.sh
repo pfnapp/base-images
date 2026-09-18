@@ -192,6 +192,9 @@ rm -f /etc/supervisor/conf.d/*.conf
 if [ "$ENABLE_WEB" = "true" ]; then
     echo "==> Enabling Nginx + PHP-FPM web services..."
 
+    # Ensure unprivileged Nginx temporary directories exist
+    mkdir -p /tmp/nginx/client_temp /tmp/nginx/proxy_temp /tmp/nginx/fastcgi_temp /tmp/nginx/uwsgi_temp /tmp/nginx/scgi_temp 2>/dev/null || true
+
     cat <<'EOF' > /etc/supervisor/conf.d/php-fpm.conf
 [program:php-fpm]
 command=/usr/local/sbin/php-fpm -F -y /usr/local/etc/php-fpm.conf

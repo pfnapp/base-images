@@ -15,7 +15,8 @@ FROM oven/bun:${BUN_VERSION}-alpine AS builder
 WORKDIR /app
 
 ENV NEXT_TELEMETRY_DISABLED=1 \
-    NODE_ENV=production
+    NODE_ENV=production \
+    NEXT_PRIVATE_STANDALONE=true
 
 # Install dependencies using Bun
 COPY package.json bun.lockb* bun.lock* ./
