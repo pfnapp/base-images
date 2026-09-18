@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "laravel",
+  "framework": "Laravel",
+  "version": "8.4",
+  "baseImage": "ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/healthz", "port": 8080 },
+    "readiness": { "path": "/healthz", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PHP_UPLOAD_MAX_FILESIZE",
+      "label": "Max Upload Size",
+      "type": "bytes_string",
+      "default": "64M",
+      "category": "performance",
+      "description": "Maximum allowed size for uploaded files in PHP.",
+      "troubleshooting": "If your application returns HTTP 413 Payload Too Large, increase this value alongside PHP_POST_MAX_SIZE.",
+      "relatedKeys": ["PHP_POST_MAX_SIZE"],
+      "presets": ["32M", "64M", "100M", "256M", "512M"]
+    },
+    {
+      "key": "PHP_POST_MAX_SIZE",
+      "label": "Max POST Body Size",
+      "type": "bytes_string",
+      "default": "64M",
+      "category": "performance",
+      "description": "Maximum size of POST data that PHP will accept.",
+      "troubleshooting": "This must be greater than or equal to PHP_UPLOAD_MAX_FILESIZE."
+    },
+    {
+      "key": "PHP_MEMORY_LIMIT",
+      "label": "Script Memory Limit",
+      "type": "bytes_string",
+      "default": "256M",
+      "category": "performance",
+      "description": "Maximum amount of memory a single PHP script may consume.",
+      "troubleshooting": "Increase to 512M if processes fail with 'Allowed memory size exhausted'."
+    },
+    {
+      "key": "CONTAINER_ROLE",
+      "label": "Workload Role",
+      "type": "select",
+      "default": "app",
+      "category": "orchestration",
+      "options": ["app", "worker", "horizon", "scheduler", "all"],
+      "description": "Execution mode for the container inside Kubernetes.",
+      "troubleshooting": "Set to 'worker' for queue workers, 'horizon' for Redis Horizon, and 'scheduler' for cron artisan schedule without needing separate Dockerfiles."
+    },
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal container listening port.",
+      "troubleshooting": "Platform base image runs unprivileged on port 8080."
+    }
+  ]
+}

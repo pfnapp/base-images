@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "nextjs",
+  "framework": "Next.js",
+  "version": "15",
+  "baseImage": "ghcr.io/pfnapp/base/frameworks/nextjs:15-alpine",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/", "port": 8080 },
+    "readiness": { "path": "/", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal container listening port.",
+      "troubleshooting": "Platform Next.js base image listens on unprivileged port 8080."
+    },
+    {
+      "key": "NODE_ENV",
+      "label": "Node Environment",
+      "type": "string",
+      "default": "production",
+      "category": "runtime",
+      "description": "Node.js execution environment mode.",
+      "troubleshooting": "Keep set to 'production' for optimized build and runtime performance."
+    }
+  ]
+}
