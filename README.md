@@ -7,6 +7,8 @@ Hardened, unprivileged container base images designed for multi-tenant Kubernete
 [![Build and Audit Node Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml)
 [![Build and Audit Bun Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml)
 [![Build and Audit Next.js Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml)
+[![Build and Audit Vite Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml)
+[![Build and Audit NestJS Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml)
 [![Nightly CVE Audit](https://github.com/pfnapp/base-images/actions/workflows/nightly-cve-audit.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/nightly-cve-audit.yml)
 [![Security: Aqua Trivy](https://img.shields.io/badge/Security-Aqua%20Trivy%20Gated-blue.svg)](https://github.com/aquasecurity/trivy)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -40,6 +42,8 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 | **Languages** | `languages/python/` | *Coming soon* | Python 3.11, 3.12 (Slim) |
 | **Frameworks** | [`frameworks/laravel/`](frameworks/laravel/) | [Laravel Guide](frameworks/laravel/README.md) | Laravel 8.4, 8.3, 8.2, 8.1, 7.4 (Web, Worker, Horizon, Cron) |
 | **Frameworks** | [`frameworks/nextjs/`](frameworks/nextjs/) | [Next.js Guide](frameworks/nextjs/README.md) | Next.js Standalone Runner (Node.js 22, 20, 18) |
+| **Frameworks** | [`frameworks/vite/`](frameworks/vite/) | [Vite Guide](frameworks/vite/README.md) | Vite Static SPA Runner (Alpine + Unprivileged Nginx) |
+| **Frameworks** | [`frameworks/nestjs/`](frameworks/nestjs/) | [NestJS Guide](frameworks/nestjs/README.md) | NestJS Enterprise Runner (Node.js 22, 20, 18) |
 
 ---
 
@@ -72,6 +76,15 @@ docker pull ghcr.io/pfnapp/base/languages/bun:latest
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:latest
+
+# Pull Vite Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/vite:alpine
+docker pull ghcr.io/pfnapp/base/frameworks/vite:latest
+
+# Pull NestJS 22 Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine
+docker pull ghcr.io/pfnapp/base/frameworks/nestjs:22
+docker pull ghcr.io/pfnapp/base/frameworks/nestjs:latest
 ```
 
 ---

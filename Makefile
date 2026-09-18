@@ -57,11 +57,34 @@ NEXTJS_CONTAINER_NAME ?= nextjs-test-runner
 NEXTJS_TEST_PORT ?= 8080
 NEXTJS_BASE_IMAGE ?= local/node:$(NEXTJS_NODE_VERSION)-test
 
+# ==============================================================================
+# Vite Framework Configurations
+# ==============================================================================
+VITE_IMAGE_TAG ?= local/vite:test
+VITE_DOCKERFILE ?= frameworks/vite/Dockerfile
+VITE_BUILD_CONTEXT ?= frameworks/vite
+VITE_CONTAINER_NAME ?= vite-test-runner
+VITE_TEST_PORT ?= 8080
+
+# ==============================================================================
+# NestJS Framework Configurations
+# ==============================================================================
+NESTJS_VERSIONS ?= 22 20 18
+NESTJS_NODE_VERSION ?= 22
+NESTJS_IMAGE_TAG ?= local/nestjs:$(NESTJS_NODE_VERSION)-test
+NESTJS_DOCKERFILE ?= frameworks/nestjs/Dockerfile
+NESTJS_BUILD_CONTEXT ?= frameworks/nestjs
+NESTJS_CONTAINER_NAME ?= nestjs-test-runner
+NESTJS_TEST_PORT ?= 8080
+NESTJS_BASE_IMAGE ?= local/node:$(NESTJS_NODE_VERSION)-test
+
 .PHONY: all build test scan build-all test-all clean \
         build-laravel build-laravel-all test-laravel scan-laravel \
         build-node build-node-all test-node test-node-all scan-node \
         build-bun build-bun-all test-bun test-bun-all scan-bun \
-        build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs
+        build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs \
+        build-vite test-vite scan-vite \
+        build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs
 
 all: build test scan
 
@@ -548,12 +571,162 @@ scan-nextjs:
 	@echo "==> Trivy scan passed for $(NEXTJS_IMAGE_TAG)!"
 
 # ==============================================================================
+# Vite Framework Targets
+# ==============================================================================
+build-vite:
+	@echo "==> Building Vite Nginx Alpine framework image..."
+	docker build -t $(VITE_IMAGE_TAG) -f $(VITE_DOCKERFILE) $(VITE_BUILD_CONTEXT)
+
+test-vite:
+	@echo "==> Testing runtime environment for $(VITE_IMAGE_TAG)..."
+	@docker rm -f $(VITE_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(VITE_CONTAINER_NAME) -p $(VITE_TEST_PORT):8080 $(VITE_IMAGE_TAG)
+	@echo "Waiting for Nginx to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(VITE_TEST_PORT)/healthz > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response & healthcheck..."
+	@curl -fsS http://127.0.0.1:$(VITE_TEST_PORT)/ | grep -q 'Vite Static Runner' || { \
+		echo "Root verification failed!"; \
+		docker logs $(VITE_CONTAINER_NAME); \
+		docker rm -f $(VITE_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@curl -fsS http://127.0.0.1:$(VITE_TEST_PORT)/healthz | grep -q 'Vite Static' || { \
+		echo "Healthz verification failed!"; \
+		docker logs $(VITE_CONTAINER_NAME); \
+		docker rm -f $(VITE_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(VITE_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(VITE_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(VITE_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(VITE_IMAGE_TAG) passed successfully!"
+
+scan-vite:
+	@echo "==> Running Aqua Trivy scanner for $(VITE_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(VITE_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(VITE_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(VITE_IMAGE_TAG)!"
+
+# ==============================================================================
+# NestJS Framework Targets
+# ==============================================================================
+build-nestjs:
+	@echo "==> Building NestJS (Node $(NESTJS_NODE_VERSION)) Alpine framework image..."
+	docker build -t $(NESTJS_IMAGE_TAG) \
+		--build-arg NODE_VERSION=$(NESTJS_NODE_VERSION) \
+		--build-arg BASE_IMAGE=$(NESTJS_BASE_IMAGE) \
+		-f $(NESTJS_DOCKERFILE) $(NESTJS_BUILD_CONTEXT)
+
+build-nestjs-all:
+	@echo "==> Building all NestJS Node versions: $(NESTJS_VERSIONS)..."
+	@for v in $(NESTJS_VERSIONS); do \
+		echo "===> Building NestJS Node $$v..."; \
+		docker build -t local/nestjs:$$v-test \
+			--build-arg NODE_VERSION=$$v \
+			--build-arg BASE_IMAGE=local/node:$$v-test \
+			-f $(NESTJS_DOCKERFILE) $(NESTJS_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All NestJS framework images built successfully!"
+
+test-nestjs:
+	@echo "==> Testing runtime environment for $(NESTJS_IMAGE_TAG)..."
+	@docker rm -f $(NESTJS_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(NESTJS_CONTAINER_NAME) -p $(NESTJS_TEST_PORT):8080 $(NESTJS_IMAGE_TAG)
+	@echo "Waiting for container services to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(NESTJS_TEST_PORT)/ > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response..."
+	@curl -fsS http://127.0.0.1:$(NESTJS_TEST_PORT)/ | grep -q 'NestJS Base Image Runner' || { \
+		echo "Health verification failed!"; \
+		docker logs $(NESTJS_CONTAINER_NAME); \
+		docker rm -f $(NESTJS_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(NESTJS_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(NESTJS_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(NESTJS_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(NESTJS_IMAGE_TAG) passed successfully!"
+
+test-nestjs-all:
+	@echo "==> Testing runtime environments for all NestJS versions..."
+	@for v in $(NESTJS_VERSIONS); do \
+		echo "===> Testing NestJS Node $$v..."; \
+		C_NAME="$(NESTJS_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(NESTJS_TEST_PORT):8080 local/nestjs:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(NESTJS_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for NestJS Node $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(NESTJS_TEST_PORT)/ | grep -q 'NestJS Base Image Runner' || { \
+			echo "Health check failed for NestJS Node $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in NestJS Node $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified NestJS Node $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All NestJS runtime tests passed successfully!"
+
+scan-nestjs:
+	@echo "==> Running Aqua Trivy scanner for $(NESTJS_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NESTJS_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NESTJS_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(NESTJS_IMAGE_TAG)!"
+
+# ==============================================================================
 # Clean Target
 # ==============================================================================
 clean:
 	@echo "==> Cleaning up test containers and images..."
 	@docker rm -f $(CONTAINER_NAME) $(LARAVEL_CONTAINER_NAME)-web $(LARAVEL_CONTAINER_NAME)-worker $(LARAVEL_CONTAINER_NAME)-scheduler \
-		$(NODE_CONTAINER_NAME) $(BUN_CONTAINER_NAME) $(NEXTJS_CONTAINER_NAME) 2>/dev/null || true
+		$(NODE_CONTAINER_NAME) $(BUN_CONTAINER_NAME) $(NEXTJS_CONTAINER_NAME) $(VITE_CONTAINER_NAME) $(NESTJS_CONTAINER_NAME) 2>/dev/null || true
 	@for v in $(PHP_VERSIONS); do \
 		docker rm -f $(CONTAINER_NAME)-$$v 2>/dev/null || true; \
 		docker rmi local/php:$$v-test 2>/dev/null || true; \
@@ -573,5 +746,9 @@ clean:
 		docker rm -f $(NEXTJS_CONTAINER_NAME)-$$v 2>/dev/null || true; \
 		docker rmi local/nextjs:$$v-test 2>/dev/null || true; \
 	done
-	@docker rmi $(IMAGE_TAG) $(LARAVEL_IMAGE_TAG) $(NODE_IMAGE_TAG) $(BUN_IMAGE_TAG) $(NEXTJS_IMAGE_TAG) 2>/dev/null || true
+	@for v in $(NESTJS_VERSIONS); do \
+		docker rm -f $(NESTJS_CONTAINER_NAME)-$$v 2>/dev/null || true; \
+		docker rmi local/nestjs:$$v-test 2>/dev/null || true; \
+	done
+	@docker rmi $(IMAGE_TAG) $(LARAVEL_IMAGE_TAG) $(NODE_IMAGE_TAG) $(BUN_IMAGE_TAG) $(NEXTJS_IMAGE_TAG) $(VITE_IMAGE_TAG) $(NESTJS_IMAGE_TAG) 2>/dev/null || true
 	@echo "Clean completed."

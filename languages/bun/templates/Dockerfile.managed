@@ -1,0 +1,63 @@
+# syntax=docker/dockerfile:1
+ARG BUN_VERSION=1.4
+
+# ==============================================================================
+# Platform-Managed Bun Dockerfile (Multi-Stage Production Build)
+# ==============================================================================
+# Managed by the platform / PaaS (App Hosting engine).
+# Developers NEVER create or maintain a Dockerfile in their repository.
+# Built 100% unprivileged (UID 10001 / GID 10001) on Alpine Linux.
+# ==============================================================================
+
+# Stage 1: Build & Dependency Stage
+FROM oven/bun:${BUN_VERSION}-alpine AS builder
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+# Copy package manifests (supports binary lockfile bun.lockb and text lockfile bun.lock)
+COPY package.json bun.lockb* bun.lock* ./
+
+# Run requirements script if defined in package.json
+RUN if bun run --silent requirements 2>/dev/null; then \
+        echo "Requirements script found, running requirements..."; \
+        bun run requirements; \
+    else \
+        echo "No requirements script found, skipping requirements step..."; \
+    fi
+
+# Install all dependencies (including devDependencies required for compilation/build)
+RUN echo "Installing all dependencies for build..." && \
+    (bun install --frozen-lockfile 2>/dev/null || bun install)
+
+# Copy full application source code
+COPY . .
+
+# Build application if build script is defined
+RUN if bun run --silent build 2>/dev/null; then \
+        echo "Build script found, running build..."; \
+        bun run build; \
+    else \
+        echo "No build script found, skipping build step..."; \
+    fi
+
+# Stage 2: Hardened Unprivileged Production Runtime
+FROM ghcr.io/pfnapp/base/languages/bun:${BUN_VERSION}-alpine
+
+WORKDIR /app
+
+# Copy built application source and assets from builder stage
+COPY --from=builder --chown=10001:10001 /app ./
+
+# Prune development dependencies and ensure strictly production dependencies
+RUN rm -rf node_modules && \
+    (bun install --production --frozen-lockfile 2>/dev/null || bun install --production)
+
+# Default unprivileged port
+EXPOSE 8080
+
+# Enforce non-root execution (UID 10001 / GID 10001)
+USER 10001:10001
+
+CMD ["bun", "run", "start"]

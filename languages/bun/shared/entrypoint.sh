@@ -6,12 +6,36 @@ export NODE_ENV="${NODE_ENV:-production}"
 export PORT="${PORT:-8080}"
 export HOSTNAME="${HOSTNAME:-0.0.0.0}"
 
-# If command-line arguments are provided, execute them directly
+# If command-line arguments are provided, inspect them
 if [ $# -gt 0 ]; then
-  exec "$@"
+  # If the command is NOT standard start, execute it directly
+  if [ "$*" != "bun run start" ] && [ "$*" != "bun start" ] && [ "$*" != "start" ]; then
+    exec "$@"
+  fi
 fi
 
-# Application entrypoint resolution
+# Application entrypoint resolution via package.json scripts (start:prod -> start)
+if [ -f "package.json" ]; then
+  START_SCRIPT=$(bun -e '
+    try {
+      const pkg = require("./package.json");
+      if (pkg.scripts) {
+        if (pkg.scripts["start:prod"]) {
+          process.stdout.write("start:prod");
+        } else if (pkg.scripts["start"]) {
+          process.stdout.write("start");
+        }
+      }
+    } catch (e) {}
+  ' 2>/dev/null)
+
+  if [ -n "$START_SCRIPT" ]; then
+    echo "Starting application using bun run $START_SCRIPT..."
+    exec bun run "$START_SCRIPT"
+  fi
+fi
+
+# Standalone file resolution
 if [ -f "server.js" ]; then
   exec bun server.js
 fi
@@ -26,10 +50,6 @@ fi
 
 if [ -f "index.js" ]; then
   exec bun index.js
-fi
-
-if [ -f "package.json" ]; then
-  exec bun run start
 fi
 
 # Fallback lightweight HTTP server when no application code is mounted

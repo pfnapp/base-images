@@ -41,9 +41,33 @@ Production-ready, hardened Bun runtime images on Alpine Linux, running **100% as
 
 ---
 
-## 🚀 Usage & Extending in Your Application
+## 🎯 Smart Start Script Detection
 
-Build your Bun application container:
+The unprivileged runtime entrypoint (`shared/entrypoint.sh`) dynamically resolves the application startup command without external dependencies like `jq` using native Bun evaluation:
+
+1. **`start:prod` Priority**: If `package.json` defines `"start:prod"`, it executes `bun run start:prod`.
+2. **`start` Fallback**: If `"start:prod"` is absent but `"start"` exists, it executes `bun run start`.
+3. **Standalone Files**: If neither script is present in `package.json`, it checks for `server.js`, `server.ts`, `index.ts`, or `index.js`.
+4. **Fallback Health Server**: If no application files are mounted, it launches a lightweight HTTP health check endpoint on `$PORT`.
+
+---
+
+## 🚀 Platform-Managed Multi-Stage Template
+
+For automated PaaS and CI deployments, use the multi-stage build template [`templates/Dockerfile.managed`](templates/Dockerfile.managed). It isolates build-time dependencies, executes optional `requirements` and `build` scripts, and produces a minimal production container:
+
+```bash
+docker build \
+  -f languages/bun/templates/Dockerfile.managed \
+  --build-arg BUN_VERSION=1.4 \
+  -t my-bun-app:latest .
+```
+
+---
+
+## 🛠️ Usage & Extending in Your Custom Dockerfile
+
+Build your Bun application container manually:
 
 ```dockerfile
 FROM ghcr.io/pfnapp/base/languages/bun:1.4-alpine
