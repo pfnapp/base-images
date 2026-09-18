@@ -37,8 +37,8 @@ NODE_TEST_PORT ?= 8080
 # ==============================================================================
 # Bun Language Configurations
 # ==============================================================================
-BUN_VERSIONS ?= 1.2
-BUN_VERSION ?= 1.2
+BUN_VERSIONS ?= 1.4 1.2
+BUN_VERSION ?= 1.4
 BUN_IMAGE_TAG ?= local/bun:$(BUN_VERSION)-test
 BUN_DOCKERFILE ?= languages/bun/$(BUN_VERSION)/Dockerfile.alpine
 BUN_BUILD_CONTEXT ?= languages/bun
@@ -60,7 +60,7 @@ NEXTJS_BASE_IMAGE ?= local/node:$(NEXTJS_NODE_VERSION)-test
 .PHONY: all build test scan build-all test-all clean \
         build-laravel build-laravel-all test-laravel scan-laravel \
         build-node build-node-all test-node test-node-all scan-node \
-        build-bun test-bun scan-bun \
+        build-bun build-bun-all test-bun test-bun-all scan-bun \
         build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs
 
 all: build test scan
@@ -364,6 +364,14 @@ build-bun:
 	@echo "==> Building Bun $(BUN_VERSION) Alpine base image..."
 	docker build -t $(BUN_IMAGE_TAG) -f $(BUN_DOCKERFILE) $(BUN_BUILD_CONTEXT)
 
+build-bun-all:
+	@echo "==> Building all Bun versions: $(BUN_VERSIONS)..."
+	@for v in $(BUN_VERSIONS); do \
+		echo "===> Building Bun $$v..."; \
+		docker build -t local/bun:$$v-test -f languages/bun/$$v/Dockerfile.alpine $(BUN_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Bun base images built successfully!"
+
 test-bun:
 	@echo "==> Testing runtime environment for $(BUN_IMAGE_TAG)..."
 	@docker rm -f $(BUN_CONTAINER_NAME) 2>/dev/null || true
@@ -393,6 +401,44 @@ test-bun:
 	echo "Verified UID: $$UID_CHECK (appuser)"
 	@docker rm -f $(BUN_CONTAINER_NAME) > /dev/null
 	@echo "==> Runtime test for $(BUN_IMAGE_TAG) passed successfully!"
+
+test-bun-all:
+	@echo "==> Testing runtime environments for all Bun versions..."
+	@for v in $(BUN_VERSIONS); do \
+		echo "===> Testing Bun $$v..."; \
+		C_NAME="$(BUN_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(BUN_TEST_PORT):8080 local/bun:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(BUN_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Bun $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(BUN_TEST_PORT)/ | grep -q 'healthy' || { \
+			echo "Health check failed for Bun $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Bun $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Bun $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Bun runtime tests passed successfully!"
 
 scan-bun:
 	@echo "==> Running Aqua Trivy vulnerability scanner for $(BUN_IMAGE_TAG)..."

@@ -50,8 +50,8 @@ jobs:
           echo "Files changed in push:"
           echo "$CHANGED_FILES"
 
-          if echo "$CHANGED_FILES" | grep -q '^languages/node/'; then
-            echo "languages/node/** modified in this push."
+          if echo "$CHANGED_FILES" | grep -qE '^languages/node/|^\.github/workflows/build-node\.yml'; then
+            echo "languages/node/** or build-node.yml modified in this push."
             echo "Deferring Next.js build until Node base images are built and pushed via workflow_run."
             echo "should_build=false" >> "$GITHUB_OUTPUT"
           else
@@ -81,6 +81,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3

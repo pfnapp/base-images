@@ -1,4 +1,5 @@
 # syntax=docker/dockerfile:1
+ARG BUN_VERSION=1.4
 
 # ==============================================================================
 # Platform-Managed Next.js Dockerfile (Bun Engine)
@@ -9,7 +10,7 @@
 # ==============================================================================
 
 # Stage 1: Dependency Installation & Next.js Build with Bun
-FROM oven/bun:1.2-alpine AS builder
+FROM oven/bun:${BUN_VERSION}-alpine AS builder
 
 WORKDIR /app
 
@@ -30,7 +31,7 @@ RUN mkdir -p public
 RUN bun run build
 
 # Stage 2: Hardened Unprivileged Bun Runner
-FROM ghcr.io/pfnapp/base/languages/bun:1.2-alpine
+FROM ghcr.io/pfnapp/base/languages/bun:${BUN_VERSION}-alpine
 
 WORKDIR /app
 

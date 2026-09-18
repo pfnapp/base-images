@@ -50,8 +50,8 @@ jobs:
           echo "Files changed in push:"
           echo "$CHANGED_FILES"
 
-          if echo "$CHANGED_FILES" | grep -q '^languages/php/'; then
-            echo "languages/php/** modified in this push."
+          if echo "$CHANGED_FILES" | grep -qE '^languages/php/|^\.github/workflows/build-php\.yml'; then
+            echo "languages/php/** or build-php.yml modified in this push."
             echo "Deferring Laravel build until PHP base images are built and pushed via workflow_run."
             echo "should_build=false" >> "$GITHUB_OUTPUT"
           else
@@ -81,6 +81,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3

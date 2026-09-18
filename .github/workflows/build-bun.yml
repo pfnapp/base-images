@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        bun_version: ['1.2']
+        bun_version: ['1.4', '1.2']
 
     steps:
       - name: Checkout repository
@@ -52,6 +52,7 @@ jobs:
         with:
           image-ref: local/bun:${{ matrix.bun_version }}-test
           scan-type: image
+          vuln-type: 'os'
           format: table
           exit-code: 1
           ignore-unfixed: true
@@ -180,8 +181,27 @@ jobs:
 
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.bun_version }}-alpine"
           docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.bun_version }}"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
 
-          docker push "${TARGET_REPO}:${{ matrix.bun_version }}-alpine"
-          docker push "${TARGET_REPO}:${{ matrix.bun_version }}"
-          docker push "${TARGET_REPO}:latest"
+          push_with_retry() {
+            local tag="$1"
+            local attempt=1
+            while [ $attempt -le 3 ]; do
+              echo "Pushing $tag (attempt $attempt)..."
+              if docker push "$tag"; then
+                return 0
+              fi
+              echo "Push failed. Retrying in 5 seconds..."
+              sleep 5
+              attempt=$((attempt + 1))
+            done
+            echo "Failed to push $tag after 3 attempts."
+            return 1
+          }
+
+          push_with_retry "${TARGET_REPO}:${{ matrix.bun_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:${{ matrix.bun_version }}"
+
+          if [ "${{ matrix.bun_version }}" = "1.4" ]; then
+            docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
+            push_with_retry "${TARGET_REPO}:latest"
+          fi
