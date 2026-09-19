@@ -47,6 +47,43 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 
 ---
 
+## 📊 Published Images & Footprint
+
+All images are ultra-lean, hardened Alpine Linux containers built for rapid cold starts, minimal disk footprint, and fast CI/CD transfer speeds:
+
+### 1. Languages (Foundational Runtimes)
+| Runtime | Base OS | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **PHP 8.5** | Alpine 3.24 | **~81 MB** | **225 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.5-alpine` |
+| **PHP 8.4** | Alpine 3.24 | **~79 MB** | **214 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/php:8.4-alpine` |
+| **PHP 8.3** | Alpine 3.24 | **~76 MB** | **210 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.3-alpine` |
+| **PHP 8.2** | Alpine 3.24 | **~75 MB** | **199 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.2-alpine` |
+| **PHP 8.1** | Alpine 3.21 | **~76 MB** | **199 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.1-alpine` |
+| **PHP 7.4** | Alpine 3.16 | **~65 MB** | **179 MB** | Active (Legacy) | `ghcr.io/pfnapp/base/languages/php:7.4-alpine` |
+| **Node.js 22** | Alpine 3.21 | **~63 MB** | **181 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/node:22-alpine` |
+| **Node.js 20** | Alpine 3.21 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/node:20-alpine` |
+| **Node.js 18** | Alpine 3.21 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/languages/node:18-alpine` |
+| **Bun 1.4** | Alpine 3.22 | **~48 MB** | **102 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/bun:1.4-alpine` |
+| **Bun 1.2** | Alpine 3.20 | **~51 MB** | **125 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/bun:1.2-alpine` |
+
+### 2. Frameworks (Application Runners)
+| Framework | Base Version | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Laravel 8.4** | PHP 8.4 + Node.js | **~109 MB** | **295 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine` |
+| **Laravel 8.3** | PHP 8.3 + Node.js | **~106 MB** | **284 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.3-alpine` |
+| **Laravel 8.2** | PHP 8.2 + Node.js | **~106 MB** | **280 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.2-alpine` |
+| **Laravel 8.1** | PHP 8.1 + Node.js | **~104 MB** | **276 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.1-alpine` |
+| **Laravel 7.4** | PHP 7.4 + Node.js | **~89 MB** | **240 MB** | Active (Legacy) | `ghcr.io/pfnapp/base/frameworks/laravel:7.4-alpine` |
+| **Next.js 22** | Node.js 22 | **~63 MB** | **181 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine` |
+| **Next.js 20** | Node.js 20 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine` |
+| **Next.js 18** | Node.js 18 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/frameworks/nextjs:18-alpine` |
+| **Vite Static SPA** | Alpine + Nginx | **~10 MB** | **19.1 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/vite:alpine` |
+| **NestJS 22** | Node.js 22 | **~63 MB** | **181 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine` |
+| **NestJS 20** | Node.js 20 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine` |
+| **NestJS 18** | Node.js 18 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/frameworks/nestjs:18-alpine` |
+
+---
+
 ## 🚀 Quick Pull
 
 All images are published to **GitHub Container Registry (GHCR)**:

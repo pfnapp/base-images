@@ -19,13 +19,13 @@ Production-ready, hardened runtime images for **NestJS enterprise backend applic
 
 ---
 
-## 📁 Versions Available
+## 📁 Versions Available & Image Footprint
 
-| Version | Base Runtime | Status | Pull Tag |
-|---|---|---|---|
-| **22** | Node.js 22 LTS (Alpine) | Active (Default / `latest`) | `ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:22`, `ghcr.io/pfnapp/base/frameworks/nestjs:latest` |
-| **20** | Node.js 20 LTS (Alpine) | Supported | `ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:20` |
-| **18** | Node.js 18 LTS (Alpine) | Maintenance | `ghcr.io/pfnapp/base/frameworks/nestjs:18-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:18` |
+| Version | Base Runtime | Compressed (Download) | Uncompressed (Disk) | Status | Pull Tag |
+|---|---|---|---|---|---|
+| **22** | Node.js 22 LTS (Alpine) | **~63 MB** | **181 MB** | Active (Default / `latest`) | `ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:22`, `ghcr.io/pfnapp/base/frameworks/nestjs:latest` |
+| **20** | Node.js 20 LTS (Alpine) | **~54 MB** | **151 MB** | Supported (LTS) | `ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:20` |
+| **18** | Node.js 18 LTS (Alpine) | **~51 MB** | **143 MB** | Maintenance | `ghcr.io/pfnapp/base/frameworks/nestjs:18-alpine`, `ghcr.io/pfnapp/base/frameworks/nestjs:18` |
 
 ---
 

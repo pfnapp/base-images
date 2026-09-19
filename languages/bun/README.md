@@ -4,12 +4,12 @@ Production-ready, hardened Bun runtime images on Alpine Linux, running **100% as
 
 ---
 
-## 📁 Versions Available
+## 📁 Versions Available & Image Footprint
 
-| Version | Base OS | Status | Pull Tag |
-|---|---|---|---|
-| **1.4** | Alpine 3.22 | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/bun:1.4-alpine`, `ghcr.io/pfnapp/base/languages/bun:1.4`, `ghcr.io/pfnapp/base/languages/bun:latest` |
-| **1.2** | Alpine 3.20 | LTS / Supported | `ghcr.io/pfnapp/base/languages/bun:1.2-alpine`, `ghcr.io/pfnapp/base/languages/bun:1.2` |
+| Version | Base OS | Compressed (Download) | Uncompressed (Disk) | Status | Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1.4** | Alpine 3.22 | **~48 MB** | **102 MB** | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/bun:1.4-alpine`, `ghcr.io/pfnapp/base/languages/bun:1.4`, `ghcr.io/pfnapp/base/languages/bun:latest` |
+| **1.2** | Alpine 3.20 | **~51 MB** | **125 MB** | LTS / Supported | `ghcr.io/pfnapp/base/languages/bun:1.2-alpine`, `ghcr.io/pfnapp/base/languages/bun:1.2` |
 
 ---
 

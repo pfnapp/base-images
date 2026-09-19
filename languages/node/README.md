@@ -4,13 +4,13 @@ Production-ready, hardened Node.js runtime images on Alpine Linux, running **100
 
 ---
 
-## 📁 Versions Available
+## 📁 Versions Available & Image Footprint
 
-| Version | Base OS | Status | Pull Tag |
-|---|---|---|---|
-| **22** | Alpine 3.21 | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/node:22-alpine`, `ghcr.io/pfnapp/base/languages/node:22`, `ghcr.io/pfnapp/base/languages/node:latest` |
-| **20** | Alpine 3.21 | Active (LTS) | `ghcr.io/pfnapp/base/languages/node:20-alpine`, `ghcr.io/pfnapp/base/languages/node:20` |
-| **18** | Alpine 3.21 | Active (Maintenance) | `ghcr.io/pfnapp/base/languages/node:18-alpine`, `ghcr.io/pfnapp/base/languages/node:18` |
+| Version | Base OS | Compressed (Download) | Uncompressed (Disk) | Status | Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **22** | Alpine 3.21 | **~63 MB** | **181 MB** | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/node:22-alpine`, `ghcr.io/pfnapp/base/languages/node:22`, `ghcr.io/pfnapp/base/languages/node:latest` |
+| **20** | Alpine 3.21 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/node:20-alpine`, `ghcr.io/pfnapp/base/languages/node:20` |
+| **18** | Alpine 3.21 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/languages/node:18-alpine`, `ghcr.io/pfnapp/base/languages/node:18` |
 
 ---
 

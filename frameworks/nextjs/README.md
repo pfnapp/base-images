@@ -29,15 +29,15 @@ This framework runner sits on top of our foundational Node.js language base imag
 
 ---
 
-## 📁 Available Tags
+## 📁 Available Tags & Image Footprint
 
 Published to **GitHub Container Registry (`ghcr.io`)**:
 
-| Node Version | Base Image Tag | Pull Command | Status |
-| :--- | :--- | :--- | :--- |
-| **22** | `22-alpine` / `latest` | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine` | Active (Default) |
-| **20** | `20-alpine` | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine` | Active (LTS) |
-| **18** | `18-alpine` | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:18-alpine` | Active (Maintenance) |
+| Node Version | Base Image Tag | Compressed (Download) | Uncompressed (Disk) | Pull Command | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **22** | `22-alpine` / `latest` | **~63 MB** | **181 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine` | Active (Default) |
+| **20** | `20-alpine` | **~54 MB** | **151 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine` | Active (LTS) |
+| **18** | `18-alpine` | **~51 MB** | **143 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/nextjs:18-alpine` | Active (Maintenance) |
 
 ---
 
