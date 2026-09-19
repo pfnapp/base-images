@@ -1,5 +1,6 @@
 # Syntax: docker/dockerfile:1
-FROM oven/bun:1.4-alpine
+ARG BUN_VERSION=1.4
+FROM oven/bun:${BUN_VERSION}-alpine
 
 # Set build arguments for non-root runtime UID/GID
 ARG UID=10001
@@ -34,11 +35,11 @@ RUN find / -perm /6000 -type f -exec chmod a-s {} + 2>/dev/null || true
 # Default unprivileged networking and environment
 ENV PORT=8080 \
     HOSTNAME=0.0.0.0 \
-    NODE_ENV=production
+    BUN_ENV=production
 
 EXPOSE 8080
 
 USER 10001:10001
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/local/bin/entrypoint.sh"]
-CMD ["bun", "run", "start"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+CMD ["/usr/local/bin/entrypoint.sh"]

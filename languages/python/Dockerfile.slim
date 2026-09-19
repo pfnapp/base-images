@@ -1,5 +1,6 @@
 # Syntax: docker/dockerfile:1
-FROM python:3.12-slim-bookworm
+ARG PYTHON_VERSION=3.12
+FROM python:${PYTHON_VERSION}-slim-bookworm
 
 # Set build arguments for non-root runtime UID/GID
 ARG UID=10001
@@ -26,7 +27,7 @@ RUN apt-get update && apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Upgrade core packaging toolchain
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir --upgrade "pip>=25.0" "setuptools>=84.0" "wheel>=0.48"
 
 # Create dedicated non-root user and group
 RUN groupadd -g ${GID} appgroup && \

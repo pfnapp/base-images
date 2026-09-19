@@ -40,7 +40,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: languages/php
-          file: languages/php/${{ matrix.php_version }}/Dockerfile.alpine
+          file: languages/php/Dockerfile.alpine
+          build-args: |
+            PHP_VERSION=${{ matrix.php_version }}
           load: true
           tags: local/php:${{ matrix.php_version }}-test
           cache-from: type=gha
