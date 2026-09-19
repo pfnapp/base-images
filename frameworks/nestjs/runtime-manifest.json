@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "runtime": "nextjs",
-  "framework": "Next.js",
+  "runtime": "nestjs",
+  "framework": "NestJS",
   "version": "22",
-  "baseImage": "ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine",
+  "baseImage": "ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine",
   "ports": {
     "default": 8080,
     "protocol": "HTTP"
@@ -24,8 +24,8 @@
       "type": "number",
       "default": 8080,
       "category": "networking",
-      "description": "Internal container listening port.",
-      "troubleshooting": "Platform Next.js base image listens on unprivileged port 8080."
+      "description": "Internal container listening port for NestJS HTTP server.",
+      "troubleshooting": "NestJS application should listen on process.env.PORT or default to 8080."
     },
     {
       "key": "NODE_ENV",
@@ -34,16 +34,7 @@
       "default": "production",
       "category": "runtime",
       "description": "Node.js execution environment mode.",
-      "troubleshooting": "Keep set to 'production' for optimized build and runtime performance."
-    },
-    {
-      "key": "NEXT_TELEMETRY_DISABLED",
-      "label": "Disable Next.js Telemetry",
-      "type": "string",
-      "default": "1",
-      "category": "runtime",
-      "description": "Prevents Next.js from sending anonymous usage data to Vercel.",
-      "troubleshooting": "Defaults to '1' for data privacy and network isolation."
+      "troubleshooting": "Keep set to 'production' for optimized NestJS runtime performance."
     },
     {
       "key": "NODE_OPTIONS",
@@ -52,7 +43,7 @@
       "default": "--max-old-space-size=512",
       "category": "performance",
       "description": "V8 engine runtime flags and max heap memory size.",
-      "troubleshooting": "Increase --max-old-space-size for heavy SSR pages."
+      "troubleshooting": "Increase --max-old-space-size if NestJS exhausts V8 heap memory."
     }
   ]
 }

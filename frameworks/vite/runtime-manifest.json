@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "vite",
+  "framework": "Vite",
+  "version": "latest",
+  "baseImage": "ghcr.io/pfnapp/base/frameworks/vite:latest",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/healthz", "port": 8080 },
+    "readiness": { "path": "/healthz", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal container listening port for Nginx static SPA server.",
+      "troubleshooting": "Platform Vite base image runs unprivileged on port 8080."
+    }
+  ]
+}
