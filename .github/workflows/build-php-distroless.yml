@@ -1,0 +1,121 @@
+name: Build and Audit PHP 8.5 Distroless Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'languages/php/Dockerfile.distroless-*'
+      - '.github/workflows/build-php-distroless.yml'
+  pull_request:
+    paths:
+      - 'languages/php/Dockerfile.distroless-*'
+      - '.github/workflows/build-php-distroless.yml'
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  security-events: write
+  issues: write
+
+jobs:
+  build-and-audit-distroless:
+    name: Distroless ${{ matrix.variant.name }} Build & Audit
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        variant:
+          - name: google
+            dockerfile: languages/php/Dockerfile.distroless-google
+            tag_suffix: 8.5-distroless
+            expected_user: "65532:65532"
+          - name: wolfi
+            dockerfile: languages/php/Dockerfile.distroless-wolfi
+            tag_suffix: 8.5-distroless-wolfi
+            expected_user: "65532:65532"
+          - name: pfnapp
+            dockerfile: languages/php/Dockerfile.distroless-pfnapp
+            tag_suffix: 8.5-distroless-pfnapp
+            expected_user: "10001:10001"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build local distroless image for testing and CVE scanning
+        uses: docker/build-push-action@v6
+        with:
+          context: languages/php
+          file: ${{ matrix.variant.dockerfile }}
+          load: true
+          tags: local/php:${{ matrix.variant.tag_suffix }}-test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Verify Non-Root User & Distroless Shell Absense
+        run: |
+          IMAGE="local/php:${{ matrix.variant.tag_suffix }}-test"
+          USER_CHECK=$(docker inspect --format='{{.Config.User}}' "$IMAGE")
+          echo "Verified Image User: $USER_CHECK (Expected: ${{ matrix.variant.expected_user }})"
+          if [ "$USER_CHECK" != "${{ matrix.variant.expected_user }}" ]; then
+            echo "Security violation: Image configured with user $USER_CHECK"
+            exit 1
+          fi
+
+          # Verify that /bin/sh does NOT exist (core distroless guarantee)
+          docker run --rm --entrypoint /bin/sh "$IMAGE" -c "exit 0" 2>/dev/null && {
+            echo "Security violation: /bin/sh is accessible in distroless image!"
+            exit 1
+          } || echo "Verified: Distroless has no shell binary (/bin/sh)."
+
+      - name: Run Aqua Trivy vulnerability scanner
+        id: trivy_scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: local/php:${{ matrix.variant.tag_suffix }}-test
+          scan-type: image
+          format: table
+          exit-code: 1
+          ignore-unfixed: true
+          severity: CRITICAL,HIGH
+          output: trivy-distroless-report.txt
+
+      - name: Report image size metrics to job summary
+        run: |
+          SRC_IMAGE="local/php:${{ matrix.variant.tag_suffix }}-test"
+          UNCOMPRESSED=$(docker images "$SRC_IMAGE" --format "{{.Size}}")
+          COMPRESSED=$(docker save "$SRC_IMAGE" | gzip | wc -c | awk '{printf "%.1f MB", $1/1024/1024}')
+          echo "### 📦 Distroless Evaluation: PHP ${{ matrix.variant.tag_suffix }}" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Base Type** | ${{ matrix.variant.name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Download Size (Compressed)** | ~${COMPRESSED} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Disk Size (Uncompressed)** | ${UNCOMPRESSED} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Configured User** | ${{ matrix.variant.expected_user }} |" >> $GITHUB_STEP_SUMMARY
+
+      - name: Log in to GitHub Container Registry
+        if: github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag and push production distroless images to GHCR
+        if: github.ref == 'refs/heads/main'
+        run: |
+          TARGET_REPO="ghcr.io/pfnapp/base/languages/php"
+          SRC_IMAGE="local/php:${{ matrix.variant.tag_suffix }}-test"
+
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.variant.tag_suffix }}"
+          docker push "${TARGET_REPO}:${{ matrix.variant.tag_suffix }}"

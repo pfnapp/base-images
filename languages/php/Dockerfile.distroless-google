@@ -1,0 +1,71 @@
+# Syntax: docker/dockerfile:1
+# ==============================================================================
+# PHP 8.5 Distroless (Google Debian 13 Base)
+# Maintainer: JuniYadi <juniyadi@premiumfast.net>
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Stage 1: Builder Debian 13 (Trixie)
+# ------------------------------------------------------------------------------
+FROM php:8.5-fpm-trixie AS builder
+
+# Install core production extensions
+RUN docker-php-ext-install pdo_mysql
+
+# Create minimal rootfs structure
+RUN mkdir -p /rootfs/usr/local/sbin \
+             /rootfs/usr/local/bin \
+             /rootfs/usr/local/lib/php \
+             /rootfs/tmp \
+             /rootfs/var/www/html && \
+    cp /usr/local/sbin/php-fpm /rootfs/usr/local/sbin/ && \
+    cp /usr/local/bin/php /rootfs/usr/local/bin/ && \
+    cp -r /usr/local/lib/php/extensions /rootfs/usr/local/lib/php/
+
+# Extract all dynamic shared libraries (.so) using UsrMerge-safe paths
+RUN ldd /usr/local/sbin/php-fpm | grep "=>" | awk '{print $3}' | while read -r lib; do \
+      if [ -f "$lib" ]; then \
+        rel="${lib#/}"; \
+        if [ "${rel#lib/}" != "$rel" ]; then rel="usr/$rel"; fi; \
+        dir="/rootfs/$(dirname "$rel")"; \
+        mkdir -p "$dir"; \
+        cp -L "$lib" "$dir/"; \
+      fi; \
+    done && \
+    ld_so=$(ldd /usr/local/sbin/php-fpm | grep '/ld-linux' | awk '{print $1}') && \
+    if [ -n "$ld_so" ] && [ -f "$ld_so" ]; then \
+      rel="${ld_so#/}"; \
+      if [ "${rel#lib64/}" != "$rel" ]; then rel="usr/$rel"; \
+      elif [ "${rel#lib/}" != "$rel" ]; then rel="usr/$rel"; fi; \
+      dir="/rootfs/$(dirname "$rel")"; \
+      mkdir -p "$dir"; \
+      cp -L "$ld_so" "$dir/"; \
+    fi
+
+# Adjust permissions for nonroot user (UID 65532)
+RUN chown -R 65532:65532 /rootfs/var/www/html /rootfs/tmp && \
+    chmod 1777 /rootfs/tmp
+
+# ------------------------------------------------------------------------------
+# Stage 2: Google Distroless Debian 13 Runtime
+# ------------------------------------------------------------------------------
+FROM gcr.io/distroless/base-debian13:nonroot
+
+LABEL maintainer="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.authors="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.vendor="PFNApp" \
+      org.opencontainers.image.title="PFNApp PHP 8.5 Distroless (Google Base)" \
+      org.opencontainers.image.description="Hardened PHP 8.5 Distroless on Google Debian 13 base" \
+      org.opencontainers.image.licenses="MIT"
+
+COPY --from=builder /rootfs /
+COPY shared/php.ini /usr/local/etc/php/php.ini
+COPY shared/php-fpm.conf /usr/local/etc/php-fpm.conf
+
+WORKDIR /var/www/html
+USER 65532:65532
+
+EXPOSE 9000
+STOPSIGNAL SIGQUIT
+ENTRYPOINT ["/usr/local/sbin/php-fpm"]
+CMD ["-F"]

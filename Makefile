@@ -96,7 +96,8 @@ NESTJS_BASE_IMAGE ?= local/node:$(NESTJS_NODE_VERSION)-test
         build-python build-python-all test-python test-python-all scan-python \
         build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs \
         build-vite test-vite scan-vite \
-        build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs
+        build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs \
+        build-php-distroless-all build-php-distroless-google build-php-distroless-wolfi build-php-distroless-pfnapp
 
 all: build test scan
 
@@ -106,6 +107,21 @@ all: build test scan
 build:
 	@echo "==> Building PHP $(PHP_VERSION) Alpine base image..."
 	docker build --build-arg PHP_VERSION=$(PHP_VERSION) -t $(IMAGE_TAG) -f $(DOCKERFILE) $(BUILD_CONTEXT)
+
+build-php-distroless-google:
+	@echo "==> Building PHP 8.5 Distroless (Google Debian 13 base)..."
+	docker build -t local/php:8.5-distroless -f languages/php/Dockerfile.distroless-google languages/php
+
+build-php-distroless-wolfi:
+	@echo "==> Building PHP 8.5 Distroless (Wolfi / Chainguard static base)..."
+	docker build -t local/php:8.5-distroless-wolfi -f languages/php/Dockerfile.distroless-wolfi languages/php
+
+build-php-distroless-pfnapp:
+	@echo "==> Building PHP 8.5 Distroless (PFNApp in-house scratch base)..."
+	docker build -t local/php:8.5-distroless-pfnapp -f languages/php/Dockerfile.distroless-pfnapp languages/php
+
+build-php-distroless-all: build-php-distroless-google build-php-distroless-wolfi build-php-distroless-pfnapp
+	@echo "==> All PHP 8.5 Distroless variants built successfully!"
 
 build-all:
 	@echo "==> Building all PHP versions: $(PHP_VERSIONS)..."
