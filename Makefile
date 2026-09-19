@@ -6,7 +6,7 @@ SHELL := /bin/bash
 PHP_VERSIONS ?= 8.5 8.4 8.3 8.2 8.1 7.4
 PHP_VERSION ?= 8.4
 IMAGE_TAG ?= local/php:$(PHP_VERSION)-test
-DOCKERFILE ?= languages/php/$(PHP_VERSION)/Dockerfile.alpine
+DOCKERFILE ?= languages/php/Dockerfile.alpine
 BUILD_CONTEXT ?= languages/php
 CONTAINER_NAME ?= php-test-runner
 TEST_PORT ?= 8080
@@ -29,7 +29,7 @@ LARAVEL_BASE_IMAGE ?= local/php:$(LARAVEL_PHP_VERSION)-test
 NODE_VERSIONS ?= 22 20 18
 NODE_VERSION ?= 22
 NODE_IMAGE_TAG ?= local/node:$(NODE_VERSION)-test
-NODE_DOCKERFILE ?= languages/node/$(NODE_VERSION)/Dockerfile.alpine
+NODE_DOCKERFILE ?= languages/node/Dockerfile.alpine
 NODE_BUILD_CONTEXT ?= languages/node
 NODE_CONTAINER_NAME ?= node-test-runner
 NODE_TEST_PORT ?= 8080
@@ -40,7 +40,7 @@ NODE_TEST_PORT ?= 8080
 BUN_VERSIONS ?= 1.4 1.2
 BUN_VERSION ?= 1.4
 BUN_IMAGE_TAG ?= local/bun:$(BUN_VERSION)-test
-BUN_DOCKERFILE ?= languages/bun/$(BUN_VERSION)/Dockerfile.alpine
+BUN_DOCKERFILE ?= languages/bun/Dockerfile.alpine
 BUN_BUILD_CONTEXT ?= languages/bun
 BUN_CONTAINER_NAME ?= bun-test-runner
 BUN_TEST_PORT ?= 8080
@@ -51,7 +51,7 @@ BUN_TEST_PORT ?= 8080
 PYTHON_VERSIONS ?= 3.12 3.11
 PYTHON_VERSION ?= 3.12
 PYTHON_IMAGE_TAG ?= local/python:$(PYTHON_VERSION)-test
-PYTHON_DOCKERFILE ?= languages/python/$(PYTHON_VERSION)/Dockerfile.slim
+PYTHON_DOCKERFILE ?= languages/python/Dockerfile.slim
 PYTHON_BUILD_CONTEXT ?= languages/python
 PYTHON_CONTAINER_NAME ?= python-test-runner
 PYTHON_TEST_PORT ?= 8080
@@ -105,13 +105,13 @@ all: build test scan
 # ==============================================================================
 build:
 	@echo "==> Building PHP $(PHP_VERSION) Alpine base image..."
-	docker build -t $(IMAGE_TAG) -f $(DOCKERFILE) $(BUILD_CONTEXT)
+	docker build --build-arg PHP_VERSION=$(PHP_VERSION) -t $(IMAGE_TAG) -f $(DOCKERFILE) $(BUILD_CONTEXT)
 
 build-all:
 	@echo "==> Building all PHP versions: $(PHP_VERSIONS)..."
 	@for v in $(PHP_VERSIONS); do \
 		echo "===> Building PHP $$v..."; \
-		docker build -t local/php:$$v-test -f languages/php/$$v/Dockerfile.alpine $(BUILD_CONTEXT) || exit 1; \
+		docker build --build-arg PHP_VERSION=$$v -t local/php:$$v-test -f $(DOCKERFILE) $(BUILD_CONTEXT) || exit 1; \
 	done
 	@echo "==> All PHP base images built successfully!"
 
@@ -305,13 +305,13 @@ scan-laravel:
 # ==============================================================================
 build-node:
 	@echo "==> Building Node.js $(NODE_VERSION) Alpine base image..."
-	docker build -t $(NODE_IMAGE_TAG) -f $(NODE_DOCKERFILE) $(NODE_BUILD_CONTEXT)
+	docker build --build-arg NODE_VERSION=$(NODE_VERSION) -t $(NODE_IMAGE_TAG) -f $(NODE_DOCKERFILE) $(NODE_BUILD_CONTEXT)
 
 build-node-all:
 	@echo "==> Building all Node.js versions: $(NODE_VERSIONS)..."
 	@for v in $(NODE_VERSIONS); do \
 		echo "===> Building Node.js $$v..."; \
-		docker build -t local/node:$$v-test -f languages/node/$$v/Dockerfile.alpine $(NODE_BUILD_CONTEXT) || exit 1; \
+		docker build --build-arg NODE_VERSION=$$v -t local/node:$$v-test -f $(NODE_DOCKERFILE) $(NODE_BUILD_CONTEXT) || exit 1; \
 	done
 	@echo "==> All Node.js base images built successfully!"
 
@@ -397,13 +397,13 @@ scan-node:
 # ==============================================================================
 build-bun:
 	@echo "==> Building Bun $(BUN_VERSION) Alpine base image..."
-	docker build -t $(BUN_IMAGE_TAG) -f $(BUN_DOCKERFILE) $(BUN_BUILD_CONTEXT)
+	docker build --build-arg BUN_VERSION=$(BUN_VERSION) -t $(BUN_IMAGE_TAG) -f $(BUN_DOCKERFILE) $(BUN_BUILD_CONTEXT)
 
 build-bun-all:
 	@echo "==> Building all Bun versions: $(BUN_VERSIONS)..."
 	@for v in $(BUN_VERSIONS); do \
 		echo "===> Building Bun $$v..."; \
-		docker build -t local/bun:$$v-test -f languages/bun/$$v/Dockerfile.alpine $(BUN_BUILD_CONTEXT) || exit 1; \
+		docker build --build-arg BUN_VERSION=$$v -t local/bun:$$v-test -f $(BUN_DOCKERFILE) $(BUN_BUILD_CONTEXT) || exit 1; \
 	done
 	@echo "==> All Bun base images built successfully!"
 
@@ -489,13 +489,13 @@ scan-bun:
 # ==============================================================================
 build-python:
 	@echo "==> Building Python $(PYTHON_VERSION) Slim base image..."
-	docker build -t $(PYTHON_IMAGE_TAG) -f $(PYTHON_DOCKERFILE) $(PYTHON_BUILD_CONTEXT)
+	docker build --build-arg PYTHON_VERSION=$(PYTHON_VERSION) -t $(PYTHON_IMAGE_TAG) -f $(PYTHON_DOCKERFILE) $(PYTHON_BUILD_CONTEXT)
 
 build-python-all:
 	@echo "==> Building all Python versions: $(PYTHON_VERSIONS)..."
 	@for v in $(PYTHON_VERSIONS); do \
 		echo "===> Building Python $$v..."; \
-		docker build -t local/python:$$v-test -f languages/python/$$v/Dockerfile.slim $(PYTHON_BUILD_CONTEXT) || exit 1; \
+		docker build --build-arg PYTHON_VERSION=$$v -t local/python:$$v-test -f $(PYTHON_DOCKERFILE) $(PYTHON_BUILD_CONTEXT) || exit 1; \
 	done
 	@echo "==> All Python base images built successfully!"
 

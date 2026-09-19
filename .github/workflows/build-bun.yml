@@ -40,7 +40,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: languages/bun
-          file: languages/bun/${{ matrix.bun_version }}/Dockerfile.alpine
+          file: languages/bun/Dockerfile.alpine
+          build-args: |
+            BUN_VERSION=${{ matrix.bun_version }}
           load: true
           tags: local/bun:${{ matrix.bun_version }}-test
           cache-from: type=gha

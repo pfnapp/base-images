@@ -1,7 +1,8 @@
 # Syntax: docker/dockerfile:1
+ARG PHP_VERSION=8.4
 FROM mlocati/php-extension-installer:latest AS extension-installer
 
-FROM php:8.2-fpm-alpine
+FROM php:${PHP_VERSION}-fpm-alpine
 
 # Set build arguments for non-root runtime UID/GID
 ARG UID=10001

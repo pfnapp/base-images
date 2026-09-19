@@ -40,7 +40,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: languages/node
-          file: languages/node/${{ matrix.node_version }}/Dockerfile.alpine
+          file: languages/node/Dockerfile.alpine
+          build-args: |
+            NODE_VERSION=${{ matrix.node_version }}
           load: true
           tags: local/node:${{ matrix.node_version }}-test
           cache-from: type=gha

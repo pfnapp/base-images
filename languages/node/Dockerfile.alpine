@@ -1,5 +1,6 @@
 # Syntax: docker/dockerfile:1
-FROM node:20-alpine
+ARG NODE_VERSION=22
+FROM node:${NODE_VERSION}-alpine
 
 # Set build arguments for non-root runtime UID/GID
 ARG UID=10001

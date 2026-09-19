@@ -41,7 +41,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: languages/python
-          file: languages/python/${{ matrix.python_version }}/Dockerfile.slim
+          file: languages/python/Dockerfile.slim
+          build-args: |
+            PYTHON_VERSION=${{ matrix.python_version }}
           load: true
           tags: local/python:${{ matrix.python_version }}-test
           cache-from: type=gha
