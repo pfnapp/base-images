@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "python",
+  "framework": "Python",
+  "version": "3.12",
+  "baseImage": "ghcr.io/pfnapp/base/languages/python:3.12-slim",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/", "port": 8080 },
+    "readiness": { "path": "/", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal unprivileged container listening port for Python web servers (Uvicorn / Gunicorn / Flask / Django).",
+      "troubleshooting": "Platform Python base images listen on unprivileged port 8080."
+    },
+    {
+      "key": "PYTHONUNBUFFERED",
+      "label": "Unbuffered Logs",
+      "type": "string",
+      "default": "1",
+      "category": "runtime",
+      "description": "Forces standard output and error streams to be unbuffered so logs stream in real-time.",
+      "troubleshooting": "Keep set to '1' to prevent log delivery delays in Kubernetes and Docker logs."
+    },
+    {
+      "key": "PYTHONDONTWRITEBYTECODE",
+      "label": "Disable Bytecode (.pyc)",
+      "type": "string",
+      "default": "1",
+      "category": "runtime",
+      "description": "Prevents Python from writing .pyc files on disk, ensuring container immutability.",
+      "troubleshooting": "Recommended for ephemeral containers and read-only root filesystems."
+    },
+    {
+      "key": "WEB_CONCURRENCY",
+      "label": "ASGI / WSGI Workers",
+      "type": "number",
+      "default": 2,
+      "category": "performance",
+      "description": "Number of parallel worker processes for Gunicorn and Uvicorn runners.",
+      "troubleshooting": "Tune according to container CPU limit (typically (2 x CPU cores) + 1)."
+    }
+  ]
+}

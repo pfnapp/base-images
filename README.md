@@ -6,6 +6,7 @@ Hardened, unprivileged container base images designed for multi-tenant Kubernete
 [![Build and Audit Laravel Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-laravel.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-laravel.yml)
 [![Build and Audit Node Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml)
 [![Build and Audit Bun Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml)
+[![Build and Audit Python Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-python.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-python.yml)
 [![Build and Audit Next.js Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml)
 [![Build and Audit Vite Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml)
 [![Build and Audit NestJS Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml)
@@ -39,7 +40,7 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 | **Languages** | [`languages/php/`](languages/php/) | [PHP Guide](languages/php/README.md) | PHP 8.5, 8.4, 8.3, 8.2, 8.1, 7.4 (Alpine + Nginx + PHP-FPM) |
 | **Languages** | [`languages/node/`](languages/node/) | [Node.js Guide](languages/node/README.md) | Node.js 22, 20, 18 (Alpine) |
 | **Languages** | [`languages/bun/`](languages/bun/) | [Bun Guide](languages/bun/README.md) | Bun 1.4, 1.2 (Alpine) |
-| **Languages** | `languages/python/` | *Coming soon* | Python 3.11, 3.12 (Slim) |
+| **Languages** | [`languages/python/`](languages/python/) | [Python Guide](languages/python/README.md) | Python 3.12, 3.11 (Debian Bookworm Slim) |
 | **Frameworks** | [`frameworks/laravel/`](frameworks/laravel/) | [Laravel Guide](frameworks/laravel/README.md) | Laravel 8.4, 8.3, 8.2, 8.1, 7.4 (Web, Worker, Horizon, Cron) |
 | **Frameworks** | [`frameworks/nextjs/`](frameworks/nextjs/) | [Next.js Guide](frameworks/nextjs/README.md) | Next.js Standalone Runner (Node.js 22, 20, 18) |
 | **Frameworks** | [`frameworks/vite/`](frameworks/vite/) | [Vite Guide](frameworks/vite/README.md) | Vite Static SPA Runner (Alpine + Unprivileged Nginx) |
@@ -65,6 +66,8 @@ All images are ultra-lean, hardened Alpine Linux containers built for rapid cold
 | **Node.js 18** | Alpine 3.21 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/languages/node:18-alpine` |
 | **Bun 1.4** | Alpine 3.22 | **~48 MB** | **102 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/bun:1.4-alpine` |
 | **Bun 1.2** | Alpine 3.20 | **~51 MB** | **125 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/bun:1.2-alpine` |
+| **Python 3.12** | Debian 12 Slim | **~51 MB** | **147 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/python:3.12-slim` |
+| **Python 3.11** | Debian 12 Slim | **~53 MB** | **152 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/python:3.11-slim` |
 
 ### 2. Frameworks (Application Runners)
 | Framework | Base Version | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag |
@@ -108,6 +111,11 @@ docker pull ghcr.io/pfnapp/base/languages/node:latest
 docker pull ghcr.io/pfnapp/base/languages/bun:1.4-alpine
 docker pull ghcr.io/pfnapp/base/languages/bun:1.4
 docker pull ghcr.io/pfnapp/base/languages/bun:latest
+
+# Pull Python 3.12 Slim Base Image
+docker pull ghcr.io/pfnapp/base/languages/python:3.12-slim
+docker pull ghcr.io/pfnapp/base/languages/python:3.12
+docker pull ghcr.io/pfnapp/base/languages/python:latest
 
 # Pull Next.js 22 Alpine Framework Image
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine

@@ -1,0 +1,62 @@
+# syntax=docker/dockerfile:1
+ARG PYTHON_VERSION=3.12
+ARG BASE_IMAGE=ghcr.io/pfnapp/base/languages/python:${PYTHON_VERSION}-slim
+
+# ==============================================================================
+# Platform-Managed Python Dockerfile (Multi-Stage Production Build)
+# ==============================================================================
+# Managed by the platform / PaaS (App Hosting engine).
+# Developers NEVER create or maintain a Dockerfile in their repository.
+# Built 100% unprivileged (UID 10001 / GID 10001) on Debian Bookworm Slim.
+# ==============================================================================
+
+# Stage 1: Dependency builder stage
+FROM python:${PYTHON_VERSION}-slim-bookworm AS builder
+
+WORKDIR /build
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Install build dependencies in case C-extensions or compilation are required
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends gcc g++ make libpq-dev git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create virtual environment
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy dependency manifests
+COPY requirements.txt* pyproject.toml* setup.py* ./
+
+# Install project dependencies into virtual environment
+RUN pip install --upgrade pip setuptools wheel && \
+    if [ -f requirements.txt ]; then \
+        pip install -r requirements.txt; \
+    elif [ -f pyproject.toml ] || [ -f setup.py ]; then \
+        pip install .; \
+    fi
+
+# Stage 2: Clean, hardened runtime container
+FROM ${BASE_IMAGE}
+
+USER root
+
+# Copy virtual environment from builder stage
+COPY --from=builder --chown=10001:10001 /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy application source code
+COPY --chown=10001:10001 . /app/
+
+WORKDIR /app
+
+USER 10001:10001
+
+EXPOSE 8080
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+CMD ["/usr/local/bin/entrypoint.sh"]
