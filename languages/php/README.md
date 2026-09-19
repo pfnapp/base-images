@@ -4,16 +4,16 @@ Production-ready, hardened PHP runtime images with integrated Nginx and PHP-FPM 
 
 ---
 
-## 📁 Versions Available
+## 📁 Versions Available & Image Footprint
 
-| Version | Base OS | Status | Pull Tag |
-|---|---|---|---|
-| **8.5** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.5-alpine`, `ghcr.io/pfnapp/base/languages/php:8.5` |
-| **8.4** | Alpine 3.24 | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/php:8.4-alpine`, `ghcr.io/pfnapp/base/languages/php:8.4`, `ghcr.io/pfnapp/base/languages/php:latest` |
-| **8.3** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.3-alpine`, `ghcr.io/pfnapp/base/languages/php:8.3` |
-| **8.2** | Alpine 3.24 | Active | `ghcr.io/pfnapp/base/languages/php:8.2-alpine`, `ghcr.io/pfnapp/base/languages/php:8.2` |
-| **8.1** | Alpine 3.21 | Active | `ghcr.io/pfnapp/base/languages/php:8.1-alpine`, `ghcr.io/pfnapp/base/languages/php:8.1` |
-| **7.4** | Alpine 3.16 | Active (Legacy Patched) | `ghcr.io/pfnapp/base/languages/php:7.4-alpine`, `ghcr.io/pfnapp/base/languages/php:7.4` |
+| Version | Base OS | Compressed (Download) | Uncompressed (Disk) | Status | Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **8.5** | Alpine 3.24 | **~81 MB** | **225 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.5-alpine`, `ghcr.io/pfnapp/base/languages/php:8.5` |
+| **8.4** | Alpine 3.24 | **~79 MB** | **214 MB** | Active (Default / `latest`) | `ghcr.io/pfnapp/base/languages/php:8.4-alpine`, `ghcr.io/pfnapp/base/languages/php:8.4`, `ghcr.io/pfnapp/base/languages/php:latest` |
+| **8.3** | Alpine 3.24 | **~76 MB** | **210 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.3-alpine`, `ghcr.io/pfnapp/base/languages/php:8.3` |
+| **8.2** | Alpine 3.24 | **~75 MB** | **199 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.2-alpine`, `ghcr.io/pfnapp/base/languages/php:8.2` |
+| **8.1** | Alpine 3.21 | **~76 MB** | **199 MB** | Active | `ghcr.io/pfnapp/base/languages/php:8.1-alpine`, `ghcr.io/pfnapp/base/languages/php:8.1` |
+| **7.4** | Alpine 3.16 | **~65 MB** | **179 MB** | Active (Legacy Patched) | `ghcr.io/pfnapp/base/languages/php:7.4-alpine`, `ghcr.io/pfnapp/base/languages/php:7.4` |
 
 ---
 

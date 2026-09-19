@@ -22,9 +22,9 @@ High-performance, unprivileged **Nginx static web server** on Alpine Linux, pre-
 
 ## 📦 Pull Tags
 
-| Image | Description | Pull Tag |
-|---|---|---|
-| **Vite SPA (Nginx)** | Production Nginx SPA runner | `ghcr.io/pfnapp/base/frameworks/vite:latest`, `ghcr.io/pfnapp/base/frameworks/vite:alpine` |
+| Image | Description | Compressed (Download) | Uncompressed (Disk) | Pull Tag |
+|---|---|---|---|---|
+| **Vite SPA (Nginx)** | Production Nginx SPA runner | **~10 MB** | **19.1 MB** | `ghcr.io/pfnapp/base/frameworks/vite:latest`, `ghcr.io/pfnapp/base/frameworks/vite:alpine` |
 
 ---
 
