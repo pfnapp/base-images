@@ -19,6 +19,35 @@
   },
   "tunables": [
     {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal unprivileged container listening port for Nginx.",
+      "troubleshooting": "Platform base image runs unprivileged on port 8080."
+    },
+    {
+      "key": "CONTAINER_ROLE",
+      "label": "Workload Role",
+      "type": "select",
+      "default": "app",
+      "category": "orchestration",
+      "options": ["app", "worker", "horizon", "scheduler", "all"],
+      "description": "Execution mode for the container inside Kubernetes.",
+      "troubleshooting": "Set to 'worker' for queue workers, 'horizon' for Redis Horizon, and 'scheduler' for cron artisan schedule without needing separate Dockerfiles."
+    },
+    {
+      "key": "PHP_MEMORY_LIMIT",
+      "label": "Script Memory Limit",
+      "type": "bytes_string",
+      "default": "256M",
+      "category": "performance",
+      "description": "Maximum amount of memory a single PHP script may consume.",
+      "troubleshooting": "Increase to 512M if processes fail with 'Allowed memory size exhausted'.",
+      "presets": ["128M", "256M", "512M", "1024M"]
+    },
+    {
       "key": "PHP_UPLOAD_MAX_FILESIZE",
       "label": "Max Upload Size",
       "type": "bytes_string",
@@ -39,32 +68,81 @@
       "troubleshooting": "This must be greater than or equal to PHP_UPLOAD_MAX_FILESIZE."
     },
     {
-      "key": "PHP_MEMORY_LIMIT",
-      "label": "Script Memory Limit",
-      "type": "bytes_string",
-      "default": "256M",
-      "category": "performance",
-      "description": "Maximum amount of memory a single PHP script may consume.",
-      "troubleshooting": "Increase to 512M if processes fail with 'Allowed memory size exhausted'."
-    },
-    {
-      "key": "CONTAINER_ROLE",
-      "label": "Workload Role",
-      "type": "select",
-      "default": "app",
-      "category": "orchestration",
-      "options": ["app", "worker", "horizon", "scheduler", "all"],
-      "description": "Execution mode for the container inside Kubernetes.",
-      "troubleshooting": "Set to 'worker' for queue workers, 'horizon' for Redis Horizon, and 'scheduler' for cron artisan schedule without needing separate Dockerfiles."
-    },
-    {
-      "key": "PORT",
-      "label": "Server Port",
+      "key": "PHP_MAX_EXECUTION_TIME",
+      "label": "Max Execution Time",
       "type": "number",
-      "default": 8080,
-      "category": "networking",
-      "description": "Internal container listening port.",
-      "troubleshooting": "Platform base image runs unprivileged on port 8080."
+      "default": 60,
+      "category": "performance",
+      "description": "Maximum execution time in seconds for PHP scripts.",
+      "troubleshooting": "Increase this if long-running requests or migrations timeout."
+    },
+    {
+      "key": "PHP_TIMEZONE",
+      "label": "PHP Timezone",
+      "type": "string",
+      "default": "Asia/Jakarta",
+      "category": "runtime",
+      "description": "PHP and system date/time timezone.",
+      "troubleshooting": "Must be a valid IANA timezone identifier, e.g. 'Asia/Jakarta' or 'UTC'."
+    },
+    {
+      "key": "LARAVEL_STORAGE_LINK",
+      "label": "Storage Symlink",
+      "type": "boolean",
+      "default": true,
+      "category": "orchestration",
+      "description": "Runs 'php artisan storage:link' on container startup if missing.",
+      "troubleshooting": "Ensure public storage is linked to allow public uploads access."
+    },
+    {
+      "key": "LARAVEL_RUN_MIGRATIONS",
+      "label": "Run Migrations on Boot",
+      "type": "boolean",
+      "default": false,
+      "category": "orchestration",
+      "description": "Runs 'php artisan migrate --force' automatically on startup.",
+      "troubleshooting": "Recommended only for initial deploy or single-replica instances."
+    },
+    {
+      "key": "LARAVEL_RUN_OPTIMIZE",
+      "label": "Run Optimize on Boot",
+      "type": "boolean",
+      "default": false,
+      "category": "performance",
+      "description": "Runs 'php artisan optimize' on container startup.",
+      "troubleshooting": "Caches routes, config, and views for production performance."
+    },
+    {
+      "key": "LARAVEL_QUEUE_CONNECTION",
+      "label": "Queue Connection",
+      "type": "string",
+      "default": "default",
+      "category": "orchestration",
+      "description": "Queue connection name processed by workers (e.g. 'redis', 'database')."
+    },
+    {
+      "key": "LARAVEL_QUEUE_NAME",
+      "label": "Queue Names",
+      "type": "string",
+      "default": "default",
+      "category": "orchestration",
+      "description": "Comma-separated list of queues to process (e.g. 'high,default,low')."
+    },
+    {
+      "key": "LARAVEL_QUEUE_NUMPROCS",
+      "label": "Queue Worker Processes",
+      "type": "number",
+      "default": 2,
+      "category": "orchestration",
+      "description": "Number of parallel worker processes spawned by Supervisor in 'worker' role."
+    },
+    {
+      "key": "LARAVEL_QUEUE_TIMEOUT",
+      "label": "Queue Job Timeout",
+      "type": "number",
+      "default": 60,
+      "category": "orchestration",
+      "description": "Maximum seconds a single queue job may run before timeout."
     }
   ]
 }

@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "runtime": "bun",
   "framework": "Bun",
-  "version": "1.2",
-  "baseImage": "ghcr.io/pfnapp/base/languages/bun:1.2-alpine",
+  "version": "1.4",
+  "baseImage": "ghcr.io/pfnapp/base/languages/bun:1.4-alpine",
   "ports": {
     "default": 8080,
     "protocol": "HTTP"
@@ -35,6 +35,15 @@
       "category": "runtime",
       "description": "Bun execution environment mode.",
       "troubleshooting": "Set to 'production' for optimized Bun runtime performance."
+    },
+    {
+      "key": "NODE_ENV",
+      "label": "Node Environment",
+      "type": "string",
+      "default": "production",
+      "category": "runtime",
+      "description": "Node.js compatibility environment mode.",
+      "troubleshooting": "Set to 'production' for compatible Node.js libraries running under Bun."
     }
   ]
 }
