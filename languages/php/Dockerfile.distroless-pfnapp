@@ -1,0 +1,97 @@
+# Syntax: docker/dockerfile:1
+# ==============================================================================
+# PHP 8.5 Distroless (PFNApp In-house Scratch Base from Debian 13 Trixie)
+# Maintainer: JuniYadi <juniyadi@premiumfast.net>
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Stage 1: Debian 13 (Trixie) Security Base Extraction
+# ------------------------------------------------------------------------------
+FROM debian:trixie-slim AS debian-security
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    tzdata \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /rootfs/etc/ssl/certs \
+             /rootfs/usr/share/zoneinfo \
+             /rootfs/tmp \
+             /rootfs/var/www/html \
+             /rootfs/etc
+
+# Define dedicated pfnapp user (UID 10001) and standard Debian UsrMerge symlinks
+RUN echo "pfnapp:x:10001:10001:pfnapp user:/home/pfnapp:/sbin/nologin" > /rootfs/etc/passwd && \
+    echo "pfnapp:x:10001:" > /rootfs/etc/group && \
+    cp /etc/ssl/certs/ca-certificates.crt /rootfs/etc/ssl/certs/ && \
+    mkdir -p /rootfs/usr/lib /rootfs/usr/lib64 /rootfs/usr/bin /rootfs/usr/sbin && \
+    ln -s usr/lib /rootfs/lib && \
+    ln -s usr/lib64 /rootfs/lib64 && \
+    ln -s usr/bin /rootfs/bin && \
+    ln -s usr/sbin /rootfs/sbin && \
+    ln -s ../lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 /rootfs/usr/lib64/ld-linux-x86-64.so.2 && \
+    chown -R 10001:10001 /rootfs/var/www/html /rootfs/tmp && \
+    chmod 1777 /rootfs/tmp
+
+# ------------------------------------------------------------------------------
+# Stage 2: PHP 8.5 Builder Debian 13
+# ------------------------------------------------------------------------------
+FROM php:8.5-fpm-trixie AS php-builder
+
+RUN docker-php-ext-install pdo_mysql
+
+RUN mkdir -p /rootfs-php/usr/local/sbin \
+             /rootfs-php/usr/local/bin \
+             /rootfs-php/usr/local/lib/php && \
+    cp /usr/local/sbin/php-fpm /rootfs-php/usr/local/sbin/ && \
+    cp /usr/local/bin/php /rootfs-php/usr/local/bin/ && \
+    cp -r /usr/local/lib/php/extensions /rootfs-php/usr/local/lib/php/
+
+# Extract all dynamic shared libraries (.so) using UsrMerge-safe paths
+RUN ldd /usr/local/sbin/php-fpm | grep "=>" | awk '{print $3}' | while read -r lib; do \
+      if [ -f "$lib" ]; then \
+        rel="${lib#/}"; \
+        if [ "${rel#lib/}" != "$rel" ]; then rel="usr/$rel"; fi; \
+        dir="/rootfs-php/$(dirname "$rel")"; \
+        mkdir -p "$dir"; \
+        cp -L "$lib" "$dir/"; \
+      fi; \
+    done && \
+    ld_so=$(ldd /usr/local/sbin/php-fpm | grep '/ld-linux' | awk '{print $1}') && \
+    if [ -n "$ld_so" ] && [ -f "$ld_so" ]; then \
+      rel="${ld_so#/}"; \
+      if [ "${rel#lib64/}" != "$rel" ]; then rel="usr/$rel"; \
+      elif [ "${rel#lib/}" != "$rel" ]; then rel="usr/$rel"; fi; \
+      dir="/rootfs-php/$(dirname "$rel")"; \
+      mkdir -p "$dir"; \
+      cp -L "$ld_so" "$dir/"; \
+    fi
+
+# ------------------------------------------------------------------------------
+# Stage 3: Distroless Mandiri dari Scratch
+# ------------------------------------------------------------------------------
+FROM scratch
+
+LABEL maintainer="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.authors="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.vendor="PFNApp" \
+      org.opencontainers.image.title="PFNApp PHP 8.5 Distroless (PFNApp Scratch)" \
+      org.opencontainers.image.description="100% in-house hardened PHP 8.5 distroless extracted from Debian 13 Trixie" \
+      org.opencontainers.image.licenses="MIT"
+
+# Copy base security environment
+COPY --from=debian-security /rootfs /
+
+# Copy PHP runtime binaries & libraries
+COPY --from=php-builder /rootfs-php /
+
+COPY shared/php.ini /usr/local/etc/php/php.ini
+COPY shared/php-fpm.conf /usr/local/etc/php-fpm.conf
+
+WORKDIR /var/www/html
+USER 10001:10001
+
+EXPOSE 9000
+STOPSIGNAL SIGQUIT
+ENTRYPOINT ["/usr/local/sbin/php-fpm"]
+CMD ["-F"]

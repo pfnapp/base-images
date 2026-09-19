@@ -1,0 +1,49 @@
+# Syntax: docker/dockerfile:1
+# ==============================================================================
+# PHP 8.5 Distroless (Wolfi / Chainguard Static Base)
+# Maintainer: JuniYadi <juniyadi@premiumfast.net>
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Stage 1: Wolfi Builder (Rolling release, daily CVE updates)
+# ------------------------------------------------------------------------------
+FROM cgr.dev/chainguard/wolfi-base:latest AS builder
+
+RUN apk update && apk add --no-cache \
+    php-8.5 \
+    php-8.5-fpm \
+    php-8.5-pdo_mysql
+
+RUN mkdir -p /rootfs/tmp /rootfs/var/www/html && \
+    chmod 1777 /rootfs/tmp
+
+# ------------------------------------------------------------------------------
+# Stage 2: Distroless Static Chainguard Runtime
+# ------------------------------------------------------------------------------
+FROM cgr.dev/chainguard/static:latest
+
+LABEL maintainer="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.authors="JuniYadi <juniyadi@premiumfast.net>" \
+      org.opencontainers.image.vendor="PFNApp" \
+      org.opencontainers.image.title="PFNApp PHP 8.5 Distroless (Wolfi Base)" \
+      org.opencontainers.image.description="Hardened zero-CVE stream PHP 8.5 Distroless on Wolfi static" \
+      org.opencontainers.image.licenses="MIT"
+
+COPY --from=builder /usr/bin/php* /usr/bin/
+COPY --from=builder /usr/sbin/php-fpm* /usr/sbin/
+COPY --from=builder /usr/lib/php* /usr/lib/
+COPY --from=builder /lib /lib
+COPY --from=builder /usr/lib /usr/lib
+COPY --from=builder /etc/php* /etc/
+COPY --from=builder /rootfs /
+
+COPY shared/php.ini /etc/php/php.ini
+COPY shared/php-fpm.conf /etc/php-fpm.conf
+
+WORKDIR /var/www/html
+USER 65532:65532
+
+EXPOSE 9000
+STOPSIGNAL SIGQUIT
+ENTRYPOINT ["/usr/sbin/php-fpm"]
+CMD ["-F"]
