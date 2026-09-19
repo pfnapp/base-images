@@ -46,6 +46,17 @@ BUN_CONTAINER_NAME ?= bun-test-runner
 BUN_TEST_PORT ?= 8080
 
 # ==============================================================================
+# Python Language Configurations
+# ==============================================================================
+PYTHON_VERSIONS ?= 3.12 3.11
+PYTHON_VERSION ?= 3.12
+PYTHON_IMAGE_TAG ?= local/python:$(PYTHON_VERSION)-test
+PYTHON_DOCKERFILE ?= languages/python/$(PYTHON_VERSION)/Dockerfile.slim
+PYTHON_BUILD_CONTEXT ?= languages/python
+PYTHON_CONTAINER_NAME ?= python-test-runner
+PYTHON_TEST_PORT ?= 8080
+
+# ==============================================================================
 # Next.js Framework Configurations
 # ==============================================================================
 NEXTJS_VERSIONS ?= 22 20 18
@@ -82,6 +93,7 @@ NESTJS_BASE_IMAGE ?= local/node:$(NESTJS_NODE_VERSION)-test
         build-laravel build-laravel-all test-laravel scan-laravel \
         build-node build-node-all test-node test-node-all scan-node \
         build-bun build-bun-all test-bun test-bun-all scan-bun \
+        build-python build-python-all test-python test-python-all scan-python \
         build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs \
         build-vite test-vite scan-vite \
         build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs
@@ -471,6 +483,98 @@ scan-bun:
 		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(BUN_IMAGE_TAG); \
 	fi
 	@echo "==> Trivy scan passed for $(BUN_IMAGE_TAG)!"
+
+# ==============================================================================
+# Python Language Targets
+# ==============================================================================
+build-python:
+	@echo "==> Building Python $(PYTHON_VERSION) Slim base image..."
+	docker build -t $(PYTHON_IMAGE_TAG) -f $(PYTHON_DOCKERFILE) $(PYTHON_BUILD_CONTEXT)
+
+build-python-all:
+	@echo "==> Building all Python versions: $(PYTHON_VERSIONS)..."
+	@for v in $(PYTHON_VERSIONS); do \
+		echo "===> Building Python $$v..."; \
+		docker build -t local/python:$$v-test -f languages/python/$$v/Dockerfile.slim $(PYTHON_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Python base images built successfully!"
+
+test-python:
+	@echo "==> Testing runtime environment for $(PYTHON_IMAGE_TAG)..."
+	@docker rm -f $(PYTHON_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(PYTHON_CONTAINER_NAME) -p $(PYTHON_TEST_PORT):8080 $(PYTHON_IMAGE_TAG)
+	@echo "Waiting for container services to start..."
+	@for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(PYTHON_TEST_PORT)/ > /dev/null 2>&1; then \
+			echo "Container is ready."; \
+			break; \
+		fi; \
+		sleep 1; \
+	done
+	@echo "==> Verifying HTTP response..."
+	@curl -fsS http://127.0.0.1:$(PYTHON_TEST_PORT)/ | grep -q 'healthy' || { \
+		echo "Health verification failed!"; \
+		docker logs $(PYTHON_CONTAINER_NAME); \
+		docker rm -f $(PYTHON_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@echo "==> Verifying non-root execution (UID 10001)..."
+	@UID_CHECK=$$(docker exec $(PYTHON_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(PYTHON_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(PYTHON_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(PYTHON_IMAGE_TAG) passed successfully!"
+
+test-python-all:
+	@echo "==> Testing runtime environments for all Python versions..."
+	@for v in $(PYTHON_VERSIONS); do \
+		echo "===> Testing Python $$v..."; \
+		C_NAME="$(PYTHON_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(PYTHON_TEST_PORT):8080 local/python:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(PYTHON_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Python $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(PYTHON_TEST_PORT)/ | grep -q 'healthy' || { \
+			echo "Health check failed for Python $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Python $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Python $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Python runtime tests passed successfully!"
+
+scan-python:
+	@echo "==> Running Aqua Trivy vulnerability scanner for $(PYTHON_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --ignorefile .trivyignore --exit-code 1 $(PYTHON_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$$(pwd)/.trivyignore:/.trivyignore:ro" aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --ignorefile /.trivyignore --exit-code 1 $(PYTHON_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(PYTHON_IMAGE_TAG)!"
 
 # ==============================================================================
 # Next.js Framework Targets
