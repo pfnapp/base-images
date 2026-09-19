@@ -168,6 +168,35 @@ Deploy the **exact same container image** across your entire infrastructure by s
 | `PHP_MAX_EXECUTION_TIME` | `60` | Max script execution timeout in seconds. |
 | `PHP_TIMEZONE` | `Asia/Jakarta` | PHP & OS timezone. |
 
+### 4. Reverse Proxy & HTTPS (Mixed Content Prevention)
+
+When deploying behind an external reverse proxy (Cloudflare, AWS ALB, Traefik, or host Nginx), SSL termination typically happens upstream while traffic reaches the container via HTTP (port 8080).
+
+The base image automatically maps upstream `X-Forwarded-Proto: https` to FastCGI `HTTPS=on` and `REQUEST_SCHEME=https`, enabling Laravel to automatically detect HTTPS and generate secure URLs for assets (`asset()`, `vite()`, `route()`).
+
+For standard Laravel configurations:
+- **Laravel 11+** (`bootstrap/app.php`):
+  ```php
+  ->withMiddleware(function (Middleware $middleware) {
+      $middleware->trustProxies(at: '*');
+  })
+  ```
+- **Laravel 10 and below** (`app/Http/Middleware/TrustProxies.php`):
+  ```php
+  protected $proxies = '*';
+  ```
+- **Force HTTPS Scheme** (Optional reinforcement in `app/Providers/AppServiceProvider.php`):
+  ```php
+  use Illuminate\Support\Facades\URL;
+
+  public function boot(): void
+  {
+      if ($this->app->environment('production') || request()->header('X-Forwarded-Proto') === 'https') {
+          URL::forceScheme('https');
+      }
+  }
+  ```
+
 ---
 
 ## 🛠️ Local Orchestration with Docker Compose

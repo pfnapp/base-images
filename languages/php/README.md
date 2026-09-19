@@ -58,6 +58,7 @@ Tune PHP and PHP-FPM dynamically at container startup using environment variable
 - **Nginx Route/Location Overrides**: Mount custom route configs to `/etc/nginx/conf.d/custom/routes-*.conf` (e.g. `routes-api.conf` with custom location / proxy-pass blocks).
 - **Nginx Server Overrides**: Mount custom server configs to `/etc/nginx/conf.d/custom/server-*.conf`.
 - **Enterprise Reverse Proxy & Real IP**: Pre-configured in `/etc/nginx/conf.d/proxy.conf` with RFC1918 and Cloudflare CIDR support, restoring true client IPs via `X-Forwarded-For`.
+- **Automatic HTTPS / Forwarded Proto Detection**: Maps upstream `X-Forwarded-Proto`, `X-Forwarded-Port`, and `X-Forwarded-Host` directly to FastCGI parameters (`HTTPS=on`, `REQUEST_SCHEME`, `SERVER_PORT`), preventing Mixed Content errors behind reverse proxies (Cloudflare, AWS ALB, Traefik, Nginx).
 - **ACME Challenge**: Built-in support for `/.well-known/acme-challenge/` returning HTTP 200.
 - **Static Asset Caching**: 1-year immutable caching for CSS, JS, images, and webfonts.
 - **HTTPoxy Mitigation**: Strips untrusted `HTTP_PROXY` FastCGI headers automatically.
