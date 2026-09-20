@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "policy": {
+    "max_active_versions": 5,
+    "description": "Monitors up to 5 latest released versions per application starting from the baseline date. When new releases exceed 5, older versions are moved to deprecated_versions."
+  },
+  "applications": [
+    {
+      "id": "wordpress-fpm",
+      "name": "WordPress (PHP-FPM)",
+      "registry": "docker.io",
+      "image": "library/wordpress",
+      "tag_pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?-php8\\.3-fpm-alpine$",
+      "active_versions": [
+        "7.1.1-php8.3-fpm-alpine"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "registry": "docker.io",
+      "image": "louislam/uptime-kuma",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "2.5.5"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "9router",
+      "name": "9Router",
+      "registry": "docker.io",
+      "image": "decolua/9router",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "0.5.75"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "omniroute",
+      "name": "OmniRoute",
+      "registry": "docker.io",
+      "image": "diegosouzapw/omniroute",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "3.8.50"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw 2",
+      "registry": "docker.io",
+      "image": "openclaw/openclaw",
+      "tag_pattern": "^[0-9]{4}\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "2026.9.5"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "hermes-agent",
+      "name": "Hermes Agent",
+      "registry": "docker.io",
+      "image": "nousresearch/hermes-agent",
+      "tag_pattern": "^v[0-9]{4}\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "v2026.9.14"
+      ],
+      "deprecated_versions": []
+    }
+  ]
+}

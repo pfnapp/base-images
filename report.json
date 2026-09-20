@@ -1,0 +1,424 @@
+{
+  "schemaVersion": "1.0.0",
+  "summary": {
+    "generatedAt": "2026-09-20T15:23:10.865Z",
+    "scanner": "Aqua Trivy",
+    "supportWindowPolicy": "N-4 (Max 5 active versions)",
+    "totalApplications": 6,
+    "totalMonitoredVersions": 6,
+    "runAsRootCount": 4,
+    "criticalVulnerabilityCount": 191,
+    "highVulnerabilityCount": 2242
+  },
+  "applications": [
+    {
+      "id": "wordpress-fpm",
+      "name": "WordPress (PHP-FPM)",
+      "image": "library/wordpress",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "7.1.1-php8.3-fpm-alpine",
+          "fullRef": "library/wordpress:7.1.1-php8.3-fpm-alpine",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 0,
+            "high": 0,
+            "medium": 0,
+            "low": 0,
+            "fixable": 0,
+            "total": 0
+          },
+          "topCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "image": "louislam/uptime-kuma",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "2.5.5",
+          "fullRef": "louislam/uptime-kuma:2.5.5",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 149,
+            "high": 1610,
+            "medium": 1847,
+            "low": 1008,
+            "fixable": 4969,
+            "total": 4614
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-53613",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+            },
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            },
+            {
+              "id": "CVE-2026-78409",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+            },
+            {
+              "id": "CVE-2026-78410",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "9router",
+      "name": "9Router",
+      "image": "decolua/9router",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "0.5.75",
+          "fullRef": "decolua/9router:0.5.75",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 1,
+            "high": 10,
+            "medium": 7,
+            "low": 1,
+            "fixable": 19,
+            "total": 19
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.1.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
+            },
+            {
+              "id": "CVE-2026-9496",
+              "pkg": "pacote",
+              "installedVersion": "19.0.2",
+              "fixedVersion": "21.5.1",
+              "severity": "HIGH",
+              "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "omniroute",
+      "name": "OmniRoute",
+      "image": "diegosouzapw/omniroute",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "3.8.50",
+          "fullRef": "diegosouzapw/omniroute:3.8.50",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "critical": 7,
+            "high": 62,
+            "medium": 67,
+            "low": 60,
+            "fixable": 42,
+            "total": 196
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            },
+            {
+              "id": "CVE-2026-78409",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+            },
+            {
+              "id": "CVE-2026-78410",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+            },
+            {
+              "id": "CVE-2026-41992",
+              "pkg": "gzip",
+              "installedVersion": "1.13-1",
+              "fixedVersion": "1.13-1+deb13u1",
+              "severity": "HIGH",
+              "title": "gzip: gzip: Information disclosure via global buffer overflow in LZH decompression"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw 2",
+      "image": "openclaw/openclaw",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "2026.9.5",
+          "fullRef": "openclaw/openclaw:2026.9.5",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "critical": 15,
+            "high": 133,
+            "medium": 223,
+            "low": 185,
+            "fixable": 19,
+            "total": 556
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-53613",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+            },
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            },
+            {
+              "id": "CVE-2026-78409",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+            },
+            {
+              "id": "CVE-2026-78410",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "hermes-agent",
+      "name": "Hermes Agent",
+      "image": "nousresearch/hermes-agent",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "v2026.9.14",
+          "fullRef": "nousresearch/hermes-agent:v2026.9.14",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 19,
+            "high": 427,
+            "medium": 1476,
+            "low": 1011,
+            "fixable": 308,
+            "total": 2933
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-53612",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
+            },
+            {
+              "id": "CVE-2026-53613",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+            },
+            {
+              "id": "CVE-2026-53614",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
+            },
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T15:23:10.865Z"
+        }
+      ],
+      "deprecatedVersions": []
+    }
+  ]
+}
