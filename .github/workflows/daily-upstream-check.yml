@@ -1,0 +1,94 @@
+name: Daily Upstream Release Watcher
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # Daily at 01:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-upstream:
+    name: Check Upstream Framework & Runtime Releases
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run Upstream Release Watcher
+        id: watcher
+        run: |
+          node scripts/upstream-watcher.js
+
+      - name: Process Alerts and Create GitHub Issues
+        if: always() && hashFiles('upstream-alerts.json') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ ! -f upstream-alerts.json ]; then
+            echo "No upstream alerts file found. Exiting."
+            exit 0
+          fi
+
+          ALERTS_COUNT=$(jq '. | length' upstream-alerts.json)
+          echo "Found ${ALERTS_COUNT} alerts."
+
+          if [ "$ALERTS_COUNT" -eq 0 ]; then
+            echo "Everything is up to date."
+            exit 0
+          fi
+
+          jq -c '.[]' upstream-alerts.json | while read -r item; do
+            TARGET=$(echo "$item" | jq -r '.target')
+            DETECTED_MAJOR=$(echo "$item" | jq -r '.detectedMajor')
+            TYPE=$(echo "$item" | jq -r '.type')
+            MSG=$(echo "$item" | jq -r '.message')
+
+            ISSUE_TITLE="[Upstream Notice] New Major Release Detected: ${TARGET} ${DETECTED_MAJOR}"
+            echo "Checking if issue exists for: ${ISSUE_TITLE}"
+
+            EXISTING=$(gh issue list \
+              --repo "${{ github.repository }}" \
+              --state open \
+              --search "${ISSUE_TITLE}" \
+              --json number \
+              --jq '.[0].number')
+
+            if [ -n "$EXISTING" ]; then
+              echo "Issue #${EXISTING} already open for ${TARGET} ${DETECTED_MAJOR}. Skipping creation."
+            else
+              echo "Creating new issue for ${TARGET} ${DETECTED_MAJOR}..."
+              cat <<EOF > issue-payload.md
+          ## 🚨 Upstream Major Release Notification
+
+          An upstream major version bump was detected by the **Daily Upstream Release Watcher**.
+
+          ### Details:
+          - **Target Component:** \`${TARGET}\`
+          - **Detected Major Version:** \`${DETECTED_MAJOR}\`
+          - **Alert Type:** \`${TYPE}\`
+          - **Notice:** ${MSG}
+
+          ### Action Checklist:
+          1. [ ] Check compatibility requirements (e.g. required Node.js / PHP runtime version).
+          2. [ ] Review breaking changes from upstream release notes.
+          3. [ ] Update \`matrix.json\` to include the new version.
+          4. [ ] Build & test candidate base image.
+          5. [ ] Update \`runtime-manifest.json\` for the framework.
+          EOF
+              gh issue create \
+                --repo "${{ github.repository }}" \
+                --title "${ISSUE_TITLE}" \
+                --label "upstream-release" \
+                --body-file issue-payload.md || echo "Failed to create issue"
+              rm -f issue-payload.md
+            fi
+          done
