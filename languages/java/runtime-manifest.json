@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "java",
+  "framework": "Java (Eclipse Temurin JRE)",
+  "version": "21",
+  "baseImage": "ghcr.io/pfnapp/base/languages/java:21-alpine",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/actuator/health", "port": 8080 },
+    "readiness": { "path": "/actuator/health/readiness", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal unprivileged container listening port.",
+      "troubleshooting": "Platform Java base image listens on unprivileged port 8080 (server.port=8080 for Spring Boot)."
+    },
+    {
+      "key": "JAVA_TOOL_OPTIONS",
+      "label": "JVM Container Flags",
+      "type": "string",
+      "default": "-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0",
+      "category": "performance",
+      "description": "Standard container-aware JVM flags controlling heap allocation.",
+      "troubleshooting": "Allows JVM to automatically adapt heap memory limits to cgroup Kubernetes resource limits."
+    },
+    {
+      "key": "JAVA_OPTS",
+      "label": "Additional Java Options",
+      "type": "string",
+      "default": "",
+      "category": "runtime",
+      "description": "Extra arguments passed to the java binary execution.",
+      "troubleshooting": "Use for custom GC tuning (-XX:+UseG1GC) or system property definitions (-Dspring.profiles.active=prod)."
+    }
+  ]
+}
