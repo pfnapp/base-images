@@ -17,8 +17,8 @@ const https = require('https');
 const { execSync } = require('child_process');
 
 const ROOT_DIR = path.join(__dirname, '..');
-const TRACKED_CONFIG_FILE = path.join(ROOT_DIR, 'observatory', 'tracked-versions.json');
-const CACHE_DIR = path.join(ROOT_DIR, 'observatory', '.cache');
+const TRACKED_CONFIG_FILE = path.join(ROOT_DIR, 'observatory.json');
+const CACHE_DIR = path.join(ROOT_DIR, '.cache');
 const REPORT_JSON_FILE = path.join(ROOT_DIR, 'report.json');
 const REPORT_MD_FILE = path.join(ROOT_DIR, 'REPORT.md');
 
@@ -308,7 +308,7 @@ async function main() {
     applicationsReport.push(appEntry);
   }
 
-  // Save updated tracked configuration (with shifted sliding window)
+  // Save updated observatory config (with shifted sliding window)
   fs.writeFileSync(TRACKED_CONFIG_FILE, JSON.stringify(config, null, 2) + '\n');
   console.log(`\n💾 Saved updated ${TRACKED_CONFIG_FILE}`);
 
