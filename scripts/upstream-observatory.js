@@ -138,55 +138,64 @@ function evaluatePrivilege(trivyResult) {
   };
 }
 
+function makeVulnBucket() {
+  return { critical: 0, high: 0, medium: 0, low: 0, fixable: 0, total: 0, topCves: [] };
+}
+
+function countVuln(bucket, v) {
+  const sev = (v.Severity || '').toUpperCase();
+  if (sev === 'CRITICAL') bucket.critical++;
+  else if (sev === 'HIGH') bucket.high++;
+  else if (sev === 'MEDIUM') bucket.medium++;
+  else if (sev === 'LOW') bucket.low++;
+  if (v.FixedVersion) bucket.fixable++;
+  bucket.total++;
+  if ((sev === 'CRITICAL' || sev === 'HIGH') && bucket.topCves.length < 5) {
+    bucket.topCves.push({
+      id: v.VulnerabilityID,
+      pkg: v.PkgName,
+      installedVersion: v.InstalledVersion,
+      fixedVersion: v.FixedVersion || 'None',
+      severity: sev,
+      title: v.Title || v.VulnerabilityID
+    });
+  }
+}
+
+/**
+ * Splits vulnerabilities into two buckets:
+ *   system  — Class: os-pkgs (debian, alpine, ubuntu, etc.)
+ *             These are OS-level packages. We can mitigate by running
+ *             `apk upgrade` or `apt-get upgrade` in the base image build.
+ *   app     — Class: lang-pkgs (node-pkg, gobinary, python-pkg, gem, etc.)
+ *             These live inside the upstream app itself. We cannot fix them;
+ *             only the upstream maintainer can by releasing a new version.
+ */
 function parseVulnerabilities(trivyResult) {
-  let critical = 0;
-  let high = 0;
-  let medium = 0;
-  let low = 0;
-  let fixable = 0;
-  const topCves = [];
+  const system = makeVulnBucket();
+  const app    = makeVulnBucket();
 
   const results = trivyResult?.Results || [];
   for (const res of results) {
-    const vulns = res.Vulnerabilities || [];
-    for (const v of vulns) {
-      const sev = (v.Severity || '').toUpperCase();
-      if (sev === 'CRITICAL') critical++;
-      else if (sev === 'HIGH') high++;
-      else if (sev === 'MEDIUM') medium++;
-      else if (sev === 'LOW') low++;
-
-      const isFixable = !!v.FixedVersion;
-      if (isFixable) fixable++;
-
-      if ((sev === 'CRITICAL' || sev === 'HIGH') && topCves.length < 5) {
-        topCves.push({
-          id: v.VulnerabilityID,
-          pkg: v.PkgName,
-          installedVersion: v.InstalledVersion,
-          fixedVersion: v.FixedVersion || 'None',
-          severity: sev,
-          title: v.Title || v.VulnerabilityID
-        });
-      }
+    const isSystem = res.Class === 'os-pkgs';
+    const bucket   = isSystem ? system : app;
+    for (const v of (res.Vulnerabilities || [])) {
+      countVuln(bucket, v);
     }
   }
 
-  return {
-    critical,
-    high,
-    medium,
-    low,
-    fixable,
-    total: critical + high + medium + low,
-    topCves
-  };
+  return { system, app };
 }
 
+/**
+ * Posture is driven by app-level CVEs only.
+ * System CVEs are actionable on our side and should not penalise the upstream app.
+ */
 function determinePosture(vulns, priv) {
-  if (vulns.critical > 0) return { label: 'CRITICAL RISK', badge: '🔴' };
-  if (vulns.high > 0) return { label: 'HIGH RISK', badge: '🟠' };
-  if (priv.runAsRoot) return { label: 'NON-COMPLIANT (ROOT)', badge: '🟡' };
+  const app = vulns.app;
+  if (app.critical > 0) return { label: 'APP CRITICAL RISK', badge: '🔴' };
+  if (app.high > 0)     return { label: 'APP HIGH RISK',     badge: '🟠' };
+  if (priv.runAsRoot)   return { label: 'NON-COMPLIANT (ROOT)', badge: '🟡' };
   return { label: 'COMPLIANT', badge: '🟢' };
 }
 
@@ -275,8 +284,8 @@ async function main() {
 
       summary.totalMonitoredVersions++;
       if (priv.runAsRoot) summary.runAsRootCount++;
-      summary.criticalVulnerabilityCount += vulns.critical;
-      summary.highVulnerabilityCount += vulns.high;
+      summary.criticalVulnerabilityCount += vulns.app.critical;
+      summary.highVulnerabilityCount += vulns.app.high;
 
       appEntry.monitoredVersions.push({
         tag,
@@ -291,14 +300,27 @@ async function main() {
           uidLabel: priv.uidLabel
         },
         vulnerabilities: {
-          critical: vulns.critical,
-          high: vulns.high,
-          medium: vulns.medium,
-          low: vulns.low,
-          fixable: vulns.fixable,
-          total: vulns.total
+          system: {
+            critical: vulns.system.critical,
+            high: vulns.system.high,
+            medium: vulns.system.medium,
+            low: vulns.system.low,
+            fixable: vulns.system.fixable,
+            total: vulns.system.total,
+            note: 'OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build'
+          },
+          app: {
+            critical: vulns.app.critical,
+            high: vulns.app.high,
+            medium: vulns.app.medium,
+            low: vulns.app.low,
+            fixable: vulns.app.fixable,
+            total: vulns.app.total,
+            note: 'Application dependencies — only fixable by upstream maintainer releasing a new version'
+          }
         },
-        topCves: vulns.topCves,
+        topAppCves: vulns.app.topCves,
+        topSystemCves: vulns.system.topCves,
         posture: posture.label,
         postureBadge: posture.badge,
         scannedAt: now
@@ -338,22 +360,24 @@ function generateMarkdownReport(data) {
   md += `- **Active Versions Audited:** \`${summary.totalMonitoredVersions}\`\n`;
   const rootPct = summary.totalMonitoredVersions > 0 ? Math.round((summary.runAsRootCount / summary.totalMonitoredVersions) * 100) : 0;
   md += `- **Images Running As Root:** \`${summary.runAsRootCount}\` / \`${summary.totalMonitoredVersions}\` (⚠️ **${rootPct}%** non-compliant)\n`;
-  md += `- **Total Critical CVEs:** \`${summary.criticalVulnerabilityCount}\`\n`;
-  md += `- **Total High CVEs:** \`${summary.highVulnerabilityCount}\`\n\n`;
+  md += `- **App Critical CVEs** _(upstream, unfixable by us)_**:** \`${summary.criticalVulnerabilityCount}\`\n`;
+  md += `- **App High CVEs** _(upstream, unfixable by us)_**:** \`${summary.highVulnerabilityCount}\`\n\n`;
+  md += '> **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.\n\n';
 
   md += '---\n\n';
   md += '## 📋 Active Support Window (Max 5 Versions per Application)\n\n';
-  md += '| Application | Category | Monitored Version | Lifecycle Status | Run As Root? | Configured UID | Vuln (C / H / M / L) | Fixable | Recommendation / Advisory |\n';
-  md += '| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |\n';
+  md += '| Application | Category | Version | Lifecycle | Root? | System CVE (C/H/M/L) | App CVE (C/H/M/L) | Posture |\n';
+  md += '| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |\n';
 
   for (const app of applications) {
     let firstRow = true;
     for (const v of app.monitoredVersions) {
-      const appNameCol = firstRow ? `**${app.name}**` : '';
+      const appNameCol  = firstRow ? `**${app.name}**` : '';
       const categoryCol = firstRow ? `_${app.category}_` : '';
-      const rootCol = v.security.runAsRoot ? '⚠️ **YES**' : '✅ **NO**';
-      const vulnCol = `${v.vulnerabilities.critical} / ${v.vulnerabilities.high} / ${v.vulnerabilities.medium} / ${v.vulnerabilities.low}`;
-      md += `| ${appNameCol} | ${categoryCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | \`${v.security.uidLabel}\` | ${vulnCol} | ${v.vulnerabilities.fixable} | ${v.lifecycleAdvice} |\n`;
+      const rootCol     = v.security.runAsRoot ? '⚠️ YES' : '✅ NO';
+      const sysCve  = `${v.vulnerabilities.system.critical}/${v.vulnerabilities.system.high}/${v.vulnerabilities.system.medium}/${v.vulnerabilities.system.low}`;
+      const appCve  = `${v.vulnerabilities.app.critical}/${v.vulnerabilities.app.high}/${v.vulnerabilities.app.medium}/${v.vulnerabilities.app.low}`;
+      md += `| ${appNameCol} | ${categoryCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | ${sysCve} | ${appCve} | ${v.postureBadge} ${v.posture} |\n`;
       firstRow = false;
     }
   }
@@ -389,20 +413,42 @@ function generateMarkdownReport(data) {
     const latest = app.monitoredVersions[0];
     if (!latest) continue;
 
-    md += `<details>\n<summary><b>${app.name} (<code>${latest.tag}</code>) - ${latest.vulnerabilities.critical} Critical, ${latest.vulnerabilities.high} High</b></summary>\n\n`;
+    const appC = latest.vulnerabilities.app.critical;
+    const appH = latest.vulnerabilities.app.high;
+    const sysC = latest.vulnerabilities.system.critical;
+    const sysH = latest.vulnerabilities.system.high;
+
+    md += `<details>\n<summary><b>${app.name} (<code>${latest.tag}</code>) — App: ${appC} Critical, ${appH} High | System: ${sysC} Critical, ${sysH} High</b></summary>\n\n`;
     md += `- **Full Reference:** \`${latest.fullRef}\`\n`;
     md += `- **Root Status:** ${latest.security.runAsRoot ? '⚠️ Runs as root' : '✅ Runs non-root'} (\`${latest.security.uidLabel}\`)\n`;
     md += `- **Posture:** ${latest.postureBadge} ${latest.posture}\n\n`;
 
-    if (latest.topCves && latest.topCves.length > 0) {
-      md += '| CVE ID | Severity | Affected Package | Installed | Fixed Version |\n';
+    // App CVEs
+    md += `#### 🔴 App CVEs _(upstream dependency — only fixable by maintainer)_\n\n`;
+    if (latest.topAppCves && latest.topAppCves.length > 0) {
+      md += '| CVE ID | Severity | Package | Installed | Fixed Version |\n';
       md += '| :--- | :---: | :--- | :--- | :--- |\n';
-      for (const c of latest.topCves) {
+      for (const c of latest.topAppCves) {
         md += `| \`${c.id}\` | **${c.severity}** | \`${c.pkg}\` | \`${c.installedVersion}\` | \`${c.fixedVersion}\` |\n`;
       }
     } else {
-      md += '_No Critical or High vulnerabilities detected in this release._\n';
+      md += '_No Critical or High app-level vulnerabilities detected._\n';
     }
+
+    md += '\n';
+
+    // System CVEs
+    md += `#### 🟡 System CVEs _(OS packages — mitigable via \`apk upgrade\` / \`apt-get upgrade\`)_\n\n`;
+    if (latest.topSystemCves && latest.topSystemCves.length > 0) {
+      md += '| CVE ID | Severity | Package | Installed | Fixed Version |\n';
+      md += '| :--- | :---: | :--- | :--- | :--- |\n';
+      for (const c of latest.topSystemCves) {
+        md += `| \`${c.id}\` | **${c.severity}** | \`${c.pkg}\` | \`${c.installedVersion}\` | \`${c.fixedVersion}\` |\n`;
+      }
+    } else {
+      md += '_No Critical or High system-level vulnerabilities detected._\n';
+    }
+
     md += '\n</details>\n\n';
   }
 
