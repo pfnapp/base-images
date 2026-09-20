@@ -57,6 +57,28 @@ PYTHON_CONTAINER_NAME ?= python-test-runner
 PYTHON_TEST_PORT ?= 8080
 
 # ==============================================================================
+# Go Language Configurations
+# ==============================================================================
+GO_VERSIONS ?= 1.24 1.23
+GO_VERSION ?= 1.24
+GO_IMAGE_TAG ?= local/go:$(GO_VERSION)-test
+GO_DOCKERFILE ?= languages/go/Dockerfile.alpine
+GO_BUILD_CONTEXT ?= languages/go
+GO_CONTAINER_NAME ?= go-test-runner
+GO_TEST_PORT ?= 8080
+
+# ==============================================================================
+# Java Language Configurations
+# ==============================================================================
+JAVA_VERSIONS ?= 21 17
+JAVA_VERSION ?= 21
+JAVA_IMAGE_TAG ?= local/java:$(JAVA_VERSION)-test
+JAVA_DOCKERFILE ?= languages/java/Dockerfile.alpine
+JAVA_BUILD_CONTEXT ?= languages/java
+JAVA_CONTAINER_NAME ?= java-test-runner
+JAVA_TEST_PORT ?= 8080
+
+# ==============================================================================
 # Next.js Framework Configurations
 # ==============================================================================
 NEXTJS_VERSIONS ?= 22 20 18
@@ -94,6 +116,8 @@ NESTJS_BASE_IMAGE ?= local/node:$(NESTJS_NODE_VERSION)-test
         build-node build-node-all test-node test-node-all scan-node \
         build-bun build-bun-all test-bun test-bun-all scan-bun \
         build-python build-python-all test-python test-python-all scan-python \
+        build-go build-go-all test-go test-go-all scan-go \
+        build-java build-java-all test-java test-java-all scan-java \
         build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs \
         build-vite test-vite scan-vite \
         build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs \
@@ -591,6 +615,198 @@ scan-python:
 		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$$(pwd)/.trivyignore:/.trivyignore:ro" aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --ignorefile /.trivyignore --exit-code 1 $(PYTHON_IMAGE_TAG); \
 	fi
 	@echo "==> Trivy scan passed for $(PYTHON_IMAGE_TAG)!"
+
+# ==============================================================================
+# Go Language Targets
+# ==============================================================================
+build-go:
+	@echo "==> Building Go $(GO_VERSION) Alpine base image..."
+	docker build --build-arg GO_VERSION=$(GO_VERSION) -t $(GO_IMAGE_TAG) -f $(GO_DOCKERFILE) $(GO_BUILD_CONTEXT)
+
+build-go-all:
+	@echo "==> Building all Go versions: $(GO_VERSIONS)..."
+	@for v in $(GO_VERSIONS); do \
+		echo "===> Building Go $$v..."; \
+		docker build --build-arg GO_VERSION=$$v -t local/go:$$v-test -f $(GO_DOCKERFILE) $(GO_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Go base images built successfully!"
+
+test-go:
+	@echo "==> Testing runtime environment for $(GO_IMAGE_TAG)..."
+	@docker rm -f $(GO_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(GO_CONTAINER_NAME) -p $(GO_TEST_PORT):8080 $(GO_IMAGE_TAG)
+	@READY=0; \
+	for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(GO_TEST_PORT)/ > /dev/null 2>&1; then \
+			READY=1; \
+			break; \
+		fi; \
+		sleep 1; \
+	done; \
+	if [ $$READY -ne 1 ]; then \
+		echo "Container failed to start within 15 seconds!"; \
+		docker logs $(GO_CONTAINER_NAME); \
+		docker rm -f $(GO_CONTAINER_NAME); \
+		exit 1; \
+	fi
+	curl -fsS http://127.0.0.1:$(GO_TEST_PORT)/ | grep -q 'healthy' || { \
+		echo "Health check failed!"; \
+		docker logs $(GO_CONTAINER_NAME); \
+		docker rm -f $(GO_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@UID_CHECK=$$(docker exec $(GO_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(GO_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(GO_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(GO_IMAGE_TAG) passed successfully!"
+
+test-go-all:
+	@echo "==> Testing runtime environments for all Go versions..."
+	@for v in $(GO_VERSIONS); do \
+		echo "===> Testing Go $$v..."; \
+		C_NAME="$(GO_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(GO_TEST_PORT):8080 local/go:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(GO_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Go $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(GO_TEST_PORT)/ | grep -q 'healthy' || { \
+			echo "Health check failed for Go $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Go $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Go $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Go runtime tests passed successfully!"
+
+scan-go:
+	@echo "==> Running Aqua Trivy vulnerability scanner for $(GO_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(GO_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(GO_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(GO_IMAGE_TAG)!"
+
+# ==============================================================================
+# Java Language Targets
+# ==============================================================================
+build-java:
+	@echo "==> Building Java $(JAVA_VERSION) Alpine base image..."
+	docker build --build-arg JAVA_VERSION=$(JAVA_VERSION) -t $(JAVA_IMAGE_TAG) -f $(JAVA_DOCKERFILE) $(JAVA_BUILD_CONTEXT)
+
+build-java-all:
+	@echo "==> Building all Java versions: $(JAVA_VERSIONS)..."
+	@for v in $(JAVA_VERSIONS); do \
+		echo "===> Building Java $$v..."; \
+		docker build --build-arg JAVA_VERSION=$$v -t local/java:$$v-test -f $(JAVA_DOCKERFILE) $(JAVA_BUILD_CONTEXT) || exit 1; \
+	done
+	@echo "==> All Java base images built successfully!"
+
+test-java:
+	@echo "==> Testing runtime environment for $(JAVA_IMAGE_TAG)..."
+	@docker rm -f $(JAVA_CONTAINER_NAME) 2>/dev/null || true
+	@docker run -d --name $(JAVA_CONTAINER_NAME) -p $(JAVA_TEST_PORT):8080 $(JAVA_IMAGE_TAG)
+	@READY=0; \
+	for i in {1..15}; do \
+		if curl -sf http://127.0.0.1:$(JAVA_TEST_PORT)/ > /dev/null 2>&1; then \
+			READY=1; \
+			break; \
+		fi; \
+		sleep 1; \
+	done; \
+	if [ $$READY -ne 1 ]; then \
+		echo "Container failed to start within 15 seconds!"; \
+		docker logs $(JAVA_CONTAINER_NAME); \
+		docker rm -f $(JAVA_CONTAINER_NAME); \
+		exit 1; \
+	fi
+	curl -fsS http://127.0.0.1:$(JAVA_TEST_PORT)/ | grep -q 'healthy' || { \
+		echo "Health check failed!"; \
+		docker logs $(JAVA_CONTAINER_NAME); \
+		docker rm -f $(JAVA_CONTAINER_NAME); \
+		exit 1; \
+	}
+	@UID_CHECK=$$(docker exec $(JAVA_CONTAINER_NAME) id -u); \
+	if [ "$$UID_CHECK" != "10001" ]; then \
+		echo "Security violation: Process running as UID $$UID_CHECK (expected 10001)"; \
+		docker rm -f $(JAVA_CONTAINER_NAME); \
+		exit 1; \
+	fi; \
+	echo "Verified UID: $$UID_CHECK (appuser)"
+	@docker rm -f $(JAVA_CONTAINER_NAME) > /dev/null
+	@echo "==> Runtime test for $(JAVA_IMAGE_TAG) passed successfully!"
+
+test-java-all:
+	@echo "==> Testing runtime environments for all Java versions..."
+	@for v in $(JAVA_VERSIONS); do \
+		echo "===> Testing Java $$v..."; \
+		C_NAME="$(JAVA_CONTAINER_NAME)-$$v"; \
+		docker rm -f $$C_NAME 2>/dev/null || true; \
+		docker run -d --name $$C_NAME -p $(JAVA_TEST_PORT):8080 local/java:$$v-test || exit 1; \
+		READY=0; \
+		for i in {1..15}; do \
+			if curl -sf http://127.0.0.1:$(JAVA_TEST_PORT)/ > /dev/null 2>&1; then \
+				READY=1; \
+				break; \
+			fi; \
+			sleep 1; \
+		done; \
+		if [ $$READY -ne 1 ]; then \
+			echo "Container for Java $$v failed to start within 15 seconds!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		curl -fsS http://127.0.0.1:$(JAVA_TEST_PORT)/ | grep -q 'healthy' || { \
+			echo "Health check failed for Java $$v!"; \
+			docker logs $$C_NAME; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		}; \
+		UID_CHECK=$$(docker exec $$C_NAME id -u); \
+		if [ "$$UID_CHECK" != "10001" ]; then \
+			echo "Security violation in Java $$v: running as UID $$UID_CHECK"; \
+			docker rm -f $$C_NAME; \
+			exit 1; \
+		fi; \
+		echo "Verified Java $$v: UID $$UID_CHECK"; \
+		docker rm -f $$C_NAME > /dev/null; \
+	done
+	@echo "==> All Java runtime tests passed successfully!"
+
+scan-java:
+	@echo "==> Running Aqua Trivy vulnerability scanner for $(JAVA_IMAGE_TAG)..."
+	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(JAVA_IMAGE_TAG); \
+	else \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(JAVA_IMAGE_TAG); \
+	fi
+	@echo "==> Trivy scan passed for $(JAVA_IMAGE_TAG)!"
 
 # ==============================================================================
 # Next.js Framework Targets

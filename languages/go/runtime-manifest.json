@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "go",
+  "framework": "Go",
+  "version": "1.24",
+  "baseImage": "ghcr.io/pfnapp/base/languages/go:1.24-alpine",
+  "ports": {
+    "default": 8080,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 10001,
+    "runAsGroup": 10001,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": { "path": "/", "port": 8080 },
+    "readiness": { "path": "/", "port": 8080 }
+  },
+  "tunables": [
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8080,
+      "category": "networking",
+      "description": "Internal unprivileged container listening port.",
+      "troubleshooting": "Platform Go base image listens on unprivileged port 8080."
+    },
+    {
+      "key": "GOPATH",
+      "label": "Go Path",
+      "type": "string",
+      "default": "/tmp/go",
+      "category": "runtime",
+      "description": "Location of Go workspace and downloaded modules.",
+      "troubleshooting": "Defaults to /tmp/go to support unprivileged read-only root filesystems."
+    },
+    {
+      "key": "GOCACHE",
+      "label": "Go Cache",
+      "type": "string",
+      "default": "/tmp/go-cache",
+      "category": "runtime",
+      "description": "Build cache directory for Go compiler outputs.",
+      "troubleshooting": "Defaults to /tmp/go-cache with non-root ownership."
+    },
+    {
+      "key": "CGO_ENABLED",
+      "label": "CGO Enabled",
+      "type": "string",
+      "default": "0",
+      "category": "compilation",
+      "description": "Toggles CGO binding for statically linked pure Go binaries.",
+      "troubleshooting": "Set to 0 for pure static Go binaries without glibc/musl dependencies."
+    }
+  ]
+}

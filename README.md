@@ -7,6 +7,8 @@ Hardened, unprivileged container base images designed for multi-tenant Kubernete
 [![Build and Audit Node Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-node.yml)
 [![Build and Audit Bun Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-bun.yml)
 [![Build and Audit Python Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-python.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-python.yml)
+[![Build and Audit Go Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-go.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-go.yml)
+[![Build and Audit Java Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-java.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-java.yml)
 [![Build and Audit Next.js Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nextjs.yml)
 [![Build and Audit Vite Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-vite.yml)
 [![Build and Audit NestJS Base Images](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml/badge.svg)](https://github.com/pfnapp/base-images/actions/workflows/build-nestjs.yml)
@@ -41,6 +43,8 @@ frameworks/     ──► Opinionated, application-specific runners (pre-configu
 | **Languages** | [`languages/node/`](languages/node/) | [Node.js Guide](languages/node/README.md) | Node.js 22, 20, 18 (Alpine) |
 | **Languages** | [`languages/bun/`](languages/bun/) | [Bun Guide](languages/bun/README.md) | Bun 1.4, 1.2 (Alpine) |
 | **Languages** | [`languages/python/`](languages/python/) | [Python Guide](languages/python/README.md) | Python 3.12, 3.11 (Debian Bookworm Slim) |
+| **Languages** | [`languages/go/`](languages/go/) | [Go Guide](languages/go/README.md) | Go 1.24, 1.23 (Alpine) |
+| **Languages** | [`languages/java/`](languages/java/) | [Java Guide](languages/java/README.md) | Java 21, 17 JRE (Eclipse Temurin Alpine) |
 | **Frameworks** | [`frameworks/laravel/`](frameworks/laravel/) | [Laravel Guide](frameworks/laravel/README.md) | Laravel 8.4, 8.3, 8.2, 8.1, 7.4 (Web, Worker, Horizon, Cron) |
 | **Frameworks** | [`frameworks/nextjs/`](frameworks/nextjs/) | [Next.js Guide](frameworks/nextjs/README.md) | Next.js Standalone Runner (Node.js 22, 20, 18) |
 | **Frameworks** | [`frameworks/vite/`](frameworks/vite/) | [Vite Guide](frameworks/vite/README.md) | Vite Static SPA Runner (Alpine + Unprivileged Nginx) |
@@ -68,6 +72,10 @@ All images are ultra-lean, hardened Alpine Linux containers built for rapid cold
 | **Bun 1.2** | Alpine 3.20 | **~51 MB** | **125 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/bun:1.2-alpine` |
 | **Python 3.12** | Debian 12 Slim | **~51 MB** | **147 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/python:3.12-slim` |
 | **Python 3.11** | Debian 12 Slim | **~53 MB** | **152 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/python:3.11-slim` |
+| **Go 1.24** | Alpine 3.21 | **~75 MB** | **240 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/go:1.24-alpine` |
+| **Go 1.23** | Alpine 3.21 | **~74 MB** | **238 MB** | Active (Supported) | `ghcr.io/pfnapp/base/languages/go:1.23-alpine` |
+| **Java 21** | Eclipse Temurin Alpine | **~45 MB** | **125 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/languages/java:21-alpine` |
+| **Java 17** | Eclipse Temurin Alpine | **~48 MB** | **132 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/java:17-alpine` |
 
 ### 2. Frameworks (Application Runners)
 | Framework | Underlying Runtime | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag | Compatibility Tag |
@@ -117,6 +125,16 @@ docker pull ghcr.io/pfnapp/base/languages/python:3.12-slim
 docker pull ghcr.io/pfnapp/base/languages/python:3.12
 docker pull ghcr.io/pfnapp/base/languages/python:latest
 
+# Pull Go 1.24 Alpine Base Image
+docker pull ghcr.io/pfnapp/base/languages/go:1.24-alpine
+docker pull ghcr.io/pfnapp/base/languages/go:1.24
+docker pull ghcr.io/pfnapp/base/languages/go:latest
+
+# Pull Java 21 Alpine Base Image
+docker pull ghcr.io/pfnapp/base/languages/java:21-alpine
+docker pull ghcr.io/pfnapp/base/languages/java:21
+docker pull ghcr.io/pfnapp/base/languages/java:latest
+
 # Pull Next.js Alpine Framework Image
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:node22-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine
@@ -158,6 +176,21 @@ make scan-node           # Run Aqua Security Trivy scan on Node.js image
 make build-bun           # Build local/bun:1.4-test
 make test-bun            # Verify Bun runtime, port 8080, UID 10001
 make scan-bun            # Run Aqua Security Trivy scan on Bun image
+
+# Language Images (Python)
+make build-python        # Build local/python:3.12-test
+make test-python         # Verify Python runtime, port 8080, UID 10001
+make scan-python         # Run Aqua Security Trivy scan on Python image
+
+# Language Images (Go)
+make build-go            # Build local/go:1.24-test
+make test-go             # Verify Go runtime, port 8080, UID 10001
+make scan-go             # Run Aqua Security Trivy scan on Go image
+
+# Language Images (Java)
+make build-java          # Build local/java:21-test
+make test-java           # Verify Java runtime, port 8080, UID 10001
+make scan-java           # Run Aqua Security Trivy scan on Java image
 
 # Framework Images (Next.js)
 make build-nextjs        # Build local/nextjs:22-test
