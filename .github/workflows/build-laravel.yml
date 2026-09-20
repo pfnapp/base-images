@@ -314,6 +314,12 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.php_version }}"
 
+          # Dual-tag runtime-explicit tags for compatibility clarity
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:php${{ matrix.php_version }}-alpine"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:php${{ matrix.php_version }}"
+          push_with_retry "${TARGET_REPO}:php${{ matrix.php_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:php${{ matrix.php_version }}"
+
           if [ "${{ matrix.php_version }}" = "8.4" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"

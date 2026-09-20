@@ -2,7 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "runtime": "nestjs",
   "framework": "NestJS",
-  "version": "22",
+  "version": "11",
+  "supportedFrameworkVersions": ["10", "11", "12"],
+  "runtimeMatrix": {
+    "nestjs-12": { "node": ["20", "22", "24"], "default": "22" },
+    "nestjs-11": { "node": ["20", "22"], "default": "22" },
+    "nestjs-10": { "node": ["18", "20", "22"], "default": "20" }
+  },
   "baseImage": "ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine",
   "ports": {
     "default": 8080,

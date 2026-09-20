@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "PFN App Base Images Matrix and Upstream Support Specification",
+  "runtimes": {
+    "node": {
+      "active_lts": ["20", "22", "24"],
+      "maintenance_lts": ["18"],
+      "default": "22",
+      "upstream": {
+        "type": "nodejs_dist",
+        "url": "https://nodejs.org/dist/index.json"
+      }
+    },
+    "php": {
+      "supported": ["8.2", "8.3", "8.4", "8.5"],
+      "legacy": ["7.4", "8.1"],
+      "default": "8.4",
+      "upstream": {
+        "type": "dockerhub",
+        "repository": "library/php"
+      }
+    },
+    "bun": {
+      "supported": ["1.2", "1.4"],
+      "default": "1.4",
+      "upstream": {
+        "type": "npm",
+        "package": "bun"
+      }
+    },
+    "python": {
+      "supported": ["3.11", "3.12"],
+      "default": "3.12",
+      "upstream": {
+        "type": "dockerhub",
+        "repository": "library/python"
+      }
+    }
+  },
+  "frameworks": {
+    "nextjs": {
+      "upstream_type": "npm",
+      "upstream_package": "next",
+      "runtime": "node",
+      "known_major_versions": ["14", "15", "16"],
+      "compatibility_matrix": [
+        {
+          "framework_major": "16",
+          "compatible_runtimes": ["20", "22", "24"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "15",
+          "compatible_runtimes": ["18", "20", "22"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "14",
+          "compatible_runtimes": ["18", "20"],
+          "default_runtime": "20"
+        }
+      ]
+    },
+    "laravel": {
+      "upstream_type": "packagist",
+      "upstream_package": "laravel/framework",
+      "runtime": "php",
+      "known_major_versions": ["10", "11", "12", "13"],
+      "compatibility_matrix": [
+        {
+          "framework_major": "13",
+          "compatible_runtimes": ["8.2", "8.3", "8.4", "8.5"],
+          "default_runtime": "8.4"
+        },
+        {
+          "framework_major": "12",
+          "compatible_runtimes": ["8.2", "8.3", "8.4"],
+          "default_runtime": "8.3"
+        },
+        {
+          "framework_major": "11",
+          "compatible_runtimes": ["8.2", "8.3", "8.4"],
+          "default_runtime": "8.3"
+        },
+        {
+          "framework_major": "10",
+          "compatible_runtimes": ["8.1", "8.2", "8.3"],
+          "default_runtime": "8.2"
+        }
+      ]
+    },
+    "nestjs": {
+      "upstream_type": "npm",
+      "upstream_package": "@nestjs/core",
+      "runtime": "node",
+      "known_major_versions": ["10", "11", "12"],
+      "compatibility_matrix": [
+        {
+          "framework_major": "12",
+          "compatible_runtimes": ["20", "22", "24"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "11",
+          "compatible_runtimes": ["20", "22"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "10",
+          "compatible_runtimes": ["18", "20", "22"],
+          "default_runtime": "20"
+        }
+      ]
+    },
+    "vite": {
+      "upstream_type": "npm",
+      "upstream_package": "vite",
+      "runtime": "node",
+      "known_major_versions": ["5", "6", "7", "8"],
+      "compatibility_matrix": [
+        {
+          "framework_major": "8",
+          "compatible_runtimes": ["20", "22", "24"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "7",
+          "compatible_runtimes": ["20", "22"],
+          "default_runtime": "22"
+        },
+        {
+          "framework_major": "6",
+          "compatible_runtimes": ["18", "20", "22"],
+          "default_runtime": "20"
+        }
+      ]
+    }
+  }
+}

@@ -280,6 +280,12 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
 
+          # Dual-tag runtime-explicit tags for compatibility clarity
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:node${{ matrix.node_version }}-alpine"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:node${{ matrix.node_version }}"
+          push_with_retry "${TARGET_REPO}:node${{ matrix.node_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:node${{ matrix.node_version }}"
+
           if [ "${{ matrix.node_version }}" = "22" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
