@@ -121,7 +121,8 @@ NESTJS_BASE_IMAGE ?= local/node:$(NESTJS_NODE_VERSION)-test
         build-nextjs build-nextjs-all test-nextjs test-nextjs-all scan-nextjs \
         build-vite test-vite scan-vite \
         build-nestjs build-nestjs-all test-nestjs test-nestjs-all scan-nestjs \
-        build-php-distroless-all build-php-distroless-google build-php-distroless-wolfi build-php-distroless-pfnapp
+        build-php-distroless-all build-php-distroless-google build-php-distroless-wolfi build-php-distroless-pfnapp \
+        observatory
 
 all: build test scan
 
@@ -1055,6 +1056,13 @@ scan-nestjs:
 		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NESTJS_IMAGE_TAG); \
 	fi
 	@echo "==> Trivy scan passed for $(NESTJS_IMAGE_TAG)!"
+
+# ==============================================================================
+# Upstream Observatory Target
+# ==============================================================================
+observatory:
+	@echo "==> Running Upstream Template Observatory scan..."
+	node scripts/upstream-observatory.js
 
 # ==============================================================================
 # Clean Target
