@@ -1,19 +1,20 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-20T15:23:10.865Z",
+    "generatedAt": "2026-09-20T21:09:19.998Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
-    "totalApplications": 6,
-    "totalMonitoredVersions": 6,
-    "runAsRootCount": 4,
-    "criticalVulnerabilityCount": 191,
-    "highVulnerabilityCount": 2242
+    "totalApplications": 16,
+    "totalMonitoredVersions": 16,
+    "runAsRootCount": 12,
+    "criticalVulnerabilityCount": 226,
+    "highVulnerabilityCount": 3278
   },
   "applications": [
     {
       "id": "wordpress-fpm",
       "name": "WordPress (PHP-FPM)",
+      "category": "CMS & Publishing",
       "image": "library/wordpress",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -40,7 +41,7 @@
           "topCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
@@ -48,6 +49,7 @@
     {
       "id": "uptime-kuma",
       "name": "Uptime Kuma",
+      "category": "Monitoring & Status",
       "image": "louislam/uptime-kuma",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -115,7 +117,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
@@ -123,6 +125,7 @@
     {
       "id": "9router",
       "name": "9Router",
+      "category": "AI Gateways & Proxies",
       "image": "decolua/9router",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -190,7 +193,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
@@ -198,6 +201,7 @@
     {
       "id": "omniroute",
       "name": "OmniRoute",
+      "category": "AI Gateways & Proxies",
       "image": "diegosouzapw/omniroute",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -265,7 +269,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
@@ -273,6 +277,7 @@
     {
       "id": "openclaw",
       "name": "OpenClaw 2",
+      "category": "AI Agents & Automation",
       "image": "openclaw/openclaw",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -340,7 +345,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
@@ -348,6 +353,7 @@
     {
       "id": "hermes-agent",
       "name": "Hermes Agent",
+      "category": "AI Agents & Automation",
       "image": "nousresearch/hermes-agent",
       "registry": "docker.io",
       "monitoredVersions": [
@@ -415,7 +421,670 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T15:23:10.865Z"
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "vaultwarden",
+      "name": "Vaultwarden (Bitwarden)",
+      "category": "Security & Identity",
+      "image": "vaultwarden/server",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "1.37.3",
+          "fullRef": "vaultwarden/server:1.37.3",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 7,
+            "high": 69,
+            "medium": 106,
+            "low": 97,
+            "fixable": 28,
+            "total": 279
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            },
+            {
+              "id": "CVE-2026-78409",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+            },
+            {
+              "id": "CVE-2026-78410",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41.5-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+            },
+            {
+              "id": "CVE-2026-12064",
+              "pkg": "curl",
+              "installedVersion": "8.14.1-2+deb13u5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "memos",
+      "name": "Memos",
+      "category": "Knowledge & Notes",
+      "image": "neosmemo/memos",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "0.31.0",
+          "fullRef": "neosmemo/memos:0.31.0",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 0,
+            "high": 1,
+            "medium": 0,
+            "low": 1,
+            "fixable": 1,
+            "total": 2
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-84445",
+              "pkg": "google.golang.org/grpc",
+              "installedVersion": "v1.83.1",
+              "fixedVersion": "1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e",
+              "severity": "HIGH",
+              "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "filebrowser",
+      "name": "File Browser",
+      "category": "Storage & Files",
+      "image": "filebrowser/filebrowser",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "v2.63.23",
+          "fullRef": "filebrowser/filebrowser:v2.63.23",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "user",
+            "uidLabel": "user"
+          },
+          "vulnerabilities": {
+            "critical": 0,
+            "high": 10,
+            "medium": 2,
+            "low": 1,
+            "fixable": 12,
+            "total": 13
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-56854",
+              "pkg": "golang.org/x/crypto",
+              "installedVersion": "v0.54.0",
+              "fixedVersion": "0.55.0",
+              "severity": "HIGH",
+              "title": "golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Authentication bypass due to unenforced source-address restrictions"
+            },
+            {
+              "id": "CVE-2026-46603",
+              "pkg": "golang.org/x/image",
+              "installedVersion": "v0.44.0",
+              "fixedVersion": "0.45.0",
+              "severity": "HIGH",
+              "title": "golang.org/x/image/vp8l: golang.org/x/image/vp8l: Denial of Service via excessive memory allocation"
+            },
+            {
+              "id": "CVE-2026-33818",
+              "pkg": "stdlib",
+              "installedVersion": "1.26.5",
+              "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH",
+              "title": "encoding/asn1: golang: Go encoding/asn1: Denial of Service via excessive recursion in Unmarshal"
+            },
+            {
+              "id": "CVE-2026-39821",
+              "pkg": "stdlib",
+              "installedVersion": "1.26.5",
+              "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH",
+              "title": "golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing"
+            },
+            {
+              "id": "CVE-2026-46600",
+              "pkg": "stdlib",
+              "installedVersion": "1.26.5",
+              "fixedVersion": "1.26.6, 1.27.0-rc.3",
+              "severity": "HIGH",
+              "title": "golang.org/x/net/dns/dnsmessage: golang.org/x/net/dns/dnsmessage: Denial of Service via invalid DNS record parsing"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "stirling-pdf",
+      "name": "Stirling-PDF",
+      "category": "Utilities & Tools",
+      "image": "stirlingtools/stirling-pdf",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "2.14.3",
+          "fullRef": "stirlingtools/stirling-pdf:2.14.3",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 2,
+            "high": 67,
+            "medium": 779,
+            "low": 137,
+            "fixable": 566,
+            "total": 985
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-45447",
+              "pkg": "libssl3t64",
+              "installedVersion": "3.0.13-0ubuntu3.7",
+              "fixedVersion": "3.0.13-0ubuntu3.11",
+              "severity": "HIGH",
+              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
+            },
+            {
+              "id": "CVE-2026-45447",
+              "pkg": "openssl",
+              "installedVersion": "3.0.13-0ubuntu3.7",
+              "fixedVersion": "3.0.13-0ubuntu3.11",
+              "severity": "HIGH",
+              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
+            },
+            {
+              "id": "GHSA-r7wm-3cxj-wff9",
+              "pkg": "com.fasterxml.jackson.core:jackson-core",
+              "installedVersion": "2.21.2",
+              "fixedVersion": "2.18.8, 2.21.4",
+              "severity": "HIGH",
+              "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)"
+            },
+            {
+              "id": "CVE-2026-54512",
+              "pkg": "com.fasterxml.jackson.core:jackson-databind",
+              "installedVersion": "2.21.2",
+              "fixedVersion": "2.18.8, 3.1.4, 2.21.4",
+              "severity": "HIGH",
+              "title": "jackson-databind: jackson-databind: Arbitrary code execution via PolymorphicTypeValidator bypass"
+            },
+            {
+              "id": "CVE-2026-54513",
+              "pkg": "com.fasterxml.jackson.core:jackson-databind",
+              "installedVersion": "2.21.2",
+              "fixedVersion": "2.18.8, 2.21.4, 3.1.4",
+              "severity": "HIGH",
+              "title": "jackson-databind: Jackson-databind: Security bypass allows arbitrary code execution"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "pocketbase",
+      "name": "PocketBase",
+      "category": "Backend-as-a-Service",
+      "image": "muchobien/pocketbase",
+      "registry": "ghcr.io",
+      "monitoredVersions": [
+        {
+          "tag": "0.40.4",
+          "fullRef": "ghcr.io/muchobien/pocketbase:0.40.4",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 0,
+            "high": 2,
+            "medium": 6,
+            "low": 13,
+            "fixable": 20,
+            "total": 21
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libcrypto3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            },
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libssl3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "linkding",
+      "name": "Linkding",
+      "category": "Bookmarks & Archiving",
+      "image": "sissbruecker/linkding",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "1.47.0",
+          "fullRef": "sissbruecker/linkding:1.47.0",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 4,
+            "high": 262,
+            "medium": 1443,
+            "low": 351,
+            "fixable": 630,
+            "total": 2060
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-53612",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
+            },
+            {
+              "id": "CVE-2026-53613",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+            },
+            {
+              "id": "CVE-2026-53614",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "2.41.5-0+deb13u1",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
+            },
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.41-5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "nginx-proxy-manager",
+      "name": "Nginx Proxy Manager",
+      "category": "Networking & Proxy",
+      "image": "jc21/nginx-proxy-manager",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "2.15.1",
+          "fullRef": "jc21/nginx-proxy-manager:2.15.1",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 18,
+            "high": 591,
+            "medium": 2958,
+            "low": 1228,
+            "fixable": 2581,
+            "total": 4795
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-34355",
+              "pkg": "apache2-utils",
+              "installedVersion": "2.4.67-1~deb13u2",
+              "fixedVersion": "2.4.68-1~deb13u1",
+              "severity": "HIGH",
+              "title": "httpd: Apache HTTP Server: Buffer overflow in mod_proxy_html allows security bypass"
+            },
+            {
+              "id": "CVE-2026-42536",
+              "pkg": "apache2-utils",
+              "installedVersion": "2.4.67-1~deb13u2",
+              "fixedVersion": "2.4.68-1~deb13u1",
+              "severity": "HIGH",
+              "title": "httpd: Apache HTTP Server: Heap-based Buffer Overflow via untrusted content in mod_xml2enc"
+            },
+            {
+              "id": "CVE-2026-44185",
+              "pkg": "apache2-utils",
+              "installedVersion": "2.4.67-1~deb13u2",
+              "fixedVersion": "2.4.68-1~deb13u1",
+              "severity": "HIGH",
+              "title": "httpd: Apache HTTP Server: Buffer Over-read via outbound OCSP requests to attacker-controlled server"
+            },
+            {
+              "id": "CVE-2026-44186",
+              "pkg": "apache2-utils",
+              "installedVersion": "2.4.67-1~deb13u2",
+              "fixedVersion": "2.4.68-1~deb13u1",
+              "severity": "HIGH",
+              "title": "httpd: Apache HTTP Server: Denial of Service in mod_proxy_ftp via attacker-controlled FTP server"
+            },
+            {
+              "id": "CVE-2026-49975",
+              "pkg": "apache2-utils",
+              "installedVersion": "2.4.67-1~deb13u2",
+              "fixedVersion": "2.4.67-1~deb13u3",
+              "severity": "HIGH",
+              "title": "httpd: httpd: HTTP/2 Remote Denial of Service via compression bomb and Slowloris-style attack"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "shlink",
+      "name": "Shlink",
+      "category": "Networking & Shorteners",
+      "image": "shlinkio/shlink",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "5.1.6",
+          "fullRef": "shlinkio/shlink:5.1.6",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "1001",
+            "uidLabel": "1001"
+          },
+          "vulnerabilities": {
+            "critical": 3,
+            "high": 22,
+            "medium": 7,
+            "low": 5,
+            "fixable": 37,
+            "total": 37
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-33630",
+              "pkg": "c-ares",
+              "installedVersion": "1.34.6-r0",
+              "fixedVersion": "1.34.8-r0",
+              "severity": "HIGH",
+              "title": "c-ares: c-ares: Use-after-free / double-free in query-completion handling"
+            },
+            {
+              "id": "CVE-2026-77405",
+              "pkg": "github.com/rabbitmq/amqp091-go",
+              "installedVersion": "v1.12.0",
+              "fixedVersion": "1.13.0",
+              "severity": "CRITICAL",
+              "title": "RabbitMQ amqp091-go is a Go AMQP 0.9.1 client. Prior to 1.13.0, tlsCon ..."
+            },
+            {
+              "id": "CVE-2026-77408",
+              "pkg": "github.com/rabbitmq/amqp091-go",
+              "installedVersion": "v1.12.0",
+              "fixedVersion": "1.13.0",
+              "severity": "CRITICAL",
+              "title": "RabbitMQ amqp091-go is a Go AMQP 0.9.1 client. Prior to 1.13.0, the wr ..."
+            },
+            {
+              "id": "CVE-2026-77411",
+              "pkg": "github.com/rabbitmq/amqp091-go",
+              "installedVersion": "v1.12.0",
+              "fixedVersion": "1.13.0",
+              "severity": "CRITICAL",
+              "title": "RabbitMQ amqp091-go is a Go AMQP 0.9.1 client. Prior to 1.13.0, readLo ..."
+            },
+            {
+              "id": "CVE-2026-77403",
+              "pkg": "github.com/rabbitmq/amqp091-go",
+              "installedVersion": "v1.12.0",
+              "fixedVersion": "1.13.0",
+              "severity": "HIGH",
+              "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via AMQP frame size negotiation"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "homepage",
+      "name": "Homepage Dashboard",
+      "category": "Dashboards & Homelab",
+      "image": "gethomepage/homepage",
+      "registry": "ghcr.io",
+      "monitoredVersions": [
+        {
+          "tag": "v2.4.0",
+          "fullRef": "ghcr.io/gethomepage/homepage:v2.4.0",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 1,
+            "high": 12,
+            "medium": 14,
+            "low": 13,
+            "fixable": 40,
+            "total": 40
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libcrypto3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            },
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libssl3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            },
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+            }
+          ],
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "dozzle",
+      "name": "Dozzle",
+      "category": "Operations & Logs",
+      "image": "amir20/dozzle",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "v11.1.0",
+          "fullRef": "amir20/dozzle:v11.1.0",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "critical": 0,
+            "high": 0,
+            "medium": 0,
+            "low": 0,
+            "fixable": 0,
+            "total": 0
+          },
+          "topCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-20T21:09:19.998Z"
         }
       ],
       "deprecatedVersions": []
