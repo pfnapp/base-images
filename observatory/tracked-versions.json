@@ -8,6 +8,7 @@
     {
       "id": "wordpress-fpm",
       "name": "WordPress (PHP-FPM)",
+      "category": "CMS & Publishing",
       "registry": "docker.io",
       "image": "library/wordpress",
       "tag_pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?-php8\\.3-fpm-alpine$",
@@ -19,6 +20,7 @@
     {
       "id": "uptime-kuma",
       "name": "Uptime Kuma",
+      "category": "Monitoring & Status",
       "registry": "docker.io",
       "image": "louislam/uptime-kuma",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
@@ -30,6 +32,7 @@
     {
       "id": "9router",
       "name": "9Router",
+      "category": "AI Gateways & Proxies",
       "registry": "docker.io",
       "image": "decolua/9router",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
@@ -41,6 +44,7 @@
     {
       "id": "omniroute",
       "name": "OmniRoute",
+      "category": "AI Gateways & Proxies",
       "registry": "docker.io",
       "image": "diegosouzapw/omniroute",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
@@ -52,6 +56,7 @@
     {
       "id": "openclaw",
       "name": "OpenClaw 2",
+      "category": "AI Agents & Automation",
       "registry": "docker.io",
       "image": "openclaw/openclaw",
       "tag_pattern": "^[0-9]{4}\\.[0-9]+\\.[0-9]+$",
@@ -63,11 +68,132 @@
     {
       "id": "hermes-agent",
       "name": "Hermes Agent",
+      "category": "AI Agents & Automation",
       "registry": "docker.io",
       "image": "nousresearch/hermes-agent",
       "tag_pattern": "^v[0-9]{4}\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
         "v2026.9.14"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "vaultwarden",
+      "name": "Vaultwarden (Bitwarden)",
+      "category": "Security & Identity",
+      "registry": "docker.io",
+      "image": "vaultwarden/server",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "1.37.3"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "memos",
+      "name": "Memos",
+      "category": "Knowledge & Notes",
+      "registry": "docker.io",
+      "image": "neosmemo/memos",
+      "tag_pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$",
+      "active_versions": [
+        "0.31.0"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "filebrowser",
+      "name": "File Browser",
+      "category": "Storage & Files",
+      "registry": "docker.io",
+      "image": "filebrowser/filebrowser",
+      "tag_pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "v2.63.23"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "stirling-pdf",
+      "name": "Stirling-PDF",
+      "category": "Utilities & Tools",
+      "registry": "docker.io",
+      "image": "stirlingtools/stirling-pdf",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "2.14.3"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "pocketbase",
+      "name": "PocketBase",
+      "category": "Backend-as-a-Service",
+      "registry": "ghcr.io",
+      "image": "muchobien/pocketbase",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "0.40.4"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "linkding",
+      "name": "Linkding",
+      "category": "Bookmarks & Archiving",
+      "registry": "docker.io",
+      "image": "sissbruecker/linkding",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "1.47.0"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "nginx-proxy-manager",
+      "name": "Nginx Proxy Manager",
+      "category": "Networking & Proxy",
+      "registry": "docker.io",
+      "image": "jc21/nginx-proxy-manager",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "2.15.1"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "shlink",
+      "name": "Shlink",
+      "category": "Networking & Shorteners",
+      "registry": "docker.io",
+      "image": "shlinkio/shlink",
+      "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "5.1.6"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "homepage",
+      "name": "Homepage Dashboard",
+      "category": "Dashboards & Homelab",
+      "registry": "ghcr.io",
+      "image": "gethomepage/homepage",
+      "tag_pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "v2.4.0"
+      ],
+      "deprecated_versions": []
+    },
+    {
+      "id": "dozzle",
+      "name": "Dozzle",
+      "category": "Operations & Logs",
+      "registry": "docker.io",
+      "image": "amir20/dozzle",
+      "tag_pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "active_versions": [
+        "v11.1.0"
       ],
       "deprecated_versions": []
     }

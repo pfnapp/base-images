@@ -255,6 +255,7 @@ async function main() {
     const appEntry = {
       id: app.id,
       name: app.name,
+      category: app.category || 'General',
       image: app.image,
       registry: app.registry,
       monitoredVersions: [],
@@ -264,7 +265,7 @@ async function main() {
     // 3. Scan each of the active versions
     for (let i = 0; i < app.active_versions.length; i++) {
       const tag = app.active_versions[i];
-      const fullRef = `${app.image}:${tag}`;
+      const fullRef = app.registry === 'ghcr.io' && !app.image.startsWith('ghcr.io/') ? `ghcr.io/${app.image}:${tag}` : `${app.image}:${tag}`;
       const lifecycle = getLifecycleStatus(i, app.active_versions.length);
 
       const trivyResult = runTrivyScan(fullRef);
@@ -342,16 +343,17 @@ function generateMarkdownReport(data) {
 
   md += '---\n\n';
   md += '## 📋 Active Support Window (Max 5 Versions per Application)\n\n';
-  md += '| Application | Monitored Version | Lifecycle Status | Run As Root? | Configured UID | Vuln (C / H / M / L) | Fixable | Recommendation / Advisory |\n';
-  md += '| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |\n';
+  md += '| Application | Category | Monitored Version | Lifecycle Status | Run As Root? | Configured UID | Vuln (C / H / M / L) | Fixable | Recommendation / Advisory |\n';
+  md += '| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |\n';
 
   for (const app of applications) {
     let firstRow = true;
     for (const v of app.monitoredVersions) {
       const appNameCol = firstRow ? `**${app.name}**` : '';
+      const categoryCol = firstRow ? `_${app.category}_` : '';
       const rootCol = v.security.runAsRoot ? '⚠️ **YES**' : '✅ **NO**';
       const vulnCol = `${v.vulnerabilities.critical} / ${v.vulnerabilities.high} / ${v.vulnerabilities.medium} / ${v.vulnerabilities.low}`;
-      md += `| ${appNameCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | \`${v.security.uidLabel}\` | ${vulnCol} | ${v.vulnerabilities.fixable} | ${v.lifecycleAdvice} |\n`;
+      md += `| ${appNameCol} | ${categoryCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | \`${v.security.uidLabel}\` | ${vulnCol} | ${v.vulnerabilities.fixable} | ${v.lifecycleAdvice} |\n`;
       firstRow = false;
     }
   }
