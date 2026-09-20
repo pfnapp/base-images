@@ -83,7 +83,7 @@ All images are ultra-lean, hardened Alpine Linux containers built for rapid cold
 | **Vite Static SPA** | Alpine + Nginx | **~10 MB** | **19.1 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/vite:alpine` | `.../vite:latest` |
 | **NestJS 11/12** | Node.js 22 | **~63 MB** | **181 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine` | `.../nestjs:node22-alpine` |
 | **NestJS 10/11** | Node.js 20 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine` | `.../nestjs:node20-alpine` |
-| **NestJS 18** | Node.js 18 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/frameworks/nestjs:18-alpine` |
+| **NestJS 10** | Node.js 18 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/frameworks/nestjs:18-alpine` | `.../nestjs:node18-alpine` |
 
 ---
 
@@ -97,9 +97,9 @@ docker pull ghcr.io/pfnapp/base/languages/php:8.4-alpine
 docker pull ghcr.io/pfnapp/base/languages/php:8.4
 docker pull ghcr.io/pfnapp/base/languages/php:latest
 
-# Pull Laravel 8.4 Alpine Framework Image
+# Pull Laravel Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
-docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4
 docker pull ghcr.io/pfnapp/base/frameworks/laravel:latest
 
 # Pull Node.js 22 Alpine Base Image
@@ -117,18 +117,18 @@ docker pull ghcr.io/pfnapp/base/languages/python:3.12-slim
 docker pull ghcr.io/pfnapp/base/languages/python:3.12
 docker pull ghcr.io/pfnapp/base/languages/python:latest
 
-# Pull Next.js 22 Alpine Framework Image
+# Pull Next.js Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/nextjs:node22-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine
-docker pull ghcr.io/pfnapp/base/frameworks/nextjs:22
 docker pull ghcr.io/pfnapp/base/frameworks/nextjs:latest
 
 # Pull Vite Alpine Framework Image
 docker pull ghcr.io/pfnapp/base/frameworks/vite:alpine
 docker pull ghcr.io/pfnapp/base/frameworks/vite:latest
 
-# Pull NestJS 22 Alpine Framework Image
+# Pull NestJS Alpine Framework Image
+docker pull ghcr.io/pfnapp/base/frameworks/nestjs:node22-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine
-docker pull ghcr.io/pfnapp/base/frameworks/nestjs:22
 docker pull ghcr.io/pfnapp/base/frameworks/nestjs:latest
 ```
 
