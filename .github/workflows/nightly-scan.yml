@@ -3,34 +3,39 @@ name: Nightly Security Scan
 on:
   schedule:
     - cron: '0 1 * * *'   # 01:00 UTC every night
-  workflow_dispatch:        # manual trigger
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: 'Force refresh Trivy cache (--refresh)'
+        type: boolean
+        default: false
 
 permissions:
-  contents: write           # needed to push to gh-pages
+  contents: write
+  packages: read
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    name: Scan & Publish to gh-pages
+    runs-on: ubuntu-24.04
+
     steps:
       - name: Checkout main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install Aqua Trivy
-        run: |
-          sudo apt-get install -y wget apt-transport-https gnupg
-          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-          echo "deb https://aquasecurity.github.io/trivy-repo/deb generic main" \
-            | sudo tee /etc/apt/sources.list.d/trivy.list
-          sudo apt-get update -q
-          sudo apt-get install -y trivy
+        uses: aquasecurity/setup-trivy@v0.3.1
+        with:
+          cache: true
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -40,39 +45,75 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run upstream observatory scanner
-        run: node scripts/upstream-observatory.js
+        run: |
+          if [ "${{ inputs.refresh }}" = "true" ]; then
+            node scripts/upstream-observatory.js --refresh
+          else
+            node scripts/upstream-observatory.js
+          fi
 
       - name: Run base image scanner
-        run: node scripts/base-image-scanner.js
+        run: |
+          if [ "${{ inputs.refresh }}" = "true" ]; then
+            node scripts/base-image-scanner.js --refresh
+          else
+            node scripts/base-image-scanner.js
+          fi
 
-      # ── Checkout gh-pages into a subdirectory ──────────────────────────────
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
+      - name: Append report to job summary
+        if: always() && hashFiles('REPORT.md') != ''
+        run: cat REPORT.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload scan artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-reports
+          retention-days: 30
+          path: |
+            REPORT.md
+            report.json
+            base-report.json
+            observatory.json
+
+      # ── Commit observatory.json + REPORT.md back to main ──────────────────
+      # Only these two files belong in main (config state + markdown audit).
+      # report.json and base-report.json go to gh-pages only.
+      - name: Commit observatory state to main
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain REPORT.md observatory.json)" ]; then
+            git add REPORT.md observatory.json
+            git commit -m "chore(observatory): nightly upstream security report [skip ci]"
+            git push origin main
+          else
+            echo "No changes in observatory state, skipping commit."
+          fi
+
+      # ── Checkout gh-pages into a subdirectory ─────────────────────────────
+      - name: Checkout gh-pages
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
           path: gh-pages-out
           fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Copy dashboard HTML ────────────────────────────────────────────────
-      - name: Copy dashboard files
+      # ── Sync all publish artifacts to gh-pages ────────────────────────────
+      - name: Sync dashboard & reports to gh-pages
         run: |
-          cp docs/index.html gh-pages-out/index.html
-          cp docs/diff.html  gh-pages-out/diff.html
+          cp docs/index.html    gh-pages-out/index.html
+          cp docs/diff.html     gh-pages-out/diff.html
+          cp report.json        gh-pages-out/report.json
+          cp base-report.json   gh-pages-out/base-report.json 2>/dev/null || true
 
-      # ── Copy top-level JSON reports ────────────────────────────────────────
-      - name: Copy JSON reports
-        run: |
-          cp report.json      gh-pages-out/report.json
-          cp base-report.json gh-pages-out/base-report.json 2>/dev/null || true
-
-      # ── Copy scan detail files (full CVE lists per image/version) ──────────
-      - name: Copy scan detail files
+      - name: Sync scan detail files to gh-pages
         run: |
           if [ -d scan-details ]; then
             rsync -a --delete scan-details/ gh-pages-out/scans/
           fi
 
-      # ── Commit & push to gh-pages ──────────────────────────────────────────
       - name: Commit and push to gh-pages
         run: |
           cd gh-pages-out
@@ -80,7 +121,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "Nothing changed, skipping commit."
+            echo "Nothing changed in gh-pages, skipping commit."
           else
             SCAN_DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
             git commit -m "chore: nightly scan — ${SCAN_DATE}"
