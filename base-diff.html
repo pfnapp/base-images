@@ -264,6 +264,23 @@
 
     /* ── Notice ──────────────────────────────────────────────── */
     .notice-wrap { padding: 0 24px 10px; }
+
+    /* ── EOL banner ──────────────────────────────────────────── */
+    #eol-banner {
+      margin: 0 24px 12px;
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 14px; border-radius: 6px;
+      border: 1px solid #da363350; background: #da363312;
+    }
+    #eol-banner.warn    { border-color: #9e6a0350; background: #d2992212; }
+    #eol-banner.lts     { border-color: #23863350; background: #23863308; }
+    .eol-banner-icon    { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .eol-banner-body    { flex: 1; min-width: 0; }
+    .eol-banner-title   { font-size: 0.75rem; font-weight: 700; color: var(--red); margin-bottom: 3px; }
+    #eol-banner.warn .eol-banner-title { color: var(--orange); }
+    #eol-banner.lts  .eol-banner-title { color: var(--green); }
+    .eol-banner-desc    { font-size: 0.70rem; color: var(--muted); line-height: 1.55; }
+    .eol-banner-desc strong { color: var(--text); }
     .notice-box {
       padding: 9px 14px;
       background: var(--blue-dim); border: 1px solid #1f6feb40;
@@ -305,7 +322,8 @@
     /* ── Responsive ──────────────────────────────────────────── */
     @media (max-width: 640px) {
       .header { padding: 12px 16px; }
-      .summary-bar, .toolbar, .main, .notice-wrap, .tabs-wrap, .scanned-at { padding-left: 16px; padding-right: 16px; }
+      .summary-bar, .toolbar, .main, .notice-wrap, .tabs-wrap, .scanned-at, #eol-banner { padding-left: 16px; padding-right: 16px; }
+      #eol-banner { margin-left: 0; margin-right: 0; }
       .cve-ver-chip { display: none; }
       .cve-num { display: none; }
     }
@@ -350,6 +368,9 @@
   <div class="tabs-wrap">
     <div class="tabs" id="version-tabs"></div>
   </div>
+
+  <!-- EOL Banner -->
+  <div class="hidden" id="eol-banner"></div>
 
   <!-- Scanned at -->
   <div class="scanned-at" id="scanned-at"></div>
@@ -594,6 +615,63 @@
       `${filtered.length} CVE${filtered.length !== 1 ? 's' : ''} shown`;
   }
 
+  /* ── EOL helpers (same logic as index.html) ─────────────── */
+  function fmtEolDate(dateStr) {
+    if (!dateStr) return null;
+    try { return new Date(dateStr).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }); }
+    catch { return dateStr; }
+  }
+  function eolClass(eol) {
+    if (!eol || !eol.date) return 'unknown';
+    if (eol.isEol) return 'eol';
+    const days = (new Date(eol.date) - Date.now()) / 86400000;
+    return days < 180 ? 'soon' : 'ok';
+  }
+
+  /* ── EOL banner element ──────────────────────────────────── */
+  function renderEolBanner(ver) {
+    const eol = ver.eol;
+    const el  = document.getElementById('eol-banner');
+    if (!el) return;
+    if (!eol || !eol.date) { el.className = 'hidden'; el.innerHTML = ''; return; }
+
+    const cls    = eolClass(eol);
+    const label  = fmtEolDate(eol.date);
+    const patch  = eol.latestPatch ? ` Latest upstream: <strong>${esc(eol.latestPatch)}</strong>.` : '';
+    const ltsStr = eol.isLts ? ` LTS release.` : '';
+
+    if (cls === 'eol') {
+      el.className = 'eol-banner';
+      el.innerHTML = `<span class="eol-banner-icon">⛔</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title">End of Life — Use at Your Own Risk</div>
+          <div class="eol-banner-desc">
+            This version reached End of Life on <strong>${label}</strong> and no longer receives security patches.
+            Even if this scan shows zero CVEs, new vulnerabilities will not be fixed by upstream.${patch}
+            <br>Migrate to a supported version.
+          </div>
+        </div>`;
+    } else if (cls === 'soon') {
+      el.className = 'eol-banner warn';
+      el.innerHTML = `<span class="eol-banner-icon">⚠</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title">Approaching End of Life · ${label}</div>
+          <div class="eol-banner-desc">
+            Security patches will stop on <strong>${label}</strong>. Plan your migration before that date.${patch}
+          </div>
+        </div>`;
+    } else if (eol.isLts) {
+      el.className = 'eol-banner lts';
+      el.innerHTML = `<span class="eol-banner-icon">🔒</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title">Long-Term Support · EOL ${label}</div>
+          <div class="eol-banner-desc">${ltsStr} Security support until <strong>${label}</strong>.${patch}</div>
+        </div>`;
+    } else {
+      el.className = 'hidden'; el.innerHTML = '';
+    }
+  }
+
   /* ── Update summary bar for current tag ──────────────────── */
   function renderSummary(ver) {
     const sys = ver.vulnerabilities?.system || {};
@@ -606,9 +684,19 @@
     const med    = (sys.medium||0)   + (app.medium||0);
     const fix    = (sys.fixable||0)  + (app.fixable||0);
 
-    let html = '';
+    // EOL pill in summary
+    let eolPill = '';
+    if (ver.eol?.date) {
+      const cls = eolClass(ver.eol);
+      const lbl = fmtEolDate(ver.eol.date);
+      const pillCls = cls === 'eol' ? 'red' : cls === 'soon' ? 'orange' : 'green';
+      const icon    = cls === 'eol' ? '⛔' : cls === 'soon' ? '⚠' : (ver.eol.isLts ? '🔒 LTS' : '✓');
+      eolPill = `<div class="summary-pill ${pillCls}"><span>${icon}</span><span>EOL ${lbl}</span></div>`;
+    }
+
+    let html = eolPill;
     if (tot === 0) {
-      html = `<div class="summary-pill green"><span class="snum green">✓</span><span>No CVEs found</span></div>`;
+      html += `<div class="summary-pill green"><span class="snum green">✓</span><span>No CVEs found</span></div>`;
     } else {
       html += `<div class="summary-pill gray"><span class="snum gray">${tot.toLocaleString()}</span><span>total CVEs</span></div>`;
       if (crit > 0) html += `<div class="summary-pill red"><span class="snum red">${crit}</span><span>critical</span></div>`;
@@ -632,6 +720,7 @@
       '<div style="padding:32px 0;text-align:center;color:var(--muted-2);font-size:.80rem;">Loading CVEs…</div>';
 
     renderSummary(currentVersion);
+    renderEolBanner(currentVersion);
 
     // scanned-at
     const sa = document.getElementById('scanned-at');

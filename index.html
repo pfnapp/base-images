@@ -385,6 +385,45 @@
       border: 1px solid #9e6a0340; border-radius: 10px; padding: 1px 7px; width: fit-content;
     }
 
+    /* ── EOL banner (modal) ───────────────────────────────────── */
+    .eol-banner {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 14px; border-radius: 6px; margin-bottom: 14px;
+      border: 1px solid #da363350; background: #da363312;
+    }
+    .eol-banner.warn {
+      border-color: #9e6a0350; background: #d2992212;
+    }
+    .eol-banner-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .eol-banner-body { flex: 1; min-width: 0; }
+    .eol-banner-title {
+      font-size: 0.75rem; font-weight: 700; color: var(--red); margin-bottom: 3px;
+    }
+    .eol-banner.warn .eol-banner-title { color: var(--orange); }
+    .eol-banner-desc {
+      font-size: 0.70rem; color: var(--muted); line-height: 1.55;
+    }
+    .eol-banner-desc strong { color: var(--text); }
+    .eol-date-chip {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.64rem; font-weight: 600; padding: 1px 7px;
+      border-radius: 10px; font-family: ui-monospace, SFMono-Regular, monospace;
+    }
+    .eol-date-chip.eol     { background: #da363325; color: var(--red);    border: 1px solid #da363345; }
+    .eol-date-chip.soon    { background: #d2992225; color: var(--orange); border: 1px solid #9e6a0345; }
+    .eol-date-chip.ok      { background: #23863620; color: var(--green);  border: 1px solid #23863640; }
+    .eol-date-chip.unknown { background: var(--border); color: var(--muted-2); border: 1px solid var(--border-2); }
+
+    /* ── EOL strip on card ───────────────────────────────────── */
+    .card-eol-strip {
+      padding: 4px 12px; font-size: 0.64rem;
+      display: flex; align-items: center; gap: 5px;
+      border-top: 1px solid var(--border);
+    }
+    .card-eol-strip.is-eol  { background: #da36330d; color: var(--red);    }
+    .card-eol-strip.is-soon { background: #d299220d; color: var(--orange); }
+    .card-eol-strip.is-lts  { background: #23863608; color: var(--muted);  }
+
     /* Sections in modal */
     .modal-section { margin-bottom: 14px; }
     .modal-section-title {
@@ -760,6 +799,93 @@ npx serve .
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  /* ── EOL helpers ─────────────────────────────────────────── */
+  function fmtEolDate(dateStr) {
+    if (!dateStr) return null;
+    try {
+      return new Date(dateStr).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    } catch { return dateStr; }
+  }
+
+  // Returns: 'eol' | 'soon' | 'ok' | 'unknown'
+  function eolClass(eol) {
+    if (!eol || !eol.date) return 'unknown';
+    if (eol.isEol) return 'eol';
+    const daysLeft = (new Date(eol.date) - Date.now()) / 86400000;
+    if (daysLeft < 180) return 'soon';
+    return 'ok';
+  }
+
+  // Small inline chip: "EOL Apr 2025" / "EOL in Jan 2027" / "LTS · EOL Apr 2029"
+  function eolChip(eol) {
+    if (!eol) return '';
+    const cls   = eolClass(eol);
+    const label = fmtEolDate(eol.date);
+    if (cls === 'eol')     return `<span class="eol-date-chip eol">⛔ EOL ${label || ''}</span>`;
+    if (cls === 'soon')    return `<span class="eol-date-chip soon">⚠ EOL ${label}</span>`;
+    if (cls === 'ok') {
+      const prefix = eol.isLts ? 'LTS · ' : '';
+      return `<span class="eol-date-chip ok">${prefix}EOL ${label}</span>`;
+    }
+    return '';
+  }
+
+  // Card strip: thin bar at bottom of card
+  function eolCardStrip(eol) {
+    if (!eol || !eol.date) return '';
+    const cls = eolClass(eol);
+    if (cls === 'eol')  return `<div class="card-eol-strip is-eol">⛔ End of Life${eol.date ? ' · ' + fmtEolDate(eol.date) : ''}</div>`;
+    if (cls === 'soon') return `<div class="card-eol-strip is-soon">⚠ EOL soon · ${fmtEolDate(eol.date)}</div>`;
+    if (eol.isLts)      return `<div class="card-eol-strip is-lts">🔒 LTS · EOL ${fmtEolDate(eol.date)}</div>`;
+    return '';
+  }
+
+  // Full banner for modal
+  function eolModalBanner(eol, name) {
+    if (!eol || !eol.date) return '';
+    const cls  = eolClass(eol);
+    if (cls === 'ok' && !eol.isLts) return ''; // still healthy, no banner needed
+    const dateLabel = fmtEolDate(eol.date);
+    const patch = eol.latestPatch ? ` Latest upstream patch: <strong>${escHtml(eol.latestPatch)}</strong>.` : '';
+    if (cls === 'eol') {
+      return `<div class="eol-banner">
+        <span class="eol-banner-icon">⛔</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title">End of Life — Use at Your Own Risk</div>
+          <div class="eol-banner-desc">
+            <strong>${escHtml(name)}</strong> reached End of Life on <strong>${dateLabel}</strong> and no longer receives security patches from upstream.
+            Even if the CVE scanner shows zero findings today, new vulnerabilities will not be fixed.${patch}
+            <br>Consider migrating to a supported version.
+          </div>
+        </div>
+      </div>`;
+    }
+    if (cls === 'soon') {
+      return `<div class="eol-banner warn">
+        <span class="eol-banner-icon">⚠</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title">Approaching End of Life</div>
+          <div class="eol-banner-desc">
+            <strong>${escHtml(name)}</strong> reaches End of Life on <strong>${dateLabel}</strong>.
+            Plan your migration before security patches stop.${patch}
+          </div>
+        </div>
+      </div>`;
+    }
+    if (eol.isLts) {
+      return `<div class="eol-banner warn" style="border-color:#23863350;background:#23863308;">
+        <span class="eol-banner-icon">🔒</span>
+        <div class="eol-banner-body">
+          <div class="eol-banner-title" style="color:var(--green)">Long-Term Support</div>
+          <div class="eol-banner-desc">
+            <strong>${escHtml(name)}</strong> is an LTS release. Security support until <strong>${dateLabel}</strong>.${patch}
+          </div>
+        </div>
+      </div>`;
+    }
+    return '';
+  }
+
   /* ── Helpers ─────────────────────────────────────────────── */
   function numEl(n, cls) {
     return `<span class="num ${n === 0 ? 'zero' : cls}">${n}</span>`;
@@ -913,6 +1039,7 @@ npx serve .
       <span class="version-tag">${escHtml(ver.tag)}</span>
       ${lifecycleBadgeEl(ver.lifecycleStatus, ver.lifecycleBadge||'')}
       <span class="type-tag ${typeCls}">${typeLabel}</span>
+      ${!isApp ? eolChip(ver.eol) : ''}
     </div>
   </div>
 
@@ -924,6 +1051,8 @@ npx serve .
     <span>${reductionHint ? '🎯 ' + reductionHint : '<span style="opacity:.5">upstream CVEs shown</span>'}</span>
     <span class="hint-icon">›</span>
   </div>
+
+  ${!isApp ? eolCardStrip(ver.eol) : ''}
 
 </div>`;
   }
@@ -964,7 +1093,21 @@ npx serve .
         ? `<div class="root-warning">⚠ Runs as root (UID ${escHtml(ver.security.uidLabel||'0')})</div>`
         : `<div class="nonroot-badge">✓ Non-root · UID ${escHtml(String(ver.security.runAsUser||'10001'))}</div>`;
     }
+    // EOL metadata row (base images only)
+    if (!isApp && ver.eol?.date) {
+      const eolCls  = eolClass(ver.eol);
+      const eolLbl  = fmtEolDate(ver.eol.date);
+      const ltsInfo = ver.eol.isLts ? ` · LTS since ${fmtEolDate(ver.eol.ltsFrom)}` : '';
+      const patchInfo = ver.eol.latestPatch ? ` · Latest upstream: <strong>${escHtml(ver.eol.latestPatch)}</strong>` : '';
+      registryHtml += `<div style="margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span class="eol-date-chip ${eolCls}">EOL ${eolLbl}</span>
+        <span style="font-size:.68rem;color:var(--muted-2)">via endoflife.date${ltsInfo}${patchInfo}</span>
+      </div>`;
+    }
     registryHtml += `</div>`;
+
+    /* ── EOL warning banner (base images only) ── */
+    const eolBannerHtml = !isApp ? eolModalBanner(ver.eol, `${item.name} ${ver.versionLabel || ver.tag}`) : '';
 
     /* ── Upstream CVE table ── */
     const upstreamHtml = `
@@ -1075,7 +1218,7 @@ npx serve .
       </div>`;
     }
 
-    return registryHtml + upstreamHtml + pfnHtml + reductionHtml + topCvesHtml + compatHtml;
+    return eolBannerHtml + registryHtml + upstreamHtml + pfnHtml + reductionHtml + topCvesHtml + compatHtml;
   }
 
   /* ── Open modal ──────────────────────────────────────────── */
