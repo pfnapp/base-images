@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PFNApp Security Dashboard</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d1117;
+      --card-bg:   #161b22;
+      --border:    #21262d;
+      --border-2:  #30363d;
+      --text:      #e6edf3;
+      --muted:     #8b949e;
+      --muted-2:   #6e7681;
+      --blue:      #58a6ff;
+      --blue-dim:  #1f6feb33;
+      --red:       #f85149;
+      --red-dim:   #f8514920;
+      --orange:    #d29922;
+      --orange-dim:#d2992220;
+      --green:     #3fb950;
+      --green-dim: #3fb95020;
+      --yellow:    #e3b341;
+      --purple:    #bc8cff;
+      --radius:    8px;
+      --radius-sm: 5px;
+    }
+
+    html { font-size: 14px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+                   Helvetica, Arial, sans-serif, "Apple Color Emoji";
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Scrollbar ──────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    .header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-title h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .shield-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--blue), #1f6feb);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .meta-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .meta-badge svg { flex-shrink: 0; }
+    .pulse {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 var(--green);
+      animation: pulse-anim 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-anim {
+      0%   { box-shadow: 0 0 0 0 rgba(63,185,80,.5); }
+      70%  { box-shadow: 0 0 0 6px rgba(63,185,80,0); }
+      100% { box-shadow: 0 0 0 0 rgba(63,185,80,0); }
+    }
+
+    /* ── Stats Bar ───────────────────────────────────────────── */
+    .stats-bar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 14px 24px 0;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .stat-pill .stat-num {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .stat-pill.blue  { border-color: #1f6feb; background: var(--blue-dim); }
+    .stat-pill.red   { border-color: #da3633; background: var(--red-dim);  }
+    .stat-pill.green { border-color: #238636; background: var(--green-dim);}
+    .stat-pill.orange{ border-color: #9e6a03; background: var(--orange-dim);}
+    .stat-num.red    { color: var(--red); }
+    .stat-num.green  { color: var(--green); }
+    .stat-num.blue   { color: var(--blue); }
+    .stat-num.orange { color: var(--orange); }
+
+    /* ── Filter Tabs ─────────────────────────────────────────── */
+    .filter-bar {
+      max-width: 1400px;
+      margin: 16px auto 0;
+      padding: 0 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0;
+      min-width: max-content;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-family: inherit;
+      padding: 8px 14px 10px;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s;
+      margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--text);
+      border-bottom-color: var(--blue);
+      font-weight: 600;
+    }
+    .tab-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--border);
+      border-radius: 10px;
+      font-size: 0.7rem;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      margin-left: 5px;
+    }
+
+    /* ── Main Content ────────────────────────────────────────── */
+    .main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 24px 48px;
+    }
+
+    /* ── Search & Sort Bar ───────────────────────────────────── */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 360px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-size: 0.82rem;
+      font-family: inherit;
+      padding: 7px 10px 7px 32px;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .search-input::placeholder { color: var(--muted-2); }
+    .search-input:focus { border-color: var(--blue); }
+    .sort-select {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-family: inherit;
+      padding: 7px 10px;
+      outline: none;
+      cursor: pointer;
+      transition: border-color .15s;
+    }
+    .sort-select:focus { border-color: var(--blue); }
+    .results-count {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Cards Grid ──────────────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── Card ────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .2s, transform .15s, box-shadow .2s;
+    }
+    .card:hover {
+      border-color: var(--border-2);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(0,0,0,.4);
+    }
+    .card.posture-critical { border-top: 3px solid var(--red); }
+    .card.posture-high     { border-top: 3px solid var(--orange); }
+    .card.posture-medium   { border-top: 3px solid var(--yellow); }
+    .card.posture-low,
+    .card.posture-clean    { border-top: 3px solid var(--green); }
+    .card.posture-noncompliant { border-top: 3px solid var(--yellow); }
+
+    /* Card Header */
+    .card-header {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .card-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .posture-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .posture-badge.critical { background: var(--red-dim);    color: var(--red);    border: 1px solid #da363355; }
+    .posture-badge.high     { background: var(--orange-dim); color: var(--orange); border: 1px solid #9e6a0355; }
+    .posture-badge.medium   { background: #e3b34120;         color: var(--yellow); border: 1px solid #9e6a0333; }
+    .posture-badge.clean    { background: var(--green-dim);  color: var(--green);  border: 1px solid #23863655; }
+    .posture-badge.noncompliant { background: #e3b34115; color: var(--yellow); border: 1px solid #9e6a0333; }
+
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .version-tag {
+      font-size: 0.75rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--border);
+      border: 1px solid var(--border-2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--text);
+    }
+    .lifecycle-badge {
+      font-size: 0.7rem;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .lifecycle-badge.latest    { background: #23863620; color: var(--green); border: 1px solid #23863650; }
+    .lifecycle-badge.supported { background: #1f6feb20; color: var(--blue);  border: 1px solid #1f6feb50; }
+    .lifecycle-badge.eol       { background: #da363320; color: var(--red);   border: 1px solid #da363350; }
+    .lifecycle-badge.deprecated{ background: var(--border); color: var(--muted); border: 1px solid var(--border-2); }
+
+    .category-badge {
+      font-size: 0.68rem;
+      padding: 1px 7px;
+      background: var(--border);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+
+    /* Card Image / Registry Row */
+    .registry-row {
+      padding: 8px 16px;
+      background: #0d111780;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .registry-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+    }
+    .registry-label {
+      color: var(--muted-2);
+      min-width: 64px;
+      font-weight: 500;
+    }
+    .registry-ref {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      color: var(--muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .registry-ref.pfn { color: var(--blue); }
+    .root-warning {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      color: var(--orange);
+      background: var(--orange-dim);
+      border: 1px solid #9e6a0340;
+      border-radius: 10px;
+      padding: 1px 7px;
+      margin-top: 2px;
+      width: fit-content;
+    }
+
+    /* Card Body */
+    .card-body { padding: 12px 16px; flex: 1; }
+
+    /* CVE Section */
+    .cve-section { margin-bottom: 10px; }
+    .cve-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted-2);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cve-section-title .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot.upstream { background: var(--muted-2); }
+    .dot.pfn      { background: var(--blue); }
+
+    .cve-table-wrap { overflow-x: auto; }
+    .cve-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+    }
+    .cve-table th {
+      color: var(--muted-2);
+      font-weight: 600;
+      text-align: left;
+      padding: 3px 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cve-table th:first-child { padding-left: 0; }
+    .cve-table th:not(:first-child) { text-align: center; }
+    .cve-table td {
+      padding: 4px 6px;
+      vertical-align: middle;
+    }
+    .cve-table td:first-child { padding-left: 0; color: var(--muted); font-size: 0.7rem; }
+    .cve-table td:not(:first-child) { text-align: center; }
+    .cve-table tr + tr td { border-top: 1px solid var(--border); }
+
+    .num { font-weight: 700; font-size: 0.82rem; }
+    .num.crit  { color: var(--red); }
+    .num.high  { color: var(--orange); }
+    .num.med   { color: var(--yellow); }
+    .num.low   { color: var(--muted); }
+    .num.zero  { color: var(--muted-2); opacity: .5; }
+    .num.fix   { color: var(--blue); }
+    .num.tot   { color: var(--text); }
+
+    .pfn-pending {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted-2);
+      font-size: 0.75rem;
+      padding: 8px 10px;
+      background: var(--border);
+      border: 1px dashed var(--border-2);
+      border-radius: var(--radius-sm);
+      margin-top: 2px;
+    }
+    .spin {
+      display: inline-block;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 10px 0;
+    }
+
+    /* Reduction row */
+    .reduction-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding: 4px 0;
+    }
+    .reduction-row .reduction-val {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--green);
+    }
+    .reduction-row .reduction-val.pending { color: var(--muted-2); }
+
+    /* Card Footer – Top CVEs collapsible */
+    .card-footer {
+      border-top: 1px solid var(--border);
+    }
+    .collapsible-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.75rem;
+      cursor: pointer;
+      padding: 8px 16px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: color .15s, background .15s;
+    }
+    .collapsible-btn:hover {
+      color: var(--text);
+      background: var(--border);
+    }
+    .collapsible-btn .chevron {
+      transition: transform .2s;
+      flex-shrink: 0;
+    }
+    .collapsible-btn.open .chevron { transform: rotate(180deg); }
+    .cve-list {
+      display: none;
+      padding: 0 16px 12px;
+    }
+    .cve-list.open { display: block; }
+    .cve-entry {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.72rem;
+    }
+    .cve-entry:last-child { border-bottom: none; }
+    .cve-id-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+    .cve-id {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 0.7rem;
+    }
+    .cve-id.crit  { color: var(--red); }
+    .cve-id.high  { color: var(--orange); }
+    .cve-id.med   { color: var(--yellow); }
+    .cve-id.low   { color: var(--muted); }
+    .cve-pkg {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--border);
+      padding: 0 4px;
+      border-radius: 3px;
+      color: var(--muted);
+      max-width: 140px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .sev-pill {
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 0 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .sev-pill.CRITICAL { background: var(--red-dim);    color: var(--red);    }
+    .sev-pill.HIGH     { background: var(--orange-dim); color: var(--orange); }
+    .sev-pill.MEDIUM   { background: #e3b34120;         color: var(--yellow); }
+    .sev-pill.LOW      { background: var(--border);     color: var(--muted);  }
+    .cve-title {
+      color: var(--muted);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    /* ── Empty / Error / Loading states ─────────────────────── */
+    .state-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .state-box .state-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .state-box h2 { font-size: 1rem; color: var(--text); margin-bottom: 8px; }
+    .state-box p { font-size: 0.82rem; line-height: 1.6; }
+    .state-box code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--border);
+      border: 1px solid var(--border-2);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.78rem;
+      color: var(--green);
+    }
+    .state-box pre {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--border);
+      border: 1px solid var(--border-2);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 0.78rem;
+      color: var(--green);
+      text-align: left;
+      overflow-x: auto;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+    .loading-spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    .no-results {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 0.72rem;
+      color: var(--muted-2);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .header { padding: 14px 16px 12px; }
+      .stats-bar { padding: 12px 16px 0; gap: 8px; }
+      .filter-bar { padding: 0 16px; }
+      .main { padding: 16px 16px 40px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .header-title h1 { font-size: 1rem; }
+      .stat-pill { font-size: 0.72rem; padding: 5px 10px; }
+      .stat-pill .stat-num { font-size: 0.9rem; }
+    }
+    @media (max-width: 900px) {
+      .cards-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+    }
+
+    /* ── Utility ─────────────────────────────────────────────── */
+    .hidden { display: none !important; }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────── -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="header-title">
+        <div class="shield-icon">🛡️</div>
+        <h1>PFNApp Security Dashboard</h1>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <div class="meta-badge">
+          <div class="pulse"></div>
+          <span id="last-scan-text">Loading…</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-meta" id="header-meta">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</header>
+
+<!-- ── Stats Bar ────────────────────────────────────────────────── -->
+<div class="stats-bar" id="stats-bar">
+  <div class="stat-pill blue">
+    <span class="stat-num blue" id="stat-apps">–</span>
+    <span>apps monitored</span>
+  </div>
+  <div class="stat-pill blue">
+    <span class="stat-num blue" id="stat-versions">–</span>
+    <span>versions scanned</span>
+  </div>
+  <div class="stat-pill red">
+    <span>🔴</span>
+    <span class="stat-num red" id="stat-critical">–</span>
+    <span>with Critical App CVE</span>
+  </div>
+  <div class="stat-pill orange">
+    <span>🟠</span>
+    <span class="stat-num orange" id="stat-high">–</span>
+    <span>with High App CVE</span>
+  </div>
+  <div class="stat-pill green">
+    <span>✅</span>
+    <span class="stat-num green" id="stat-clean">–</span>
+    <span>no App CVEs</span>
+  </div>
+</div>
+
+<!-- ── Filter Tabs ───────────────────────────────────────────────── -->
+<div class="filter-bar" id="filter-bar">
+  <div class="filter-tabs" id="filter-tabs">
+    <!-- injected by JS -->
+  </div>
+</div>
+
+<!-- ── Main ─────────────────────────────────────────────────────── -->
+<main class="main" id="main-content">
+  <!-- Loading state -->
+  <div class="state-box" id="loading-state">
+    <div class="loading-spinner"></div>
+    <h2>Loading security data…</h2>
+    <p>Fetching <code>report.json</code></p>
+  </div>
+
+  <!-- Error state (hidden by default) -->
+  <div class="state-box hidden" id="error-state">
+    <div class="state-icon">⚠️</div>
+    <h2>Could not load report.json</h2>
+    <p>
+      This dashboard fetches <code>../report.json</code> via <code>fetch()</code>, which
+      requires an HTTP server. Browsers block <code>file://</code> requests for security reasons.
+    </p>
+    <p style="margin-top:10px;">
+      To preview locally, run a simple HTTP server from the repo root:
+    </p>
+    <pre># Python 3
+python3 -m http.server 8080
+
+# Node.js (npx)
+npx serve .
+
+# Then open:
+# http://localhost:8080/docs/</pre>
+    <p style="margin-top:12px;font-size:0.75rem;">
+      On GitHub Pages the dashboard loads automatically — no setup needed.
+    </p>
+  </div>
+
+  <!-- Dashboard content (hidden until data loaded) -->
+  <div class="hidden" id="dashboard">
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg class="search-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.156a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z" fill="currentColor"/>
+        </svg>
+        <input type="text" class="search-input" id="search-input" placeholder="Search apps, CVEs, packages…" />
+      </div>
+      <select class="sort-select" id="sort-select">
+        <option value="posture">Sort: Risk</option>
+        <option value="name">Sort: Name</option>
+        <option value="total-desc">Sort: Most CVEs</option>
+        <option value="total-asc">Sort: Fewest CVEs</option>
+        <option value="critical">Sort: Critical CVEs</option>
+      </select>
+      <span class="results-count" id="results-count"></span>
+    </div>
+    <div class="cards-grid" id="cards-grid"></div>
+    <div class="no-results hidden" id="no-results">
+      No apps match your filter.
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────────────── -->
+<footer class="footer">
+  PFNApp Security Dashboard — auto-generated by GitHub Actions nightly · Scanner: Aqua Trivy ·
+  Data: <a href="../report.json" target="_blank">report.json</a>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── State ─────────────────────────────────────────────── */
+  let allApps = [];
+  let activeCategory = 'All';
+  let searchQuery = '';
+  let sortMode = 'posture';
+
+  /* ── Severity colour helpers ────────────────────────────── */
+  const sevClass = (n, type) => {
+    if (n === 0) return 'zero';
+    return type;
+  };
+
+  function numEl(n, cls) {
+    return `<span class="num ${n === 0 ? 'zero' : cls}">${n}</span>`;
+  }
+
+  /* ── Posture parsing ─────────────────────────────────────── */
+  function postureClass(posture) {
+    const p = (posture || '').toUpperCase();
+    if (p.includes('CRITICAL')) return 'critical';
+    if (p.includes('HIGH'))     return 'high';
+    if (p.includes('MEDIUM'))   return 'medium';
+    if (p.includes('ROOT') || p.includes('NON-COMPLIANT')) return 'noncompliant';
+    return 'clean';
+  }
+
+  function postureSortKey(posture) {
+    const c = postureClass(posture);
+    return { critical: 0, high: 1, medium: 2, noncompliant: 3, clean: 4 }[c] ?? 5;
+  }
+
+  /* ── Lifecycle badge ─────────────────────────────────────── */
+  function lifecycleBadgeEl(status, badge) {
+    const cls = {
+      'LATEST':     'latest',
+      'SUPPORTED':  'supported',
+      'EOL':        'eol',
+      'DEPRECATED': 'deprecated',
+    }[status?.toUpperCase()] || 'deprecated';
+    return `<span class="lifecycle-badge ${cls}">${badge} ${status}</span>`;
+  }
+
+  /* ── CVE table row ───────────────────────────────────────── */
+  function cveRow(label, v) {
+    return `<tr>
+      <td>${label}</td>
+      <td>${numEl(v.critical, 'crit')}</td>
+      <td>${numEl(v.high, 'high')}</td>
+      <td>${numEl(v.medium, 'med')}</td>
+      <td>${numEl(v.low, 'low')}</td>
+      <td>${numEl(v.fixable, 'fix')}</td>
+      <td>${numEl(v.total, 'tot')}</td>
+    </tr>`;
+  }
+
+  /* ── Top CVE list ────────────────────────────────────────── */
+  function topCveList(cves, label, prefix) {
+    if (!cves || cves.length === 0) return '';
+    const items = cves.slice(0, 5).map(c => {
+      const sevCls = (c.severity || 'LOW').toUpperCase();
+      return `<div class="cve-entry">
+        <div class="cve-id-row">
+          <span class="cve-id ${sevCls.toLowerCase()}">${escHtml(c.id)}</span>
+          <span class="cve-pkg" title="${escHtml(c.pkg)}">${escHtml(c.pkg)}</span>
+          <span class="sev-pill ${sevCls}">${sevCls}</span>
+        </div>
+        <div class="cve-title">${escHtml(c.title || '')}</div>
+      </div>`;
+    }).join('');
+
+    const uid = prefix + '-cve-list';
+    const btnId = prefix + '-cve-btn';
+    return `
+      <div class="card-footer">
+        <button class="collapsible-btn" id="${btnId}" onclick="toggleCveList('${btnId}','${uid}')">
+          <span>🔍 Top ${label} CVEs (${Math.min(cves.length, 5)} shown)</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+          </svg>
+        </button>
+        <div class="cve-list" id="${uid}">${items}</div>
+      </div>`;
+  }
+
+  /* ── Build a single app card ─────────────────────────────── */
+  function buildCard(app) {
+    // For apps with multiple versions, show each version as its own card section.
+    // We pick the latest (rank 1) version for the main card display.
+    const versions = app.monitoredVersions || [];
+    if (versions.length === 0) return '';
+
+    return versions.map((ver, vi) => {
+      const v = ver.vulnerabilities || {};
+      const sys = v.system || {};
+      const apv = v.app || {};
+      const pClass = postureClass(ver.posture);
+      const uid = `${app.id}-v${vi}`;
+      const pfnRef = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
+
+      // Posture badge label
+      const postureLabelMap = {
+        critical:     '🔴 Critical Risk',
+        high:         '🟠 High Risk',
+        medium:       '🟡 Medium Risk',
+        noncompliant: '🟡 Non-Compliant',
+        clean:        '✅ Clean',
+      };
+
+      // Top CVEs — prefer app CVEs, fallback to system CVEs
+      const hasAppCves = ver.topAppCves && ver.topAppCves.length > 0;
+      const hasSysCves = ver.topSystemCves && ver.topSystemCves.length > 0;
+      const cveFooter = hasAppCves
+        ? topCveList(ver.topAppCves, 'App', uid + '-app')
+        : hasSysCves
+          ? topCveList(ver.topSystemCves, 'System', uid + '-sys')
+          : '';
+
+      return `
+<div class="card posture-${pClass}" data-app-id="${escHtml(app.id)}"
+     data-category="${escHtml(app.category)}"
+     data-posture="${postureSortKey(ver.posture)}"
+     data-name="${escHtml(app.name)}"
+     data-total="${(sys.total || 0) + (apv.total || 0)}"
+     data-critical="${(sys.critical || 0) + (apv.critical || 0)}"
+     data-searchable="${escHtml([
+       app.name, app.id, app.category, ver.tag,
+       ...(ver.topAppCves || []).map(c => c.id + ' ' + c.pkg),
+       ...(ver.topSystemCves || []).map(c => c.id + ' ' + c.pkg),
+     ].join(' ')).toLowerCase()}">
+
+  <!-- Card Header -->
+  <div class="card-header">
+    <div class="card-title-row">
+      <div class="card-name">${escHtml(app.name)}</div>
+      <span class="posture-badge ${pClass}">${postureLabelMap[pClass] || ver.posture}</span>
+    </div>
+    <div class="card-meta-row">
+      <span class="version-tag">${escHtml(ver.tag)}</span>
+      ${lifecycleBadgeEl(ver.lifecycleStatus, ver.lifecycleBadge || '')}
+      <span class="category-badge">${escHtml(app.category)}</span>
+    </div>
+  </div>
+
+  <!-- Registry Row -->
+  <div class="registry-row">
+    <div class="registry-item">
+      <span class="registry-label">Upstream</span>
+      <span class="registry-ref mono">${escHtml(ver.fullRef)}</span>
+    </div>
+    <div class="registry-item">
+      <span class="registry-label">PFNApp</span>
+      <span class="registry-ref pfn mono">${escHtml(pfnRef)}</span>
+    </div>
+    ${ver.security && ver.security.runAsRoot
+      ? `<div class="root-warning">⚠ Runs as root (UID ${escHtml(ver.security.uidLabel || '0')})</div>`
+      : `<div style="font-size:.68rem;color:var(--green);margin-top:2px;">✓ Non-root (${escHtml((ver.security || {}).uidLabel || '?')})</div>`
+    }
+  </div>
+
+  <!-- Card Body -->
+  <div class="card-body">
+
+    <!-- Upstream CVE Section -->
+    <div class="cve-section">
+      <div class="cve-section-title">
+        <span class="dot upstream"></span>
+        Upstream Vulnerabilities
+      </div>
+      <div class="cve-table-wrap">
+        <table class="cve-table">
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>C</th>
+              <th>H</th>
+              <th>M</th>
+              <th>L</th>
+              <th>Fix</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${cveRow('System', sys)}
+            ${cveRow('App', apv)}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- PFNApp CVE Section -->
+    <div class="cve-section">
+      <div class="cve-section-title">
+        <span class="dot pfn"></span>
+        PFNApp Hardened Image
+      </div>
+      <div class="pfn-pending">
+        <span class="spin">🔄</span>
+        <span>Scan pending — pipeline not yet deployed for hardened images.</span>
+      </div>
+    </div>
+
+    <!-- Reduction summary -->
+    <div class="reduction-row" style="margin-top:8px;">
+      <span>🎯 Projected reduction:</span>
+      <span class="reduction-val pending">– pending scan</span>
+    </div>
+
+  </div>
+
+  <!-- Top CVEs (collapsible footer) -->
+  ${cveFooter}
+
+</div>`;
+    }).join('');
+  }
+
+  /* ── Escape HTML ─────────────────────────────────────────── */
+  function escHtml(str) {
+    return String(str ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ── Filter + Sort + Search ──────────────────────────────── */
+  function getFilteredApps() {
+    const q = searchQuery.trim().toLowerCase();
+    return allApps.filter(app => {
+      // Category filter
+      if (activeCategory !== 'All' && app.category !== activeCategory) return false;
+      // Search filter
+      if (q) {
+        const haystack = [
+          app.name, app.id, app.category,
+          ...(app.monitoredVersions || []).flatMap(v => [
+            v.tag,
+            ...(v.topAppCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
+            ...(v.topSystemCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
+          ])
+        ].join(' ').toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  function sortApps(apps) {
+    return [...apps].sort((a, b) => {
+      const av = a.monitoredVersions?.[0] || {};
+      const bv = b.monitoredVersions?.[0] || {};
+      const aVuln = av.vulnerabilities || {};
+      const bVuln = bv.vulnerabilities || {};
+
+      switch (sortMode) {
+        case 'posture':
+          return postureSortKey(av.posture) - postureSortKey(bv.posture)
+              || a.name.localeCompare(b.name);
+        case 'name':
+          return a.name.localeCompare(b.name);
+        case 'total-desc': {
+          const at = (aVuln.system?.total||0) + (aVuln.app?.total||0);
+          const bt = (bVuln.system?.total||0) + (bVuln.app?.total||0);
+          return bt - at;
+        }
+        case 'total-asc': {
+          const at = (aVuln.system?.total||0) + (aVuln.app?.total||0);
+          const bt = (bVuln.system?.total||0) + (bVuln.app?.total||0);
+          return at - bt;
+        }
+        case 'critical': {
+          const ac = (aVuln.system?.critical||0) + (aVuln.app?.critical||0);
+          const bc = (bVuln.system?.critical||0) + (bVuln.app?.critical||0);
+          return bc - ac;
+        }
+        default: return 0;
+      }
+    });
+  }
+
+  /* ── Render cards ────────────────────────────────────────── */
+  function renderCards() {
+    const filtered = sortApps(getFilteredApps());
+    const grid = document.getElementById('cards-grid');
+    const noRes = document.getElementById('no-results');
+    const count = document.getElementById('results-count');
+
+    grid.innerHTML = filtered.map(app => buildCard(app)).join('');
+    noRes.classList.toggle('hidden', filtered.length > 0);
+    count.textContent = `${filtered.length} app${filtered.length !== 1 ? 's' : ''}`;
+  }
+
+  /* ── Render filter tabs ─────────────────────────────────── */
+  function renderTabs(categories) {
+    const container = document.getElementById('filter-tabs');
+    const all = ['All', ...categories];
+    container.innerHTML = all.map(cat => {
+      const count = cat === 'All'
+        ? allApps.length
+        : allApps.filter(a => a.category === cat).length;
+      return `<button class="tab-btn ${cat === activeCategory ? 'active' : ''}"
+                      onclick="setCategory(${JSON.stringify(cat)})">${escHtml(cat)}<span class="tab-count">${count}</span></button>`;
+    }).join('');
+  }
+
+  /* ── Render summary stats ────────────────────────────────── */
+  function renderStats(summary, apps) {
+    // Count from live data for accuracy
+    let criticalApps = 0, highApps = 0, cleanApps = 0, totalVersions = 0;
+    apps.forEach(app => {
+      app.monitoredVersions?.forEach(v => {
+        totalVersions++;
+        const appCves = v.vulnerabilities?.app || {};
+        if (appCves.critical > 0) criticalApps++;
+        else if (appCves.high > 0) highApps++;
+        else if (appCves.total === 0 || appCves.critical === 0 && appCves.high === 0) {
+          if (appCves.total === 0) cleanApps++;
+        }
+      });
+    });
+
+    document.getElementById('stat-apps').textContent     = summary.totalApplications ?? apps.length;
+    document.getElementById('stat-versions').textContent = summary.totalMonitoredVersions ?? totalVersions;
+    document.getElementById('stat-critical').textContent = criticalApps;
+    document.getElementById('stat-high').textContent     = highApps;
+    document.getElementById('stat-clean').textContent    = cleanApps;
+  }
+
+  /* ── Render header meta ──────────────────────────────────── */
+  function renderHeaderMeta(summary) {
+    const scanDate = summary.generatedAt
+      ? new Date(summary.generatedAt).toLocaleString('en-US', {
+          dateStyle: 'long', timeStyle: 'short'
+        })
+      : 'Unknown';
+    document.getElementById('last-scan-text').textContent = `Last scan: ${scanDate}`;
+    document.getElementById('header-meta').innerHTML = `
+      <div class="meta-badge">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="var(--muted)">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        Scanner: ${escHtml(summary.scanner || 'Aqua Trivy')}
+      </div>
+      <div class="meta-badge">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="var(--muted)">
+          <path d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-3v-4H6.5v4h-3A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm-6.354-.354a.5.5 0 0 0 0 .707L2.5 4.5V13.5A2.5 2.5 0 0 0 5 16h2.5v-4h1V16H11a2.5 2.5 0 0 0 2.5-2.5V4.5l.854-.854a.5.5 0 0 0-.708-.707L8 8.086 1.646 2.939a.5.5 0 0 0-.708 0z"/>
+        </svg>
+        Policy: ${escHtml(summary.supportWindowPolicy || 'N-4')}
+      </div>
+    `;
+  }
+
+  /* ── Toggle CVE collapsible ──────────────────────────────── */
+  window.toggleCveList = function (btnId, listId) {
+    const btn  = document.getElementById(btnId);
+    const list = document.getElementById(listId);
+    if (!btn || !list) return;
+    const open = list.classList.toggle('open');
+    btn.classList.toggle('open', open);
+  };
+
+  /* ── Set category ────────────────────────────────────────── */
+  window.setCategory = function (cat) {
+    activeCategory = cat;
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent.replace(/\d+/g,'').trim() === cat ||
+        (b.textContent.startsWith(cat) && cat === b.textContent.replace(/\s*\d+\s*$/, '').trim()));
+    });
+    // Re-render tabs cleanly
+    const categories = [...new Set(allApps.map(a => a.category))].sort();
+    renderTabs(categories);
+    renderCards();
+  };
+
+  /* ── Init ────────────────────────────────────────────────── */
+  function init(data) {
+    allApps = data.applications || [];
+    const summary = data.summary || {};
+    const categories = [...new Set(allApps.map(a => a.category))].sort();
+
+    renderHeaderMeta(summary);
+    renderStats(summary, allApps);
+    renderTabs(categories);
+    renderCards();
+
+    // Show dashboard
+    document.getElementById('loading-state').classList.add('hidden');
+    document.getElementById('dashboard').classList.remove('hidden');
+
+    // Wire up controls
+    const searchEl = document.getElementById('search-input');
+    const sortEl   = document.getElementById('sort-select');
+
+    searchEl.addEventListener('input', () => {
+      searchQuery = searchEl.value;
+      renderCards();
+    });
+    sortEl.addEventListener('change', () => {
+      sortMode = sortEl.value;
+      renderCards();
+    });
+  }
+
+  /* ── Fetch data ──────────────────────────────────────────── */
+  fetch('../report.json')
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => init(data))
+    .catch(err => {
+      console.error('Failed to load report.json:', err);
+      document.getElementById('loading-state').classList.add('hidden');
+      document.getElementById('error-state').classList.remove('hidden');
+    });
+
+})();
+</script>
+
+</body>
+</html>
