@@ -14,6 +14,13 @@ RUN apk update && apk upgrade --no-cache && \
     ca-certificates \
     tzdata
 
+# Upgrade npm to latest patched version.
+# Node 18 ships with npm 10.8.2 which bundles vulnerable transitive deps
+# (tar 6.2.1, brace-expansion 2.0.1, minimatch 9.0.5, etc.).
+# npm 11+ requires Node >= 20, so we pin npm@10 for Node 18 and use npm@latest
+# for Node 20+. The version is resolved at build time via node itself.
+RUN npm install -g npm@$(node -e "const v=parseInt(process.version.slice(1)); console.log(v>=20?'latest':'10')")
+
 # Create dedicated non-root user and group
 RUN addgroup -g ${GID} -S appgroup && \
     adduser -u ${UID} -S appuser -G appgroup
