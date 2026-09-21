@@ -2,16 +2,16 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-21T07:52:04.206Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-21T17:47:59.564Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
 - **Applications Monitored:** `16`
-- **Active Versions Audited:** `17`
-- **Images Running As Root:** `13` / `17` (⚠️ **76%** non-compliant)
-- **App Critical CVEs** _(upstream, unfixable by us)_**:** `20`
-- **App High CVEs** _(upstream, unfixable by us)_**:** `267`
-- **PFNApp Images Scanned:** `14` / `17`
+- **Active Versions Audited:** `18`
+- **Images Running As Root:** `13` / `18` (⚠️ **72%** non-compliant)
+- **App Critical CVEs** _(upstream, unfixable by us)_**:** `23`
+- **App High CVEs** _(upstream, unfixable by us)_**:** `288`
+- **PFNApp Images Scanned:** `14` / `18`
 - **Total System CVE Reduction:** `10492`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
@@ -27,7 +27,7 @@
 | **9Router** | _AI Gateways & Proxies_ | `0.5.75` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 1/10/7/1 | 0/0/0/0 | 1/10/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.50` | 🟢 **LATEST** | ✅ NO | 4/59/66/60 | 3/3/1/0 | 4/59/66/60 | 3/3/1/0 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.5` | 🟢 **LATEST** | ✅ NO | 15/116/221/183 | 0/17/2/2 | 15/116/221/183 | 0/17/2/2 | 0/0 | 🟠 APP HIGH RISK |
-| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.14` | 🟢 **LATEST** | ⚠️ YES | 17/411/1449/999 | 2/16/27/12 | 2/242/332/246 | 2/16/27/12 | -15/-169 | 🔴 APP CRITICAL RISK |
+| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.14` | 🟢 **LATEST** | ⚠️ YES | 17/411/1440/999 | 2/16/27/12 | 2/242/323/246 | 2/16/27/12 | -15/-169 | 🔴 APP CRITICAL RISK |
 | **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.3` | 🟢 **LATEST** | ⚠️ YES | 7/69/106/97 | 0/0/0/0 | 4/59/92/96 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
 | **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/0/1 | 0/0/0/0 | 0/1/0/1 | 0/0 | 🟠 APP HIGH RISK |
 | **File Browser** | _Storage & Files_ | `v2.63.23` | 🟢 **LATEST** | ✅ NO | 0/0/0/0 | 0/10/2/1 | 0/0/0/0 | 0/10/2/1 | 0/0 | 🟠 APP HIGH RISK |
@@ -35,7 +35,8 @@
 | **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 0/0/0/1 | 0/2/6/12 | 0/0/0/1 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 | **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/262/1436/350 | 0/0/7/1 | 1/145/1016/268 | 0/0/7/1 | -3/-117 | 🟡 NON-COMPLIANT (ROOT) |
 | **Nginx Proxy Manager** | _Networking & Proxy_ | `2.15.1` | 🟢 **LATEST** | ⚠️ YES | 16/560/2928/1222 | 2/34/27/4 | 2/186/1095/912 | 2/34/27/4 | -14/-374 | 🔴 APP CRITICAL RISK |
-| **Shlink** | _Networking & Shorteners_ | `5.1.6` | 🟢 **LATEST** | ✅ NO | 0/1/2/0 | 3/21/5/5 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+| **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/2/0 | 3/21/5/5 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+|  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/2/0 | 3/21/5/5 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 1/10/8/1 | 0/0/0/0 | 1/10/8/1 | 0/-2 | 🔴 APP CRITICAL RISK |
 | **Dozzle** | _Operations & Logs_ | `v11.1.1` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/0/0 | 0/0/0/0 | 0/1/0/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `v11.1.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
@@ -456,9 +457,9 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Shlink (<code>5.1.6</code>) — App: 3 Critical, 21 High | System: 0 Critical, 1 High</b></summary>
+<summary><b>Shlink (<code>5.1.7</code>) — App: 3 Critical, 21 High | System: 0 Critical, 1 High</b></summary>
 
-- **Full Reference:** `shlinkio/shlink:5.1.6`
+- **Full Reference:** `shlinkio/shlink:5.1.7`
 - **Root Status:** ✅ Runs non-root (`1001`)
 - **Posture:** 🔴 APP CRITICAL RISK
 
