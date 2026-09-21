@@ -48,7 +48,7 @@ jobs:
           path: |
             REPORT.md
             report.json
-            observatory/tracked-versions.json
+            observatory.json
 
       - name: Commit and Push Observatory Updates
         if: github.ref == 'refs/heads/main'
@@ -58,9 +58,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if [ -n "$(git status --porcelain REPORT.md report.json observatory/tracked-versions.json)" ]; then
+          if [ -n "$(git status --porcelain REPORT.md report.json observatory.json)" ]; then
             echo "Changes detected in observatory reports. Committing to main..."
-            git add REPORT.md report.json observatory/tracked-versions.json
+            git add REPORT.md report.json observatory.json
             git commit -m "chore(observatory): update nightly upstream security report and JSON metrics"
             git push origin main
           else
