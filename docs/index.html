@@ -152,6 +152,53 @@
     .stat-num.blue   { color: var(--blue); }
     .stat-num.orange { color: var(--orange); }
 
+    /* ── Type Bar (Language / Framework / App) ───────────────── */
+    .type-bar {
+      max-width: 1400px;
+      margin: 16px auto 0;
+      padding: 0 24px;
+    }
+    .type-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .type-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: inherit;
+      font-weight: 500;
+      padding: 5px 14px;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s, background .15s;
+    }
+    .type-btn:hover { color: var(--text); border-color: var(--border-2); }
+    .type-btn.active {
+      color: var(--text);
+      border-color: var(--blue);
+      background: var(--blue-dim);
+      font-weight: 600;
+    }
+    .type-btn .type-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--border);
+      border-radius: 10px;
+      font-size: 0.68rem;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+    }
+    .type-btn.active .type-count { background: #1f6feb55; }
+
     /* ── Filter Tabs ─────────────────────────────────────────── */
     .filter-bar {
       max-width: 1400px;
@@ -350,11 +397,11 @@
       align-items: center;
       gap: 3px;
     }
-    .lifecycle-badge.latest    { background: #23863620; color: var(--green); border: 1px solid #23863650; }
-    .lifecycle-badge.supported { background: #1f6feb20; color: var(--blue);  border: 1px solid #1f6feb50; }
-    .lifecycle-badge.eol       { background: #da363320; color: var(--red);   border: 1px solid #da363350; }
+    .lifecycle-badge.latest    { background: #23863620; color: var(--green);  border: 1px solid #23863650; }
+    .lifecycle-badge.supported { background: #1f6feb20; color: var(--blue);   border: 1px solid #1f6feb50; }
+    .lifecycle-badge.eol       { background: #da363320; color: var(--red);    border: 1px solid #da363350; }
     .lifecycle-badge.deprecated{ background: var(--border); color: var(--muted); border: 1px solid var(--border-2); }
-
+    .lifecycle-badge.maintenance{ background: #d2992215; color: var(--orange); border: 1px solid #d2992240; }
     .category-badge {
       font-size: 0.68rem;
       padding: 1px 7px;
@@ -363,6 +410,68 @@
       border-radius: 10px;
       color: var(--muted);
     }
+    .type-tag {
+      font-size: 0.68rem;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .type-tag.language  { background: #bc8cff20; color: var(--purple); border: 1px solid #bc8cff40; }
+    .type-tag.framework { background: var(--blue-dim); color: var(--blue); border: 1px solid #1f6feb40; }
+    .type-tag.app       { background: var(--border); color: var(--muted); border: 1px solid var(--border-2); }
+    .nonroot-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      color: var(--green);
+      background: var(--green-dim);
+      border: 1px solid #23863640;
+      border-radius: 10px;
+      padding: 1px 7px;
+      margin-top: 2px;
+      width: fit-content;
+    }
+    .compat-section {
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: #0d111780;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .compat-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted-2);
+      margin-bottom: 6px;
+    }
+    .compat-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding: 3px 0;
+    }
+    .compat-row + .compat-row { border-top: 1px solid var(--border); }
+    .compat-fw-label {
+      min-width: 80px;
+      color: var(--muted);
+      font-size: 0.7rem;
+    }
+    .compat-pill {
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--border);
+      color: var(--muted);
+      border: 1px solid var(--border-2);
+    }
+    .compat-pill.default { background: var(--blue-dim); color: var(--blue); border-color: #1f6feb50; }
 
     /* Card Image / Registry Row */
     .registry-row {
@@ -698,8 +807,8 @@
 <!-- ── Stats Bar ────────────────────────────────────────────────── -->
 <div class="stats-bar" id="stats-bar">
   <div class="stat-pill blue">
-    <span class="stat-num blue" id="stat-apps">–</span>
-    <span>apps monitored</span>
+    <span class="stat-num blue" id="stat-images">–</span>
+    <span>images</span>
   </div>
   <div class="stat-pill blue">
     <span class="stat-num blue" id="stat-versions">–</span>
@@ -708,12 +817,12 @@
   <div class="stat-pill red">
     <span>🔴</span>
     <span class="stat-num red" id="stat-critical">–</span>
-    <span>with Critical App CVE</span>
+    <span>Critical CVE</span>
   </div>
   <div class="stat-pill orange">
     <span>🟠</span>
     <span class="stat-num orange" id="stat-high">–</span>
-    <span>with High App CVE</span>
+    <span>High CVE</span>
   </div>
   <div class="stat-pill green">
     <span>✅</span>
@@ -722,7 +831,14 @@
   </div>
 </div>
 
-<!-- ── Filter Tabs ───────────────────────────────────────────────── -->
+<!-- ── Type Tabs (Language / Framework / App) ───────────────────── -->
+<div class="type-bar" id="type-bar">
+  <div class="type-tabs" id="type-tabs">
+    <!-- injected by JS -->
+  </div>
+</div>
+
+<!-- ── Filter Tabs (Category) ──────────────────────────────────── -->
 <div class="filter-bar" id="filter-bar">
   <div class="filter-tabs" id="filter-tabs">
     <!-- injected by JS -->
@@ -735,7 +851,7 @@
   <div class="state-box" id="loading-state">
     <div class="loading-spinner"></div>
     <h2>Loading security data…</h2>
-    <p>Fetching <code>report.json</code></p>
+    <p>Fetching <code>report.json</code> &amp; <code>base-report.json</code></p>
   </div>
 
   <!-- Error state (hidden by default) -->
@@ -782,6 +898,7 @@ npx serve .
         <option value="All">Status: All</option>
         <option value="LATEST">🟢 Latest</option>
         <option value="SUPPORTED">🔵 Supported</option>
+        <option value="MAINTENANCE">🟠 Maintenance</option>
         <option value="EOL">🔴 EOL</option>
         <option value="DEPRECATED">⬛ Deprecated</option>
       </select>
@@ -804,25 +921,25 @@ npx serve .
 (function () {
   'use strict';
 
+  /* ── Constants ──────────────────────────────────────────────── */
+  const RAW_BASE    = 'https://raw.githubusercontent.com/pfnapp/base-images/main/';
+  const REPORT_URL  = RAW_BASE + 'report.json';
+  const BASE_URL    = RAW_BASE + 'base-report.json';
+
   /* ── State ─────────────────────────────────────────────── */
-  let allApps = [];
+  let allItems      = [];   // unified list — both patch apps and base images
+  let activeType     = 'All';   // All | language | framework | app
   let activeCategory = 'All';
-  let activeStatus = 'All';
-  let searchQuery = '';
-  let sortMode = 'posture';
+  let activeStatus   = 'All';
+  let searchQuery    = '';
+  let sortMode       = 'posture';
 
   /* ── Severity colour helpers ────────────────────────────── */
-  const sevClass = (n, type) => {
-    if (n === 0) return 'zero';
-    return type;
-  };
-
   function numEl(n, cls) {
     return `<span class="num ${n === 0 ? 'zero' : cls}">${n}</span>`;
   }
 
   /* ── Posture parsing ─────────────────────────────────────── */
-  // Badge class — what the posture pill shows
   function postureClass(posture) {
     const p = (posture || '').toUpperCase();
     if (p.includes('CRITICAL')) return 'critical';
@@ -832,38 +949,38 @@ npx serve .
     return 'clean';
   }
 
-  // Card border class — green if no CVEs at all, even when running as root
-  function cardBorderClass(ver) {
-    const vuln = ver.vulnerabilities || {};
-    const up   = vuln.upstream || vuln;
-    const sys  = up.system || {};
-    const apv  = up.app    || {};
-    const totalCves = (sys.total || 0) + (apv.total || 0);
-    const posture   = (ver.posture || '').toUpperCase();
-    // If there are real CVEs, use the severity class
+  // Card border — green if zero CVEs even when root
+  function cardBorderClass(ver, itemType) {
+    const vuln    = ver.vulnerabilities || {};
+    const up      = itemType === 'app' ? (vuln.upstream || vuln) : vuln;
+    const sys     = up.system || {};
+    const apv     = up.app    || {};
+    const total   = (sys.total || 0) + (apv.total || 0);
+    const posture = (ver.posture || '').toUpperCase();
     if (posture.includes('CRITICAL')) return 'critical';
     if (posture.includes('HIGH'))     return 'high';
     if (posture.includes('MEDIUM'))   return 'medium';
-    // ROOT / NON-COMPLIANT but zero CVEs → keep green border, badge is still yellow
-    if ((posture.includes('ROOT') || posture.includes('NON-COMPLIANT')) && totalCves === 0) return 'clean';
+    if ((posture.includes('ROOT') || posture.includes('NON-COMPLIANT')) && total === 0) return 'clean';
     if (posture.includes('ROOT') || posture.includes('NON-COMPLIANT')) return 'noncompliant';
     return 'clean';
   }
 
   function postureSortKey(posture) {
-    const c = postureClass(posture);
-    return { critical: 0, high: 1, medium: 2, noncompliant: 3, clean: 4 }[c] ?? 5;
+    return { critical: 0, high: 1, medium: 2, noncompliant: 3, clean: 4 }[postureClass(posture)] ?? 5;
   }
 
   /* ── Lifecycle badge ─────────────────────────────────────── */
   function lifecycleBadgeEl(status, badge) {
     const cls = {
-      'LATEST':     'latest',
-      'SUPPORTED':  'supported',
-      'EOL':        'eol',
-      'DEPRECATED': 'deprecated',
-    }[status?.toUpperCase()] || 'deprecated';
-    return `<span class="lifecycle-badge ${cls}">${badge} ${status}</span>`;
+      'LATEST':      'latest',
+      'SUPPORTED':   'supported',
+      'MAINTENANCE': 'supported',
+      'EOL':         'eol',
+      'EOL SOON':    'eol',
+      'AGING':       'eol',
+      'DEPRECATED':  'deprecated',
+    }[(status || '').toUpperCase()] || 'deprecated';
+    return `<span class="lifecycle-badge ${cls}">${badge || ''} ${status}</span>`;
   }
 
   /* ── CVE table row ───────────────────────────────────────── */
@@ -879,7 +996,18 @@ npx serve .
     </tr>`;
   }
 
-  /* ── Top CVE list ────────────────────────────────────────── */
+  function cveTableHtml(rows) {
+    return `<div class="cve-table-wrap">
+      <table class="cve-table">
+        <thead><tr>
+          <th>Layer</th><th>C</th><th>H</th><th>M</th><th>L</th><th>Fix</th><th>Total</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }
+
+  /* ── Top CVE collapsible ─────────────────────────────────── */
   function topCveList(cves, label, prefix) {
     if (!cves || cves.length === 0) return '';
     const items = cves.slice(0, 5).map(c => {
@@ -893,43 +1021,49 @@ npx serve .
         <div class="cve-title">${escHtml(c.title || '')}</div>
       </div>`;
     }).join('');
-
-    const uid = prefix + '-cve-list';
+    const uid   = prefix + '-cve-list';
     const btnId = prefix + '-cve-btn';
-    return `
-      <div class="card-footer">
-        <button class="collapsible-btn" id="${btnId}" onclick="toggleCveList('${btnId}','${uid}')">
-          <span>🔍 Top ${label} CVEs (${Math.min(cves.length, 5)} shown)</span>
-          <svg class="chevron" width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
-          </svg>
-        </button>
-        <div class="cve-list" id="${uid}">${items}</div>
-      </div>`;
+    return `<div class="card-footer">
+      <button class="collapsible-btn" id="${btnId}" onclick="toggleCveList('${btnId}','${uid}')">
+        <span>🔍 Top ${label} CVEs (${Math.min(cves.length, 5)} shown)</span>
+        <svg class="chevron" width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+        </svg>
+      </button>
+      <div class="cve-list" id="${uid}">${items}</div>
+    </div>`;
   }
 
-  /* ── Build a single app card ─────────────────────────────── */
-  function buildCard(app) {
-    // For apps with multiple versions, show each version as its own card section.
-    // We pick the latest (rank 1) version for the main card display.
+  /* ── Escape HTML ─────────────────────────────────────────── */
+  function escHtml(str) {
+    return String(str ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     BUILD CARD: Patch App  (type = "app")
+     Source: report.json → applications[]
+  ═══════════════════════════════════════════════════════════ */
+  function buildAppCard(app) {
     const versions = app.monitoredVersions || [];
     if (versions.length === 0) return '';
 
     return versions.map((ver, vi) => {
-      const v = ver.vulnerabilities || {};
-      // Support both old flat structure {system, app} and new upstream/pfnapp split structure
+      const v   = ver.vulnerabilities || {};
       const hasUpstreamSplit = v.upstream !== undefined;
-      const upstreamVulns = hasUpstreamSplit ? v.upstream : v;
-      const sys = upstreamVulns.system || {};
-      const apv = upstreamVulns.app || {};
-      const pfnData = hasUpstreamSplit ? (v.pfnapp || null) : null;
+      const upVulns  = hasUpstreamSplit ? v.upstream : v;
+      const sys      = upVulns.system || {};
+      const apv      = upVulns.app    || {};
+      const pfnData  = hasUpstreamSplit ? (v.pfnapp   || null) : null;
       const reduction = hasUpstreamSplit ? (v.reduction || null) : null;
-      const pClass = postureClass(ver.posture);
-      const borderClass = cardBorderClass(ver);
-      const uid = `${app.id}-v${vi}`;
-      const pfnRef = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
+      const pClass    = postureClass(ver.posture);
+      const bClass    = cardBorderClass(ver, 'app');
+      const uid       = `app-${app.id}-v${vi}`;
+      const pfnRef    = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
 
-      // Posture badge label
       const postureLabelMap = {
         critical:     '🔴 Critical Risk',
         high:         '🟠 High Risk',
@@ -938,17 +1072,18 @@ npx serve .
         clean:        '✅ Clean',
       };
 
-      // Top CVEs — prefer app CVEs, fallback to system CVEs
-      const hasAppCves = ver.topAppCves && ver.topAppCves.length > 0;
+      const hasAppCves = ver.topAppCves    && ver.topAppCves.length    > 0;
       const hasSysCves = ver.topSystemCves && ver.topSystemCves.length > 0;
-      const cveFooter = hasAppCves
-        ? topCveList(ver.topAppCves, 'App', uid + '-app')
+      const cveFooter  = hasAppCves
+        ? topCveList(ver.topAppCves,    'App',    uid + '-app')
         : hasSysCves
           ? topCveList(ver.topSystemCves, 'System', uid + '-sys')
           : '';
 
       return `
-<div class="card posture-${borderClass}" data-app-id="${escHtml(app.id)}"
+<div class="card posture-${bClass}"
+     data-item-type="app"
+     data-app-id="${escHtml(app.id)}"
      data-category="${escHtml(app.category)}"
      data-status="${escHtml((ver.lifecycleStatus || '').toUpperCase())}"
      data-posture="${postureSortKey(ver.posture)}"
@@ -957,7 +1092,7 @@ npx serve .
      data-critical="${(sys.critical || 0) + (apv.critical || 0)}"
      data-searchable="${escHtml([
        app.name, app.id, app.category, ver.tag,
-       ...(ver.topAppCves || []).map(c => c.id + ' ' + c.pkg),
+       ...(ver.topAppCves    || []).map(c => c.id + ' ' + c.pkg),
        ...(ver.topSystemCves || []).map(c => c.id + ' ' + c.pkg),
      ].join(' ')).toLowerCase()}">
 
@@ -970,6 +1105,7 @@ npx serve .
     <div class="card-meta-row">
       <span class="version-tag">${escHtml(ver.tag)}</span>
       ${lifecycleBadgeEl(ver.lifecycleStatus, ver.lifecycleBadge || '')}
+      <span class="type-tag app">App</span>
       <span class="category-badge">${escHtml(app.category)}</span>
     </div>
   </div>
@@ -986,138 +1122,226 @@ npx serve .
     </div>
     ${ver.security && ver.security.runAsRoot
       ? `<div class="root-warning">⚠ Runs as root (UID ${escHtml(ver.security.uidLabel || '0')})</div>`
-      : `<div style="font-size:.68rem;color:var(--green);margin-top:2px;">✓ Non-root (${escHtml((ver.security || {}).uidLabel || '?')})</div>`
+      : `<div class="nonroot-badge">✓ Non-root (${escHtml((ver.security || {}).uidLabel || '?')})</div>`
     }
   </div>
 
   <!-- Card Body -->
   <div class="card-body">
-
-    <!-- Upstream CVE Section -->
     <div class="cve-section">
-      <div class="cve-section-title">
-        <span class="dot upstream"></span>
-        Upstream Vulnerabilities
-      </div>
-      <div class="cve-table-wrap">
-        <table class="cve-table">
-          <thead>
-            <tr>
-              <th>Layer</th>
-              <th>C</th>
-              <th>H</th>
-              <th>M</th>
-              <th>L</th>
-              <th>Fix</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${cveRow('System', sys)}
-            ${cveRow('App', apv)}
-          </tbody>
-        </table>
-      </div>
+      <div class="cve-section-title"><span class="dot upstream"></span>Upstream Vulnerabilities</div>
+      ${cveTableHtml(cveRow('System', sys) + cveRow('App', apv))}
     </div>
-
     <div class="divider"></div>
-
-    <!-- PFNApp CVE Section -->
     <div class="cve-section">
-      <div class="cve-section-title">
-        <span class="dot pfn"></span>
-        PFNApp Hardened Image
-      </div>
-      ${pfnData && pfnData.scanned ? `
-      <div class="cve-table-wrap">
-        <table class="cve-table">
-          <thead>
-            <tr>
-              <th>Layer</th><th>C</th><th>H</th><th>M</th><th>L</th><th>Fix</th><th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${cveRow('System', pfnData.system || {})}
-            ${cveRow('App', pfnData.app || {})}
-          </tbody>
-        </table>
-      </div>
-      ` : !hasUpstreamSplit ? `
-      <div class="pfn-pending">
-        <span>ℹ️</span>
-        <span>PFNApp hardened image scan not yet available — showing upstream scan only.</span>
-      </div>
-      ` : `
-      <div class="pfn-pending">
-        <span class="spin">🔄</span>
-        <span>Scan pending — pipeline not yet deployed for hardened images.</span>
-      </div>
-      `}
+      <div class="cve-section-title"><span class="dot pfn"></span>PFNApp Hardened Image</div>
+      ${pfnData && pfnData.scanned
+        ? cveTableHtml(cveRow('System', pfnData.system || {}) + cveRow('App', pfnData.app || {}))
+        : !hasUpstreamSplit
+          ? `<div class="pfn-pending"><span>ℹ️</span><span>PFNApp hardened image scan not yet available.</span></div>`
+          : `<div class="pfn-pending"><span class="spin">🔄</span><span>Scan pending — pipeline not yet deployed.</span></div>`
+      }
     </div>
-
-    <!-- Reduction summary -->
     <div class="reduction-row" style="margin-top:8px;">
       <span>🎯 System CVE reduction:</span>
       ${reduction && pfnData && pfnData.scanned
-        ? `<span class="reduction-val" style="color:var(--green);">${reduction.system.total < 0 ? reduction.system.total : '+' + reduction.system.total} total (C${reduction.system.critical > 0 ? '+' : ''}${reduction.system.critical} H${reduction.system.high > 0 ? '+' : ''}${reduction.system.high})</span>`
+        ? `<span class="reduction-val">${reduction.system.total < 0 ? reduction.system.total : '+' + reduction.system.total} total (C${reduction.system.critical > 0 ? '+' : ''}${reduction.system.critical} H${reduction.system.high > 0 ? '+' : ''}${reduction.system.high})</span>`
         : `<span class="reduction-val pending">– not yet available</span>`
       }
     </div>
-
   </div>
 
-  <!-- Top CVEs (collapsible footer) -->
+  <!-- Top CVEs -->
   ${cveFooter}
 
 </div>`;
     }).join('');
   }
 
-  /* ── Escape HTML ─────────────────────────────────────────── */
-  function escHtml(str) {
-    return String(str ?? '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+  /* ═══════════════════════════════════════════════════════════
+     BUILD CARD: Base Image  (type = "language" | "framework")
+     Source: base-report.json → baseImages[]
+  ═══════════════════════════════════════════════════════════ */
+  function buildBaseImageCard(item) {
+    const versions = item.versions || [];
+    if (versions.length === 0) return '';
+
+    return versions.map((ver, vi) => {
+      const vuln   = ver.vulnerabilities || {};
+      const sys    = vuln.system || {};
+      const apv    = vuln.app    || {};
+      const pClass = postureClass(ver.posture);
+      const bClass = cardBorderClass(ver, item.type);
+      const uid    = `base-${item.id}-v${vi}`;
+
+      const postureLabelMap = {
+        critical: '🔴 Critical Risk',
+        high:     '🟠 High Risk',
+        medium:   '🟡 Medium Risk',
+        clean:    '✅ Compliant',
+        noncompliant: '🟡 Non-Compliant',
+      };
+
+      const topCves   = ver.topCves || [];
+      const cveFooter = topCveList(topCves, item.name, uid);
+
+      // Compatibility matrix for frameworks
+      let compatHtml = '';
+      if (item.type === 'framework' && item.compatibilityMatrix) {
+        const rows = Object.entries(item.compatibilityMatrix).map(([fwKey, cfg]) => {
+          const runtimes    = cfg[item.runtime] || [];
+          const defaultVer  = cfg.default;
+          const pills       = runtimes.map(r =>
+            `<span class="compat-pill ${r === defaultVer ? 'default' : ''}">${r}${r === defaultVer ? ' ★' : ''}</span>`
+          ).join('');
+          return `<div class="compat-row">
+            <span class="compat-fw-label">${escHtml(fwKey)}</span>
+            ${pills}
+          </div>`;
+        }).join('');
+        compatHtml = `<div class="compat-section">
+          <div class="compat-title">Framework ↔ Runtime Compatibility</div>
+          ${rows}
+        </div>`;
+      }
+
+      const typeLabel = item.type === 'language' ? 'Language' : 'Framework';
+      const typeCls   = item.type;
+
+      return `
+<div class="card posture-${bClass}"
+     data-item-type="${escHtml(item.type)}"
+     data-app-id="${escHtml(item.id)}"
+     data-category="${escHtml(item.category)}"
+     data-status="${escHtml((ver.lifecycleStatus || '').toUpperCase())}"
+     data-posture="${postureSortKey(ver.posture)}"
+     data-name="${escHtml(item.name)}"
+     data-total="${(sys.total || 0) + (apv.total || 0)}"
+     data-critical="${(sys.critical || 0) + (apv.critical || 0)}"
+     data-searchable="${escHtml([
+       item.name, item.id, item.category, ver.tag, ver.versionLabel || '',
+       ...(topCves).map(c => c.id + ' ' + c.pkg),
+     ].join(' ')).toLowerCase()}">
+
+  <!-- Card Header -->
+  <div class="card-header">
+    <div class="card-title-row">
+      <div class="card-name">${item.icon ? item.icon + ' ' : ''}${escHtml(item.name)}</div>
+      <span class="posture-badge ${pClass}">${postureLabelMap[pClass] || ver.posture}</span>
+    </div>
+    <div class="card-meta-row">
+      <span class="version-tag">${escHtml(ver.tag)}</span>
+      ${lifecycleBadgeEl(ver.lifecycleStatus, ver.lifecycleBadge || '')}
+      <span class="type-tag ${typeCls}">${typeLabel}</span>
+      <span class="category-badge">${escHtml(item.category)}</span>
+    </div>
+  </div>
+
+  <!-- Registry Row -->
+  <div class="registry-row">
+    <div class="registry-item">
+      <span class="registry-label">Image</span>
+      <span class="registry-ref pfn mono">${escHtml(ver.imageRef)}</span>
+    </div>
+    ${ver.security
+      ? ver.security.runAsRoot
+        ? `<div class="root-warning">⚠ Runs as root (UID ${escHtml(ver.security.uidLabel || '0')})</div>`
+        : `<div class="nonroot-badge">✓ Non-root · UID ${escHtml(String(ver.security.runAsUser || '10001'))}</div>`
+      : ''
+    }
+  </div>
+
+  <!-- Card Body -->
+  <div class="card-body">
+    <div class="cve-section">
+      <div class="cve-section-title"><span class="dot pfn"></span>Vulnerability Scan</div>
+      ${cveTableHtml(cveRow('System', sys) + cveRow('App', apv))}
+    </div>
+    ${compatHtml}
+  </div>
+
+  <!-- Top CVEs -->
+  ${cveFooter}
+
+</div>`;
+    }).join('');
   }
 
-  /* ── Filter + Sort + Search ──────────────────────────────── */
-  function getFilteredApps() {
+  /* ── Unified render dispatcher ───────────────────────────── */
+  function buildCard(item) {
+    return item._source === 'base'
+      ? buildBaseImageCard(item)
+      : buildAppCard(item);
+  }
+
+  /* ── Filter + Sort ───────────────────────────────────────── */
+  function getVersionsForItem(item) {
+    return item._source === 'base'
+      ? (item.versions         || [])
+      : (item.monitoredVersions || []);
+  }
+
+  function getVersionStatus(ver) {
+    return (ver.lifecycleStatus || '').toUpperCase();
+  }
+
+  function getVersionVulnTotals(ver, itemType) {
+    const vuln = ver.vulnerabilities || {};
+    const up   = itemType === 'app' ? (vuln.upstream || vuln) : vuln;
+    return {
+      total:    (up.system?.total    || 0) + (up.app?.total    || 0),
+      critical: (up.system?.critical || 0) + (up.app?.critical || 0),
+    };
+  }
+
+  function getFilteredItems() {
     const q = searchQuery.trim().toLowerCase();
-    return allApps.reduce((acc, app) => {
-      // Filter versions per-card (each version is its own card)
-      const filteredVersions = (app.monitoredVersions || []).filter(ver => {
-        // Category filter
-        if (activeCategory !== 'All' && app.category !== activeCategory) return false;
+    return allItems.reduce((acc, item) => {
+      const itemType = item._source === 'base' ? item.type : 'app';
+      // Type filter
+      if (activeType !== 'All' && itemType !== activeType) return acc;
+
+      const vers = getVersionsForItem(item);
+      const filteredVers = vers.filter(ver => {
+        // Category filter — base images use "Languages" / "Frameworks"
+        if (activeCategory !== 'All' && item.category !== activeCategory) return false;
         // Status filter
-        if (activeStatus !== 'All' && (ver.lifecycleStatus || '').toUpperCase() !== activeStatus) return false;
+        if (activeStatus !== 'All' && getVersionStatus(ver) !== activeStatus) return false;
         // Search filter
         if (q) {
+          const appCves  = item._source === 'base'
+            ? (ver.topCves || [])
+            : [...(ver.topAppCves || []), ...(ver.topSystemCves || [])];
           const haystack = [
-            app.name, app.id, app.category, ver.tag,
-            ...(ver.topAppCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
-            ...(ver.topSystemCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
+            item.name, item.id, item.category,
+            ver.tag,
+            ver.versionLabel || '',
+            item.icon || '',
+            ...appCves.map(c => c.id + ' ' + c.pkg + ' ' + (c.title || '')),
           ].join(' ').toLowerCase();
           if (!haystack.includes(q)) return false;
         }
         return true;
       });
-      if (filteredVersions.length > 0) {
-        acc.push({ ...app, monitoredVersions: filteredVersions });
+
+      if (filteredVers.length > 0) {
+        const key = item._source === 'base' ? 'versions' : 'monitoredVersions';
+        acc.push({ ...item, [key]: filteredVers });
       }
       return acc;
     }, []);
   }
 
-  function sortApps(apps) {
-    return [...apps].sort((a, b) => {
-      const av = a.monitoredVersions?.[0] || {};
-      const bv = b.monitoredVersions?.[0] || {};
-      const aVuln = av.vulnerabilities || {};
-      const bVuln = bv.vulnerabilities || {};
-      const aUp = aVuln.upstream || aVuln;
-      const bUp = bVuln.upstream || bVuln;
+  function sortItems(items) {
+    return [...items].sort((a, b) => {
+      const aVers  = getVersionsForItem(a);
+      const bVers  = getVersionsForItem(b);
+      const av     = aVers[0] || {};
+      const bv     = bVers[0] || {};
+      const aType  = a._source === 'base' ? a.type : 'app';
+      const bType  = b._source === 'base' ? b.type : 'app';
+      const aTot   = getVersionVulnTotals(av, aType);
+      const bTot   = getVersionVulnTotals(bv, bType);
 
       switch (sortMode) {
         case 'posture':
@@ -1125,21 +1349,9 @@ npx serve .
               || a.name.localeCompare(b.name);
         case 'name':
           return a.name.localeCompare(b.name);
-        case 'total-desc': {
-          const at = (aUp.system?.total||0) + (aUp.app?.total||0);
-          const bt = (bUp.system?.total||0) + (bUp.app?.total||0);
-          return bt - at;
-        }
-        case 'total-asc': {
-          const at = (aUp.system?.total||0) + (aUp.app?.total||0);
-          const bt = (bUp.system?.total||0) + (bUp.app?.total||0);
-          return at - bt;
-        }
-        case 'critical': {
-          const ac = (aUp.system?.critical||0) + (aUp.app?.critical||0);
-          const bc = (bUp.system?.critical||0) + (bUp.app?.critical||0);
-          return bc - ac;
-        }
+        case 'total-desc': return bTot.total    - aTot.total;
+        case 'total-asc':  return aTot.total    - bTot.total;
+        case 'critical':   return bTot.critical - aTot.critical;
         default: return 0;
       }
     });
@@ -1147,77 +1359,112 @@ npx serve .
 
   /* ── Render cards ────────────────────────────────────────── */
   function renderCards() {
-    const filtered = sortApps(getFilteredApps());
-    const grid = document.getElementById('cards-grid');
-    const noRes = document.getElementById('no-results');
-    const count = document.getElementById('results-count');
+    const filtered   = sortItems(getFilteredItems());
+    const grid       = document.getElementById('cards-grid');
+    const noRes      = document.getElementById('no-results');
+    const countEl    = document.getElementById('results-count');
 
-    grid.innerHTML = filtered.map(app => buildCard(app)).join('');
-    // Count total visible cards (one per version)
-    const totalCards = filtered.reduce((s, a) => s + (a.monitoredVersions || []).length, 0);
+    grid.innerHTML   = filtered.map(item => buildCard(item)).join('');
+
+    const totalCards = filtered.reduce((s, item) => s + getVersionsForItem(item).length, 0);
     noRes.classList.toggle('hidden', totalCards > 0);
-    count.textContent = `${totalCards} version${totalCards !== 1 ? 's' : ''} · ${filtered.length} app${filtered.length !== 1 ? 's' : ''}`;
+    countEl.textContent = `${totalCards} version${totalCards !== 1 ? 's' : ''} · ${filtered.length} image${filtered.length !== 1 ? 's' : ''}`;
   }
 
-  /* ── Render filter tabs ─────────────────────────────────── */
-  function renderTabs(categories) {
+  /* ── Render type tabs ────────────────────────────────────── */
+  function renderTypeTabs() {
+    const container = document.getElementById('type-tabs');
+    const types = [
+      { key: 'All',       label: 'All',        icon: '📋' },
+      { key: 'language',  label: 'Languages',   icon: '⬡'  },
+      { key: 'framework', label: 'Frameworks',  icon: '🔷' },
+      { key: 'app',       label: 'App Patches', icon: '📦' },
+    ];
+    container.innerHTML = types.map(t => {
+      let count;
+      if (t.key === 'All') {
+        count = allItems.reduce((s, i) => s + getVersionsForItem(i).length, 0);
+      } else {
+        const itemType = t.key;
+        count = allItems
+          .filter(i => (i._source === 'base' ? i.type : 'app') === itemType)
+          .reduce((s, i) => s + getVersionsForItem(i).length, 0);
+      }
+      return `<button class="type-btn ${t.key === activeType ? 'active' : ''}"
+                      data-type="${t.key}"
+                      onclick="setType(${JSON.stringify(t.key)})">
+        ${t.icon} ${t.label}<span class="type-count">${count}</span>
+      </button>`;
+    }).join('');
+  }
+
+  /* ── Render category tabs ────────────────────────────────── */
+  function renderTabs() {
     const container = document.getElementById('filter-tabs');
+    // Only show categories for current type filter
+    const visible = allItems.filter(i =>
+      activeType === 'All' || (i._source === 'base' ? i.type : 'app') === activeType
+    );
+    const categories = [...new Set(visible.map(i => i.category))].sort();
     const all = ['All', ...categories];
+
     container.innerHTML = all.map(cat => {
       const count = cat === 'All'
-        ? allApps.reduce((s, a) => s + (a.monitoredVersions || []).length, 0)
-        : allApps.filter(a => a.category === cat)
-                 .reduce((s, a) => s + (a.monitoredVersions || []).length, 0);
+        ? visible.reduce((s, i) => s + getVersionsForItem(i).length, 0)
+        : visible.filter(i => i.category === cat)
+                 .reduce((s, i) => s + getVersionsForItem(i).length, 0);
       return `<button class="tab-btn ${cat === activeCategory ? 'active' : ''}"
                       data-cat="${escHtml(cat)}"
                       onclick="setCategory(${JSON.stringify(cat)})">${escHtml(cat)}<span class="tab-count">${count}</span></button>`;
     }).join('');
   }
 
-  /* ── Render summary stats ────────────────────────────────── */
-  function renderStats(summary, apps) {
-    // Count from live data for accuracy
-    let criticalApps = 0, highApps = 0, cleanApps = 0, totalVersions = 0;
-    apps.forEach(app => {
-      app.monitoredVersions?.forEach(v => {
+  /* ── Render stats ────────────────────────────────────────── */
+  function renderStats() {
+    let criticalCount = 0, highCount = 0, cleanCount = 0, totalVersions = 0, totalImages = 0;
+
+    allItems.forEach(item => {
+      totalImages++;
+      const vers   = getVersionsForItem(item);
+      const iType  = item._source === 'base' ? item.type : 'app';
+      vers.forEach(ver => {
         totalVersions++;
-        const vuln = v.vulnerabilities || {};
-        const appCves = (vuln.upstream || vuln).app || {};
-        const sysCves = (vuln.upstream || vuln).system || {};
-        const totalCves = (appCves.total || 0) + (sysCves.total || 0);
-        if (appCves.critical > 0) criticalApps++;
-        else if (appCves.high > 0) highApps++;
-        else if (totalCves === 0) cleanApps++;
+        const vuln = ver.vulnerabilities || {};
+        const up   = iType === 'app' ? (vuln.upstream || vuln) : vuln;
+        const sys  = up.system || {};
+        const apv  = up.app    || {};
+        const tot  = (sys.total || 0) + (apv.total || 0);
+        if (apv.critical > 0 || sys.critical > 0) criticalCount++;
+        else if (apv.high > 0 || sys.high > 0)    highCount++;
+        else if (tot === 0)                        cleanCount++;
       });
     });
 
-    document.getElementById('stat-apps').textContent     = summary.totalApplications ?? apps.length;
-    document.getElementById('stat-versions').textContent = summary.totalMonitoredVersions ?? totalVersions;
-    document.getElementById('stat-critical').textContent = criticalApps;
-    document.getElementById('stat-high').textContent     = highApps;
-    document.getElementById('stat-clean').textContent    = cleanApps;
+    document.getElementById('stat-images').textContent   = totalImages;
+    document.getElementById('stat-versions').textContent = totalVersions;
+    document.getElementById('stat-critical').textContent = criticalCount;
+    document.getElementById('stat-high').textContent     = highCount;
+    document.getElementById('stat-clean').textContent    = cleanCount;
   }
 
   /* ── Render header meta ──────────────────────────────────── */
-  function renderHeaderMeta(summary) {
-    const scanDate = summary.generatedAt
-      ? new Date(summary.generatedAt).toLocaleString('en-US', {
-          dateStyle: 'long', timeStyle: 'short'
-        })
-      : 'Unknown';
+  function renderHeaderMeta(patchSummary, baseSummary) {
+    const latest = patchSummary.generatedAt > (baseSummary?.generatedAt || '')
+      ? patchSummary.generatedAt : (baseSummary?.generatedAt || patchSummary.generatedAt);
+    const scanDate = new Date(latest).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' });
     document.getElementById('last-scan-text').textContent = `Last scan: ${scanDate}`;
     document.getElementById('header-meta').innerHTML = `
       <div class="meta-badge">
         <svg width="12" height="12" viewBox="0 0 16 16" fill="var(--muted)">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
         </svg>
-        Scanner: ${escHtml(summary.scanner || 'Aqua Trivy')}
+        Scanner: Aqua Trivy
       </div>
       <div class="meta-badge">
         <svg width="12" height="12" viewBox="0 0 16 16" fill="var(--muted)">
           <path d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-3v-4H6.5v4h-3A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm-6.354-.354a.5.5 0 0 0 0 .707L2.5 4.5V13.5A2.5 2.5 0 0 0 5 16h2.5v-4h1V16H11a2.5 2.5 0 0 0 2.5-2.5V4.5l.854-.854a.5.5 0 0 0-.708-.707L8 8.086 1.646 2.939a.5.5 0 0 0-.708 0z"/>
         </svg>
-        Policy: ${escHtml(summary.supportWindowPolicy || 'N-4')}
+        Policy: ${escHtml(patchSummary.supportWindowPolicy || 'N-4')}
       </div>
     `;
   }
@@ -1231,24 +1478,40 @@ npx serve .
     btn.classList.toggle('open', open);
   };
 
+  /* ── Set type ────────────────────────────────────────────── */
+  window.setType = function (type) {
+    activeType     = type;
+    activeCategory = 'All'; // reset category when changing type
+    renderTypeTabs();
+    renderTabs();
+    renderCards();
+  };
+
   /* ── Set category ────────────────────────────────────────── */
   window.setCategory = function (cat) {
     activeCategory = cat;
-    // Re-render tabs (active state is set via activeCategory in renderTabs)
-    const categories = [...new Set(allApps.map(a => a.category))].sort();
-    renderTabs(categories);
+    renderTabs();
     renderCards();
   };
 
   /* ── Init ────────────────────────────────────────────────── */
-  function init(data) {
-    allApps = data.applications || [];
-    const summary = data.summary || {};
-    const categories = [...new Set(allApps.map(a => a.category))].sort();
+  function init(patchData, baseData) {
+    // Tag patch apps with _source
+    const patchApps = (patchData.applications || []).map(a => ({ ...a, _source: 'patch' }));
+    // Tag base images with _source
+    const baseImages = (baseData?.baseImages  || []).map(i => ({ ...i, _source: 'base'  }));
 
-    renderHeaderMeta(summary);
-    renderStats(summary, allApps);
-    renderTabs(categories);
+    // Merge: base images first (languages, then frameworks), then patch apps
+    allItems = [
+      ...baseImages.filter(i => i.type === 'language'),
+      ...baseImages.filter(i => i.type === 'framework'),
+      ...patchApps,
+    ];
+
+    renderHeaderMeta(patchData.summary || {}, baseData?.summary || null);
+    renderStats();
+    renderTypeTabs();
+    renderTabs();
     renderCards();
 
     // Show dashboard
@@ -1260,34 +1523,29 @@ npx serve .
     const sortEl   = document.getElementById('sort-select');
     const statusEl = document.getElementById('status-select');
 
-    searchEl.addEventListener('input', () => {
-      searchQuery = searchEl.value;
-      renderCards();
-    });
-    sortEl.addEventListener('change', () => {
-      sortMode = sortEl.value;
-      renderCards();
-    });
-    statusEl.addEventListener('change', () => {
-      activeStatus = statusEl.value;
-      renderCards();
-    });
+    searchEl.addEventListener('input', () => { searchQuery = searchEl.value; renderCards(); });
+    sortEl.addEventListener('change',  () => { sortMode    = sortEl.value;   renderCards(); });
+    statusEl.addEventListener('change',() => { activeStatus = statusEl.value; renderCards(); });
   }
 
-  /* ── Fetch data ──────────────────────────────────────────── */
-  const RAW_URL = 'https://raw.githubusercontent.com/pfnapp/base-images/main/report.json';
-
-  fetch(RAW_URL)
-    .then(r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.json();
-    })
-    .then(data => init(data))
-    .catch(err => {
-      console.error('Failed to load report.json:', err);
+  /* ── Fetch both JSONs in parallel ────────────────────────── */
+  Promise.allSettled([
+    fetch(REPORT_URL).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }),
+    fetch(BASE_URL).then(r  => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }),
+  ]).then(([patchResult, baseResult]) => {
+    if (patchResult.status === 'rejected') {
+      console.error('Failed to load report.json:', patchResult.reason);
       document.getElementById('loading-state').classList.add('hidden');
       document.getElementById('error-state').classList.remove('hidden');
-    });
+      return;
+    }
+    const patchData = patchResult.value;
+    const baseData  = baseResult.status === 'fulfilled' ? baseResult.value : null;
+    if (baseResult.status === 'rejected') {
+      console.warn('base-report.json not yet available — showing patch apps only:', baseResult.reason);
+    }
+    init(patchData, baseData);
+  });
 
 })();
 </script>
