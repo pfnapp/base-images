@@ -1,0 +1,60 @@
+name: App Upstream Release Check
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: app-upstream-release-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Check latest application releases
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check latest upstream releases
+        run: node scripts/upstream-observatory.js --check-releases
+
+      - name: Commit updated release window
+        id: commit
+        run: |
+          if git diff --quiet -- observatory.json; then
+            echo "No new upstream releases."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add observatory.json
+          git commit -m "chore(observatory): track latest upstream releases"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with GITHUB_TOKEN do not start another workflow, so trigger
+      # the existing hardened-image build explicitly when a release was added.
+      - name: Trigger hardened image build
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run build-pfnapp-patches.yml --ref main

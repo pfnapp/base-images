@@ -30,9 +30,9 @@ if (!fs.existsSync(SCAN_DETAILS_DIR)) {
   fs.mkdirSync(SCAN_DETAILS_DIR, { recursive: true });
 }
 
-function fetchJson(url) {
+function fetchJson(url, headers = {}) {
   return new Promise((resolve, reject) => {
-    const req = https.get(url, { headers: { 'User-Agent': 'pfnapp-observatory/1.0' } }, (res) => {
+    const req = https.get(url, { headers: { 'User-Agent': 'pfnapp-observatory/1.0', ...headers } }, (res) => {
       if (res.statusCode < 200 || res.statusCode >= 300) {
         return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
       }
@@ -71,12 +71,106 @@ function compareSemver(a, b) {
 
 async function getUpstreamDockerHubTags(imageName) {
   try {
-    const url = `https://registry.hub.docker.com/v2/repositories/${imageName}/tags?page_size=50`;
+    const url = `https://registry.hub.docker.com/v2/repositories/${imageName}/tags?page_size=100&ordering=last_updated`;
     const data = await fetchJson(url);
     return (data.results || []).map((r) => r.name);
   } catch (err) {
     console.warn(`  ⚠️ Could not fetch remote tags for ${imageName}: ${err.message}`);
     return [];
+  }
+}
+
+async function getUpstreamGhcrTags(imageName) {
+  try {
+    const tokenUrl = `https://ghcr.io/token?scope=${encodeURIComponent(`repository:${imageName}:pull`)}`;
+    const tokenData = await fetchJson(tokenUrl);
+    const token = tokenData.token || tokenData.access_token;
+    if (!token) throw new Error('GHCR did not return a pull token');
+
+    // One small page is enough for release discovery; we deliberately do not
+    // mirror or retain the registry's complete tag history.
+    const data = await fetchJson(`https://ghcr.io/v2/${imageName}/tags/list?n=100`, {
+      Authorization: `Bearer ${token}`
+    });
+    return data.tags || [];
+  } catch (err) {
+    console.warn(`  ⚠️ Could not fetch remote tags for ghcr.io/${imageName}: ${err.message}`);
+    return [];
+  }
+}
+
+async function getUpstreamTags(app) {
+  if (app.registry === 'docker.io') return getUpstreamDockerHubTags(app.image);
+  if (app.registry === 'ghcr.io') return getUpstreamGhcrTags(app.image);
+  console.warn(`  ⚠️ Unsupported registry for ${app.name}: ${app.registry}`);
+  return [];
+}
+
+async function discoverLatestRelease(app) {
+  if (!app.tag_pattern) return null;
+
+  const pattern = new RegExp(app.tag_pattern);
+  const tags = await getUpstreamTags(app);
+  const validTags = tags.filter((tag) => pattern.test(tag));
+  if (validTags.length === 0) return null;
+
+  return validTags.reduce((latest, tag) => compareSemver(tag, latest) > 0 ? tag : latest);
+}
+
+function updateReleaseWindow(app, latestTag, maxActive, now) {
+  if (!latestTag) return { changed: false, dropped: [] };
+
+  const currentLatest = app.active_versions?.[0];
+  if (currentLatest && compareSemver(latestTag, currentLatest) <= 0) {
+    return { changed: false, dropped: [] };
+  }
+
+  if (!app.active_versions) app.active_versions = [];
+  app.active_versions = [latestTag, ...app.active_versions.filter((tag) => tag !== latestTag)];
+
+  const dropped = [];
+  while (app.active_versions.length > maxActive) {
+    const tag = app.active_versions.pop();
+    dropped.push(tag);
+    if (!app.deprecated_versions) app.deprecated_versions = [];
+    app.deprecated_versions.unshift({
+      tag,
+      droppedAt: now.split('T')[0],
+      advisory: `UNSUPPORTED: Version fell outside the ${maxActive}-release support window. Upgrade to ${latestTag} immediately.`
+    });
+  }
+
+  return { changed: true, previousLatest: currentLatest || null, dropped };
+}
+
+async function checkReleasesOnly() {
+  console.log('🔎 Checking latest upstream application releases...');
+  const config = JSON.parse(fs.readFileSync(TRACKED_CONFIG_FILE, 'utf8'));
+  const maxActive = config.policy?.max_active_versions || 5;
+  const now = new Date().toISOString();
+  let changedCount = 0;
+
+  for (const app of config.applications) {
+    const latestTag = await discoverLatestRelease(app);
+    if (!latestTag) {
+      console.log(`  ⚠️ ${app.name}: no matching release tag found`);
+      continue;
+    }
+
+    const result = updateReleaseWindow(app, latestTag, maxActive, now);
+    if (result.changed) {
+      changedCount++;
+      console.log(`  ✨ ${app.name}: ${result.previousLatest || 'none'} → ${latestTag}`);
+    } else {
+      console.log(`  ✅ ${app.name}: ${app.active_versions[0]}`);
+    }
+  }
+
+  if (changedCount > 0) {
+    fs.writeFileSync(TRACKED_CONFIG_FILE, JSON.stringify(config, null, 2) + '\n');
+    console.log(`💾 Updated observatory.json (${changedCount} application(s))`);
+  } else {
+    console.log('✅ No new upstream releases detected.');
   }
 }
 
@@ -348,36 +442,14 @@ async function main() {
   for (const app of config.applications) {
     console.log(`\n📦 Processing ${app.name} (${app.image})...`);
 
-    // 1. Check upstream tags if pattern defined
-    if (app.tag_pattern && app.registry === 'docker.io') {
-      const pattern = new RegExp(app.tag_pattern);
-      const upstreamTags = await getUpstreamDockerHubTags(app.image);
-      const validTags = upstreamTags.filter((t) => pattern.test(t));
-
-      if (validTags.length > 0 && app.active_versions.length > 0) {
-        const currentLatest = app.active_versions[0];
-        const newerTags = validTags.filter(
-          (t) => compareSemver(t, currentLatest) > 0 && !app.active_versions.includes(t)
-        );
-        newerTags.sort(compareSemver);
-
-        for (const newerTag of newerTags) {
-          console.log(`  ✨ New version detected upstream: ${newerTag}`);
-          app.active_versions.unshift(newerTag);
-        }
+    // 1. Check only the latest matching release and update the sliding window.
+    const latestTag = await discoverLatestRelease(app);
+    const releaseUpdate = updateReleaseWindow(app, latestTag, maxActive, now);
+    if (releaseUpdate.changed) {
+      console.log(`  ✨ New version detected upstream: ${latestTag}`);
+      for (const dropped of releaseUpdate.dropped) {
+        console.log(`  🚪 Dropping older version ${dropped} out of active support window...`);
       }
-    }
-
-    // 2. Enforce 5-version sliding window
-    while (app.active_versions.length > maxActive) {
-      const dropped = app.active_versions.pop();
-      console.log(`  🚪 Dropping older version ${dropped} out of active support window...`);
-      if (!app.deprecated_versions) app.deprecated_versions = [];
-      app.deprecated_versions.unshift({
-        tag: dropped,
-        droppedAt: now.split('T')[0],
-        advisory: `UNSUPPORTED: Version fell outside the ${maxActive}-release support window. Upgrade to ${app.active_versions[0]} immediately.`
-      });
     }
 
     const appEntry = {
@@ -617,7 +689,9 @@ function generateMarkdownReport(data) {
   fs.writeFileSync(REPORT_MD_FILE, md);
 }
 
-main().catch((err) => {
+const command = process.argv.includes('--check-releases') ? checkReleasesOnly : main;
+
+command().catch((err) => {
   console.error('Fatal error in upstream observatory:', err);
   process.exit(1);
 });
