@@ -14,6 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const https = require('https');
 
 const ROOT_DIR  = path.join(__dirname, '..');
 const CACHE_DIR = path.join(ROOT_DIR, '.cache');
@@ -29,8 +30,53 @@ if (!fs.existsSync(SCAN_DETAILS_DIR)) {
 }
 
 // ---------------------------------------------------------------------------
+// EOL product mapping
+// ---------------------------------------------------------------------------
+
+const EOL_PRODUCT_MAP = {
+  node:   'nodejs',
+  php:    'php',
+  python: 'python',
+  go:     'go',
+  java:   'eclipse-temurin',
+  bun:    'bun',
+};
+
+// ---------------------------------------------------------------------------
 // Utility helpers (same patterns as upstream-observatory.js)
 // ---------------------------------------------------------------------------
+
+/**
+ * Fetches EOL release data from endoflife.date for a given product ID.
+ * Returns a Map keyed by release name (e.g. "22", "8.3", "1.23").
+ */
+function fetchEolData(productId) {
+  return new Promise((resolve) => {
+    const url = `https://endoflife.date/api/v1/products/${productId}`;
+    https.get(url, { headers: { 'accept': '*/*' } }, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        try {
+          const data = JSON.parse(body);
+          const releases = data?.result?.releases || [];
+          const map = new Map();
+          for (const r of releases) {
+            if (r.name) map.set(r.name, r);
+          }
+          console.log(`  📅 EOL data loaded for ${productId}: ${map.size} releases`);
+          resolve(map);
+        } catch (e) {
+          console.warn(`  ⚠️  Failed to parse EOL data for ${productId}: ${e.message}`);
+          resolve(new Map());
+        }
+      });
+    }).on('error', (e) => {
+      console.warn(`  ⚠️  Failed to fetch EOL data for ${productId}: ${e.message}`);
+      resolve(new Map());
+    });
+  });
+}
 
 function isCommandAvailable(cmd) {
   try {
@@ -293,7 +339,7 @@ function versionLabel(tag) {
 // Build a scanned version entry
 // ---------------------------------------------------------------------------
 
-function buildVersionEntry(imageId, imageRef, tag, lifecycleStatus, lifecycleBadge, securityManifest, now) {
+function buildVersionEntry(imageId, imageRef, tag, lifecycleStatus, lifecycleBadge, securityManifest, now, eolInfo = null) {
   const trivyResult = runTrivyScan(imageRef);
   const vulns       = trivyResult ? parseVulnerabilities(trivyResult) : { system: makeVulnBucket(), app: makeVulnBucket(), topCves: [] };
 
@@ -340,7 +386,16 @@ function buildVersionEntry(imageId, imageRef, tag, lifecycleStatus, lifecycleBad
     topCves:    vulns.topCves,
     posture:    posture.label,
     postureBadge: posture.badge,
-    scannedAt:  now
+    scannedAt:  now,
+    eol: {
+      date:            eolInfo?.eolFrom ?? null,
+      isEol:           eolInfo ? !eolInfo.isMaintained : false,
+      isLts:           eolInfo?.isLts ?? false,
+      ltsFrom:         eolInfo?.ltsFrom ?? null,
+      latestPatch:     eolInfo?.latest?.name ?? null,
+      latestPatchDate: eolInfo?.latest?.date ?? null,
+      source:          eolInfo ? 'endoflife.date' : null,
+    }
   };
 }
 
@@ -353,6 +408,15 @@ async function main() {
 
   const matrix = JSON.parse(fs.readFileSync(MATRIX_FILE, 'utf8'));
   const now    = new Date().toISOString();
+
+  // Fetch all EOL data in parallel before scanning
+  console.log('\n📅 Fetching EOL data from endoflife.date...');
+  const eolCache = {}; // { [runtimeId]: Map<name, release> }
+  await Promise.all(
+    Object.entries(EOL_PRODUCT_MAP).map(async ([runtimeId, productId]) => {
+      eolCache[runtimeId] = await fetchEolData(productId);
+    })
+  );
 
   const baseImages = [];
 
@@ -382,8 +446,18 @@ async function main() {
       const imageRef = buildLanguageImageRef(id, version);
       const tag      = imageRef.split(':')[1]; // e.g. "22-alpine", "3.12-slim"
       const lc       = getLifecycleStatus(version, spec);
+
+      const eolMap  = eolCache[id] || new Map();
+      const eolInfo = eolMap.get(version) || null;
+
       console.log(`  📌 ${imageRef} [${lc.status}]`);
-      const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now);
+      const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now, eolInfo);
+
+      if (eolInfo && !eolInfo.isMaintained) {
+        entry.lifecycleStatus = 'EOL';
+        entry.lifecycleBadge  = '🔴';
+      }
+
       versionEntries.push(entry);
     }
 
@@ -417,7 +491,7 @@ async function main() {
       // Vite uses a single :latest image
       const imageRef = buildFrameworkImageRef(id, null);
       console.log(`  📌 ${imageRef} [LATEST]`);
-      const entry = buildVersionEntry(id, imageRef, 'latest', 'LATEST', '🟢', secSetting, now);
+      const entry = buildVersionEntry(id, imageRef, 'latest', 'LATEST', '🟢', secSetting, now, null);
       versionEntries.push(entry);
     } else {
       // Collect unique runtime versions across all compatibility_matrix entries
@@ -436,8 +510,17 @@ async function main() {
         const parentSpec      = matrix.runtimes[parentRuntimeId] || {};
         const lc              = getLifecycleStatus(runtimeVersion, parentSpec);
 
+        const parentEolMap = eolCache[parentRuntimeId] || new Map();
+        const eolInfo      = parentEolMap.get(runtimeVersion) || null;
+
         console.log(`  📌 ${imageRef} [${lc.status}]`);
-        const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now);
+        const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now, eolInfo);
+
+        if (eolInfo && !eolInfo.isMaintained) {
+          entry.lifecycleStatus = 'EOL';
+          entry.lifecycleBadge  = '🔴';
+        }
+
         versionEntries.push(entry);
       }
     }
