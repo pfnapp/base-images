@@ -86,6 +86,7 @@ jobs:
           if [ -n "$(git status --porcelain REPORT.md observatory.json)" ]; then
             git add REPORT.md observatory.json
             git commit -m "chore(observatory): nightly upstream security report [skip ci]"
+            git pull --rebase origin main
             git push origin main
           else
             echo "No changes in observatory state, skipping commit."
