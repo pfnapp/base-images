@@ -1024,7 +1024,7 @@ npx serve .
     const uid   = prefix + '-cve-list';
     const btnId = prefix + '-cve-btn';
     return `<div class="card-footer">
-      <button class="collapsible-btn" id="${btnId}" onclick="toggleCveList('${btnId}','${uid}')">
+      <button class="collapsible-btn" id="${btnId}" data-cve-btn="${btnId}" data-cve-list="${uid}">
         <span>🔍 Top ${label} CVEs (${Math.min(cves.length, 5)} shown)</span>
         <svg class="chevron" width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
           <path d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -1391,11 +1391,14 @@ npx serve .
           .reduce((s, i) => s + getVersionsForItem(i).length, 0);
       }
       return `<button class="type-btn ${t.key === activeType ? 'active' : ''}"
-                      data-type="${t.key}"
-                      onclick="setType(${JSON.stringify(t.key)})">
+                      data-type="${t.key}">
         ${t.icon} ${t.label}<span class="type-count">${count}</span>
       </button>`;
     }).join('');
+    // Wire up click handlers via addEventListener (avoids inline onclick / CSP issues)
+    container.querySelectorAll('.type-btn').forEach(btn => {
+      btn.addEventListener('click', () => setType(btn.dataset.type));
+    });
   }
 
   /* ── Render category tabs ────────────────────────────────── */
@@ -1414,9 +1417,12 @@ npx serve .
         : visible.filter(i => i.category === cat)
                  .reduce((s, i) => s + getVersionsForItem(i).length, 0);
       return `<button class="tab-btn ${cat === activeCategory ? 'active' : ''}"
-                      data-cat="${escHtml(cat)}"
-                      onclick="setCategory(${JSON.stringify(cat)})">${escHtml(cat)}<span class="tab-count">${count}</span></button>`;
+                      data-cat="${escHtml(cat)}">${escHtml(cat)}<span class="tab-count">${count}</span></button>`;
     }).join('');
+    // Wire up click handlers via addEventListener (avoids inline onclick / CSP issues)
+    container.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => setCategory(btn.dataset.cat));
+    });
   }
 
   /* ── Render stats ────────────────────────────────────────── */
@@ -1470,29 +1476,29 @@ npx serve .
   }
 
   /* ── Toggle CVE collapsible ──────────────────────────────── */
-  window.toggleCveList = function (btnId, listId) {
+  function toggleCveList(btnId, listId) {
     const btn  = document.getElementById(btnId);
     const list = document.getElementById(listId);
     if (!btn || !list) return;
     const open = list.classList.toggle('open');
     btn.classList.toggle('open', open);
-  };
+  }
 
   /* ── Set type ────────────────────────────────────────────── */
-  window.setType = function (type) {
+  function setType(type) {
     activeType     = type;
     activeCategory = 'All'; // reset category when changing type
     renderTypeTabs();
     renderTabs();
     renderCards();
-  };
+  }
 
   /* ── Set category ────────────────────────────────────────── */
-  window.setCategory = function (cat) {
+  function setCategory(cat) {
     activeCategory = cat;
     renderTabs();
     renderCards();
-  };
+  }
 
   /* ── Init ────────────────────────────────────────────────── */
   function init(patchData, baseData) {
@@ -1526,6 +1532,13 @@ npx serve .
     searchEl.addEventListener('input', () => { searchQuery = searchEl.value; renderCards(); });
     sortEl.addEventListener('change',  () => { sortMode    = sortEl.value;   renderCards(); });
     statusEl.addEventListener('change',() => { activeStatus = statusEl.value; renderCards(); });
+
+    // Event delegation for CVE collapsible buttons (avoids inline onclick / CSP issues)
+    document.getElementById('cards-grid').addEventListener('click', e => {
+      const btn = e.target.closest('[data-cve-btn]');
+      if (!btn) return;
+      toggleCveList(btn.dataset.cveBtn, btn.dataset.cveList);
+    });
   }
 
   /* ── Fetch both JSONs in parallel ────────────────────────── */
