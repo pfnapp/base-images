@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-09-21T17:50:04.601Z",
+  "generatedAt": "2026-09-21T20:21:13.367Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
-    "totalVersions": 32,
-    "criticalCount": 29,
-    "highCount": 944,
-    "cleanCount": 21
+    "totalVersions": 33,
+    "criticalCount": 20,
+    "highCount": 844,
+    "cleanCount": 23
   },
   "baseImages": [
     {
@@ -18,9 +18,9 @@
       "icon": "⬡",
       "versions": [
         {
-          "tag": "20-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/languages/node:20-alpine",
-          "versionLabel": "20",
+          "tag": "22-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/languages/node:22-alpine",
+          "versionLabel": "22",
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "security": {
@@ -39,28 +39,19 @@
               "total": 0
             },
             "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
+              "critical": 0,
+              "high": 4,
+              "medium": 5,
+              "low": 0,
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [
             {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
               "id": "CVE-2026-14257",
               "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
+              "installedVersion": "5.0.7",
               "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
               "severity": "HIGH",
               "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
@@ -69,39 +60,111 @@
             {
               "id": "CVE-2026-69152",
               "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
+              "installedVersion": "5.0.7",
               "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
               "severity": "HIGH",
               "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
               "layer": "app"
             },
             {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.2.0",
+              "fixedVersion": "10.3.1",
               "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass",
               "layer": "app"
             },
             {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.19",
+              "fixedVersion": "7.5.21",
               "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive",
               "layer": "app"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
-          "tag": "22-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/languages/node:22-alpine",
-          "versionLabel": "22",
+          "tag": "24-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/languages/node:24-alpine",
+          "versionLabel": "24",
+          "lifecycleStatus": "SUPPORTED",
+          "lifecycleBadge": "🟢",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 4,
+              "medium": 5,
+              "low": 0,
+              "fixable": 9,
+              "total": 9
+            }
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.2.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.19",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "26-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/languages/node:26-alpine",
+          "versionLabel": "26",
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "security": {
@@ -120,12 +183,84 @@
               "total": 0
             },
             "app": {
-              "critical": 1,
-              "high": 10,
-              "medium": 7,
+              "critical": 0,
+              "high": 4,
+              "medium": 5,
+              "low": 0,
+              "fixable": 9,
+              "total": 9
+            }
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.2.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.19",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "18-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/languages/node:18-alpine",
+          "versionLabel": "18",
+          "lifecycleStatus": "MAINTENANCE",
+          "lifecycleBadge": "🟠",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 8,
+              "medium": 4,
               "low": 1,
-              "fixable": 19,
-              "total": 19
+              "fixable": 13,
+              "total": 13
             }
           },
           "topCves": [
@@ -175,16 +310,16 @@
               "layer": "app"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
-          "tag": "24-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/languages/node:24-alpine",
-          "versionLabel": "24",
-          "lifecycleStatus": "SUPPORTED",
-          "lifecycleBadge": "🟢",
+          "tag": "20-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/languages/node:20-alpine",
+          "versionLabel": "20",
+          "lifecycleStatus": "MAINTENANCE",
+          "lifecycleBadge": "🟠",
           "security": {
             "runAsUser": 10001,
             "runAsGroup": 10001,
@@ -212,88 +347,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
-        },
-        {
-          "tag": "18-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/languages/node:18-alpine",
-          "versionLabel": "18",
-          "lifecycleStatus": "MAINTENANCE",
-          "lifecycleBadge": "🟠",
-          "security": {
-            "runAsUser": 10001,
-            "runAsGroup": 10001,
-            "runAsRoot": false,
-            "uidLabel": "10001"
-          },
-          "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
-            },
-            "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
-            }
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-14257",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-69152",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-              "severity": "HIGH",
-              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
-              "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
-              "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
-              "layer": "app"
-            }
-          ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -337,7 +391,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.3-alpine",
@@ -372,7 +426,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.4-alpine",
@@ -407,7 +461,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.5-alpine",
@@ -442,7 +496,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "7.4-alpine",
@@ -477,7 +531,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.1-alpine",
@@ -512,7 +566,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -556,7 +610,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "1.4-alpine",
@@ -591,7 +645,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -618,8 +672,8 @@
             "system": {
               "critical": 5,
               "high": 66,
-              "medium": 125,
-              "low": 125,
+              "medium": 123,
+              "low": 127,
               "fixable": 0,
               "total": 322
             },
@@ -681,7 +735,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "3.12-slim",
@@ -699,8 +753,8 @@
             "system": {
               "critical": 5,
               "high": 66,
-              "medium": 125,
-              "low": 125,
+              "medium": 123,
+              "low": 127,
               "fixable": 0,
               "total": 322
             },
@@ -762,7 +816,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -852,7 +906,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "1.24-alpine",
@@ -933,7 +987,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -977,7 +1031,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "21-alpine",
@@ -1012,7 +1066,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ]
     },
@@ -1046,174 +1100,12 @@
               "total": 0
             },
             "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
-            }
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-14257",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-69152",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-              "severity": "HIGH",
-              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
-              "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
-              "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
-              "layer": "app"
-            }
-          ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
-        },
-        {
-          "tag": "20-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine",
-          "versionLabel": "20",
-          "lifecycleStatus": "SUPPORTED",
-          "lifecycleBadge": "🟢",
-          "security": {
-            "runAsUser": 10001,
-            "runAsGroup": 10001,
-            "runAsRoot": false,
-            "uidLabel": "10001"
-          },
-          "vulnerabilities": {
-            "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
-            },
-            "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
-            }
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-14257",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-69152",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-              "severity": "HIGH",
-              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
-              "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
-              "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
-              "layer": "app"
-            }
-          ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
-        },
-        {
-          "tag": "22-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine",
-          "versionLabel": "22",
-          "lifecycleStatus": "LATEST",
-          "lifecycleBadge": "🟢",
-          "security": {
-            "runAsUser": 10001,
-            "runAsGroup": 10001,
-            "runAsRoot": false,
-            "uidLabel": "10001"
-          },
-          "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
-            },
-            "app": {
-              "critical": 1,
-              "high": 10,
-              "medium": 7,
+              "high": 8,
+              "medium": 4,
               "low": 1,
-              "fixable": 19,
-              "total": 19
+              "fixable": 13,
+              "total": 13
             }
           },
           "topCves": [
@@ -1263,9 +1155,116 @@
               "layer": "app"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "20-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine",
+          "versionLabel": "20",
+          "lifecycleStatus": "MAINTENANCE",
+          "lifecycleBadge": "🟠",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            }
+          },
+          "topCves": [],
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "22-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine",
+          "versionLabel": "22",
+          "lifecycleStatus": "SUPPORTED",
+          "lifecycleBadge": "🟢",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 4,
+              "medium": 5,
+              "low": 0,
+              "fixable": 9,
+              "total": 9
+            }
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.2.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.19",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "24-alpine",
@@ -1300,7 +1299,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ],
       "compatibilityMatrix": {
@@ -1370,7 +1369,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.2-alpine",
@@ -1405,7 +1404,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.3-alpine",
@@ -1440,7 +1439,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.4-alpine",
@@ -1475,7 +1474,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "8.5-alpine",
@@ -1510,7 +1509,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ],
       "compatibilityMatrix": {
@@ -1579,174 +1578,12 @@
               "total": 0
             },
             "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
-            }
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-14257",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-69152",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-              "severity": "HIGH",
-              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
-              "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
-              "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
-              "layer": "app"
-            }
-          ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
-        },
-        {
-          "tag": "20-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine",
-          "versionLabel": "20",
-          "lifecycleStatus": "SUPPORTED",
-          "lifecycleBadge": "🟢",
-          "security": {
-            "runAsUser": 10001,
-            "runAsGroup": 10001,
-            "runAsRoot": false,
-            "uidLabel": "10001"
-          },
-          "vulnerabilities": {
-            "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
-            },
-            "app": {
-              "critical": 1,
-              "high": 19,
-              "medium": 6,
-              "low": 3,
-              "fixable": 29,
-              "total": 29
-            }
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-13149",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-14257",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-              "severity": "HIGH",
-              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2026-69152",
-              "pkg": "brace-expansion",
-              "installedVersion": "2.0.1",
-              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-              "severity": "HIGH",
-              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2024-21538",
-              "pkg": "cross-spawn",
-              "installedVersion": "7.0.3",
-              "fixedVersion": "7.0.5, 6.0.6",
-              "severity": "HIGH",
-              "title": "cross-spawn: regular expression denial of service",
-              "layer": "app"
-            },
-            {
-              "id": "CVE-2025-64756",
-              "pkg": "glob",
-              "installedVersion": "10.4.2",
-              "fixedVersion": "11.1.0, 10.5.0",
-              "severity": "HIGH",
-              "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames",
-              "layer": "app"
-            }
-          ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
-        },
-        {
-          "tag": "22-alpine",
-          "imageRef": "ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine",
-          "versionLabel": "22",
-          "lifecycleStatus": "LATEST",
-          "lifecycleBadge": "🟢",
-          "security": {
-            "runAsUser": 10001,
-            "runAsGroup": 10001,
-            "runAsRoot": false,
-            "uidLabel": "10001"
-          },
-          "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
-            },
-            "app": {
-              "critical": 1,
-              "high": 10,
-              "medium": 7,
+              "high": 8,
+              "medium": 4,
               "low": 1,
-              "fixable": 19,
-              "total": 19
+              "fixable": 13,
+              "total": 13
             }
           },
           "topCves": [
@@ -1796,9 +1633,116 @@
               "layer": "app"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "20-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/frameworks/nestjs:20-alpine",
+          "versionLabel": "20",
+          "lifecycleStatus": "MAINTENANCE",
+          "lifecycleBadge": "🟠",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            }
+          },
+          "topCves": [],
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
+        },
+        {
+          "tag": "22-alpine",
+          "imageRef": "ghcr.io/pfnapp/base/frameworks/nestjs:22-alpine",
+          "versionLabel": "22",
+          "lifecycleStatus": "SUPPORTED",
+          "lifecycleBadge": "🟢",
+          "security": {
+            "runAsUser": 10001,
+            "runAsGroup": 10001,
+            "runAsRoot": false,
+            "uidLabel": "10001"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
+            },
+            "app": {
+              "critical": 0,
+              "high": 4,
+              "medium": 5,
+              "low": 0,
+              "fixable": 9,
+              "total": 9
+            }
+          },
+          "topCves": [
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.7",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.2.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.19",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         },
         {
           "tag": "24-alpine",
@@ -1833,7 +1777,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ],
       "compatibilityMatrix": {
@@ -1903,7 +1847,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-09-21T17:50:04.601Z"
+          "scannedAt": "2026-09-21T20:21:13.367Z"
         }
       ],
       "compatibilityMatrix": {
