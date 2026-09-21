@@ -741,9 +741,10 @@ npx serve .
     const base = pathname.replace(/\/[^/]*$/, '/');
     return origin + base;
   })();
-  const REPORT_URL = GH_PAGES_BASE + 'report.json';
-  const BASE_URL   = GH_PAGES_BASE + 'base-report.json';
-  const DIFF_PAGE  = 'diff.html';
+  const REPORT_URL    = GH_PAGES_BASE + 'report.json';
+  const BASE_URL      = GH_PAGES_BASE + 'base-report.json';
+  const DIFF_PAGE     = 'diff.html';
+  const BASE_DIFF_PAGE = 'base-diff.html';
 
   /* ── State ─────────────────────────────────────────────── */
   let allItems       = [];
@@ -1051,10 +1052,28 @@ npx serve .
           <div class="cve-title">${escHtml(c.title||'')}</div>
         </div>`;
       }).join('');
+      // for base images, add a link to base-diff.html
+      const baseDiffLink = !isApp
+        ? `<a href="${BASE_DIFF_PAGE}?app=${encodeURIComponent(item.id)}&tag=${encodeURIComponent(ver.tag)}" class="diff-link" style="margin-top:8px;">
+             🔍 View all CVEs for ${escHtml(ver.tag)}
+           </a>`
+        : '';
       topCvesHtml = `<div class="modal-section">
-        <div class="modal-section-title">🔍 Top CVEs (upstream, up to 5 shown)</div>
+        <div class="modal-section-title">🔍 Top CVEs (up to 5 shown)</div>
         ${items}
+        ${baseDiffLink}
       </div>`;
+    } else if (!isApp) {
+      // base image with no CVEs — still show link to the full report page
+      const sys_t = ver.vulnerabilities?.system?.total || 0;
+      const app_t = ver.vulnerabilities?.app?.total    || 0;
+      if ((sys_t + app_t) > 0) {
+        topCvesHtml = `<div class="modal-section">
+          <a href="${BASE_DIFF_PAGE}?app=${encodeURIComponent(item.id)}&tag=${encodeURIComponent(ver.tag)}" class="diff-link">
+            🔍 View all ${(sys_t + app_t).toLocaleString()} CVEs for ${escHtml(ver.tag)}
+          </a>
+        </div>`;
+      }
     }
 
     /* ── Compat matrix (frameworks) ── */
