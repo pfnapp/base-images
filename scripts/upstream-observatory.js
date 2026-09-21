@@ -112,6 +112,63 @@ function runTrivyScan(imageRef) {
   }
 }
 
+function runTrivyScanPfnapp(appId, tag) {
+  const pfnRef = `ghcr.io/pfnapp/${appId}:${tag}`;
+  const cacheFile = path.join(CACHE_DIR, `pfnapp_${appId}_${tag.replace(/[^a-zA-Z0-9_.-]/g, '_')}.json`);
+  const forceRefresh = process.argv.includes('--refresh');
+
+  if (!forceRefresh && fs.existsSync(cacheFile)) {
+    try {
+      console.log(`  ⚡ Loading cached PFNApp scan for ${pfnRef}...`);
+      return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+    } catch { /* invalid cache */ }
+  }
+
+  console.log(`  🔍 Scanning PFNApp image ${pfnRef}...`);
+  try {
+    let output;
+    if (process.env.USE_DOCKER_TRIVY === 'true' || !isCommandAvailable('trivy')) {
+      output = execSync(
+        `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --scanners vuln --format json --quiet "${pfnRef}"`,
+        { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
+      );
+    } else {
+      output = execSync(
+        `trivy image --scanners vuln --format json --quiet "${pfnRef}"`,
+        { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
+      );
+    }
+    const parsed = JSON.parse(output);
+    fs.writeFileSync(cacheFile, JSON.stringify(parsed, null, 2));
+    return parsed;
+  } catch (err) {
+    if (err.message && (err.message.includes('UNAUTHORIZED') || err.message.includes('not found') || err.message.includes('manifest unknown'))) {
+      console.log(`  ⏳ PFNApp image ${pfnRef} not yet available in GHCR — skipping`);
+    } else {
+      console.warn(`  ⚠️  PFNApp scan failed for ${pfnRef}: ${err.message?.slice(0, 100)}`);
+    }
+    return null;
+  }
+}
+
+function computeReduction(upstream, pfnapp) {
+  const reduce = (a, b, key) => (b?.[key] ?? 0) - (a?.[key] ?? 0);
+  return {
+    system: {
+      critical: reduce(upstream.system, pfnapp?.system, 'critical'),
+      high:     reduce(upstream.system, pfnapp?.system, 'high'),
+      medium:   reduce(upstream.system, pfnapp?.system, 'medium'),
+      low:      reduce(upstream.system, pfnapp?.system, 'low'),
+      total:    reduce(upstream.system, pfnapp?.system, 'total'),
+    },
+    app: {
+      critical: reduce(upstream.app, pfnapp?.app, 'critical'),
+      high:     reduce(upstream.app, pfnapp?.app, 'high'),
+      total:    reduce(upstream.app, pfnapp?.app, 'total'),
+    }
+  };
+}
+
 function isCommandAvailable(cmd) {
   try {
     execSync(`which ${cmd}`, { stdio: 'ignore' });
@@ -221,7 +278,9 @@ async function main() {
     totalMonitoredVersions: 0,
     runAsRootCount: 0,
     criticalVulnerabilityCount: 0,
-    highVulnerabilityCount: 0
+    highVulnerabilityCount: 0,
+    pfnappScannedCount: 0,
+    totalCveReduction: 0
   };
 
   const applicationsReport = [];
@@ -282,10 +341,19 @@ async function main() {
       const vulns = parseVulnerabilities(trivyResult);
       const posture = determinePosture(vulns, priv);
 
+      // Scan PFNApp image
+      const pfnappTrivyResult = runTrivyScanPfnapp(app.id, tag);
+      const pfnappVulns = pfnappTrivyResult ? parseVulnerabilities(pfnappTrivyResult) : null;
+      const reduction = pfnappVulns ? computeReduction(vulns, pfnappVulns) : null;
+
       summary.totalMonitoredVersions++;
       if (priv.runAsRoot) summary.runAsRootCount++;
       summary.criticalVulnerabilityCount += vulns.app.critical;
       summary.highVulnerabilityCount += vulns.app.high;
+      if (pfnappVulns) {
+        summary.pfnappScannedCount = (summary.pfnappScannedCount || 0) + 1;
+        summary.totalCveReduction += (reduction.system.critical + reduction.system.high);
+      }
 
       appEntry.monitoredVersions.push({
         tag,
@@ -300,26 +368,32 @@ async function main() {
           uidLabel: priv.uidLabel
         },
         vulnerabilities: {
-          system: {
-            critical: vulns.system.critical,
-            high: vulns.system.high,
-            medium: vulns.system.medium,
-            low: vulns.system.low,
-            fixable: vulns.system.fixable,
-            total: vulns.system.total,
-            note: 'OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build'
+          upstream: {
+            system: {
+              critical: vulns.system.critical,
+              high: vulns.system.high,
+              medium: vulns.system.medium,
+              low: vulns.system.low,
+              fixable: vulns.system.fixable,
+              total: vulns.system.total,
+            },
+            app: {
+              critical: vulns.app.critical,
+              high: vulns.app.high,
+              medium: vulns.app.medium,
+              low: vulns.app.low,
+              fixable: vulns.app.fixable,
+              total: vulns.app.total,
+            }
           },
-          app: {
-            critical: vulns.app.critical,
-            high: vulns.app.high,
-            medium: vulns.app.medium,
-            low: vulns.app.low,
-            fixable: vulns.app.fixable,
-            total: vulns.app.total,
-            note: 'Application dependencies — only fixable by upstream maintainer releasing a new version'
-          }
+          pfnapp: pfnappVulns ? {
+            scanned: true,
+            system: pfnappVulns.system,
+            app:    pfnappVulns.app,
+          } : { scanned: false },
+          reduction: reduction,
         },
-        topAppCves: vulns.app.topCves,
+        topAppCves:    vulns.app.topCves,
         topSystemCves: vulns.system.topCves,
         posture: posture.label,
         postureBadge: posture.badge,
@@ -361,13 +435,15 @@ function generateMarkdownReport(data) {
   const rootPct = summary.totalMonitoredVersions > 0 ? Math.round((summary.runAsRootCount / summary.totalMonitoredVersions) * 100) : 0;
   md += `- **Images Running As Root:** \`${summary.runAsRootCount}\` / \`${summary.totalMonitoredVersions}\` (⚠️ **${rootPct}%** non-compliant)\n`;
   md += `- **App Critical CVEs** _(upstream, unfixable by us)_**:** \`${summary.criticalVulnerabilityCount}\`\n`;
-  md += `- **App High CVEs** _(upstream, unfixable by us)_**:** \`${summary.highVulnerabilityCount}\`\n\n`;
+  md += `- **App High CVEs** _(upstream, unfixable by us)_**:** \`${summary.highVulnerabilityCount}\`\n`;
+  md += `- **PFNApp Images Scanned:** \`${summary.pfnappScannedCount}\` / \`${summary.totalMonitoredVersions}\`\n`;
+  md += `- **Total System CVE Reduction:** \`${summary.totalCveReduction}\`\n\n`;
   md += '> **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.\n\n';
 
   md += '---\n\n';
   md += '## 📋 Active Support Window (Max 5 Versions per Application)\n\n';
-  md += '| Application | Category | Version | Lifecycle | Root? | System CVE (C/H/M/L) | App CVE (C/H/M/L) | Posture |\n';
-  md += '| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |\n';
+  md += '| Application | Category | Version | Lifecycle | Root? | Upstream Sys (C/H/M/L) | Upstream App (C/H/M/L) | PFNApp Sys (C/H/M/L) | PFNApp App (C/H/M/L) | Reduction (Sys C/H) | Posture |\n';
+  md += '| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |\n';
 
   for (const app of applications) {
     let firstRow = true;
@@ -375,9 +451,20 @@ function generateMarkdownReport(data) {
       const appNameCol  = firstRow ? `**${app.name}**` : '';
       const categoryCol = firstRow ? `_${app.category}_` : '';
       const rootCol     = v.security.runAsRoot ? '⚠️ YES' : '✅ NO';
-      const sysCve  = `${v.vulnerabilities.system.critical}/${v.vulnerabilities.system.high}/${v.vulnerabilities.system.medium}/${v.vulnerabilities.system.low}`;
-      const appCve  = `${v.vulnerabilities.app.critical}/${v.vulnerabilities.app.high}/${v.vulnerabilities.app.medium}/${v.vulnerabilities.app.low}`;
-      md += `| ${appNameCol} | ${categoryCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | ${sysCve} | ${appCve} | ${v.postureBadge} ${v.posture} |\n`;
+      const upSys  = `${v.vulnerabilities.upstream.system.critical}/${v.vulnerabilities.upstream.system.high}/${v.vulnerabilities.upstream.system.medium}/${v.vulnerabilities.upstream.system.low}`;
+      const upApp  = `${v.vulnerabilities.upstream.app.critical}/${v.vulnerabilities.upstream.app.high}/${v.vulnerabilities.upstream.app.medium}/${v.vulnerabilities.upstream.app.low}`;
+      let pfnSys, pfnApp, reductionCol;
+      if (v.vulnerabilities.pfnapp.scanned) {
+        pfnSys = `${v.vulnerabilities.pfnapp.system.critical}/${v.vulnerabilities.pfnapp.system.high}/${v.vulnerabilities.pfnapp.system.medium}/${v.vulnerabilities.pfnapp.system.low}`;
+        pfnApp = `${v.vulnerabilities.pfnapp.app.critical}/${v.vulnerabilities.pfnapp.app.high}/${v.vulnerabilities.pfnapp.app.medium}/${v.vulnerabilities.pfnapp.app.low}`;
+        const r = v.vulnerabilities.reduction;
+        reductionCol = `${r.system.critical}/${r.system.high}`;
+      } else {
+        pfnSys = '⏳';
+        pfnApp = '⏳';
+        reductionCol = '⏳';
+      }
+      md += `| ${appNameCol} | ${categoryCol} | \`${v.tag}\` | ${v.lifecycleBadge} **${v.lifecycleStatus}** | ${rootCol} | ${upSys} | ${upApp} | ${pfnSys} | ${pfnApp} | ${reductionCol} | ${v.postureBadge} ${v.posture} |\n`;
       firstRow = false;
     }
   }
@@ -413,10 +500,10 @@ function generateMarkdownReport(data) {
     const latest = app.monitoredVersions[0];
     if (!latest) continue;
 
-    const appC = latest.vulnerabilities.app.critical;
-    const appH = latest.vulnerabilities.app.high;
-    const sysC = latest.vulnerabilities.system.critical;
-    const sysH = latest.vulnerabilities.system.high;
+    const appC = latest.vulnerabilities.upstream.app.critical;
+    const appH = latest.vulnerabilities.upstream.app.high;
+    const sysC = latest.vulnerabilities.upstream.system.critical;
+    const sysH = latest.vulnerabilities.upstream.system.high;
 
     md += `<details>\n<summary><b>${app.name} (<code>${latest.tag}</code>) — App: ${appC} Critical, ${appH} High | System: ${sysC} Critical, ${sysH} High</b></summary>\n\n`;
     md += `- **Full Reference:** \`${latest.fullRef}\`\n`;
@@ -447,6 +534,18 @@ function generateMarkdownReport(data) {
       }
     } else {
       md += '_No Critical or High system-level vulnerabilities detected._\n';
+    }
+
+    // PFNApp reduction table
+    if (latest.vulnerabilities.pfnapp.scanned && latest.vulnerabilities.reduction) {
+      const r = latest.vulnerabilities.reduction;
+      md += '\n#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)\n\n';
+      md += '| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |\n';
+      md += '| :--- | :---: | :---: | :---: | :---: | :---: |\n';
+      md += `| System | ${r.system.critical} | ${r.system.high} | ${r.system.medium} | ${r.system.low} | ${r.system.total} |\n`;
+      md += `| App | ${r.app.critical} | ${r.app.high} | — | — | ${r.app.total} |\n`;
+    } else if (!latest.vulnerabilities.pfnapp.scanned) {
+      md += '\n> ⏳ **PFNApp image not yet built** — reduction data pending.\n';
     }
 
     md += '\n</details>\n\n';

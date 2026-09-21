@@ -1,0 +1,88 @@
+name: Build & Push PFNApp Hardened Images
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # daily 04:00 UTC, setelah observatory (02:00 UTC)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'patches/**'
+      - 'observatory.json'
+      - '.github/workflows/build-pfnapp-patches.yml'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  prepare:
+    name: Prepare build matrix
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Generate matrix from observatory.json
+        id: gen
+        run: |
+          # Build matrix: setiap app yang punya patches/Dockerfile
+          MATRIX=$(node -e "
+            const fs = require('fs');
+            const obs = JSON.parse(fs.readFileSync('observatory.json'));
+            const items = [];
+            for (const app of obs.applications) {
+              const patchFile = \`patches/\${app.id}/Dockerfile\`;
+              if (!fs.existsSync(patchFile)) continue;
+              const tag = app.active_versions[0];
+              if (!tag) continue;
+              const registry = app.registry === 'docker.io' ? '' : app.registry + '/';
+              const upstream = \`\${registry}\${app.image}:\${tag}\`;
+              items.push({
+                id: app.id,
+                name: app.name,
+                tag: tag,
+                upstream: upstream
+              });
+            }
+            console.log(JSON.stringify({ include: items }));
+          ")
+          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+
+  build-and-push:
+    name: Build ${{ matrix.name }} (${{ matrix.tag }})
+    needs: prepare
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ${{ matrix.id }}:${{ matrix.tag }}
+        uses: docker/build-push-action@v7
+        with:
+          context: patches/${{ matrix.id }}
+          file: patches/${{ matrix.id }}/Dockerfile
+          push: true
+          tags: ghcr.io/pfnapp/${{ matrix.id }}:${{ matrix.tag }}
+          cache-from: type=gha,scope=${{ matrix.id }}
+          cache-to: type=gha,scope=${{ matrix.id }},mode=max
+          provenance: false
+
+      - name: Summary
+        run: |
+          echo "### ✅ ${{ matrix.name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Upstream:** \`${{ matrix.upstream }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **PFNApp:** \`ghcr.io/pfnapp/${{ matrix.id }}:${{ matrix.tag }}\`" >> $GITHUB_STEP_SUMMARY
