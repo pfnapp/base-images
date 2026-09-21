@@ -480,9 +480,7 @@
     const truncatedNotice = upstreamTotal > upCount
       ? `<div class="truncation-notice">
            ⚠ Showing top ${upCount} of ${upstreamTotal.toLocaleString()} upstream CVEs.
-           Full raw scan available in
-           <a href="${RAW_BASE}report.json" target="_blank">report.json</a>
-           (top-5 per layer stored in dashboard data).
+           Full scan will be available after the nightly workflow runs.
          </div>`
       : '';
 
