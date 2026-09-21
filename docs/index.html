@@ -890,8 +890,12 @@ npx serve .
 
     return versions.map((ver, vi) => {
       const v = ver.vulnerabilities || {};
-      const sys = v.system || {};
-      const apv = v.app || {};
+      // Support both old flat structure and new upstream/pfnapp split structure
+      const upstreamVulns = v.upstream || v;
+      const sys = upstreamVulns.system || {};
+      const apv = upstreamVulns.app || {};
+      const pfnData = v.pfnapp || null;
+      const reduction = v.reduction || null;
       const pClass = postureClass(ver.posture);
       const uid = `${app.id}-v${vi}`;
       const pfnRef = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
@@ -994,16 +998,35 @@ npx serve .
         <span class="dot pfn"></span>
         PFNApp Hardened Image
       </div>
+      ${pfnData && pfnData.scanned ? `
+      <div class="cve-table-wrap">
+        <table class="cve-table">
+          <thead>
+            <tr>
+              <th>Layer</th><th>C</th><th>H</th><th>M</th><th>L</th><th>Fix</th><th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${cveRow('System', pfnData.system || {})}
+            ${cveRow('App', pfnData.app || {})}
+          </tbody>
+        </table>
+      </div>
+      ` : `
       <div class="pfn-pending">
         <span class="spin">🔄</span>
         <span>Scan pending — pipeline not yet deployed for hardened images.</span>
       </div>
+      `}
     </div>
 
     <!-- Reduction summary -->
     <div class="reduction-row" style="margin-top:8px;">
-      <span>🎯 Projected reduction:</span>
-      <span class="reduction-val pending">– pending scan</span>
+      <span>🎯 System CVE reduction:</span>
+      ${reduction && pfnData && pfnData.scanned
+        ? `<span class="reduction-val" style="color:var(--green);">${reduction.system.total < 0 ? reduction.system.total : '+' + reduction.system.total} total (C${reduction.system.critical > 0 ? '+' : ''}${reduction.system.critical} H${reduction.system.high > 0 ? '+' : ''}${reduction.system.high})</span>`
+        : `<span class="reduction-val pending">– pending scan</span>`
+      }
     </div>
 
   </div>
@@ -1052,6 +1075,8 @@ npx serve .
       const bv = b.monitoredVersions?.[0] || {};
       const aVuln = av.vulnerabilities || {};
       const bVuln = bv.vulnerabilities || {};
+      const aUp = aVuln.upstream || aVuln;
+      const bUp = bVuln.upstream || bVuln;
 
       switch (sortMode) {
         case 'posture':
@@ -1060,18 +1085,18 @@ npx serve .
         case 'name':
           return a.name.localeCompare(b.name);
         case 'total-desc': {
-          const at = (aVuln.system?.total||0) + (aVuln.app?.total||0);
-          const bt = (bVuln.system?.total||0) + (bVuln.app?.total||0);
+          const at = (aUp.system?.total||0) + (aUp.app?.total||0);
+          const bt = (bUp.system?.total||0) + (bUp.app?.total||0);
           return bt - at;
         }
         case 'total-asc': {
-          const at = (aVuln.system?.total||0) + (aVuln.app?.total||0);
-          const bt = (bVuln.system?.total||0) + (bVuln.app?.total||0);
+          const at = (aUp.system?.total||0) + (aUp.app?.total||0);
+          const bt = (bUp.system?.total||0) + (bUp.app?.total||0);
           return at - bt;
         }
         case 'critical': {
-          const ac = (aVuln.system?.critical||0) + (aVuln.app?.critical||0);
-          const bc = (bVuln.system?.critical||0) + (bVuln.app?.critical||0);
+          const ac = (aUp.system?.critical||0) + (aUp.app?.critical||0);
+          const bc = (bUp.system?.critical||0) + (bUp.app?.critical||0);
           return bc - ac;
         }
         default: return 0;
@@ -1111,7 +1136,8 @@ npx serve .
     apps.forEach(app => {
       app.monitoredVersions?.forEach(v => {
         totalVersions++;
-        const appCves = v.vulnerabilities?.app || {};
+        const vuln = v.vulnerabilities || {};
+        const appCves = (vuln.upstream || vuln).app || {};
         if (appCves.critical > 0) criticalApps++;
         else if (appCves.high > 0) highApps++;
         else if (appCves.total === 0 || appCves.critical === 0 && appCves.high === 0) {

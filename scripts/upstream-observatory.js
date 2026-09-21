@@ -352,7 +352,7 @@ async function main() {
       summary.highVulnerabilityCount += vulns.app.high;
       if (pfnappVulns) {
         summary.pfnappScannedCount = (summary.pfnappScannedCount || 0) + 1;
-        summary.totalCveReduction += (reduction.system.critical + reduction.system.high);
+        summary.totalCveReduction += Math.abs(reduction.system.total);
       }
 
       appEntry.monitoredVersions.push({
