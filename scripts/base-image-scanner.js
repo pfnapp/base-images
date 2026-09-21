@@ -17,11 +17,15 @@ const { execSync } = require('child_process');
 
 const ROOT_DIR  = path.join(__dirname, '..');
 const CACHE_DIR = path.join(ROOT_DIR, '.cache');
+const SCAN_DETAILS_DIR = path.join(ROOT_DIR, 'scan-details');
 const MATRIX_FILE  = path.join(ROOT_DIR, 'matrix.json');
 const REPORT_FILE  = path.join(ROOT_DIR, 'base-report.json');
 
 if (!fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
+if (!fs.existsSync(SCAN_DETAILS_DIR)) {
+  fs.mkdirSync(SCAN_DETAILS_DIR, { recursive: true });
 }
 
 // ---------------------------------------------------------------------------
@@ -74,7 +78,7 @@ function runTrivyScan(imageRef) {
 }
 
 function makeVulnBucket() {
-  return { critical: 0, high: 0, medium: 0, low: 0, fixable: 0, total: 0 };
+  return { critical: 0, high: 0, medium: 0, low: 0, fixable: 0, total: 0, allCves: [] };
 }
 
 function countVuln(bucket, v) {
@@ -85,6 +89,14 @@ function countVuln(bucket, v) {
   else if (sev === 'LOW')    bucket.low++;
   if (v.FixedVersion) bucket.fixable++;
   bucket.total++;
+  bucket.allCves.push({
+    id:               v.VulnerabilityID,
+    pkg:              v.PkgName,
+    installedVersion: v.InstalledVersion,
+    fixedVersion:     v.FixedVersion || 'None',
+    severity:         sev,
+    title:            v.Title || v.VulnerabilityID,
+  });
 }
 
 /**
@@ -121,6 +133,24 @@ function parseVulnerabilities(trivyResult) {
   }
 
   return { system, app, topCves };
+}
+
+/**
+ * Exports full CVE lists to scan-details/{imageId}/{tag}/upstream.json
+ * These files are published to gh-pages only — not committed to main.
+ */
+function exportScanDetails(imageId, tag, vulns) {
+  const tagDir = tag.replace(/[^a-zA-Z0-9._-]/g, '_');
+  const dir    = path.join(SCAN_DETAILS_DIR, imageId, tagDir);
+  fs.mkdirSync(dir, { recursive: true });
+
+  const out = {
+    scannedAt: new Date().toISOString(),
+    system: { total: vulns.system.total, cves: vulns.system.allCves },
+    app:    { total: vulns.app.total,    cves: vulns.app.allCves    },
+  };
+  fs.writeFileSync(path.join(dir, 'upstream.json'), JSON.stringify(out, null, 2));
+  console.log(`  📄 Exported scan details → scan-details/${imageId}/${tagDir}/upstream.json`);
 }
 
 // ---------------------------------------------------------------------------
@@ -263,9 +293,12 @@ function versionLabel(tag) {
 // Build a scanned version entry
 // ---------------------------------------------------------------------------
 
-function buildVersionEntry(imageRef, tag, lifecycleStatus, lifecycleBadge, securityManifest, now) {
+function buildVersionEntry(imageId, imageRef, tag, lifecycleStatus, lifecycleBadge, securityManifest, now) {
   const trivyResult = runTrivyScan(imageRef);
   const vulns       = trivyResult ? parseVulnerabilities(trivyResult) : { system: makeVulnBucket(), app: makeVulnBucket(), topCves: [] };
+
+  // Export full CVE list to scan-details/ for gh-pages diff viewer
+  if (trivyResult) exportScanDetails(imageId, tag, vulns);
 
   const runAsUser  = securityManifest?.runAsUser  ?? null;
   const runAsGroup = securityManifest?.runAsGroup ?? null;
@@ -350,7 +383,7 @@ async function main() {
       const tag      = imageRef.split(':')[1]; // e.g. "22-alpine", "3.12-slim"
       const lc       = getLifecycleStatus(version, spec);
       console.log(`  📌 ${imageRef} [${lc.status}]`);
-      const entry = buildVersionEntry(imageRef, tag, lc.status, lc.badge, secSetting, now);
+      const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now);
       versionEntries.push(entry);
     }
 
@@ -384,7 +417,7 @@ async function main() {
       // Vite uses a single :latest image
       const imageRef = buildFrameworkImageRef(id, null);
       console.log(`  📌 ${imageRef} [LATEST]`);
-      const entry = buildVersionEntry(imageRef, 'latest', 'LATEST', '🟢', secSetting, now);
+      const entry = buildVersionEntry(id, imageRef, 'latest', 'LATEST', '🟢', secSetting, now);
       versionEntries.push(entry);
     } else {
       // Collect unique runtime versions across all compatibility_matrix entries
@@ -404,7 +437,7 @@ async function main() {
         const lc              = getLifecycleStatus(runtimeVersion, parentSpec);
 
         console.log(`  📌 ${imageRef} [${lc.status}]`);
-        const entry = buildVersionEntry(imageRef, tag, lc.status, lc.badge, secSetting, now);
+        const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now);
         versionEntries.push(entry);
       }
     }
