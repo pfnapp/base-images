@@ -1,14 +1,16 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-21T02:44:28.784Z",
+    "generatedAt": "2026-09-21T07:52:04.206Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
     "totalMonitoredVersions": 17,
     "runAsRootCount": 13,
     "criticalVulnerabilityCount": 20,
-    "highVulnerabilityCount": 267
+    "highVulnerabilityCount": 267,
+    "pfnappScannedCount": 14,
+    "totalCveReduction": 10492
   },
   "applications": [
     {
@@ -31,30 +33,65 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [],
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -79,23 +116,140 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 144,
-              "high": 1547,
-              "medium": 1764,
-              "low": 1002,
-              "fixable": 4812,
-              "total": 5698,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 144,
+                "high": 1547,
+                "medium": 1764,
+                "low": 1002,
+                "fixable": 4812,
+                "total": 5698
+              },
+              "app": {
+                "critical": 6,
+                "high": 89,
+                "medium": 94,
+                "low": 8,
+                "fixable": 197,
+                "total": 198
+              }
             },
-            "app": {
-              "critical": 6,
-              "high": 89,
-              "medium": 94,
-              "low": 8,
-              "fixable": 197,
-              "total": 198,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 27,
+                "high": 189,
+                "medium": 365,
+                "low": 311,
+                "fixable": 44,
+                "total": 930,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-53613",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+                  },
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 5,
+                "high": 66,
+                "medium": 86,
+                "low": 8,
+                "fixable": 165,
+                "total": 166,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-48068",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.8.22",
+                    "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+                    "severity": "HIGH",
+                    "title": "grpc-js: @grpc/grpc-js: Server crash via malformed HTTP/2 stream initiation"
+                  },
+                  {
+                    "id": "CVE-2026-48069",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.8.22",
+                    "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+                    "severity": "HIGH",
+                    "title": "grpc-js: @grpc/grpc-js: Client or server crash via malformed compressed message"
+                  },
+                  {
+                    "id": "CVE-2026-67320",
+                    "pkg": "axios",
+                    "installedVersion": "0.32.0",
+                    "fixedVersion": "0.33.0, 1.18.0",
+                    "severity": "HIGH",
+                    "title": "axios: axios: Information disclosure via Prototype Pollution in Node HTTP adapter"
+                  },
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -117,
+                "high": -1358,
+                "medium": -1399,
+                "low": -691,
+                "total": -4768
+              },
+              "app": {
+                "critical": -1,
+                "high": -23,
+                "total": -32
+              }
             }
           },
           "topAppCves": [
@@ -184,7 +338,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -209,23 +363,99 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 1,
+                "high": 10,
+                "medium": 7,
+                "low": 1,
+                "fixable": 19,
+                "total": 19
+              }
             },
-            "app": {
-              "critical": 1,
-              "high": 10,
-              "medium": 7,
-              "low": 1,
-              "fixable": 19,
-              "total": 19,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 1,
+                "high": 10,
+                "medium": 7,
+                "low": 1,
+                "fixable": 19,
+                "total": 19,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  },
+                  {
+                    "id": "CVE-2026-69152",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+                  },
+                  {
+                    "id": "CVE-2026-69192",
+                    "pkg": "ip-address",
+                    "installedVersion": "10.1.0",
+                    "fixedVersion": "10.3.1",
+                    "severity": "HIGH",
+                    "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
+                  },
+                  {
+                    "id": "CVE-2026-9496",
+                    "pkg": "pacote",
+                    "installedVersion": "19.0.2",
+                    "fixedVersion": "21.5.1",
+                    "severity": "HIGH",
+                    "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -273,7 +503,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -298,23 +528,140 @@
             "uidLabel": "node"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 4,
-              "high": 59,
-              "medium": 66,
-              "low": 60,
-              "fixable": 37,
-              "total": 191,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 4,
+                "high": 59,
+                "medium": 66,
+                "low": 60,
+                "fixable": 37,
+                "total": 191
+              },
+              "app": {
+                "critical": 3,
+                "high": 3,
+                "medium": 1,
+                "low": 0,
+                "fixable": 5,
+                "total": 7
+              }
             },
-            "app": {
-              "critical": 3,
-              "high": 3,
-              "medium": 1,
-              "low": 0,
-              "fixable": 5,
-              "total": 7,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 4,
+                "high": 59,
+                "medium": 66,
+                "low": 60,
+                "fixable": 37,
+                "total": 191,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  },
+                  {
+                    "id": "CVE-2026-41992",
+                    "pkg": "gzip",
+                    "installedVersion": "1.13-1",
+                    "fixedVersion": "1.13-1+deb13u1",
+                    "severity": "HIGH",
+                    "title": "gzip: gzip: Information disclosure via global buffer overflow in LZH decompression"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 3,
+                "high": 3,
+                "medium": 1,
+                "low": 0,
+                "fixable": 5,
+                "total": 7,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-77301",
+                    "pkg": "adm-zip",
+                    "installedVersion": "0.6.0",
+                    "fixedVersion": "0.6.1",
+                    "severity": "HIGH",
+                    "title": "adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)"
+                  },
+                  {
+                    "id": "CVE-2026-75604",
+                    "pkg": "next",
+                    "installedVersion": "16.3.1",
+                    "fixedVersion": "15.5.24, 16.3.3",
+                    "severity": "CRITICAL",
+                    "title": "Next.js: Unauthenticated Remote Code Execution on windows-hosted servers"
+                  },
+                  {
+                    "id": "GHSA-2xp9-vwfh-vxw4",
+                    "pkg": "next",
+                    "installedVersion": "16.3.1",
+                    "fixedVersion": "15.5.24, 16.3.3",
+                    "severity": "CRITICAL",
+                    "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used"
+                  },
+                  {
+                    "id": "CVE-2026-88062",
+                    "pkg": "omniroute",
+                    "installedVersion": "3.8.50",
+                    "fixedVersion": "None",
+                    "severity": "CRITICAL",
+                    "title": " OmniRoute ACP Custom-Agent Remote Code Execution (RCE)"
+                  },
+                  {
+                    "id": "GHSA-rgj7-g3m4-5g8c",
+                    "pkg": "sharp",
+                    "installedVersion": "0.35.3",
+                    "fixedVersion": "0.35.4",
+                    "severity": "HIGH",
+                    "title": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -403,7 +750,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -428,23 +775,140 @@
             "uidLabel": "node"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 15,
-              "high": 116,
-              "medium": 221,
-              "low": 183,
-              "fixable": 0,
-              "total": 540,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 15,
+                "high": 116,
+                "medium": 221,
+                "low": 183,
+                "fixable": 0,
+                "total": 540
+              },
+              "app": {
+                "critical": 0,
+                "high": 17,
+                "medium": 2,
+                "low": 2,
+                "fixable": 19,
+                "total": 21
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 17,
-              "medium": 2,
-              "low": 2,
-              "fixable": 19,
-              "total": 21,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 15,
+                "high": 116,
+                "medium": 221,
+                "low": 183,
+                "fixable": 0,
+                "total": 540,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-53613",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
+                  },
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 0,
+                "high": 17,
+                "medium": 2,
+                "low": 2,
+                "fixable": 19,
+                "total": 21,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-83605",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.9.11, 0.8.14",
+                    "severity": "HIGH",
+                    "title": "xmldom: @xmldom/xmldom: xmldom: Attribute injection allows client-side script execution"
+                  },
+                  {
+                    "id": "CVE-2026-83607",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.9.11, 0.8.14",
+                    "severity": "HIGH",
+                    "title": "xmldom: xmldom: Cross-site scripting via unvalidated element name injection"
+                  },
+                  {
+                    "id": "CVE-2026-83608",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "xmldom: @xmldom/xmldom: xmldom: XML Markup Injection via DocType Name Bypass"
+                  },
+                  {
+                    "id": "CVE-2026-83613",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service due to quadratic-time attribute processing"
+                  },
+                  {
+                    "id": "CVE-2026-83614",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service via quadratic-time XML parsing"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -533,7 +997,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -558,23 +1022,140 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 17,
-              "high": 411,
-              "medium": 1449,
-              "low": 999,
-              "fixable": 251,
-              "total": 3373,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 17,
+                "high": 411,
+                "medium": 1449,
+                "low": 999,
+                "fixable": 251,
+                "total": 3373
+              },
+              "app": {
+                "critical": 2,
+                "high": 16,
+                "medium": 27,
+                "low": 12,
+                "fixable": 57,
+                "total": 57
+              }
             },
-            "app": {
-              "critical": 2,
-              "high": 16,
-              "medium": 27,
-              "low": 12,
-              "fixable": 57,
-              "total": 57,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 2,
+                "high": 242,
+                "medium": 332,
+                "low": 246,
+                "fixable": 0,
+                "total": 852,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  },
+                  {
+                    "id": "CVE-2026-12064",
+                    "pkg": "curl",
+                    "installedVersion": "8.14.1-2+deb13u5",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 2,
+                "high": 16,
+                "medium": 27,
+                "low": 12,
+                "fixable": 57,
+                "total": 57,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "5.0.6",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "5.0.6",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  },
+                  {
+                    "id": "CVE-2026-69152",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "5.0.6",
+                    "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+                  },
+                  {
+                    "id": "CVE-2026-73088",
+                    "pkg": "browserslist",
+                    "installedVersion": "4.28.6",
+                    "fixedVersion": "4.28.7",
+                    "severity": "HIGH",
+                    "title": "browserslist: Browserslist: Prototype pollution leading to denial of service"
+                  },
+                  {
+                    "id": "CVE-2026-73089",
+                    "pkg": "browserslist",
+                    "installedVersion": "4.28.6",
+                    "fixedVersion": "4.28.7",
+                    "severity": "HIGH",
+                    "title": "browserslist: Browserslist: Denial of Service via unbounded memory growth from distinct query results"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -15,
+                "high": -169,
+                "medium": -1117,
+                "low": -753,
+                "total": -2521
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -663,7 +1244,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -688,23 +1269,99 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 7,
-              "high": 69,
-              "medium": 106,
-              "low": 97,
-              "fixable": 28,
-              "total": 281,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 7,
+                "high": 69,
+                "medium": 106,
+                "low": 97,
+                "fixable": 28,
+                "total": 281
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 4,
+                "high": 59,
+                "medium": 92,
+                "low": 96,
+                "fixable": 0,
+                "total": 253,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  },
+                  {
+                    "id": "CVE-2026-12064",
+                    "pkg": "curl",
+                    "installedVersion": "8.14.1-2+deb13u5",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -3,
+                "high": -10,
+                "medium": -14,
+                "low": -1,
+                "total": -28
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [],
@@ -752,7 +1409,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -777,23 +1434,67 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 0,
+                "low": 1,
+                "fixable": 1,
+                "total": 3
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 1,
-              "medium": 0,
-              "low": 1,
-              "fixable": 1,
-              "total": 3,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 0,
+                "low": 1,
+                "fixable": 1,
+                "total": 3,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-84445",
+                    "pkg": "google.golang.org/grpc",
+                    "installedVersion": "v1.83.1",
+                    "fixedVersion": "1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e",
+                    "severity": "HIGH",
+                    "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -809,7 +1510,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -834,23 +1535,99 @@
             "uidLabel": "user"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 10,
+                "medium": 2,
+                "low": 1,
+                "fixable": 12,
+                "total": 14
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 10,
-              "medium": 2,
-              "low": 1,
-              "fixable": 12,
-              "total": 14,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 10,
+                "medium": 2,
+                "low": 1,
+                "fixable": 12,
+                "total": 14,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-56854",
+                    "pkg": "golang.org/x/crypto",
+                    "installedVersion": "v0.54.0",
+                    "fixedVersion": "0.55.0",
+                    "severity": "HIGH",
+                    "title": "golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Authentication bypass due to unenforced source-address restrictions"
+                  },
+                  {
+                    "id": "CVE-2026-46603",
+                    "pkg": "golang.org/x/image",
+                    "installedVersion": "v0.44.0",
+                    "fixedVersion": "0.45.0",
+                    "severity": "HIGH",
+                    "title": "golang.org/x/image/vp8l: golang.org/x/image/vp8l: Denial of Service via excessive memory allocation"
+                  },
+                  {
+                    "id": "CVE-2026-33818",
+                    "pkg": "stdlib",
+                    "installedVersion": "v1.26.5",
+                    "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
+                    "severity": "HIGH",
+                    "title": "encoding/asn1: golang: Go encoding/asn1: Denial of Service via excessive recursion in Unmarshal"
+                  },
+                  {
+                    "id": "CVE-2026-39821",
+                    "pkg": "stdlib",
+                    "installedVersion": "v1.26.5",
+                    "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
+                    "severity": "HIGH",
+                    "title": "golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing"
+                  },
+                  {
+                    "id": "CVE-2026-46600",
+                    "pkg": "stdlib",
+                    "installedVersion": "v1.26.5",
+                    "fixedVersion": "1.26.6, 1.27.0-rc.3",
+                    "severity": "HIGH",
+                    "title": "golang.org/x/net/dns/dnsmessage: golang.org/x/net/dns/dnsmessage: Denial of Service via invalid DNS record parsing"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -898,7 +1675,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -923,24 +1700,28 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 2,
-              "medium": 716,
-              "low": 131,
-              "fixable": 431,
-              "total": 849,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 716,
+                "low": 131,
+                "fixable": 431,
+                "total": 849
+              },
+              "app": {
+                "critical": 2,
+                "high": 55,
+                "medium": 60,
+                "low": 6,
+                "fixable": 122,
+                "total": 123
+              }
             },
-            "app": {
-              "critical": 2,
-              "high": 55,
-              "medium": 60,
-              "low": 6,
-              "fixable": 122,
-              "total": 123,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
-            }
+            "pfnapp": {
+              "scanned": false
+            },
+            "reduction": null
           },
           "topAppCves": [
             {
@@ -1004,7 +1785,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1029,23 +1810,75 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 2,
-              "medium": 6,
-              "low": 12,
-              "fixable": 20,
-              "total": 20,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 6,
+                "low": 12,
+                "fixable": 20,
+                "total": 20
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 1,
+                "fixable": 0,
+                "total": 2
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 1,
-              "fixable": 0,
-              "total": 2,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 6,
+                "low": 12,
+                "fixable": 20,
+                "total": 20,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-14456",
+                    "pkg": "libcrypto3",
+                    "installedVersion": "3.5.7-r0",
+                    "fixedVersion": "3.5.8-r0",
+                    "severity": "HIGH",
+                    "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+                  },
+                  {
+                    "id": "CVE-2026-14456",
+                    "pkg": "libssl3",
+                    "installedVersion": "3.5.7-r0",
+                    "fixedVersion": "3.5.8-r0",
+                    "severity": "HIGH",
+                    "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 1,
+                "fixable": 0,
+                "total": 2,
+                "topCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [],
@@ -1069,7 +1902,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1094,23 +1927,99 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 4,
-              "high": 262,
-              "medium": 1436,
-              "low": 350,
-              "fixable": 622,
-              "total": 2518,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 4,
+                "high": 262,
+                "medium": 1436,
+                "low": 350,
+                "fixable": 622,
+                "total": 2518
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 7,
+                "low": 1,
+                "fixable": 8,
+                "total": 8
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 1,
+                "high": 145,
+                "medium": 1016,
+                "low": 268,
+                "fixable": 0,
+                "total": 1896,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  },
+                  {
+                    "id": "CVE-2026-12064",
+                    "pkg": "curl",
+                    "installedVersion": "8.14.1-2+deb13u5",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 7,
+                "low": 1,
+                "fixable": 8,
+                "total": 8,
+                "topCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -3,
+                "high": -117,
+                "medium": -420,
+                "low": -82,
+                "total": -622
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [],
@@ -1158,7 +2067,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1183,23 +2092,140 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 16,
-              "high": 560,
-              "medium": 2928,
-              "low": 1222,
-              "fixable": 2533,
-              "total": 5199,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 16,
+                "high": 560,
+                "medium": 2928,
+                "low": 1222,
+                "fixable": 2533,
+                "total": 5199
+              },
+              "app": {
+                "critical": 2,
+                "high": 34,
+                "medium": 27,
+                "low": 4,
+                "fixable": 67,
+                "total": 67
+              }
             },
-            "app": {
-              "critical": 2,
-              "high": 34,
-              "medium": 27,
-              "low": 4,
-              "fixable": 67,
-              "total": 67,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 2,
+                "high": 186,
+                "medium": 1095,
+                "low": 912,
+                "fixable": 0,
+                "total": 2666,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.41.5-0+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
+                  },
+                  {
+                    "id": "CVE-2026-12064",
+                    "pkg": "curl",
+                    "installedVersion": "8.14.1-2+deb13u5",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
+                  }
+                ]
+              },
+              "app": {
+                "critical": 2,
+                "high": 34,
+                "medium": 27,
+                "low": 4,
+                "fixable": 67,
+                "total": 67,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  },
+                  {
+                    "id": "CVE-2026-69152",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+                  },
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "5.0.6",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "5.0.6",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -14,
+                "high": -374,
+                "medium": -1833,
+                "low": -310,
+                "total": -2533
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -1288,7 +2314,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1313,24 +2339,28 @@
             "uidLabel": "1001"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 1,
-              "medium": 2,
-              "low": 0,
-              "fixable": 3,
-              "total": 3,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 1,
+                "medium": 2,
+                "low": 0,
+                "fixable": 3,
+                "total": 3
+              },
+              "app": {
+                "critical": 3,
+                "high": 21,
+                "medium": 5,
+                "low": 5,
+                "fixable": 34,
+                "total": 35
+              }
             },
-            "app": {
-              "critical": 3,
-              "high": 21,
-              "medium": 5,
-              "low": 5,
-              "fixable": 34,
-              "total": 35,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
-            }
+            "pfnapp": {
+              "scanned": false
+            },
+            "reduction": null
           },
           "topAppCves": [
             {
@@ -1386,7 +2416,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1411,23 +2441,99 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 2,
-              "medium": 6,
-              "low": 12,
-              "fixable": 20,
-              "total": 20,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 6,
+                "low": 12,
+                "fixable": 20,
+                "total": 20
+              },
+              "app": {
+                "critical": 1,
+                "high": 10,
+                "medium": 8,
+                "low": 1,
+                "fixable": 20,
+                "total": 20
+              }
             },
-            "app": {
-              "critical": 1,
-              "high": 10,
-              "medium": 8,
-              "low": 1,
-              "fixable": 20,
-              "total": 20,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 1,
+                "high": 10,
+                "medium": 8,
+                "low": 1,
+                "fixable": 20,
+                "total": 20,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-13149",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+                  },
+                  {
+                    "id": "CVE-2026-14257",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+                  },
+                  {
+                    "id": "CVE-2026-69152",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+                    "severity": "HIGH",
+                    "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+                  },
+                  {
+                    "id": "CVE-2026-69192",
+                    "pkg": "ip-address",
+                    "installedVersion": "10.1.0",
+                    "fixedVersion": "10.3.1",
+                    "severity": "HIGH",
+                    "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
+                  },
+                  {
+                    "id": "CVE-2026-9496",
+                    "pkg": "pacote",
+                    "installedVersion": "19.0.2",
+                    "fixedVersion": "21.5.1",
+                    "severity": "HIGH",
+                    "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": -2,
+                "medium": -6,
+                "low": -12,
+                "total": -20
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -1492,7 +2598,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
@@ -1517,23 +2623,67 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 0,
+                "low": 0,
+                "fixable": 1,
+                "total": 2
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 1,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 2,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 0,
+                "low": 0,
+                "fixable": 1,
+                "total": 2,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-84445",
+                    "pkg": "google.golang.org/grpc",
+                    "installedVersion": "v1.84.0",
+                    "fixedVersion": "1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e",
+                    "severity": "HIGH",
+                    "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
             }
           },
           "topAppCves": [
@@ -1549,7 +2699,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         },
         {
           "tag": "v11.1.0",
@@ -1564,30 +2714,34 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "system": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0,
-              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 1
+              }
             },
-            "app": {
-              "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 1,
-              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
-            }
+            "pfnapp": {
+              "scanned": false
+            },
+            "reduction": null
           },
           "topAppCves": [],
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-21T02:44:28.784Z"
+          "scannedAt": "2026-09-21T07:52:04.206Z"
         }
       ],
       "deprecatedVersions": []
