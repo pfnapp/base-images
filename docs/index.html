@@ -890,12 +890,13 @@ npx serve .
 
     return versions.map((ver, vi) => {
       const v = ver.vulnerabilities || {};
-      // Support both old flat structure and new upstream/pfnapp split structure
-      const upstreamVulns = v.upstream || v;
+      // Support both old flat structure {system, app} and new upstream/pfnapp split structure
+      const hasUpstreamSplit = v.upstream !== undefined;
+      const upstreamVulns = hasUpstreamSplit ? v.upstream : v;
       const sys = upstreamVulns.system || {};
       const apv = upstreamVulns.app || {};
-      const pfnData = v.pfnapp || null;
-      const reduction = v.reduction || null;
+      const pfnData = hasUpstreamSplit ? (v.pfnapp || null) : null;
+      const reduction = hasUpstreamSplit ? (v.reduction || null) : null;
       const pClass = postureClass(ver.posture);
       const uid = `${app.id}-v${vi}`;
       const pfnRef = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
@@ -1012,6 +1013,11 @@ npx serve .
           </tbody>
         </table>
       </div>
+      ` : !hasUpstreamSplit ? `
+      <div class="pfn-pending">
+        <span>ℹ️</span>
+        <span>PFNApp hardened image scan not yet available — showing upstream scan only.</span>
+      </div>
       ` : `
       <div class="pfn-pending">
         <span class="spin">🔄</span>
@@ -1025,7 +1031,7 @@ npx serve .
       <span>🎯 System CVE reduction:</span>
       ${reduction && pfnData && pfnData.scanned
         ? `<span class="reduction-val" style="color:var(--green);">${reduction.system.total < 0 ? reduction.system.total : '+' + reduction.system.total} total (C${reduction.system.critical > 0 ? '+' : ''}${reduction.system.critical} H${reduction.system.high > 0 ? '+' : ''}${reduction.system.high})</span>`
-        : `<span class="reduction-val pending">– pending scan</span>`
+        : `<span class="reduction-val pending">– not yet available</span>`
       }
     </div>
 
@@ -1231,17 +1237,10 @@ npx serve .
   /* ── Fetch data ──────────────────────────────────────────── */
   const RAW_URL = 'https://raw.githubusercontent.com/pfnapp/base-images/main/report.json';
 
-  fetch('../report.json')
+  fetch(RAW_URL)
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
-    })
-    .catch(() => {
-      // Fallback for GH Pages — report.json is not under /docs/, fetch from raw GitHub
-      return fetch(RAW_URL).then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      });
     })
     .then(data => init(data))
     .catch(err => {
