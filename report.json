@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-20T21:09:19.998Z",
+    "generatedAt": "2026-09-21T02:44:28.784Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 16,
-    "runAsRootCount": 12,
-    "criticalVulnerabilityCount": 226,
-    "highVulnerabilityCount": 3278
+    "totalMonitoredVersions": 17,
+    "runAsRootCount": 13,
+    "criticalVulnerabilityCount": 20,
+    "highVulnerabilityCount": 267
   },
   "applications": [
     {
@@ -31,17 +31,30 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 0,
-            "high": 0,
-            "medium": 0,
-            "low": 0,
-            "fixable": 0,
-            "total": 0
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [],
+          "topAppCves": [],
+          "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -66,14 +79,68 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 149,
-            "high": 1610,
-            "medium": 1847,
-            "low": 1008,
-            "fixable": 4969,
-            "total": 4614
+            "system": {
+              "critical": 144,
+              "high": 1547,
+              "medium": 1764,
+              "low": 1002,
+              "fixable": 4812,
+              "total": 5698,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 6,
+              "high": 89,
+              "medium": 94,
+              "low": 8,
+              "fixable": 197,
+              "total": 198,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
+            {
+              "id": "CVE-2026-48068",
+              "pkg": "@grpc/grpc-js",
+              "installedVersion": "1.8.22",
+              "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+              "severity": "HIGH",
+              "title": "grpc-js: @grpc/grpc-js: Server crash via malformed HTTP/2 stream initiation"
+            },
+            {
+              "id": "CVE-2026-48069",
+              "pkg": "@grpc/grpc-js",
+              "installedVersion": "1.8.22",
+              "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+              "severity": "HIGH",
+              "title": "grpc-js: @grpc/grpc-js: Client or server crash via malformed compressed message"
+            },
+            {
+              "id": "CVE-2026-67320",
+              "pkg": "axios",
+              "installedVersion": "0.32.0",
+              "fixedVersion": "0.33.0, 1.18.0",
+              "severity": "HIGH",
+              "title": "axios: axios: Information disclosure via Prototype Pollution in Node HTTP adapter"
+            },
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            }
+          ],
+          "topSystemCves": [
             {
               "id": "CVE-2026-53613",
               "pkg": "bsdutils",
@@ -115,9 +182,9 @@
               "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -142,14 +209,26 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 1,
-            "high": 10,
-            "medium": 7,
-            "low": 1,
-            "fixable": 19,
-            "total": 19
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 1,
+              "high": 10,
+              "medium": 7,
+              "low": 1,
+              "fixable": 19,
+              "total": 19,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
             {
               "id": "CVE-2026-13149",
               "pkg": "brace-expansion",
@@ -191,9 +270,10 @@
               "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
             }
           ],
-          "posture": "CRITICAL RISK",
+          "topSystemCves": [],
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -218,14 +298,68 @@
             "uidLabel": "node"
           },
           "vulnerabilities": {
-            "critical": 7,
-            "high": 62,
-            "medium": 67,
-            "low": 60,
-            "fixable": 42,
-            "total": 196
+            "system": {
+              "critical": 4,
+              "high": 59,
+              "medium": 66,
+              "low": 60,
+              "fixable": 37,
+              "total": 191,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 3,
+              "high": 3,
+              "medium": 1,
+              "low": 0,
+              "fixable": 5,
+              "total": 7,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
+            {
+              "id": "CVE-2026-77301",
+              "pkg": "adm-zip",
+              "installedVersion": "0.6.0",
+              "fixedVersion": "0.6.1",
+              "severity": "HIGH",
+              "title": "adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)"
+            },
+            {
+              "id": "CVE-2026-75604",
+              "pkg": "next",
+              "installedVersion": "16.3.1",
+              "fixedVersion": "15.5.24, 16.3.3",
+              "severity": "CRITICAL",
+              "title": "Next.js: Unauthenticated Remote Code Execution on windows-hosted servers"
+            },
+            {
+              "id": "GHSA-2xp9-vwfh-vxw4",
+              "pkg": "next",
+              "installedVersion": "16.3.1",
+              "fixedVersion": "15.5.24, 16.3.3",
+              "severity": "CRITICAL",
+              "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used"
+            },
+            {
+              "id": "CVE-2026-88062",
+              "pkg": "omniroute",
+              "installedVersion": "3.8.50",
+              "fixedVersion": "None",
+              "severity": "CRITICAL",
+              "title": " OmniRoute ACP Custom-Agent Remote Code Execution (RCE)"
+            },
+            {
+              "id": "GHSA-rgj7-g3m4-5g8c",
+              "pkg": "sharp",
+              "installedVersion": "0.35.3",
+              "fixedVersion": "0.35.4",
+              "severity": "HIGH",
+              "title": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545"
+            }
+          ],
+          "topSystemCves": [
             {
               "id": "CVE-2026-76642",
               "pkg": "bsdutils",
@@ -267,9 +401,9 @@
               "title": "gzip: gzip: Information disclosure via global buffer overflow in LZH decompression"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -294,14 +428,68 @@
             "uidLabel": "node"
           },
           "vulnerabilities": {
-            "critical": 15,
-            "high": 133,
-            "medium": 223,
-            "low": 185,
-            "fixable": 19,
-            "total": 556
+            "system": {
+              "critical": 15,
+              "high": 116,
+              "medium": 221,
+              "low": 183,
+              "fixable": 0,
+              "total": 540,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 17,
+              "medium": 2,
+              "low": 2,
+              "fixable": 19,
+              "total": 21,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
+            {
+              "id": "CVE-2026-83605",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.9.11, 0.8.14",
+              "severity": "HIGH",
+              "title": "xmldom: @xmldom/xmldom: xmldom: Attribute injection allows client-side script execution"
+            },
+            {
+              "id": "CVE-2026-83607",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.9.11, 0.8.14",
+              "severity": "HIGH",
+              "title": "xmldom: xmldom: Cross-site scripting via unvalidated element name injection"
+            },
+            {
+              "id": "CVE-2026-83608",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "xmldom: @xmldom/xmldom: xmldom: XML Markup Injection via DocType Name Bypass"
+            },
+            {
+              "id": "CVE-2026-83613",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service due to quadratic-time attribute processing"
+            },
+            {
+              "id": "CVE-2026-83614",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service via quadratic-time XML parsing"
+            }
+          ],
+          "topSystemCves": [
             {
               "id": "CVE-2026-53613",
               "pkg": "bsdutils",
@@ -343,9 +531,9 @@
               "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -370,14 +558,68 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 19,
-            "high": 427,
-            "medium": 1476,
-            "low": 1011,
-            "fixable": 308,
-            "total": 2933
+            "system": {
+              "critical": 17,
+              "high": 411,
+              "medium": 1449,
+              "low": 999,
+              "fixable": 251,
+              "total": 3373,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 2,
+              "high": 16,
+              "medium": 27,
+              "low": 12,
+              "fixable": 57,
+              "total": 57,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.6",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.6",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.6",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+            },
+            {
+              "id": "CVE-2026-73088",
+              "pkg": "browserslist",
+              "installedVersion": "4.28.6",
+              "fixedVersion": "4.28.7",
+              "severity": "HIGH",
+              "title": "browserslist: Browserslist: Prototype pollution leading to denial of service"
+            },
+            {
+              "id": "CVE-2026-73089",
+              "pkg": "browserslist",
+              "installedVersion": "4.28.6",
+              "fixedVersion": "4.28.7",
+              "severity": "HIGH",
+              "title": "browserslist: Browserslist: Denial of Service via unbounded memory growth from distinct query results"
+            }
+          ],
+          "topSystemCves": [
             {
               "id": "CVE-2026-53612",
               "pkg": "bsdutils",
@@ -419,9 +661,9 @@
               "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -446,14 +688,27 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 7,
-            "high": 69,
-            "medium": 106,
-            "low": 97,
-            "fixable": 28,
-            "total": 279
+            "system": {
+              "critical": 7,
+              "high": 69,
+              "medium": 106,
+              "low": 97,
+              "fixable": 28,
+              "total": 281,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [],
+          "topSystemCves": [
             {
               "id": "CVE-2026-76642",
               "pkg": "bsdutils",
@@ -495,9 +750,9 @@
               "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -522,14 +777,26 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 0,
-            "high": 1,
-            "medium": 0,
-            "low": 1,
-            "fixable": 1,
-            "total": 2
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 1,
+              "medium": 0,
+              "low": 1,
+              "fixable": 1,
+              "total": 3,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
             {
               "id": "CVE-2026-84445",
               "pkg": "google.golang.org/grpc",
@@ -539,9 +806,10 @@
               "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
             }
           ],
-          "posture": "HIGH RISK",
+          "topSystemCves": [],
+          "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -566,14 +834,26 @@
             "uidLabel": "user"
           },
           "vulnerabilities": {
-            "critical": 0,
-            "high": 10,
-            "medium": 2,
-            "low": 1,
-            "fixable": 12,
-            "total": 13
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 10,
+              "medium": 2,
+              "low": 1,
+              "fixable": 12,
+              "total": 14,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
             {
               "id": "CVE-2026-56854",
               "pkg": "golang.org/x/crypto",
@@ -593,7 +873,7 @@
             {
               "id": "CVE-2026-33818",
               "pkg": "stdlib",
-              "installedVersion": "1.26.5",
+              "installedVersion": "v1.26.5",
               "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
               "severity": "HIGH",
               "title": "encoding/asn1: golang: Go encoding/asn1: Denial of Service via excessive recursion in Unmarshal"
@@ -601,7 +881,7 @@
             {
               "id": "CVE-2026-39821",
               "pkg": "stdlib",
-              "installedVersion": "1.26.5",
+              "installedVersion": "v1.26.5",
               "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
               "severity": "HIGH",
               "title": "golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing"
@@ -609,15 +889,16 @@
             {
               "id": "CVE-2026-46600",
               "pkg": "stdlib",
-              "installedVersion": "1.26.5",
+              "installedVersion": "v1.26.5",
               "fixedVersion": "1.26.6, 1.27.0-rc.3",
               "severity": "HIGH",
               "title": "golang.org/x/net/dns/dnsmessage: golang.org/x/net/dns/dnsmessage: Denial of Service via invalid DNS record parsing"
             }
           ],
-          "posture": "HIGH RISK",
+          "topSystemCves": [],
+          "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -642,30 +923,26 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 2,
-            "high": 67,
-            "medium": 779,
-            "low": 137,
-            "fixable": 566,
-            "total": 985
+            "system": {
+              "critical": 0,
+              "high": 2,
+              "medium": 716,
+              "low": 131,
+              "fixable": 431,
+              "total": 849,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 2,
+              "high": 55,
+              "medium": 60,
+              "low": 6,
+              "fixable": 122,
+              "total": 123,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-45447",
-              "pkg": "libssl3t64",
-              "installedVersion": "3.0.13-0ubuntu3.7",
-              "fixedVersion": "3.0.13-0ubuntu3.11",
-              "severity": "HIGH",
-              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
-            },
-            {
-              "id": "CVE-2026-45447",
-              "pkg": "openssl",
-              "installedVersion": "3.0.13-0ubuntu3.7",
-              "fixedVersion": "3.0.13-0ubuntu3.11",
-              "severity": "HIGH",
-              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
-            },
+          "topAppCves": [
             {
               "id": "GHSA-r7wm-3cxj-wff9",
               "pkg": "com.fasterxml.jackson.core:jackson-core",
@@ -689,11 +966,45 @@
               "fixedVersion": "2.18.8, 2.21.4, 3.1.4",
               "severity": "HIGH",
               "title": "jackson-databind: Jackson-databind: Security bypass allows arbitrary code execution"
+            },
+            {
+              "id": "CVE-2024-47554",
+              "pkg": "commons-io:commons-io",
+              "installedVersion": "2.8.0",
+              "fixedVersion": "2.14.0",
+              "severity": "HIGH",
+              "title": "apache-commons-io: Possible denial of service attack on untrusted input to XmlStreamReader"
+            },
+            {
+              "id": "CVE-2026-40983",
+              "pkg": "io.micrometer:micrometer-core",
+              "installedVersion": "1.16.5",
+              "fixedVersion": "1.16.6, 1.15.12",
+              "severity": "HIGH",
+              "title": "micrometer: micrometer-core: Micrometer: Denial of Service via specially crafted gRPC requests"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-45447",
+              "pkg": "libssl3t64",
+              "installedVersion": "3.0.13-0ubuntu3.7",
+              "fixedVersion": "3.0.13-0ubuntu3.11",
+              "severity": "HIGH",
+              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
+            },
+            {
+              "id": "CVE-2026-45447",
+              "pkg": "openssl",
+              "installedVersion": "3.0.13-0ubuntu3.7",
+              "fixedVersion": "3.0.13-0ubuntu3.11",
+              "severity": "HIGH",
+              "title": "openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()"
+            }
+          ],
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -718,14 +1029,27 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 0,
-            "high": 2,
-            "medium": 6,
-            "low": 13,
-            "fixable": 20,
-            "total": 21
+            "system": {
+              "critical": 0,
+              "high": 2,
+              "medium": 6,
+              "low": 12,
+              "fixable": 20,
+              "total": 20,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 1,
+              "fixable": 0,
+              "total": 2,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [],
+          "topSystemCves": [
             {
               "id": "CVE-2026-14456",
               "pkg": "libcrypto3",
@@ -743,9 +1067,9 @@
               "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
             }
           ],
-          "posture": "HIGH RISK",
-          "postureBadge": "🟠",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -770,14 +1094,27 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 4,
-            "high": 262,
-            "medium": 1443,
-            "low": 351,
-            "fixable": 630,
-            "total": 2060
+            "system": {
+              "critical": 4,
+              "high": 262,
+              "medium": 1436,
+              "low": 350,
+              "fixable": 622,
+              "total": 2518,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 7,
+              "low": 1,
+              "fixable": 8,
+              "total": 8,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [],
+          "topSystemCves": [
             {
               "id": "CVE-2026-53612",
               "pkg": "bsdutils",
@@ -819,9 +1156,9 @@
               "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
             }
           ],
-          "posture": "CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -846,14 +1183,68 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 18,
-            "high": 591,
-            "medium": 2958,
-            "low": 1228,
-            "fixable": 2581,
-            "total": 4795
+            "system": {
+              "critical": 16,
+              "high": 560,
+              "medium": 2928,
+              "low": 1222,
+              "fixable": 2533,
+              "total": 5199,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 2,
+              "high": 34,
+              "medium": 27,
+              "low": 4,
+              "fixable": 67,
+              "total": 67,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
+          "topAppCves": [
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            },
+            {
+              "id": "CVE-2026-69152",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
+              "severity": "HIGH",
+              "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+            },
+            {
+              "id": "CVE-2026-13149",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.6",
+              "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
+            },
+            {
+              "id": "CVE-2026-14257",
+              "pkg": "brace-expansion",
+              "installedVersion": "5.0.6",
+              "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
+              "severity": "HIGH",
+              "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
+            }
+          ],
+          "topSystemCves": [
             {
               "id": "CVE-2026-34355",
               "pkg": "apache2-utils",
@@ -895,9 +1286,9 @@
               "title": "httpd: httpd: HTTP/2 Remote Denial of Service via compression bomb and Slowloris-style attack"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -922,22 +1313,26 @@
             "uidLabel": "1001"
           },
           "vulnerabilities": {
-            "critical": 3,
-            "high": 22,
-            "medium": 7,
-            "low": 5,
-            "fixable": 37,
-            "total": 37
-          },
-          "topCves": [
-            {
-              "id": "CVE-2026-33630",
-              "pkg": "c-ares",
-              "installedVersion": "1.34.6-r0",
-              "fixedVersion": "1.34.8-r0",
-              "severity": "HIGH",
-              "title": "c-ares: c-ares: Use-after-free / double-free in query-completion handling"
+            "system": {
+              "critical": 0,
+              "high": 1,
+              "medium": 2,
+              "low": 0,
+              "fixable": 3,
+              "total": 3,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
             },
+            "app": {
+              "critical": 3,
+              "high": 21,
+              "medium": 5,
+              "low": 5,
+              "fixable": 34,
+              "total": 35,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
+          },
+          "topAppCves": [
             {
               "id": "CVE-2026-77405",
               "pkg": "github.com/rabbitmq/amqp091-go",
@@ -969,11 +1364,29 @@
               "fixedVersion": "1.13.0",
               "severity": "HIGH",
               "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via AMQP frame size negotiation"
+            },
+            {
+              "id": "CVE-2026-77404",
+              "pkg": "github.com/rabbitmq/amqp091-go",
+              "installedVersion": "v1.12.0",
+              "fixedVersion": "1.13.0",
+              "severity": "HIGH",
+              "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Connection configuration overwrite via unsanitized TLS path parameter injection"
             }
           ],
-          "posture": "CRITICAL RISK",
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-33630",
+              "pkg": "c-ares",
+              "installedVersion": "1.34.6-r0",
+              "fixedVersion": "1.34.8-r0",
+              "severity": "HIGH",
+              "title": "c-ares: c-ares: Use-after-free / double-free in query-completion handling"
+            }
+          ],
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -998,30 +1411,26 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 1,
-            "high": 12,
-            "medium": 14,
-            "low": 13,
-            "fixable": 40,
-            "total": 40
+            "system": {
+              "critical": 0,
+              "high": 2,
+              "medium": 6,
+              "low": 12,
+              "fixable": 20,
+              "total": 20,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 1,
+              "high": 10,
+              "medium": 8,
+              "low": 1,
+              "fixable": 20,
+              "total": 20,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-14456",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.5.7-r0",
-              "fixedVersion": "3.5.8-r0",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
-            },
-            {
-              "id": "CVE-2026-14456",
-              "pkg": "libssl3",
-              "installedVersion": "3.5.7-r0",
-              "fixedVersion": "3.5.8-r0",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
-            },
+          "topAppCves": [
             {
               "id": "CVE-2026-13149",
               "pkg": "brace-expansion",
@@ -1045,11 +1454,45 @@
               "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
               "severity": "HIGH",
               "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
+            },
+            {
+              "id": "CVE-2026-69192",
+              "pkg": "ip-address",
+              "installedVersion": "10.1.0",
+              "fixedVersion": "10.3.1",
+              "severity": "HIGH",
+              "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
+            },
+            {
+              "id": "CVE-2026-9496",
+              "pkg": "pacote",
+              "installedVersion": "19.0.2",
+              "fixedVersion": "21.5.1",
+              "severity": "HIGH",
+              "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
             }
           ],
-          "posture": "CRITICAL RISK",
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libcrypto3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            },
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libssl3",
+              "installedVersion": "3.5.7-r0",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+            }
+          ],
+          "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
@@ -1062,8 +1505,8 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
-          "tag": "v11.1.0",
-          "fullRef": "amir20/dozzle:v11.1.0",
+          "tag": "v11.1.1",
+          "fullRef": "amir20/dozzle:v11.1.1",
           "rank": 1,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
@@ -1074,17 +1517,77 @@
             "uidLabel": "0 (root)"
           },
           "vulnerabilities": {
-            "critical": 0,
-            "high": 0,
-            "medium": 0,
-            "low": 0,
-            "fixable": 0,
-            "total": 0
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 1,
+              "medium": 0,
+              "low": 0,
+              "fixable": 1,
+              "total": 2,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
           },
-          "topCves": [],
+          "topAppCves": [
+            {
+              "id": "CVE-2026-84445",
+              "pkg": "google.golang.org/grpc",
+              "installedVersion": "v1.84.0",
+              "fixedVersion": "1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e",
+              "severity": "HIGH",
+              "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
+            }
+          ],
+          "topSystemCves": [],
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-21T02:44:28.784Z"
+        },
+        {
+          "tag": "v11.1.0",
+          "fullRef": "amir20/dozzle:v11.1.0",
+          "rank": 2,
+          "lifecycleStatus": "SUPPORTED",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Actively maintained",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "system": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0,
+              "note": "OS-level packages — mitigable via apk upgrade / apt-get upgrade in base image build"
+            },
+            "app": {
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 1,
+              "note": "Application dependencies — only fixable by upstream maintainer releasing a new version"
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-20T21:09:19.998Z"
+          "scannedAt": "2026-09-21T02:44:28.784Z"
         }
       ],
       "deprecatedVersions": []
