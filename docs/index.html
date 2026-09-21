@@ -718,7 +718,7 @@
   <div class="stat-pill green">
     <span>✅</span>
     <span class="stat-num green" id="stat-clean">–</span>
-    <span>no App CVEs</span>
+    <span>zero CVEs</span>
   </div>
 </div>
 
@@ -778,6 +778,13 @@ npx serve .
         <option value="total-asc">Sort: Fewest CVEs</option>
         <option value="critical">Sort: Critical CVEs</option>
       </select>
+      <select class="sort-select" id="status-select">
+        <option value="All">Status: All</option>
+        <option value="LATEST">🟢 Latest</option>
+        <option value="SUPPORTED">🔵 Supported</option>
+        <option value="EOL">🔴 EOL</option>
+        <option value="DEPRECATED">⬛ Deprecated</option>
+      </select>
       <span class="results-count" id="results-count"></span>
     </div>
     <div class="cards-grid" id="cards-grid"></div>
@@ -800,6 +807,7 @@ npx serve .
   /* ── State ─────────────────────────────────────────────── */
   let allApps = [];
   let activeCategory = 'All';
+  let activeStatus = 'All';
   let searchQuery = '';
   let sortMode = 'posture';
 
@@ -814,12 +822,31 @@ npx serve .
   }
 
   /* ── Posture parsing ─────────────────────────────────────── */
+  // Badge class — what the posture pill shows
   function postureClass(posture) {
     const p = (posture || '').toUpperCase();
     if (p.includes('CRITICAL')) return 'critical';
     if (p.includes('HIGH'))     return 'high';
     if (p.includes('MEDIUM'))   return 'medium';
     if (p.includes('ROOT') || p.includes('NON-COMPLIANT')) return 'noncompliant';
+    return 'clean';
+  }
+
+  // Card border class — green if no CVEs at all, even when running as root
+  function cardBorderClass(ver) {
+    const vuln = ver.vulnerabilities || {};
+    const up   = vuln.upstream || vuln;
+    const sys  = up.system || {};
+    const apv  = up.app    || {};
+    const totalCves = (sys.total || 0) + (apv.total || 0);
+    const posture   = (ver.posture || '').toUpperCase();
+    // If there are real CVEs, use the severity class
+    if (posture.includes('CRITICAL')) return 'critical';
+    if (posture.includes('HIGH'))     return 'high';
+    if (posture.includes('MEDIUM'))   return 'medium';
+    // ROOT / NON-COMPLIANT but zero CVEs → keep green border, badge is still yellow
+    if ((posture.includes('ROOT') || posture.includes('NON-COMPLIANT')) && totalCves === 0) return 'clean';
+    if (posture.includes('ROOT') || posture.includes('NON-COMPLIANT')) return 'noncompliant';
     return 'clean';
   }
 
@@ -898,6 +925,7 @@ npx serve .
       const pfnData = hasUpstreamSplit ? (v.pfnapp || null) : null;
       const reduction = hasUpstreamSplit ? (v.reduction || null) : null;
       const pClass = postureClass(ver.posture);
+      const borderClass = cardBorderClass(ver);
       const uid = `${app.id}-v${vi}`;
       const pfnRef = `ghcr.io/pfnapp/${app.id}:${ver.tag}`;
 
@@ -920,8 +948,9 @@ npx serve .
           : '';
 
       return `
-<div class="card posture-${pClass}" data-app-id="${escHtml(app.id)}"
+<div class="card posture-${borderClass}" data-app-id="${escHtml(app.id)}"
      data-category="${escHtml(app.category)}"
+     data-status="${escHtml((ver.lifecycleStatus || '').toUpperCase())}"
      data-posture="${postureSortKey(ver.posture)}"
      data-name="${escHtml(app.name)}"
      data-total="${(sys.total || 0) + (apv.total || 0)}"
@@ -1056,23 +1085,29 @@ npx serve .
   /* ── Filter + Sort + Search ──────────────────────────────── */
   function getFilteredApps() {
     const q = searchQuery.trim().toLowerCase();
-    return allApps.filter(app => {
-      // Category filter
-      if (activeCategory !== 'All' && app.category !== activeCategory) return false;
-      // Search filter
-      if (q) {
-        const haystack = [
-          app.name, app.id, app.category,
-          ...(app.monitoredVersions || []).flatMap(v => [
-            v.tag,
-            ...(v.topAppCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
-            ...(v.topSystemCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
-          ])
-        ].join(' ').toLowerCase();
-        if (!haystack.includes(q)) return false;
+    return allApps.reduce((acc, app) => {
+      // Filter versions per-card (each version is its own card)
+      const filteredVersions = (app.monitoredVersions || []).filter(ver => {
+        // Category filter
+        if (activeCategory !== 'All' && app.category !== activeCategory) return false;
+        // Status filter
+        if (activeStatus !== 'All' && (ver.lifecycleStatus || '').toUpperCase() !== activeStatus) return false;
+        // Search filter
+        if (q) {
+          const haystack = [
+            app.name, app.id, app.category, ver.tag,
+            ...(ver.topAppCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
+            ...(ver.topSystemCves || []).map(c => c.id + ' ' + c.pkg + ' ' + c.title),
+          ].join(' ').toLowerCase();
+          if (!haystack.includes(q)) return false;
+        }
+        return true;
+      });
+      if (filteredVersions.length > 0) {
+        acc.push({ ...app, monitoredVersions: filteredVersions });
       }
-      return true;
-    });
+      return acc;
+    }, []);
   }
 
   function sortApps(apps) {
@@ -1118,8 +1153,10 @@ npx serve .
     const count = document.getElementById('results-count');
 
     grid.innerHTML = filtered.map(app => buildCard(app)).join('');
-    noRes.classList.toggle('hidden', filtered.length > 0);
-    count.textContent = `${filtered.length} app${filtered.length !== 1 ? 's' : ''}`;
+    // Count total visible cards (one per version)
+    const totalCards = filtered.reduce((s, a) => s + (a.monitoredVersions || []).length, 0);
+    noRes.classList.toggle('hidden', totalCards > 0);
+    count.textContent = `${totalCards} version${totalCards !== 1 ? 's' : ''} · ${filtered.length} app${filtered.length !== 1 ? 's' : ''}`;
   }
 
   /* ── Render filter tabs ─────────────────────────────────── */
@@ -1128,9 +1165,11 @@ npx serve .
     const all = ['All', ...categories];
     container.innerHTML = all.map(cat => {
       const count = cat === 'All'
-        ? allApps.length
-        : allApps.filter(a => a.category === cat).length;
+        ? allApps.reduce((s, a) => s + (a.monitoredVersions || []).length, 0)
+        : allApps.filter(a => a.category === cat)
+                 .reduce((s, a) => s + (a.monitoredVersions || []).length, 0);
       return `<button class="tab-btn ${cat === activeCategory ? 'active' : ''}"
+                      data-cat="${escHtml(cat)}"
                       onclick="setCategory(${JSON.stringify(cat)})">${escHtml(cat)}<span class="tab-count">${count}</span></button>`;
     }).join('');
   }
@@ -1144,11 +1183,11 @@ npx serve .
         totalVersions++;
         const vuln = v.vulnerabilities || {};
         const appCves = (vuln.upstream || vuln).app || {};
+        const sysCves = (vuln.upstream || vuln).system || {};
+        const totalCves = (appCves.total || 0) + (sysCves.total || 0);
         if (appCves.critical > 0) criticalApps++;
         else if (appCves.high > 0) highApps++;
-        else if (appCves.total === 0 || appCves.critical === 0 && appCves.high === 0) {
-          if (appCves.total === 0) cleanApps++;
-        }
+        else if (totalCves === 0) cleanApps++;
       });
     });
 
@@ -1195,11 +1234,7 @@ npx serve .
   /* ── Set category ────────────────────────────────────────── */
   window.setCategory = function (cat) {
     activeCategory = cat;
-    document.querySelectorAll('.tab-btn').forEach(b => {
-      b.classList.toggle('active', b.textContent.replace(/\d+/g,'').trim() === cat ||
-        (b.textContent.startsWith(cat) && cat === b.textContent.replace(/\s*\d+\s*$/, '').trim()));
-    });
-    // Re-render tabs cleanly
+    // Re-render tabs (active state is set via activeCategory in renderTabs)
     const categories = [...new Set(allApps.map(a => a.category))].sort();
     renderTabs(categories);
     renderCards();
@@ -1223,6 +1258,7 @@ npx serve .
     // Wire up controls
     const searchEl = document.getElementById('search-input');
     const sortEl   = document.getElementById('sort-select');
+    const statusEl = document.getElementById('status-select');
 
     searchEl.addEventListener('input', () => {
       searchQuery = searchEl.value;
@@ -1230,6 +1266,10 @@ npx serve .
     });
     sortEl.addEventListener('change', () => {
       sortMode = sortEl.value;
+      renderCards();
+    });
+    statusEl.addEventListener('change', () => {
+      activeStatus = statusEl.value;
       renderCards();
     });
   }
