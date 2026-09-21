@@ -367,8 +367,15 @@
 (function () {
   'use strict';
 
-  const RAW_BASE   = 'https://raw.githubusercontent.com/pfnapp/base-images/main/';
-  const REPORT_URL = RAW_BASE + 'report.json';
+  // On gh-pages, scan details live at /scans/{app}/{tag}/*.json
+  // report.json is also on gh-pages for summary data
+  const GH_PAGES_BASE = (() => {
+    const { origin, pathname } = location;
+    // strip /diff.html or trailing filename to get base path
+    const base = pathname.replace(/\/[^/]*$/, '/');
+    return origin + base;
+  })();
+  const REPORT_URL   = GH_PAGES_BASE + 'report.json';
 
   /* ── Parse URL params ────────────────────────────────────── */
   const params  = new URLSearchParams(location.search);
@@ -517,28 +524,21 @@
   }
 
   /* ── Re-render diff body ─────────────────────────────────── */
-  function renderDiff(ver) {
-    const vuln    = ver.vulnerabilities || {};
-    const up      = vuln.upstream || vuln;
-    const pfnData = vuln.pfnapp || null;
-
+  function renderDiff(upSysTotal, upAppTotal, pfnSysTotal, pfnAppTotal) {
     const filteredRows = getFilteredRows();
-
-    const systemRows = filteredRows.filter(r => r.layer === 'system');
-    const appRows    = filteredRows.filter(r => r.layer === 'app');
-
-    const main = document.getElementById('diff-main');
+    const systemRows   = filteredRows.filter(r => r.layer === 'system');
+    const appRows      = filteredRows.filter(r => r.layer === 'app');
+    const main         = document.getElementById('diff-main');
     main.innerHTML =
-      renderLayer('system', systemRows, up.system?.total||0, pfnData?.system?.total||0) +
-      renderLayer('app',    appRows,    up.app?.total||0,    pfnData?.app?.total||0);
-
+      renderLayer('system', systemRows, upSysTotal, pfnSysTotal) +
+      renderLayer('app',    appRows,    upAppTotal, pfnAppTotal);
     const total = filteredRows.length;
     document.getElementById('result-count').textContent =
       `${total} CVE${total!==1?'s':''} shown`;
   }
 
   /* ── Main init ───────────────────────────────────────────── */
-  function init(data) {
+  async function init(data) {
     const app = (data.applications || []).find(a => a.id === appId);
     if (!app) { showError('App not found', `No application with id "${appId}" in report.json.`); return; }
 
@@ -585,59 +585,90 @@
       </div>` : ''}
     `;
 
-    /* ── Data notice ── */
-    const upSysTop  = ver.topSystemCves || [];
-    const upAppTop  = ver.topAppCves    || [];
-    const pfnSysTop = pfnData?.system?.topCves || [];
-    const pfnAppTop = pfnData?.app?.topCves    || [];
-    const upSysTotal = up.system?.total || 0;
-    const upAppTotal = up.app?.total    || 0;
-    const shown      = upSysTop.length + upAppTop.length;
-    const actual     = upSysTotal + upAppTotal;
-    const isTruncated = actual > shown;
+    /* ── Try to fetch full scan detail files from gh-pages ── */
+    const tagSafe   = appTag.replace(/[^a-zA-Z0-9._-]/g, '_');
+    const scanBase  = `${GH_PAGES_BASE}scans/${encodeURIComponent(appId)}/${encodeURIComponent(tagSafe)}/`;
+    const upstreamUrl = scanBase + 'upstream.json';
+    const pfnUrl      = scanBase + 'pfnapp.json';
 
-    document.getElementById('data-notice').innerHTML = isTruncated
-      ? `<strong>⚠ Partial data:</strong> The dashboard stores only the top-5 CVEs per layer
-         (${shown} of ${actual.toLocaleString()} total upstream CVEs shown below).
-         The diff below reflects the <em>sample stored in report.json</em>, not the full scan.
-         For the complete Trivy output, download
-         <a href="${RAW_BASE}report.json" target="_blank">report.json</a> directly.
-         Reduction totals in the summary are accurate (computed from full scan counters).`
-      : `<strong>✓ Complete data:</strong> All ${actual} upstream CVEs are shown below
-         (within the top-5 per layer stored in report.json). Diff is accurate.`;
+    let upstreamDetail = null;
+    let pfnDetail      = null;
+
+    try {
+      const [upRes, pfnRes] = await Promise.allSettled([
+        fetch(upstreamUrl).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+        fetch(pfnUrl).then(r => r.ok ? r.json() : Promise.reject(r.status)),
+      ]);
+      if (upRes.status === 'fulfilled')  upstreamDetail = upRes.value;
+      if (pfnRes.status === 'fulfilled') pfnDetail      = pfnRes.value;
+    } catch (_) { /* fall through to top-5 fallback */ }
+
+    const hasFullData   = !!upstreamDetail;
+    const upSysTotal    = up.system?.total || 0;
+    const upAppTotal    = up.app?.total    || 0;
+
+    // Use full CVE lists if available, else fall back to top-5 from report.json
+    const upSysCves  = upstreamDetail?.system?.cves  || ver.topSystemCves || [];
+    const upAppCves  = upstreamDetail?.app?.cves     || ver.topAppCves    || [];
+    const pfnSysCves = pfnDetail?.system?.cves        || pfnData?.system?.topCves || [];
+    const pfnAppCves = pfnDetail?.app?.cves           || pfnData?.app?.topCves    || [];
+
+    /* ── Data notice ── */
+    const shownSys  = upSysCves.length;
+    const shownApp  = upAppCves.length;
+    const notice    = document.getElementById('data-notice');
+    if (hasFullData) {
+      notice.innerHTML = `<strong>✓ Full data loaded:</strong> Showing all
+        ${upSysTotal.toLocaleString()} system + ${upAppTotal.toLocaleString()} app upstream CVEs
+        from <span class="mono">scans/${escHtml(appId)}/${escHtml(tagSafe)}/upstream.json</span>.
+        Diff is complete and accurate.`;
+    } else {
+      const shown  = shownSys + shownApp;
+      const actual = upSysTotal + upAppTotal;
+      notice.innerHTML = `<strong>⚠ Partial data:</strong> Full scan file
+        (<span class="mono">scans/${escHtml(appId)}/${escHtml(tagSafe)}/upstream.json</span>)
+        not yet available — showing top-5 CVEs per layer (${shown} of ${actual.toLocaleString()}).
+        Run the nightly scan workflow to generate complete files.
+        Reduction totals in the summary bar are accurate.`;
+      notice.style.background = 'var(--orange-dim)';
+      notice.style.borderColor = '#9e6a0340';
+    }
 
     /* ── Build all rows ── */
     allRows = [
-      ...buildDiffRows(upSysTop, pfnSysTop, 'system'),
-      ...buildDiffRows(upAppTop, pfnAppTop, 'app'),
+      ...buildDiffRows(upSysCves, pfnSysCves, 'system'),
+      ...buildDiffRows(upAppCves, pfnAppCves, 'app'),
     ].sort(sevSort);
 
     /* ── Show content ── */
     document.getElementById('loading-state').classList.add('hidden');
     document.getElementById('content').classList.remove('hidden');
 
-    renderDiff(ver);
+    renderDiff(upSysTotal, upAppTotal, pfnData?.system?.total || 0, pfnData?.app?.total || 0);
 
     /* ── Wire filters ── */
     document.getElementById('search-input').addEventListener('input', e => {
-      searchQuery = e.target.value; renderDiff(ver);
+      searchQuery = e.target.value;
+      renderDiff(upSysTotal, upAppTotal, pfnData?.system?.total || 0, pfnData?.app?.total || 0);
     });
     document.getElementById('sev-filter').addEventListener('change', e => {
-      sevFilter = e.target.value; renderDiff(ver);
+      sevFilter = e.target.value;
+      renderDiff(upSysTotal, upAppTotal, pfnData?.system?.total || 0, pfnData?.app?.total || 0);
     });
     document.getElementById('status-filter').addEventListener('change', e => {
-      statusFilter = e.target.value; renderDiff(ver);
+      statusFilter = e.target.value;
+      renderDiff(upSysTotal, upAppTotal, pfnData?.system?.total || 0, pfnData?.app?.total || 0);
     });
   }
 
-  /* ── Validate params ────────────────────────────────────── */
+  /* ── Validate params & fetch ─────────────────────────────── */
   if (!appId || !appTag) {
     showError('Missing parameters', 'Expected URL params: ?app=<id>&tag=<version>. Open this page from the dashboard card.');
     document.getElementById('loading-state').classList.add('hidden');
   } else {
     fetch(REPORT_URL)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(init)
+      .then(data => init(data))
       .catch(err => showError('Failed to load report.json', err.message));
   }
 })();

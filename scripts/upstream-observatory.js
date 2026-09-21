@@ -19,11 +19,15 @@ const { execSync } = require('child_process');
 const ROOT_DIR = path.join(__dirname, '..');
 const TRACKED_CONFIG_FILE = path.join(ROOT_DIR, 'observatory.json');
 const CACHE_DIR = path.join(ROOT_DIR, '.cache');
+const SCAN_DETAILS_DIR = path.join(ROOT_DIR, 'scan-details');
 const REPORT_JSON_FILE = path.join(ROOT_DIR, 'report.json');
 const REPORT_MD_FILE = path.join(ROOT_DIR, 'REPORT.md');
 
 if (!fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
+if (!fs.existsSync(SCAN_DETAILS_DIR)) {
+  fs.mkdirSync(SCAN_DETAILS_DIR, { recursive: true });
 }
 
 function fetchJson(url) {
@@ -196,7 +200,7 @@ function evaluatePrivilege(trivyResult) {
 }
 
 function makeVulnBucket() {
-  return { critical: 0, high: 0, medium: 0, low: 0, fixable: 0, total: 0, topCves: [] };
+  return { critical: 0, high: 0, medium: 0, low: 0, fixable: 0, total: 0, topCves: [], allCves: [] };
 }
 
 function countVuln(bucket, v) {
@@ -207,6 +211,8 @@ function countVuln(bucket, v) {
   else if (sev === 'LOW') bucket.low++;
   if (v.FixedVersion) bucket.fixable++;
   bucket.total++;
+
+  // top-5 C/H for inline display in report.json
   if ((sev === 'CRITICAL' || sev === 'HIGH') && bucket.topCves.length < 5) {
     bucket.topCves.push({
       id: v.VulnerabilityID,
@@ -217,6 +223,16 @@ function countVuln(bucket, v) {
       title: v.Title || v.VulnerabilityID
     });
   }
+
+  // full list for scan-details export
+  bucket.allCves.push({
+    id: v.VulnerabilityID,
+    pkg: v.PkgName,
+    installedVersion: v.InstalledVersion,
+    fixedVersion: v.FixedVersion || 'None',
+    severity: sev,
+    title: v.Title || v.VulnerabilityID
+  });
 }
 
 /**
@@ -262,6 +278,50 @@ function getLifecycleStatus(index, total) {
   if (index === 3) return { status: 'AGING', badge: '🟠', advice: 'Plan upgrade to latest' };
   if (index === 4) return { status: 'EOL SOON', badge: '🔴', advice: 'Next upstream release will deprecate this version' };
   return { status: 'DEPRECATED', badge: '⛔', advice: 'Unsupported. Upgrade immediately' };
+}
+
+/**
+ * Exports full CVE lists to scan-details/{appId}/{tag}/upstream.json
+ * and scan-details/{appId}/{tag}/pfnapp.json for the diff viewer.
+ * These files are published to the gh-pages branch only — not committed to main.
+ */
+function exportScanDetails(appId, tag, upstreamVulns, pfnappVulns) {
+  // Sanitize tag for use as a directory name (e.g. "v2026.9.14" → safe as-is)
+  const tagDir = tag.replace(/[^a-zA-Z0-9._-]/g, '_');
+  const dir = path.join(SCAN_DETAILS_DIR, appId, tagDir);
+  fs.mkdirSync(dir, { recursive: true });
+
+  // upstream.json — flat sorted list of all CVEs (system + app)
+  const upstreamExport = {
+    scannedAt: new Date().toISOString(),
+    system: {
+      total: upstreamVulns.system.total,
+      cves: upstreamVulns.system.allCves
+    },
+    app: {
+      total: upstreamVulns.app.total,
+      cves: upstreamVulns.app.allCves
+    }
+  };
+  fs.writeFileSync(path.join(dir, 'upstream.json'), JSON.stringify(upstreamExport, null, 2));
+
+  // pfnapp.json — only written when scan succeeded
+  if (pfnappVulns) {
+    const pfnExport = {
+      scannedAt: new Date().toISOString(),
+      system: {
+        total: pfnappVulns.system.total,
+        cves: pfnappVulns.system.allCves
+      },
+      app: {
+        total: pfnappVulns.app.total,
+        cves: pfnappVulns.app.allCves
+      }
+    };
+    fs.writeFileSync(path.join(dir, 'pfnapp.json'), JSON.stringify(pfnExport, null, 2));
+  }
+
+  console.log(`  📄 Exported scan details → scan-details/${appId}/${tagDir}/`);
 }
 
 async function main() {
@@ -345,6 +405,9 @@ async function main() {
       const pfnappTrivyResult = runTrivyScanPfnapp(app.id, tag);
       const pfnappVulns = pfnappTrivyResult ? parseVulnerabilities(pfnappTrivyResult) : null;
       const reduction = pfnappVulns ? computeReduction(vulns, pfnappVulns) : null;
+
+      // Export full CVE lists to scan-details/{app-id}/{tag}/
+      exportScanDetails(app.id, tag, vulns, pfnappVulns);
 
       summary.totalMonitoredVersions++;
       if (priv.runAsRoot) summary.runAsRootCount++;

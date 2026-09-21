@@ -1,0 +1,88 @@
+name: Nightly Security Scan
+
+on:
+  schedule:
+    - cron: '0 1 * * *'   # 01:00 UTC every night
+  workflow_dispatch:        # manual trigger
+
+permissions:
+  contents: write           # needed to push to gh-pages
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Aqua Trivy
+        run: |
+          sudo apt-get install -y wget apt-transport-https gnupg
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo "deb https://aquasecurity.github.io/trivy-repo/deb generic main" \
+            | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update -q
+          sudo apt-get install -y trivy
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run upstream observatory scanner
+        run: node scripts/upstream-observatory.js
+
+      - name: Run base image scanner
+        run: node scripts/base-image-scanner.js
+
+      # ── Checkout gh-pages into a subdirectory ──────────────────────────────
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-out
+          fetch-depth: 1
+
+      # ── Copy dashboard HTML ────────────────────────────────────────────────
+      - name: Copy dashboard files
+        run: |
+          cp docs/index.html gh-pages-out/index.html
+          cp docs/diff.html  gh-pages-out/diff.html
+
+      # ── Copy top-level JSON reports ────────────────────────────────────────
+      - name: Copy JSON reports
+        run: |
+          cp report.json      gh-pages-out/report.json
+          cp base-report.json gh-pages-out/base-report.json 2>/dev/null || true
+
+      # ── Copy scan detail files (full CVE lists per image/version) ──────────
+      - name: Copy scan detail files
+        run: |
+          if [ -d scan-details ]; then
+            rsync -a --delete scan-details/ gh-pages-out/scans/
+          fi
+
+      # ── Commit & push to gh-pages ──────────────────────────────────────────
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages-out
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed, skipping commit."
+          else
+            SCAN_DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "chore: nightly scan — ${SCAN_DATE}"
+            git push origin gh-pages
+          fi
