@@ -14,12 +14,15 @@ RUN apk update && apk upgrade --no-cache && \
     ca-certificates \
     tzdata
 
-# Upgrade npm to latest patched version.
-# Node 18 ships with npm 10.8.2 which bundles vulnerable transitive deps
-# (tar 6.2.1, brace-expansion 2.0.1, minimatch 9.0.5, etc.).
-# npm 11+ requires Node >= 20, so we pin npm@10 for Node 18 and use npm@latest
-# for Node 20+. The version is resolved at build time via node itself.
-RUN npm install -g npm@$(node -e "const v=parseInt(process.version.slice(1)); console.log(v>=20?'latest':'10')")
+# Upgrade npm to latest patched version compatible with this Node major.
+# npm major compatibility:
+#   npm@10  → Node 18  (npm 11+ requires Node >= 20)
+#   npm@11  → Node 20  (npm 12+ requires Node >= 22.22.2 | 24.15.0 | 26.0.0)
+#   npm@latest (12+) → Node 22 / 24 / 26
+# Version tag resolved at build time so one Dockerfile covers all versions.
+RUN node -e "const v=parseInt(process.version.slice(1)); \
+  process.stdout.write(v<=18?'10':v<=20?'11':'latest')" \
+  | xargs -I{} npm install -g npm@{}
 
 # Create dedicated non-root user and group
 RUN addgroup -g ${GID} -S appgroup && \

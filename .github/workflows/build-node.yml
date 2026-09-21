@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node_version: ['22', '20', '18']
+        node_version: ['26', '24', '22', '20', '18']
 
     steps:
       - name: Checkout repository
@@ -214,7 +214,7 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
 
-          if [ "${{ matrix.node_version }}" = "22" ]; then
+          if [ "${{ matrix.node_version }}" = "26" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi
