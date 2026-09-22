@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-22T05:52:01.840Z",
+  "scannedAt": "2026-09-22T09:20:15.191Z",
   "system": {
     "total": 5700,
     "cves": [
@@ -9420,6 +9420,14 @@
         "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in Navigation"
       },
       {
+        "id": "CVE-2026-16417",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "150.0.7871.181-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: chromium-browser: skia: Information disclosure via uninitialized use in Skia"
+      },
+      {
         "id": "CVE-2026-17728",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -11180,12 +11188,36 @@
         "title": "chromium-browser: chromium-browser: Race condition in Network"
       },
       {
+        "id": "CVE-2026-91733",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Skia in chromium-browser: Information disclosure via improper state validation"
+      },
+      {
+        "id": "CVE-2026-91740",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Google Chrome: Cross-origin data disclosure due to uninitialized resource in Skia"
+      },
+      {
         "id": "CVE-2026-91746",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: chromium-browser: Integer overflow in Compositing"
+      },
+      {
+        "id": "CVE-2026-91747",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Skia: Cross-origin data disclosure via use-after-free vulnerability"
       },
       {
         "id": "CVE-2026-9882",
@@ -13954,14 +13986,6 @@
         "fixedVersion": "150.0.7871.181-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Integer overflow in Chromecast in Google Chrome prior to 150.0.7871.18 ..."
-      },
-      {
-        "id": "CVE-2026-16417",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "150.0.7871.181-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized Use in Skia in Google Chrome prior to 150.0.7871.182 all ..."
       },
       {
         "id": "CVE-2026-16418",
@@ -18484,14 +18508,6 @@
         "title": "Type confusion in Compositing in Google Chrome prior to 153.0.8010.47  ..."
       },
       {
-        "id": "CVE-2026-91733",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper state validation in Skia in Google Chrome prior to 153.0.8010 ..."
-      },
-      {
         "id": "CVE-2026-91734",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18540,14 +18556,6 @@
         "title": "Missing authorization in Transactions Platform in Google Chrome prior  ..."
       },
       {
-        "id": "CVE-2026-91740",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in Skia in Google Chrome prior to 153.0.8010.47 ..."
-      },
-      {
         "id": "CVE-2026-91741",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18586,14 +18594,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in V8 in Google Chrome prior to 153.0.8010.47 allowed a ..."
-      },
-      {
-        "id": "CVE-2026-91747",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Skia in Google Chrome prior to 153.0.8010.47 allowed ..."
       },
       {
         "id": "CVE-2026-91749",
@@ -28036,6 +28036,14 @@
         "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in Navigation"
       },
       {
+        "id": "CVE-2026-16417",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "150.0.7871.181-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: chromium-browser: skia: Information disclosure via uninitialized use in Skia"
+      },
+      {
         "id": "CVE-2026-17728",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -29796,12 +29804,36 @@
         "title": "chromium-browser: chromium-browser: Race condition in Network"
       },
       {
+        "id": "CVE-2026-91733",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Skia in chromium-browser: Information disclosure via improper state validation"
+      },
+      {
+        "id": "CVE-2026-91740",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Google Chrome: Cross-origin data disclosure due to uninitialized resource in Skia"
+      },
+      {
         "id": "CVE-2026-91746",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: chromium-browser: Integer overflow in Compositing"
+      },
+      {
+        "id": "CVE-2026-91747",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: skia: Skia: Cross-origin data disclosure via use-after-free vulnerability"
       },
       {
         "id": "CVE-2026-9882",
@@ -32570,14 +32602,6 @@
         "fixedVersion": "150.0.7871.181-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Integer overflow in Chromecast in Google Chrome prior to 150.0.7871.18 ..."
-      },
-      {
-        "id": "CVE-2026-16417",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "150.0.7871.181-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized Use in Skia in Google Chrome prior to 150.0.7871.182 all ..."
       },
       {
         "id": "CVE-2026-16418",
@@ -37100,14 +37124,6 @@
         "title": "Type confusion in Compositing in Google Chrome prior to 153.0.8010.47  ..."
       },
       {
-        "id": "CVE-2026-91733",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper state validation in Skia in Google Chrome prior to 153.0.8010 ..."
-      },
-      {
         "id": "CVE-2026-91734",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37156,14 +37172,6 @@
         "title": "Missing authorization in Transactions Platform in Google Chrome prior  ..."
       },
       {
-        "id": "CVE-2026-91740",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in Skia in Google Chrome prior to 153.0.8010.47 ..."
-      },
-      {
         "id": "CVE-2026-91741",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37202,14 +37210,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in V8 in Google Chrome prior to 153.0.8010.47 allowed a ..."
-      },
-      {
-        "id": "CVE-2026-91747",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Skia in Google Chrome prior to 153.0.8010.47 allowed ..."
       },
       {
         "id": "CVE-2026-91749",
@@ -37532,14 +37532,6 @@
         "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
       },
       {
-        "id": "CVE-2026-80230",
-        "pkg": "curl",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that di ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "curl",
         "installedVersion": "7.88.1-10+deb12u14",
@@ -37642,6 +37634,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "curl",
+        "installedVersion": "7.88.1-10+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
         "id": "CVE-2026-82209",
@@ -38804,14 +38804,6 @@
         "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
       },
       {
-        "id": "CVE-2026-80230",
-        "pkg": "libcurl4",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that di ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl4",
         "installedVersion": "7.88.1-10+deb12u14",
@@ -38914,6 +38906,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl4",
+        "installedVersion": "7.88.1-10+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
         "id": "CVE-2026-82209",

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-22T05:53:22.029Z",
+  "scannedAt": "2026-09-22T09:21:21.761Z",
   "system": {
     "total": 3364,
     "cves": [
@@ -1892,14 +1892,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80230",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u4",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that di ..."
-      },
-      {
         "id": "CVE-2026-80255",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u4",
@@ -2002,6 +1994,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
         "id": "CVE-2026-82208",
@@ -6604,14 +6604,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80230",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.14.1-2+deb13u4",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that di ..."
-      },
-      {
         "id": "CVE-2026-80255",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u4",
@@ -6714,6 +6706,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
         "id": "CVE-2026-82208",
@@ -6804,14 +6804,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80230",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u4",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When `CURLOPT_PINNEDPUBLICKEY` is configured alongside options that di ..."
-      },
-      {
         "id": "CVE-2026-80255",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u4",
@@ -6914,6 +6906,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
         "id": "CVE-2026-82208",
@@ -12380,22 +12380,6 @@
         "title": "kernel: nfsd: defer vfree of compound ops to fix rpc_status UAF"
       },
       {
-        "id": "CVE-2026-89700",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: Linux kernel nfsd: Out-of-bounds read due to improper sockaddr length validation"
-      },
-      {
-        "id": "CVE-2026-89704",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: Linux kernel: nfsd silent data loss due to incorrect writeback error handling"
-      },
-      {
         "id": "CVE-2026-89708",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -12404,36 +12388,12 @@
         "title": "kernel: nfsd: RCU-protect cl_cb_session to fix use-after-free on session teardown"
       },
       {
-        "id": "CVE-2026-89709",
+        "id": "CVE-2026-89713",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "kernel: Linux kernel: lockd and nfsd denial of service vulnerability"
-      },
-      {
-        "id": "CVE-2026-89712",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: Linux kernel NFSD: Denial of service via use-after-free"
-      },
-      {
-        "id": "CVE-2026-89736",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: Linux kernel USB audio gadget driver: Use-after-free leading to arbitrary code execution"
-      },
-      {
-        "id": "CVE-2026-89761",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: Kernel: AppArmor out-of-bounds write allows local denial of service or privilege escalation"
+        "title": "kernel: NFSD: check truncate permission under inode lock"
       },
       {
         "id": "CVE-2019-15213",
@@ -17601,7 +17561,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Stack buffer overflow in ACPI pfr_update can lead to memory corruption."
+        "title": "kernel: ACPI: pfr_update: fix stack buffer overflow in query_capability()"
       },
       {
         "id": "CVE-2026-89588",
@@ -17617,7 +17577,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Denial of Service in ACPI/APEI/GHES due to spinlock deadlock"
+        "title": "kernel: acpi/apei/ghes: Use raw_spinlock_t for CXL CPER work locks"
       },
       {
         "id": "CVE-2026-89594",
@@ -18065,7 +18025,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: nfsd vulnerable to denial of service via oversized NFSv4 symlink targets"
+        "title": "kernel: nfsd: validate symlink target length in NFSv4 CREATE"
+      },
+      {
+        "id": "CVE-2026-89700",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: nfsd: validate sockaddr length per family in listener_set"
       },
       {
         "id": "CVE-2026-89702",
@@ -18082,6 +18050,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: nfsd: set SC_STATUS_FREED in nfsd4_drop_revoked_stid for delegations"
+      },
+      {
+        "id": "CVE-2026-89704",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: nfsd: sample writeback error cursor before async COPY loop"
       },
       {
         "id": "CVE-2026-89705",
@@ -18108,6 +18084,14 @@
         "title": "kernel: nfsd: release path refs on follow_down() error"
       },
       {
+        "id": "CVE-2026-89709",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: lockd, nfsd: RCU-protect nlmsvc_ops dispatch"
+      },
+      {
         "id": "CVE-2026-89710",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -18124,20 +18108,12 @@
         "title": "kernel: NFSD: remove flawed WARN_ON_ONCE from nfsd_mode_check"
       },
       {
-        "id": "CVE-2026-89713",
+        "id": "CVE-2026-89712",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel NFSD: Unauthorized truncation of append-only files via TOCTOU vulnerability"
-      },
-      {
-        "id": "CVE-2026-89717",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: zram: NULL pointer dereference due to invalid compressor state"
+        "title": "kernel: NFSD: restart ssc_expire_umount walk after dropping nfsd_ssc_lock"
       },
       {
         "id": "CVE-2026-89718",
@@ -18153,7 +18129,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: zram out-of-bounds access leading to system instability"
+        "title": "kernel: zram: fix out-of-bounds access in read_block_state()"
       },
       {
         "id": "CVE-2026-89720",
@@ -18177,7 +18153,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: nilfs2: Linux kernel: nilfs2 slab-out-of-bounds due to improper node block handling"
+        "title": "kernel: nilfs2: fix slab-out-of-bounds in nilfs_direct_propagate after truncation"
       },
       {
         "id": "CVE-2026-89724",
@@ -18201,7 +18177,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Out-of-bounds read in ucs2_strnlen() can lead to information disclosure"
+        "title": "kernel: lib/ucs2_string.c: fix out-of-bounds read in ucs2_strnlen()"
       },
       {
         "id": "CVE-2026-89729",
@@ -18225,7 +18201,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Out-of-bounds read in CXL/RAS AER handling"
+        "title": "kernel: cxl/ras: Fix cxl_rch_get_aer_info() out-of-bounds AER register read"
       },
       {
         "id": "CVE-2026-89732",
@@ -18233,7 +18209,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Kernel: USB FunctionFS deadlock via ep0 read loop"
+        "title": "kernel: usb: gadget: f_fs: Prevent deadlock during ep0 read loop"
       },
       {
         "id": "CVE-2026-89733",
@@ -18241,7 +18217,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: USB UVC gadget driver use-after-free vulnerability"
+        "title": "kernel: usb: gadget: uvc: fix dangling pointers in uvc_function_bind() and uvc_function_unbind()"
       },
       {
         "id": "CVE-2026-89735",
@@ -18249,7 +18225,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: USB gadget MIDI2 driver resource leak leads to denial of service"
+        "title": "kernel: usb: gadget: midi2: remove default configfs groups on teardown"
+      },
+      {
+        "id": "CVE-2026-89736",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: usb: gadget: u_audio: Fix use-after-free on sound card disconnect"
       },
       {
         "id": "CVE-2026-89738",
@@ -18257,7 +18241,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: USB gadget `at91_udc` driver use-after-free vulnerability"
+        "title": "kernel: usb: gadget: at91_udc: drain polled-VBUS timer/work before udc is freed"
       },
       {
         "id": "CVE-2026-89740",
@@ -18281,7 +18265,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Arbitrary code execution via use-after-free in RapidIO mport character device."
+        "title": "kernel: rapidio: mport_cdev: fix use-after-free in dma_req_free()"
       },
       {
         "id": "CVE-2026-89743",
@@ -18289,7 +18273,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: NSM information disclosure via out-of-bounds read"
+        "title": "kernel: misc: nsm: bound the device-reported response length"
       },
       {
         "id": "CVE-2026-89746",
@@ -18297,7 +18281,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel tracing: Use-after-free leads to Denial of Service"
+        "title": "kernel: tracing: Fix use-after-free with same-name named triggers"
       },
       {
         "id": "CVE-2026-89747",
@@ -18313,7 +18297,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Use-After-Free in tracing/user_events component"
+        "title": "kernel: tracing/user_events: Clear copied tracing state before fork duplication"
       },
       {
         "id": "CVE-2026-89751",
@@ -18321,15 +18305,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel (x86/tdx): Off-by-one error in port I/O handling"
-      },
-      {
-        "id": "CVE-2026-89752",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Denial of Service in memcg due to stale memory limit during reclaim"
+        "title": "kernel: x86/tdx: Fix off-by-one in port I/O handling"
       },
       {
         "id": "CVE-2026-89755",
@@ -18337,7 +18313,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: System crash due to stale memory mapping in device migration"
+        "title": "kernel: mm/migrate_device: clear stale mapping after freeing swapcache"
       },
       {
         "id": "CVE-2026-89756",
@@ -18356,6 +18332,14 @@
         "title": "kernel: mm/mglru: fix and remove redundant unevictable folio handling"
       },
       {
+        "id": "CVE-2026-89761",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: apparmor: fix out-of-bounds write when null terminating a label vec"
+      },
+      {
         "id": "CVE-2026-89762",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -18369,15 +18353,23 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Linux kernel: Use-after-free in TPM trusted keys due to incorrect teardown ordering"
+        "title": "kernel: KEYS: trusted: Fix TPM teardown ordering"
       },
       {
-        "id": "CVE-2026-89765",
+        "id": "CVE-2026-89766",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: Kernel: Information disclosure in timers/itimer due to uninitialized padding"
+        "title": "kernel: pidfd: hold exec_update_lock around namespace ioctl"
+      },
+      {
+        "id": "CVE-2026-89768",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: fs: fix user path of nested backing files"
       },
       {
         "id": "CVE-2026-89771",
@@ -23017,7 +23009,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: gadget: f_uac1_legacy: remove broken string configfs attributes"
       },
       {
         "id": "CVE-2026-93058",
@@ -23625,7 +23617,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: atmel-sha204a - fix heap info leak on I2C transfer failure"
       },
       {
         "id": "CVE-2026-93160",
@@ -25036,6 +25028,14 @@
         "title": "kernel: ceph: do not repeat ceph_trim_dentries() if no progress possible"
       },
       {
+        "id": "CVE-2026-89717",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: zram: set default primary compressor in zram_destroy_comps()"
+      },
+      {
         "id": "CVE-2026-89744",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -25050,6 +25050,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: tracing: Fix crash passing ERR_PTR to kthread_stop()"
+      },
+      {
+        "id": "CVE-2026-89752",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: mm: memcg: stop reclaim when a limit update is superseded"
       },
       {
         "id": "CVE-2026-89753",
@@ -25068,20 +25076,12 @@
         "title": "kernel: mm/kmemleak: avoid soft lockup when scanning task stacks"
       },
       {
-        "id": "CVE-2026-89766",
+        "id": "CVE-2026-89765",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "kernel: Linux kernel: Information disclosure in pidfd namespace handling"
-      },
-      {
-        "id": "CVE-2026-89768",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: Linux kernel: Information disclosure via incorrect path derivation in nested overlayfs"
+        "title": "kernel: timers/itimer: Zero-init old itimerval before copy to userspace"
       },
       {
         "id": "TEMP-0000000-F7A20F",
