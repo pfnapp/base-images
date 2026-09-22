@@ -4,7 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'docs/**'
+      - 'docs/index.html'
+      - 'docs/diff.html'
+      - 'docs/style.css'
+      - 'docs/dashboard.css'
+      - 'docs/dashboard.js'
+      - 'docs/diff.css'
+      - 'docs/diff.js'
   workflow_dispatch:
 
 permissions:
@@ -33,15 +39,20 @@ jobs:
 
       - name: Copy dashboard files to gh-pages
         run: |
-          cp docs/index.html gh-pages-out/index.html
-          cp docs/diff.html  gh-pages-out/diff.html
+          cp docs/index.html    gh-pages-out/index.html
+          cp docs/diff.html     gh-pages-out/diff.html
+          cp docs/style.css     gh-pages-out/style.css
+          cp docs/dashboard.css gh-pages-out/dashboard.css
+          cp docs/dashboard.js  gh-pages-out/dashboard.js
+          cp docs/diff.css      gh-pages-out/diff.css
+          cp docs/diff.js       gh-pages-out/diff.js
 
       - name: Commit and push to gh-pages
         run: |
           cd gh-pages-out
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html diff.html
+          git add index.html diff.html style.css dashboard.css dashboard.js diff.css diff.js
           if git diff --cached --quiet; then
             echo "No dashboard changes to deploy."
           else
