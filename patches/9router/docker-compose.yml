@@ -1,0 +1,19 @@
+services:
+  9router:
+    build: .
+    image: local/pfnapp-9router:0.5.75
+    ports: ["20128:20128"]
+    environment:
+      PORT: "20128"
+      HOSTNAME: "0.0.0.0"
+      DATA_DIR: "/app/data"
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes: ["9router-data:/app/data"]
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:20128/ >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  9router-data:

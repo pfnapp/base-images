@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "openclaw",
+  "framework": "OpenClaw",
+  "version": "2026.9.5",
+  "baseImage": "ghcr.io/pfnapp/openclaw:2026.9.5",
+  "ports": { "default": 18789, "protocol": "HTTP" },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "probes": {
+    "liveness": { "path": "/healthz", "port": 18789 },
+    "readiness": { "path": "/startupz", "port": 18789 }
+  },
+  "tunables": [
+    {
+      "key": "OPENCLAW_GATEWAY_TOKEN",
+      "label": "Gateway Token",
+      "type": "string",
+      "required": true,
+      "example": "token_test_12345678901234567890",
+      "safe": true,
+      "category": "security",
+      "description": "Bearer token that gateway clients must present; required in production when the gateway binds beyond loopback.",
+      "troubleshooting": "Set a stable token (or OPENCLAW_GATEWAY_PASSWORD) so clients survive restarts; a non-loopback bind with no auth path fails closed. The example is a local-only dummy value for compose validation."
+    },
+    {
+      "key": "OPENCLAW_GATEWAY_BIND",
+      "label": "Gateway Bind Mode",
+      "type": "string",
+      "required": false,
+      "default": "lan",
+      "example": "0.0.0.0",
+      "safe": true,
+      "category": "networking",
+      "description": "Where the gateway listens: `lan` or `0.0.0.0` accept published container traffic, `loopback` stays local.",
+      "troubleshooting": "With `loopback` the published 18789 port is unreachable from the host — use `lan` (container default) or 0.0.0.0."
+    },
+    {
+      "key": "OPENCLAW_GATEWAY_PORT",
+      "label": "Gateway Port",
+      "type": "number",
+      "required": false,
+      "default": 18789,
+      "example": 18789,
+      "safe": true,
+      "category": "networking",
+      "description": "HTTP port the gateway listens on; must match the published container port.",
+      "troubleshooting": "If the healthcheck times out, confirm the published mapping matches this value (18789:18789)."
+    },
+    {
+      "key": "NODE_ENV",
+      "label": "Node Environment",
+      "type": "string",
+      "required": false,
+      "default": "production",
+      "example": "production",
+      "safe": true,
+      "category": "runtime",
+      "description": "Node.js execution mode; the image already defaults to production.",
+      "troubleshooting": "Leave at production — development mode enables verbose error pages and slower builds."
+    }
+  ],
+  "notes": "The gateway starts from the image default command (`node openclaw.mjs gateway`); probes are GET /healthz (liveness) and GET /startupz (readiness), both unauthenticated on the gateway port. Gateway settings otherwise live in ~/.openclaw/openclaw.json on the mounted volume; provider and channel credentials are external requirements and intentionally absent."
+}

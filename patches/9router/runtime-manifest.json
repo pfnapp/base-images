@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "9router",
+  "framework": "9Router",
+  "version": "0.5.75",
+  "baseImage": "ghcr.io/pfnapp/9router:0.5.75",
+  "ports": { "default": 20128, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 20128 }, "readiness": { "path": "/", "port": 20128 } },
+  "tunables": [
+    { "key": "PORT", "label": "Server Port", "type": "number", "required": false, "default": 20128, "example": 20128, "safe": true, "category": "networking", "description": "HTTP port used by the upstream Node server." },
+    { "key": "HOSTNAME", "label": "Bind Address", "type": "string", "required": false, "default": "0.0.0.0", "example": "0.0.0.0", "safe": true, "category": "networking", "description": "Address on which the upstream server listens." },
+    { "key": "DATA_DIR", "label": "Data Directory", "type": "string", "required": false, "default": "/app/data", "example": "/app/data", "safe": true, "category": "storage", "description": "Persistent application data directory." },
+    { "key": "NODE_ENV", "label": "Node Environment", "type": "string", "required": false, "default": "production", "example": "production", "safe": true, "category": "runtime", "description": "Node execution mode." },
+    { "key": "NEXT_TELEMETRY_DISABLED", "label": "Disable Telemetry", "type": "boolean", "required": false, "default": true, "example": true, "safe": true, "category": "privacy", "description": "Disables Next.js telemetry." }
+  ]
+}

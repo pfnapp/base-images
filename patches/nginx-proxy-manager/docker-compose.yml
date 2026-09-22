@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MYSQL_ROOT_PASSWORD: local-only-root-password
+      MYSQL_DATABASE: npm
+      MYSQL_USER: npm
+      MYSQL_PASSWORD: local-only-password
+    volumes: ["npm-db:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+  nginx-proxy-manager:
+    build: .
+    image: local/pfnapp-nginx-proxy-manager:2.15.1
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: ["8081:81"]
+    environment:
+      DB_MYSQL_HOST: db
+      DB_MYSQL_PORT: "3306"
+      DB_MYSQL_USER: npm
+      DB_MYSQL_PASSWORD: local-only-password
+      DB_MYSQL_NAME: npm
+    volumes:
+      - npm-data:/data
+      - npm-letsencrypt:/etc/letsencrypt
+    healthcheck:
+      test: [CMD-SHELL, "curl -fsS http://127.0.0.1:81/ >/dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+volumes:
+  npm-db:
+  npm-data:
+  npm-letsencrypt:

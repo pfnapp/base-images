@@ -1,0 +1,14 @@
+services:
+  hermes-agent:
+    build: .
+    image: local/pfnapp-hermes-agent:v2026.9.14
+    environment:
+      HERMES_HOME: /opt/data
+      HERMES_WRITE_SAFE_ROOT: /opt/data
+      PYTHONUNBUFFERED: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+      HERMES_DISABLE_LAZY_INSTALLS: "1"
+    volumes: ["hermes-data:/opt/data"]
+    command: ["hermes", "doctor"]
+volumes:
+  hermes-data:

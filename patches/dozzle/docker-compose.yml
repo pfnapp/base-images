@@ -1,0 +1,14 @@
+services:
+  dozzle:
+    build: .
+    image: local/pfnapp-dozzle:v11.1.1
+    ports: ["8080:8080"]
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      # Image is scratch-based: no /bin/sh, wget or curl. Use the binary's
+      # built-in healthcheck subcommand (GET http://localhost:8080/healthcheck).
+      test: ["CMD", "/dozzle", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      retries: 12

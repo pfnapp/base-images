@@ -1,0 +1,16 @@
+services:
+  memos:
+    build: .
+    image: local/pfnapp-memos:0.31.0
+    ports: ["5230:5230"]
+    environment:
+      MEMOS_MODE: prod
+      MEMOS_PORT: "5230"
+    volumes: ["memos-data:/var/opt/memos"]
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:5230/ >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  memos-data:

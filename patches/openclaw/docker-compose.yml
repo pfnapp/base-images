@@ -1,0 +1,22 @@
+services:
+  openclaw:
+    build: .
+    image: local/pfnapp-openclaw:2026.9.5
+    # Same as the image default command; --allow-unconfigured keeps the
+    # sample starting before any provider/channel is configured.
+    command: ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
+    ports: ["18789:18789"]
+    environment:
+      NODE_ENV: production
+      OPENCLAW_GATEWAY_TOKEN: token_test_12345678901234567890
+      OPENCLAW_GATEWAY_BIND: "0.0.0.0"
+      OPENCLAW_GATEWAY_PORT: "18789"
+    volumes: ["openclaw-home:/home/node/.openclaw"]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:18789/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+volumes:
+  openclaw-home:

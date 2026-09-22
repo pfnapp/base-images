@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "filebrowser", "framework": "FileBrowser", "version": "v2.63.23",
+  "baseImage": "ghcr.io/pfnapp/filebrowser:v2.63.23",
+  "ports": { "default": 80, "protocol": "HTTP" }, "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 80 }, "readiness": { "path": "/", "port": 80 } },
+  "tunables": [
+    { "key": "UID", "label": "Process User ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "UID used by the upstream image." },
+    { "key": "GID", "label": "Process Group ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "GID used by the upstream image." }
+  ]
+}

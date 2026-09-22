@@ -1,0 +1,29 @@
+services:
+  omniroute:
+    build: .
+    image: local/pfnapp-omniroute:3.8.50
+    ports: ["20129:20128"]
+    environment:
+      # Required in production (minimum 32 chars)
+      JWT_SECRET: local-only-jwt-secret-change-me-32chars
+      API_KEY_SECRET: local-only-api-key-secret-change-me-32chars
+      INITIAL_PASSWORD: local-only-initial-password-1234
+      DATA_DIR: /app/data
+      PORT: "20128"
+      HOSTNAME: 0.0.0.0
+      # Optional
+      NODE_ENV: production
+      OMNIROUTE_MEMORY_MB: "1024"
+      NODE_OPTIONS: --max-old-space-size=1024
+      OMNIROUTE_MIGRATIONS_DIR: /app/migrations
+    volumes: ["omniroute-data:/app/data"]
+    healthcheck:
+      # Upstream healthcheck script probes GET /healthz on PORT; the image
+      # ships neither curl nor wget, so node does the HTTP probe.
+      test: ["CMD", "node", "healthcheck.mjs"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+volumes:
+  omniroute-data:

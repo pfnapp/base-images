@@ -1,6 +1,6 @@
+# PFNApp hardened image for Stirling PDF
+# NOTE: Upstream strips dpkg/debconf runtime metadata.
+# Standard package manager upgrade is not applicable.
+# This image is re-published as-is from upstream.
+# CVE reduction depends on upstream releasing a new version.
 FROM docker.io/stirlingtools/stirling-pdf:2.14.3
-RUN apt-get update --fix-missing && \
-    apt-get upgrade -y --no-install-recommends --fix-missing && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*

@@ -1,0 +1,17 @@
+services:
+  homepage:
+    build: .
+    image: local/pfnapp-homepage:v2.4.0
+    ports: ["3005:3000"]
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: localhost:3005,127.0.0.1:3005
+      PUID: "1000"
+      PGID: "1000"
+    volumes: ["homepage-config:/app/config"]
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:3000/ >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  homepage-config:

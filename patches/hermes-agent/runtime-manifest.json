@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "hermes-agent",
+  "framework": "Hermes Agent",
+  "version": "v2026.9.14",
+  "baseImage": "ghcr.io/pfnapp/hermes-agent:v2026.9.14",
+  "ports": { "default": 8642, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": {
+    "liveness": { "path": "/health", "port": 8642 },
+    "readiness": { "path": "/health", "port": 8642 }
+  },
+  "tunables": [
+    {
+      "key": "API_SERVER_ENABLED",
+      "label": "API Server Enabled",
+      "type": "boolean",
+      "required": true,
+      "example": true,
+      "safe": true,
+      "category": "networking",
+      "description": "Starts the OpenAI-compatible API server as a gateway platform adapter; it serves GET /health on port 8642.",
+      "troubleshooting": "Without API_SERVER_ENABLED=true nothing listens on 8642 and the /health probe fails. The container must also be started with `gateway run` so the gateway daemon (which supervises the API server adapter) is running."
+    },
+    {
+      "key": "API_SERVER_HOST",
+      "label": "API Server Bind Address",
+      "type": "string",
+      "required": true,
+      "default": "127.0.0.1",
+      "example": "0.0.0.0",
+      "safe": true,
+      "category": "networking",
+      "description": "Host/bind address for the API server; containers must bind 0.0.0.0 to accept published traffic.",
+      "troubleshooting": "The upstream default 127.0.0.1 is unreachable from outside the container — set 0.0.0.0 and publish port 8642. API_SERVER_KEY is still required even on loopback binds."
+    },
+    {
+      "key": "API_SERVER_KEY",
+      "label": "API Server Key",
+      "type": "string",
+      "required": true,
+      "example": "testsecretkey1234567890",
+      "safe": true,
+      "category": "security",
+      "description": "Bearer token clients send to the API server; upstream refuses to start the API server without a strong key (minimum 16 characters).",
+      "troubleshooting": "Send it as `Authorization: Bearer <key>`. The key must be at least 16 characters or the API server refuses to start. The example is a local-only dummy value for compose validation — replace it before any real deployment."
+    },
+    {
+      "key": "HERMES_HOME",
+      "label": "Hermes Home",
+      "type": "string",
+      "required": true,
+      "default": "/opt/data",
+      "example": "/opt/data",
+      "safe": true,
+      "category": "storage",
+      "description": "Persistent Hermes configuration, state and data directory; must point at the mounted volume (/opt/data).",
+      "troubleshooting": "Keep it on the declared /opt/data volume so gateway/API state survives `docker compose down -v` rebuilds; a different path loses profile and provider state."
+    },
+    {
+      "key": "PYTHONUNBUFFERED",
+      "label": "Unbuffered Python",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "example": true,
+      "safe": true,
+      "category": "runtime",
+      "description": "Writes Python stdout/stderr without buffering so logs appear immediately.",
+      "troubleshooting": "Set to true when container logs look delayed or truncated in `docker compose logs`."
+    },
+    {
+      "key": "PYTHONDONTWRITEBYTECODE",
+      "label": "Disable Bytecode Files",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "example": true,
+      "safe": true,
+      "category": "runtime",
+      "description": "Prevents Python from writing .pyc bytecode files into the container filesystem.",
+      "troubleshooting": "Keep true in read-only or ephemeral root filesystems to avoid write errors on import."
+    },
+    {
+      "key": "HERMES_WRITE_SAFE_ROOT",
+      "label": "Safe Write Root",
+      "type": "string",
+      "required": false,
+      "default": "/opt/data",
+      "example": "/opt/data",
+      "safe": true,
+      "category": "security",
+      "description": "Root directory that Hermes is allowed to write to (safe-write guard).",
+      "troubleshooting": "Must stay inside the mounted /opt/data volume; writes outside this root are rejected."
+    },
+    {
+      "key": "HERMES_DISABLE_LAZY_INSTALLS",
+      "label": "Disable Lazy Installs",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "example": true,
+      "safe": true,
+      "category": "runtime",
+      "description": "Disables on-demand package installs so container startup stays deterministic.",
+      "troubleshooting": "Leave enabled in containers; disabling allows installs at runtime into HERMES_LAZY_INSTALL_TARGET, which needs network and a writable volume."
+    }
+  ],
+  "notes": "Ports: 8642 is the API server (API_SERVER_PORT default 8642, health endpoint GET /health); 9119 is the optional web dashboard started by the s6 dashboard service when HERMES_DASHBOARD=1 (HERMES_DASHBOARD_PORT default 9119), which requires an auth provider on non-loopback binds. The sample maps only the API port 8642. Provider credentials are configured in persisted Hermes state; no credentials are included in this manifest or sample."
+}

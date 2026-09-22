@@ -1,0 +1,18 @@
+services:
+  vaultwarden:
+    build: .
+    image: local/pfnapp-vaultwarden:1.37.3
+    ports: ["8084:80"]
+    environment:
+      DOMAIN: http://localhost:8084
+      SIGNUPS_ALLOWED: "false"
+      WEBSOCKET_ENABLED: "false"
+      ADMIN_TOKEN: local-only-admin-token
+    volumes: ["vaultwarden-data:/data"]
+    healthcheck:
+      test: [CMD-SHELL, "curl -fsS http://127.0.0.1:80/alive >/dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+volumes:
+  vaultwarden-data:

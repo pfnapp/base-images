@@ -1,0 +1,15 @@
+services:
+  pocketbase:
+    build: .
+    image: local/pfnapp-pocketbase:0.40.4
+    command: ["serve", "--http=0.0.0.0:8090"]
+    ports: ["8090:8090"]
+    volumes: ["pocketbase-data:/pb/pb_data", "pocketbase-public:/pb/pb_public"]
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:8090/api/health >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  pocketbase-data:
+  pocketbase-public:

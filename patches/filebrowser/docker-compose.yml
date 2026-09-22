@@ -1,0 +1,14 @@
+services:
+  filebrowser:
+    build: .
+    image: local/pfnapp-filebrowser:v2.63.23
+    ports: ["8080:80"]
+    volumes: ["filebrowser-data:/srv", "filebrowser-db:/database"]
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:80/ >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  filebrowser-data:
+  filebrowser-db:

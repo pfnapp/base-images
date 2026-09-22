@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "dozzle", "framework": "Dozzle", "version": "v11.1.1",
+  "baseImage": "ghcr.io/pfnapp/dozzle:v11.1.1",
+  "ports": { "default": 8080, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 8080 }, "readiness": { "path": "/", "port": 8080 } },
+  "tunables": [
+    { "key": "DOZZLE_ADDR", "label": "Listen Address", "type": "string", "required": false, "default": ":8080", "example": ":8080", "safe": true, "category": "networking", "description": "Dozzle listen address." },
+    { "key": "DOZZLE_LEVEL", "label": "Log Level", "type": "string", "required": false, "default": "info", "example": "info", "safe": true, "category": "runtime", "description": "Application log verbosity." },
+    { "key": "DOZZLE_BASE", "label": "URL Base", "type": "string", "required": false, "default": "/", "example": "/", "safe": true, "category": "networking", "description": "Optional URL base path." }
+  ]
+}

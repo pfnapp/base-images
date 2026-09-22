@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "omniroute",
+  "framework": "OmniRoute",
+  "version": "3.8.50",
+  "baseImage": "ghcr.io/pfnapp/omniroute:3.8.50",
+  "ports": { "default": 20128, "protocol": "HTTP" },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "probes": {
+    "liveness": { "path": "/", "port": 20128 },
+    "readiness": { "path": "/dashboard", "port": 20128 }
+  },
+  "tunables": [
+    {
+      "key": "JWT_SECRET",
+      "label": "JWT Secret",
+      "type": "string",
+      "required": true,
+      "example": "local-only-jwt-secret-change-me",
+      "safe": true,
+      "category": "security",
+      "description": "Signing key for login sessions, WebSocket handshakes and CSRF tokens; required in production.",
+      "troubleshooting": "Without it auth routes return errors and logins/WebSockets are rejected. Use a long random value and never rotate it casually — existing sessions become invalid."
+    },
+    {
+      "key": "API_KEY_SECRET",
+      "label": "API Key Secret",
+      "type": "string",
+      "required": true,
+      "example": "local-only-api-key-secret-change-me",
+      "safe": true,
+      "category": "security",
+      "description": "Key-encryption secret for issued API keys; required in production.",
+      "troubleshooting": "The app errors on startup/key use when unset. Keep it stable or previously issued API keys stop validating."
+    },
+    {
+      "key": "INITIAL_PASSWORD",
+      "label": "Initial Password",
+      "type": "string",
+      "required": true,
+      "example": "local-only-initial-password",
+      "safe": true,
+      "category": "authentication",
+      "description": "Bootstrap password for the first management user on a fresh data directory.",
+      "troubleshooting": "Only applied while setup is incomplete; after onboarding it is ignored. The example is a local-only dummy value."
+    },
+    {
+      "key": "DATA_DIR",
+      "label": "Data Directory",
+      "type": "string",
+      "required": true,
+      "default": "/app/data",
+      "example": "/app/data",
+      "safe": true,
+      "category": "storage",
+      "description": "Persistent data directory (SQLite database, keys, uploads); must point at the mounted volume.",
+      "troubleshooting": "Keep it on the declared /app/data volume, otherwise all state is lost when the container is recreated."
+    },
+    {
+      "key": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "required": true,
+      "default": 20128,
+      "example": 20128,
+      "safe": true,
+      "category": "networking",
+      "description": "Internal container listening port for the HTTP server; must match the published port target.",
+      "troubleshooting": "If probes fail after changing this, update the compose mapping (for example 20129:20128) so both halves match."
+    },
+    {
+      "key": "HOSTNAME",
+      "label": "Bind Address",
+      "type": "string",
+      "required": true,
+      "default": "0.0.0.0",
+      "example": "0.0.0.0",
+      "safe": true,
+      "category": "networking",
+      "description": "Listen address for the HTTP server.",
+      "troubleshooting": "Must be 0.0.0.0 inside a container; a loopback bind makes the published port unreachable."
+    },
+    {
+      "key": "NODE_ENV",
+      "label": "Node Environment",
+      "type": "string",
+      "required": false,
+      "default": "production",
+      "example": "production",
+      "safe": true,
+      "category": "runtime",
+      "description": "Node.js execution mode; the image already defaults to production.",
+      "troubleshooting": "Leave at production — development mode disables caching and shows verbose error output."
+    },
+    {
+      "key": "OMNIROUTE_MEMORY_MB",
+      "label": "Memory Budget",
+      "type": "number",
+      "required": false,
+      "default": 1024,
+      "example": 1024,
+      "safe": true,
+      "category": "performance",
+      "description": "OmniRoute's own memory budget in megabytes.",
+      "troubleshooting": "Raise together with NODE_OPTIONS (--max-old-space-size) and the container memory limit if the process is OOM-killed."
+    },
+    {
+      "key": "NODE_OPTIONS",
+      "label": "Node Options",
+      "type": "string",
+      "required": false,
+      "default": "--max-old-space-size=1024",
+      "example": "--max-old-space-size=1024",
+      "safe": true,
+      "category": "performance",
+      "description": "V8 heap limit passed to the Node.js runtime.",
+      "troubleshooting": "Increase alongside OMNIROUTE_MEMORY_MB when large catalogs trigger heap OOM crashes."
+    },
+    {
+      "key": "OMNIROUTE_MIGRATIONS_DIR",
+      "label": "Migrations Directory",
+      "type": "string",
+      "required": false,
+      "default": "/app/migrations",
+      "example": "/app/migrations",
+      "safe": true,
+      "category": "runtime",
+      "description": "Directory holding database migrations applied at startup.",
+      "troubleshooting": "Only override when migrations are mounted elsewhere; a wrong path makes startup fail to apply schema updates."
+    }
+  ],
+  "notes": "Health: GET / answers 307 (redirect to the dashboard) and GET /dashboard serves the UI; the image's own healthcheck script probes GET /healthz. GET / on the published host port doubles as the compose smoke test. Provider credentials are external requirements and are intentionally absent."
+}
