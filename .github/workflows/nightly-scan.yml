@@ -101,11 +101,12 @@ jobs:
           fetch-depth: 1
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Sync all publish artifacts to gh-pages ────────────────────────────
-      - name: Sync dashboard & reports to gh-pages
+      # ── Sync scan data only to gh-pages ──────────────────────────────────
+      # index.html and diff.html are static UI — they are deployed separately
+      # by deploy-dashboard.yml only when docs/ changes. Do NOT copy them here
+      # or every nightly scan will overwrite any UI fixes made on docs/.
+      - name: Sync scan reports to gh-pages
         run: |
-          cp docs/index.html    gh-pages-out/index.html
-          cp docs/diff.html     gh-pages-out/diff.html
           cp report.json        gh-pages-out/report.json
           cp base-report.json   gh-pages-out/base-report.json 2>/dev/null || true
 

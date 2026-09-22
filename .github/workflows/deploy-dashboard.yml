@@ -1,0 +1,50 @@
+name: Deploy Dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: Deploy static dashboard to gh-pages
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v7
+        with:
+          ref: gh-pages
+          path: gh-pages-out
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy dashboard files to gh-pages
+        run: |
+          cp docs/index.html gh-pages-out/index.html
+          cp docs/diff.html  gh-pages-out/diff.html
+
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages-out
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html diff.html
+          if git diff --cached --quiet; then
+            echo "No dashboard changes to deploy."
+          else
+            git commit -m "chore(dashboard): deploy static UI from docs/ [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push origin gh-pages
+          fi
