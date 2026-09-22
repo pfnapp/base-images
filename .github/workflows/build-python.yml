@@ -19,13 +19,31 @@ permissions:
   issues: write
 
 jobs:
+  resolve-matrix:
+    name: Resolve Python versions from matrix.json
+    runs-on: ubuntu-24.04
+    outputs:
+      versions: ${{ steps.read.outputs.versions }}
+      default: ${{ steps.read.outputs.default }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read versions from matrix.json
+        id: read
+        run: |
+          VERSIONS=$(jq -c '.runtimes.python.supported' matrix.json)
+          DEFAULT=$(jq -r '.runtimes.python.default' matrix.json)
+          echo "versions=$VERSIONS" >> $GITHUB_OUTPUT
+          echo "default=$DEFAULT" >> $GITHUB_OUTPUT
+
   build-and-audit:
     name: Python ${{ matrix.python_version }} Slim Build & Audit
     runs-on: ubuntu-24.04
+    needs: resolve-matrix
     strategy:
       fail-fast: false
       matrix:
-        python_version: ['3.12', '3.11']
+        python_version: ${{ fromJson(needs.resolve-matrix.outputs.versions) }}
 
     steps:
       - name: Checkout repository
@@ -210,7 +228,7 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.python_version }}-slim"
           push_with_retry "${TARGET_REPO}:${{ matrix.python_version }}"
 
-          if [ "${{ matrix.python_version }}" = "3.12" ]; then
+          if [ "${{ matrix.python_version }}" = "${{ needs.resolve-matrix.outputs.default }}" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi

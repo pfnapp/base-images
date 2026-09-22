@@ -18,13 +18,31 @@ permissions:
   issues: write
 
 jobs:
+  resolve-matrix:
+    name: Resolve PHP versions from matrix.json
+    runs-on: ubuntu-24.04
+    outputs:
+      versions: ${{ steps.read.outputs.versions }}
+      default: ${{ steps.read.outputs.default }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read versions from matrix.json
+        id: read
+        run: |
+          VERSIONS=$(jq -c '[.runtimes.php.supported[], .runtimes.php.legacy[]]' matrix.json)
+          DEFAULT=$(jq -r '.runtimes.php.default' matrix.json)
+          echo "versions=$VERSIONS" >> $GITHUB_OUTPUT
+          echo "default=$DEFAULT" >> $GITHUB_OUTPUT
+
   build-and-audit:
     name: PHP ${{ matrix.php_version }} Alpine Build & Audit
     runs-on: ubuntu-24.04
+    needs: resolve-matrix
     strategy:
       fail-fast: false
       matrix:
-        php_version: ['8.5', '8.4', '8.3', '8.2', '8.1', '7.4']
+        php_version: ${{ fromJson(needs.resolve-matrix.outputs.versions) }}
 
     steps:
       - name: Checkout repository
@@ -197,7 +215,7 @@ jobs:
           docker push "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
           docker push "${TARGET_REPO}:${{ matrix.php_version }}"
 
-          if [ "${{ matrix.php_version }}" = "8.4" ]; then
+          if [ "${{ matrix.php_version }}" = "${{ needs.resolve-matrix.outputs.default }}" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             docker push "${TARGET_REPO}:latest"
           fi

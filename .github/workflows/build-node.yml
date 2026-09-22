@@ -18,13 +18,31 @@ permissions:
   issues: write
 
 jobs:
+  resolve-matrix:
+    name: Resolve Node versions from matrix.json
+    runs-on: ubuntu-24.04
+    outputs:
+      versions: ${{ steps.read.outputs.versions }}
+      default: ${{ steps.read.outputs.default }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read versions from matrix.json
+        id: read
+        run: |
+          VERSIONS=$(jq -c '[.runtimes.node.active_lts[], .runtimes.node.maintenance_lts[]]' matrix.json)
+          DEFAULT=$(jq -r '.runtimes.node.default' matrix.json)
+          echo "versions=$VERSIONS" >> $GITHUB_OUTPUT
+          echo "default=$DEFAULT" >> $GITHUB_OUTPUT
+
   build-and-audit:
     name: Node ${{ matrix.node_version }} Alpine Build & Audit
     runs-on: ubuntu-24.04
+    needs: resolve-matrix
     strategy:
       fail-fast: false
       matrix:
-        node_version: ['26', '24', '22', '20', '18']
+        node_version: ${{ fromJson(needs.resolve-matrix.outputs.versions) }}
 
     steps:
       - name: Checkout repository
@@ -214,7 +232,7 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
 
-          if [ "${{ matrix.node_version }}" = "26" ]; then
+          if [ "${{ matrix.node_version }}" = "${{ needs.resolve-matrix.outputs.default }}" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi
