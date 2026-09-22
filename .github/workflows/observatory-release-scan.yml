@@ -29,7 +29,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
   packages: read
   issues: write
 
@@ -86,7 +86,35 @@ jobs:
           UPSTREAM_IMAGE: ${{ inputs.upstream_image }}
           PFNAPP_IMAGE: ${{ inputs.pfnapp_image }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SCAN_DETAILS_DIR: scan-details/${{ inputs.app_id }}/${{ inputs.version }}
         run: node scripts/release-cve-report.js
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v7
+        with:
+          ref: gh-pages
+          path: gh-pages-out
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish targeted scan details to gh-pages
+        run: |
+          TARGET_DIR="gh-pages-out/scans/${{ inputs.app_id }}/${{ inputs.version }}"
+          mkdir -p "$TARGET_DIR"
+          cp "scan-details/${{ inputs.app_id }}/${{ inputs.version }}/upstream.json" "$TARGET_DIR/upstream.json"
+          cp "scan-details/${{ inputs.app_id }}/${{ inputs.version }}/pfnapp.json" "$TARGET_DIR/pfnapp.json"
+          cd gh-pages-out
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "scans/${{ inputs.app_id }}/${{ inputs.version }}/upstream.json" \
+                  "scans/${{ inputs.app_id }}/${{ inputs.version }}/pfnapp.json"
+          if git diff --cached --quiet; then
+            echo "Targeted scan details are already current."
+          else
+            git commit -m "chore(scans): publish ${{ inputs.app_id }} ${{ inputs.version }} CVE report"
+            git pull --rebase origin gh-pages
+            git push origin gh-pages
+          fi
 
       - name: Upload complete CVE reports
         uses: actions/upload-artifact@v4
@@ -98,6 +126,7 @@ jobs:
             pfnapp-trivy.json
             release-cve-report.json
             release-cve-report.md
+            scan-details/${{ inputs.app_id }}/${{ inputs.version }}/
 
       - name: Publish report and close awareness issue
         env:
