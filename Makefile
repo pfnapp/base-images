@@ -59,8 +59,8 @@ PYTHON_TEST_PORT ?= 8080
 # ==============================================================================
 # Go Language Configurations
 # ==============================================================================
-GO_VERSIONS ?= 1.24 1.23
-GO_VERSION ?= 1.24
+GO_VERSIONS ?= 1.27 1.26 1.25
+GO_VERSION ?= 1.27
 GO_IMAGE_TAG ?= local/go:$(GO_VERSION)-test
 GO_DOCKERFILE ?= languages/go/Dockerfile.alpine
 GO_BUILD_CONTEXT ?= languages/go
