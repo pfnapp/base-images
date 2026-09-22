@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go_version: ['1.24', '1.23']
+        go_version: ['1.27', '1.26', '1.25']
 
     steps:
       - name: Checkout repository
@@ -214,7 +214,7 @@ jobs:
           push_with_retry "${TARGET_REPO}:${{ matrix.go_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.go_version }}"
 
-          if [ "${{ matrix.go_version }}" = "1.24" ]; then
+          if [ "${{ matrix.go_version }}" = "1.27" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi
