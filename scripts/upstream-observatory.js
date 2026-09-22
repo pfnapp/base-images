@@ -22,6 +22,7 @@ const CACHE_DIR = path.join(ROOT_DIR, '.cache');
 const SCAN_DETAILS_DIR = path.join(ROOT_DIR, 'scan-details');
 const REPORT_JSON_FILE = path.join(ROOT_DIR, 'report.json');
 const REPORT_MD_FILE = path.join(ROOT_DIR, 'REPORT.md');
+const DETECTED_RELEASES_FILE = path.join(ROOT_DIR, 'detected-releases.json');
 
 if (!fs.existsSync(CACHE_DIR)) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -149,6 +150,7 @@ async function checkReleasesOnly() {
   const maxActive = config.policy?.max_active_versions || 5;
   const now = new Date().toISOString();
   let changedCount = 0;
+  const detectedReleases = [];
 
   for (const app of config.applications) {
     const latestTag = await discoverLatestRelease(app);
@@ -160,6 +162,20 @@ async function checkReleasesOnly() {
     const result = updateReleaseWindow(app, latestTag, maxActive, now);
     if (result.changed) {
       changedCount++;
+      const fullRef = app.registry === 'ghcr.io' && !app.image.startsWith('ghcr.io/')
+        ? `ghcr.io/${app.image}:${latestTag}`
+        : `${app.image}:${latestTag}`;
+      detectedReleases.push({
+        id: app.id,
+        name: app.name,
+        previousVersion: result.previousLatest,
+        version: latestTag,
+        registry: app.registry,
+        image: app.image,
+        imageRef: fullRef,
+        pfnappImageRef: `ghcr.io/pfnapp/${app.id}:${latestTag}`,
+        detectedAt: now
+      });
       console.log(`  ✨ ${app.name}: ${result.previousLatest || 'none'} → ${latestTag}`);
     } else {
       console.log(`  ✅ ${app.name}: ${app.active_versions[0]}`);
@@ -172,6 +188,9 @@ async function checkReleasesOnly() {
   } else {
     console.log('✅ No new upstream releases detected.');
   }
+
+  fs.writeFileSync(DETECTED_RELEASES_FILE, JSON.stringify(detectedReleases, null, 2) + '\n');
+  console.log(`📣 Wrote ${detectedReleases.length} release event(s) to ${DETECTED_RELEASES_FILE}`);
 }
 
 function runTrivyScan(imageRef) {

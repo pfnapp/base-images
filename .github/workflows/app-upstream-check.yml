@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write
 
 concurrency:
   group: app-upstream-release-check
@@ -34,6 +35,14 @@ jobs:
       - name: Check latest upstream releases
         run: node scripts/upstream-observatory.js --check-releases
 
+      - name: Upload detected release events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: detected-upstream-releases
+          retention-days: 30
+          path: detected-releases.json
+
       - name: Commit updated release window
         id: commit
         run: |
@@ -58,3 +67,55 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run build-pfnapp-patches.yml --ref main
+
+      - name: Open awareness issues and trigger targeted CVE scans
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ASSIGNEE: ${{ vars.OBSERVATORY_ASSIGNEE || 'JuniYadi' }}
+        run: |
+          jq -c '.[]' detected-releases.json | while read -r release; do
+            APP_ID=$(jq -r '.id' <<< "$release")
+            APP_NAME=$(jq -r '.name' <<< "$release")
+            VERSION=$(jq -r '.version' <<< "$release")
+            PREVIOUS=$(jq -r '.previousVersion // "none"' <<< "$release")
+            IMAGE_REF=$(jq -r '.imageRef' <<< "$release")
+            PFNAPP_REF=$(jq -r '.pfnappImageRef' <<< "$release")
+            MARKER="observatory-release:${APP_ID}:${VERSION}"
+            TITLE="[Upstream Release] ${APP_NAME} ${VERSION} detected"
+
+            ISSUE_NUMBER=$(gh issue list --repo "${{ github.repository }}" --state all --limit 1000 \
+              --search "${MARKER} in:body" --json number --jq '.[0].number // empty')
+
+            if [ -z "$ISSUE_NUMBER" ]; then
+              cat > issue-body.md <<EOF
+          <!-- ${MARKER} -->
+          ## 📣 New upstream release detected
+
+          @${ASSIGNEE}, Observatory detected a new application release.
+
+          - **Application:** ${APP_NAME} (**${APP_ID}**)
+          - **Previous version:** **${PREVIOUS}**
+          - **New version:** **${VERSION}**
+          - **Upstream image:** **${IMAGE_REF}**
+          - **PFNApp image:** **${PFNAPP_REF}**
+          - **Detection run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          A targeted upstream CVE scan has been requested. This issue will close automatically after the PFNApp image is built and the comparison report is attached.
+          EOF
+              for label in upstream-release automated cve-scan-pending; do
+                gh label create "$label" --repo "${{ github.repository }}" --force >/dev/null 2>&1 || true
+              done
+              ISSUE_URL=$(gh issue create --repo "${{ github.repository }}" --title "$TITLE" \
+                --body-file issue-body.md --label upstream-release --label automated --label cve-scan-pending \
+                --assignee "$ASSIGNEE" 2>/dev/null || \
+                gh issue create --repo "${{ github.repository }}" --title "$TITLE" \
+                --body-file issue-body.md --label upstream-release --label automated --label cve-scan-pending)
+              ISSUE_NUMBER=${ISSUE_URL##*/}
+            fi
+
+            gh workflow run observatory-release-scan.yml --ref main \
+              -f app_id="$APP_ID" -f app_name="$APP_NAME" -f version="$VERSION" \
+              -f upstream_image="$IMAGE_REF" -f pfnapp_image="$PFNAPP_REF" \
+              -f issue_number="$ISSUE_NUMBER"
+          done

@@ -1,0 +1,116 @@
+name: Observatory Release CVE Scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_id:
+        description: Observatory application ID
+        required: true
+        type: string
+      app_name:
+        description: Application display name
+        required: true
+        type: string
+      version:
+        description: Detected upstream version
+        required: true
+        type: string
+      upstream_image:
+        description: Full upstream image reference
+        required: true
+        type: string
+      pfnapp_image:
+        description: Full PFNApp image reference
+        required: true
+        type: string
+      issue_number:
+        description: Awareness issue number
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: read
+  issues: write
+
+concurrency:
+  group: observatory-release-${{ inputs.app_id }}-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    name: Scan ${{ inputs.app_name }} ${{ inputs.version }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Aqua Trivy
+        uses: aquasecurity/setup-trivy@v0.3.1
+        with:
+          cache: true
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Scan upstream image immediately
+        run: trivy image --scanners vuln --format json --output upstream-trivy.json "${{ inputs.upstream_image }}"
+
+      - name: Wait for PFNApp image build
+        id: wait
+        env:
+          PFNAPP_IMAGE: ${{ inputs.pfnapp_image }}
+        run: |
+          for attempt in $(seq 1 60); do
+            if docker buildx imagetools inspect "$PFNAPP_IMAGE" >/dev/null 2>&1; then
+              echo "PFNApp image is available after attempt ${attempt}."
+              exit 0
+            fi
+            echo "Attempt ${attempt}/60: waiting 60 seconds for ${PFNAPP_IMAGE}..."
+            sleep 60
+          done
+          echo "PFNApp image did not become available within 60 minutes." >&2
+          exit 1
+
+      - name: Scan PFNApp hardened image
+        run: trivy image --scanners vuln --format json --output pfnapp-trivy.json "${{ inputs.pfnapp_image }}"
+
+      - name: Generate comparison report
+        env:
+          APP_ID: ${{ inputs.app_id }}
+          APP_NAME: ${{ inputs.app_name }}
+          VERSION: ${{ inputs.version }}
+          UPSTREAM_IMAGE: ${{ inputs.upstream_image }}
+          PFNAPP_IMAGE: ${{ inputs.pfnapp_image }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node scripts/release-cve-report.js
+
+      - name: Upload complete CVE reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-cve-${{ inputs.app_id }}-${{ inputs.version }}
+          retention-days: 90
+          path: |
+            upstream-trivy.json
+            pfnapp-trivy.json
+            release-cve-report.json
+            release-cve-report.md
+
+      - name: Publish report and close awareness issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create cve-report-ready --repo "${{ github.repository }}" --force >/dev/null 2>&1 || true
+          gh issue comment "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --body-file release-cve-report.md
+          gh issue edit "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --remove-label cve-scan-pending --add-label cve-report-ready
+          gh issue close "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --reason completed
+
+      - name: Keep issue open and report pipeline failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --body "⚠️ Targeted CVE reporting did not complete. The issue remains open for retry. See workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
