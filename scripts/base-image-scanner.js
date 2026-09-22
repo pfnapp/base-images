@@ -272,11 +272,15 @@ function buildLanguageImageRef(id, version) {
   return `${LANGUAGE_IMAGE_BASE}/${id}:${suffix(version)}`;
 }
 
-function buildFrameworkImageRef(id, runtimeVersion) {
+function buildFrameworkImageRef(id, frameworkVersion, runtimeVersion) {
   if (id === 'vite') {
     return `${FRAMEWORK_IMAGE_BASE}/vite:latest`;
   }
-  return `${FRAMEWORK_IMAGE_BASE}/${id}:${runtimeVersion}-alpine`;
+  if (id === 'laravel') {
+    return `${FRAMEWORK_IMAGE_BASE}/laravel:${frameworkVersion}-php${runtimeVersion}-alpine`;
+  }
+  // nextjs, nestjs — node-based frameworks
+  return `${FRAMEWORK_IMAGE_BASE}/${id}:${frameworkVersion}-node${runtimeVersion}-alpine`;
 }
 
 // ---------------------------------------------------------------------------
@@ -332,7 +336,11 @@ const DISPLAY_NAMES = {
 // ---------------------------------------------------------------------------
 
 function versionLabel(tag) {
-  return tag.replace(/-alpine$/, '').replace(/-slim$/, '');
+  return tag
+    .replace(/-alpine$/, '')
+    .replace(/-slim$/, '')
+    .replace(/^php/, 'php ')
+    .replace(/^node/, 'node ');
 }
 
 // ---------------------------------------------------------------------------
@@ -489,39 +497,40 @@ async function main() {
 
     if (id === 'vite') {
       // Vite uses a single :latest image
-      const imageRef = buildFrameworkImageRef(id, null);
+      const imageRef = buildFrameworkImageRef(id, null, null);
       console.log(`  📌 ${imageRef} [LATEST]`);
       const entry = buildVersionEntry(id, imageRef, 'latest', 'LATEST', '🟢', secSetting, now, null);
       versionEntries.push(entry);
     } else {
-      // Collect unique runtime versions across all compatibility_matrix entries
-      const runtimeVersions = uniqueRuntimeVersions(spec.compatibility_matrix || []);
+      // Iterate every (framework_version, runtime_version) combination from compatibility_matrix
+      const compatMatrix = spec.compatibility_matrix || [];
+      const defaultFwVersion  = compatMatrix[0]?.framework_major ?? null;
+      const defaultRtVersion  = compatMatrix[0]?.default_runtime ?? null;
 
-      // Determine the "default" runtime version for lifecycle status
-      // Use the default_runtime from the first (newest) compatibility entry
-      const defaultRuntime = (spec.compatibility_matrix || [])[0]?.default_runtime ?? null;
+      for (const entry of compatMatrix) {
+        const fwVersion = entry.framework_major;
+        for (const runtimeVersion of (entry.compatible_runtimes || [])) {
+          const imageRef = buildFrameworkImageRef(id, fwVersion, runtimeVersion);
+          const tag      = imageRef.split(':')[1]; // e.g. "13-php8.4-alpine", "16-node22-alpine"
 
-      for (const runtimeVersion of runtimeVersions) {
-        const imageRef = buildFrameworkImageRef(id, runtimeVersion);
-        const tag      = `${runtimeVersion}-alpine`;
+          // Determine lifecycle relative to the parent runtime spec in matrix.json
+          const parentRuntimeId = spec.runtime; // e.g. "node" or "php"
+          const parentSpec      = matrix.runtimes[parentRuntimeId] || {};
+          const lc              = getLifecycleStatus(runtimeVersion, parentSpec);
 
-        // Determine lifecycle relative to the parent runtime spec in matrix.json
-        const parentRuntimeId = spec.runtime; // e.g. "node" or "php"
-        const parentSpec      = matrix.runtimes[parentRuntimeId] || {};
-        const lc              = getLifecycleStatus(runtimeVersion, parentSpec);
+          const parentEolMap = eolCache[parentRuntimeId] || new Map();
+          const eolInfo      = parentEolMap.get(runtimeVersion) || null;
 
-        const parentEolMap = eolCache[parentRuntimeId] || new Map();
-        const eolInfo      = parentEolMap.get(runtimeVersion) || null;
+          console.log(`  📌 ${imageRef} [${lc.status}]`);
+          const versionEntry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now, eolInfo);
 
-        console.log(`  📌 ${imageRef} [${lc.status}]`);
-        const entry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now, eolInfo);
+          if (eolInfo && !eolInfo.isMaintained) {
+            versionEntry.lifecycleStatus = 'EOL';
+            versionEntry.lifecycleBadge  = '🔴';
+          }
 
-        if (eolInfo && !eolInfo.isMaintained) {
-          entry.lifecycleStatus = 'EOL';
-          entry.lifecycleBadge  = '🔴';
+          versionEntries.push(versionEntry);
         }
-
-        versionEntries.push(entry);
       }
     }
 
