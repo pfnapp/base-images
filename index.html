@@ -1190,8 +1190,12 @@ npx serve .
       const itemType = item._source === 'base' ? item.type : 'app';
       if (activeType !== 'All' && itemType !== activeType) return acc;
       const vers = getVersionsForItem(item);
+      const isBaseType = itemType === 'language' || itemType === 'framework';
       const filteredVers = vers.filter(ver => {
-        if (activeCategory !== 'All' && item.category !== activeCategory) return false;
+        if (activeCategory !== 'All') {
+          const filterVal = isBaseType ? item.name : item.category;
+          if (filterVal !== activeCategory) return false;
+        }
         if (activeStatus !== 'All' && (ver.lifecycleStatus||'').toUpperCase() !== activeStatus) return false;
         if (q) {
           const cves = item._source === 'base'
@@ -1269,15 +1273,36 @@ npx serve .
   function renderTabs() {
     const container = document.getElementById('filter-tabs');
     const visible   = allItems.filter(i => activeType==='All' || (i._source==='base' ? i.type : 'app') === activeType);
-    const cats      = ['All', ...[...new Set(visible.map(i=>i.category))].sort()];
-    container.innerHTML = cats.map(cat => {
-      const count = cat==='All'
-        ? visible.reduce((s,i) => s + getVersionsForItem(i).length, 0)
-        : visible.filter(i=>i.category===cat).reduce((s,i) => s + getVersionsForItem(i).length, 0);
-      return `<button class="tab-btn ${cat===activeCategory?'active':''}" data-cat="${escHtml(cat)}">
-        ${escHtml(cat)}<span class="tab-count">${count}</span>
-      </button>`;
-    }).join('');
+
+    // For language/framework type tabs: show per-image-name sub-filters (more useful than single category)
+    // For All/app: show category-based sub-filters as before
+    const isBaseType = activeType === 'language' || activeType === 'framework';
+
+    let tabs;
+    if (isBaseType) {
+      const names = ['All', ...visible.map(i => i.name).sort()];
+      tabs = names.map(name => {
+        const count = name === 'All'
+          ? visible.reduce((s,i) => s + getVersionsForItem(i).length, 0)
+          : visible.filter(i => i.name === name).reduce((s,i) => s + getVersionsForItem(i).length, 0);
+        const icon = name === 'All' ? '' : (visible.find(i => i.name === name)?.icon || '');
+        return { key: name, label: (icon ? icon + ' ' : '') + name, count };
+      });
+    } else {
+      const cats = ['All', ...[...new Set(visible.map(i=>i.category))].sort()];
+      tabs = cats.map(cat => {
+        const count = cat==='All'
+          ? visible.reduce((s,i) => s + getVersionsForItem(i).length, 0)
+          : visible.filter(i=>i.category===cat).reduce((s,i) => s + getVersionsForItem(i).length, 0);
+        return { key: cat, label: cat, count };
+      });
+    }
+
+    container.innerHTML = tabs.map(t =>
+      `<button class="tab-btn ${t.key===activeCategory?'active':''}" data-cat="${escHtml(t.key)}">
+        ${escHtml(t.label)}<span class="tab-count">${t.count}</span>
+      </button>`
+    ).join('');
     container.querySelectorAll('.tab-btn').forEach(btn =>
       btn.addEventListener('click', () => setCategory(btn.dataset.cat))
     );
