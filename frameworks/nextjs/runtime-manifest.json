@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "runtime": "nextjs",
   "framework": "Next.js",
-  "version": "15",
+  "version": "16",
   "supportedFrameworkVersions": ["14", "15", "16"],
   "runtimeMatrix": {
     "nextjs-16": { "node": ["20", "22", "24"], "default": "22" },
     "nextjs-15": { "node": ["18", "20", "22"], "default": "22" },
     "nextjs-14": { "node": ["18", "20"], "default": "20" }
   },
-  "baseImage": "ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine",
+  "baseImage": "ghcr.io/pfnapp/base/frameworks/nextjs:16-node22-alpine",
   "ports": {
     "default": 8080,
     "protocol": "HTTP"

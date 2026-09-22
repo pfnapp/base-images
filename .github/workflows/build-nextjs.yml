@@ -66,15 +66,45 @@ jobs:
           echo "Triggered by ${{ github.event_name }}. Proceeding with build."
           echo "should_build=true" >> "$GITHUB_OUTPUT"
 
-  build-and-audit:
-    name: Next.js Node ${{ matrix.node_version }} Alpine Build & Audit
+  resolve-matrix:
+    name: Resolve Next.js compatibility matrix from matrix.json
+    runs-on: ubuntu-24.04
     needs: check-trigger
+    if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
+    outputs:
+      matrix: ${{ steps.read.outputs.matrix }}
+      latest_framework: ${{ steps.read.outputs.latest_framework }}
+      latest_node: ${{ steps.read.outputs.latest_node }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read compatibility matrix from matrix.json
+        id: read
+        run: |
+          MATRIX=$(jq -c '
+            [ .frameworks.nextjs.compatibility_matrix[] |
+              . as $entry |
+              $entry.compatible_runtimes[] | {
+                framework_version: $entry.framework_major,
+                node_version: .,
+                default_node: $entry.default_runtime
+              }
+            ]
+          ' matrix.json)
+          LATEST_FRAMEWORK=$(jq -r '.frameworks.nextjs.compatibility_matrix[0].framework_major' matrix.json)
+          LATEST_NODE=$(jq -r '.frameworks.nextjs.compatibility_matrix[0].default_runtime' matrix.json)
+          echo "matrix={\"include\":$MATRIX}" >> $GITHUB_OUTPUT
+          echo "latest_framework=$LATEST_FRAMEWORK" >> $GITHUB_OUTPUT
+          echo "latest_node=$LATEST_NODE" >> $GITHUB_OUTPUT
+
+  build-and-audit:
+    name: Next.js ${{ matrix.framework_version }} / Node ${{ matrix.node_version }} Build & Audit
+    needs: [check-trigger, resolve-matrix]
     if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
     runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
-      matrix:
-        node_version: ['22', '20', '18']
+      matrix: ${{ fromJson(needs.resolve-matrix.outputs.matrix) }}
 
     steps:
       - name: Checkout repository
@@ -103,7 +133,7 @@ jobs:
           build-args: |
             NODE_VERSION=${{ matrix.node_version }}
           load: true
-          tags: local/nextjs:${{ matrix.node_version }}-test
+          tags: local/nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-test
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -111,7 +141,7 @@ jobs:
         id: trivy_scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: local/nextjs:${{ matrix.node_version }}-test
+          image-ref: local/nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-test
           scan-type: image
           vuln-type: 'os'
           format: table
@@ -125,14 +155,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in nextjs:${{ matrix.node_version }}-alpine"
+          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-alpine"
 
           if [ -f trivy-report.txt ]; then
             echo "=== Trivy Scan Report ==="
             cat trivy-report.txt
           fi
 
-          TARGET_IMAGE="nextjs:${{ matrix.node_version }}-alpine"
+          TARGET_IMAGE="nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-alpine"
           ISSUE_TITLE="[Security Alert] Actionable CVEs detected in ${TARGET_IMAGE}"
 
           echo "Checking for existing open issue for ${TARGET_IMAGE}..."
@@ -161,6 +191,7 @@ jobs:
 
           ### Build & Run Metadata
           - **Target Image:** \`${TARGET_IMAGE}\`
+          - **Next.js Version:** \`${{ matrix.framework_version }}\`
           - **Node Matrix Version:** \`${{ matrix.node_version }}\`
           - **Workflow:** \`${{ github.workflow }}\`
           - **Trigger:** \`${{ github.event_name }}\`
@@ -216,7 +247,7 @@ jobs:
 
       - name: Run container verification test
         run: |
-          IMAGE="local/nextjs:${{ matrix.node_version }}-test"
+          IMAGE="local/nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-test"
 
           echo "==> 1. Verifying non-root execution..."
           UID_VAL=$(docker run --rm "$IMAGE" id -u)
@@ -235,10 +266,10 @@ jobs:
 
       - name: Report image size metrics to job summary
         run: |
-          SRC_IMAGE="local/nextjs:${{ matrix.node_version }}-test"
+          SRC_IMAGE="local/nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-test"
           UNCOMPRESSED=$(docker images "$SRC_IMAGE" --format "{{.Size}}")
           COMPRESSED=$(docker save "$SRC_IMAGE" | gzip | wc -c | awk '{printf "%.1f MB", $1/1024/1024}')
-          echo "### 📦 Image Size Metrics: Next.js ${{ matrix.node_version }}" >> $GITHUB_STEP_SUMMARY
+          echo "### 📦 Image Size Metrics: Next.js ${{ matrix.framework_version }} / Node ${{ matrix.node_version }}" >> $GITHUB_STEP_SUMMARY
           echo "| Metric | Size |" >> $GITHUB_STEP_SUMMARY
           echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
           echo "| **Download Size (Compressed)** | ~${COMPRESSED} |" >> $GITHUB_STEP_SUMMARY
@@ -256,10 +287,10 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
         run: |
           TARGET_REPO="ghcr.io/pfnapp/base/frameworks/nextjs"
-          SRC_IMAGE="local/nextjs:${{ matrix.node_version }}-test"
+          SRC_IMAGE="local/nextjs:${{ matrix.framework_version }}-node${{ matrix.node_version }}-test"
 
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}-alpine"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}"
 
           push_with_retry() {
             local tag="$1"
@@ -277,16 +308,11 @@ jobs:
             return 1
           }
 
-          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
-          push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
+          push_with_retry "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}"
 
-          # Dual-tag runtime-explicit tags for compatibility clarity
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:node${{ matrix.node_version }}-alpine"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:node${{ matrix.node_version }}"
-          push_with_retry "${TARGET_REPO}:node${{ matrix.node_version }}-alpine"
-          push_with_retry "${TARGET_REPO}:node${{ matrix.node_version }}"
-
-          if [ "${{ matrix.node_version }}" = "22" ]; then
+          if [ "${{ matrix.framework_version }}" = "${{ needs.resolve-matrix.outputs.latest_framework }}" ] && \
+             [ "${{ matrix.node_version }}" = "${{ needs.resolve-matrix.outputs.latest_node }}" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi
