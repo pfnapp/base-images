@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-23T02:39:46.047Z",
+    "generatedAt": "2026-09-23T04:50:52.121Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 21,
+    "totalMonitoredVersions": 22,
     "runAsRootCount": 16,
-    "criticalVulnerabilityCount": 26,
-    "highVulnerabilityCount": 258,
-    "pfnappScannedCount": 19,
+    "criticalVulnerabilityCount": 27,
+    "highVulnerabilityCount": 260,
+    "pfnappScannedCount": 20,
     "totalCveReduction": 13056
   },
   "applications": [
@@ -8976,9 +8976,136 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "0.5.86",
+          "fullRef": "decolua/9router:0.5.86",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 1,
+                "high": 2,
+                "medium": 7,
+                "low": 1,
+                "fixable": 0,
+                "total": 11
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 1,
+                "high": 2,
+                "medium": 7,
+                "low": 1,
+                "fixable": 0,
+                "total": 11,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-59873",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.19",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-59873"
+                  },
+                  {
+                    "id": "CVE-2026-59874",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.18",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-59874"
+                  },
+                  {
+                    "id": "CVE-2026-73566",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.21",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-73566"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-59873",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.19",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-59873"
+            },
+            {
+              "id": "CVE-2026-59874",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.18",
+              "severity": "HIGH",
+              "title": "CVE-2026-59874"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "CVE-2026-73566"
+            }
+          ],
+          "topSystemCves": [],
+          "posture": "APP CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-23T04:50:52.121Z"
+        },
+        {
           "tag": "0.5.85",
           "fullRef": "decolua/9router:0.5.85",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -9192,7 +9319,7 @@
         {
           "tag": "0.5.75",
           "fullRef": "decolua/9router:0.5.75",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
