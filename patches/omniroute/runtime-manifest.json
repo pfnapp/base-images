@@ -127,6 +127,109 @@
       "category": "runtime",
       "description": "Directory holding database migrations applied at startup.",
       "troubleshooting": "Only override when migrations are mounted elsewhere; a wrong path makes startup fail to apply schema updates."
+    },
+    {
+      "key": "REQUIRE_API_KEY",
+      "label": "Require API Key",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "example": true,
+      "safe": true,
+      "category": "security",
+      "description": "When true, every /v1/* proxy request must present a valid API key issued in Dashboard → API Keys.",
+      "troubleshooting": "Keep true for any non-loopback deployment — with the default false the anonymous /v1 LLM proxy is open to whoever can reach the port. Note it does not gate GET /v1/models (that follows dashboard login), so a 401 there is expected, not a failure."
+    },
+    {
+      "key": "OMNIROUTE_BASE_PATH",
+      "label": "Base Path",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "example": "/omniroute",
+      "safe": true,
+      "category": "networking",
+      "description": "URL subpath OmniRoute is served under behind a reverse proxy (Next.js basePath; auth redirects are basePath-aware).",
+      "troubleshooting": "In Docker the value is applied once at container start before Next.js boots, so it must be set on the first boot; also set NEXT_PUBLIC_BASE_URL to the public origin including the same subpath, or dashboard links and API examples point at the wrong root."
+    },
+    {
+      "key": "OMNIROUTE_HEALTHCHECK_PATH",
+      "label": "Healthcheck Path",
+      "type": "string",
+      "required": false,
+      "example": "/healthz",
+      "safe": true,
+      "category": "networking",
+      "description": "Explicit path probed by the container health check; when unset the probe is derived from OMNIROUTE_BASE_PATH.",
+      "troubleshooting": "Set it when OMNIROUTE_BASE_PATH changes the effective URL, otherwise the health check probes a path that no longer exists and the container is reported unhealthy despite serving traffic."
+    },
+    {
+      "key": "CORS_ALLOWED_ORIGINS",
+      "label": "CORS Allowed Origins",
+      "type": "string",
+      "required": false,
+      "example": "https://omniroute.example.com",
+      "safe": true,
+      "category": "networking",
+      "description": "Comma-separated CORS allowlist for cross-origin browser API clients; no wildcard is sent unless CORS_ALLOW_ALL is explicitly enabled.",
+      "troubleshooting": "Only needed for browser clients on another origin — same-origin dashboard writes use session + CSRF and must not be fixed here. Exact origin strings (scheme + host, no trailing slash) are required or browsers reject the response."
+    },
+    {
+      "key": "CORS_ORIGIN",
+      "label": "CORS Origin (legacy)",
+      "type": "string",
+      "required": false,
+      "example": "https://app.example.com",
+      "safe": true,
+      "category": "networking",
+      "description": "Legacy single-origin CORS allowlist; upstream prefers CORS_ALLOWED_ORIGINS for new deployments.",
+      "troubleshooting": "If both are set, prefer CORS_ALLOWED_ORIGINS — the legacy name only carries one origin and will drop additional front-ends. Never use CORS settings to patch same-origin dashboard 403/CSRF errors."
+    },
+    {
+      "key": "CORS_ALLOW_ALL",
+      "label": "CORS Allow All",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "example": false,
+      "safe": true,
+      "category": "security",
+      "description": "Development-only flag to allow any cross-origin browser request.",
+      "troubleshooting": "Keep false everywhere except local testing — true sends a wildcard `Access-Control-Allow-Origin: *`, so any website a user has open can call the API from their browser. It only takes effect after a container restart, and it does not fix same-origin dashboard 403/CSRF errors (those are session, not CORS)."
+    },
+    {
+      "key": "PRICING_SYNC_ENABLED",
+      "label": "Enable Pricing Sync",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "example": false,
+      "safe": true,
+      "category": "runtime",
+      "description": "Opt-in periodic sync of upstream model pricing data.",
+      "troubleshooting": "Requires outbound access to the pricing source; if the container has no egress the sync fails quietly and cost columns simply stay stale. Enable only when the dashboard is used for spend estimates."
+    },
+    {
+      "key": "MODELS_DEV_SYNC_ENABLED",
+      "label": "Enable models.dev Sync",
+      "type": "boolean",
+      "required": false,
+      "example": false,
+      "safe": true,
+      "category": "runtime",
+      "description": "Hard override for the models.dev pricing sync; unset means the dashboard Settings → AI value decides, `false` wins over the database and skips both periodic sync and pricing scans.",
+      "troubleshooting": "Set to false as a recovery lever when the dashboard is wedged on the same event loop and pricing sync cannot be toggled from the UI; re-enable afterwards to restore fresh pricing."
+    },
+    {
+      "key": "STORAGE_ENCRYPTION_KEY",
+      "label": "Storage Encryption Key",
+      "type": "string",
+      "required": false,
+      "example": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+      "safe": true,
+      "category": "security",
+      "description": "AES key for full SQLite database encryption at rest; empty/disabled by upstream default. Generate with `openssl rand -hex 32`.",
+      "troubleshooting": "Set it before first boot and back up the key with the data — losing the key means losing the database, and adding it to an existing unencrypted database changes the file from that point on. The example is a syntactically valid placeholder, not a real key."
     }
   ],
   "notes": "Health: GET / answers 307 (redirect to the dashboard) and GET /dashboard serves the UI; the image's own healthcheck script probes GET /healthz. GET / on the published host port doubles as the compose smoke test. Provider credentials are external requirements and are intentionally absent."

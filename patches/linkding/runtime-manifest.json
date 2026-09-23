@@ -1,1 +1,24 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"linkding","framework":"Linkding","version":"1.47.0","baseImage":"ghcr.io/pfnapp/linkding:1.47.0","ports":{"default":9090,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/","port":9090},"readiness":{"path":"/","port":9090}},"tunables":[{"key":"LD_SERVER_PORT","label":"Server Port","type":"number","required":false,"default":9090,"example":9090,"safe":true,"category":"networking","description":"Linkding server port."},{"key":"LD_CONTEXT_PATH","label":"Context Path","type":"string","required":false,"default":"","example":"","safe":true,"category":"networking","description":"Optional URL context path."},{"key":"LD_SUPERUSER_NAME","label":"Superuser Name","type":"string","required":false,"example":"admin","safe":true,"category":"authentication","description":"Optional initial administrator name."},{"key":"LD_SUPERUSER_PASSWORD","label":"Superuser Password","type":"string","required":false,"example":"local-only-password","safe":true,"category":"authentication","description":"Optional local-only initial password."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "linkding",
+  "framework": "Linkding",
+  "version": "1.47.0",
+  "baseImage": "ghcr.io/pfnapp/linkding:1.47.0",
+  "ports": { "default": 9090, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 9090 }, "readiness": { "path": "/", "port": 9090 } },
+  "tunables": [
+    { "key": "LD_SERVER_PORT", "label": "Server Port", "type": "number", "required": false, "default": 9090, "example": 9090, "safe": true, "category": "networking", "description": "Linkding server HTTP port." },
+    { "key": "LD_CONTEXT_PATH", "label": "Context Path", "type": "string", "required": false, "default": "", "example": "/bookmarks", "safe": true, "category": "networking", "description": "Optional URL context path if served in a subdirectory." },
+    { "key": "LD_SUPERUSER_NAME", "label": "Superuser Name", "type": "string", "required": false, "example": "admin", "safe": true, "category": "authentication", "description": "Initial administrator username." },
+    { "key": "LD_SUPERUSER_PASSWORD", "label": "Superuser Password", "type": "string", "required": false, "example": "local-only-linkding-pass", "safe": true, "category": "authentication", "description": "Initial administrator password." },
+    { "key": "LD_DISABLE_BACKGROUND_TASKS", "label": "Disable Background Tasks", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "performance", "description": "Disable background bookmark scraping and asset snapshots." },
+    { "key": "LD_DISABLE_URL_VALIDATION", "label": "Disable URL Validation", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "runtime", "description": "Allow saving custom URI schemes or intranet addresses." },
+    { "key": "LD_DB_ENGINE", "label": "Database Engine", "type": "string", "required": false, "default": "sqlite3", "example": "postgres", "safe": true, "category": "database", "description": "Database backend (`sqlite3` or `postgres`)." },
+    { "key": "LD_DB_DATABASE", "label": "Database Name", "type": "string", "required": false, "example": "linkding", "safe": true, "category": "database", "description": "Database name when using external PostgreSQL." },
+    { "key": "LD_DB_USER", "label": "Database User", "type": "string", "required": false, "example": "linkding", "safe": true, "category": "database", "description": "Database user when using external PostgreSQL." },
+    { "key": "LD_DB_PASSWORD", "label": "Database Password", "type": "string", "required": false, "example": "local-only-linkding-db-pass", "safe": true, "category": "database", "description": "Database password when using external PostgreSQL." },
+    { "key": "LD_DB_HOST", "label": "Database Host", "type": "string", "required": false, "example": "db", "safe": true, "category": "database", "description": "PostgreSQL database hostname." },
+    { "key": "LD_DB_PORT", "label": "Database Port", "type": "number", "required": false, "default": 5432, "example": 5432, "safe": true, "category": "database", "description": "PostgreSQL database port." }
+  ]
+}

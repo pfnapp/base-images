@@ -1,1 +1,18 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"stirling-pdf","framework":"Stirling PDF","version":"2.14.3","baseImage":"ghcr.io/pfnapp/stirling-pdf:2.14.3","ports":{"default":8080,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/","port":8080},"readiness":{"path":"/","port":8080}},"tunables":[{"key":"SYSTEM_DEFAULTLOCALE","label":"Default Locale","type":"string","required":false,"default":"en-US","example":"en-US","safe":true,"category":"runtime","description":"Default UI locale."},{"key":"SYSTEM_CONNECTIONTIMEOUTMILLISECONDS","label":"Connection Timeout","type":"number","required":false,"default":120000,"example":120000,"safe":true,"category":"performance","description":"External connection timeout in milliseconds."},{"key":"DOCKER_ENABLE_SECURITY","label":"Docker Security","type":"boolean","required":false,"default":false,"example":false,"safe":true,"category":"security","description":"Enables Docker security restrictions."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "stirling-pdf",
+  "framework": "Stirling PDF",
+  "version": "2.14.3",
+  "baseImage": "ghcr.io/pfnapp/stirling-pdf:2.14.3",
+  "ports": { "default": 8080, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 8080 }, "readiness": { "path": "/", "port": 8080 } },
+  "tunables": [
+    { "key": "SYSTEM_DEFAULTLOCALE", "label": "Default Locale", "type": "string", "required": false, "default": "en-US", "example": "en-US", "safe": true, "category": "runtime", "description": "Default UI locale." },
+    { "key": "SYSTEM_CONNECTIONTIMEOUTMILLISECONDS", "label": "Connection Timeout", "type": "number", "required": false, "default": 120000, "example": 120000, "safe": true, "category": "performance", "description": "External connection timeout in milliseconds." },
+    { "key": "DOCKER_ENABLE_SECURITY", "label": "Docker Security Profile", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "security", "description": "Enables login authentication and multi-user security." },
+    { "key": "SECURITY_ENABLELOGIN", "label": "Enable Login Gate", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "security", "description": "Enforces user authentication before viewing tools." },
+    { "key": "INSTALL_BOOK_AND_ADVANCED_HTML_OPS", "label": "Advanced Book/HTML Operations", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "runtime", "description": "Enables Calibre and advanced EPUB/MOBI/AZW document conversions." },
+    { "key": "APP_HOME_NAME", "label": "Application Name", "type": "string", "required": false, "default": "Stirling PDF", "example": "PDF Studio", "safe": true, "category": "runtime", "description": "Custom instance branding title displayed in the navbar." }
+  ]
+}

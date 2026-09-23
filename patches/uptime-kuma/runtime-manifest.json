@@ -1,1 +1,20 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"uptime-kuma","framework":"Uptime Kuma","version":"2.5.5","baseImage":"ghcr.io/pfnapp/uptime-kuma:2.5.5","ports":{"default":3001,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/","port":3001},"readiness":{"path":"/","port":3001}},"tunables":[{"key":"DATA_DIR","label":"Data Directory","type":"string","required":false,"default":"./data/","example":"/app/data/","safe":true,"category":"storage","description":"Directory for SQLite and application data."},{"key":"UPTIME_KUMA_HOST","label":"Bind Host","type":"string","required":false,"default":"::","example":"0.0.0.0","safe":true,"category":"networking","description":"Listen address."},{"key":"UPTIME_KUMA_PORT","label":"Server Port","type":"number","required":false,"default":3001,"example":3001,"safe":true,"category":"networking","description":"HTTP port."},{"key":"NODE_ENV","label":"Node Environment","type":"string","required":false,"default":"production","example":"production","safe":true,"category":"runtime","description":"Node execution mode."},{"key":"UPTIME_KUMA_DB_TYPE","label":"Database Type","type":"string","required":false,"default":"sqlite","example":"sqlite","safe":true,"category":"database","description":"Database backend; MariaDB variables are only needed when selected."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "uptime-kuma",
+  "framework": "Uptime Kuma",
+  "version": "2.5.5",
+  "baseImage": "ghcr.io/pfnapp/uptime-kuma:2.5.5",
+  "ports": { "default": 3001, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 3001 }, "readiness": { "path": "/", "port": 3001 } },
+  "tunables": [
+    { "key": "DATA_DIR", "label": "Data Directory", "type": "string", "required": false, "default": "./data/", "example": "/app/data/", "safe": true, "category": "storage", "description": "Directory for SQLite database and application assets." },
+    { "key": "UPTIME_KUMA_HOST", "label": "Bind Host", "type": "string", "required": false, "default": "::", "example": "0.0.0.0", "safe": true, "category": "networking", "description": "Network interface address to listen on." },
+    { "key": "UPTIME_KUMA_PORT", "label": "Server Port", "type": "number", "required": false, "default": 3001, "example": 3001, "safe": true, "category": "networking", "description": "Internal HTTP server listening port." },
+    { "key": "NODE_ENV", "label": "Node Environment", "type": "string", "required": false, "default": "production", "example": "production", "safe": true, "category": "runtime", "description": "Node execution mode." },
+    { "key": "UPTIME_KUMA_DB_TYPE", "label": "Database Type", "type": "string", "required": false, "default": "sqlite", "example": "sqlite", "safe": true, "category": "database", "description": "Database backend (`sqlite` or `mariadb`)." },
+    { "key": "UPTIME_KUMA_WS_URL", "label": "WebSocket URL Override", "type": "string", "required": false, "example": "wss://status.example.com", "safe": true, "category": "networking", "description": "Explicit WebSocket URL for reverse proxy deployments." },
+    { "key": "UPTIME_KUMA_ENTRY_POINT", "label": "Entry Point Prefix", "type": "string", "required": false, "example": "/status", "safe": true, "category": "networking", "description": "Sub-path prefix if Uptime Kuma is hosted in a subfolder." },
+    { "key": "UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN", "label": "Allow iFrame Embedding", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "security", "description": "Allows public status pages to be embedded in external iframes." }
+  ]
+}

@@ -1,1 +1,17 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"homepage","framework":"Homepage","version":"v2.4.0","baseImage":"ghcr.io/pfnapp/homepage:v2.4.0","ports":{"default":3000,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/","port":3000},"readiness":{"path":"/","port":3000}},"tunables":[{"key":"HOMEPAGE_ALLOWED_HOSTS","label":"Allowed Hosts","type":"string","required":true,"example":"localhost:3005,127.0.0.1:3005","safe":true,"category":"security","description":"Comma-separated hostnames accepted by Homepage."},{"key":"PUID","label":"Process User ID","type":"number","required":false,"example":1000,"safe":true,"category":"security","description":"Optional host user mapping."},{"key":"PGID","label":"Process Group ID","type":"number","required":false,"example":1000,"safe":true,"category":"security","description":"Optional host group mapping."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "homepage",
+  "framework": "Homepage",
+  "version": "v2.4.0",
+  "baseImage": "ghcr.io/pfnapp/homepage:v2.4.0",
+  "ports": { "default": 3000, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 3000 }, "readiness": { "path": "/", "port": 3000 } },
+  "tunables": [
+    { "key": "HOMEPAGE_ALLOWED_HOSTS", "label": "Allowed Hosts", "type": "string", "required": true, "example": "localhost:3005,127.0.0.1:3005", "safe": true, "category": "security", "description": "Comma-separated hostnames accepted by Homepage." },
+    { "key": "PORT", "label": "Server Port", "type": "number", "required": false, "default": 3000, "example": 3000, "safe": true, "category": "networking", "description": "Internal server port for Homepage." },
+    { "key": "LOG_LEVEL", "label": "Log Level", "type": "string", "required": false, "default": "info", "example": "info", "safe": true, "category": "runtime", "description": "Application logging verbosity (debug, info, warn, error)." },
+    { "key": "PUID", "label": "Process User ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "Host user UID mapping for config volume permissions." },
+    { "key": "PGID", "label": "Process Group ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "Host group GID mapping for config volume permissions." }
+  ]
+}

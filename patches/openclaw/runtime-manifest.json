@@ -57,7 +57,139 @@
       "category": "runtime",
       "description": "Node.js execution mode; the image already defaults to production.",
       "troubleshooting": "Leave at production — development mode enables verbose error pages and slower builds."
+    },
+    {
+      "key": "OPENAI_API_KEY",
+      "label": "OpenAI API Key",
+      "type": "string",
+      "required": false,
+      "example": "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "OpenAI credential recognized by the core/bundled provider plugins when `models.providers.openai` is selected.",
+      "troubleshooting": "Set it in the process environment or the trusted global dotenv at ~/.openclaw/.env — credentials read from a workspace `.env` are ignored by design. A 401 from api.openai.com means the key never reached the Gateway process."
+    },
+    {
+      "key": "ANTHROPIC_API_KEY",
+      "label": "Anthropic API Key",
+      "type": "string",
+      "required": false,
+      "example": "sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "Anthropic credential for the `anthropic` provider (alternative to ANTHROPIC_OAUTH_TOKEN).",
+      "troubleshooting": "If requests keep failing with 401 while the key looks right, check that it was not saved only in a workspace `.env`; use `openclaw doctor` to inspect effective provider config."
+    },
+    {
+      "key": "GEMINI_API_KEY",
+      "label": "Gemini API Key",
+      "type": "string",
+      "required": false,
+      "example": "AIzaSyxxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "Google Gemini credential for the `gemini` provider (GOOGLE_API_KEY is also accepted).",
+      "troubleshooting": "OpenClaw blocks GEMINI_API_KEY from workspace `.env` files; supply it via the Gateway process environment or ~/.openclaw/.env, otherwise the provider stays unauthenticated."
+    },
+    {
+      "key": "GROQ_API_KEY",
+      "label": "Groq API Key",
+      "type": "string",
+      "required": false,
+      "example": "gsk_xxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "Groq credential for the `groq` provider (fast open models).",
+      "troubleshooting": "A 402/429 from Groq is an account or rate-limit issue, not a Gateway problem; confirm the key came from console.groq.com and lives in a trusted env source."
+    },
+    {
+      "key": "OPENROUTER_API_KEY",
+      "label": "OpenRouter API Key",
+      "type": "string",
+      "required": false,
+      "example": "sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "OpenRouter credential for the `openrouter` provider; useful as a single key across many models.",
+      "troubleshooting": "Reference it from config as `${OPENROUTER_API_KEY}` only if the variable is present in the Gateway process env — an unset variable stays literal and logs a substitution warning."
+    },
+    {
+      "key": "DEEPSEEK_API_KEY",
+      "label": "DeepSeek API Key",
+      "type": "string",
+      "required": false,
+      "example": "sk-xxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "ai_providers",
+      "description": "DeepSeek credential for the `deepseek` provider.",
+      "troubleshooting": "Provider keys cannot be redirected from a workspace `.env` (`*_BASE_URL` and `*_API_HOST` are blocked there too); set them in the process env or ~/.openclaw/.env."
+    },
+    {
+      "key": "TELEGRAM_BOT_TOKEN",
+      "label": "Telegram Bot Token",
+      "type": "string",
+      "required": false,
+      "example": "1234567890:AAExampleTokenNotARealBotToken",
+      "safe": true,
+      "category": "integrations",
+      "description": "Telegram bot token consumed when the Gateway is allowed to configure channels from ambient environment variables.",
+      "troubleshooting": "Channels need an explicit `channels.` block in openclaw.json or the `--ambient-channels` startup flag — without one of them the token is ignored and Telegram never connects. Re-auth with `openclaw channels auth telegram` if the session expires."
+    },
+    {
+      "key": "DISCORD_BOT_TOKEN",
+      "label": "Discord Bot Token",
+      "type": "string",
+      "required": false,
+      "example": "MTA1234567890.ExampleTokenNotARealBotToken.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "safe": true,
+      "category": "integrations",
+      "description": "Discord bot token consumed when ambient channel auto-configuration is enabled.",
+      "troubleshooting": "Same gate as Telegram: a `channels.discord` config block or `--ambient-channels` is required, and the bot needs the Message Content intent in the Discord Developer Portal."
+    },
+    {
+      "key": "SLACK_BOT_TOKEN",
+      "label": "Slack Bot Token",
+      "type": "string",
+      "required": false,
+      "example": "placeholder-slack-bot-token",
+      "safe": true,
+      "category": "integrations",
+      "description": "Slack bot token (`xoxb-...`) for the Slack channel adapter.",
+      "troubleshooting": "Slack uses Socket Mode, so the matching app-level token (`xapp-...`) must also be configured in the `channels.slack` block; a token alone is not enough to connect."
+    },
+    {
+      "key": "OPENCLAW_TZ",
+      "label": "Container Timezone",
+      "type": "string",
+      "required": false,
+      "example": "Asia/Jakarta",
+      "safe": true,
+      "category": "runtime",
+      "description": "IANA timezone for the OpenClaw container, so logs, cron and session timestamps are not UTC.",
+      "troubleshooting": "Use a zone installed in the image (for example `UTC`, `Asia/Jakarta`); an unknown zone silently falls back to UTC, which shifts scheduled jobs and log times."
+    },
+    {
+      "key": "OPENCLAW_SKIP_ONBOARDING",
+      "label": "Skip Onboarding",
+      "type": "boolean",
+      "required": false,
+      "example": true,
+      "safe": true,
+      "category": "runtime",
+      "description": "Bypasses the interactive onboarding/setup flow so the Gateway can start unattended (used by the upstream Docker setup scripts).",
+      "troubleshooting": "Enable it for unattended container starts; leaving it off in a headless container can stall startup waiting for interactive input. Config still has to exist afterwards — the sample starts with `--allow-unconfigured` for that case."
+    },
+    {
+      "key": "OPENCLAW_GATEWAY_PASSWORD",
+      "label": "Gateway Password",
+      "type": "string",
+      "required": false,
+      "example": "local-only-gateway-password-change-me",
+      "safe": true,
+      "category": "security",
+      "description": "Password alternative to the bearer token for Gateway authentication (`gateway.auth.mode: password`).",
+      "troubleshooting": "Pick either token or password auth — a non-loopback bind without one of them is rejected at startup. Treat it as a full-access operator credential; the example is a local-only placeholder for compose validation."
     }
   ],
-  "notes": "The gateway starts from the image default command (`node openclaw.mjs gateway`); probes are GET /healthz (liveness) and GET /startupz (readiness), both unauthenticated on the gateway port. Gateway settings otherwise live in ~/.openclaw/openclaw.json on the mounted volume; provider and channel credentials are external requirements and intentionally absent."
+  "notes": "The gateway starts from the image default command (`node openclaw.mjs gateway`); probes are GET /healthz (liveness) and GET /startupz (readiness), both unauthenticated on the gateway port. Gateway settings otherwise live in ~/.openclaw/openclaw.json on the mounted volume. Provider keys, channel tokens and the optional gateway password are declared as optional tunables with placeholder-only examples: OpenClaw reads them from the process environment or the trusted global dotenv (~/.openclaw/.env) — never from a workspace `.env` — and the sample supplies none."
 }

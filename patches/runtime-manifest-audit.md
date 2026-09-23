@@ -10,164 +10,94 @@ The patch Dockerfiles select an upstream image and apply OS-level security harde
 - `runtime-manifest.json`: Specification matching `languages/php/runtime-manifest.json` schema style, declaring ports, security (UID/GID), health probes, and required vs. optional tunable environment variables with descriptions, types, and defaults.
 - `docker-compose.yml`: Fully working, reproducible test sample.
 
-| Template | Upstream Image | Runtime Type | Ports | Volumes | DB Dependency |
+| Template | Hardened Image | Port(s) | Storage Volume(s) | DB Dependency | Health Probe Endpoint |
 |---|---|---|---|---|---|
-| `9router` | `decolua/9router:0.5.75` | Node.js / Next.js | 20128 | `/app/data` | None (SQLite) |
-| `dozzle` | `amir20/dozzle:v11.1.1` | Go (distroless/scratch) | 8080 | `/var/run/docker.sock` (optional) | None |
-| `filebrowser` | `filebrowser/filebrowser:v2.63.23` | Go | 80 (mapped 8080:80) | `/srv`, `/database` | None (SQLite) |
-| `hermes-agent` | `nousresearch/hermes-agent:v2026.9.14` | Python / s6-overlay | 8642 (API), 9119 (dashboard) | `/opt/data` | None (SQLite) |
-| `homepage` | `gethomepage/homepage:v2.4.0` | Node.js | 3000 (mapped 3005:3000) | `/app/config` | None |
-| `linkding` | `sissbruecker/linkding:1.47.0` | Python / Django | 9090 | `/etc/linkding/data` | None (SQLite) |
-| `memos` | `neosmemo/memos:0.31.0` | Go / React | 5230 | `/var/opt/memos` | None (SQLite) |
-| `nginx-proxy-manager` | `jc21/nginx-proxy-manager:2.15.1` | Node.js / OpenResty | 81 (mapped 8081:81) | `/data`, `/etc/letsencrypt` | MariaDB 11 |
-| `omniroute` | `diegosouzapw/omniroute:3.8.50` | Node.js / Next.js | 20128 (mapped 20129:20128) | `/app/data` | None (SQLite) |
-| `openclaw` | `openclaw/openclaw:2026.9.5` | Node.js | 18789 | `/home/node/.openclaw` | None (SQLite) |
-| `pocketbase` | `muchobien/pocketbase:0.40.4` | Go | 8090 | `/pb/pb_data`, `/pb/pb_public` | None (SQLite) |
-| `shlink` | `shlinkio/shlink:5.1.6` | PHP (Swoole/RoadRunner) | 8080 (mapped 8082:8080) | None | MariaDB 11 |
-| `stirling-pdf` | `stirlingtools/stirling-pdf:2.14.3` | Java (Spring Boot) | 8080 (mapped 8083:8080) | `/configs`, `/customFiles` | None (H2 embedded) |
-| `uptime-kuma` | `louislam/uptime-kuma:2.5.5` | Node.js / Vue | 3001 | `/app/data` | None (SQLite) |
-| `vaultwarden` | `vaultwarden/server:1.37.3` | Rust | 80 (mapped 8084:80) | `/data` | None (SQLite) |
-| `wordpress-fpm` | `library/wordpress:7.1.1-php8.3-fpm-alpine` | PHP-FPM 8.3 | 9000 (FastCGI) | `/var/www/html` | MariaDB 11 |
+| `9router` | `ghcr.io/pfnapp/9router:0.5.75` | `20128` | `/app/data` | SQLite | `GET /` (HTTP 307 -> `/dashboard`) |
+| `dozzle` | `ghcr.io/pfnapp/dozzle:v11.1.1` | `8080` | None (`/var/run/docker.sock` opt) | None | `["CMD", "/dozzle", "healthcheck"]` (HTTP 200) |
+| `filebrowser` | `filebrowser/filebrowser:v2.63.23` | `80` (maps `8080:80`) | `/srv`, `/database` | SQLite | `GET /` (HTTP 200) |
+| `hermes-agent` | `nousresearch/hermes-agent:v2026.9.14` | `8642` (API), `9119` (dashboard) | `/opt/data` | SQLite | `GET /health` on `8642` (HTTP 200) |
+| `homepage` | `ghcr.io/pfnapp/homepage:v2.4.0` | `3000` (maps `3005:3000`) | `/app/config` | None | `GET /` with `Host` header (HTTP 200) |
+| `linkding` | `ghcr.io/pfnapp/linkding:1.47.0` | `9090` | `/etc/linkding/data` | SQLite | `GET /` (HTTP 302 -> `/bookmarks`) |
+| `memos` | `neosmemo/memos:0.31.0` | `5230` | `/var/opt/memos` | SQLite | `GET /` (HTTP 200) |
+| `nginx-proxy-manager` | `jc21/nginx-proxy-manager:2.15.1` | `81` (maps `8081:81`), `80`, `443` | `/data`, `/etc/letsencrypt` | MariaDB 11 | `GET /` on `81` (HTTP 200) |
+| `omniroute` | `diegosouzapw/omniroute:3.8.50` | `20128` (maps `20129:20128`) | `/app/data` | SQLite | `GET /` (307) / `GET /healthz` (200) |
+| `openclaw` | `openclaw/openclaw:2026.9.5` | `18789` | `/home/node/.openclaw` | SQLite | `GET /healthz` (200 `{"ok":true,"status":"live"}`) |
+| `pocketbase` | `muchobien/pocketbase:0.40.4` | `8090` | `/pb/pb_data`, `/pb/pb_public` | SQLite | `GET /api/health` (HTTP 200) |
+| `shlink` | `shlinkio/shlink:5.1.6` | `8080` (maps `8082:8080`) | None | MariaDB 11 | `GET /rest/health` (HTTP 200) |
+| `stirling-pdf` | `stirlingtools/stirling-pdf:2.14.3` | `8080` (maps `8083:8080`) | `/configs`, `/customFiles` | H2 embedded | `GET /` on `8080` (HTTP 200/401) |
+| `uptime-kuma` | `louislam/uptime-kuma:2.5.5` | `3001` | `/app/data` | SQLite | `GET /` (HTTP 302 -> `/dashboard`) |
+| `vaultwarden` | `vaultwarden/server:1.37.3` | `80` (maps `8084:80`) | `/data` | SQLite | `GET /alive` (HTTP 200) |
+| `wordpress-fpm` | `ghcr.io/pfnapp/wordpress-fpm:7.1.1-php8.3-fpm-alpine` | `9000` (FastCGI TCP) | `/var/www/html` | MariaDB 11 | Socket connection on port `9000` |
 
-## Environment Variables Breakdown (Required vs Optional)
+---
+
+## Enriched Environment Variables Breakdown (Required vs Optional)
 
 ### 1. 9router
-- **Required:** None.
-- **Optional:**
-  - `PORT`: Server port (default: 20128).
-  - `HOSTNAME`: Bind host (default: "0.0.0.0").
-  - `DATA_DIR`: SQLite persistent data directory (default: "/app/data").
-  - `NODE_ENV`: Execution mode (default: "production").
-  - `NEXT_TELEMETRY_DISABLED`: Disable Next.js telemetry (default: true).
+- **Required (0):** None
+- **Optional (12):** `PORT`, `HOSTNAME`, `DATA_DIR`, `NODE_ENV`, `NEXT_TELEMETRY_DISABLED`, `REQUIRE_API_KEY`, `JWT_SECRET`, `API_KEY_SECRET`, `INITIAL_PASSWORD`, `CORS_ORIGIN`, `BASE_URL`, `ENABLE_REQUEST_LOGS`
 
 ### 2. dozzle
-- **Required:** None.
-- **Optional:**
-  - `DOZZLE_PORT`: Server listening port (default: 8080).
-  - `DOZZLE_BASE`: Sub-path prefix (default: "/").
-  - `DOZZLE_LEVEL`: Logging verbosity (default: "info").
+- **Required (0):** None
+- **Optional (9):** `DOZZLE_ADDR`, `DOZZLE_PORT`, `DOZZLE_BASE`, `DOZZLE_LEVEL`, `DOZZLE_NO_ANALYTICS`, `DOZZLE_USERNAME`, `DOZZLE_PASSWORD`, `DOZZLE_KEY`, `DOZZLE_CERT`
 
 ### 3. filebrowser
-- **Required:** None.
-- **Optional:**
-  - `UID`: Container user ID (default: 1000).
-  - `GID`: Container group ID (default: 1000).
+- **Required (0):** None
+- **Optional (8):** `UID`, `GID`, `FB_PORT`, `FB_ADDRESS`, `FB_ROOT`, `FB_DATABASE`, `FB_LOG`, `FB_BASEURL`
 
 ### 4. hermes-agent
-- **Required (when API server is enabled):**
-  - `API_SERVER_ENABLED`: Enable OpenAI-compatible HTTP API server (boolean).
-  - `API_SERVER_HOST`: Bind address (must be `0.0.0.0` for container networking).
-  - `API_SERVER_KEY`: Bearer token (string, minimum 16 characters required by security guard).
-  - `HERMES_HOME`: State directory (default: "/opt/data").
-- **Optional:**
-  - `PYTHONUNBUFFERED`: Flush stdout/stderr immediately (default: true).
-  - `PYTHONDONTWRITEBYTECODE`: Disable .pyc writes (default: true).
-  - `HERMES_WRITE_SAFE_ROOT`: Security boundary directory (default: "/opt/data").
-  - `HERMES_DISABLE_LAZY_INSTALLS`: Deterministic dependency isolation (default: true).
-  - `HERMES_DASHBOARD`: Web dashboard enable (default: false, port 9119).
+- **Required (4):** `API_SERVER_ENABLED`, `API_SERVER_HOST`, `API_SERVER_KEY`, `HERMES_HOME`
+- **Optional (31):** `PYTHONUNBUFFERED`, `PYTHONDONTWRITEBYTECODE`, `HERMES_WRITE_SAFE_ROOT`, `HERMES_DISABLE_LAZY_INSTALLS`, `API_SERVER_PORT`, `ANTHROPIC_API_KEY`, `ANTHROPIC_BASE_URL`, `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENROUTER_API_KEY`, `GOOGLE_API_KEY`, `GEMINI_API_KEY`, `DEEPSEEK_API_KEY`, `GROQ_API_KEY`, `XAI_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_ALLOWED_USERS`, `DISCORD_BOT_TOKEN`, `DISCORD_ALLOWED_USERS`, `SLACK_BOT_TOKEN`, `SLACK_APP_TOKEN`, `SLACK_ALLOWED_USERS`, `HERMES_DASHBOARD`, `HERMES_DASHBOARD_HOST`, `HERMES_DASHBOARD_PORT`, `HERMES_DASHBOARD_BASIC_AUTH_USERNAME`, `HERMES_DASHBOARD_BASIC_AUTH_PASSWORD`, `HERMES_UID`, `HERMES_GID`, `PUID`, `PGID`
 
 ### 5. homepage
-- **Required:**
-  - `HOMEPAGE_ALLOWED_HOSTS`: Comma-separated allowed host headers (e.g. `localhost:3005,127.0.0.1:3005`).
-- **Optional:**
-  - `PUID`: Host user ID mapping (default: 1000).
-  - `PGID`: Host group ID mapping (default: 1000).
+- **Required (1):** `HOMEPAGE_ALLOWED_HOSTS`
+- **Optional (4):** `PORT`, `LOG_LEVEL`, `PUID`, `PGID`
 
 ### 6. linkding
-- **Required:** None.
-- **Optional:**
-  - `LD_SERVER_PORT`: Server port (default: 9090).
-  - `LD_CONTEXT_PATH`: Sub-path prefix.
-  - `LD_SUPERUSER_NAME`: Initial administrator username.
-  - `LD_SUPERUSER_PASSWORD`: Initial administrator password.
+- **Required (0):** None
+- **Optional (12):** `LD_SERVER_PORT`, `LD_CONTEXT_PATH`, `LD_SUPERUSER_NAME`, `LD_SUPERUSER_PASSWORD`, `LD_DISABLE_BACKGROUND_TASKS`, `LD_DISABLE_URL_VALIDATION`, `LD_DB_ENGINE`, `LD_DB_DATABASE`, `LD_DB_USER`, `LD_DB_PASSWORD`, `LD_DB_HOST`, `LD_DB_PORT`
 
 ### 7. memos
-- **Required:** None.
-- **Optional:**
-  - `MEMOS_MODE`: Environment mode (default: "prod").
-  - `MEMOS_PORT`: HTTP listener port (default: 5230).
-  - `MEMOS_DATA`: SQLite storage directory (default: "/var/opt/memos").
+- **Required (0):** None
+- **Optional (7):** `MEMOS_MODE`, `MEMOS_PORT`, `MEMOS_DATA`, `MEMOS_DRIVER`, `MEMOS_DSN`, `MEMOS_PUBLIC`, `MEMOS_MAX_UPLOAD_SIZE_MIB`
 
 ### 8. nginx-proxy-manager
-- **Required:**
-  - `DB_MYSQL_HOST`: Database hostname (e.g. `db`).
-  - `DB_MYSQL_USER`: Database username (e.g. `npm`).
-  - `DB_MYSQL_PASSWORD`: Database password.
-  - `DB_MYSQL_NAME`: Database name (e.g. `npm`).
-- **Optional:**
-  - `DB_MYSQL_PORT`: Database port (default: 3306).
-  - `DISABLE_IPV6`: Disable IPv6 binding (default: false).
+- **Required (4):** `DB_MYSQL_HOST`, `DB_MYSQL_USER`, `DB_MYSQL_PASSWORD`, `DB_MYSQL_NAME`
+- **Optional (4):** `DB_MYSQL_PORT`, `DISABLE_IPV6`, `INITIAL_ADMIN_EMAIL`, `INITIAL_ADMIN_PASSWORD`
 
 ### 9. omniroute
-- **Required:**
-  - `JWT_SECRET`: Session and cookie signing secret (string, minimum 32 characters).
-  - `API_KEY_SECRET`: Encryption key for API keys stored at rest (string, minimum 32 characters).
-  - `INITIAL_PASSWORD`: First-time admin dashboard password (string).
-  - `DATA_DIR`: SQLite persistent directory (default: "/app/data").
-  - `PORT`: HTTP port (default: 20128).
-  - `HOSTNAME`: Bind host (default: "0.0.0.0").
-- **Optional:**
-  - `NODE_ENV`: Execution mode (default: "production").
-  - `OMNIROUTE_MEMORY_MB`: Memory budget in MB (default: 1024).
-  - `NODE_OPTIONS`: Node.js V8 heap allocation (default: "--max-old-space-size=1024").
+- **Required (6):** `JWT_SECRET`, `API_KEY_SECRET`, `INITIAL_PASSWORD`, `DATA_DIR`, `PORT`, `HOSTNAME`
+- **Optional (13):** `NODE_ENV`, `OMNIROUTE_MEMORY_MB`, `NODE_OPTIONS`, `OMNIROUTE_MIGRATIONS_DIR`, `REQUIRE_API_KEY`, `OMNIROUTE_BASE_PATH`, `OMNIROUTE_HEALTHCHECK_PATH`, `CORS_ALLOWED_ORIGINS`, `CORS_ORIGIN`, `CORS_ALLOW_ALL`, `PRICING_SYNC_ENABLED`, `MODELS_DEV_SYNC_ENABLED`, `STORAGE_ENCRYPTION_KEY`
 
 ### 10. openclaw
-- **Required:**
-  - `OPENCLAW_GATEWAY_TOKEN`: Bearer token for client authentication (required for non-loopback bind in container mode).
-- **Optional:**
-  - `OPENCLAW_GATEWAY_PORT`: Port to listen on (default: 18789).
-  - `OPENCLAW_GATEWAY_BIND`: Bind interface (`auto`, `lan`, `0.0.0.0`).
-  - `NODE_ENV`: Execution mode (default: "production").
+- **Required (1):** `OPENCLAW_GATEWAY_TOKEN`
+- **Optional (15):** `OPENCLAW_GATEWAY_BIND`, `OPENCLAW_GATEWAY_PORT`, `NODE_ENV`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `OPENROUTER_API_KEY`, `DEEPSEEK_API_KEY`, `TELEGRAM_BOT_TOKEN`, `DISCORD_BOT_TOKEN`, `SLACK_BOT_TOKEN`, `OPENCLAW_TZ`, `OPENCLAW_SKIP_ONBOARDING`, `OPENCLAW_GATEWAY_PASSWORD`
 
 ### 11. pocketbase
-- **Required:** None.
-- **Optional:**
-  - `PB_DATA_DIR`: Database directory (default: "/pb/pb_data").
-  - `PB_PUBLIC_DIR`: Public assets directory (default: "/pb/pb_public").
+- **Required (0):** None
+- **Optional (4):** `PB_DATA_DIR`, `PB_PUBLIC_DIR`, `PB_ENCRYPTION_KEY`, `PB_DEBUG`
 
 ### 12. shlink
-- **Required:**
-  - `DEFAULT_DOMAIN`: Shortener domain hostname (e.g. `localhost:8082`).
-  - `DB_HOST`: Database host (e.g. `db`).
-  - `DB_NAME`: Database name (e.g. `shlink`).
-  - `DB_USER`: Database user (e.g. `shlink`).
-  - `DB_PASSWORD`: Database password.
-- **Optional:**
-  - `DB_DRIVER`: Database type (`maria`, `mysql`, `postgres`, default: "maria").
-  - `DB_PORT`: Database port (default: 3306).
-  - `IS_HTTPS_ENABLED`: Force HTTPS short links (default: false).
+- **Required (5):** `DEFAULT_DOMAIN`, `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`
+- **Optional (9):** `DB_DRIVER`, `DB_PORT`, `IS_HTTPS_ENABLED`, `GEOLITE_LICENSE_KEY`, `REDIRECT_STATUS_CODE`, `REDIRECT_CACHE_LIFETIME`, `BASE_PATH`, `TIMEZONE`, `MULTI_SEGMENT_SLUGS_ENABLED`
 
 ### 13. stirling-pdf
-- **Required:** None.
-- **Optional:**
-  - `SYSTEM_DEFAULTLOCALE`: Default UI locale (default: "en-US").
-  - `SYSTEM_CONNECTIONTIMEOUTMILLISECONDS`: Timeout in ms (default: 120000).
-  - `DOCKER_ENABLE_SECURITY`: Enable login authentication (default: false).
+- **Required (0):** None
+- **Optional (6):** `SYSTEM_DEFAULTLOCALE`, `SYSTEM_CONNECTIONTIMEOUTMILLISECONDS`, `DOCKER_ENABLE_SECURITY`, `SECURITY_ENABLELOGIN`, `INSTALL_BOOK_AND_ADVANCED_HTML_OPS`, `APP_HOME_NAME`
 
 ### 14. uptime-kuma
-- **Required:** None.
-- **Optional:**
-  - `UPTIME_KUMA_HOST`: Bind address (default: "0.0.0.0").
-  - `UPTIME_KUMA_PORT`: Server port (default: 3001).
-  - `UPTIME_KUMA_DB_TYPE`: Database backend (default: "sqlite").
-  - `DATA_DIR`: Data directory (default: "/app/data/").
+- **Required (0):** None
+- **Optional (8):** `DATA_DIR`, `UPTIME_KUMA_HOST`, `UPTIME_KUMA_PORT`, `NODE_ENV`, `UPTIME_KUMA_DB_TYPE`, `UPTIME_KUMA_WS_URL`, `UPTIME_KUMA_ENTRY_POINT`, `UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN`
 
 ### 15. vaultwarden
-- **Required:** None.
-- **Optional:**
-  - `DOMAIN`: Public URL domain (e.g. `http://localhost:8084`).
-  - `SIGNUPS_ALLOWED`: Allow public registration (default: true).
-  - `WEBSOCKET_ENABLED`: Enable WebSockets (default: false).
-  - `ADMIN_TOKEN`: Protected admin page token.
+- **Required (0):** None
+- **Optional (12):** `DOMAIN`, `SIGNUPS_ALLOWED`, `INVITATIONS_ALLOWED`, `WEBSOCKET_ENABLED`, `ADMIN_TOKEN`, `DATABASE_URL`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_SECURITY`
 
 ### 16. wordpress-fpm
-- **Required:**
-  - `WORDPRESS_DB_HOST`: Database host and port (e.g. `db:3306`).
-  - `WORDPRESS_DB_USER`: Database username (e.g. `wordpress`).
-  - `WORDPRESS_DB_PASSWORD`: Database password.
-- **Optional:**
-  - `WORDPRESS_DB_NAME`: Database name (default: "wordpress").
-  - `WORDPRESS_CONFIG_EXTRA`: PHP configuration statements injected into `wp-config.php`.
+- **Required (3):** `WORDPRESS_DB_HOST`, `WORDPRESS_DB_USER`, `WORDPRESS_DB_PASSWORD`
+- **Optional (4):** `WORDPRESS_DB_NAME`, `WORDPRESS_TABLE_PREFIX`, `WORDPRESS_DEBUG`, `WORDPRESS_CONFIG_EXTRA`
+
+---
 
 ## Validation Ledger (All 16 Templates Verified)
 

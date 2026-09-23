@@ -1,13 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "runtime": "dozzle", "framework": "Dozzle", "version": "v11.1.1",
+  "runtime": "dozzle",
+  "framework": "Dozzle",
+  "version": "v11.1.1",
   "baseImage": "ghcr.io/pfnapp/dozzle:v11.1.1",
   "ports": { "default": 8080, "protocol": "HTTP" },
   "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
   "probes": { "liveness": { "path": "/", "port": 8080 }, "readiness": { "path": "/", "port": 8080 } },
   "tunables": [
     { "key": "DOZZLE_ADDR", "label": "Listen Address", "type": "string", "required": false, "default": ":8080", "example": ":8080", "safe": true, "category": "networking", "description": "Dozzle listen address." },
-    { "key": "DOZZLE_LEVEL", "label": "Log Level", "type": "string", "required": false, "default": "info", "example": "info", "safe": true, "category": "runtime", "description": "Application log verbosity." },
-    { "key": "DOZZLE_BASE", "label": "URL Base", "type": "string", "required": false, "default": "/", "example": "/", "safe": true, "category": "networking", "description": "Optional URL base path." }
+    { "key": "DOZZLE_PORT", "label": "Server Port", "type": "number", "required": false, "default": 8080, "example": 8080, "safe": true, "category": "networking", "description": "Server listening port." },
+    { "key": "DOZZLE_BASE", "label": "URL Base", "type": "string", "required": false, "default": "/", "example": "/", "safe": true, "category": "networking", "description": "Optional URL base sub-path." },
+    { "key": "DOZZLE_LEVEL", "label": "Log Level", "type": "string", "required": false, "default": "info", "example": "info", "safe": true, "category": "runtime", "description": "Application log verbosity (trace, debug, info, warn, error)." },
+    { "key": "DOZZLE_NO_ANALYTICS", "label": "Disable Analytics", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "privacy", "description": "Disables anonymous telemetry and analytics collection." },
+    { "key": "DOZZLE_USERNAME", "label": "Basic Auth Username", "type": "string", "required": false, "example": "admin", "safe": true, "category": "authentication", "description": "Username for simple authentication." },
+    { "key": "DOZZLE_PASSWORD", "label": "Basic Auth Password", "type": "string", "required": false, "example": "local-only-dozzle-password", "safe": true, "category": "authentication", "description": "Password for simple authentication." },
+    { "key": "DOZZLE_KEY", "label": "TLS Private Key Path", "type": "string", "required": false, "default": "dozzle_key.pem", "example": "dozzle_key.pem", "safe": true, "category": "security", "description": "Path to custom TLS private key." },
+    { "key": "DOZZLE_CERT", "label": "TLS Certificate Path", "type": "string", "required": false, "default": "dozzle_cert.pem", "example": "dozzle_cert.pem", "safe": true, "category": "security", "description": "Path to custom TLS certificate." }
   ]
 }

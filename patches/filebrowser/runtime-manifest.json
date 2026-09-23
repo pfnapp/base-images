@@ -1,11 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "runtime": "filebrowser", "framework": "FileBrowser", "version": "v2.63.23",
+  "runtime": "filebrowser",
+  "framework": "FileBrowser",
+  "version": "v2.63.23",
   "baseImage": "ghcr.io/pfnapp/filebrowser:v2.63.23",
-  "ports": { "default": 80, "protocol": "HTTP" }, "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "ports": { "default": 80, "protocol": "HTTP" },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
   "probes": { "liveness": { "path": "/", "port": 80 }, "readiness": { "path": "/", "port": 80 } },
   "tunables": [
     { "key": "UID", "label": "Process User ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "UID used by the upstream image." },
-    { "key": "GID", "label": "Process Group ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "GID used by the upstream image." }
+    { "key": "GID", "label": "Process Group ID", "type": "number", "required": false, "default": 1000, "example": 1000, "safe": true, "category": "security", "description": "GID used by the upstream image." },
+    { "key": "FB_PORT", "label": "Server Port", "type": "number", "required": false, "default": 80, "example": 80, "safe": true, "category": "networking", "description": "HTTP port for FileBrowser to listen on." },
+    { "key": "FB_ADDRESS", "label": "Bind Address", "type": "string", "required": false, "default": "0.0.0.0", "example": "0.0.0.0", "safe": true, "category": "networking", "description": "IP interface address to listen on." },
+    { "key": "FB_ROOT", "label": "Root Directory", "type": "string", "required": false, "default": "/srv", "example": "/srv", "safe": true, "category": "storage", "description": "Root storage path for managed user files." },
+    { "key": "FB_DATABASE", "label": "Database Path", "type": "string", "required": false, "default": "/database/filebrowser.db", "example": "/database/filebrowser.db", "safe": true, "category": "storage", "description": "Path to the SQLite database file." },
+    { "key": "FB_LOG", "label": "Log Output", "type": "string", "required": false, "default": "stdout", "example": "stdout", "safe": true, "category": "runtime", "description": "Log output target (stdout or file path)." },
+    { "key": "FB_BASEURL", "label": "Base URL", "type": "string", "required": false, "default": "", "example": "/files", "safe": true, "category": "networking", "description": "URL sub-path if running behind a reverse proxy prefix." }
   ]
 }

@@ -1,1 +1,20 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"nginx-proxy-manager","framework":"Nginx Proxy Manager","version":"2.15.1","baseImage":"ghcr.io/pfnapp/nginx-proxy-manager:2.15.1","ports":{"default":81,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/","port":81},"readiness":{"path":"/","port":81}},"tunables":[{"key":"DB_MYSQL_HOST","label":"Database Host","type":"string","required":true,"example":"db","safe":true,"category":"database","description":"MariaDB service hostname."},{"key":"DB_MYSQL_PORT","label":"Database Port","type":"number","required":false,"default":3306,"example":3306,"safe":true,"category":"database","description":"MariaDB port."},{"key":"DB_MYSQL_USER","label":"Database User","type":"string","required":true,"example":"npm","safe":true,"category":"database","description":"Database username."},{"key":"DB_MYSQL_PASSWORD","label":"Database Password","type":"string","required":true,"example":"local-only-password","safe":true,"category":"database","description":"Local database password placeholder."},{"key":"DB_MYSQL_NAME","label":"Database Name","type":"string","required":true,"example":"npm","safe":true,"category":"database","description":"Database name."},{"key":"DISABLE_IPV6","label":"Disable IPv6","type":"boolean","required":false,"default":false,"example":true,"safe":true,"category":"networking","description":"Disables IPv6 when required by the network."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "nginx-proxy-manager",
+  "framework": "Nginx Proxy Manager",
+  "version": "2.15.1",
+  "baseImage": "ghcr.io/pfnapp/nginx-proxy-manager:2.15.1",
+  "ports": { "default": 81, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/", "port": 81 }, "readiness": { "path": "/", "port": 81 } },
+  "tunables": [
+    { "key": "DB_MYSQL_HOST", "label": "Database Host", "type": "string", "required": true, "example": "db", "safe": true, "category": "database", "description": "MariaDB/MySQL database service hostname." },
+    { "key": "DB_MYSQL_USER", "label": "Database User", "type": "string", "required": true, "example": "npm", "safe": true, "category": "database", "description": "Database username." },
+    { "key": "DB_MYSQL_PASSWORD", "label": "Database Password", "type": "string", "required": true, "example": "local-only-npm-db-pass", "safe": true, "category": "database", "description": "Database password." },
+    { "key": "DB_MYSQL_NAME", "label": "Database Name", "type": "string", "required": true, "example": "npm", "safe": true, "category": "database", "description": "Database name." },
+    { "key": "DB_MYSQL_PORT", "label": "Database Port", "type": "number", "required": false, "default": 3306, "example": 3306, "safe": true, "category": "database", "description": "Database server port." },
+    { "key": "DISABLE_IPV6", "label": "Disable IPv6", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "networking", "description": "Disables IPv6 listeners when container host does not support IPv6." },
+    { "key": "INITIAL_ADMIN_EMAIL", "label": "Initial Admin Email", "type": "string", "required": false, "default": "admin@example.com", "example": "admin@example.com", "safe": true, "category": "authentication", "description": "Default administrator login email seeded on initial startup." },
+    { "key": "INITIAL_ADMIN_PASSWORD", "label": "Initial Admin Password", "type": "string", "required": false, "default": "changeme", "example": "changeme", "safe": true, "category": "authentication", "description": "Default administrator login password seeded on initial startup." }
+  ]
+}

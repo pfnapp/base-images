@@ -1,1 +1,16 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"pocketbase","framework":"PocketBase","version":"0.40.4","baseImage":"ghcr.io/pfnapp/pocketbase:0.40.4","ports":{"default":8090,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/api/health","port":8090},"readiness":{"path":"/api/health","port":8090}},"tunables":[{"key":"PB_DATA_DIR","label":"Data Directory","type":"string","required":false,"default":"/pb/pb_data","example":"/pb/pb_data","safe":true,"category":"storage","description":"PocketBase data directory (CLI flag equivalent)."},{"key":"PB_PUBLIC_DIR","label":"Public Directory","type":"string","required":false,"default":"/pb/pb_public","example":"/pb/pb_public","safe":true,"category":"storage","description":"PocketBase public directory (CLI flag equivalent)."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "pocketbase",
+  "framework": "PocketBase",
+  "version": "0.40.4",
+  "baseImage": "ghcr.io/pfnapp/pocketbase:0.40.4",
+  "ports": { "default": 8090, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/api/health", "port": 8090 }, "readiness": { "path": "/api/health", "port": 8090 } },
+  "tunables": [
+    { "key": "PB_DATA_DIR", "label": "Data Directory", "type": "string", "required": false, "default": "/pb/pb_data", "example": "/pb/pb_data", "safe": true, "category": "storage", "description": "PocketBase SQLite and file storage directory (maps to `--dir` CLI flag)." },
+    { "key": "PB_PUBLIC_DIR", "label": "Public Directory", "type": "string", "required": false, "default": "/pb/pb_public", "example": "/pb/pb_public", "safe": true, "category": "storage", "description": "Public static files directory (maps to `--publicDir` CLI flag)." },
+    { "key": "PB_ENCRYPTION_KEY", "label": "Data Encryption Key", "type": "string", "required": false, "example": "local-only-pb-encryption-key-32c", "safe": true, "category": "security", "description": "32-character key for encrypting sensitive fields and settings at rest (maps to `--encryptionEnv`)." },
+    { "key": "PB_DEBUG", "label": "Enable Debug Mode", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "runtime", "description": "Enables verbose logging and debug information (maps to `--debug` CLI flag)." }
+  ]
+}

@@ -1,1 +1,26 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","runtime":"shlink","framework":"Shlink","version":"5.1.6","baseImage":"ghcr.io/pfnapp/shlink:5.1.6","ports":{"default":8080,"protocol":"HTTP"},"security":{"runAsUser":0,"runAsGroup":0,"readOnlyRoot":false},"probes":{"liveness":{"path":"/rest/health","port":8080},"readiness":{"path":"/rest/health","port":8080}},"tunables":[{"key":"DEFAULT_DOMAIN","label":"Default Domain","type":"string","required":true,"example":"localhost:8080","safe":true,"category":"application","description":"Public domain used to generate short URLs."},{"key":"IS_HTTPS_ENABLED","label":"HTTPS Enabled","type":"boolean","required":false,"default":false,"example":false,"safe":true,"category":"networking","description":"Whether generated URLs use HTTPS."},{"key":"DB_DRIVER","label":"Database Driver","type":"string","required":false,"default":"mysql","example":"mysql","safe":true,"category":"database","description":"Database driver."},{"key":"DB_HOST","label":"Database Host","type":"string","required":true,"example":"db","safe":true,"category":"database","description":"Database hostname."},{"key":"DB_PORT","label":"Database Port","type":"number","required":false,"default":3306,"example":3306,"safe":true,"category":"database","description":"Database port."},{"key":"DB_NAME","label":"Database Name","type":"string","required":true,"example":"shlink","safe":true,"category":"database","description":"Database name."},{"key":"DB_USER","label":"Database User","type":"string","required":true,"example":"shlink","safe":true,"category":"database","description":"Database user."},{"key":"DB_PASSWORD","label":"Database Password","type":"string","required":true,"example":"local-only-password","safe":true,"category":"database","description":"Local database password placeholder."}]}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "shlink",
+  "framework": "Shlink",
+  "version": "5.1.6",
+  "baseImage": "ghcr.io/pfnapp/shlink:5.1.6",
+  "ports": { "default": 8080, "protocol": "HTTP" },
+  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "probes": { "liveness": { "path": "/rest/health", "port": 8080 }, "readiness": { "path": "/rest/health", "port": 8080 } },
+  "tunables": [
+    { "key": "DEFAULT_DOMAIN", "label": "Default Domain", "type": "string", "required": true, "example": "localhost:8080", "safe": true, "category": "application", "description": "Public domain used to generate short URLs." },
+    { "key": "DB_HOST", "label": "Database Host", "type": "string", "required": true, "example": "db", "safe": true, "category": "database", "description": "Database server hostname." },
+    { "key": "DB_NAME", "label": "Database Name", "type": "string", "required": true, "example": "shlink", "safe": true, "category": "database", "description": "Database name." },
+    { "key": "DB_USER", "label": "Database User", "type": "string", "required": true, "example": "shlink", "safe": true, "category": "database", "description": "Database user." },
+    { "key": "DB_PASSWORD", "label": "Database Password", "type": "string", "required": true, "example": "local-only-shlink-db-pass", "safe": true, "category": "database", "description": "Database password." },
+    { "key": "DB_DRIVER", "label": "Database Driver", "type": "string", "required": false, "default": "maria", "example": "maria", "safe": true, "category": "database", "description": "Database driver (`maria`, `mysql`, `postgres`)." },
+    { "key": "DB_PORT", "label": "Database Port", "type": "number", "required": false, "default": 3306, "example": 3306, "safe": true, "category": "database", "description": "Database server port." },
+    { "key": "IS_HTTPS_ENABLED", "label": "HTTPS Enabled", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "networking", "description": "Whether generated short links use the `https://` scheme." },
+    { "key": "GEOLITE_LICENSE_KEY", "label": "MaxMind License Key", "type": "string", "required": false, "example": "MaxMindLicenseKeyPlaceholder", "safe": true, "category": "integrations", "description": "MaxMind GeoLite2 license key for geo-location visit analytics." },
+    { "key": "REDIRECT_STATUS_CODE", "label": "Redirect Status Code", "type": "number", "required": false, "default": 302, "example": 302, "safe": true, "category": "performance", "description": "HTTP status code for redirects (301 permanent or 302 temporary)." },
+    { "key": "REDIRECT_CACHE_LIFETIME", "label": "Redirect Cache Seconds", "type": "number", "required": false, "default": 30, "example": 30, "safe": true, "category": "performance", "description": "Cache lifetime in seconds for permanent (301) redirects." },
+    { "key": "BASE_PATH", "label": "URL Base Path", "type": "string", "required": false, "default": "", "example": "/s", "safe": true, "category": "networking", "description": "Sub-path prefix if Shlink is hosted in a subfolder." },
+    { "key": "TIMEZONE", "label": "Timezone", "type": "string", "required": false, "default": "UTC", "example": "Asia/Jakarta", "safe": true, "category": "runtime", "description": "Default timezone for visit statistics and reports." },
+    { "key": "MULTI_SEGMENT_SLUGS_ENABLED", "label": "Multi-Segment Slugs", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "application", "description": "Allows custom short codes containing slashes (e.g. `/campaign/spring`)." }
+  ]
+}
