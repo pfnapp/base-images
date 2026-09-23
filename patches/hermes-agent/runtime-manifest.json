@@ -4,46 +4,48 @@
   "framework": "Hermes Agent",
   "version": "v2026.9.14",
   "baseImage": "ghcr.io/pfnapp/hermes-agent:v2026.9.14",
-  "ports": { "default": 8642, "protocol": "HTTP" },
+  "ports": { "default": 9119, "protocol": "HTTP" },
   "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
   "probes": {
-    "liveness": { "path": "/health", "port": 8642 },
-    "readiness": { "path": "/health", "port": 8642 }
+    "liveness": { "path": "/", "port": 9119 },
+    "readiness": { "path": "/", "port": 9119 }
   },
   "tunables": [
     {
       "key": "API_SERVER_ENABLED",
       "label": "API Server Enabled",
       "type": "boolean",
-      "required": true,
-      "example": true,
+      "required": false,
+      "default": false,
+      "example": false,
       "safe": true,
       "category": "networking",
-      "description": "Starts the OpenAI-compatible API server as a gateway platform adapter; it serves GET /health on port 8642.",
-      "troubleshooting": "Without API_SERVER_ENABLED=true nothing listens on 8642 and the /health probe fails. The container must also be started with `gateway run` so the gateway daemon (which supervises the API server adapter) is running."
+      "description": "Sample switch for the OpenAI-compatible API server (GET /health and /v1 on port 8642). False by default and it is the sample's real off-switch: while false, the compose boot prelude runs `hermes config set platforms.api_server.enabled false` on every start, so nothing listens on 8642 and no 8642 port is published.",
+      "troubleshooting": "Setting this flag alone would NOT disable the API in this upstream build — the gateway gates that adapter on a usable API_SERVER_KEY (>= 16 characters, deny-listed placeholders rejected) and the image's first-boot stage2 hook generates one per data volume (0600, in /opt/data/.env, never committed), so upstream's loopback control plane would otherwise start. The compose `command` prelude is what makes false mean off (and true mean: stop pinning, let upstream's key gate decide). Dashboard-internal cron keeps working while off (the gateway runs its own cron ticker); only the optional external Chronos/NAS cron-fire callback and relay-fronted manual runs need the loopback API. To opt in: set true in `.env`, set HERMES_API_SERVER_HOST=0.0.0.0, uncomment the 8642 publish rule, restart, then verify GET /health and `Authorization: Bearer <key>` on /v1. Manual equivalent: `hermes config unset platforms.api_server.enabled` inside the container."
     },
     {
       "key": "API_SERVER_HOST",
       "label": "API Server Bind Address",
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "127.0.0.1",
       "example": "0.0.0.0",
       "safe": true,
       "category": "networking",
-      "description": "Host/bind address for the API server; containers must bind 0.0.0.0 to accept published traffic.",
-      "troubleshooting": "The upstream default 127.0.0.1 is unreachable from outside the container — set 0.0.0.0 and publish port 8642. API_SERVER_KEY is still required even on loopback binds."
+      "description": "Host/bind address for the API server once it is opted in; the sample passes HERMES_API_SERVER_HOST through with the upstream default 127.0.0.1 (loopback inside the container). Irrelevant while API_SERVER_ENABLED=false, because then no listener is created at all.",
+      "troubleshooting": "The sample does not publish 8642, so the loopback default is fine — and safest, since it would be unreachable from other containers too. To reach the API from the host you must both set this to 0.0.0.0 and uncomment the `- \"127.0.0.1:8642:8642\"` publish rule (Docker forwards to the container IP, so 127.0.0.1 here leaves a published port dead). API_SERVER_KEY is still required even on loopback binds."
     },
     {
       "key": "API_SERVER_KEY",
       "label": "API Server Key",
       "type": "string",
-      "required": true,
-      "example": "testsecretkey1234567890",
+      "required": false,
+      "default": "",
+      "example": "replace-with-openssl-rand-hex-32-output",
       "safe": true,
       "category": "security",
-      "description": "Bearer token clients send to the API server; upstream refuses to start the API server without a strong key (minimum 16 characters; a small deny-list of obvious placeholders such as `changeme` is also rejected).",
-      "troubleshooting": "Send it as `Authorization: Bearer <key>`. The key must be at least 16 characters or the API server refuses to start. The example is a local-only dummy value for compose validation — the sample compose injects the same kind of placeholder via `${HERMES_API_SERVER_KEY:-...}` and real values belong in a git-ignored `.env` (see `.env.example`), never in the compose file."
+      "description": "Bearer token clients send to the API server; the gateway refuses to start the adapter without a strong key (minimum 16 characters; a small deny-list of obvious placeholders such as `changeme` is also rejected). Optional in this sample: it defaults to empty, meaning no key material exists in the repository — while the API stays pinned off the key is unused anyway, and the image's first-boot stage2 hook generates a per-volume one (/opt/data/.env, 0600, git-ignored) as soon as you opt in.",
+      "troubleshooting": "Send it as `Authorization: Bearer <key>`. When opting in you may pin your own value (`openssl rand -hex 32`) as HERMES_API_SERVER_KEY in the git-ignored `.env` (interpolated by `${HERMES_API_SERVER_KEY:-}` in docker-compose.yml) — a container-provided key makes stage2 skip generation; never put a real key in the compose file or the repository. The example string above is a documentation placeholder only and is on upstream's deny-list, so it could never authenticate. Note the API must also be un-pinned (API_SERVER_ENABLED=true) before any key matters."
     },
     {
       "key": "HERMES_HOME",
@@ -114,8 +116,8 @@
       "example": 8642,
       "safe": true,
       "category": "networking",
-      "description": "Port the OpenAI-compatible API server listens on; must match the published container port.",
-      "troubleshooting": "If the /health probe times out after changing this, update the compose mapping (for example 8643:8643) so both halves match, and keep probes pointed at the same port."
+      "description": "Port the OpenAI-compatible API server listens on; must match the published container port. Only relevant after opting in — the sample publishes nothing on 8642.",
+      "troubleshooting": "The sample keeps the API off, so this port has no listener and no probe targets it. After opting in, if `/health` times out through a published port, check that the compose mapping (for example 8643:8643) matches this value on both halves and that API_SERVER_HOST is 0.0.0.0."
     },
     {
       "key": "ANTHROPIC_API_KEY",
@@ -313,8 +315,8 @@
       "example": true,
       "safe": true,
       "category": "networking",
-      "description": "Starts the supervised web dashboard service (default port 9119) inside the container.",
-      "troubleshooting": "Unset/`false`, the s6 dashboard service exits immediately (finish script marks it down) and nothing listens on 9119. Set to `1` to start it, and note the default container bind 0.0.0.0 is non-loopback: upstream then engages its auth gate and exits unless an auth provider is registered, so a basic-auth pair (HERMES_DASHBOARD_BASIC_AUTH_USERNAME + _PASSWORD) or OAuth (HERMES_DASHBOARD_OAUTH_CLIENT_ID) is required for the dashboard to come up at all. The sample enables it with a placeholder basic-auth pair and publishes 127.0.0.1:9119 only; replace the password in `.env` before widening the publish rule. HERMES_DASHBOARD_INSECURE is accepted but ignored — it no longer disables the gate."
+      "description": "Starts the supervised web dashboard service (default port 9119) inside the container; the sample's only published port and the target of the container healthcheck.",
+      "troubleshooting": "Unset/`false`, the s6 dashboard service exits immediately (finish script marks it down) and nothing listens on 9119 — and because the healthcheck probes the dashboard, the container then stays permanently unhealthy (remove or repoint the healthcheck block if you deliberately run without it). Set to `1` to start it, and note the default container bind 0.0.0.0 is non-loopback: upstream then engages its auth gate and exits unless an auth provider is registered, so a basic-auth pair (HERMES_DASHBOARD_BASIC_AUTH_USERNAME + _PASSWORD) or OAuth (HERMES_DASHBOARD_OAUTH_CLIENT_ID) is required for the dashboard to come up at all. The sample enables it with a placeholder basic-auth pair and publishes 127.0.0.1:9119 only; replace the password in `.env` before widening the publish rule. HERMES_DASHBOARD_INSECURE is accepted but ignored — it no longer disables the gate."
     },
     {
       "key": "HERMES_DASHBOARD_HOST",
@@ -383,7 +385,7 @@
       "safe": true,
       "category": "networking",
       "description": "Skips the botocore instance-metadata (169.254.169.254) credential probe that `model.provider: auto` triggers during gateway startup.",
-      "troubleshooting": "On hosts outside AWS the IMDS connect can blackhole indefinitely, so `gateway run` never finishes startup and nothing listens on 8642 (/health stays connection-refused). Set true for container samples that do not use Bedrock; only unset on real EC2/ECS where instance-role credentials are wanted."
+      "troubleshooting": "On hosts outside AWS the IMDS connect can blackhole indefinitely, so `gateway run` never finishes startup and the gateway daemon is not supervising anything (the dashboard on 9119 is independent and still comes up). Set true for container samples that do not use Bedrock; only unset on real EC2/ECS where instance-role credentials are wanted."
     },
     {
       "key": "HERMES_UID",
@@ -432,5 +434,5 @@
       "troubleshooting": "Set it together with PUID; leaving GID unmapped on a group-owned volume reproduces the same permission errors as an unmatched UID."
     }
   ],
-  "notes": "Ports: 8642 is the API server (API_SERVER_PORT default 8642, health endpoint GET /health); 9119 is the web dashboard started by the s6 dashboard service when HERMES_DASHBOARD is truthy (HERMES_DASHBOARD_PORT default 9119). Because the dashboard's default container bind is 0.0.0.0 (non-loopback), upstream's auth gate applies and startup fails closed without an auth provider — a basic-auth pair or OAuth client id is required for it to start. The sample publishes 8642 on all interfaces and 127.0.0.1:9119 on host loopback only, enables the dashboard with a placeholder basic-auth pair, and sets an empty HERMES_DASHBOARD_BASIC_AUTH_SECRET (upstream's random per-process default); its container healthcheck probes the API server only, so dashboard failures never mark the gateway unhealthy. Credentials are interpolated from a git-ignored `.env` (`${...:-placeholder}` in docker-compose.yml, template in `.env.example`) — only local-only placeholders live in the repository, and none of the provider keys or messaging tokens below is supplied by the sample. Provider credentials and messaging tokens are read from the process environment or `~/.hermes/.env` (prefer `config.yaml` for non-secret behaviour); every credential in `tunables` is optional and carries a placeholder example only."
+  "notes": "Dashboard-first sample: the only published port is 127.0.0.1:9119 (host loopback) for the web dashboard started by the s6 dashboard service when HERMES_DASHBOARD is truthy (HERMES_DASHBOARD_PORT default 9119). Because the dashboard's default container bind is 0.0.0.0 (non-loopback), upstream's auth gate applies and startup fails closed without an auth provider — a basic-auth pair or OAuth client id is required for it to start; the sample enables it with a placeholder basic-auth pair and an empty HERMES_DASHBOARD_BASIC_AUTH_SECRET (upstream's random per-process default). Probes and the compose healthcheck therefore target the dashboard: unauthenticated GET / must answer the login redirect (302 with Location pointing at /login; a 200 also counts), matching what a browser sees — connection refused or 4xx/5xx marks the container unhealthy, and HERMES_DASHBOARD=0 makes it permanently unhealthy unless the healthcheck is repointed. Upstream additionally exposes an unauthenticated GET /api/health on 9119 as its own liveness endpoint. The OpenAI-compatible API server (8642, API_SERVER_PORT default 8642, GET /health) is opt-in and off by default: while API_SERVER_ENABLED=false the compose `command` boot prelude pins platforms.api_server.enabled=false in config.yaml on every start, and no 8642 publish rule exists, so nothing listens on 8642 inside or outside the container. That prelude — not the flag or an empty key — is the effective off-switch: the flag is declarative in this build, the gateway gates the adapter on a usable API_SERVER_KEY (>= 16 chars), and the image's first-boot stage2 hook generates one per data volume anyway (0600, /opt/data/.env, git-ignored) to serve upstream's loopback control plane. Dashboard-internal cron keeps working while the API is off (the gateway runs its own cron ticker); only the optional external Chronos/NAS cron-fire callback and relay-fronted manual runs need the loopback API, which API_SERVER_ENABLED=true restores (together with HERMES_API_SERVER_HOST=0.0.0.0 and the uncommented publish rule for external access). Credentials are interpolated from a git-ignored `.env` (`${...}` in docker-compose.yml, template in `.env.example`) — only local-only placeholders live in the repository, the API key default is deliberately empty so no key material is ever committed, and none of the provider keys or messaging tokens below is supplied by the sample. Provider credentials and messaging tokens are read from the process environment or `~/.hermes/.env` (prefer `config.yaml` for non-secret behaviour); every credential in `tunables` is optional and carries a placeholder example only."
 }

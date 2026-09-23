@@ -2,24 +2,56 @@ services:
   hermes-agent:
     build: .
     image: local/pfnapp-hermes-agent:v2026.9.14
-    # Image entrypoint routes args as `hermes <subcommand>`; `gateway run`
-    # runs the gateway daemon in the foreground (recommended for Docker),
-    # which supervises the API server adapter on port 8642. The image's s6
-    # tree supervises the web dashboard (port 9119) alongside it.
-    command: ["gateway", "run"]
+    # The image entrypoint routes its args as `hermes <subcommand>` unless the
+    # first arg is a bare executable — `sh` is one, so main-wrapper execs this
+    # script as the `hermes` user with the venv already activated.
+    #
+    # Boot prelude: pin the OpenAI-compatible API server (8642) platform OFF
+    # before the gateway starts. In this upstream build API_SERVER_ENABLED is
+    # declarative only — the gateway actually gates that adapter on a usable
+    # API_SERVER_KEY, and the image's stage2 hook auto-generates a loopback
+    # key into the data volume on first boot — so the explicit config flag is
+    # what really keeps 8642 from listening. Personal-dashboard-first: the
+    # dashboard on 9119 and the gateway are unaffected, and the gateway's own
+    # cron ticker keeps running. Only the optional external Chronos/NAS
+    # cron-fire callback and relay-fronted manual runs need that loopback
+    # API — set API_SERVER_ENABLED=true in .env to restore them.
+    command:
+      - sh
+      - -c
+      - |
+        if [ "$$API_SERVER_ENABLED" = "true" ]; then
+            hermes config unset platforms.api_server.enabled >/dev/null 2>&1 || true
+        else
+            hermes config set platforms.api_server.enabled false >/dev/null 2>&1 || true
+        fi
+        exec hermes gateway run
     ports:
-      - "8642:8642"
       # Dashboard: host loopback only, so it is not reachable from the network
       # by default. To expose it, put a reverse proxy in front, or change the
       # left side below to 0.0.0.0 (after replacing the placeholder password).
       - "127.0.0.1:9119:9119"
+      # API server (8642): NOT published — the API is off by default (see the
+      # boot prelude above). To opt in: set API_SERVER_ENABLED=true in .env
+      # (the prelude then leaves the platform to upstream, whose stage2 hook
+      # supplies a loopback key — or pin your own via HERMES_API_SERVER_KEY),
+      # set HERMES_API_SERVER_HOST=0.0.0.0, and uncomment the publish line
+      # below. Keep the 127.0.0.1 left side unless other hosts must reach it.
+      # - "127.0.0.1:8642:8642"
     environment:
-      API_SERVER_ENABLED: "true"
-      API_SERVER_HOST: 0.0.0.0
-      # Local-only placeholder, not a real credential: upstream refuses an API
-      # server key shorter than 16 characters. Override with HERMES_API_SERVER_KEY
-      # in .env (see .env.example) for anything beyond local validation.
-      API_SERVER_KEY: "${HERMES_API_SERVER_KEY:-testsecretkey123}"
+      # Read by the boot prelude above: false (the default) pins
+      # platforms.api_server.enabled=false in config.yaml on every start;
+      # true skips the pin so upstream's key-gated adapter may start.
+      API_SERVER_ENABLED: "${API_SERVER_ENABLED:-false}"
+      # Bind address, only relevant after opting in. Upstream's default is
+      # loopback-inside-the-container; a published port needs 0.0.0.0.
+      API_SERVER_HOST: "${HERMES_API_SERVER_HOST:-127.0.0.1}"
+      # Empty unless you opt in — no key material lives in this repository.
+      # When empty, the image's first-boot stage2 hook generates a per-volume
+      # key into /opt/data/.env (0600, never committed, unused while the API
+      # stays pinned off); set HERMES_API_SERVER_KEY in .env to pin your own
+      # (openssl rand -hex 32) — a container-provided key skips generation.
+      API_SERVER_KEY: "${HERMES_API_SERVER_KEY:-}"
       HERMES_HOME: /opt/data
       PYTHONUNBUFFERED: "1"
       PYTHONDONTWRITEBYTECODE: "1"
@@ -33,7 +65,8 @@ services:
       # truthy). The container bind below is non-loopback, so upstream engages
       # its auth gate and fails closed unless an auth provider is registered —
       # the basic-auth pair here is what makes the dashboard start at all.
-      # Set HERMES_DASHBOARD=0 in .env to keep the dashboard down.
+      # Set HERMES_DASHBOARD=0 in .env to keep the dashboard down (note: the
+      # healthcheck below then can never pass — see its comment).
       HERMES_DASHBOARD: "${HERMES_DASHBOARD:-1}"
       HERMES_DASHBOARD_HOST: 0.0.0.0
       HERMES_DASHBOARD_PORT: "9119"
@@ -48,8 +81,19 @@ services:
       HERMES_DASHBOARD_BASIC_AUTH_SECRET: "${HERMES_DASHBOARD_BASIC_AUTH_SECRET:-}"
     volumes: ["hermes-data:/opt/data"]
     healthcheck:
-      # API server only: a dashboard flap must not mark the gateway unhealthy.
-      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8642/health"]
+      # Dashboard-first: probe the dashboard exactly as a browser reaches it.
+      # The auth gate is engaged (container bind is non-loopback), so an
+      # unauthenticated GET / answers the login redirect (302 -> /login);
+      # a plain 200 also counts (e.g. a loopback bind, gate off). Connection
+      # refused, 4xx or 5xx = dashboard down = container unhealthy. Note this
+      # covers the dashboard, not the gateway process: with HERMES_DASHBOARD=0
+      # nothing listens on 9119 and the container can never become healthy.
+      # The API server is intentionally not probed — it is off by default.
+      test:
+        [
+          "CMD-SHELL",
+          "curl -sS --max-time 5 -o /dev/null -D - http://127.0.0.1:9119/ | grep -qiE '^(location:.*login|HTTP/[0-9.]+ 200)'",
+        ]
       interval: 15s
       timeout: 5s
       retries: 20
