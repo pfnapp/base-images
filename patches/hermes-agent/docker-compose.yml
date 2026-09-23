@@ -2,13 +2,30 @@ services:
   hermes-agent:
     build: .
     image: local/pfnapp-hermes-agent:v2026.9.14
+    # Image entrypoint routes args as `hermes <subcommand>`; `gateway run`
+    # runs the gateway daemon in the foreground (recommended for Docker),
+    # which supervises the API server adapter on port 8642.
+    command: ["gateway", "run"]
+    ports: ["8642:8642"]
     environment:
+      API_SERVER_ENABLED: "true"
+      API_SERVER_HOST: 0.0.0.0
+      API_SERVER_KEY: testsecretkey123
       HERMES_HOME: /opt/data
-      HERMES_WRITE_SAFE_ROOT: /opt/data
       PYTHONUNBUFFERED: "1"
       PYTHONDONTWRITEBYTECODE: "1"
+      HERMES_WRITE_SAFE_ROOT: /opt/data
       HERMES_DISABLE_LAZY_INSTALLS: "1"
+      # model.provider "auto" probes the AWS credential chain during startup;
+      # outside a cloud host the link-local IMDS connect (169.254.169.254)
+      # blackholes and startup never finishes. Skip the IMDS probe.
+      AWS_EC2_METADATA_DISABLED: "true"
     volumes: ["hermes-data:/opt/data"]
-    command: ["hermes", "doctor"]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8642/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
 volumes:
   hermes-data:

@@ -137,7 +137,7 @@
       "example": true,
       "safe": true,
       "category": "security",
-      "description": "When true, every /v1/* proxy request must present a valid API key issued in Dashboard → API Keys.",
+      "description": "Enforce Bearer API key validation on all /v1/* endpoints.",
       "troubleshooting": "Keep true for any non-loopback deployment — with the default false the anonymous /v1 LLM proxy is open to whoever can reach the port. Note it does not gate GET /v1/models (that follows dashboard login), so a 401 there is expected, not a failure."
     },
     {
@@ -149,7 +149,7 @@
       "example": "/omniroute",
       "safe": true,
       "category": "networking",
-      "description": "URL subpath OmniRoute is served under behind a reverse proxy (Next.js basePath; auth redirects are basePath-aware).",
+      "description": "Sub-path prefix for hosting OmniRoute behind a reverse proxy prefix.",
       "troubleshooting": "In Docker the value is applied once at container start before Next.js boots, so it must be set on the first boot; also set NEXT_PUBLIC_BASE_URL to the public origin including the same subpath, or dashboard links and API examples point at the wrong root."
     },
     {
@@ -157,10 +157,11 @@
       "label": "Healthcheck Path",
       "type": "string",
       "required": false,
+      "default": "/healthz",
       "example": "/healthz",
       "safe": true,
       "category": "networking",
-      "description": "Explicit path probed by the container health check; when unset the probe is derived from OMNIROUTE_BASE_PATH.",
+      "description": "Custom healthcheck endpoint override (e.g. /healthz or deep probe /api/monitoring/health).",
       "troubleshooting": "Set it when OMNIROUTE_BASE_PATH changes the effective URL, otherwise the health check probes a path that no longer exists and the container is reported unhealthy despite serving traffic."
     },
     {
@@ -170,8 +171,8 @@
       "required": false,
       "example": "https://omniroute.example.com",
       "safe": true,
-      "category": "networking",
-      "description": "Comma-separated CORS allowlist for cross-origin browser API clients; no wildcard is sent unless CORS_ALLOW_ALL is explicitly enabled.",
+      "category": "security",
+      "description": "Comma-separated list of allowed origins for cross-origin browser clients.",
       "troubleshooting": "Only needed for browser clients on another origin — same-origin dashboard writes use session + CSRF and must not be fixed here. Exact origin strings (scheme + host, no trailing slash) are required or browsers reject the response."
     },
     {
@@ -206,18 +207,19 @@
       "example": false,
       "safe": true,
       "category": "runtime",
-      "description": "Opt-in periodic sync of upstream model pricing data.",
+      "description": "Enables background sync for latest provider pricing models.",
       "troubleshooting": "Requires outbound access to the pricing source; if the container has no egress the sync fails quietly and cost columns simply stay stale. Enable only when the dashboard is used for spend estimates."
     },
     {
       "key": "MODELS_DEV_SYNC_ENABLED",
-      "label": "Enable models.dev Sync",
+      "label": "Enable Models.dev Sync",
       "type": "boolean",
       "required": false,
+      "default": false,
       "example": false,
       "safe": true,
       "category": "runtime",
-      "description": "Hard override for the models.dev pricing sync; unset means the dashboard Settings → AI value decides, `false` wins over the database and skips both periodic sync and pricing scans.",
+      "description": "Enables periodic sync with models.dev catalog.",
       "troubleshooting": "Set to false as a recovery lever when the dashboard is wedged on the same event loop and pricing sync cannot be toggled from the UI; re-enable afterwards to restore fresh pricing."
     },
     {
@@ -228,8 +230,8 @@
       "example": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
       "safe": true,
       "category": "security",
-      "description": "AES key for full SQLite database encryption at rest; empty/disabled by upstream default. Generate with `openssl rand -hex 32`.",
-      "troubleshooting": "Set it before first boot and back up the key with the data — losing the key means losing the database, and adding it to an existing unencrypted database changes the file from that point on. The example is a syntactically valid placeholder, not a real key."
+      "description": "Custom key for encrypting persisted OAuth tokens in /app/data/server.env (auto-generated if unset).",
+      "troubleshooting": "Set it before first boot and back up the key with the data — losing the key means the previously encrypted OAuth tokens in /app/data/server.env cannot be decrypted again; upstream auto-generates one there while it is unset. The example is a syntactically valid placeholder, not a real key."
     }
   ],
   "notes": "Health: GET / answers 307 (redirect to the dashboard) and GET /dashboard serves the UI; the image's own healthcheck script probes GET /healthz. GET / on the published host port doubles as the compose smoke test. Provider credentials are external requirements and are intentionally absent."

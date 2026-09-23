@@ -363,6 +363,18 @@
       "troubleshooting": "The example is a local-only placeholder — replace it before any real deployment. Basic auth is suitable for a trusted LAN/VPN only; use HERMES_DASHBOARD_OAUTH_CLIENT_ID for public exposure. Sessions also need HERMES_DASHBOARD_BASIC_AUTH_SECRET to survive restarts."
     },
     {
+      "key": "AWS_EC2_METADATA_DISABLED",
+      "label": "Disable AWS IMDS Probe",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "example": true,
+      "safe": true,
+      "category": "networking",
+      "description": "Skips the botocore instance-metadata (169.254.169.254) credential probe that `model.provider: auto` triggers during gateway startup.",
+      "troubleshooting": "On hosts outside AWS the IMDS connect can blackhole indefinitely, so `gateway run` never finishes startup and nothing listens on 8642 (/health stays connection-refused). Set true for container samples that do not use Bedrock; only unset on real EC2/ECS where instance-role credentials are wanted."
+    },
+    {
       "key": "HERMES_UID",
       "label": "Runtime User ID",
       "type": "number",
