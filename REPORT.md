@@ -2,16 +2,16 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-23T02:39:46.047Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-23T05:29:35.848Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
 - **Applications Monitored:** `16`
-- **Active Versions Audited:** `21`
-- **Images Running As Root:** `16` / `21` (⚠️ **76%** non-compliant)
-- **App Critical CVEs** _(upstream, unfixable by us)_**:** `26`
-- **App High CVEs** _(upstream, unfixable by us)_**:** `258`
-- **PFNApp Images Scanned:** `19` / `21`
+- **Active Versions Audited:** `22`
+- **Images Running As Root:** `17` / `22` (⚠️ **77%** non-compliant)
+- **App Critical CVEs** _(upstream, unfixable by us)_**:** `27`
+- **App High CVEs** _(upstream, unfixable by us)_**:** `260`
+- **PFNApp Images Scanned:** `20` / `22`
 - **Total System CVE Reduction:** `13056`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
@@ -25,7 +25,8 @@
 | **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.2-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 | **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 144/1571/1784/1008 | 6/81/94/8 | 27/189/361/315 | 5/58/86/8 | -117/-1382 | 🔴 APP CRITICAL RISK |
-| **9Router** | _AI Gateways & Proxies_ | `0.5.85` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
+| **9Router** | _AI Gateways & Proxies_ | `0.5.86` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `0.5.85` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
 |  |  | `0.5.75` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.50` | 🟢 **LATEST** | ✅ NO | 4/59/66/60 | 3/3/1/0 | 4/59/66/60 | 3/3/1/0 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.5` | 🟢 **LATEST** | ✅ NO | 15/116/215/189 | 0/15/2/2 | 15/116/215/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
@@ -115,9 +116,9 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>9Router (<code>0.5.85</code>) — App: 1 Critical, 2 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>9Router (<code>0.5.86</code>) — App: 1 Critical, 2 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `decolua/9router:0.5.85`
+- **Full Reference:** `decolua/9router:0.5.86`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
 - **Posture:** 🔴 APP CRITICAL RISK
 
