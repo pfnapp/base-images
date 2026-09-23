@@ -31,30 +31,30 @@
 </header>
 
 <!-- ── Stats Bar ────────────────────────────────────────────────── -->
-<div class="stats-bar" id="stats-bar">
-  <div class="stat-pill blue">
+<div class="stats-bar" id="stats-bar" role="group" aria-label="Vulnerability filters">
+  <button type="button" class="stat-pill blue stat-filter active" data-vuln-filter="all" aria-pressed="true" title="Clear CVE filter">
     <span class="stat-num blue" id="stat-images">–</span>
     <span>images</span>
-  </div>
+  </button>
   <div class="stat-pill blue">
     <span class="stat-num blue" id="stat-versions">–</span>
     <span>versions scanned</span>
   </div>
-  <div class="stat-pill red">
+  <button type="button" class="stat-pill red stat-filter" data-vuln-filter="critical" aria-pressed="false" title="Show only versions with critical CVEs">
     <span>🔴</span>
     <span class="stat-num red" id="stat-critical">–</span>
-    <span>Critical CVE</span>
-  </div>
-  <div class="stat-pill orange">
+    <span>Critical only</span>
+  </button>
+  <button type="button" class="stat-pill orange stat-filter" data-vuln-filter="high" aria-pressed="false" title="Show only versions whose highest CVE severity is high">
     <span>🟠</span>
     <span class="stat-num orange" id="stat-high">–</span>
-    <span>High CVE</span>
-  </div>
-  <div class="stat-pill green">
+    <span>High only</span>
+  </button>
+  <button type="button" class="stat-pill green stat-filter" data-vuln-filter="clean" aria-pressed="false" title="Show only versions with zero CVEs">
     <span>✅</span>
     <span class="stat-num green" id="stat-clean">–</span>
     <span>zero CVEs</span>
-  </div>
+  </button>
 </div>
 
 <!-- ── Type Tabs ───────────────────────────────────────────────── -->

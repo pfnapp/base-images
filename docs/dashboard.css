@@ -62,6 +62,19 @@
     .stat-pill.red    { border-color: #da3633; background: var(--red-dim); }
     .stat-pill.green  { border-color: #238636; background: var(--green-dim); }
     .stat-pill.orange { border-color: #9e6a03; background: var(--orange-dim); }
+    .stat-filter {
+      font-family: inherit; cursor: pointer;
+      transition: filter .15s, transform .15s, box-shadow .15s;
+    }
+    .stat-filter:hover { filter: brightness(1.18); transform: translateY(-1px); }
+    .stat-filter:focus-visible {
+      outline: 2px solid var(--blue); outline-offset: 2px;
+    }
+    .stat-filter.active { box-shadow: 0 0 0 1px currentColor; }
+    .stat-filter.blue.active   { color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+    .stat-filter.red.active    { color: var(--red); box-shadow: 0 0 0 1px var(--red); }
+    .stat-filter.orange.active { color: var(--orange); box-shadow: 0 0 0 1px var(--orange); }
+    .stat-filter.green.active  { color: var(--green); box-shadow: 0 0 0 1px var(--green); }
     .stat-num.red    { color: var(--red); }
     .stat-num.green  { color: var(--green); }
     .stat-num.blue   { color: var(--blue); }
