@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-23T04:50:52.121Z",
+    "generatedAt": "2026-09-23T05:29:35.848Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
     "totalMonitoredVersions": 22,
-    "runAsRootCount": 16,
+    "runAsRootCount": 17,
     "criticalVulnerabilityCount": 27,
     "highVulnerabilityCount": 260,
     "pfnappScannedCount": 20,
@@ -93,7 +93,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         },
         {
           "tag": "7.1.1-php8.3-fpm-alpine",
@@ -168,7 +168,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -8963,7 +8963,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -8979,133 +8979,6 @@
           "tag": "0.5.86",
           "fullRef": "decolua/9router:0.5.86",
           "rank": 1,
-          "lifecycleStatus": "LATEST",
-          "lifecycleBadge": "🟢",
-          "lifecycleAdvice": "Recommended active release",
-          "security": {
-            "runAsRoot": true,
-            "configuredUser": "root",
-            "uidLabel": "0 (root)"
-          },
-          "vulnerabilities": {
-            "upstream": {
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "fixable": 0,
-                "total": 0
-              },
-              "app": {
-                "critical": 1,
-                "high": 2,
-                "medium": 7,
-                "low": 1,
-                "fixable": 0,
-                "total": 11
-              }
-            },
-            "pfnapp": {
-              "scanned": true,
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "fixable": 0,
-                "total": 0,
-                "topCves": [],
-                "allCves": []
-              },
-              "app": {
-                "critical": 1,
-                "high": 2,
-                "medium": 7,
-                "low": 1,
-                "fixable": 0,
-                "total": 11,
-                "topCves": [
-                  {
-                    "id": "CVE-2026-59873",
-                    "pkg": "tar",
-                    "installedVersion": "7.5.11",
-                    "fixedVersion": "7.5.19",
-                    "severity": "CRITICAL",
-                    "title": "CVE-2026-59873"
-                  },
-                  {
-                    "id": "CVE-2026-59874",
-                    "pkg": "tar",
-                    "installedVersion": "7.5.11",
-                    "fixedVersion": "7.5.18",
-                    "severity": "HIGH",
-                    "title": "CVE-2026-59874"
-                  },
-                  {
-                    "id": "CVE-2026-73566",
-                    "pkg": "tar",
-                    "installedVersion": "7.5.11",
-                    "fixedVersion": "7.5.21",
-                    "severity": "HIGH",
-                    "title": "CVE-2026-73566"
-                  }
-                ],
-                "allCves": []
-              }
-            },
-            "reduction": {
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "total": 0
-              },
-              "app": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "total": 0
-              }
-            }
-          },
-          "topAppCves": [
-            {
-              "id": "CVE-2026-59873",
-              "pkg": "tar",
-              "installedVersion": "7.5.11",
-              "fixedVersion": "7.5.19",
-              "severity": "CRITICAL",
-              "title": "CVE-2026-59873"
-            },
-            {
-              "id": "CVE-2026-59874",
-              "pkg": "tar",
-              "installedVersion": "7.5.11",
-              "fixedVersion": "7.5.18",
-              "severity": "HIGH",
-              "title": "CVE-2026-59874"
-            },
-            {
-              "id": "CVE-2026-73566",
-              "pkg": "tar",
-              "installedVersion": "7.5.11",
-              "fixedVersion": "7.5.21",
-              "severity": "HIGH",
-              "title": "CVE-2026-73566"
-            }
-          ],
-          "topSystemCves": [],
-          "posture": "APP CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T04:50:52.121Z"
-        },
-        {
-          "tag": "0.5.85",
-          "fullRef": "decolua/9router:0.5.85",
-          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -9314,7 +9187,221 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
+        },
+        {
+          "tag": "0.5.85",
+          "fullRef": "decolua/9router:0.5.85",
+          "rank": 2,
+          "lifecycleStatus": "SUPPORTED",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Actively maintained",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 1,
+                "high": 2,
+                "medium": 7,
+                "low": 1,
+                "fixable": 11,
+                "total": 11
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 1,
+                "high": 2,
+                "medium": 7,
+                "low": 1,
+                "fixable": 11,
+                "total": 11,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-59873",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.19",
+                    "severity": "CRITICAL",
+                    "title": "tar: node-tar: Denial of Service via crafted gzip bomb"
+                  },
+                  {
+                    "id": "CVE-2026-59874",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.18",
+                    "severity": "HIGH",
+                    "title": "tar: Node-tar: Denial of Service via malformed tar archive header"
+                  },
+                  {
+                    "id": "CVE-2026-73566",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.21",
+                    "severity": "HIGH",
+                    "title": "tar: node-tar: Denial of Service via crafted long-path tar archive"
+                  }
+                ],
+                "allCves": [
+                  {
+                    "id": "CVE-2026-48758",
+                    "pkg": "@sigstore/core",
+                    "installedVersion": "2.0.0",
+                    "fixedVersion": "3.2.1",
+                    "severity": "MEDIUM",
+                    "title": "sigstore-core: @sigstore/core: Signature bypass due to incorrect encoding in preAuthEncoding"
+                  },
+                  {
+                    "id": "CVE-2026-33750",
+                    "pkg": "brace-expansion",
+                    "installedVersion": "2.0.2",
+                    "fixedVersion": "5.0.5, 3.0.2, 2.0.3, 1.1.13",
+                    "severity": "MEDIUM",
+                    "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
+                  },
+                  {
+                    "id": "CVE-2026-42338",
+                    "pkg": "ip-address",
+                    "installedVersion": "10.1.0",
+                    "fixedVersion": "10.1.1",
+                    "severity": "MEDIUM",
+                    "title": "ip-address: ip-address: Cross-site scripting via improper HTML escaping of untrusted input"
+                  },
+                  {
+                    "id": "CVE-2026-33672",
+                    "pkg": "picomatch",
+                    "installedVersion": "4.0.3",
+                    "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
+                    "severity": "MEDIUM",
+                    "title": "picomatch: Picomatch: Data integrity compromised via method injection with crafted POSIX bracket expressions"
+                  },
+                  {
+                    "id": "CVE-2026-9358",
+                    "pkg": "postcss-selector-parser",
+                    "installedVersion": "7.1.1",
+                    "fixedVersion": "6.1.3, 7.1.3",
+                    "severity": "LOW",
+                    "title": "postcss-selector-parser: Postcss: Denial of Service via uncontrolled recursion in AST Serialization"
+                  },
+                  {
+                    "id": "CVE-2026-59873",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.19",
+                    "severity": "CRITICAL",
+                    "title": "tar: node-tar: Denial of Service via crafted gzip bomb"
+                  },
+                  {
+                    "id": "CVE-2026-59874",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.18",
+                    "severity": "HIGH",
+                    "title": "tar: Node-tar: Denial of Service via malformed tar archive header"
+                  },
+                  {
+                    "id": "CVE-2026-73566",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.21",
+                    "severity": "HIGH",
+                    "title": "tar: node-tar: Denial of Service via crafted long-path tar archive"
+                  },
+                  {
+                    "id": "CVE-2026-53655",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.16",
+                    "severity": "MEDIUM",
+                    "title": "node-tar: node-tar: File smuggling due to inconsistent tar archive parsing"
+                  },
+                  {
+                    "id": "CVE-2026-59871",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.18",
+                    "severity": "MEDIUM",
+                    "title": "node-tar: node-tar: Denial of Service due to incorrect PAX path handling"
+                  },
+                  {
+                    "id": "CVE-2026-59875",
+                    "pkg": "tar",
+                    "installedVersion": "7.5.11",
+                    "fixedVersion": "7.5.17",
+                    "severity": "MEDIUM",
+                    "title": "node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata"
+                  }
+                ]
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-59873",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.19",
+              "severity": "CRITICAL",
+              "title": "tar: node-tar: Denial of Service via crafted gzip bomb"
+            },
+            {
+              "id": "CVE-2026-59874",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.18",
+              "severity": "HIGH",
+              "title": "tar: Node-tar: Denial of Service via malformed tar archive header"
+            },
+            {
+              "id": "CVE-2026-73566",
+              "pkg": "tar",
+              "installedVersion": "7.5.11",
+              "fixedVersion": "7.5.21",
+              "severity": "HIGH",
+              "title": "tar: node-tar: Denial of Service via crafted long-path tar archive"
+            }
+          ],
+          "topSystemCves": [],
+          "posture": "APP CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         },
         {
           "tag": "0.5.75",
@@ -9528,7 +9615,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -11395,7 +11482,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -16150,7 +16237,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -23633,7 +23720,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         },
         {
           "tag": "v2026.9.14",
@@ -31106,7 +31193,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -33330,7 +33417,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -33458,7 +33545,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -33738,7 +33825,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -41717,7 +41804,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -42014,7 +42101,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -57479,7 +57566,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -79578,7 +79665,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -80035,7 +80122,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         },
         {
           "tag": "5.1.6",
@@ -80127,7 +80214,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -80376,7 +80463,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
@@ -80496,7 +80583,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         },
         {
           "tag": "v11.1.0",
@@ -80538,7 +80625,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-09-23T02:39:46.047Z"
+          "scannedAt": "2026-09-23T05:29:35.848Z"
         }
       ],
       "deprecatedVersions": []
