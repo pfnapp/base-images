@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-22T09:21:19.880Z",
+  "scannedAt": "2026-09-23T02:41:28.747Z",
   "system": {
-    "total": 843,
+    "total": 851,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -164,14 +164,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -276,12 +268,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -2316,6 +2316,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -2458,6 +2474,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2022-0856",
@@ -2732,14 +2764,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -2844,12 +2868,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -2932,14 +2964,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -3044,12 +3068,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -3705,7 +3737,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50579",
@@ -3713,7 +3745,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -3721,7 +3753,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50581",
@@ -3729,7 +3761,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -3737,7 +3769,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50584",
@@ -3761,7 +3793,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -5580,6 +5612,30 @@
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
       },
       {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-xcb1",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
         "id": "CVE-2025-25467",
         "pkg": "libx264-164",
         "installedVersion": "2:0.164.3108+git31e19f9-2+b1",
@@ -5698,6 +5754,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libxml2: libxml2: Denial of Service due to NULL pointer dereference in xmlRegNewParserCtxt"
+      },
+      {
+        "id": "CVE-2026-88807",
+        "pkg": "libxrender1",
+        "installedVersion": "1:0.9.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A heap overflow in libXrender before 0.9.13 inRenderQueryPictFormats c ..."
       },
       {
         "id": "CVE-2026-76642",
@@ -6750,7 +6814,7 @@
     ]
   },
   "app": {
-    "total": 57,
+    "total": 53,
     "cves": [
       {
         "id": "CVE-2026-84373",
@@ -6767,30 +6831,6 @@
         "fixedVersion": "2.11.0",
         "severity": "MEDIUM",
         "title": "baseline-browser-mapping: baseline-browser-mapping: Denial of Service via improper input handling"
-      },
-      {
-        "id": "CVE-2026-13149",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
-      },
-      {
-        "id": "CVE-2026-14257",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
-      },
-      {
-        "id": "CVE-2026-69152",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-        "severity": "HIGH",
-        "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
       },
       {
         "id": "CVE-2026-73088",
@@ -6815,14 +6855,6 @@
         "fixedVersion": "2.9.4",
         "severity": "MEDIUM",
         "title": "colord: omgovich/colord: Colord: Denial of Service via oversized malformed color strings"
-      },
-      {
-        "id": "CVE-2026-69192",
-        "pkg": "ip-address",
-        "installedVersion": "10.2.0",
-        "fixedVersion": "10.3.1",
-        "severity": "HIGH",
-        "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
       },
       {
         "id": "CVE-2026-54272",
@@ -6958,7 +6990,7 @@
         "installedVersion": "4.12.1",
         "fixedVersion": "4.14.2",
         "severity": "CRITICAL",
-        "title": "AnyIO: TLSStream IDNA 2003 host name encoding enables potential TLS certificate spoofing"
+        "title": "AnyIO is a high level asynchronous concurrency and networking framewor ..."
       },
       {
         "id": "CVE-2026-64847",

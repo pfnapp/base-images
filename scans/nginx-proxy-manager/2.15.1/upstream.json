@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-22T09:22:09.432Z",
+  "scannedAt": "2026-09-23T02:42:16.892Z",
   "system": {
-    "total": 5199,
+    "total": 5209,
     "cves": [
       {
         "id": "CVE-2026-34355",
@@ -2140,14 +2140,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -2268,12 +2260,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -3684,6 +3684,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u3",
@@ -3844,6 +3860,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u3",
@@ -4004,6 +4036,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u3",
@@ -4162,6 +4210,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2017-13716",
@@ -5420,14 +5484,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -5548,12 +5604,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -5724,14 +5788,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -5852,12 +5908,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -9140,6 +9204,22 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
         "id": "CVE-2026-43185",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -11114,6 +11194,14 @@
         "fixedVersion": "6.12.101-1",
         "severity": "HIGH",
         "title": "kernel: net: gro: fix double aggregation of flush-marked skbs"
+      },
+      {
+        "id": "CVE-2026-68138",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.105-1",
+        "severity": "HIGH",
+        "title": "kernel: net/sched: serialize qdisc_rtab_list against concurrent get/put"
       },
       {
         "id": "CVE-2026-68140",
@@ -20394,14 +20482,6 @@
         "fixedVersion": "6.12.101-1",
         "severity": "MEDIUM",
         "title": "kernel: net/x25: fix use-after-free in x25_kill_by_neigh()"
-      },
-      {
-        "id": "CVE-2026-68138",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.105-1",
-        "severity": "MEDIUM",
-        "title": "kernel: net/sched: serialize qdisc_rtab_list against concurrent get/put"
       },
       {
         "id": "CVE-2026-68139",
@@ -41598,7 +41678,7 @@
     ]
   },
   "app": {
-    "total": 67,
+    "total": 55,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -41617,60 +41697,12 @@
         "title": "body-parser: body-parser: Denial of Service via invalid limit option"
       },
       {
-        "id": "CVE-2026-13149",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
-      },
-      {
-        "id": "CVE-2026-14257",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
-      },
-      {
-        "id": "CVE-2026-69152",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-        "severity": "HIGH",
-        "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
-      },
-      {
         "id": "CVE-2026-33750",
         "pkg": "brace-expansion",
         "installedVersion": "2.0.2",
         "fixedVersion": "5.0.5, 3.0.2, 2.0.3, 1.1.13",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
-      },
-      {
-        "id": "CVE-2026-13149",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
-      },
-      {
-        "id": "CVE-2026-14257",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
-      },
-      {
-        "id": "CVE-2026-69152",
-        "pkg": "brace-expansion",
-        "installedVersion": "5.0.6",
-        "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-        "severity": "HIGH",
-        "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
       },
       {
         "id": "CVE-2026-13676",
@@ -41721,28 +41753,12 @@
         "title": "fast-uri: fast-uri: URI parsing flaw enables server-side request forgery and redirects"
       },
       {
-        "id": "CVE-2026-69192",
-        "pkg": "ip-address",
-        "installedVersion": "10.1.0",
-        "fixedVersion": "10.3.1",
-        "severity": "HIGH",
-        "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
-      },
-      {
         "id": "CVE-2026-42338",
         "pkg": "ip-address",
         "installedVersion": "10.1.0",
         "fixedVersion": "10.1.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Cross-site scripting via improper HTML escaping of untrusted input"
-      },
-      {
-        "id": "CVE-2026-69192",
-        "pkg": "ip-address",
-        "installedVersion": "10.2.0",
-        "fixedVersion": "10.3.1",
-        "severity": "HIGH",
-        "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
       },
       {
         "id": "CVE-2026-54272",
@@ -41825,30 +41841,6 @@
         "title": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS"
       },
       {
-        "id": "CVE-2026-9496",
-        "pkg": "pacote",
-        "installedVersion": "19.0.2",
-        "fixedVersion": "21.5.1",
-        "severity": "HIGH",
-        "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
-      },
-      {
-        "id": "CVE-2026-9496",
-        "pkg": "pacote",
-        "installedVersion": "20.0.1",
-        "fixedVersion": "21.5.1",
-        "severity": "HIGH",
-        "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
-      },
-      {
-        "id": "CVE-2026-33671",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.3",
-        "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
-        "severity": "HIGH",
-        "title": "picomatch: Picomatch: Regular Expression Denial of Service via crafted extglob patterns"
-      },
-      {
         "id": "CVE-2026-33672",
         "pkg": "picomatch",
         "installedVersion": "4.0.3",
@@ -41879,14 +41871,6 @@
         "fixedVersion": "6.16.0",
         "severity": "MEDIUM",
         "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
-      },
-      {
-        "id": "CVE-2026-48815",
-        "pkg": "sigstore",
-        "installedVersion": "3.1.0",
-        "fixedVersion": "4.1.1",
-        "severity": "HIGH",
-        "title": "sigstore: Sigstore: Unauthorized certificates accepted due to ignored `certificateOIDs` verification option"
       },
       {
         "id": "CVE-2026-59873",

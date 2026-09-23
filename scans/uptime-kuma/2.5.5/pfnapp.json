@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-22T09:20:15.198Z",
+  "scannedAt": "2026-09-23T02:40:13.163Z",
   "system": {
-    "total": 900,
+    "total": 910,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -1020,6 +1020,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -1178,6 +1194,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2017-7475",
@@ -4300,6 +4332,30 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
+        "id": "CVE-2026-88806",
+        "pkg": "libx11-xcb1",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+      },
+      {
         "id": "CVE-2026-6653",
         "pkg": "libxml2",
         "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
@@ -4402,6 +4458,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libXpm: libXpm: Denial of Service via out-of-bounds read in XPM file parsing"
+      },
+      {
+        "id": "CVE-2026-88807",
+        "pkg": "libxrender1",
+        "installedVersion": "1:0.9.10-1.1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A heap overflow in libXrender before 0.9.13 inRenderQueryPictFormats c ..."
       },
       {
         "id": "CVE-2012-2663",
@@ -5362,6 +5426,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "nscd",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "nscd",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-63072",
@@ -7206,7 +7286,7 @@
     ]
   },
   "app": {
-    "total": 166,
+    "total": 158,
     "cves": [
       {
         "id": "CVE-2026-48068",
@@ -7297,30 +7377,6 @@
         "title": "axios: axios: Denial of Service via object serialization bypass"
       },
       {
-        "id": "CVE-2026-13149",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.7, 1.1.16, 2.1.2",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service due to exponential-time complexity"
-      },
-      {
-        "id": "CVE-2026-14257",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.8, 3.0.3, 2.1.3, 1.1.17",
-        "severity": "HIGH",
-        "title": "brace-expansion: Brace-expansion: Denial of Service via memory exhaustion in expand() function"
-      },
-      {
-        "id": "CVE-2026-69152",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "1.1.18, 2.1.4, 3.0.6, 5.0.9",
-        "severity": "HIGH",
-        "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation"
-      },
-      {
         "id": "CVE-2026-33750",
         "pkg": "brace-expansion",
         "installedVersion": "2.0.2",
@@ -7335,14 +7391,6 @@
         "fixedVersion": "11.1.0, 10.5.0",
         "severity": "HIGH",
         "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames"
-      },
-      {
-        "id": "CVE-2026-69192",
-        "pkg": "ip-address",
-        "installedVersion": "10.1.0",
-        "fixedVersion": "10.3.1",
-        "severity": "HIGH",
-        "title": "ip-address: ip-address: Inconsistent IP address parsing leads to Server-Side Request Forgery (SSRF) and trust-boundary bypass"
       },
       {
         "id": "CVE-2026-42338",
@@ -7513,30 +7561,6 @@
         "title": "Nodemailer has SMTP command injection due to unsanitized `envelope.size` parameter"
       },
       {
-        "id": "CVE-2026-9496",
-        "pkg": "pacote",
-        "installedVersion": "19.0.2",
-        "fixedVersion": "21.5.1",
-        "severity": "HIGH",
-        "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
-      },
-      {
-        "id": "CVE-2026-9496",
-        "pkg": "pacote",
-        "installedVersion": "20.0.1",
-        "fixedVersion": "21.5.1",
-        "severity": "HIGH",
-        "title": "Versions of the package pacote from 11.2.7 and before 21.5.1 are vulne ..."
-      },
-      {
-        "id": "CVE-2026-33671",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.3",
-        "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
-        "severity": "HIGH",
-        "title": "picomatch: Picomatch: Regular Expression Denial of Service via crafted extglob patterns"
-      },
-      {
         "id": "CVE-2026-33672",
         "pkg": "picomatch",
         "installedVersion": "4.0.3",
@@ -7695,14 +7719,6 @@
         "fixedVersion": "6.16.0",
         "severity": "MEDIUM",
         "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
-      },
-      {
-        "id": "CVE-2026-48815",
-        "pkg": "sigstore",
-        "installedVersion": "3.1.0",
-        "fixedVersion": "4.1.1",
-        "severity": "HIGH",
-        "title": "sigstore: Sigstore: Unauthorized certificates accepted due to ignored `certificateOIDs` verification option"
       },
       {
         "id": "CVE-2026-59873",

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-22T09:21:24.792Z",
+  "scannedAt": "2026-09-23T02:41:32.030Z",
   "system": {
-    "total": 253,
+    "total": 257,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -164,14 +164,6 @@
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
-        "id": "CVE-2026-80255",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -276,12 +268,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
@@ -540,6 +540,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -684,6 +700,22 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
+      },
+      {
         "id": "CVE-2026-12064",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -746,14 +778,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
-      },
-      {
-        "id": "CVE-2026-80255",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "A `Set-Cookie:` header using tab (horizontal tab, ASCII code 9) instea ..."
       },
       {
         "id": "CVE-2026-8924",
@@ -860,12 +884,20 @@
         "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
       },
       {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
         "id": "CVE-2026-82208",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "With the wolfSSL backend, when CA caching is enabled and an `CURLOPT_S ..."
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
       },
       {
         "id": "CVE-2026-82209",
