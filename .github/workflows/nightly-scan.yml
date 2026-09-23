@@ -13,10 +13,12 @@ on:
 permissions:
   contents: write
   packages: read
+  security-events: write
+  issues: write
 
 jobs:
   scan:
-    name: Scan & Publish to gh-pages
+    name: Scan, Audit & Publish to gh-pages
     runs-on: ubuntu-24.04
 
     steps:
@@ -35,7 +37,21 @@ jobs:
       - name: Install Aqua Trivy
         uses: aquasecurity/setup-trivy@v0.3.1
         with:
+          version: v0.60.0
           cache: true
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Restore Trivy Vulnerability Database Cache
+        uses: actions/cache@v4
+        id: trivy_db_cache
+        with:
+          path: ${{ runner.temp }}/.trivycache
+          key: trivy-db-${{ runner.os }}-${{ steps.date.outputs.date }}
+          restore-keys: |
+            trivy-db-${{ runner.os }}-
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -45,7 +61,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run upstream observatory scanner
+        env:
+          TRIVY_CACHE_DIR: ${{ runner.temp }}/.trivycache
         run: |
+          mkdir -p "$TRIVY_CACHE_DIR"
           if [ "${{ inputs.refresh }}" = "true" ]; then
             node scripts/upstream-observatory.js --refresh
           else
@@ -53,12 +72,21 @@ jobs:
           fi
 
       - name: Run base image scanner
+        env:
+          TRIVY_CACHE_DIR: ${{ runner.temp }}/.trivycache
         run: |
+          mkdir -p "$TRIVY_CACHE_DIR"
           if [ "${{ inputs.refresh }}" = "true" ]; then
             node scripts/base-image-scanner.js --refresh
           else
             node scripts/base-image-scanner.js
           fi
+
+      - name: Synchronize Actionable CVE Issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/create-cve-issues.js
 
       - name: Append report to job summary
         if: always() && hashFiles('REPORT.md') != ''
