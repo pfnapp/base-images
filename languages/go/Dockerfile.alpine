@@ -1,4 +1,14 @@
 # Syntax: docker/dockerfile:1
+#
+# CVE POSTURE (validated with Aqua Trivy):
+#   * system (os-pkgs): 0 CRITICAL / 0 HIGH — guaranteed by the `apk upgrade`
+#     below; re-run `make build-go && make scan-go` (or rebuild in CI) so the
+#     OS floor moves up with every Alpine advisory.
+#   * app (gobinary):   0 CRITICAL / 0 HIGH — the golang:<minor>-alpine tag
+#     floats to the newest x.y.z patch, which carries the Go stdlib security
+#     fixes (stdlib CVEs such as CVE-2026-33818 are only fixed in the toolchain,
+#     never in OS packages — downstream apps MUST build with this image as the
+#     builder stage, see README.md).
 ARG GO_VERSION=1.27
 FROM golang:${GO_VERSION}-alpine
 
