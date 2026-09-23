@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-22T09:19:46.507Z",
+    "generatedAt": "2026-09-23T00:15:52.462Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 20,
+    "totalMonitoredVersions": 21,
     "runAsRootCount": 15,
     "criticalVulnerabilityCount": 26,
     "highVulnerabilityCount": 312,
-    "pfnappScannedCount": 15,
+    "pfnappScannedCount": 16,
     "totalCveReduction": 13045
   },
   "applications": [
@@ -21,9 +21,86 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "7.1.2-php8.3-fpm-alpine",
+          "fullRef": "library/wordpress:7.1.2-php8.3-fpm-alpine",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-23T00:15:52.462Z"
+        },
+        {
           "tag": "7.1.1-php8.3-fpm-alpine",
           "fullRef": "library/wordpress:7.1.1-php8.3-fpm-alpine",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
