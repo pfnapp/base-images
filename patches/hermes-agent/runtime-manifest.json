@@ -42,8 +42,8 @@
       "example": "testsecretkey1234567890",
       "safe": true,
       "category": "security",
-      "description": "Bearer token clients send to the API server; upstream refuses to start the API server without a strong key (minimum 16 characters).",
-      "troubleshooting": "Send it as `Authorization: Bearer <key>`. The key must be at least 16 characters or the API server refuses to start. The example is a local-only dummy value for compose validation — replace it before any real deployment."
+      "description": "Bearer token clients send to the API server; upstream refuses to start the API server without a strong key (minimum 16 characters; a small deny-list of obvious placeholders such as `changeme` is also rejected).",
+      "troubleshooting": "Send it as `Authorization: Bearer <key>`. The key must be at least 16 characters or the API server refuses to start. The example is a local-only dummy value for compose validation — the sample compose injects the same kind of placeholder via `${HERMES_API_SERVER_KEY:-...}` and real values belong in a git-ignored `.env` (see `.env.example`), never in the compose file."
     },
     {
       "key": "HERMES_HOME",
@@ -314,7 +314,7 @@
       "safe": true,
       "category": "networking",
       "description": "Starts the supervised web dashboard service (default port 9119) inside the container.",
-      "troubleshooting": "Unset/`false`, the s6 dashboard service stays down — nothing listens on 9119. Publish port 9119 in compose and configure an auth provider (HERMES_DASHBOARD_BASIC_AUTH_*) before exposing a non-loopback bind."
+      "troubleshooting": "Unset/`false`, the s6 dashboard service exits immediately (finish script marks it down) and nothing listens on 9119. Set to `1` to start it, and note the default container bind 0.0.0.0 is non-loopback: upstream then engages its auth gate and exits unless an auth provider is registered, so a basic-auth pair (HERMES_DASHBOARD_BASIC_AUTH_USERNAME + _PASSWORD) or OAuth (HERMES_DASHBOARD_OAUTH_CLIENT_ID) is required for the dashboard to come up at all. The sample enables it with a placeholder basic-auth pair and publishes 127.0.0.1:9119 only; replace the password in `.env` before widening the publish rule. HERMES_DASHBOARD_INSECURE is accepted but ignored — it no longer disables the gate."
     },
     {
       "key": "HERMES_DASHBOARD_HOST",
@@ -326,7 +326,7 @@
       "safe": true,
       "category": "networking",
       "description": "Bind address for the dashboard HTTP server.",
-      "troubleshooting": "A loopback bind is unreachable from outside the container; keep 0.0.0.0 for published traffic and gate access with basic auth or OAuth."
+      "troubleshooting": "A loopback bind is unreachable from outside the container — Docker's published port forwards to the container IP, so 127.0.0.1 here leaves 9119 unreachable even with a port mapping. Keep 0.0.0.0 for published traffic; that non-loopback bind engages the auth gate, which needs a provider (basic auth or OAuth) or startup fails closed."
     },
     {
       "key": "HERMES_DASHBOARD_PORT",
@@ -338,7 +338,7 @@
       "safe": true,
       "category": "networking",
       "description": "Port for the dashboard HTTP server; must match the published container port.",
-      "troubleshooting": "If the dashboard URL is unreachable, confirm the compose mapping (for example 9119:9119) matches this value and that HERMES_DASHBOARD=1 is set."
+      "troubleshooting": "If the dashboard URL is unreachable, confirm the compose mapping matches this value and that HERMES_DASHBOARD is truthy with an auth provider configured. The sample publishes 127.0.0.1:9119:9119 (host loopback); widen the left side only after replacing the placeholder password."
     },
     {
       "key": "HERMES_DASHBOARD_BASIC_AUTH_USERNAME",
@@ -348,8 +348,8 @@
       "example": "admin",
       "safe": true,
       "category": "security",
-      "description": "Username for the bundled username/password dashboard-auth provider; activates it when set together with a password.",
-      "troubleshooting": "Setting only the username is a no-op — both HERMES_DASHBOARD_BASIC_AUTH_USERNAME and a password (or password hash) are required before the auth gate turns on."
+      "description": "Username for the bundled username/password dashboard-auth provider (`dashboard_auth/basic`); activates it when set together with a password. Login happens through the dashboard sign-in form (`GET /login`, JSON `POST /auth/password-login`) — the dashboard does not accept an HTTP `Authorization: Basic` header.",
+      "troubleshooting": "Setting only the username is a no-op — both HERMES_DASHBOARD_BASIC_AUTH_USERNAME and a password (or password hash) are required before the auth gate turns on. The sample supplies `admin` as a placeholder; override it with the other basic-auth values via `.env` (see `.env.example`). Test with `curl -sI http://127.0.0.1:9119/` (expects 302 to `/login`) rather than `curl -u`, which the form login ignores."
     },
     {
       "key": "HERMES_DASHBOARD_BASIC_AUTH_PASSWORD",
@@ -359,8 +359,19 @@
       "example": "local-only-dashboard-password-change-me",
       "safe": true,
       "category": "security",
-      "description": "Plaintext password for the dashboard basic-auth provider (hashed in memory at load); wins over a configured password_hash so it can be rotated via env.",
-      "troubleshooting": "The example is a local-only placeholder — replace it before any real deployment. Basic auth is suitable for a trusted LAN/VPN only; use HERMES_DASHBOARD_OAUTH_CLIENT_ID for public exposure. Sessions also need HERMES_DASHBOARD_BASIC_AUTH_SECRET to survive restarts."
+      "description": "Password for the dashboard sign-in form (scrypt-hashed in memory at load); wins over a configured password_hash so it can be rotated via env.",
+      "troubleshooting": "The example is a local-only placeholder — replace it before any real deployment; the sample compose carries the same placeholder behind `${HERMES_DASHBOARD_BASIC_AUTH_PASSWORD:-...}` so the real value lives in a git-ignored `.env`. Basic auth is suitable for a trusted LAN/VPN only; use HERMES_DASHBOARD_OAUTH_CLIENT_ID for public exposure. Sessions also need HERMES_DASHBOARD_BASIC_AUTH_SECRET to survive restarts."
+    },
+    {
+      "key": "HERMES_DASHBOARD_BASIC_AUTH_SECRET",
+      "label": "Dashboard Session Secret",
+      "type": "string",
+      "required": false,
+      "example": "local-only-session-signing-secret-not-for-production",
+      "safe": true,
+      "category": "security",
+      "description": "Signing key for dashboard basic-auth session cookies (base64, hex or raw text; decoded length of 16+ bytes is accepted). Empty means upstream generates a random per-process key.",
+      "troubleshooting": "Without it every container start mints a new key, so logged-in sessions die on restart and cannot span workers — set 32+ random bytes (`openssl rand -base64 32`) in `.env` for stable sessions. The sample passes an empty value, i.e. it keeps the upstream default and ships no secret."
     },
     {
       "key": "AWS_EC2_METADATA_DISABLED",
@@ -421,5 +432,5 @@
       "troubleshooting": "Set it together with PUID; leaving GID unmapped on a group-owned volume reproduces the same permission errors as an unmatched UID."
     }
   ],
-  "notes": "Ports: 8642 is the API server (API_SERVER_PORT default 8642, health endpoint GET /health); 9119 is the optional web dashboard started by the s6 dashboard service when HERMES_DASHBOARD=1 (HERMES_DASHBOARD_PORT default 9119), which requires an auth provider on non-loopback binds. The sample maps only the API port 8642. Provider credentials and messaging tokens are read from the process environment or `~/.hermes/.env` (prefer `config.yaml` for non-secret behaviour); every credential in `tunables` is optional, carries a placeholder example only, and none is supplied by the sample."
+  "notes": "Ports: 8642 is the API server (API_SERVER_PORT default 8642, health endpoint GET /health); 9119 is the web dashboard started by the s6 dashboard service when HERMES_DASHBOARD is truthy (HERMES_DASHBOARD_PORT default 9119). Because the dashboard's default container bind is 0.0.0.0 (non-loopback), upstream's auth gate applies and startup fails closed without an auth provider — a basic-auth pair or OAuth client id is required for it to start. The sample publishes 8642 on all interfaces and 127.0.0.1:9119 on host loopback only, enables the dashboard with a placeholder basic-auth pair, and sets an empty HERMES_DASHBOARD_BASIC_AUTH_SECRET (upstream's random per-process default); its container healthcheck probes the API server only, so dashboard failures never mark the gateway unhealthy. Credentials are interpolated from a git-ignored `.env` (`${...:-placeholder}` in docker-compose.yml, template in `.env.example`) — only local-only placeholders live in the repository, and none of the provider keys or messaging tokens below is supplied by the sample. Provider credentials and messaging tokens are read from the process environment or `~/.hermes/.env` (prefer `config.yaml` for non-secret behaviour); every credential in `tunables` is optional and carries a placeholder example only."
 }

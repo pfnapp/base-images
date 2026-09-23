@@ -4,13 +4,22 @@ services:
     image: local/pfnapp-hermes-agent:v2026.9.14
     # Image entrypoint routes args as `hermes <subcommand>`; `gateway run`
     # runs the gateway daemon in the foreground (recommended for Docker),
-    # which supervises the API server adapter on port 8642.
+    # which supervises the API server adapter on port 8642. The image's s6
+    # tree supervises the web dashboard (port 9119) alongside it.
     command: ["gateway", "run"]
-    ports: ["8642:8642"]
+    ports:
+      - "8642:8642"
+      # Dashboard: host loopback only, so it is not reachable from the network
+      # by default. To expose it, put a reverse proxy in front, or change the
+      # left side below to 0.0.0.0 (after replacing the placeholder password).
+      - "127.0.0.1:9119:9119"
     environment:
       API_SERVER_ENABLED: "true"
       API_SERVER_HOST: 0.0.0.0
-      API_SERVER_KEY: testsecretkey123
+      # Local-only placeholder, not a real credential: upstream refuses an API
+      # server key shorter than 16 characters. Override with HERMES_API_SERVER_KEY
+      # in .env (see .env.example) for anything beyond local validation.
+      API_SERVER_KEY: "${HERMES_API_SERVER_KEY:-testsecretkey123}"
       HERMES_HOME: /opt/data
       PYTHONUNBUFFERED: "1"
       PYTHONDONTWRITEBYTECODE: "1"
@@ -20,8 +29,26 @@ services:
       # outside a cloud host the link-local IMDS connect (169.254.169.254)
       # blackholes and startup never finishes. Skip the IMDS probe.
       AWS_EC2_METADATA_DISABLED: "true"
+      # Web dashboard (s6 longrun: the service exits immediately unless this is
+      # truthy). The container bind below is non-loopback, so upstream engages
+      # its auth gate and fails closed unless an auth provider is registered —
+      # the basic-auth pair here is what makes the dashboard start at all.
+      # Set HERMES_DASHBOARD=0 in .env to keep the dashboard down.
+      HERMES_DASHBOARD: "${HERMES_DASHBOARD:-1}"
+      HERMES_DASHBOARD_HOST: 0.0.0.0
+      HERMES_DASHBOARD_PORT: "9119"
+      # Placeholder pair, not real credentials — replace via .env before the
+      # dashboard is reachable by anyone but you.
+      HERMES_DASHBOARD_BASIC_AUTH_USERNAME: "${HERMES_DASHBOARD_BASIC_AUTH_USERNAME:-admin}"
+      HERMES_DASHBOARD_BASIC_AUTH_PASSWORD: "${HERMES_DASHBOARD_BASIC_AUTH_PASSWORD:-local-only-dashboard-password-change-me}"
+      # Optional: signs dashboard session cookies. Empty = fresh key on every
+      # start (sessions die on restart, which is the upstream default). Set a
+      # 32+ byte random value in .env for stable sessions, e.g.
+      #   HERMES_DASHBOARD_BASIC_AUTH_SECRET=$(openssl rand -base64 32)
+      HERMES_DASHBOARD_BASIC_AUTH_SECRET: "${HERMES_DASHBOARD_BASIC_AUTH_SECRET:-}"
     volumes: ["hermes-data:/opt/data"]
     healthcheck:
+      # API server only: a dashboard flap must not mark the gateway unhealthy.
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8642/health"]
       interval: 15s
       timeout: 5s
