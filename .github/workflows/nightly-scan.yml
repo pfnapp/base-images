@@ -37,7 +37,6 @@ jobs:
       - name: Install Aqua Trivy
         uses: aquasecurity/setup-trivy@v0.3.1
         with:
-          version: v0.60.0
           cache: true
 
       - name: Get current date
