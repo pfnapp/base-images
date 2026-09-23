@@ -43,12 +43,13 @@
   }
 
   /* ── State ─────────────────────────────────────────────── */
-  let allItems       = [];
-  let activeType     = 'All';
-  let activeCategory = 'All';
-  let activeStatus   = 'All';
-  let searchQuery    = '';
-  let sortMode       = 'posture';
+  let allItems         = [];
+  let activeType       = 'All';
+  let activeCategory   = 'All';
+  let activeStatus     = 'All';
+  let activeVulnFilter = 'all';
+  let searchQuery      = '';
+  let sortMode         = 'posture';
 
   /* ── Escape HTML ─────────────────────────────────────────── */
   function escHtml(str) {
@@ -189,7 +190,9 @@
 <div class="card posture-${bClass}"
      data-uid="${uid}"
      data-item-type="${escHtml(itemType)}"
+     data-source="${escHtml(item._source)}"
      data-app-id="${escHtml(item.id)}"
+     data-version-tag="${escHtml(ver.tag)}"
      data-category="${escHtml(item.category)}"
      data-status="${escHtml((ver.lifecycleStatus||'').toUpperCase())}"
      data-posture="${postureSortKey(ver.posture)}"
@@ -379,11 +382,11 @@
   }
 
   /* ── Open modal ──────────────────────────────────────────── */
-  function openModal(itemId, verIndex, source) {
+  function openModal(itemId, versionTag, source) {
     const item = allItems.find(i => i.id === itemId && i._source === source);
     if (!item) return;
     const vers = item._source === 'base' ? (item.versions||[]) : (item.monitoredVersions||[]);
-    const ver  = vers[verIndex];
+    const ver  = vers.find(v => v.tag === versionTag);
     if (!ver) return;
 
     document.getElementById('modal-app-icon').innerHTML = iconHtml(item.id, 'modal');
@@ -425,7 +428,15 @@
     return {
       total:    (up.system?.total    ||0) + (up.app?.total    ||0),
       critical: (up.system?.critical ||0) + (up.app?.critical ||0),
+      high:     (up.system?.high     ||0) + (up.app?.high     ||0),
     };
+  }
+
+  function matchesVulnFilter(totals) {
+    if (activeVulnFilter === 'critical') return totals.critical > 0;
+    if (activeVulnFilter === 'high') return totals.critical === 0 && totals.high > 0;
+    if (activeVulnFilter === 'clean') return totals.total === 0;
+    return true;
   }
 
   function getFilteredItems() {
@@ -440,6 +451,7 @@
           const filterVal = isBaseType ? item.name : item.category;
           if (filterVal !== activeCategory) return false;
         }
+        if (!matchesVulnFilter(getVersionVulnTotals(ver, itemType))) return false;
         if (activeStatus !== 'All' && (ver.lifecycleStatus||'').toUpperCase() !== activeStatus) return false;
         if (q) {
           const cves = item._source === 'base'
@@ -559,12 +571,10 @@
       const iType = item._source==='base' ? item.type : 'app';
       getVersionsForItem(item).forEach(ver => {
         versions++;
-        const vuln = ver.vulnerabilities || {};
-        const up   = iType==='app' ? (vuln.upstream||vuln) : vuln;
-        const tot  = (up.system?.total||0) + (up.app?.total||0);
-        if ((up.system?.critical||0)+(up.app?.critical||0) > 0) critical++;
-        else if ((up.system?.high||0)+(up.app?.high||0) > 0) high++;
-        else if (tot===0) clean++;
+        const totals = getVersionVulnTotals(ver, iType);
+        if (totals.critical > 0) critical++;
+        else if (totals.high > 0) high++;
+        else if (totals.total === 0) clean++;
       });
     });
     document.getElementById('stat-images').textContent   = images;
@@ -572,6 +582,14 @@
     document.getElementById('stat-critical').textContent = critical;
     document.getElementById('stat-high').textContent     = high;
     document.getElementById('stat-clean').textContent    = clean;
+  }
+
+  function renderVulnFilters() {
+    document.querySelectorAll('[data-vuln-filter]').forEach(btn => {
+      const isActive = btn.dataset.vulnFilter === activeVulnFilter;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
   }
 
   function renderHeaderMeta(patchSummary, baseSummary) {
@@ -598,17 +616,16 @@
   function setCategory(cat) {
     activeCategory = cat; renderTabs(); renderCards();
   }
+  function setVulnFilter(filter) {
+    activeVulnFilter = activeVulnFilter === filter && filter !== 'all' ? 'all' : filter;
+    renderVulnFilters(); renderCards();
+  }
 
   /* ── Card click → open modal ────────────────────────────── */
   document.getElementById('cards-grid').addEventListener('click', e => {
     const card = e.target.closest('.card[data-uid]');
     if (!card) return;
-    const uid    = card.dataset.uid;
-    // uid format: "base-{id}-v{vi}"  or  "patch-{id}-v{vi}"
-    const match  = uid.match(/^(base|patch)-(.+)-v(\d+)$/);
-    if (!match) return;
-    const [, src, id, vi] = match;
-    openModal(id, parseInt(vi, 10), src);
+    openModal(card.dataset.appId, card.dataset.versionTag, card.dataset.source);
   });
   document.getElementById('cards-grid').addEventListener('keydown', e => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
@@ -636,6 +653,7 @@
 
     renderHeaderMeta(patchData.summary||{}, baseData?.summary||null);
     renderStats();
+    renderVulnFilters();
     renderTypeTabs();
     renderTabs();
     renderCards();
@@ -643,6 +661,9 @@
     document.getElementById('loading-state').classList.add('hidden');
     document.getElementById('dashboard').classList.remove('hidden');
 
+    document.querySelectorAll('[data-vuln-filter]').forEach(btn =>
+      btn.addEventListener('click', () => setVulnFilter(btn.dataset.vulnFilter))
+    );
     document.getElementById('search-input').addEventListener('input', e => { searchQuery = e.target.value; renderCards(); });
     document.getElementById('sort-select').addEventListener('change', e => { sortMode = e.target.value; renderCards(); });
     document.getElementById('status-select').addEventListener('change', e => { activeStatus = e.target.value; renderCards(); });
