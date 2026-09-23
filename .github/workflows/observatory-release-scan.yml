@@ -103,18 +103,16 @@ jobs:
           mkdir -p "$TARGET_DIR"
           cp "scan-details/${{ inputs.app_id }}/${{ inputs.version }}/upstream.json" "$TARGET_DIR/upstream.json"
           cp "scan-details/${{ inputs.app_id }}/${{ inputs.version }}/pfnapp.json" "$TARGET_DIR/pfnapp.json"
+          REPORT_FILE=gh-pages-out/report.json node scripts/merge-targeted-report.js
           cd gh-pages-out
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "scans/${{ inputs.app_id }}/${{ inputs.version }}/upstream.json" \
+          git add report.json \
+                  "scans/${{ inputs.app_id }}/${{ inputs.version }}/upstream.json" \
                   "scans/${{ inputs.app_id }}/${{ inputs.version }}/pfnapp.json"
-          if git diff --cached --quiet; then
-            echo "Targeted scan details are already current."
-          else
-            git commit -m "chore(scans): publish ${{ inputs.app_id }} ${{ inputs.version }} CVE report"
-            git pull --rebase origin gh-pages
-            git push origin gh-pages
-          fi
+          git commit -m "chore(scans): publish ${{ inputs.app_id }} ${{ inputs.version }} CVE report"
+          git pull --rebase origin gh-pages
+          git push origin gh-pages
 
       - name: Upload complete CVE reports
         uses: actions/upload-artifact@v4
