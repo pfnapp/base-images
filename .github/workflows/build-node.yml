@@ -61,6 +61,7 @@ jobs:
           file: languages/node/Dockerfile.alpine
           build-args: |
             NODE_VERSION=${{ matrix.node_version }}
+            IMAGE_BUILD_ID=${{ github.run_id }}
           load: true
           tags: local/node:${{ matrix.node_version }}-test
           cache-from: type=gha

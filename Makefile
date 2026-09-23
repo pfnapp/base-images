@@ -427,9 +427,9 @@ test-node-all:
 scan-node:
 	@echo "==> Running Aqua Trivy vulnerability scanner for $(NODE_IMAGE_TAG)..."
 	@if command -v trivy > /dev/null 2>&1 && trivy image --version > /dev/null 2>&1 && [ ! -d "/snap" ]; then \
-		trivy image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NODE_IMAGE_TAG); \
+		trivy image --severity CRITICAL,HIGH --ignore-unfixed --ignorefile .trivyignore --exit-code 1 $(NODE_IMAGE_TAG); \
 	else \
-		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --exit-code 1 $(NODE_IMAGE_TAG); \
+		docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$$(pwd)/.trivyignore:/.trivyignore:ro" aquasec/trivy:latest image --severity CRITICAL,HIGH --ignore-unfixed --ignorefile /.trivyignore --exit-code 1 $(NODE_IMAGE_TAG); \
 	fi
 	@echo "==> Trivy scan passed for $(NODE_IMAGE_TAG)!"
 

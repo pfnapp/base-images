@@ -6,8 +6,15 @@ FROM node:${NODE_VERSION}-alpine
 ARG UID=10001
 ARG GID=10001
 
+# Build identity used as a cache buster. CI passes a unique value (workflow run
+# id) so the apk + npm layers below re-resolve on every scheduled rebuild and
+# pick up fresh Alpine security patches and newly released npm versions.
+# The default keeps local incremental builds cacheable.
+ARG IMAGE_BUILD_ID=local
+
 # Install runtime utilities, process reaper, and security certificates
-RUN apk update && apk upgrade --no-cache && \
+RUN echo "pfnapp-build-id=${IMAGE_BUILD_ID}" > /etc/pfnapp-build-id && \
+    apk update && apk upgrade --no-cache && \
     apk add --no-cache \
     dumb-init \
     curl \
@@ -20,9 +27,16 @@ RUN apk update && apk upgrade --no-cache && \
 #   npm@11  → Node 20  (npm 12+ requires Node >= 22.22.2 | 24.15.0 | 26.0.0)
 #   npm@latest (12+) → Node 22 / 24 / 26
 # Version tag resolved at build time so one Dockerfile covers all versions.
+# NOTE (Node 18): the npm@10 line is frozen at 10.9.9, so a handful of HIGH CVEs
+# in npm's vendored dependencies remain (accepted & tracked in ../../.trivyignore).
+# They clear only by dropping Node 18 (EOL upstream 2025-04-30).
+# The trailing cleanup purges the build-time npm cache (~30 MB of /root/.npm)
+# that would otherwise ship in the final image layer.
 RUN node -e "const v=parseInt(process.version.slice(1)); \
   process.stdout.write(v<=18?'10':v<=20?'11':'latest')" \
-  | xargs -I{} npm install -g npm@{}
+  | xargs -I{} npm install -g npm@{} && \
+  echo "npm upgraded to $(npm -v)" && \
+  npm cache clean --force && rm -rf /root/.npm
 
 # Create dedicated non-root user and group
 RUN addgroup -g ${GID} -S appgroup && \

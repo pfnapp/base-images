@@ -9,3 +9,32 @@
 GHSA-6v7p-g79w-8964
 CVE-2025-47273
 CVE-2026-59890
+
+# ==============================================================================
+# Node 18 (languages/node/Dockerfile.alpine) — ACCEPTED RESIDUAL RISK
+#
+# Scope: node:18-alpine ONLY. Node 20/22/24/26 images are not affected.
+# Root cause: dependencies vendored inside the npm CLI itself
+# (/usr/local/lib/node_modules/npm/node_modules), shipped by the final npm@10
+# release (npm 10.9.9). The npm@10 line receives no further updates and npm 11+
+# requires Node >= 20, so these findings are UNFIXABLE while Node 18 remains in
+# matrix.json — Node 18 has been EOL upstream since 2025-04-30.
+#
+# Affected vendored packages / findings:
+#   brace-expansion 2.0.2          -> CVE-2026-13149, CVE-2026-14257, CVE-2026-69152
+#   ip-address 10.1.0              -> CVE-2026-69192
+#   pacote 19.0.2 / 20.0.1         -> CVE-2026-9496 (2 findings)
+#   picomatch 4.0.3                -> CVE-2026-33671
+#   sigstore 3.1.0                 -> CVE-2026-48815
+# (4 MEDIUM + 1 LOW findings remain visible — below the CRITICAL/HIGH gate.)
+#
+# RE-REVIEW: remove these entries as soon as Node 18 is dropped from
+# matrix.json, or if npm@10 ever publishes a release with patched deps.
+# ==============================================================================
+CVE-2026-13149
+CVE-2026-14257
+CVE-2026-69152
+CVE-2026-69192
+CVE-2026-9496
+CVE-2026-33671
+CVE-2026-48815
