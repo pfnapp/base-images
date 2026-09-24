@@ -2,7 +2,7 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-24T05:51:39.724Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-24T06:30:33.030Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
@@ -12,7 +12,7 @@
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `27`
 - **App High CVEs** _(upstream, unfixable by us)_**:** `275`
 - **PFNApp Images Scanned:** `21` / `23`
-- **Total System CVE Reduction:** `13541`
+- **Total System CVE Reduction:** `1`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
 
