@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-23T05:29:52.759Z",
+  "scannedAt": "2026-09-24T05:52:12.264Z",
   "system": {
-    "total": 544,
+    "total": 545,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -692,12 +692,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -754,22 +770,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-18374",
@@ -868,12 +868,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -930,22 +946,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-12064",
@@ -1396,6 +1396,14 @@
         "title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing"
       },
       {
+        "id": "CVE-2026-93990",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
+      },
+      {
         "id": "CVE-2025-66382",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
@@ -1466,14 +1474,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
-      },
-      {
-        "id": "CVE-2026-93990",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Expat through 2.8.4 fails to validate low surrogates following high su ..."
       },
       {
         "id": "CVE-2022-27943",
@@ -4154,6 +4154,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[tar's rmt command may have undesired side effects]"
+      },
+      {
+        "id": "DLA-4792-1",
+        "pkg": "tzdata",
+        "installedVersion": "2026b-0+deb12u1",
+        "fixedVersion": "2026c-0+deb12u1",
+        "severity": "UNKNOWN",
+        "title": "tzdata - new timezone database"
       },
       {
         "id": "CVE-2026-53613",

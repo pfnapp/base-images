@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-23T05:29:57.194Z",
+  "scannedAt": "2026-09-24T05:52:15.176Z",
   "system": {
     "total": 851,
     "cves": [
@@ -2252,12 +2252,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -2314,22 +2330,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-18374",
@@ -2412,12 +2412,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -2474,22 +2490,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2022-0856",
@@ -3180,20 +3180,20 @@
         "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
       },
       {
+        "id": "CVE-2026-93990",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
+      },
+      {
         "id": "CVE-2025-66382",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
-      },
-      {
-        "id": "CVE-2026-93990",
-        "pkg": "libexpat1",
-        "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Expat through 2.8.4 fails to validate low surrogates following high su ..."
       },
       {
         "id": "CVE-2023-45913",
@@ -3729,7 +3729,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -3769,7 +3769,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -3785,7 +3785,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -3817,7 +3817,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50713",
@@ -5616,24 +5616,24 @@
         "pkg": "libx11-6",
         "installedVersion": "2:1.8.12-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+        "severity": "HIGH",
+        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
         "id": "CVE-2026-88806",
         "pkg": "libx11-data",
         "installedVersion": "2:1.8.12-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+        "severity": "HIGH",
+        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
         "id": "CVE-2026-88806",
         "pkg": "libx11-xcb1",
         "installedVersion": "2:1.8.12-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A malicious X server could exploit a buffer overflow in libX11 before  ..."
+        "severity": "HIGH",
+        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
         "id": "CVE-2025-25467",
@@ -5760,8 +5760,8 @@
         "pkg": "libxrender1",
         "installedVersion": "1:0.9.12-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A heap overflow in libXrender before 0.9.13 inRenderQueryPictFormats c ..."
+        "severity": "HIGH",
+        "title": "libXrender: libXrender: Code injection via heap overflow in RenderQueryPictFormats"
       },
       {
         "id": "CVE-2026-76642",
@@ -6998,7 +6998,7 @@
         "installedVersion": "4.12.1",
         "fixedVersion": "4.14.2",
         "severity": "MEDIUM",
-        "title": "AnyIO is a high level asynchronous concurrency and networking framewor ..."
+        "title": "anyio: AnyIO: Denial of Service due to undrained stderr in process-pool workers"
       },
       {
         "id": "CVE-2026-84381",

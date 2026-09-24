@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-23T05:29:50.812Z",
+  "scannedAt": "2026-09-24T05:51:53.955Z",
   "system": {
     "total": 195,
     "cves": [
@@ -308,12 +308,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -370,22 +386,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-18374",
@@ -484,12 +484,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -546,22 +562,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2018-6829",
@@ -1574,7 +1574,7 @@
         "installedVersion": "0.6.0",
         "fixedVersion": "0.6.1",
         "severity": "HIGH",
-        "title": "adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)"
+        "title": "adm-zip: adm-zip: Denial of Service via uncontrolled memory allocation"
       },
       {
         "id": "CVE-2026-76845",

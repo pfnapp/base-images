@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-23T05:30:28.085Z",
+  "scannedAt": "2026-09-24T05:52:54.587Z",
   "system": {
     "total": 326,
     "cves": [
@@ -644,12 +644,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -706,22 +722,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-18374",
@@ -820,12 +820,28 @@
         "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
       },
       {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
         "id": "CVE-2026-89092",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
       },
       {
         "id": "CVE-2010-4756",
@@ -882,22 +898,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
-      },
-      {
-        "id": "CVE-2026-86805",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A time-of-check to time-of-use (TOCTOU) race condition in the dynamic  ..."
-      },
-      {
-        "id": "CVE-2026-95818",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "A stack-based buffer overflow in the dynamic loader (ld.so) of the GNU ..."
       },
       {
         "id": "CVE-2026-12064",
