@@ -94,6 +94,13 @@ ${currentManifest}
 
 ---
 
+### SPEED & EFFICIENCY DIRECTIVE:
+- Complete the remediation swiftly and decisively.
+- **DO NOT** execute terminal commands or run package managers (apt, pip, npm). Local command execution is sandboxed without external network. Formulate all Dockerfile instructions through direct synthesis.
+- Focus purely on formulating the hardened Dockerfile.
+
+---
+
 ### HARDENING DIRECTIVES & ZERO-REGRESSION RULES:
 1. **Preserve Runtime Contract (CRITICAL):**
    - The container MUST be able to boot, listen on the port declared in the runtime manifest, and answer health probes.
