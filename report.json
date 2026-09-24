@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-24T11:55:03.027Z",
+    "generatedAt": "2026-09-24T17:17:24.785Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 25,
+    "totalMonitoredVersions": 26,
     "runAsRootCount": 17,
     "criticalVulnerabilityCount": 30,
     "highVulnerabilityCount": 290,
-    "pfnappScannedCount": 23,
+    "pfnappScannedCount": 24,
     "totalCveReduction": 1
   },
   "applications": [
@@ -40325,9 +40325,127 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "3.0.0",
+          "fullRef": "stirlingtools/stirling-pdf:3.0.0",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 381,
+                "low": 70,
+                "fixable": 0,
+                "total": 451
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 2,
+                "low": 0,
+                "fixable": 0,
+                "total": 2
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 328,
+                "low": 57,
+                "fixable": 0,
+                "total": 385,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 2,
+                "high": 55,
+                "medium": 60,
+                "low": 6,
+                "fixable": 0,
+                "total": 123,
+                "topCves": [
+                  {
+                    "id": "GHSA-r7wm-3cxj-wff9",
+                    "pkg": "com.fasterxml.jackson.core:jackson-core",
+                    "installedVersion": "2.21.2",
+                    "fixedVersion": "2.18.8, 2.21.4",
+                    "severity": "HIGH",
+                    "title": "GHSA-r7wm-3cxj-wff9"
+                  },
+                  {
+                    "id": "CVE-2026-54512",
+                    "pkg": "com.fasterxml.jackson.core:jackson-databind",
+                    "installedVersion": "2.21.2",
+                    "fixedVersion": "2.18.8, 3.1.4, 2.21.4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-54512"
+                  },
+                  {
+                    "id": "CVE-2026-54513",
+                    "pkg": "com.fasterxml.jackson.core:jackson-databind",
+                    "installedVersion": "2.21.2",
+                    "fixedVersion": "2.18.8, 2.21.4, 3.1.4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-54513"
+                  },
+                  {
+                    "id": "CVE-2024-47554",
+                    "pkg": "commons-io:commons-io",
+                    "installedVersion": "2.8.0",
+                    "fixedVersion": "2.14.0",
+                    "severity": "HIGH",
+                    "title": "CVE-2024-47554"
+                  },
+                  {
+                    "id": "CVE-2026-40983",
+                    "pkg": "io.micrometer:micrometer-core",
+                    "installedVersion": "1.16.5",
+                    "fixedVersion": "1.16.6, 1.15.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-40983"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": -53,
+                "low": -13,
+                "total": -66
+              },
+              "app": {
+                "critical": 2,
+                "high": 55,
+                "medium": 58,
+                "low": 6,
+                "total": 121
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-09-24T17:17:24.785Z"
+        },
+        {
           "tag": "2.14.3",
           "fullRef": "stirlingtools/stirling-pdf:2.14.3",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
