@@ -1,4 +1,4 @@
-FROM nousresearch/hermes-agent:v2026.9.14
+FROM nousresearch/hermes-agent:v2026.9.24
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get remove -y --auto-remove \

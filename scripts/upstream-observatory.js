@@ -177,6 +177,39 @@ async function checkReleasesOnly() {
         detectedAt: now
       });
       console.log(`  ✨ ${app.name}: ${result.previousLatest || 'none'} → ${latestTag}`);
+
+      // Synchronize patches/<app.id>/runtime-manifest.json if present
+      const manifestPath = path.join(ROOT_DIR, 'patches', app.id, 'runtime-manifest.json');
+      if (fs.existsSync(manifestPath)) {
+        try {
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+          manifest.version = latestTag;
+          manifest.baseImage = `ghcr.io/pfnapp/${app.id}:${latestTag}`;
+          fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+          console.log(`  📄 Synchronized patches/${app.id}/runtime-manifest.json to ${latestTag}`);
+        } catch (mErr) {
+          console.warn(`  ⚠️ Could not update manifest for ${app.id}: ${mErr.message}`);
+        }
+      }
+
+      // Synchronize patches/<app.id>/Dockerfile if present
+      const dockerfilePath = path.join(ROOT_DIR, 'patches', app.id, 'Dockerfile');
+      if (fs.existsSync(dockerfilePath)) {
+        try {
+          let dfContent = fs.readFileSync(dockerfilePath, 'utf8');
+          if (dfContent.includes('ARG TAG=')) {
+            dfContent = dfContent.replace(/ARG TAG=.*/, `ARG TAG=${latestTag}`);
+            fs.writeFileSync(dockerfilePath, dfContent);
+            console.log(`  🐳 Synchronized patches/${app.id}/Dockerfile ARG TAG to ${latestTag}`);
+          } else if (result.previousLatest && dfContent.includes(result.previousLatest)) {
+            dfContent = dfContent.replace(new RegExp(result.previousLatest.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), latestTag);
+            fs.writeFileSync(dockerfilePath, dfContent);
+            console.log(`  🐳 Synchronized patches/${app.id}/Dockerfile upstream tag to ${latestTag}`);
+          }
+        } catch (dfErr) {
+          console.warn(`  ⚠️ Could not update Dockerfile for ${app.id}: ${dfErr.message}`);
+        }
+      }
     } else {
       console.log(`  ✅ ${app.name}: ${app.active_versions[0]}`);
     }

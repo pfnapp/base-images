@@ -77,6 +77,8 @@ jobs:
           file: patches/${{ matrix.id }}/Dockerfile
           push: true
           tags: ghcr.io/pfnapp/${{ matrix.id }}:${{ matrix.tag }}
+          build-args: |
+            TAG=${{ matrix.tag }}
           cache-from: type=gha,scope=${{ matrix.id }}
           cache-to: type=gha,scope=${{ matrix.id }},mode=max
           provenance: false

@@ -46,7 +46,7 @@ jobs:
       - name: Commit updated release window
         id: commit
         run: |
-          if git diff --quiet -- observatory.json; then
+          if git diff --quiet -- observatory.json patches; then
             echo "No new upstream releases."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -54,8 +54,8 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add observatory.json
-          git commit -m "chore(observatory): track latest upstream releases"
+          git add observatory.json patches
+          git commit -m "chore(observatory): track latest upstream releases and sync manifests"
           git pull --rebase origin main
           git push origin main
           echo "changed=true" >> "$GITHUB_OUTPUT"

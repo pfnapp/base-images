@@ -1,5 +1,5 @@
 # PFNApp hardened image for 9Router
-ARG TAG=0.5.85
+ARG TAG=0.5.86
 FROM docker.io/decolua/9router:${TAG}
 RUN apk update && \
     apk upgrade --no-cache && \
