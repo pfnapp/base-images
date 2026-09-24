@@ -13,6 +13,8 @@
     { "key": "DOCKER_ENABLE_SECURITY", "label": "Docker Security Profile", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "security", "description": "Enables login authentication and multi-user security." },
     { "key": "SECURITY_ENABLELOGIN", "label": "Enable Login Gate", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "security", "description": "Enforces user authentication before viewing tools." },
     { "key": "INSTALL_BOOK_AND_ADVANCED_HTML_OPS", "label": "Advanced Book/HTML Operations", "type": "boolean", "required": false, "default": false, "example": true, "safe": true, "category": "runtime", "description": "Enables Calibre and advanced EPUB/MOBI/AZW document conversions." },
-    { "key": "APP_HOME_NAME", "label": "Application Name", "type": "string", "required": false, "default": "Stirling PDF", "example": "PDF Studio", "safe": true, "category": "runtime", "description": "Custom instance branding title displayed in the navbar." }
+    { "key": "APP_HOME_NAME", "label": "Application Name", "type": "string", "required": false, "default": "Stirling PDF", "example": "PDF Studio", "safe": true, "category": "runtime", "description": "Custom instance branding title displayed in the navbar." },
+    { "key": "PUID", "label": "Runtime User ID", "type": "number", "required": false, "default": 1001, "example": 1000, "safe": true, "category": "security", "description": "Remaps the internal stirlingpdfuser UID when container starts as root." },
+    { "key": "PGID", "label": "Runtime Group ID", "type": "number", "required": false, "default": 1001, "example": 1000, "safe": true, "category": "security", "description": "Remaps the internal stirlingpdfgroup GID when container starts as root." }
   ]
 }

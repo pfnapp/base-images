@@ -5,7 +5,7 @@
   "version": "0.5.75",
   "baseImage": "ghcr.io/pfnapp/9router:0.5.75",
   "ports": { "default": 20128, "protocol": "HTTP" },
-  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
   "probes": { "liveness": { "path": "/", "port": 20128 }, "readiness": { "path": "/", "port": 20128 } },
   "tunables": [
     { "key": "PORT", "label": "Server Port", "type": "number", "required": false, "default": 20128, "example": 20128, "safe": true, "category": "networking", "description": "HTTP port used by the upstream Node server.", "troubleshooting": "Probes fail after a change unless the compose mapping (20128:20128) and the healthcheck URL are updated to match." },

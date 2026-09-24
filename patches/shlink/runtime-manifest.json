@@ -5,7 +5,7 @@
   "version": "5.1.6",
   "baseImage": "ghcr.io/pfnapp/shlink:5.1.6",
   "ports": { "default": 8080, "protocol": "HTTP" },
-  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "security": { "runAsUser": 1001, "runAsGroup": 0, "readOnlyRoot": false },
   "probes": { "liveness": { "path": "/rest/health", "port": 8080 }, "readiness": { "path": "/rest/health", "port": 8080 } },
   "tunables": [
     { "key": "DEFAULT_DOMAIN", "label": "Default Domain", "type": "string", "required": true, "example": "localhost:8080", "safe": true, "category": "application", "description": "Public domain used to generate short URLs." },

@@ -14,6 +14,8 @@
     { "key": "MEMOS_DRIVER", "label": "Database Driver", "type": "string", "required": false, "default": "sqlite", "example": "sqlite", "safe": true, "category": "database", "description": "Database engine (`sqlite`, `mysql`, `postgres`)." },
     { "key": "MEMOS_DSN", "label": "Database Connection DSN", "type": "string", "required": false, "example": "user:pass@tcp(db:3306)/memos", "safe": true, "category": "database", "description": "Connection string when using external MySQL or PostgreSQL." },
     { "key": "MEMOS_PUBLIC", "label": "Allow Public Access", "type": "boolean", "required": false, "default": true, "example": true, "safe": true, "category": "security", "description": "Allow public read access without logging in." },
-    { "key": "MEMOS_MAX_UPLOAD_SIZE_MIB", "label": "Max Upload Size (MiB)", "type": "number", "required": false, "default": 32, "example": 32, "safe": true, "category": "performance", "description": "Maximum allowed attachment upload size in megabytes." }
+    { "key": "MEMOS_MAX_UPLOAD_SIZE_MIB", "label": "Max Upload Size (MiB)", "type": "number", "required": false, "default": 32, "example": 32, "safe": true, "category": "performance", "description": "Maximum allowed attachment upload size in megabytes." },
+    { "key": "MEMOS_UID", "label": "Process User ID", "type": "number", "required": false, "default": 10001, "example": 1000, "safe": true, "category": "security", "description": "UID used by su-exec when started as root." },
+    { "key": "MEMOS_GID", "label": "Process Group ID", "type": "number", "required": false, "default": 10001, "example": 1000, "safe": true, "category": "security", "description": "GID used by su-exec when started as root." }
   ]
 }
