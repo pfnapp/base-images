@@ -148,9 +148,10 @@
     const itemType  = isApp ? 'app' : item.type;
     const vuln      = ver.vulnerabilities || {};
     const up        = isApp ? (vuln.upstream || vuln) : vuln;
-    const sys       = up.system || {};
-    const apv       = up.app    || {};
     const pfnData   = isApp ? (vuln.pfnapp   || null) : null;
+    const displayed = isApp && pfnData?.scanned ? pfnData : up;
+    const sys       = displayed.system || {};
+    const apv       = displayed.app    || {};
     const reduction = isApp ? (vuln.reduction || null) : null;
     const pClass    = postureClass(ver.posture);
     const bClass    = cardBorderClass(ver, itemType);
@@ -167,8 +168,8 @@
       const rt = reduction.system?.total || 0;
       const rc = reduction.system?.critical || 0;
       const rh = reduction.system?.high || 0;
-      if (rt < 0) {
-        reductionHint = `<span class="reduction-val">${rt} sys CVEs (C${rc} H${rh})</span>`;
+      if (rt > 0) {
+        reductionHint = `<span class="reduction-val">−${rt} sys CVEs (C−${rc} H−${rh})</span>`;
       }
     }
 
@@ -224,7 +225,7 @@
   </div>
 
   <div class="card-hint">
-    <span>${reductionHint ? '🎯 ' + reductionHint : '<span style="opacity:.5">upstream CVEs shown</span>'}</span>
+     <span>${reductionHint ? '🎯 ' + reductionHint : `<span style="opacity:.5">${isApp && pfnData?.scanned ? 'PFNApp CVEs shown' : 'upstream CVEs shown'}</span>`}</span>
     <span class="hint-icon">›</span>
   </div>
 
@@ -294,7 +295,7 @@
     if (isApp && reduction && pfnData?.scanned) {
       const rs = reduction.system || {};
       const ra = reduction.app    || {};
-      const hasReduction = (rs.total||0) < 0 || (ra.total||0) < 0;
+      const hasReduction = (rs.total||0) > 0 || (ra.total||0) > 0;
 
       // diff page URL — pass app id and version as params
       const diffUrl = `${DIFF_PAGE}?app=${encodeURIComponent(item.id)}&tag=${encodeURIComponent(ver.tag)}`;
@@ -326,12 +327,12 @@
                🔍 View full CVE diff (before vs after)
              </a>
              <div class="reduction-disclaimer">
-               Negative numbers = CVEs removed in the PFNApp image vs upstream.<br>
+                Positive delta = CVEs removed in the PFNApp image vs upstream.<br>
                Top-5 CVEs shown per layer; click "View full CVE diff" to see the complete list.
              </div>`
           : `<div class="reduction-disclaimer" style="margin-top:6px;">
                No reduction detected — upstream image is already minimal, or the PFNApp image
-               inherits the same base. Numbers are delta (upstream − PFNApp).
+                inherits the same base. Numbers are delta (upstream − PFNApp).
              </div>`
         }
       </div>`;

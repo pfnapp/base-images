@@ -202,7 +202,7 @@
         <span class="snum gray">${(pfnData?.system?.total||0).toLocaleString()}</span>
         <span>PFNApp system CVEs</span>
       </div>
-      ${(rs.total||0) < 0 ? `
+      ${(rs.total||0) > 0 ? `
       <div class="summary-pill green">
         <span class="snum green">${rs.total}</span>
         <span>system reduction</span>

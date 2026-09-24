@@ -231,15 +231,8 @@ function runTrivyScan(imageRef) {
 
 function runTrivyScanPfnapp(appId, tag) {
   const pfnRef = `ghcr.io/pfnapp/${appId}:${tag}`;
-  const cacheFile = path.join(CACHE_DIR, `pfnapp_${appId}_${tag.replace(/[^a-zA-Z0-9_.-]/g, '_')}.json`);
-  const forceRefresh = process.argv.includes('--refresh');
-
-  if (!forceRefresh && fs.existsSync(cacheFile)) {
-    try {
-      console.log(`  ⚡ Loading cached PFNApp scan for ${pfnRef}...`);
-      return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
-    } catch { /* invalid cache */ }
-  }
+  // PFNApp tags are rebuilt in place every day. A tag-keyed cache would keep
+  // reporting the previous image's CVEs after a successful rebuild.
 
   console.log(`  🔍 Scanning PFNApp image ${pfnRef}...`);
   try {
@@ -256,7 +249,6 @@ function runTrivyScanPfnapp(appId, tag) {
       );
     }
     const parsed = JSON.parse(output);
-    fs.writeFileSync(cacheFile, JSON.stringify(parsed, null, 2));
     return parsed;
   } catch (err) {
     if (err.message && (err.message.includes('UNAUTHORIZED') || err.message.includes('not found') || err.message.includes('manifest unknown'))) {
@@ -506,7 +498,7 @@ async function main() {
       summary.highVulnerabilityCount += vulns.app.high;
       if (pfnappVulns) {
         summary.pfnappScannedCount = (summary.pfnappScannedCount || 0) + 1;
-        summary.totalCveReduction += Math.abs(reduction.system.total);
+        summary.totalCveReduction += Math.max(0, reduction.system.total);
       }
 
       appEntry.monitoredVersions.push({
