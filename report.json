@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-23T05:29:35.848Z",
+    "generatedAt": "2026-09-24T04:59:36.615Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 22,
+    "totalMonitoredVersions": 23,
     "runAsRootCount": 17,
     "criticalVulnerabilityCount": 27,
-    "highVulnerabilityCount": 260,
-    "pfnappScannedCount": 20,
+    "highVulnerabilityCount": 275,
+    "pfnappScannedCount": 21,
     "totalCveReduction": 13056
   },
   "applications": [
@@ -11495,9 +11495,250 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "2026.9.6",
+          "fullRef": "openclaw/openclaw:2026.9.6",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 15,
+                "high": 117,
+                "medium": 219,
+                "low": 189,
+                "fixable": 0,
+                "total": 544
+              },
+              "app": {
+                "critical": 0,
+                "high": 15,
+                "medium": 2,
+                "low": 2,
+                "fixable": 0,
+                "total": 19
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 15,
+                "high": 117,
+                "medium": 219,
+                "low": 189,
+                "fixable": 0,
+                "total": 545,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-53613",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-53613"
+                  },
+                  {
+                    "id": "CVE-2026-76642",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76642"
+                  },
+                  {
+                    "id": "CVE-2026-78408",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-78408"
+                  },
+                  {
+                    "id": "CVE-2026-78409",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-78409"
+                  },
+                  {
+                    "id": "CVE-2026-78410",
+                    "pkg": "bsdutils",
+                    "installedVersion": "1:2.38.1-5+deb12u3",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-78410"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 15,
+                "medium": 2,
+                "low": 2,
+                "fixable": 0,
+                "total": 19,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-83605",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.9.11, 0.8.14",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83605"
+                  },
+                  {
+                    "id": "CVE-2026-83607",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.9.11, 0.8.14",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83607"
+                  },
+                  {
+                    "id": "CVE-2026-83608",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83608"
+                  },
+                  {
+                    "id": "CVE-2026-83613",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83613"
+                  },
+                  {
+                    "id": "CVE-2026-83614",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.13",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83614"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 1
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-83605",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.9.11, 0.8.14",
+              "severity": "HIGH",
+              "title": "CVE-2026-83605"
+            },
+            {
+              "id": "CVE-2026-83607",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.9.11, 0.8.14",
+              "severity": "HIGH",
+              "title": "CVE-2026-83607"
+            },
+            {
+              "id": "CVE-2026-83608",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83608"
+            },
+            {
+              "id": "CVE-2026-83613",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83613"
+            },
+            {
+              "id": "CVE-2026-83614",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.13",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83614"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-53613",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-53613"
+            },
+            {
+              "id": "CVE-2026-76642",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-76642"
+            },
+            {
+              "id": "CVE-2026-78408",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-78408"
+            },
+            {
+              "id": "CVE-2026-78409",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-78409"
+            },
+            {
+              "id": "CVE-2026-78410",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-78410"
+            }
+          ],
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-24T04:59:36.615Z"
+        },
+        {
           "tag": "2026.9.5",
           "fullRef": "openclaw/openclaw:2026.9.5",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
