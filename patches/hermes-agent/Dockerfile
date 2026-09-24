@@ -5,4 +5,8 @@ RUN apt-get update && \
         gcc g++ cpp make cmake \
         python3-dev libffi-dev \
         libc6-dev linux-libc-dev binutils && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    usermod -u 1000 hermes && \
+    groupmod -g 1000 hermes && \
+    chown -R hermes:hermes /opt/data
+

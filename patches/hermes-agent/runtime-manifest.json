@@ -5,7 +5,7 @@
   "version": "v2026.9.14",
   "baseImage": "ghcr.io/pfnapp/hermes-agent:v2026.9.14",
   "ports": { "default": 9119, "protocol": "HTTP" },
-  "security": { "runAsUser": 0, "runAsGroup": 0, "readOnlyRoot": false },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
   "probes": {
     "liveness": { "path": "/", "port": 9119 },
     "readiness": { "path": "/", "port": 9119 }
@@ -392,7 +392,7 @@
       "label": "Runtime User ID",
       "type": "number",
       "required": false,
-      "default": 10000,
+      "default": 1000,
       "example": 1000,
       "safe": true,
       "category": "runtime",
@@ -404,8 +404,8 @@
       "label": "Runtime Group ID",
       "type": "number",
       "required": false,
-      "default": 10000,
-      "example": 100,
+      "default": 1000,
+      "example": 1000,
       "safe": true,
       "category": "runtime",
       "description": "Host GID paired with HERMES_UID for remapping the internal `hermes` group.",
