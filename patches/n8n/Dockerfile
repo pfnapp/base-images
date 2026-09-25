@@ -3,4 +3,4 @@
 # Standard package manager upgrade is not applicable.
 # This image is re-published as-is from upstream.
 # CVE reduction depends on upstream releasing a new version.
-FROM docker.io/n8nio/n8n:2.40.6
+FROM docker.io/n8nio/n8n:2.41.3

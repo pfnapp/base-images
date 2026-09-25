@@ -2,13 +2,26 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "runtime": "n8n",
   "framework": "n8n",
-  "version": "2.40.6",
-  "baseImage": "ghcr.io/pfnapp/n8n:2.40.6",
-  "ports": { "default": 5678, "protocol": "HTTP" },
-  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "version": "2.41.3",
+  "baseImage": "ghcr.io/pfnapp/n8n:2.41.3",
+  "ports": {
+    "default": 5678,
+    "protocol": "HTTP"
+  },
+  "security": {
+    "runAsUser": 1000,
+    "runAsGroup": 1000,
+    "readOnlyRoot": false
+  },
   "probes": {
-    "liveness": { "path": "/healthz", "port": 5678 },
-    "readiness": { "path": "/healthz/readiness", "port": 5678 }
+    "liveness": {
+      "path": "/healthz",
+      "port": 5678
+    },
+    "readiness": {
+      "path": "/healthz/readiness",
+      "port": 5678
+    }
   },
   "tunables": [
     {
