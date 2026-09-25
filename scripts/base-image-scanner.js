@@ -290,7 +290,7 @@ function buildFrameworkImageRef(id, frameworkVersion, runtimeVersion) {
     return `${FRAMEWORK_IMAGE_BASE}/vite:latest`;
   }
   if (id === 'laravel') {
-    return `${FRAMEWORK_IMAGE_BASE}/laravel:${frameworkVersion}-php${runtimeVersion}-alpine`;
+    return `${FRAMEWORK_IMAGE_BASE}/laravel:php${runtimeVersion}-alpine`;
   }
   // nextjs, nestjs — node-based frameworks
   return `${FRAMEWORK_IMAGE_BASE}/${id}:${frameworkVersion}-node${runtimeVersion}-alpine`;
@@ -514,6 +514,35 @@ async function main() {
       console.log(`  📌 ${imageRef} [LATEST]`);
       const entry = buildVersionEntry(id, imageRef, 'latest', 'LATEST', '🟢', secSetting, now, null);
       versionEntries.push(entry);
+    } else if (id === 'laravel') {
+      // Laravel uses runtime-scoped base images: laravel:php{runtime}-alpine
+      const compatMatrix = spec.compatibility_matrix || [];
+      const runtimeVersions = uniqueRuntimeVersions(compatMatrix);
+      const defaultRtVersion = compatMatrix[0]?.default_runtime ?? '8.4';
+
+      for (const runtimeVersion of runtimeVersions) {
+        const imageRef = buildFrameworkImageRef(id, null, runtimeVersion);
+        const tag = `php${runtimeVersion}-alpine`;
+
+        const parentRuntimeId = spec.runtime || 'php';
+        const parentSpec = matrix.runtimes[parentRuntimeId] || {};
+        const lc = runtimeVersion === defaultRtVersion
+          ? { status: 'LATEST', badge: '🟢' }
+          : getLifecycleStatus(runtimeVersion, parentSpec);
+
+        const parentEolMap = eolCache[parentRuntimeId] || new Map();
+        const eolInfo = parentEolMap.get(runtimeVersion) || null;
+
+        console.log(`  📌 ${imageRef} [${lc.status}]`);
+        const versionEntry = buildVersionEntry(id, imageRef, tag, lc.status, lc.badge, secSetting, now, eolInfo);
+
+        if (eolInfo && !eolInfo.isMaintained) {
+          versionEntry.lifecycleStatus = 'EOL';
+          versionEntry.lifecycleBadge = '🔴';
+        }
+
+        versionEntries.push(versionEntry);
+      }
     } else {
       // Iterate every (framework_version, runtime_version) combination from compatibility_matrix
       const compatMatrix = spec.compatibility_matrix || [];

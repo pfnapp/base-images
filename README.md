@@ -78,13 +78,13 @@ All images are ultra-lean, hardened Alpine Linux containers built for rapid cold
 | **Java 17** | Eclipse Temurin Alpine | **~48 MB** | **132 MB** | Active (LTS) | `ghcr.io/pfnapp/base/languages/java:17-alpine` |
 
 ### 2. Frameworks (Application Runners)
-| Framework | Underlying Runtime | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag | Compatibility Tag |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Laravel 11-13** | PHP 8.4 + Node.js | **~109 MB** | **295 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine` | `.../laravel:php8.4-alpine` |
-| **Laravel 11-12** | PHP 8.3 + Node.js | **~106 MB** | **284 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.3-alpine` | `.../laravel:php8.3-alpine` |
-| **Laravel 10-11** | PHP 8.2 + Node.js | **~106 MB** | **280 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.2-alpine` | `.../laravel:php8.2-alpine` |
-| **Laravel 10** | PHP 8.1 + Node.js | **~104 MB** | **276 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:8.1-alpine` | `.../laravel:php8.1-alpine` |
-| **Laravel 8/9** | PHP 7.4 + Node.js | **~89 MB** | **240 MB** | Active (Legacy) | `ghcr.io/pfnapp/base/frameworks/laravel:7.4-alpine` | `.../laravel:php7.4-alpine` |
+| Framework | Underlying Runtime | Compressed (Download) | Uncompressed (Disk) | Status | Primary Pull Tag |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Laravel 10-13** | PHP 8.4 + Node.js | **~109 MB** | **295 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine` |
+| **Laravel 10-13** | PHP 8.5 + Node.js | **~110 MB** | **298 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:php8.5-alpine` |
+| **Laravel 10-13** | PHP 8.3 + Node.js | **~106 MB** | **284 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:php8.3-alpine` |
+| **Laravel 10-13** | PHP 8.2 + Node.js | **~106 MB** | **280 MB** | Active | `ghcr.io/pfnapp/base/frameworks/laravel:php8.2-alpine` |
+| **Laravel 10** | PHP 8.1 + Node.js | **~104 MB** | **276 MB** | Active (Legacy) | `ghcr.io/pfnapp/base/frameworks/laravel:php8.1-alpine` |
 | **Next.js 15/16** | Node.js 22 | **~63 MB** | **181 MB** | Active (`latest`) | `ghcr.io/pfnapp/base/frameworks/nextjs:22-alpine` | `.../nextjs:node22-alpine` |
 | **Next.js 14/15** | Node.js 20 | **~54 MB** | **151 MB** | Active (LTS) | `ghcr.io/pfnapp/base/frameworks/nextjs:20-alpine` | `.../nextjs:node20-alpine` |
 | **Next.js 13/14** | Node.js 18 | **~51 MB** | **143 MB** | Active (Maintenance) | `ghcr.io/pfnapp/base/frameworks/nextjs:18-alpine` | `.../nextjs:node18-alpine` |
@@ -107,7 +107,6 @@ docker pull ghcr.io/pfnapp/base/languages/php:latest
 
 # Pull Laravel Alpine Framework Image
 docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine
-docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
 docker pull ghcr.io/pfnapp/base/frameworks/laravel:latest
 
 # Pull Node.js 22 Alpine Base Image

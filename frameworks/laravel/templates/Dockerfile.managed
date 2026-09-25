@@ -13,7 +13,7 @@ ARG PHP_VERSION=8.4
 # 2. Fullstack Laravel applications with Vite, Tailwind, Inertia, React, Vue
 #    (auto-detects package.json, compiles assets in-place, and cleans node_modules).
 # ==============================================================================
-FROM ghcr.io/pfnapp/base/frameworks/laravel:${PHP_VERSION}-alpine
+FROM ghcr.io/pfnapp/base/frameworks/laravel:php${PHP_VERSION}-alpine
 
 WORKDIR /var/www/html
 

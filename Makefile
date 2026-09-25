@@ -14,9 +14,9 @@ TEST_PORT ?= 8080
 # ==============================================================================
 # Laravel Framework Configurations
 # ==============================================================================
-LARAVEL_VERSIONS ?= 8.4 8.3 8.2 8.1 7.4
+LARAVEL_VERSIONS ?= 8.5 8.4 8.3 8.2 8.1
 LARAVEL_PHP_VERSION ?= 8.4
-LARAVEL_IMAGE_TAG ?= local/laravel:$(LARAVEL_PHP_VERSION)-test
+LARAVEL_IMAGE_TAG ?= local/laravel:php$(LARAVEL_PHP_VERSION)-test
 LARAVEL_DOCKERFILE ?= frameworks/laravel/Dockerfile
 LARAVEL_BUILD_CONTEXT ?= frameworks/laravel
 LARAVEL_CONTAINER_NAME ?= laravel-test-runner
@@ -247,7 +247,7 @@ build-laravel-all:
 	@echo "==> Building all Laravel PHP versions: $(LARAVEL_VERSIONS)..."
 	@for v in $(LARAVEL_VERSIONS); do \
 		echo "===> Building Laravel PHP $$v..."; \
-		docker build -t local/laravel:$$v-test \
+		docker build -t local/laravel:php$$v-test \
 			--build-arg PHP_VERSION=$$v \
 			--build-arg BASE_IMAGE=local/php:$$v-test \
 			-f $(LARAVEL_DOCKERFILE) $(LARAVEL_BUILD_CONTEXT) || exit 1; \
@@ -1076,7 +1076,7 @@ clean:
 		docker rmi local/php:$$v-test 2>/dev/null || true; \
 	done
 	@for v in $(LARAVEL_VERSIONS); do \
-		docker rmi local/laravel:$$v-test 2>/dev/null || true; \
+		docker rmi local/laravel:php$$v-test 2>/dev/null || true; \
 	done
 	@for v in $(NODE_VERSIONS); do \
 		docker rm -f $(NODE_CONTAINER_NAME)-$$v 2>/dev/null || true; \

@@ -35,11 +35,11 @@ Published to **GitHub Container Registry (`ghcr.io`)**:
 
 | PHP Version | Base Image Tag | Compressed (Download) | Uncompressed (Disk) | Pull Command | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **8.4** | `8.4-alpine` / `latest` | **~109 MB** | **295 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine` | Active (Default) |
-| **8.3** | `8.3-alpine` | **~106 MB** | **284 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.3-alpine` | Active |
-| **8.2** | `8.2-alpine` | **~106 MB** | **280 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.2-alpine` | Active |
-| **8.1** | `8.1-alpine` | **~104 MB** | **276 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:8.1-alpine` | Active |
-| **7.4** | `7.4-alpine` | **~89 MB** | **240 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:7.4-alpine` | Active (Legacy) |
+| **8.5** | `php8.5-alpine` | **~110 MB** | **298 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.5-alpine` | Active |
+| **8.4** | `php8.4-alpine` / `latest` | **~109 MB** | **295 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine` | Active (Default) |
+| **8.3** | `php8.3-alpine` | **~106 MB** | **284 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.3-alpine` | Active |
+| **8.2** | `php8.2-alpine` | **~106 MB** | **280 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.2-alpine` | Active |
+| **8.1** | `php8.1-alpine` | **~104 MB** | **276 MB** | `docker pull ghcr.io/pfnapp/base/frameworks/laravel:php8.1-alpine` | Active (Legacy) |
 
 ---
 
@@ -72,7 +72,7 @@ While `templates/Dockerfile.managed` is the zero-config default that handles bot
 
 ```dockerfile
 # Stage 1: Build dependencies & frontend in-place
-FROM ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine AS builder
+FROM ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine AS builder
 WORKDIR /var/www/html
 COPY --chown=10001:10001 . /var/www/html
 RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
@@ -82,7 +82,7 @@ RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoload
        fi
 
 # Stage 2: Clean runtime container
-FROM ghcr.io/pfnapp/base/frameworks/laravel:8.4-alpine
+FROM ghcr.io/pfnapp/base/frameworks/laravel:php8.4-alpine
 WORKDIR /var/www/html
 COPY --from=builder --chown=10001:10001 /var/www/html /var/www/html
 # node_modules can be excluded or removed before copying

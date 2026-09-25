@@ -67,44 +67,33 @@ jobs:
           echo "should_build=true" >> "$GITHUB_OUTPUT"
 
   resolve-matrix:
-    name: Resolve Laravel compatibility matrix from matrix.json
+    name: Resolve Laravel compatible PHP runtimes from matrix.json
     runs-on: ubuntu-24.04
     needs: check-trigger
     if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
     outputs:
-      matrix: ${{ steps.read.outputs.matrix }}
-      latest_laravel: ${{ steps.read.outputs.latest_laravel }}
-      latest_php: ${{ steps.read.outputs.latest_php }}
+      versions: ${{ steps.read.outputs.versions }}
+      default: ${{ steps.read.outputs.default }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-      - name: Read compatibility matrix from matrix.json
+      - name: Read compatible PHP runtimes from matrix.json
         id: read
         run: |
-          MATRIX=$(jq -c '
-            [ .frameworks.laravel.compatibility_matrix[] |
-              . as $entry |
-              $entry.compatible_runtimes[] | {
-                laravel_version: $entry.framework_major,
-                php_version: .,
-                default_php: $entry.default_runtime
-              }
-            ]
-          ' matrix.json)
-          LATEST_LARAVEL=$(jq -r '.frameworks.laravel.compatibility_matrix[0].framework_major' matrix.json)
-          LATEST_PHP=$(jq -r '.frameworks.laravel.compatibility_matrix[0].default_runtime' matrix.json)
-          echo "matrix={\"include\":$MATRIX}" >> $GITHUB_OUTPUT
-          echo "latest_laravel=$LATEST_LARAVEL" >> $GITHUB_OUTPUT
-          echo "latest_php=$LATEST_PHP" >> $GITHUB_OUTPUT
+          VERSIONS=$(jq -c '[.frameworks.laravel.compatibility_matrix[].compatible_runtimes[]] | unique' matrix.json)
+          DEFAULT=$(jq -r '.frameworks.laravel.compatibility_matrix[0].default_runtime' matrix.json)
+          echo "versions=$VERSIONS" >> $GITHUB_OUTPUT
+          echo "default=$DEFAULT" >> $GITHUB_OUTPUT
 
   build-and-audit:
-    name: Laravel ${{ matrix.laravel_version }} / PHP ${{ matrix.php_version }} Build & Audit
+    name: Laravel PHP ${{ matrix.php_version }} Alpine Build & Audit
     needs: [check-trigger, resolve-matrix]
     if: ${{ needs.check-trigger.outputs.should_build == 'true' }}
     runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.resolve-matrix.outputs.matrix) }}
+      matrix:
+        php_version: ${{ fromJson(needs.resolve-matrix.outputs.versions) }}
 
     steps:
       - name: Checkout repository
@@ -133,7 +122,7 @@ jobs:
           build-args: |
             PHP_VERSION=${{ matrix.php_version }}
           load: true
-          tags: local/laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-test
+          tags: local/laravel:php${{ matrix.php_version }}-test
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -141,7 +130,7 @@ jobs:
         id: trivy_scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: local/laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-test
+          image-ref: local/laravel:php${{ matrix.php_version }}-test
           scan-type: image
           format: table
           exit-code: 1
@@ -154,14 +143,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-alpine"
+          echo "::error::Trivy scan detected actionable CRITICAL/HIGH vulnerabilities in laravel:php${{ matrix.php_version }}-alpine"
 
           if [ -f trivy-report.txt ]; then
             echo "=== Trivy Scan Report ==="
             cat trivy-report.txt
           fi
 
-          TARGET_IMAGE="laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-alpine"
+          TARGET_IMAGE="laravel:php${{ matrix.php_version }}-alpine"
           ISSUE_TITLE="[Security Alert] Actionable CVEs detected in ${TARGET_IMAGE}"
 
           echo "Checking for existing open issue for ${TARGET_IMAGE}..."
@@ -190,8 +179,7 @@ jobs:
 
           ### Build & Run Metadata
           - **Target Image:** \`${TARGET_IMAGE}\`
-          - **Laravel Version:** \`${{ matrix.laravel_version }}\`
-          - **PHP Matrix Version:** \`${{ matrix.php_version }}\`
+          - **PHP Version:** \`${{ matrix.php_version }}\`
           - **Workflow:** \`${{ github.workflow }}\`
           - **Trigger:** \`${{ github.event_name }}\`
           - **Run URL:** [GitHub Actions Run #${{ github.run_id }}](${RUN_URL})
@@ -246,7 +234,7 @@ jobs:
 
       - name: Run container verification test
         run: |
-          IMAGE="local/laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-test"
+          IMAGE="local/laravel:php${{ matrix.php_version }}-test"
 
           echo "==> 1. Verifying non-root execution and extensions..."
           UID_VAL=$(docker run --rm "$IMAGE" id -u)
@@ -300,10 +288,10 @@ jobs:
 
       - name: Report image size metrics to job summary
         run: |
-          SRC_IMAGE="local/laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-test"
+          SRC_IMAGE="local/laravel:php${{ matrix.php_version }}-test"
           UNCOMPRESSED=$(docker images "$SRC_IMAGE" --format "{{.Size}}")
           COMPRESSED=$(docker save "$SRC_IMAGE" | gzip | wc -c | awk '{printf "%.1f MB", $1/1024/1024}')
-          echo "### 📦 Image Size Metrics: Laravel ${{ matrix.laravel_version }} / PHP ${{ matrix.php_version }}" >> $GITHUB_STEP_SUMMARY
+          echo "### 📦 Image Size Metrics: Laravel PHP ${{ matrix.php_version }} Alpine" >> $GITHUB_STEP_SUMMARY
           echo "| Metric | Size |" >> $GITHUB_STEP_SUMMARY
           echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
           echo "| **Download Size (Compressed)** | ~${COMPRESSED} |" >> $GITHUB_STEP_SUMMARY
@@ -321,10 +309,7 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.event.workflow_run.head_branch == 'main'
         run: |
           TARGET_REPO="ghcr.io/pfnapp/base/frameworks/laravel"
-          SRC_IMAGE="local/laravel:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-test"
-
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-alpine"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.laravel_version }}-php${{ matrix.php_version }}"
+          SRC_IMAGE="local/laravel:php${{ matrix.php_version }}-test"
 
           push_with_retry() {
             local tag="$1"
@@ -342,12 +327,11 @@ jobs:
             return 1
           }
 
-          push_with_retry "${TARGET_REPO}:${{ matrix.laravel_version }}-php${{ matrix.php_version }}-alpine"
-          push_with_retry "${TARGET_REPO}:${{ matrix.laravel_version }}-php${{ matrix.php_version }}"
+          docker tag "$SRC_IMAGE" "${TARGET_REPO}:php${{ matrix.php_version }}-alpine"
+          push_with_retry "${TARGET_REPO}:php${{ matrix.php_version }}-alpine"
 
-          # Push latest tag for the latest Laravel + its default PHP
-          if [ "${{ matrix.laravel_version }}" = "${{ needs.resolve-matrix.outputs.latest_laravel }}" ] && \
-             [ "${{ matrix.php_version }}" = "${{ needs.resolve-matrix.outputs.latest_php }}" ]; then
+          # Push latest tag for default PHP version
+          if [ "${{ matrix.php_version }}" = "${{ needs.resolve-matrix.outputs.default }}" ]; then
             docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
             push_with_retry "${TARGET_REPO}:latest"
           fi
