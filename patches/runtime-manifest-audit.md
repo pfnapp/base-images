@@ -21,7 +21,7 @@ The patch Dockerfiles select an upstream image and apply OS-level security harde
 | `memos` | `neosmemo/memos:0.31.0` | `5230` | `/var/opt/memos` | SQLite | `GET /` (HTTP 200) |
 | `nginx-proxy-manager` | `jc21/nginx-proxy-manager:2.15.1` | `81` (maps `8081:81`), `80`, `443` | `/data`, `/etc/letsencrypt` | MariaDB 11 | `GET /` on `81` (HTTP 200) |
 | `omniroute` | `diegosouzapw/omniroute:3.8.50` | `20128` (maps `20129:20128`) | `/app/data` | SQLite | `GET /` (307) / `GET /healthz` (200) |
-| `openclaw` | `openclaw/openclaw:2026.9.5` | `18789` | `/home/node/.openclaw` | SQLite | `GET /healthz` (200 `{"ok":true,"status":"live"}`) |
+| `openclaw` | `openclaw/openclaw:2026.9.6` | `18789` | `/home/node/.openclaw` | SQLite | `GET /healthz` (200 `{"ok":true,"status":"live"}`) |
 | `pocketbase` | `muchobien/pocketbase:0.40.4` | `8090` | `/pb/pb_data`, `/pb/pb_public` | SQLite | `GET /api/health` (HTTP 200) |
 | `shlink` | `shlinkio/shlink:5.1.6` | `8080` (maps `8082:8080`) | None | MariaDB 11 | `GET /rest/health` (HTTP 200) |
 | `stirling-pdf` | `stirlingtools/stirling-pdf:2.14.3` | `8080` (maps `8083:8080`) | `/configs`, `/customFiles` | H2 embedded | `GET /` on `8080` (HTTP 200/401) |

@@ -1,7 +1,7 @@
 services:
   openclaw:
     build: .
-    image: local/pfnapp-openclaw:2026.9.5
+    image: local/pfnapp-openclaw:2026.9.6
     # Same as the image default command; --allow-unconfigured keeps the
     # sample starting before any provider/channel is configured.
     command: ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
