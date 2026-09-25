@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-09-25T05:49:04.510Z",
+    "generatedAt": "2026-09-25T17:17:16.737Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 16,
-    "totalMonitoredVersions": 26,
+    "totalMonitoredVersions": 27,
     "runAsRootCount": 20,
     "criticalVulnerabilityCount": 30,
-    "highVulnerabilityCount": 290,
-    "pfnappScannedCount": 24,
+    "highVulnerabilityCount": 302,
+    "pfnappScannedCount": 25,
     "totalCveReduction": 0
   },
   "applications": [
@@ -120422,6 +120422,257 @@
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
           "scannedAt": "2026-09-25T05:49:04.510Z"
+        }
+      ],
+      "deprecatedVersions": []
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "AI Agents & Automation",
+      "image": "n8nio/n8n",
+      "registry": "docker.io",
+      "monitoredVersions": [
+        {
+          "tag": "2.41.3",
+          "fullRef": "n8nio/n8n:2.41.3",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 7,
+                "high": 21,
+                "medium": 58,
+                "low": 25,
+                "fixable": 0,
+                "total": 112
+              },
+              "app": {
+                "critical": 0,
+                "high": 12,
+                "medium": 19,
+                "low": 0,
+                "fixable": 0,
+                "total": 31
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 7,
+                "high": 21,
+                "medium": 58,
+                "low": 25,
+                "fixable": 0,
+                "total": 112,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-14456",
+                    "pkg": "libcrypto3",
+                    "installedVersion": "3.5.7-r1",
+                    "fixedVersion": "3.5.8-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-14456"
+                  },
+                  {
+                    "id": "CVE-2026-66046",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-66046"
+                  },
+                  {
+                    "id": "CVE-2026-76641",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76641"
+                  },
+                  {
+                    "id": "CVE-2026-76956",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76956"
+                  },
+                  {
+                    "id": "CVE-2026-76957",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76957"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 12,
+                "medium": 19,
+                "low": 0,
+                "fixable": 0,
+                "total": 31,
+                "topCves": [
+                  {
+                    "id": "GHSA-j95f-988m-3j2f",
+                    "pkg": "@tiptap/core",
+                    "installedVersion": "3.27.0",
+                    "fixedVersion": "3.30.5",
+                    "severity": "HIGH",
+                    "title": "GHSA-j95f-988m-3j2f"
+                  },
+                  {
+                    "id": "CVE-2026-83608",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.14",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83608"
+                  },
+                  {
+                    "id": "CVE-2026-83613",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.14",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83613"
+                  },
+                  {
+                    "id": "CVE-2026-83614",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.14",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83614"
+                  },
+                  {
+                    "id": "CVE-2026-83615",
+                    "pkg": "@xmldom/xmldom",
+                    "installedVersion": "0.8.14",
+                    "fixedVersion": "0.8.15, 0.9.12",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-83615"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "GHSA-j95f-988m-3j2f",
+              "pkg": "@tiptap/core",
+              "installedVersion": "3.27.0",
+              "fixedVersion": "3.30.5",
+              "severity": "HIGH",
+              "title": "GHSA-j95f-988m-3j2f"
+            },
+            {
+              "id": "CVE-2026-83608",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.14",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83608"
+            },
+            {
+              "id": "CVE-2026-83613",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.14",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83613"
+            },
+            {
+              "id": "CVE-2026-83614",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.14",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83614"
+            },
+            {
+              "id": "CVE-2026-83615",
+              "pkg": "@xmldom/xmldom",
+              "installedVersion": "0.8.14",
+              "fixedVersion": "0.8.15, 0.9.12",
+              "severity": "HIGH",
+              "title": "CVE-2026-83615"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-14456",
+              "pkg": "libcrypto3",
+              "installedVersion": "3.5.7-r1",
+              "fixedVersion": "3.5.8-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-14456"
+            },
+            {
+              "id": "CVE-2026-66046",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.3-r1",
+              "fixedVersion": "2.8.4-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-66046"
+            },
+            {
+              "id": "CVE-2026-76641",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.3-r1",
+              "fixedVersion": "2.8.4-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-76641"
+            },
+            {
+              "id": "CVE-2026-76956",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.3-r1",
+              "fixedVersion": "2.8.4-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-76956"
+            },
+            {
+              "id": "CVE-2026-76957",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.3-r1",
+              "fixedVersion": "2.8.4-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-76957"
+            }
+          ],
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-09-25T17:17:16.737Z"
         }
       ],
       "deprecatedVersions": []

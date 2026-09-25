@@ -1,0 +1,1157 @@
+{
+  "scannedAt": "2026-09-25T17:17:16.745Z",
+  "system": {
+    "total": 112,
+    "cves": [
+      {
+        "id": "CVE-2026-14456",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+      },
+      {
+        "id": "CVE-2026-18798",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: QUIC server may trigger double free when processing INITIAL packet"
+      },
+      {
+        "id": "CVE-2026-63072",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: heap buffer overflow in CMS key unwrapping"
+      },
+      {
+        "id": "CVE-2026-63076",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
+      },
+      {
+        "id": "CVE-2026-14457",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: RPK server signature algorithm selection can dereference a missing certificate"
+      },
+      {
+        "id": "CVE-2026-54874",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: excessive memory use buffering DTLS records for a future epoch"
+      },
+      {
+        "id": "CVE-2026-63073",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: untrusted sender DN used as format string in CMP response validation"
+      },
+      {
+        "id": "CVE-2026-63074",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: CMP indefinite cache growth of ExtraCerts"
+      },
+      {
+        "id": "CVE-2026-63075",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: QUIC ACK-only packet retention can cause memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-75803",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
+      },
+      {
+        "id": "CVE-2026-19931",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "MEDIUM",
+        "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
+      },
+      {
+        "id": "CVE-2026-82208",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+      },
+      {
+        "id": "CVE-2026-13608",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Authentication bypass in OpenLDAP SASL negotiation via Man-in-the-Middle (MITM) attack"
+      },
+      {
+        "id": "CVE-2026-18924",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
+      },
+      {
+        "id": "CVE-2026-80231",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Incorrect HTTPS connection reuse with Native CA Store"
+      },
+      {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
+        "id": "CVE-2026-82209",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "LOW",
+        "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-80256",
+        "pkg": "libcurl",
+        "installedVersion": "8.21.0-r0",
+        "fixedVersion": "8.22.0-r0",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-66046",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.3-r1",
+        "fixedVersion": "2.8.4-r0",
+        "severity": "HIGH",
+        "title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing"
+      },
+      {
+        "id": "CVE-2026-76641",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.3-r1",
+        "fixedVersion": "2.8.4-r0",
+        "severity": "HIGH",
+        "title": "expat: Expat: Denial of Service via XML external entity parsing"
+      },
+      {
+        "id": "CVE-2026-76956",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.3-r1",
+        "fixedVersion": "2.8.4-r0",
+        "severity": "HIGH",
+        "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
+      },
+      {
+        "id": "CVE-2026-76957",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.3-r1",
+        "fixedVersion": "2.8.4-r0",
+        "severity": "HIGH",
+        "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
+      },
+      {
+        "id": "CVE-2026-93990",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.3-r1",
+        "fixedVersion": "2.8.5-r0",
+        "severity": "HIGH",
+        "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
+      },
+      {
+        "id": "CVE-2026-14456",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+      },
+      {
+        "id": "CVE-2026-18798",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: QUIC server may trigger double free when processing INITIAL packet"
+      },
+      {
+        "id": "CVE-2026-63072",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: heap buffer overflow in CMS key unwrapping"
+      },
+      {
+        "id": "CVE-2026-63076",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "MEDIUM",
+        "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
+      },
+      {
+        "id": "CVE-2026-14457",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: RPK server signature algorithm selection can dereference a missing certificate"
+      },
+      {
+        "id": "CVE-2026-54874",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: excessive memory use buffering DTLS records for a future epoch"
+      },
+      {
+        "id": "CVE-2026-63073",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: untrusted sender DN used as format string in CMP response validation"
+      },
+      {
+        "id": "CVE-2026-63074",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: CMP indefinite cache growth of ExtraCerts"
+      },
+      {
+        "id": "CVE-2026-63075",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: QUIC ACK-only packet retention can cause memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-75803",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r1",
+        "fixedVersion": "3.5.8-r0",
+        "severity": "LOW",
+        "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-client-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-client-default",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-keygen",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-server-common",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-sftp-server",
+        "installedVersion": "10.3_p1-r0",
+        "fixedVersion": "10.3_p1-r1",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      }
+    ]
+  },
+  "app": {
+    "total": 31,
+    "cves": [
+      {
+        "id": "GHSA-j95f-988m-3j2f",
+        "pkg": "@tiptap/core",
+        "installedVersion": "3.27.0",
+        "fixedVersion": "3.30.5",
+        "severity": "HIGH",
+        "title": "Tiptap: Quadratic ReDoS in block and inline Markdown attribute parsing"
+      },
+      {
+        "id": "GHSA-cp6q-959q-f8rh",
+        "pkg": "@tiptap/core",
+        "installedVersion": "3.27.0",
+        "fixedVersion": "3.30.4",
+        "severity": "MEDIUM",
+        "title": "Tiptap: mergeAttributes() turns an own __proto__ key into inherited executable DOM attributes"
+      },
+      {
+        "id": "CVE-2026-83608",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "HIGH",
+        "title": "xmldom: @xmldom/xmldom: xmldom: XML Markup Injection via DocType Name Bypass"
+      },
+      {
+        "id": "CVE-2026-83613",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "HIGH",
+        "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service due to quadratic-time attribute processing"
+      },
+      {
+        "id": "CVE-2026-83614",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "HIGH",
+        "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service via quadratic-time XML parsing"
+      },
+      {
+        "id": "CVE-2026-83615",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "HIGH",
+        "title": "xmldom: @xmldom/xmldom: xmldom: Denial of Service via quadratic memory consumption"
+      },
+      {
+        "id": "CVE-2026-83616",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "HIGH",
+        "title": "xmldom: xmldom: XML Structure Injection via Unvalidated Processing Instruction Targets"
+      },
+      {
+        "id": "CVE-2026-83619",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15",
+        "severity": "HIGH",
+        "title": "@xmldom/xmldom: xmldom: Denial of Service via crafted XML input"
+      },
+      {
+        "id": "CVE-2026-83610",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "MEDIUM",
+        "title": "xmldom: @xmldom/xmldom: xmldom: XML fragment injection via invalid EntityReference serialization"
+      },
+      {
+        "id": "CVE-2026-83611",
+        "pkg": "@xmldom/xmldom",
+        "installedVersion": "0.8.14",
+        "fixedVersion": "0.8.15, 0.9.12",
+        "severity": "MEDIUM",
+        "title": "xmldom: xmldom: Malformed XML end tag parsing leads to content discard and security bypass"
+      },
+      {
+        "id": "CVE-2026-77301",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "HIGH",
+        "title": "adm-zip: adm-zip: Denial of Service via uncontrolled memory allocation"
+      },
+      {
+        "id": "CVE-2026-76845",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "adm-zip: adm-zip: Arbitrary File Overwrite via Symlink Following"
+      },
+      {
+        "id": "CVE-2025-57665",
+        "pkg": "element-plus",
+        "installedVersion": "2.4.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Element Plus Link component (el-link) implements insufficient input validation for the href attribute"
+      },
+      {
+        "id": "CVE-2026-84363",
+        "pkg": "hono",
+        "installedVersion": "4.12.34",
+        "fixedVersion": "4.13.5",
+        "severity": "MEDIUM",
+        "title": "Hono: Query parser reads parameters after the URL fragment, causing cache-key and proxy interpretation differentials"
+      },
+      {
+        "id": "CVE-2026-84364",
+        "pkg": "hono",
+        "installedVersion": "4.12.34",
+        "fixedVersion": "4.13.5",
+        "severity": "MEDIUM",
+        "title": "Hono: Unbounded dot-notation nesting in `parseBody()` can cause memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-84365",
+        "pkg": "hono",
+        "installedVersion": "4.12.34",
+        "fixedVersion": "4.13.5",
+        "severity": "MEDIUM",
+        "title": "Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory"
+      },
+      {
+        "id": "CVE-2026-2327",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.1.1",
+        "severity": "MEDIUM",
+        "title": "markdown-it: markdown-it: Denial of Service via Regular Expression Denial of Service in linkify function"
+      },
+      {
+        "id": "CVE-2026-48988",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.2.0",
+        "severity": "MEDIUM",
+        "title": "markdown-it: markdown-it: Denial of Service via quadratic processing of smartquotes with typographer enabled"
+      },
+      {
+        "id": "CVE-2026-82659",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "9.0.1",
+        "severity": "HIGH",
+        "title": "nodemailer: Nodemailer: Arbitrary file read and Server-Side Request Forgery via raw option bypass"
+      },
+      {
+        "id": "GHSA-2x7j-588g-ccc2",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "9.1.0",
+        "severity": "HIGH",
+        "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list"
+      },
+      {
+        "id": "GHSA-8m3c-c648-2xjj",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "9.1.1",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: resolveContent() on a MailMessage bypasses disableFileAccess/disableUrlAccess when called with the legacy signature"
+      },
+      {
+        "id": "GHSA-cc9r-2j5m-2m83",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "9.1.0",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Recipient-domain validation bypass via RFC 5322 comment mis-parsing leads to email delivery to an attacker-controlled domain"
+      },
+      {
+        "id": "GHSA-wmmp-3585-3rmp",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "9.1.0",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: IDN/Punycode domain allow-list bypass leads to email delivery to an attacker-controlled domain"
+      },
+      {
+        "id": "CVE-2026-82417",
+        "pkg": "qs",
+        "installedVersion": "6.15.2",
+        "fixedVersion": "6.16.0",
+        "severity": "MEDIUM",
+        "title": "qs: qs: Denial of Service via improper validation in stringify function"
+      },
+      {
+        "id": "CVE-2026-82562",
+        "pkg": "qs",
+        "installedVersion": "6.15.2",
+        "fixedVersion": "6.16.0",
+        "severity": "MEDIUM",
+        "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
+      },
+      {
+        "id": "CVE-2024-1899",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Showdown vulnerable to Regular Expression Denial of Service (ReDoS) in link/anchor parsing"
+      },
+      {
+        "id": "CVE-2026-59710",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "showdown: Showdown: Stored Cross-Site Scripting via unescaped table header ID attributes in markdown"
+      },
+      {
+        "id": "CVE-2026-59711",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "showdown: Showdown: Cross-site scripting via unescaped metadata title allows arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-71429",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.5.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Denial of Service due to inefficient processing of deeply nested JSON"
+      },
+      {
+        "id": "CVE-2026-63376",
+        "pkg": "toml",
+        "installedVersion": "3.0.0",
+        "fixedVersion": "4.1.2",
+        "severity": "HIGH",
+        "title": "toml-node: toml-node: Arbitrary Code Execution via Prototype Pollution in TOML Parsing"
+      },
+      {
+        "id": "CVE-2026-77465",
+        "pkg": "toml",
+        "installedVersion": "3.0.0",
+        "fixedVersion": "4.2.0",
+        "severity": "HIGH",
+        "title": "toml-node: toml-node: Denial of Service via uncontrolled recursion in TOML parsing"
+      }
+    ]
+  }
+}
