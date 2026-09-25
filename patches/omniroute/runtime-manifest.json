@@ -10,6 +10,7 @@
     "liveness": { "path": "/", "port": 20128 },
     "readiness": { "path": "/dashboard", "port": 20128 }
   },
+  "notes": "Upstream entrypoint (/app/check-permissions.sh) only tests write access to DATA_DIR without requiring root privileges or su-exec. Compatible with Kubernetes runAsNonRoot: true and arbitrary non-root UIDs (e.g. 1000 or 10001). Ensure volume permissions (via fsGroup) permit write access to /app/data to avoid warning logs.",
   "tunables": [
     {
       "key": "JWT_SECRET",

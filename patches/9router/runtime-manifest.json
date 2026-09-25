@@ -7,6 +7,7 @@
   "ports": { "default": 20128, "protocol": "HTTP" },
   "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
   "probes": { "liveness": { "path": "/", "port": 20128 }, "readiness": { "path": "/", "port": 20128 } },
+  "notes": "Upstream entrypoint (/entrypoint.sh) executes `chown` and `su-exec node` which requires initial root privileges to drop down to UID 1000. When running under Kubernetes with a non-root security context (e.g. runAsNonRoot: true or runAsUser: 10001), the container will fail with 'su-exec: setgroups: Operation not permitted'. To run safely as non-root, override the container command directly to ['node', 'custom-server.js'] and configure securityContext.fsGroup to grant write access to /app/data.",
   "tunables": [
     { "key": "PORT", "label": "Server Port", "type": "number", "required": false, "default": 20128, "example": 20128, "safe": true, "category": "networking", "description": "HTTP port used by the upstream Node server.", "troubleshooting": "Probes fail after a change unless the compose mapping (20128:20128) and the healthcheck URL are updated to match." },
     { "key": "HOSTNAME", "label": "Bind Address", "type": "string", "required": false, "default": "0.0.0.0", "example": "0.0.0.0", "safe": true, "category": "networking", "description": "Address on which the upstream server listens.", "troubleshooting": "Must be 0.0.0.0 in a container; a loopback bind makes the published port unreachable from the host." },
