@@ -1,0 +1,21 @@
+services:
+  n8n:
+    build: .
+    image: local/pfnapp-n8n:2.40.6
+    ports: ["5678:5678"]
+    environment:
+      NODE_ENV: production
+      N8N_PORT: "5678"
+      N8N_HOST: "0.0.0.0"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      GENERIC_TIMEZONE: "UTC"
+      TZ: "UTC"
+    volumes: ["n8n-data:/home/node/.n8n"]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5678/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+volumes:
+  n8n-data:

@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "runtime": "n8n",
+  "framework": "n8n",
+  "version": "2.40.6",
+  "baseImage": "ghcr.io/pfnapp/n8n:2.40.6",
+  "ports": { "default": 5678, "protocol": "HTTP" },
+  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
+  "probes": {
+    "liveness": { "path": "/healthz", "port": 5678 },
+    "readiness": { "path": "/healthz/readiness", "port": 5678 }
+  },
+  "tunables": [
+    {
+      "key": "N8N_PORT",
+      "label": "n8n Port",
+      "type": "number",
+      "required": false,
+      "default": 5678,
+      "example": 5678,
+      "safe": true,
+      "category": "networking",
+      "description": "Port on which n8n listens inside the container.",
+      "troubleshooting": "Must match the published container port."
+    },
+    {
+      "key": "N8N_HOST",
+      "label": "n8n Host",
+      "type": "string",
+      "required": false,
+      "default": "0.0.0.0",
+      "example": "0.0.0.0",
+      "safe": true,
+      "category": "networking",
+      "description": "Host address on which n8n listens.",
+      "troubleshooting": "Must be 0.0.0.0 in Docker so container port forwarding works."
+    },
+    {
+      "key": "NODE_ENV",
+      "label": "Node Environment",
+      "type": "string",
+      "required": false,
+      "default": "production",
+      "example": "production",
+      "safe": true,
+      "category": "runtime",
+      "description": "Node.js environment mode.",
+      "troubleshooting": "Keep at production for optimal performance and security."
+    },
+    {
+      "key": "N8N_WEBHOOK_URL",
+      "label": "Webhook URL",
+      "type": "string",
+      "required": false,
+      "example": "https://n8n.example.com/",
+      "safe": true,
+      "category": "networking",
+      "description": "Public URL used for webhooks and trigger callbacks when running behind a reverse proxy.",
+      "troubleshooting": "Required when n8n is deployed behind a reverse proxy or SSL terminator so webhook links are registered with external services using HTTPS."
+    },
+    {
+      "key": "N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS",
+      "label": "Enforce Settings File Permissions",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "example": true,
+      "safe": true,
+      "category": "security",
+      "description": "Enforce strict file permissions (0600) on n8n config/encryption key files.",
+      "troubleshooting": "Set to false only if mounting storage on filesystems (e.g. NTFS / CIFS) that do not support POSIX permission modes."
+    },
+    {
+      "key": "N8N_ENCRYPTION_KEY",
+      "label": "Encryption Key",
+      "type": "string",
+      "required": false,
+      "example": "local-only-dummy-encryption-key-for-test",
+      "safe": true,
+      "category": "security",
+      "description": "Key used to encrypt credentials stored in the database.",
+      "troubleshooting": "If unset, n8n auto-generates a key in the persistent volume (~/.n8n/config). Back up this key; if lost, credentials cannot be decrypted."
+    },
+    {
+      "key": "GENERIC_TIMEZONE",
+      "label": "Generic Timezone",
+      "type": "string",
+      "required": false,
+      "default": "UTC",
+      "example": "Asia/Jakarta",
+      "safe": true,
+      "category": "runtime",
+      "description": "Default timezone used in workflow Cron / Schedule triggers.",
+      "troubleshooting": "Use standard IANA timezone name (e.g. UTC, Asia/Jakarta)."
+    },
+    {
+      "key": "TZ",
+      "label": "System Timezone",
+      "type": "string",
+      "required": false,
+      "default": "UTC",
+      "example": "Asia/Jakarta",
+      "safe": true,
+      "category": "runtime",
+      "description": "System timezone for the container process.",
+      "troubleshooting": "Set to the desired timezone to ensure log timestamps align with your local time."
+    },
+    {
+      "key": "DB_TYPE",
+      "label": "Database Type",
+      "type": "string",
+      "required": false,
+      "default": "sqlite",
+      "example": "postgresdb",
+      "safe": true,
+      "category": "storage",
+      "description": "Database backend type (sqlite or postgresdb).",
+      "troubleshooting": "Defaults to embedded SQLite in ~/.n8n. Set to postgresdb for multi-instance or high-volume queue mode."
+    },
+    {
+      "key": "DB_POSTGRESDB_HOST",
+      "label": "PostgreSQL Host",
+      "type": "string",
+      "required": false,
+      "example": "postgres",
+      "safe": true,
+      "category": "storage",
+      "description": "Hostname or IP for PostgreSQL database when DB_TYPE=postgresdb.",
+      "troubleshooting": "Ensure PostgreSQL is reachable and database is initialized before starting n8n."
+    },
+    {
+      "key": "DB_POSTGRESDB_PORT",
+      "label": "PostgreSQL Port",
+      "type": "number",
+      "required": false,
+      "default": 5432,
+      "example": 5432,
+      "safe": true,
+      "category": "storage",
+      "description": "Port for PostgreSQL database.",
+      "troubleshooting": "Default is 5432."
+    },
+    {
+      "key": "DB_POSTGRESDB_DATABASE",
+      "label": "PostgreSQL Database Name",
+      "type": "string",
+      "required": false,
+      "default": "n8n",
+      "example": "n8n",
+      "safe": true,
+      "category": "storage",
+      "description": "PostgreSQL database name.",
+      "troubleshooting": "Database must exist or user must have CREATE DATABASE privilege."
+    },
+    {
+      "key": "DB_POSTGRESDB_USER",
+      "label": "PostgreSQL User",
+      "type": "string",
+      "required": false,
+      "example": "n8n",
+      "safe": true,
+      "category": "storage",
+      "description": "PostgreSQL username.",
+      "troubleshooting": "Must have read/write/ddl permissions on the database."
+    },
+    {
+      "key": "DB_POSTGRESDB_PASSWORD",
+      "label": "PostgreSQL Password",
+      "type": "string",
+      "required": false,
+      "example": "local-only-postgres-password-placeholder",
+      "safe": true,
+      "category": "storage",
+      "description": "PostgreSQL password.",
+      "troubleshooting": "Provide password securely via environment variable or secret."
+    },
+    {
+      "key": "N8N_EDITOR_BASE_URL",
+      "label": "Editor Base URL",
+      "type": "string",
+      "required": false,
+      "example": "https://n8n.example.com/",
+      "safe": true,
+      "category": "networking",
+      "description": "Base URL where the n8n frontend editor is hosted.",
+      "troubleshooting": "Used for generating email invite links and external redirects."
+    },
+    {
+      "key": "N8N_DIAGNOSTICS_ENABLED",
+      "label": "Diagnostics Enabled",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "example": false,
+      "safe": true,
+      "category": "runtime",
+      "description": "Whether anonymous telemetry and usage diagnostics are sent to n8n.",
+      "troubleshooting": "Set to false to run completely telemetry-free in isolated environments."
+    }
+  ],
+  "notes": "n8n runs as non-root user (node, UID 1000, GID 1000). Probes are GET /healthz (liveness) and GET /healthz/readiness (readiness) on port 5678. Data is stored in /home/node/.n8n. By default uses SQLite; can be switched to PostgreSQL via DB_TYPE=postgresdb."
+}
