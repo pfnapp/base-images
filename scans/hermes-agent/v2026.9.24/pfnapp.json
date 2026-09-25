@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-24T11:55:03.042Z",
+  "scannedAt": "2026-09-25T05:49:36.416Z",
   "system": {
-    "total": 851,
+    "total": 856,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -652,6 +652,22 @@
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
       },
       {
+        "id": "CVE-2026-96674",
+        "pkg": "libasound2-data",
+        "installedVersion": "1.2.14-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
+      },
+      {
+        "id": "CVE-2026-96675",
+        "pkg": "libasound2-data",
+        "installedVersion": "1.2.14-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Denial of Service via malicious ALSA configuration file"
+      },
+      {
         "id": "CVE-2026-56109",
         "pkg": "libasound2-data",
         "installedVersion": "1.2.14-1+deb13u1",
@@ -666,6 +682,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
+      },
+      {
+        "id": "CVE-2026-96674",
+        "pkg": "libasound2t64",
+        "installedVersion": "1.2.14-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
+      },
+      {
+        "id": "CVE-2026-96675",
+        "pkg": "libasound2t64",
+        "installedVersion": "1.2.14-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Denial of Service via malicious ALSA configuration file"
       },
       {
         "id": "CVE-2026-56109",
@@ -4684,6 +4716,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-96889",
+        "pkg": "librsvg2-2",
+        "installedVersion": "2.60.0+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "librsvg: Use-after-free when XML includes have duplicated entities"
+      },
+      {
         "id": "CVE-2023-45927",
         "pkg": "libslang2",
         "installedVersion": "2.3.3-5+b2",
@@ -6814,7 +6854,7 @@
     ]
   },
   "app": {
-    "total": 53,
+    "total": 48,
     "cves": [
       {
         "id": "CVE-2026-84373",
@@ -6823,38 +6863,6 @@
         "fixedVersion": "4.1.11, 5.0.0-rc.2",
         "severity": "MEDIUM",
         "title": "vitest: Vitest: Arbitrary File Read via Path Traversal in HMR WebSocket"
-      },
-      {
-        "id": "CVE-2026-45819",
-        "pkg": "baseline-browser-mapping",
-        "installedVersion": "2.10.43",
-        "fixedVersion": "2.11.0",
-        "severity": "MEDIUM",
-        "title": "baseline-browser-mapping: baseline-browser-mapping: Denial of Service via improper input handling"
-      },
-      {
-        "id": "CVE-2026-73088",
-        "pkg": "browserslist",
-        "installedVersion": "4.28.6",
-        "fixedVersion": "4.28.7",
-        "severity": "HIGH",
-        "title": "browserslist: Browserslist: Prototype pollution leading to denial of service"
-      },
-      {
-        "id": "CVE-2026-73089",
-        "pkg": "browserslist",
-        "installedVersion": "4.28.6",
-        "fixedVersion": "4.28.7",
-        "severity": "HIGH",
-        "title": "browserslist: Browserslist: Denial of Service via unbounded memory growth from distinct query results"
-      },
-      {
-        "id": "CVE-2026-85062",
-        "pkg": "colord",
-        "installedVersion": "2.9.3",
-        "fixedVersion": "2.9.4",
-        "severity": "MEDIUM",
-        "title": "colord: omgovich/colord: Colord: Denial of Service via oversized malformed color strings"
       },
       {
         "id": "CVE-2026-54272",
@@ -6871,14 +6879,6 @@
         "fixedVersion": "10.2.2",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Server-Side Request Forgery (SSRF) and trust-boundary bypass"
-      },
-      {
-        "id": "CVE-2026-84371",
-        "pkg": "sanitize-html",
-        "installedVersion": "2.17.6",
-        "fixedVersion": "2.17.7",
-        "severity": "MEDIUM",
-        "title": "sanitize-html: stored XSS via SVG SMIL URI-list scheme-policy bypass"
       },
       {
         "id": "CVE-2026-59873",
