@@ -12,4 +12,3 @@ RUN apt-get update && \
     usermod -u 1000 hermes && \
     groupmod -g 1000 hermes && \
     chown -R hermes:hermes /opt/data
-
