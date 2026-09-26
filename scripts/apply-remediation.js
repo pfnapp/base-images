@@ -38,31 +38,27 @@ if (tagMatch) {
 }
 
 if (!dockerfile) {
-  console.error('❌ Could not find valid Dockerfile content in Codex response.');
-  process.exit(1);
+  console.warn('ℹ️ No valid Dockerfile content found in Codex response. Keeping existing Dockerfile.');
+} else {
+  // Ensure it starts with reasonable dockerfile tokens
+  const firstNonComment = dockerfile.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'))[0] || '';
+  if (!firstNonComment.startsWith('FROM') && !firstNonComment.startsWith('ARG') && !firstNonComment.startsWith('syntax=')) {
+    console.warn(`⚠️ Extracted content does not appear to be a valid Dockerfile (starts with: "${firstNonComment}"). Keeping existing Dockerfile.`);
+  } else {
+    fs.writeFileSync(targetDockerfile, dockerfile + '\n', 'utf8');
+    console.log(`✅ Applied remediated Dockerfile to ${targetDockerfile}`);
+  }
 }
-
-// Ensure it starts with reasonable dockerfile tokens
-const firstNonComment = dockerfile.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'))[0] || '';
-if (!firstNonComment.startsWith('FROM') && !firstNonComment.startsWith('ARG') && !firstNonComment.startsWith('syntax=')) {
-  console.error(`⚠️ Extracted content does not appear to be a valid Dockerfile (starts with: "${firstNonComment}")`);
-  process.exit(1);
-}
-
-fs.writeFileSync(targetDockerfile, dockerfile + '\n', 'utf8');
-console.log(`✅ Applied remediated Dockerfile to ${targetDockerfile}`);
 
 // 2. Extract Summary
-let summary = '### 🛡️ Remediation Summary\nAutomated remediation applied to Dockerfile.';
+let summary = '### 🛡️ Remediation Summary\nAutomated analysis completed.';
 const sumMatch = content.match(/<<<SUMMARY>>>([\s\S]*?)<<<END_SUMMARY>>>/);
 if (sumMatch) {
   summary = sumMatch[1].trim();
 } else {
-  // Use text before any code block
+  // Use raw response as summary if short, or text before code block
   const beforeCode = content.split('```')[0].trim();
-  if (beforeCode.length > 20) {
-    summary = beforeCode;
-  }
+  summary = beforeCode.length > 20 ? beforeCode : content.trim();
 }
 
 if (summaryOutputFile) {

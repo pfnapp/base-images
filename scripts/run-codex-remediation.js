@@ -143,6 +143,7 @@ async function generate() {
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     console.log(`✅ Remediation response generated successfully in ${elapsed}s!`);
     console.log(`- Output saved to: ${outputFile} (${content.length} characters)`);
+    console.log(`--- RESPONSE PREVIEW ---\n${content}\n-----------------------`);
   } catch (err) {
     clearInterval(progressInterval);
     clearTimeout(timeoutId);
