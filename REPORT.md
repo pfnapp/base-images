@@ -2,7 +2,7 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-26T05:51:16.970Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-26T10:23:41.294Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
