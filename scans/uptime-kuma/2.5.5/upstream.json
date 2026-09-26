@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-25T05:49:16.522Z",
+  "scannedAt": "2026-09-26T05:51:32.228Z",
   "system": {
-    "total": 5934,
+    "total": 5895,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -26,46 +26,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[Privilege escalation possible to other user than root]"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
       },
       {
         "id": "CVE-2026-13595",
@@ -404,6 +364,38 @@
         "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via type confusion in crafted HTML"
       },
       {
+        "id": "CVE-2026-78978",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution in Google Chrome via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-78989",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79019",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via a crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79043",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Remote code execution via crafted HTML page"
+      },
+      {
         "id": "CVE-2026-79127",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -428,6 +420,94 @@
         "title": "chromium-browser: angle: Chromium: Remote code execution via out-of-bounds write in ANGLE"
       },
       {
+        "id": "CVE-2026-79138",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: chromium-browser: Arbitrary Code Execution via out-of-bounds write in ANGLE"
+      },
+      {
+        "id": "CVE-2026-79142",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: ANGLE: angle: ANGLE: Arbitrary Code Execution via Crafted HTML Page"
+      },
+      {
+        "id": "CVE-2026-79149",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
+      },
+      {
+        "id": "CVE-2026-79188",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79189",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via a crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79230",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via improper input validation"
+      },
+      {
+        "id": "CVE-2026-79269",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium: Web origin policy bypass via uninitialized resource in ANGLE"
+      },
+      {
+        "id": "CVE-2026-79275",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via use after free"
+      },
+      {
+        "id": "CVE-2026-79282",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87500",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87512",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium-browser: Arbitrary code execution via use-after-free vulnerability in ANGLE"
+      },
+      {
         "id": "CVE-2026-87534",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -442,6 +522,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "CRITICAL",
         "title": "Incorrect authorization in Extensions in Google Chrome prior to 153.0. ..."
+      },
+      {
+        "id": "CVE-2026-87621",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Google Chrome (ANGLE): Arbitrary Code Execution vulnerability"
       },
       {
         "id": "CVE-2026-87654",
@@ -497,7 +585,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9879",
@@ -505,7 +593,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9880",
@@ -3313,7 +3401,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-14417",
@@ -3329,7 +3417,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-14419",
@@ -3377,7 +3465,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-14426",
@@ -3441,7 +3529,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.114-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-15110",
@@ -3716,6 +3804,14 @@
         "title": "chromium-browser: chromium-browser: Use after free in UI"
       },
       {
+        "id": "CVE-2026-16413",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "150.0.7871.181-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium: Sandbox escape via out-of-bounds write in ANGLE"
+      },
+      {
         "id": "CVE-2026-16414",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -3865,7 +3961,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17670",
@@ -3881,7 +3977,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-17672",
@@ -3913,7 +4009,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17676",
@@ -3921,7 +4017,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17677",
@@ -3929,7 +4025,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17678",
@@ -3937,7 +4033,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-17679",
@@ -3969,7 +4065,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-17683",
@@ -3977,7 +4073,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17685",
@@ -4001,7 +4097,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: ANGLE: chromium-browser: Type Confusion in ANGLE"
+        "title": "chromium-browser: ANGLE: angle: chromium-browser: Type Confusion in ANGLE"
       },
       {
         "id": "CVE-2026-17688",
@@ -4017,7 +4113,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17690",
@@ -4033,7 +4129,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17692",
@@ -4065,7 +4161,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17696",
@@ -4209,7 +4305,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17715",
@@ -4233,7 +4329,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-17718",
@@ -4241,7 +4337,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17719",
@@ -4265,7 +4361,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17722",
@@ -4780,6 +4876,14 @@
         "title": "chromium-browser: chromium-browser: Use after free in V8"
       },
       {
+        "id": "CVE-2026-78906",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via race condition in HTML processing"
+      },
+      {
         "id": "CVE-2026-78939",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -4788,12 +4892,36 @@
         "title": "chromium-browser: chromium-browser: Use after free in Chromecast"
       },
       {
+        "id": "CVE-2026-78965",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE: Information disclosure via uninitialized resource"
+      },
+      {
         "id": "CVE-2026-79013",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Improper input validation in Sync"
+      },
+      {
+        "id": "CVE-2026-79047",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Views"
+      },
+      {
+        "id": "CVE-2026-79048",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution in Google Chrome via crafted HTML page"
       },
       {
         "id": "CVE-2026-79066",
@@ -4818,6 +4946,22 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Improper input validation in DevTools"
+      },
+      {
+        "id": "CVE-2026-79240",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via out-of-bounds write"
+      },
+      {
+        "id": "CVE-2026-79270",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium-browser: Memory disclosure via uninitialized resource in ANGLE"
       },
       {
         "id": "CVE-2026-79285",
@@ -4932,6 +5076,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Isolated"
       },
       {
+        "id": "CVE-2026-87470",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Improper quantity validation in Tint"
+      },
+      {
         "id": "CVE-2026-87471",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -4954,6 +5106,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Network"
+      },
+      {
+        "id": "CVE-2026-87528",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Type confusion in Rust"
       },
       {
         "id": "CVE-2026-87569",
@@ -5002,6 +5162,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Type confusion in XML"
+      },
+      {
+        "id": "CVE-2026-87637",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Extensions"
       },
       {
         "id": "CVE-2026-87648",
@@ -5225,7 +5393,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9887",
@@ -5281,7 +5449,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9900",
@@ -5289,7 +5457,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9901",
@@ -5297,7 +5465,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9902",
@@ -5321,7 +5489,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9905",
@@ -5353,7 +5521,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-9909",
@@ -5369,7 +5537,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds memory access in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds memory access in ANGLE"
       },
       {
         "id": "CVE-2026-9911",
@@ -5377,7 +5545,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9912",
@@ -5417,7 +5585,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9917",
@@ -5481,7 +5649,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9925",
@@ -5489,7 +5657,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9926",
@@ -5497,7 +5665,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9927",
@@ -5505,7 +5673,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9928",
@@ -5513,7 +5681,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-9929",
@@ -5545,7 +5713,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9933",
@@ -5569,7 +5737,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-9936",
@@ -5609,7 +5777,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9941",
@@ -5617,7 +5785,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9942",
@@ -5625,7 +5793,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-9943",
@@ -5833,7 +6001,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-9970",
@@ -5881,7 +6049,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read and write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read and write in ANGLE"
       },
       {
         "id": "CVE-2026-9976",
@@ -5937,7 +6105,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-9983",
@@ -6073,7 +6241,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-10004",
@@ -9769,7 +9937,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17741",
@@ -9849,7 +10017,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17751",
@@ -10089,7 +10257,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17786",
@@ -10121,7 +10289,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17791",
@@ -10201,7 +10369,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Out of bounds memory access in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds memory access in ANGLE"
       },
       {
         "id": "CVE-2026-17802",
@@ -10281,7 +10449,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17812",
@@ -10393,7 +10561,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17833",
@@ -10473,7 +10641,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-17848",
@@ -10996,6 +11164,22 @@
         "title": "chromium-browser: skia: chromium-browser: skia: Information leak via crafted HTML page in Google Chrome"
       },
       {
+        "id": "CVE-2026-79221",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
+      },
+      {
+        "id": "CVE-2026-79229",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: angle: Chromium: Information disclosure via uninitialized resource in ANGLE"
+      },
+      {
         "id": "CVE-2026-79237",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -11364,6 +11548,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in ServiceWorker"
       },
       {
+        "id": "CVE-2026-87602",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Information disclosure via crafted HTML page"
+      },
+      {
         "id": "CVE-2026-87619",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -11545,7 +11737,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-11216",
@@ -14020,6 +14212,14 @@
         "title": "chromium-browser: chromium-browser: Inappropriate implementation in WebXR"
       },
       {
+        "id": "CVE-2026-18006",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "151.0.7922.71-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: chromium-browser: Inappropriate implementation in Google Lens"
+      },
+      {
         "id": "CVE-2026-18007",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -14130,6 +14330,14 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "LOW",
         "title": "chromium-browser: skia: chromium-browser: Out of bounds read in Skia"
+      },
+      {
+        "id": "CVE-2026-79223",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: chromium-browser: Integer overflow in Chromium"
       },
       {
         "id": "CVE-2026-84329",
@@ -14290,14 +14498,6 @@
         "fixedVersion": "150.0.7871.181-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in Aura in Google Chrome prior to 150.0.7871.128 allowe ..."
-      },
-      {
-        "id": "CVE-2026-16413",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "150.0.7871.181-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 150.0.7871.182  ..."
       },
       {
         "id": "CVE-2026-16415",
@@ -14644,14 +14844,6 @@
         "title": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS ..."
       },
       {
-        "id": "CVE-2026-18006",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "151.0.7922.71-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Inappropriate implementation in Google Lens in Google Chrome prior to  ..."
-      },
-      {
         "id": "CVE-2026-18011",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -14786,14 +14978,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incomplete cleanup in SiteIsolation in Google Chrome prior to 152.0.79 ..."
-      },
-      {
-        "id": "CVE-2026-78906",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-78907",
@@ -15092,14 +15276,6 @@
         "title": "Use after free in Sync in Google Chrome on on iOS prior to 152.0.7977. ..."
       },
       {
-        "id": "CVE-2026-78965",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
         "id": "CVE-2026-78966",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -15156,14 +15332,6 @@
         "title": "Uninitialized resource in GPU in Google Chrome on on Android prior to  ..."
       },
       {
-        "id": "CVE-2026-78978",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
-      },
-      {
         "id": "CVE-2026-78980",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -15218,14 +15386,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Information leak in Canvas in Google Chrome prior to 152.0.7977.65 all ..."
-      },
-      {
-        "id": "CVE-2026-78989",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
       },
       {
         "id": "CVE-2026-78990",
@@ -15396,14 +15556,6 @@
         "title": "Information leak in FoldableAPIs in Google Chrome prior to 152.0.7977. ..."
       },
       {
-        "id": "CVE-2026-79019",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-79021",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -15540,14 +15692,6 @@
         "title": "Missing authorization in Payments in Google Chrome on on Android prior ..."
       },
       {
-        "id": "CVE-2026-79043",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
         "id": "CVE-2026-79044",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -15562,22 +15706,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Race condition in Permissions in Google Chrome on on Android prior to  ..."
-      },
-      {
-        "id": "CVE-2026-79047",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Views in Google Chrome prior to 152.0.7977.65 allowe ..."
-      },
-      {
-        "id": "CVE-2026-79048",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
       },
       {
         "id": "CVE-2026-79049",
@@ -16100,14 +16228,6 @@
         "title": "Incorrect authorization in ServiceWorker in Google Chrome prior to 152 ..."
       },
       {
-        "id": "CVE-2026-79138",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-79139",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -16132,14 +16252,6 @@
         "title": "Incorrect authorization in Browser in Google Chrome prior to 152.0.797 ..."
       },
       {
-        "id": "CVE-2026-79142",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Buffer overflow in ANGLE in Google Chrome on on Android prior to 152.0 ..."
-      },
-      {
         "id": "CVE-2026-79143",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -16162,14 +16274,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Off-by-one error in DevTools in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
-        "id": "CVE-2026-79149",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-79150",
@@ -16322,22 +16426,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in WebRTC in Google Chrome prior to 152.0.7977.65 allow ..."
-      },
-      {
-        "id": "CVE-2026-79188",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
-        "id": "CVE-2026-79189",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79190",
@@ -16580,28 +16668,12 @@
         "title": "Information leak in Network in Google Chrome prior to 152.0.7977.65 al ..."
       },
       {
-        "id": "CVE-2026-79221",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in Dawn in Google Chrome prior to 152.0.7977.65 ..."
-      },
-      {
         "id": "CVE-2026-79222",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incorrect authorization in CustomTabs in Google Chrome on on Android p ..."
-      },
-      {
-        "id": "CVE-2026-79223",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Integer overflow in Chromium in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79224",
@@ -16642,22 +16714,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incorrect authorization in SiteIsolation in Google Chrome prior to 152 ..."
-      },
-      {
-        "id": "CVE-2026-79229",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
-        "id": "CVE-2026-79230",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ANGLE in Google Chrome on on Mac prior to ..."
       },
       {
         "id": "CVE-2026-79231",
@@ -16722,14 +16778,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Out of bounds read in Tint in Google Chrome on on Android prior to 152 ..."
-      },
-      {
-        "id": "CVE-2026-79240",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
       },
       {
         "id": "CVE-2026-79241",
@@ -16948,22 +16996,6 @@
         "title": "Race condition in Workers in Google Chrome prior to 152.0.7977.65 allo ..."
       },
       {
-        "id": "CVE-2026-79269",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
-        "id": "CVE-2026-79270",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
         "id": "CVE-2026-79271",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -16996,28 +17028,12 @@
         "title": "Information leak in GPU in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
-        "id": "CVE-2026-79275",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
-      },
-      {
         "id": "CVE-2026-79276",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Improper privilege management in FileSystem in Google Chrome prior to  ..."
-      },
-      {
-        "id": "CVE-2026-79282",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome on on Android prior to 152.0. ..."
       },
       {
         "id": "CVE-2026-79283",
@@ -17492,14 +17508,6 @@
         "title": "Improper input validation in Extensions in Google Chrome prior to 153. ..."
       },
       {
-        "id": "CVE-2026-87470",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper quantity validation in Tint in Google Chrome on on Mac prior  ..."
-      },
-      {
         "id": "CVE-2026-87472",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -17684,14 +17692,6 @@
         "title": "UI misrepresentation in Browser in Google Chrome prior to 153.0.8010.3 ..."
       },
       {
-        "id": "CVE-2026-87500",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper validation of array index in ANGLE in Google Chrome prior to  ..."
-      },
-      {
         "id": "CVE-2026-87502",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -17770,14 +17770,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Missing authorization in DevTools in Google Chrome prior to 153.0.8010 ..."
-      },
-      {
-        "id": "CVE-2026-87512",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome on on Windows prior to 153.0. ..."
       },
       {
         "id": "CVE-2026-87513",
@@ -17890,14 +17882,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in WebGL in Google Chrome prior to 153.0.8010.36 allow ..."
-      },
-      {
-        "id": "CVE-2026-87528",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in Rust in Google Chrome on on Windows prior to 153.0.8 ..."
       },
       {
         "id": "CVE-2026-87529",
@@ -18252,14 +18236,6 @@
         "title": "Race condition in V8 in Google Chrome prior to 153.0.8010.36 allowed a ..."
       },
       {
-        "id": "CVE-2026-87602",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
-      },
-      {
         "id": "CVE-2026-87603",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18380,14 +18356,6 @@
         "title": "Observable discrepancy in SVG in Google Chrome prior to 153.0.8010.36  ..."
       },
       {
-        "id": "CVE-2026-87621",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-87622",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18482,14 +18450,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in WebPackaging in Google Chrome prior to 153.0.8010.36 ..."
-      },
-      {
-        "id": "CVE-2026-87637",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Extensions in Google Chrome on on Mac prior to 153.0 ..."
       },
       {
         "id": "CVE-2026-87638",
@@ -19884,6 +19844,38 @@
         "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via type confusion in crafted HTML"
       },
       {
+        "id": "CVE-2026-78978",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution in Google Chrome via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-78989",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79019",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via a crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79043",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Remote code execution via crafted HTML page"
+      },
+      {
         "id": "CVE-2026-79127",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -19908,6 +19900,94 @@
         "title": "chromium-browser: angle: Chromium: Remote code execution via out-of-bounds write in ANGLE"
       },
       {
+        "id": "CVE-2026-79138",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: chromium-browser: Arbitrary Code Execution via out-of-bounds write in ANGLE"
+      },
+      {
+        "id": "CVE-2026-79142",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: ANGLE: angle: ANGLE: Arbitrary Code Execution via Crafted HTML Page"
+      },
+      {
+        "id": "CVE-2026-79149",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
+      },
+      {
+        "id": "CVE-2026-79188",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79189",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via a crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-79230",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via improper input validation"
+      },
+      {
+        "id": "CVE-2026-79269",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium: Web origin policy bypass via uninitialized resource in ANGLE"
+      },
+      {
+        "id": "CVE-2026-79275",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution via use after free"
+      },
+      {
+        "id": "CVE-2026-79282",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87500",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87512",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Chromium-browser: Arbitrary code execution via use-after-free vulnerability in ANGLE"
+      },
+      {
         "id": "CVE-2026-87534",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -19922,6 +20002,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "CRITICAL",
         "title": "Incorrect authorization in Extensions in Google Chrome prior to 153.0. ..."
+      },
+      {
+        "id": "CVE-2026-87621",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: angle: Google Chrome (ANGLE): Arbitrary Code Execution vulnerability"
       },
       {
         "id": "CVE-2026-87654",
@@ -19977,7 +20065,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9879",
@@ -19985,7 +20073,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9880",
@@ -22793,7 +22881,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-14417",
@@ -22809,7 +22897,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-14419",
@@ -22857,7 +22945,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.46-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-14426",
@@ -22921,7 +23009,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "150.0.7871.114-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-15110",
@@ -23196,6 +23284,14 @@
         "title": "chromium-browser: chromium-browser: Use after free in UI"
       },
       {
+        "id": "CVE-2026-16413",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "150.0.7871.181-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium: Sandbox escape via out-of-bounds write in ANGLE"
+      },
+      {
         "id": "CVE-2026-16414",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -23345,7 +23441,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17670",
@@ -23361,7 +23457,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-17672",
@@ -23393,7 +23489,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17676",
@@ -23401,7 +23497,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17677",
@@ -23409,7 +23505,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17678",
@@ -23417,7 +23513,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-17679",
@@ -23449,7 +23545,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-17683",
@@ -23457,7 +23553,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17685",
@@ -23481,7 +23577,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: ANGLE: chromium-browser: Type Confusion in ANGLE"
+        "title": "chromium-browser: ANGLE: angle: chromium-browser: Type Confusion in ANGLE"
       },
       {
         "id": "CVE-2026-17688",
@@ -23497,7 +23593,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17690",
@@ -23513,7 +23609,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17692",
@@ -23545,7 +23641,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-17696",
@@ -23689,7 +23785,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17715",
@@ -23713,7 +23809,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-17718",
@@ -23721,7 +23817,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17719",
@@ -23745,7 +23841,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-17722",
@@ -24260,6 +24356,14 @@
         "title": "chromium-browser: chromium-browser: Use after free in V8"
       },
       {
+        "id": "CVE-2026-78906",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via race condition in HTML processing"
+      },
+      {
         "id": "CVE-2026-78939",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -24268,12 +24372,36 @@
         "title": "chromium-browser: chromium-browser: Use after free in Chromecast"
       },
       {
+        "id": "CVE-2026-78965",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE: Information disclosure via uninitialized resource"
+      },
+      {
         "id": "CVE-2026-79013",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Improper input validation in Sync"
+      },
+      {
+        "id": "CVE-2026-79047",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Views"
+      },
+      {
+        "id": "CVE-2026-79048",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE: Arbitrary code execution in Google Chrome via crafted HTML page"
       },
       {
         "id": "CVE-2026-79066",
@@ -24298,6 +24426,22 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Improper input validation in DevTools"
+      },
+      {
+        "id": "CVE-2026-79240",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Arbitrary code execution via out-of-bounds write"
+      },
+      {
+        "id": "CVE-2026-79270",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Chromium-browser: Memory disclosure via uninitialized resource in ANGLE"
       },
       {
         "id": "CVE-2026-79285",
@@ -24412,6 +24556,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Isolated"
       },
       {
+        "id": "CVE-2026-87470",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Improper quantity validation in Tint"
+      },
+      {
         "id": "CVE-2026-87471",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -24434,6 +24586,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Network"
+      },
+      {
+        "id": "CVE-2026-87528",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Type confusion in Rust"
       },
       {
         "id": "CVE-2026-87569",
@@ -24482,6 +24642,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Type confusion in XML"
+      },
+      {
+        "id": "CVE-2026-87637",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Extensions"
       },
       {
         "id": "CVE-2026-87648",
@@ -24705,7 +24873,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9887",
@@ -24761,7 +24929,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9900",
@@ -24769,7 +24937,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9901",
@@ -24777,7 +24945,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9902",
@@ -24801,7 +24969,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9905",
@@ -24833,7 +25001,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-9909",
@@ -24849,7 +25017,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds memory access in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds memory access in ANGLE"
       },
       {
         "id": "CVE-2026-9911",
@@ -24857,7 +25025,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9912",
@@ -24897,7 +25065,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9917",
@@ -24961,7 +25129,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9925",
@@ -24969,7 +25137,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9926",
@@ -24977,7 +25145,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9927",
@@ -24985,7 +25153,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9928",
@@ -24993,7 +25161,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read in ANGLE"
       },
       {
         "id": "CVE-2026-9929",
@@ -25025,7 +25193,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9933",
@@ -25049,7 +25217,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-9936",
@@ -25089,7 +25257,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Heap buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Heap buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-9941",
@@ -25097,7 +25265,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-9942",
@@ -25105,7 +25273,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-9943",
@@ -25313,7 +25481,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-9970",
@@ -25361,7 +25529,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Out of bounds read and write in ANGLE"
+        "title": "chromium-browser: angle: Out of bounds read and write in ANGLE"
       },
       {
         "id": "CVE-2026-9976",
@@ -25417,7 +25585,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-9983",
@@ -25553,7 +25721,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
-        "title": "chromium-browser: Inappropriate implementation in ANGLE"
+        "title": "chromium-browser: angle: Inappropriate implementation in ANGLE"
       },
       {
         "id": "CVE-2026-10004",
@@ -29249,7 +29417,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17741",
@@ -29329,7 +29497,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17751",
@@ -29569,7 +29737,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17786",
@@ -29601,7 +29769,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Uninitialized Use in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Uninitialized Use in ANGLE"
       },
       {
         "id": "CVE-2026-17791",
@@ -29681,7 +29849,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Out of bounds memory access in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Out of bounds memory access in ANGLE"
       },
       {
         "id": "CVE-2026-17802",
@@ -29761,7 +29929,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17812",
@@ -29873,7 +30041,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Use after free in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Use after free in ANGLE"
       },
       {
         "id": "CVE-2026-17833",
@@ -29953,7 +30121,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "151.0.7922.71-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: chromium-browser: Insufficient validation of untrusted input in ANGLE"
+        "title": "chromium-browser: angle: chromium-browser: Insufficient validation of untrusted input in ANGLE"
       },
       {
         "id": "CVE-2026-17848",
@@ -30476,6 +30644,22 @@
         "title": "chromium-browser: skia: chromium-browser: skia: Information leak via crafted HTML page in Google Chrome"
       },
       {
+        "id": "CVE-2026-79221",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
+      },
+      {
+        "id": "CVE-2026-79229",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: angle: Chromium: Information disclosure via uninitialized resource in ANGLE"
+      },
+      {
         "id": "CVE-2026-79237",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -30844,6 +31028,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in ServiceWorker"
       },
       {
+        "id": "CVE-2026-87602",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: angle: ANGLE in Google Chrome: Information disclosure via crafted HTML page"
+      },
+      {
         "id": "CVE-2026-87619",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -31025,7 +31217,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "MEDIUM",
-        "title": "chromium-browser: Integer overflow in ANGLE"
+        "title": "chromium-browser: angle: Integer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-11216",
@@ -33500,6 +33692,14 @@
         "title": "chromium-browser: chromium-browser: Inappropriate implementation in WebXR"
       },
       {
+        "id": "CVE-2026-18006",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "151.0.7922.71-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: chromium-browser: Inappropriate implementation in Google Lens"
+      },
+      {
         "id": "CVE-2026-18007",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -33610,6 +33810,14 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "LOW",
         "title": "chromium-browser: skia: chromium-browser: Out of bounds read in Skia"
+      },
+      {
+        "id": "CVE-2026-79223",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.75-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: chromium-browser: Integer overflow in Chromium"
       },
       {
         "id": "CVE-2026-84329",
@@ -33770,14 +33978,6 @@
         "fixedVersion": "150.0.7871.181-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in Aura in Google Chrome prior to 150.0.7871.128 allowe ..."
-      },
-      {
-        "id": "CVE-2026-16413",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "150.0.7871.181-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 150.0.7871.182  ..."
       },
       {
         "id": "CVE-2026-16415",
@@ -34124,14 +34324,6 @@
         "title": "Inappropriate implementation in Chrome for iOS in Google Chrome on iOS ..."
       },
       {
-        "id": "CVE-2026-18006",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "151.0.7922.71-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Inappropriate implementation in Google Lens in Google Chrome prior to  ..."
-      },
-      {
         "id": "CVE-2026-18011",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -34266,14 +34458,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incomplete cleanup in SiteIsolation in Google Chrome prior to 152.0.79 ..."
-      },
-      {
-        "id": "CVE-2026-78906",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-78907",
@@ -34572,14 +34756,6 @@
         "title": "Use after free in Sync in Google Chrome on on iOS prior to 152.0.7977. ..."
       },
       {
-        "id": "CVE-2026-78965",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
         "id": "CVE-2026-78966",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -34636,14 +34812,6 @@
         "title": "Uninitialized resource in GPU in Google Chrome on on Android prior to  ..."
       },
       {
-        "id": "CVE-2026-78978",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
-      },
-      {
         "id": "CVE-2026-78980",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -34698,14 +34866,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Information leak in Canvas in Google Chrome prior to 152.0.7977.65 all ..."
-      },
-      {
-        "id": "CVE-2026-78989",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
       },
       {
         "id": "CVE-2026-78990",
@@ -34876,14 +35036,6 @@
         "title": "Information leak in FoldableAPIs in Google Chrome prior to 152.0.7977. ..."
       },
       {
-        "id": "CVE-2026-79019",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-79021",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -35020,14 +35172,6 @@
         "title": "Missing authorization in Payments in Google Chrome on on Android prior ..."
       },
       {
-        "id": "CVE-2026-79043",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
         "id": "CVE-2026-79044",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -35042,22 +35186,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Race condition in Permissions in Google Chrome on on Android prior to  ..."
-      },
-      {
-        "id": "CVE-2026-79047",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Views in Google Chrome prior to 152.0.7977.65 allowe ..."
-      },
-      {
-        "id": "CVE-2026-79048",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
       },
       {
         "id": "CVE-2026-79049",
@@ -35580,14 +35708,6 @@
         "title": "Incorrect authorization in ServiceWorker in Google Chrome prior to 152 ..."
       },
       {
-        "id": "CVE-2026-79138",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-79139",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -35612,14 +35732,6 @@
         "title": "Incorrect authorization in Browser in Google Chrome prior to 152.0.797 ..."
       },
       {
-        "id": "CVE-2026-79142",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Buffer overflow in ANGLE in Google Chrome on on Android prior to 152.0 ..."
-      },
-      {
         "id": "CVE-2026-79143",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -35642,14 +35754,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Off-by-one error in DevTools in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
-        "id": "CVE-2026-79149",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-79150",
@@ -35802,22 +35906,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in WebRTC in Google Chrome prior to 152.0.7977.65 allow ..."
-      },
-      {
-        "id": "CVE-2026-79188",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
-      },
-      {
-        "id": "CVE-2026-79189",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79190",
@@ -36060,28 +36148,12 @@
         "title": "Information leak in Network in Google Chrome prior to 152.0.7977.65 al ..."
       },
       {
-        "id": "CVE-2026-79221",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in Dawn in Google Chrome prior to 152.0.7977.65 ..."
-      },
-      {
         "id": "CVE-2026-79222",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incorrect authorization in CustomTabs in Google Chrome on on Android p ..."
-      },
-      {
-        "id": "CVE-2026-79223",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Integer overflow in Chromium in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79224",
@@ -36122,22 +36194,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incorrect authorization in SiteIsolation in Google Chrome prior to 152 ..."
-      },
-      {
-        "id": "CVE-2026-79229",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
-        "id": "CVE-2026-79230",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ANGLE in Google Chrome on on Mac prior to ..."
       },
       {
         "id": "CVE-2026-79231",
@@ -36202,14 +36258,6 @@
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Out of bounds read in Tint in Google Chrome on on Android prior to 152 ..."
-      },
-      {
-        "id": "CVE-2026-79240",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
       },
       {
         "id": "CVE-2026-79241",
@@ -36428,22 +36476,6 @@
         "title": "Race condition in Workers in Google Chrome prior to 152.0.7977.65 allo ..."
       },
       {
-        "id": "CVE-2026-79269",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
-        "id": "CVE-2026-79270",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.6 ..."
-      },
-      {
         "id": "CVE-2026-79271",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -36476,28 +36508,12 @@
         "title": "Information leak in GPU in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
-        "id": "CVE-2026-79275",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
-      },
-      {
         "id": "CVE-2026-79276",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Improper privilege management in FileSystem in Google Chrome prior to  ..."
-      },
-      {
-        "id": "CVE-2026-79282",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.75-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome on on Android prior to 152.0. ..."
       },
       {
         "id": "CVE-2026-79283",
@@ -36972,14 +36988,6 @@
         "title": "Improper input validation in Extensions in Google Chrome prior to 153. ..."
       },
       {
-        "id": "CVE-2026-87470",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper quantity validation in Tint in Google Chrome on on Mac prior  ..."
-      },
-      {
         "id": "CVE-2026-87472",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37164,14 +37172,6 @@
         "title": "UI misrepresentation in Browser in Google Chrome prior to 153.0.8010.3 ..."
       },
       {
-        "id": "CVE-2026-87500",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper validation of array index in ANGLE in Google Chrome prior to  ..."
-      },
-      {
         "id": "CVE-2026-87502",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37250,14 +37250,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Missing authorization in DevTools in Google Chrome prior to 153.0.8010 ..."
-      },
-      {
-        "id": "CVE-2026-87512",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ANGLE in Google Chrome on on Windows prior to 153.0. ..."
       },
       {
         "id": "CVE-2026-87513",
@@ -37370,14 +37362,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in WebGL in Google Chrome prior to 153.0.8010.36 allow ..."
-      },
-      {
-        "id": "CVE-2026-87528",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in Rust in Google Chrome on on Windows prior to 153.0.8 ..."
       },
       {
         "id": "CVE-2026-87529",
@@ -37732,14 +37716,6 @@
         "title": "Race condition in V8 in Google Chrome prior to 153.0.8010.36 allowed a ..."
       },
       {
-        "id": "CVE-2026-87602",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds read in ANGLE in Google Chrome on on Windows prior to 15 ..."
-      },
-      {
         "id": "CVE-2026-87603",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37860,14 +37836,6 @@
         "title": "Observable discrepancy in SVG in Google Chrome prior to 153.0.8010.36  ..."
       },
       {
-        "id": "CVE-2026-87621",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in ANGLE in Google Chrome on on Windows prior to 1 ..."
-      },
-      {
         "id": "CVE-2026-87622",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -37962,14 +37930,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in WebPackaging in Google Chrome prior to 153.0.8010.36 ..."
-      },
-      {
-        "id": "CVE-2026-87637",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Extensions in Google Chrome on on Mac prior to 153.0 ..."
       },
       {
         "id": "CVE-2026-87638",
@@ -39124,14 +39084,6 @@
         "title": "coreutils: GNU coreutils unexpand: Denial of Service via crafted tab stop values"
       },
       {
-        "id": "CVE-2026-12064",
-        "pkg": "curl",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
-      },
-      {
         "id": "CVE-2026-5773",
         "pkg": "curl",
         "installedVersion": "7.88.1-10+deb12u14",
@@ -39812,46 +39764,6 @@
         "title": "avahi: avahi-daemon: Avahi: Denial of Service via D-Bus method call"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
-      },
-      {
         "id": "CVE-2026-13595",
         "pkg": "libblkid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -40458,14 +40370,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "cups: OpenPrinting CUPS: Remaining case-insensitive username matching in scheduler side paths (CVE-2026-27447 follow-up)"
-      },
-      {
-        "id": "CVE-2026-12064",
-        "pkg": "libcurl4",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP"
       },
       {
         "id": "CVE-2026-5773",
@@ -41130,46 +41034,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
       },
       {
         "id": "CVE-2026-13595",
@@ -42162,46 +42026,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "mysql: Performance Schema unspecified vulnerability (CPU Jul 2026)"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
       },
       {
         "id": "CVE-2026-13595",
@@ -43364,46 +43188,6 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
-      },
-      {
         "id": "CVE-2026-13595",
         "pkg": "libsmartcols1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -43474,6 +43258,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libsndfile: memory leak when encoding MP3 files due to an incomplete initialization"
+      },
+      {
+        "id": "CVE-2026-88372",
+        "pkg": "libsndfile1",
+        "installedVersion": "1.2.0-1+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libsndfile: libsndfile: Denial of Service via integer overflow in mat4_read_header()"
       },
       {
         "id": "CVE-2025-7458",
@@ -43623,7 +43415,7 @@
         "id": "CVE-2026-63072",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "MEDIUM",
         "title": "openssl: heap buffer overflow in CMS key unwrapping"
       },
@@ -43631,7 +43423,7 @@
         "id": "CVE-2026-63076",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "MEDIUM",
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
       },
@@ -43663,7 +43455,7 @@
         "id": "CVE-2026-42767",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
       },
@@ -43687,7 +43479,7 @@
         "id": "CVE-2026-54874",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: excessive memory use buffering DTLS records for a future epoch"
       },
@@ -43695,7 +43487,7 @@
         "id": "CVE-2026-63074",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: CMP indefinite cache growth of ExtraCerts"
       },
@@ -43711,7 +43503,7 @@
         "id": "CVE-2026-75803",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
       },
@@ -44124,46 +43916,6 @@
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
-      },
-      {
         "id": "CVE-2026-13595",
         "pkg": "libuuid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -44234,6 +43986,62 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
+      },
+      {
+        "id": "CVE-2026-93541",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: Out-of-bounds read in libXi's XQueryDeviceState()"
+      },
+      {
+        "id": "CVE-2026-93542",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read during XI2 class parsing"
+      },
+      {
+        "id": "CVE-2026-93543",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read in XI2 class parser"
+      },
+      {
+        "id": "CVE-2026-93544",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read in XIQueryDevice reply parsing"
+      },
+      {
+        "id": "CVE-2026-93545",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read in XListInputDevices()"
+      },
+      {
+        "id": "CVE-2026-94281",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read in XListInputDevices()"
+      },
+      {
+        "id": "CVE-2026-94282",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8-1+b1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-94282"
       },
       {
         "id": "CVE-2026-6653",
@@ -45140,46 +44948,6 @@
         "title": "mysql: Performance Schema unspecified vulnerability (CPU Jul 2026)"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
-      },
-      {
         "id": "CVE-2026-13595",
         "pkg": "mount",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -45479,7 +45247,7 @@
         "id": "CVE-2026-63072",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "MEDIUM",
         "title": "openssl: heap buffer overflow in CMS key unwrapping"
       },
@@ -45487,7 +45255,7 @@
         "id": "CVE-2026-63076",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "MEDIUM",
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
       },
@@ -45519,7 +45287,7 @@
         "id": "CVE-2026-42767",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
       },
@@ -45543,7 +45311,7 @@
         "id": "CVE-2026-54874",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: excessive memory use buffering DTLS records for a future epoch"
       },
@@ -45551,7 +45319,7 @@
         "id": "CVE-2026-63074",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: CMP indefinite cache growth of ExtraCerts"
       },
@@ -45567,7 +45335,7 @@
         "id": "CVE-2026-75803",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
-        "fixedVersion": "None",
+        "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
       },
@@ -47252,46 +47020,6 @@
         "title": "tzdata - new timezone database"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
-      },
-      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -47338,46 +47066,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
-        "id": "CVE-2026-76642",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks"
-      },
-      {
-        "id": "CVE-2026-78408",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority"
-      },
-      {
-        "id": "CVE-2026-78409",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks"
-      },
-      {
-        "id": "CVE-2026-78410",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection"
       },
       {
         "id": "CVE-2026-13595",
@@ -48876,7 +48564,7 @@
         "id": "CVE-2026-84445",
         "pkg": "google.golang.org/grpc",
         "installedVersion": "v1.79.2",
-        "fixedVersion": "1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e",
+        "fixedVersion": "1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e",
         "severity": "HIGH",
         "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
       },

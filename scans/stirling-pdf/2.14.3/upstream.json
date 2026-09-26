@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-25T05:50:00.147Z",
+  "scannedAt": "2026-09-26T05:52:05.846Z",
   "system": {
-    "total": 852,
+    "total": 855,
     "cves": [
       {
         "id": "CVE-2026-13595",
@@ -26,14 +26,6 @@
         "fixedVersion": "2.39.3-9ubuntu6.6",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
       },
       {
         "id": "CVE-2026-53614",
@@ -2148,14 +2140,6 @@
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libblkid1",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
         "id": "CVE-2026-53614",
         "pkg": "libblkid1",
         "installedVersion": "2.39.3-9ubuntu6.5",
@@ -3204,14 +3188,6 @@
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
         "id": "CVE-2026-53614",
         "pkg": "libfdisk1",
         "installedVersion": "2.39.3-9ubuntu6.5",
@@ -3924,14 +3900,6 @@
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
       },
       {
-        "id": "CVE-2026-53613",
-        "pkg": "libmount1",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
-      },
-      {
         "id": "CVE-2026-53614",
         "pkg": "libmount1",
         "installedVersion": "2.39.3-9ubuntu6.5",
@@ -4098,6 +4066,14 @@
         "fixedVersion": "1.5.3-5ubuntu5.6",
         "severity": "MEDIUM",
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-89161",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.42-4ubuntu2.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "pcre2: PCRE2: Memory corruption vulnerability in pcre2_jit_match"
       },
       {
         "id": "CVE-2023-37769",
@@ -4626,14 +4602,6 @@
         "fixedVersion": "2.39.3-9ubuntu6.6",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
       },
       {
         "id": "CVE-2026-53614",
@@ -5492,6 +5460,46 @@
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
+        "id": "CVE-2026-88047",
+        "pkg": "libtesseract5",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Stack buffer overflow via crafted .traineddata file"
+      },
+      {
+        "id": "CVE-2026-88048",
+        "pkg": "libtesseract5",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write/read leading to information disclosure via crafted data"
+      },
+      {
+        "id": "CVE-2026-88049",
+        "pkg": "libtesseract5",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write allows arbitrary code execution or denial of service"
+      },
+      {
+        "id": "CVE-2026-88052",
+        "pkg": "libtesseract5",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write can lead to arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-88053",
+        "pkg": "libtesseract5",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write leads to heap corruption via crafted data file"
+      },
+      {
         "id": "CVE-2025-6141",
         "pkg": "libtinfo6",
         "installedVersion": "6.4+20240113-1ubuntu2",
@@ -5562,14 +5570,6 @@
         "fixedVersion": "2.39.3-9ubuntu6.6",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "libuuid1",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
       },
       {
         "id": "CVE-2026-53614",
@@ -5930,14 +5930,6 @@
         "fixedVersion": "2.39.3-9ubuntu6.6",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "mount",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
       },
       {
         "id": "CVE-2026-53614",
@@ -6740,6 +6732,46 @@
         "title": "tar: tar: Hidden file injection via crafted archives"
       },
       {
+        "id": "CVE-2026-88047",
+        "pkg": "tesseract-ocr",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Stack buffer overflow via crafted .traineddata file"
+      },
+      {
+        "id": "CVE-2026-88048",
+        "pkg": "tesseract-ocr",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write/read leading to information disclosure via crafted data"
+      },
+      {
+        "id": "CVE-2026-88049",
+        "pkg": "tesseract-ocr",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write allows arbitrary code execution or denial of service"
+      },
+      {
+        "id": "CVE-2026-88052",
+        "pkg": "tesseract-ocr",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write can lead to arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-88053",
+        "pkg": "tesseract-ocr",
+        "installedVersion": "5.3.4-1build5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tesseract: Tesseract: Heap out-of-bounds write leads to heap corruption via crafted data file"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.39.3-9ubuntu6.5",
@@ -6762,14 +6794,6 @@
         "fixedVersion": "2.39.3-9ubuntu6.6",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: TOCTOU in the mount program when applying post-mount ownership/mode changes"
-      },
-      {
-        "id": "CVE-2026-53613",
-        "pkg": "util-linux",
-        "installedVersion": "2.39.3-9ubuntu6.5",
-        "fixedVersion": "2.39.3-9ubuntu6.6",
-        "severity": "MEDIUM",
-        "title": "util-linux: util-linux: TOCTOU in the mount program via ancestor directory swap on target path"
       },
       {
         "id": "CVE-2026-53614",
@@ -7486,7 +7510,7 @@
         "installedVersion": "7.0.7",
         "fixedVersion": "7.0.8, 6.2.19",
         "severity": "MEDIUM",
-        "title": "Spring MVC and WebFlux applications are vulnerable to Information Disc ..."
+        "title": "Spring Framework: Spring MVC and WebFlux applications: Information Disclosure via static resource resolution"
       },
       {
         "id": "CVE-2026-41843",
