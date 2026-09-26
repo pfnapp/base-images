@@ -54,11 +54,13 @@ console.log(`- Target Endpoint: ${endpoint}`);
 async function generate() {
   const startTime = Date.now();
 
+  const systemInstruction = 'You are an automated container security hardening agent. You strictly adhere to user instructions and zero-regression rules. You have NO tool execution or terminal capabilities. Do NOT emit <tool_call> or function calls. Formulate all instructions directly and output the complete <<<SUMMARY>>> and <<<DOCKERFILE>>> blocks in plain text.';
+
   let bodyPayload;
   if (isResponsesApi) {
     bodyPayload = JSON.stringify({
       model: model,
-      input: promptText
+      input: `${systemInstruction}\n\n${promptText}`
     });
   } else {
     bodyPayload = JSON.stringify({
@@ -66,7 +68,7 @@ async function generate() {
       messages: [
         {
           role: 'system',
-          content: 'You are an automated container security hardening agent. You strictly adhere to the user instructions and zero-regression rules, outputting only the requested <<<SUMMARY>>> and <<<DOCKERFILE>>> blocks.'
+          content: systemInstruction
         },
         {
           role: 'user',
@@ -105,12 +107,29 @@ async function generate() {
 
     if (data.choices && data.choices[0]?.message?.content) {
       content = data.choices[0].message.content;
+    } else if (Array.isArray(data.output)) {
+      for (const item of data.output) {
+        if (Array.isArray(item.content)) {
+          for (const c of item.content) {
+            if (c.text) content += c.text + '\n';
+            else if (c.output_text) content += c.output_text + '\n';
+          }
+        } else if (typeof item.content === 'string') {
+          content += item.content + '\n';
+        }
+      }
+      content = content.trim();
     } else if (data.output_text) {
       content = data.output_text;
     } else if (typeof data.response === 'string') {
       content = data.response;
     } else {
       console.error('⚠️ Unexpected response structure from API:', JSON.stringify(data).slice(0, 500));
+      process.exit(1);
+    }
+
+    if (!content) {
+      console.error('❌ Empty content extracted from API response:', JSON.stringify(data).slice(0, 500));
       process.exit(1);
     }
 
