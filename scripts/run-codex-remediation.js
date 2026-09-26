@@ -1,0 +1,132 @@
+#!/usr/bin/env node
+
+/**
+ * scripts/run-codex-remediation.js
+ *
+ * Direct, fast LLM remediation client for GitHub Actions.
+ * Bypasses fragile runner container sandboxing (bubblewrap/drop-sudo) that
+ * hangs on Ubuntu 24.04 runners.
+ *
+ * Supports:
+ * - Standard OpenAI Chat Completions API (/v1/chat/completions)
+ * - OpenAI Responses API (/v1/responses)
+ * - Custom Base URLs (OpenAI, Azure, OpenRouter, LiteLLM, Morph, etc.)
+ */
+
+const fs = require('fs');
+
+const [,, promptFile, outputFile] = process.argv;
+
+if (!promptFile || !outputFile) {
+  console.error('Usage: node scripts/run-codex-remediation.js <promptFile> <outputFile>');
+  process.exit(1);
+}
+
+if (!fs.existsSync(promptFile)) {
+  console.error(`❌ Prompt file not found: ${promptFile}`);
+  process.exit(1);
+}
+
+const apiKey = process.env.CODEX_API_KEY || process.env.OPENAI_API_KEY;
+if (!apiKey) {
+  console.error('❌ Neither CODEX_API_KEY nor OPENAI_API_KEY is defined in environment.');
+  process.exit(1);
+}
+
+let rawBaseUrl = process.env.CODEX_BASE_URL || process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1';
+rawBaseUrl = rawBaseUrl.replace(/\/+$/, '');
+
+const model = process.env.CODEX_MODEL || process.env.OPENAI_MODEL || 'gpt-4o';
+const promptText = fs.readFileSync(promptFile, 'utf8');
+
+console.log(`🤖 Starting Remediation Generation`);
+console.log(`- Model: ${model}`);
+console.log(`- Base URL: ${rawBaseUrl}`);
+console.log(`- Prompt length: ${promptText.length} characters`);
+
+const isResponsesApi = rawBaseUrl.endsWith('/responses');
+const endpoint = isResponsesApi
+  ? rawBaseUrl
+  : (rawBaseUrl.endsWith('/chat/completions') ? rawBaseUrl : `${rawBaseUrl}/chat/completions`);
+
+console.log(`- Target Endpoint: ${endpoint}`);
+
+async function generate() {
+  const startTime = Date.now();
+
+  let bodyPayload;
+  if (isResponsesApi) {
+    bodyPayload = JSON.stringify({
+      model: model,
+      input: promptText
+    });
+  } else {
+    bodyPayload = JSON.stringify({
+      model: model,
+      messages: [
+        {
+          role: 'system',
+          content: 'You are an automated container security hardening agent. You strictly adhere to the user instructions and zero-regression rules, outputting only the requested <<<SUMMARY>>> and <<<DOCKERFILE>>> blocks.'
+        },
+        {
+          role: 'user',
+          content: promptText
+        }
+      ],
+      temperature: 0.2
+    });
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 180000); // 3 minutes timeout
+
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: bodyPayload,
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error(`❌ API request failed with HTTP ${res.status} (${res.statusText}):`);
+      console.error(errText);
+      process.exit(1);
+    }
+
+    const data = await res.json();
+    let content = '';
+
+    if (data.choices && data.choices[0]?.message?.content) {
+      content = data.choices[0].message.content;
+    } else if (data.output_text) {
+      content = data.output_text;
+    } else if (typeof data.response === 'string') {
+      content = data.response;
+    } else {
+      console.error('⚠️ Unexpected response structure from API:', JSON.stringify(data).slice(0, 500));
+      process.exit(1);
+    }
+
+    fs.writeFileSync(outputFile, content, 'utf8');
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    console.log(`✅ Remediation response generated successfully in ${elapsed}s!`);
+    console.log(`- Output saved to: ${outputFile} (${content.length} characters)`);
+  } catch (err) {
+    clearTimeout(timeoutId);
+    if (err.name === 'AbortError') {
+      console.error('❌ Request timed out after 180 seconds.');
+    } else {
+      console.error('❌ Error communicating with LLM API:', err.message);
+    }
+    process.exit(1);
+  }
+}
+
+generate();
