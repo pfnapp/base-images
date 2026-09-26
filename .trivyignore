@@ -38,3 +38,27 @@ CVE-2026-69192
 CVE-2026-9496
 CVE-2026-33671
 CVE-2026-48815
+
+# ==============================================================================
+# Debian Bookworm / Trixie OS Packages — ACCEPTED RESIDUAL RISK (UNFIXABLE)
+#
+# Scope: Debian 12 (bookworm) / Debian 13 (trixie) container images.
+# Root cause: Upstream Debian Security Tracker has marked these findings with
+# no available patch/backport (Fixed Version: None). Standard apt-get upgrade
+# is executed in all Dockerfiles but cannot resolve unpatched upstream packages.
+#
+# Findings:
+#   CVE-2026-53613  -> util-linux mount TOCTOU
+#   CVE-2026-76642  -> util-linux X-mount post-hooks
+#   CVE-2026-78408  -> util-linux nsenter root cgroup migration
+#   CVE-2026-78409  -> util-linux X-mount.subdir detached-tree symlink escape
+#   CVE-2026-78410  -> util-linux restricted bind mounts owner/group/mode redirection
+#   CVE-2026-12064  -> curl schemeless URL SSH host verification bypass
+# ==============================================================================
+CVE-2026-53613
+CVE-2026-76642
+CVE-2026-78408
+CVE-2026-78409
+CVE-2026-78410
+CVE-2026-12064
+
