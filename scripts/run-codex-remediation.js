@@ -3,14 +3,9 @@
 /**
  * scripts/run-codex-remediation.js
  *
- * Direct, fast LLM remediation client for GitHub Actions.
- * Bypasses fragile runner container sandboxing (bubblewrap/drop-sudo) that
- * hangs on Ubuntu 24.04 runners.
- *
- * Supports:
- * - Standard OpenAI Chat Completions API (/v1/chat/completions)
- * - OpenAI Responses API (/v1/responses)
- * - Custom Base URLs (OpenAI, Azure, OpenRouter, LiteLLM, Morph, etc.)
+ * Fast, streaming LLM remediation client for GitHub Actions.
+ * Supports OpenAI Chat Completions & Responses API with streaming
+ * to prevent gateway/proxy socket timeouts.
  */
 
 const fs = require('fs');
@@ -36,7 +31,7 @@ if (!apiKey) {
 let rawBaseUrl = process.env.CODEX_BASE_URL || process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1';
 rawBaseUrl = rawBaseUrl.replace(/\/+$/, '');
 
-const model = process.env.CODEX_MODEL || process.env.OPENAI_MODEL || 'gpt-4o';
+const model = process.env.CODEX_MODEL || process.env.OPENAI_MODEL || 'mimo-v2.6-flash-free';
 const promptText = fs.readFileSync(promptFile, 'utf8');
 
 console.log(`🤖 Starting Remediation Generation`);
@@ -54,51 +49,42 @@ console.log(`- Target Endpoint: ${endpoint}`);
 async function generate() {
   const startTime = Date.now();
 
-  const systemInstruction = 'You are an automated container security hardening agent. You strictly adhere to user instructions and zero-regression rules. You have NO tool execution or terminal capabilities. Do NOT emit <tool_call> or function calls. Formulate all instructions directly and output the complete <<<SUMMARY>>> and <<<DOCKERFILE>>> blocks in plain text.';
+  const systemInstruction = 'You are an automated container security hardening agent. You strictly adhere to user instructions and zero-regression rules. Output the complete <<<SUMMARY>>> and <<<DOCKERFILE>>> blocks in plain text.';
 
   let bodyPayload;
   if (isResponsesApi) {
     bodyPayload = JSON.stringify({
       model: model,
-      input: `${systemInstruction}\n\n${promptText}`
+      input: `${systemInstruction}\n\n${promptText}`,
+      stream: true
     });
   } else {
     bodyPayload = JSON.stringify({
       model: model,
       messages: [
-        {
-          role: 'system',
-          content: systemInstruction
-        },
-        {
-          role: 'user',
-          content: promptText
-        }
+        { role: 'system', content: systemInstruction },
+        { role: 'user', content: promptText }
       ],
-      temperature: 0.2
+      temperature: 0.2,
+      stream: true
     });
   }
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 600000); // 10 minutes timeout
 
-  const progressInterval = setInterval(() => {
-    const elapsed = Math.round((Date.now() - startTime) / 1000);
-    console.log(`⏳ Still generating remediation... (${elapsed}s elapsed)`);
-  }, 15000);
-
   try {
     const res = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        'Authorization': `Bearer ${apiKey}`,
+        'Accept': 'text/event-stream, application/json'
       },
       body: bodyPayload,
       signal: controller.signal
     });
 
-    clearInterval(progressInterval);
     clearTimeout(timeoutId);
 
     if (!res.ok) {
@@ -108,45 +94,108 @@ async function generate() {
       process.exit(1);
     }
 
-    const data = await res.json();
-    let content = '';
+    let fullText = '';
+    const contentType = res.headers.get('content-type') || '';
 
-    if (data.choices && data.choices[0]?.message?.content) {
-      content = data.choices[0].message.content;
-    } else if (Array.isArray(data.output)) {
-      for (const item of data.output) {
-        if (Array.isArray(item.content)) {
-          for (const c of item.content) {
-            if (c.text) content += c.text + '\n';
-            else if (c.output_text) content += c.output_text + '\n';
+    // Handle Streaming (SSE)
+    if (contentType.includes('text/event-stream') || res.body) {
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder('utf8');
+      let buffer = '';
+      let chunkCount = 0;
+      let lastLog = Date.now();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop(); // retain incomplete line
+
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith(':')) continue;
+          if (trimmed === 'data: [DONE]') continue;
+
+          if (trimmed.startsWith('data: ')) {
+            const dataStr = trimmed.slice(6);
+            try {
+              const parsed = JSON.parse(dataStr);
+              chunkCount++;
+
+              // Chat completions delta
+              if (parsed.choices && parsed.choices[0]?.delta?.content) {
+                fullText += parsed.choices[0].delta.content;
+              }
+              // Responses API deltas
+              else if (parsed.type === 'output_text_delta' && parsed.delta) {
+                fullText += parsed.delta;
+              }
+              else if (parsed.delta?.text) {
+                fullText += parsed.delta.text;
+              }
+              // Non-delta output array in event
+              else if (parsed.output && Array.isArray(parsed.output)) {
+                for (const item of parsed.output) {
+                  if (item.content && Array.isArray(item.content)) {
+                    for (const c of item.content) {
+                      if (c.text) fullText += c.text;
+                      else if (c.output_text) fullText += c.output_text;
+                    }
+                  }
+                }
+              }
+            } catch {
+              // Non-JSON SSE line or raw text chunk
+            }
           }
-        } else if (typeof item.content === 'string') {
-          content += item.content + '\n';
+        }
+
+        if (Date.now() - lastLog > 15000) {
+          const elapsed = Math.round((Date.now() - startTime) / 1000);
+          console.log(`⏳ Streaming response... (${elapsed}s elapsed, ${fullText.length} chars received)`);
+          lastLog = Date.now();
         }
       }
-      content = content.trim();
-    } else if (data.output_text) {
-      content = data.output_text;
-    } else if (typeof data.response === 'string') {
-      content = data.response;
-    } else {
-      console.error('⚠️ Unexpected response structure from API:', JSON.stringify(data).slice(0, 500));
+    }
+
+    // Fallback if not streamed or fullText empty
+    if (!fullText) {
+      const fallbackData = await res.json().catch(() => null);
+      if (fallbackData) {
+        if (fallbackData.choices && fallbackData.choices[0]?.message?.content) {
+          fullText = fallbackData.choices[0].message.content;
+        } else if (Array.isArray(fallbackData.output)) {
+          for (const item of fallbackData.output) {
+            if (Array.isArray(item.content)) {
+              for (const c of item.content) {
+                if (c.text) fullText += c.text + '\n';
+                else if (c.output_text) fullText += c.output_text + '\n';
+              }
+            } else if (typeof item.content === 'string') {
+              fullText += item.content + '\n';
+            }
+          }
+        } else if (fallbackData.output_text) {
+          fullText = fallbackData.output_text;
+        }
+      }
+    }
+
+    fullText = fullText.trim();
+
+    if (!fullText) {
+      console.error('❌ Could not extract any text content from API response.');
       process.exit(1);
     }
 
-    if (!content) {
-      console.error('❌ Empty content extracted from API response:', JSON.stringify(data).slice(0, 500));
-      process.exit(1);
-    }
-
-    fs.writeFileSync(outputFile, content, 'utf8');
+    fs.writeFileSync(outputFile, fullText, 'utf8');
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     console.log(`✅ Remediation response generated successfully in ${elapsed}s!`);
-    console.log(`- Output saved to: ${outputFile} (${content.length} characters)`);
-    console.log(`--- RESPONSE PREVIEW ---\n${content}\n-----------------------`);
+    console.log(`- Output saved to: ${outputFile} (${fullText.length} characters)`);
+    console.log(`--- RESPONSE PREVIEW ---\n${fullText.slice(0, 600)}\n-----------------------`);
   } catch (err) {
-    clearInterval(progressInterval);
-    clearTimeout(timeoutId);
     if (err.name === 'AbortError') {
       console.error('❌ Request timed out after 600 seconds.');
     } else {
