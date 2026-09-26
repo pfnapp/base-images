@@ -80,7 +80,12 @@ async function generate() {
   }
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 180000); // 3 minutes timeout
+  const timeoutId = setTimeout(() => controller.abort(), 600000); // 10 minutes timeout
+
+  const progressInterval = setInterval(() => {
+    const elapsed = Math.round((Date.now() - startTime) / 1000);
+    console.log(`⏳ Still generating remediation... (${elapsed}s elapsed)`);
+  }, 15000);
 
   try {
     const res = await fetch(endpoint, {
@@ -93,6 +98,7 @@ async function generate() {
       signal: controller.signal
     });
 
+    clearInterval(progressInterval);
     clearTimeout(timeoutId);
 
     if (!res.ok) {
@@ -138,9 +144,10 @@ async function generate() {
     console.log(`✅ Remediation response generated successfully in ${elapsed}s!`);
     console.log(`- Output saved to: ${outputFile} (${content.length} characters)`);
   } catch (err) {
+    clearInterval(progressInterval);
     clearTimeout(timeoutId);
     if (err.name === 'AbortError') {
-      console.error('❌ Request timed out after 180 seconds.');
+      console.error('❌ Request timed out after 600 seconds.');
     } else {
       console.error('❌ Error communicating with LLM API:', err.message);
     }

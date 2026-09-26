@@ -35,6 +35,9 @@ try {
 
 const { title, body, labels } = issueJson;
 
+// Clean up redundant instructions from body to keep prompt concise
+const cleanedBody = (body || '').split('### 🤖 Remediation Instructions')[0].trim();
+
 // Extract App ID from labels or body
 let appId = null;
 for (const lbl of (labels || [])) {
@@ -76,7 +79,7 @@ Your objective is to remediate the actionable Critical and High vulnerabilities 
 ### ISSUE CONTEXT (Issue #${issueNumber})
 **Title:** ${title}
 
-${body}
+${cleanedBody}
 
 ---
 
