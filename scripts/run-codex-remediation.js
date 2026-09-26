@@ -124,25 +124,37 @@ async function generate() {
               const parsed = JSON.parse(dataStr);
               chunkCount++;
 
-              // Chat completions delta
-              if (parsed.choices && parsed.choices[0]?.delta?.content) {
+              // 1. Chat completions delta
+              if (parsed.choices && typeof parsed.choices[0]?.delta?.content === 'string') {
                 fullText += parsed.choices[0].delta.content;
               }
-              // Responses API deltas
-              else if (parsed.type === 'output_text_delta' && parsed.delta) {
+              // 2. Responses API text deltas (response.output_text.delta, output_text_delta, etc.)
+              else if (typeof parsed.delta === 'string') {
                 fullText += parsed.delta;
               }
-              else if (parsed.delta?.text) {
+              else if (parsed.delta && typeof parsed.delta.text === 'string') {
                 fullText += parsed.delta.text;
               }
-              // Non-delta output array in event
-              else if (parsed.output && Array.isArray(parsed.output)) {
-                for (const item of parsed.output) {
-                  if (item.content && Array.isArray(item.content)) {
-                    for (const c of item.content) {
-                      if (c.text) fullText += c.text;
-                      else if (c.output_text) fullText += c.output_text;
+              else if (typeof parsed.text === 'string') {
+                fullText += parsed.text;
+              }
+              // 3. Complete response in final event
+              else if (parsed.response || parsed.output) {
+                const resp = parsed.response || parsed;
+                if (Array.isArray(resp.output)) {
+                  let extracted = '';
+                  for (const item of resp.output) {
+                    if (Array.isArray(item.content)) {
+                      for (const c of item.content) {
+                        if (typeof c.text === 'string') extracted += c.text;
+                        else if (typeof c.output_text === 'string') extracted += c.output_text;
+                      }
+                    } else if (typeof item.content === 'string') {
+                      extracted += item.content;
                     }
+                  }
+                  if (extracted && extracted.length > fullText.length) {
+                    fullText = extracted;
                   }
                 }
               }
@@ -186,7 +198,8 @@ async function generate() {
     fullText = fullText.trim();
 
     if (!fullText) {
-      console.error('❌ Could not extract any text content from API response.');
+      console.error(`❌ Could not extract any text content from API response (received ${chunkCount} chunks).`);
+      console.error(`Debug last buffer:`, buffer.slice(0, 500));
       process.exit(1);
     }
 
