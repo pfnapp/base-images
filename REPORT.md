@@ -2,16 +2,16 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-25T05:49:04.510Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-26T05:51:16.970Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
-- **Applications Monitored:** `16`
-- **Active Versions Audited:** `26`
-- **Images Running As Root:** `20` / `26` (⚠️ **77%** non-compliant)
+- **Applications Monitored:** `17`
+- **Active Versions Audited:** `28`
+- **Images Running As Root:** `20` / `28` (⚠️ **71%** non-compliant)
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `30`
-- **App High CVEs** _(upstream, unfixable by us)_**:** `290`
-- **PFNApp Images Scanned:** `24` / `26`
+- **App High CVEs** _(upstream, unfixable by us)_**:** `313`
+- **PFNApp Images Scanned:** `26` / `28`
 - **Total System CVE Reduction:** `0`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
@@ -22,31 +22,33 @@
 
 | Application | Category | Version | Lifecycle | Root? | Upstream Sys (C/H/M/L) | Upstream App (C/H/M/L) | PFNApp Sys (C/H/M/L) | PFNApp App (C/H/M/L) | Reduction (Sys C/H) | Posture |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.2-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/1/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/-1 | 🟡 NON-COMPLIANT (ROOT) |
+| **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.2-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/1/0/0 | 0/0/0/0 | 0/1/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 158/1599/1798/1008 | 6/81/94/8 | 27/195/371/315 | 5/58/86/8 | -131/-1404 | 🔴 APP CRITICAL RISK |
+| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 190/1572/1811/1012 | 6/81/94/8 | 27/148/374/307 | 2/47/38/3 | -163/-1424 | 🔴 APP CRITICAL RISK |
 | **9Router** | _AI Gateways & Proxies_ | `0.5.86` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
 |  |  | `0.5.85` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
 |  |  | `0.5.75` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
-| **OmniRoute** | _AI Gateways & Proxies_ | `3.8.50` | 🟢 **LATEST** | ✅ NO | 4/59/70/60 | 3/3/1/0 | 4/59/70/60 | 3/3/1/0 | 0/0 | 🔴 APP CRITICAL RISK |
-| **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.6` | 🟢 **LATEST** | ✅ NO | 15/117/219/189 | 0/15/2/2 | 15/117/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.5` | 🟢 **SUPPORTED** | ✅ NO | 15/117/219/189 | 0/15/2/2 | 15/117/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
-| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/412/1898/1023 | 2/10/24/12 | 2/248/322/255 | 2/10/24/12 | -15/-164 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/412/1898/1023 | 2/10/24/12 | 2/248/322/255 | 2/12/27/12 | -15/-164 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/412/1898/1023 | 2/12/27/12 | 2/248/322/255 | 2/12/27/12 | -15/-164 | 🔴 APP CRITICAL RISK |
-| **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.3` | 🟢 **LATEST** | ⚠️ YES | 7/69/104/103 | 0/0/0/0 | 4/59/90/102 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
+| **OmniRoute** | _AI Gateways & Proxies_ | `3.8.50` | 🟢 **LATEST** | ✅ NO | 4/23/70/60 | 3/3/1/0 | 4/23/70/60 | 3/3/1/0 | 0/0 | 🔴 APP CRITICAL RISK |
+| **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.6` | 🟢 **LATEST** | ✅ NO | 15/74/219/189 | 0/15/2/2 | 15/74/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.5` | 🟢 **SUPPORTED** | ✅ NO | 15/74/219/189 | 0/15/2/2 | 15/74/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
+| **n8n** | _AI Agents & Automation_ | `2.41.3` | 🟢 **LATEST** | ✅ NO | 7/21/58/25 | 0/12/19/0 | 7/21/58/25 | 0/12/19/0 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `2.40.6` | 🟢 **SUPPORTED** | ✅ NO | 7/21/58/25 | 0/12/19/0 | 7/21/58/25 | 0/12/19/0 | 0/0 | 🟠 APP HIGH RISK |
+| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/366/1903/1024 | 2/10/24/12 | 2/209/329/255 | 0/0/2/0 | -15/-157 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1903/1024 | 2/10/24/12 | 2/209/329/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1903/1024 | 2/12/27/12 | 2/209/329/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
+| **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.3` | 🟢 **LATEST** | ⚠️ YES | 7/31/104/103 | 0/0/0/0 | 4/21/90/102 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
 | **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/0/1 | 0/0/0/0 | 0/1/0/1 | 0/0 | 🟠 APP HIGH RISK |
 | **File Browser** | _Storage & Files_ | `v2.63.23` | 🟢 **LATEST** | ✅ NO | 0/0/0/0 | 0/10/2/1 | 0/0/0/0 | 0/0/0/1 | 0/0 | 🟠 APP HIGH RISK |
-| **Stirling-PDF** | _Utilities & Tools_ | `3.0.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/384/70 | 0/0/2/0 | 0/0/320/57 | 0/0/2/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `2.14.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/719/131 | 2/55/60/6 | 0/0/331/57 | 2/55/60/6 | 0/-2 | 🔴 APP CRITICAL RISK |
+| **Stirling-PDF** | _Utilities & Tools_ | `3.0.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/395/70 | 0/0/2/0 | 0/0/331/57 | 0/0/2/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `2.14.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/722/131 | 2/55/60/6 | 0/0/342/57 | 2/55/60/6 | 0/-2 | 🔴 APP CRITICAL RISK |
 | **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 0/0/0/1 | 0/0/0/0 | 0/0/0/1 | 0/-2 | 🟡 NON-COMPLIANT (ROOT) |
-| **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/258/1891/371 | 0/0/7/1 | 1/139/1473/289 | 0/0/7/1 | -3/-119 | 🟡 NON-COMPLIANT (ROOT) |
-| **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/183/1549/936 | 1/5/8/1 | 2/183/1549/936 | 0/3/5/1 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/559/3380/1246 | 2/22/27/4 | 2/183/1549/936 | 2/22/27/4 | -14/-376 | 🔴 APP CRITICAL RISK |
+| **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/213/1889/372 | 0/0/7/1 | 1/103/1471/290 | 0/0/7/1 | -3/-110 | 🟡 NON-COMPLIANT (ROOT) |
+| **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/146/1547/937 | 1/5/8/1 | 2/146/1547/937 | 0/0/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/514/3377/1247 | 2/22/27/4 | 2/146/1547/937 | 2/22/27/4 | -14/-368 | 🔴 APP CRITICAL RISK |
 | **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/2/0 | 3/21/5/5 | 0/0/0/0 | 3/21/5/5 | 0/-1 | 🔴 APP CRITICAL RISK |
 |  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/2/0 | 3/21/5/5 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 1/2/8/1 | 0/0/0/0 | 0/0/1/0 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **Dozzle** | _Operations & Logs_ | `v11.1.1` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟠 APP HIGH RISK |
+| **Dozzle** | _Operations & Logs_ | `v11.1.1` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `v11.1.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
 
 ---
@@ -60,7 +62,7 @@ _No versions currently dropped from active support window._
 ## 🔍 Actionable Vulnerability Details per Latest Release
 
 <details>
-<summary><b>WordPress (PHP-FPM) (<code>7.1.2-php8.3-fpm-alpine</code>) — App: 0 Critical, 0 High | System: 0 Critical, 1 High</b></summary>
+<summary><b>WordPress (PHP-FPM) (<code>7.1.2-php8.3-fpm-alpine</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
 - **Full Reference:** `library/wordpress:7.1.2-php8.3-fpm-alpine`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -72,21 +74,19 @@ _No Critical or High app-level vulnerabilities detected._
 
 #### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
 
-| CVE ID | Severity | Package | Installed | Fixed Version |
-| :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-93990` | **HIGH** | `libexpat` | `2.8.4-r0` | `2.8.5-r0` |
+_No Critical or High system-level vulnerabilities detected._
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | -1 | 0 | 0 | -1 |
+| System | 0 | 0 | 0 | 0 | 0 |
 | App | 0 | 0 | — | — | 0 |
 
 </details>
 
 <details>
-<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 81 High | System: 158 Critical, 1599 High</b></summary>
+<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 81 High | System: 190 Critical, 1572 High</b></summary>
 
 - **Full Reference:** `louislam/uptime-kuma:2.5.5`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -106,18 +106,18 @@ _No Critical or High app-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-53613` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78409` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78410` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
+| `CVE-2026-10931` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
+| `CVE-2026-10966` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
+| `CVE-2026-10971` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
+| `CVE-2026-10972` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
+| `CVE-2026-10974` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -131 | -1404 | -1427 | -693 | -4800 |
-| App | -1 | -23 | — | — | -32 |
+| System | -163 | -1424 | -1437 | -705 | -4813 |
+| App | -4 | -34 | — | — | -99 |
 
 </details>
 
@@ -150,7 +150,7 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>OmniRoute (<code>3.8.50</code>) — App: 3 Critical, 3 High | System: 4 Critical, 59 High</b></summary>
+<summary><b>OmniRoute (<code>3.8.50</code>) — App: 3 Critical, 3 High | System: 4 Critical, 23 High</b></summary>
 
 - **Full Reference:** `diegosouzapw/omniroute:3.8.50`
 - **Root Status:** ✅ Runs non-root (`node`)
@@ -170,11 +170,11 @@ _No Critical or High system-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78409` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78410` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
 | `CVE-2026-41992` | **HIGH** | `gzip` | `1.13-1` | `1.13-1+deb13u1` |
+| `CVE-2026-54369` | **HIGH** | `libacl1` | `2.3.2-2+b1` | `None` |
+| `CVE-2026-58016` | **CRITICAL** | `libglib2.0-0t64` | `2.84.4-3~deb13u3` | `2.84.4-3~deb13u4` |
+| `CVE-2026-58010` | **HIGH** | `libglib2.0-0t64` | `2.84.4-3~deb13u3` | `2.84.4-3~deb13u4` |
+| `CVE-2026-58011` | **HIGH** | `libglib2.0-0t64` | `2.84.4-3~deb13u3` | `2.84.4-3~deb13u4` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
@@ -186,7 +186,7 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>OpenClaw 2 (<code>2026.9.6</code>) — App: 0 Critical, 15 High | System: 15 Critical, 117 High</b></summary>
+<summary><b>OpenClaw 2 (<code>2026.9.6</code>) — App: 0 Critical, 15 High | System: 15 Critical, 74 High</b></summary>
 
 - **Full Reference:** `openclaw/openclaw:2026.9.6`
 - **Root Status:** ✅ Runs non-root (`node`)
@@ -206,11 +206,11 @@ _No Critical or High system-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-53613` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78409` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
-| `CVE-2026-78410` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
+| `CVE-2026-6276` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
+| `CVE-2026-8286` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
+| `CVE-2026-8458` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
+| `CVE-2026-8927` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
+| `CVE-2026-41992` | **HIGH** | `gzip` | `1.12-1` | `None` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
@@ -222,7 +222,43 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Hermes Agent (<code>v2026.9.24</code>) — App: 2 Critical, 10 High | System: 17 Critical, 412 High</b></summary>
+<summary><b>n8n (<code>2.41.3</code>) — App: 0 Critical, 12 High | System: 7 Critical, 21 High</b></summary>
+
+- **Full Reference:** `n8nio/n8n:2.41.3`
+- **Root Status:** ✅ Runs non-root (`node`)
+- **Posture:** 🟠 APP HIGH RISK
+
+#### 🔴 App CVEs _(upstream dependency — only fixable by maintainer)_
+
+| CVE ID | Severity | Package | Installed | Fixed Version |
+| :--- | :---: | :--- | :--- | :--- |
+| `GHSA-j95f-988m-3j2f` | **HIGH** | `@tiptap/core` | `3.27.0` | `3.30.5` |
+| `CVE-2026-83608` | **HIGH** | `@xmldom/xmldom` | `0.8.14` | `0.8.15, 0.9.12` |
+| `CVE-2026-83613` | **HIGH** | `@xmldom/xmldom` | `0.8.14` | `0.8.15, 0.9.12` |
+| `CVE-2026-83614` | **HIGH** | `@xmldom/xmldom` | `0.8.14` | `0.8.15, 0.9.12` |
+| `CVE-2026-83615` | **HIGH** | `@xmldom/xmldom` | `0.8.14` | `0.8.15, 0.9.12` |
+
+#### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
+
+| CVE ID | Severity | Package | Installed | Fixed Version |
+| :--- | :---: | :--- | :--- | :--- |
+| `CVE-2026-14456` | **HIGH** | `libcrypto3` | `3.5.7-r1` | `3.5.8-r0` |
+| `CVE-2026-66046` | **HIGH** | `libexpat` | `2.8.3-r1` | `2.8.4-r0` |
+| `CVE-2026-76641` | **HIGH** | `libexpat` | `2.8.3-r1` | `2.8.4-r0` |
+| `CVE-2026-76956` | **HIGH** | `libexpat` | `2.8.3-r1` | `2.8.4-r0` |
+| `CVE-2026-76957` | **HIGH** | `libexpat` | `2.8.3-r1` | `2.8.4-r0` |
+
+#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
+
+| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| System | 0 | 0 | 0 | 0 | 0 |
+| App | 0 | 0 | — | — | 0 |
+
+</details>
+
+<details>
+<summary><b>Hermes Agent (<code>v2026.9.24</code>) — App: 2 Critical, 10 High | System: 17 Critical, 366 High</b></summary>
 
 - **Full Reference:** `nousresearch/hermes-agent:v2026.9.24`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -243,22 +279,22 @@ _No Critical or High system-level vulnerabilities detected._
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-53612` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
-| `CVE-2026-53613` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-53614` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.41-5` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.41-5` | `None` |
+| `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
+| `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
+| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -15 | -164 | -1576 | -768 | -2738 |
-| App | 0 | 0 | — | — | 0 |
+| System | -15 | -157 | -1574 | -769 | -3022 |
+| App | -2 | -10 | — | — | -46 |
 
 </details>
 
 <details>
-<summary><b>Vaultwarden (Bitwarden) (<code>1.37.3</code>) — App: 0 Critical, 0 High | System: 7 Critical, 69 High</b></summary>
+<summary><b>Vaultwarden (Bitwarden) (<code>1.37.3</code>) — App: 0 Critical, 0 High | System: 7 Critical, 31 High</b></summary>
 
 - **Full Reference:** `vaultwarden/server:1.37.3`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -272,11 +308,11 @@ _No Critical or High app-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78409` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78410` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-12064` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-41992` | **HIGH** | `gzip` | `1.13-1` | `1.13-1+deb13u1` |
+| `CVE-2026-54369` | **HIGH** | `libacl1` | `2.3.2-2+b1` | `None` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
@@ -298,7 +334,7 @@ _No Critical or High app-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-84445` | **HIGH** | `google.golang.org/grpc` | `v1.83.1` | `1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e` |
+| `CVE-2026-84445` | **HIGH** | `google.golang.org/grpc` | `v1.83.1` | `1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e` |
 
 #### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
 
@@ -395,7 +431,7 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Linkding (<code>1.47.0</code>) — App: 0 Critical, 0 High | System: 4 Critical, 258 High</b></summary>
+<summary><b>Linkding (<code>1.47.0</code>) — App: 0 Critical, 0 High | System: 4 Critical, 213 High</b></summary>
 
 - **Full Reference:** `sissbruecker/linkding:1.47.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -410,22 +446,22 @@ _No Critical or High app-level vulnerabilities detected._
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-53612` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
-| `CVE-2026-53613` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-53614` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.41-5` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.41-5` | `None` |
+| `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
+| `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
+| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -3 | -119 | -418 | -82 | -622 |
+| System | -3 | -110 | -418 | -82 | -613 |
 | App | 0 | 0 | — | — | 0 |
 
 </details>
 
 <details>
-<summary><b>Nginx Proxy Manager (<code>2.16.0</code>) — App: 1 Critical, 5 High | System: 2 Critical, 183 High</b></summary>
+<summary><b>Nginx Proxy Manager (<code>2.16.0</code>) — App: 1 Critical, 5 High | System: 2 Critical, 146 High</b></summary>
 
 - **Full Reference:** `jc21/nginx-proxy-manager:2.16.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -445,18 +481,18 @@ _No Critical or High app-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-76642` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78408` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78409` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-78410` | **HIGH** | `bsdutils` | `1:2.41.5-0+deb13u1` | `None` |
-| `CVE-2026-12064` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u5` | `None` |
+| `CVE-2026-24882` | **HIGH** | `dirmngr` | `2.4.7-21+deb13u1+b5` | `None` |
+| `CVE-2026-24882` | **HIGH** | `gnupg` | `2.4.7-21+deb13u1` | `None` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | -1 | -2 | — | — | -6 |
+| System | 0 | 0 | 0 | 0 | -2 |
+| App | -1 | -5 | — | — | -15 |
 
 </details>
 
@@ -524,17 +560,15 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Dozzle (<code>v11.1.1</code>) — App: 0 Critical, 1 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>Dozzle (<code>v11.1.1</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
 - **Full Reference:** `amir20/dozzle:v11.1.1`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
-- **Posture:** 🟠 APP HIGH RISK
+- **Posture:** 🟡 NON-COMPLIANT (ROOT)
 
 #### 🔴 App CVEs _(upstream dependency — only fixable by maintainer)_
 
-| CVE ID | Severity | Package | Installed | Fixed Version |
-| :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-84445` | **HIGH** | `google.golang.org/grpc` | `v1.84.0` | `1.82.2, 1.83.2, 1.85.0-dev.0.20260825072537-93e31b48545e` |
+_No Critical or High app-level vulnerabilities detected._
 
 #### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
 
@@ -545,7 +579,7 @@ _No Critical or High system-level vulnerabilities detected._
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | System | 0 | 0 | 0 | 0 | 0 |
-| App | 0 | -1 | — | — | -1 |
+| App | 0 | 0 | — | — | 0 |
 
 </details>
 
