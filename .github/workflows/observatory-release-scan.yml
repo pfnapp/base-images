@@ -128,7 +128,7 @@ jobs:
 
       - name: Publish report and close awareness issue
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           gh label create cve-report-ready --repo "${{ github.repository }}" --force >/dev/null 2>&1 || true
           gh issue comment "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --body-file release-cve-report.md
@@ -138,6 +138,6 @@ jobs:
       - name: Keep issue open and report pipeline failure
         if: failure()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           gh issue comment "${{ inputs.issue_number }}" --repo "${{ github.repository }}" --body "⚠️ Targeted CVE reporting did not complete. The issue remains open for retry. See workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

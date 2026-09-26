@@ -242,14 +242,27 @@ function runTrivyScan(imageRef) {
   console.log(`  🔍 Scanning ${imageRef} with Aqua Trivy...`);
   try {
     let output;
+    const trivyIgnoreOpt = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+      ? `--ignorefile "${path.join(ROOT_DIR, '.trivyignore')}"`
+      : '';
+    const cacheDirOpt = process.env.TRIVY_CACHE_DIR
+      ? `--cache-dir "${process.env.TRIVY_CACHE_DIR}"`
+      : '';
+
     if (process.env.USE_DOCKER_TRIVY === 'true' || !isCommandAvailable('trivy')) {
+      const dockerMountIgnore = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+        ? `-v "${path.join(ROOT_DIR, '.trivyignore')}:/.trivyignore:ro"`
+        : '';
+      const dockerIgnoreOpt = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+        ? '--ignorefile /.trivyignore'
+        : '';
       output = execSync(
-        `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --scanners vuln --format json --quiet "${imageRef}"`,
+        `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ${dockerMountIgnore} aquasec/trivy:latest image --scanners vuln ${dockerIgnoreOpt} --format json --quiet "${imageRef}"`,
         { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
       );
     } else {
       output = execSync(
-        `trivy image --scanners vuln --format json --quiet "${imageRef}"`,
+        `trivy image --scanners vuln ${trivyIgnoreOpt} ${cacheDirOpt} --format json --quiet "${imageRef}"`,
         { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
       );
     }
@@ -270,14 +283,27 @@ function runTrivyScanPfnapp(appId, tag) {
   console.log(`  🔍 Scanning PFNApp image ${pfnRef}...`);
   try {
     let output;
+    const trivyIgnoreOpt = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+      ? `--ignorefile "${path.join(ROOT_DIR, '.trivyignore')}"`
+      : '';
+    const cacheDirOpt = process.env.TRIVY_CACHE_DIR
+      ? `--cache-dir "${process.env.TRIVY_CACHE_DIR}"`
+      : '';
+
     if (process.env.USE_DOCKER_TRIVY === 'true' || !isCommandAvailable('trivy')) {
+      const dockerMountIgnore = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+        ? `-v "${path.join(ROOT_DIR, '.trivyignore')}:/.trivyignore:ro"`
+        : '';
+      const dockerIgnoreOpt = fs.existsSync(path.join(ROOT_DIR, '.trivyignore'))
+        ? '--ignorefile /.trivyignore'
+        : '';
       output = execSync(
-        `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --scanners vuln --format json --quiet "${pfnRef}"`,
+        `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ${dockerMountIgnore} aquasec/trivy:latest image --scanners vuln ${dockerIgnoreOpt} --format json --quiet "${pfnRef}"`,
         { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
       );
     } else {
       output = execSync(
-        `trivy image --scanners vuln --format json --quiet "${pfnRef}"`,
+        `trivy image --scanners vuln ${trivyIgnoreOpt} ${cacheDirOpt} --format json --quiet "${pfnRef}"`,
         { maxBuffer: 50 * 1024 * 1024, timeout: 180000, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }
       );
     }

@@ -31,7 +31,7 @@ jobs:
       - name: Process Alerts and Create GitHub Issues
         if: always() && hashFiles('upstream-alerts.json') != ''
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           if [ ! -f upstream-alerts.json ]; then
             echo "No upstream alerts file found. Exiting."

@@ -83,7 +83,7 @@ jobs:
 
       - name: Synchronize Actionable CVE Issues
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           node scripts/create-cve-issues.js
 

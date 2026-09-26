@@ -65,13 +65,13 @@ jobs:
       - name: Trigger hardened image build
         if: steps.commit.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
         run: gh workflow run build-pfnapp-patches.yml --ref main
 
       - name: Open awareness issues and trigger targeted CVE scans
         if: steps.commit.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
           ASSIGNEE: ${{ vars.OBSERVATORY_ASSIGNEE || 'JuniYadi' }}
         run: |
           jq -c '.[]' detected-releases.json | while read -r release; do
