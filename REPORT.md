@@ -2,16 +2,16 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-09-26T10:23:41.294Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-09-27T06:13:02.208Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
 - **Applications Monitored:** `17`
-- **Active Versions Audited:** `28`
-- **Images Running As Root:** `20` / `28` (⚠️ **71%** non-compliant)
+- **Active Versions Audited:** `29`
+- **Images Running As Root:** `21` / `29` (⚠️ **72%** non-compliant)
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `30`
 - **App High CVEs** _(upstream, unfixable by us)_**:** `313`
-- **PFNApp Images Scanned:** `26` / `28`
+- **PFNApp Images Scanned:** `26` / `29`
 - **Total System CVE Reduction:** `0`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
@@ -24,23 +24,24 @@
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.2-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/1/0/0 | 0/0/0/0 | 0/1/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 190/1572/1811/1012 | 6/81/94/8 | 27/148/374/307 | 2/47/38/3 | -163/-1424 | 🔴 APP CRITICAL RISK |
-| **9Router** | _AI Gateways & Proxies_ | `0.5.86` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
+| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 190/1588/1823/1012 | 6/81/94/8 | 27/148/376/307 | 2/47/38/3 | -163/-1440 | 🔴 APP CRITICAL RISK |
+| **9Router** | _AI Gateways & Proxies_ | `0.5.91` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/4/1 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `0.5.86` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
 |  |  | `0.5.85` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `0.5.75` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `0.5.75` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 1/2/7/1 | 0/0/0/0 | 1/2/7/1 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.50` | 🟢 **LATEST** | ✅ NO | 4/23/70/60 | 3/3/1/0 | 4/23/70/60 | 3/3/1/0 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.6` | 🟢 **LATEST** | ✅ NO | 15/74/219/189 | 0/15/2/2 | 15/74/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `2026.9.5` | 🟢 **SUPPORTED** | ✅ NO | 15/74/219/189 | 0/15/2/2 | 15/74/219/189 | 0/15/2/2 | 0/0 | 🟠 APP HIGH RISK |
 | **n8n** | _AI Agents & Automation_ | `2.41.3` | 🟢 **LATEST** | ✅ NO | 7/21/58/25 | 0/12/19/0 | 7/21/58/25 | 0/12/19/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `2.40.6` | 🟢 **SUPPORTED** | ✅ NO | 7/21/58/25 | 0/12/19/0 | 7/21/58/25 | 0/12/19/0 | 0/0 | 🟠 APP HIGH RISK |
-| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/366/1903/1024 | 2/10/24/12 | 2/209/329/255 | 0/0/2/0 | -15/-157 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1903/1024 | 2/10/24/12 | 2/209/329/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1903/1024 | 2/12/27/12 | 2/209/329/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
+| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/366/1905/1024 | 2/10/24/12 | 2/209/331/255 | 0/0/2/0 | -15/-157 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1905/1024 | 2/10/24/12 | 2/209/331/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/366/1905/1024 | 2/12/27/12 | 2/209/331/255 | 2/12/27/12 | -15/-157 | 🔴 APP CRITICAL RISK |
 | **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.3` | 🟢 **LATEST** | ⚠️ YES | 7/31/104/103 | 0/0/0/0 | 4/21/90/102 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
 | **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/0/1 | 0/0/0/0 | 0/1/0/1 | 0/0 | 🟠 APP HIGH RISK |
 | **File Browser** | _Storage & Files_ | `v2.63.23` | 🟢 **LATEST** | ✅ NO | 0/0/0/0 | 0/10/2/1 | 0/0/0/0 | 0/0/0/1 | 0/0 | 🟠 APP HIGH RISK |
-| **Stirling-PDF** | _Utilities & Tools_ | `3.0.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/395/70 | 0/0/2/0 | 0/0/331/57 | 0/0/2/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `2.14.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/722/131 | 2/55/60/6 | 0/0/342/57 | 2/55/60/6 | 0/-2 | 🔴 APP CRITICAL RISK |
+| **Stirling-PDF** | _Utilities & Tools_ | `3.0.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/392/70 | 0/0/2/0 | 0/0/316/57 | 0/0/2/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `2.14.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/719/131 | 2/55/60/6 | 0/0/339/57 | 2/55/60/6 | 0/-2 | 🔴 APP CRITICAL RISK |
 | **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 0/0/0/1 | 0/0/0/0 | 0/0/0/1 | 0/-2 | 🟡 NON-COMPLIANT (ROOT) |
 | **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/213/1889/372 | 0/0/7/1 | 1/103/1471/290 | 0/0/7/1 | -3/-110 | 🟡 NON-COMPLIANT (ROOT) |
 | **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/146/1547/937 | 1/5/8/1 | 2/146/1547/937 | 0/0/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
@@ -86,7 +87,7 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 81 High | System: 190 Critical, 1572 High</b></summary>
+<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 81 High | System: 190 Critical, 1588 High</b></summary>
 
 - **Full Reference:** `louislam/uptime-kuma:2.5.5`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -116,36 +117,27 @@ _No Critical or High system-level vulnerabilities detected._
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -163 | -1424 | -1437 | -705 | -4813 |
+| System | -163 | -1440 | -1447 | -705 | -4813 |
 | App | -4 | -34 | — | — | -99 |
 
 </details>
 
 <details>
-<summary><b>9Router (<code>0.5.86</code>) — App: 1 Critical, 2 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>9Router (<code>0.5.91</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `decolua/9router:0.5.86`
+- **Full Reference:** `decolua/9router:0.5.91`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
-- **Posture:** 🔴 APP CRITICAL RISK
+- **Posture:** 🟡 NON-COMPLIANT (ROOT)
 
 #### 🔴 App CVEs _(upstream dependency — only fixable by maintainer)_
 
-| CVE ID | Severity | Package | Installed | Fixed Version |
-| :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-59873` | **CRITICAL** | `tar` | `7.5.11` | `7.5.19` |
-| `CVE-2026-59874` | **HIGH** | `tar` | `7.5.11` | `7.5.18` |
-| `CVE-2026-73566` | **HIGH** | `tar` | `7.5.11` | `7.5.21` |
+_No Critical or High app-level vulnerabilities detected._
 
 #### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
 
 _No Critical or High system-level vulnerabilities detected._
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | -1 | -2 | — | — | -11 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
@@ -398,7 +390,7 @@ _No Critical or High system-level vulnerabilities detected._
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | -64 | -13 | -77 |
+| System | 0 | 0 | -76 | -13 | -89 |
 | App | 0 | 0 | — | — | 0 |
 
 </details>
