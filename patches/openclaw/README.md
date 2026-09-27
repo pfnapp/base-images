@@ -45,6 +45,24 @@ Perbedaan utama antara **OpenClaw Control UI** dan **Hermes Dashboard**:
   - Endpoint `/readyz` memeriksa kesiapan operasional mendalam subsistem terkonfigurasi, termasuk database agent dan channel. `/readyz` bukan bukti inferensi model provider, dan jika ada channel terkonfigurasi yang tidak terhubung dapat memblokir status ready sehingga kurang cocok untuk mengekspos wizard onboarding awal.
   - Masalah sebelumnya di Kubernetes (localhost 200 namun Pod IP connection refused sehingga kubelet mengirim SIGTERM) diatasi dengan flag eksplisit `--bind lan`.
 
+## Ingress / Reverse Proxy (env-driven)
+
+OpenClaw reads `gateway.trustedProxies` and `gateway.controlUi.allowedOrigins` only from its config file, and has no env vars for them. Without them, requests through an ingress get a 403 with `proxy client attribution is required`. The image's `pfnapp-entrypoint.sh` writes both from env (comma-separated) on every start, then `exec`s CMD:
+
+| Env | Config key |
+| --- | --- |
+| `OPENCLAW_TRUSTED_PROXIES` | `gateway.trustedProxies` (IP/CIDR) |
+| `OPENCLAW_ALLOWED_ORIGINS` | `gateway.controlUi.allowedOrigins` (replaces the list) |
+
+Behavior verified locally:
+- A trusted IP **with** `X-Forwarded-For` gets 200.
+- A trusted IP **without** XFF gets 403.
+- An untrusted IP with XFF gets 403.
+
+Consequences:
+- **Kubelet probes:** `httpGet` probes come from the node's `cni0` IP (`10.42.x.1`). If that IP falls inside the trusted CIDR, the probe gets 403. Use `exec` probes (curl to `127.0.0.1`, treated as direct-local), as in the excerpt below.
+- **Do not use `0.0.0.0/0`:** the client IP from XFF would also count as a proxy, so every request gets 403.
+
 ## Kubernetes Spec Excerpt (Partial)
 
 Excerpt Pod spec berikut mempertahankan image entrypoint tini (`["tini", "-s", "--"]`) melalui `args`, dengan storage UID 1000, Secret token, dan probe. Pastikan driver storage memberikan akses tulis ke PVC; `fsGroup` bukan jaminan untuk semua jenis volume. `runtime-manifest.json` mendokumentasikan kontrak ini, tetapi generator platform tetap perlu menerapkan `args`, mount, dan startup probe berikut:
@@ -58,14 +76,8 @@ spec:
   containers:
     - name: openclaw
       image: ghcr.io/pfnapp/openclaw:2026.9.6
-      # Preserve tini ENTRYPOINT [tini, -s, --]; pass arguments via args
-      args:
-        - node
-        - openclaw.mjs
-        - gateway
-        - --allow-unconfigured
-        - --bind
-        - lan
+      # No command/args: the image ENTRYPOINT (tini + pfnapp-entrypoint.sh)
+      # and CMD (gateway --allow-unconfigured --bind lan) are the full contract.
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000
@@ -84,26 +96,28 @@ spec:
             secretKeyRef:
               name: openclaw-gateway-auth
               key: token
+        # Ingress pod CIDR; kubelet probes must then be exec (see below).
+        - name: OPENCLAW_TRUSTED_PROXIES
+          value: "10.42.0.0/16"
+        - name: OPENCLAW_ALLOWED_ORIGINS
+          value: "https://openclaw.example.com"
       volumeMounts:
         - name: openclaw-data
           mountPath: /home/node/.openclaw
       startupProbe:
-        httpGet:
-          path: /startupz
-          port: gateway
+        exec:
+          command: ["curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:18789/startupz"]
         initialDelaySeconds: 5
         periodSeconds: 10
         failureThreshold: 30
       livenessProbe:
-        httpGet:
-          path: /healthz
-          port: gateway
+        exec:
+          command: ["curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:18789/healthz"]
         initialDelaySeconds: 15
         periodSeconds: 15
       readinessProbe:
-        httpGet:
-          path: /startupz
-          port: gateway
+        exec:
+          command: ["curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:18789/startupz"]
         initialDelaySeconds: 5
         periodSeconds: 10
   volumes:
