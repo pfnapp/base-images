@@ -1,7 +1,7 @@
 # PFNApp — Hermes Agent Hardened Image
 
-**Upstream:** `docker.io/nousresearch/hermes-agent:v2026.9.14`  
-**PFNApp:** `ghcr.io/pfnapp/hermes-agent:v2026.9.14`
+**Upstream:** `docker.io/nousresearch/hermes-agent:v2026.9.24`
+**PFNApp:** `ghcr.io/pfnapp/hermes-agent:v2026.9.24`
 
 ## What changed
 
@@ -37,20 +37,16 @@ callback** (NAS → dashboard `/api/cron/fire` → gateway loopback) and
 
 ### Health
 
-The container healthcheck is a **dashboard availability probe**, not an API
-probe. It does what a browser does: unauthenticated `GET /` on 9119 must
-answer the login redirect (`302` with `Location: …/login`), or return `200`
-(e.g. on a loopback bind where the gate is off). Connection refused, `4xx` or
-`5xx` marks the container unhealthy. Two consequences worth knowing:
+The container healthcheck and runtime probes target the unauthenticated dashboard liveness endpoint:
+`GET /api/health` on port 9119 (returns HTTP 200 `{"ok":true,"version":"...","auth_required":true}`).
+Connection refused, `4xx` or `5xx` marks the container unhealthy. Meanwhile, browser requests to `GET /`
+answer the login redirect (`302` with `Location: …/login`) when non-loopback authentication is engaged.
+Two consequences worth knowing:
 
 - The probe covers the dashboard, not the gateway daemon process.
 - With `HERMES_DASHBOARD=0` nothing listens on 9119, so the container can
   **never** become healthy — drop or repoint the `healthcheck` block if you
   deliberately run without the dashboard.
-
-Upstream also exposes an unauthenticated `GET /api/health` on 9119 (its own
-"process liveness" endpoint) if you need a plain `200` to point a generic
-uptime checker at.
 
 ## Web dashboard
 
@@ -133,13 +129,137 @@ docker compose restart hermes-agent     # or unset ... to re-enable
 
 Bringing an existing deployment up on this compose recreates the container
 (boot prelude, env and healthcheck changed) but keeps the same `hermes-data`
-volume, so stored data survives; re-supply `HERMES_API_SERVER_KEY` and
+volume (`docker compose down` retains named volumes; `docker compose down -v` destroys them),
+so stored data survives across normal recreation; re-supply `HERMES_API_SERVER_KEY` and
 re-publish 8642 in `.env`/compose if existing API clients still need it.
 
 Credentials are never committed: `docker-compose.yml` only carries
 local-only placeholders behind `${...}` interpolation (and an empty API key —
 the generated key lives in the git-ignored data volume, not the repository),
 and real values live in `.env` (git-ignored).
+
+## Security architecture & root bootstrap
+
+- **Root bootstrap:** The container entrypoint is s6-overlay (`/opt/hermes/docker/entrypoint-dispatch.sh`).
+  Supported startup requires root bootstrap (`runAsUser: 0`, `runAsGroup: 0`, `readOnlyRoot: false`)
+  so s6 preinit and stage2 cont-init (`/etc/cont-init.d/01-hermes-setup`) can manage runtime dirs,
+  sync bundled skills, and chown/seed `/opt/data` to `hermes:hermes`.
+- **Privilege drop:** All supervised application processes (web dashboard and gateway daemon)
+  drop privileges and run as unprivileged user `hermes` (UID 1000, GID 1000) via `s6-setuidgid hermes`.
+- **Kubernetes securityContext:** Enforcing strict `runAsNonRoot: true` or an arbitrary non-root
+  UID (such as 10001) in Kubernetes Pod securityContext is unsupported by upstream s6-overlay and breaks
+  startup. Run container as root, allowing s6 to drop privileges to UID 1000.
+
+## Kubernetes deployment excerpt
+
+The following excerpt demonstrates how to configure Hermes Agent in a Kubernetes Pod/Deployment.
+Note: this is a partial excerpt requiring platform Service, Ingress, and PVC wiring.
+The runtime manifest describes this contract; it does not generate the Pod's `args`,
+PVC, or startup probe. The platform renderer must preserve these settings:
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hermes-agent
+  labels:
+    app.kubernetes.io/name: hermes-agent
+spec:
+  securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+    fsGroup: 1000
+  containers:
+    - name: hermes-agent
+      image: ghcr.io/pfnapp/hermes-agent:v2026.9.24
+      # Preserve s6 supervisor ENTRYPOINT by providing args instead of overriding command
+      args:
+        - sh
+        - -c
+        - |
+          if [ "$API_SERVER_ENABLED" = "true" ]; then
+              hermes config unset platforms.api_server.enabled >/dev/null 2>&1 || true
+          else
+              hermes config set platforms.api_server.enabled false >/dev/null 2>&1 || true
+          fi
+          exec hermes gateway run
+      securityContext:
+        readOnlyRootFilesystem: false
+      env:
+        - name: API_SERVER_ENABLED
+          value: "false"
+        - name: AWS_EC2_METADATA_DISABLED
+          value: "true"
+        - name: HERMES_HOME
+          value: "/opt/data"
+        - name: HERMES_UID
+          value: "1000"
+        - name: HERMES_GID
+          value: "1000"
+        - name: HERMES_DASHBOARD
+          value: "1"
+        - name: HERMES_DASHBOARD_HOST
+          value: "0.0.0.0"
+        - name: HERMES_DASHBOARD_PORT
+          value: "9119"
+        - name: HERMES_DASHBOARD_BASIC_AUTH_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: hermes-dashboard-auth
+              key: username
+        - name: HERMES_DASHBOARD_BASIC_AUTH_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: hermes-dashboard-auth
+              key: password
+      ports:
+        - name: dashboard
+          containerPort: 9119
+          protocol: TCP
+      startupProbe:
+        httpGet:
+          path: /api/health
+          port: 9119
+        initialDelaySeconds: 10
+        periodSeconds: 5
+        failureThreshold: 30
+        timeoutSeconds: 5
+      livenessProbe:
+        httpGet:
+          path: /api/health
+          port: 9119
+        periodSeconds: 15
+        timeoutSeconds: 5
+      readinessProbe:
+        httpGet:
+          path: /api/health
+          port: 9119
+        periodSeconds: 10
+        timeoutSeconds: 5
+      volumeMounts:
+        - name: hermes-data
+          mountPath: /opt/data
+  volumes:
+    - name: hermes-data
+      persistentVolumeClaim:
+        claimName: hermes-data-pvc
+```
+
+## Simulation coverage
+
+The patched `v2026.9.24` image was tested with a fresh, dedicated Compose volume:
+health/login routes were reachable on both the published host port and container IP,
+invalid password login returned 401, and valid login returned dashboard HTML and
+configuration through the authenticated HTTP API. The supervisor ran as root while
+the dashboard and gateway ran as UID 1000.
+
+A harmless `dashboard.theme` setting saved through the CLI survived both restart
+and forced container recreation, and was readable through the authenticated config
+API. Browser rendering, saving provider credentials through the UI, actual model
+inference, and Kubernetes deployment were not tested. Retain the named volume;
+application-state persistence does not imply browser sessions survive when the
+optional dashboard signing secret changes.
 
 ## CVE reduction
 
