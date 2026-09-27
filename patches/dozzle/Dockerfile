@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # PFNApp hardened image for Dozzle
 #
-# CVE ORIGIN ANALYSIS (Trivy, scan 2026-09-23 — amir20/dozzle:v11.1.1):
+# CVE ORIGIN ANALYSIS (Trivy, scan 2026-09-23 — amir20/dozzle:v11.1.2):
 #   * System (os-pkgs): NONE VISIBLE. Upstream runtime is scratch-based (a
 #     single static binary, no shell, no package manager, no OS package DB),
 #     so `apk/apt upgrade` is NOT applicable and Trivy reports 0 system
@@ -27,13 +27,13 @@
 # countermeasures Go stamps the main module as a dirty pseudo-version
 # (v0.0.0-<time>-<hash>+dirty) which sorts BELOW every fixed version, making
 # Trivy report app CVEs that are already fixed in this source (CVE-2026-24740
-# fixed 9.0.3, CVE-2026-44985 / CVE-2026-45298 fixed 10.5.2 — all < v11.1.1).
+# fixed 9.0.3, CVE-2026-44985 / CVE-2026-45298 fixed 10.5.2 — all < v11.1.2).
 # Building after `rm -rf .git` with -buildvcs=false stamps
 # `mod github.com/amir20/dozzle (devel)` — identical to the upstream release
 # binary — so the scanner result matches upstream reality.
 # =============================================================================
 
-# --- Stage 1: pinned upstream source (v11.1.1 = release 71d3d71) --------------
+# --- Stage 1: pinned upstream source (v11.1.2 = release 71d3d71) --------------
 FROM alpine:3.24 AS source
 RUN apk add --no-cache git
 ARG DOZZLE_VERSION=11.1.1
@@ -41,7 +41,7 @@ RUN git clone -q --depth 1 --branch "v${DOZZLE_VERSION}" \
       https://github.com/amir20/dozzle.git /dozzle
 
 # --- Stage 2: target image, used for PEM carving AND final runtime config -----
-FROM docker.io/amir20/dozzle:v11.1.1 AS upstream
+FROM docker.io/amir20/dozzle:v11.1.2 AS upstream
 
 # --- Stage 3: frontend (baked into the Go binary via go:embed) ----------------
 FROM oven/bun:1.4.2-alpine AS assets
