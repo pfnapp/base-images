@@ -23,18 +23,6 @@
       "troubleshooting": "Set a stable token (or OPENCLAW_GATEWAY_PASSWORD) so clients survive restarts; a non-loopback bind with no auth path fails closed. The example is a local-only dummy value for compose validation."
     },
     {
-      "key": "OPENCLAW_GATEWAY_BIND",
-      "label": "Gateway Bind Mode",
-      "type": "string",
-      "required": false,
-      "default": "lan",
-      "example": "0.0.0.0",
-      "safe": true,
-      "category": "networking",
-      "description": "Where the gateway listens: `lan` or `0.0.0.0` accept published container traffic, `loopback` stays local.",
-      "troubleshooting": "With `loopback` the published 18789 port is unreachable from the host — use `lan` (container default) or 0.0.0.0."
-    },
-    {
       "key": "OPENCLAW_GATEWAY_PORT",
       "label": "Gateway Port",
       "type": "number",
@@ -191,5 +179,5 @@
       "troubleshooting": "Pick either token or password auth — a non-loopback bind without one of them is rejected at startup. Treat it as a full-access operator credential; the example is a local-only placeholder for compose validation."
     }
   ],
-  "notes": "The gateway starts from the image default command (`node openclaw.mjs gateway`) managed via tini entrypoint (['tini', '-s', '--']). Fully compatible with Kubernetes runAsNonRoot: true and non-root UIDs (e.g. 1000 or 10001). Probes are GET /healthz (liveness) and GET /startupz (readiness), both unauthenticated on the gateway port. Gateway settings otherwise live in ~/.openclaw/openclaw.json on the mounted volume. Provider keys, channel tokens and the optional gateway password are declared as optional tunables with placeholder-only examples: OpenClaw reads them from the process environment or the trusted global dotenv (~/.openclaw/.env) — never from a workspace `.env` — and the sample supplies none."
+  "notes": "The gateway starts managed via tini entrypoint (['tini', '-s', '--']). In Kubernetes, preserve entrypoint by passing arguments via args: ['node', 'openclaw.mjs', 'gateway', '--allow-unconfigured', '--bind', 'lan'] rather than overriding command. Explicit '--bind lan' is the sample solution to listen beyond loopback on container/Pod IP (config gateway.bind lan alternative supported); OPENCLAW_GATEWAY_BIND is not supported by runtime code. Runs as UID/GID 1000 (node:node); persistent volume mounted at /home/node/.openclaw requires writable ownership (fsGroup: 1000 grants group access if storage driver supports, not ownership universal guarantee). Probes are GET /healthz (liveness) and GET /startupz (readiness/onboarding reachability), both unauthenticated on the gateway port. Endpoint /readyz checks deeper operational state of configured subsystems; not proof provider inference; may be unsuitable for exposing onboarding if unavailable configured channel blocks. Gateway settings persist in ~/.openclaw/openclaw.json on the mounted volume, alongside sessions, state, and keys under ~/.openclaw. Provider keys and tokens are supplied via process environment or trusted global dotenv (~/.openclaw/.env) — never from a workspace .env."
 }

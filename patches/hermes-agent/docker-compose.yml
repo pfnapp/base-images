@@ -1,7 +1,7 @@
 services:
   hermes-agent:
     build: .
-    image: local/pfnapp-hermes-agent:v2026.9.14
+    image: local/pfnapp-hermes-agent:v2026.9.24
     # The image entrypoint routes its args as `hermes <subcommand>` unless the
     # first arg is a bare executable — `sh` is one, so main-wrapper execs this
     # script as the `hermes` user with the venv already activated.
@@ -84,18 +84,16 @@ services:
       HERMES_DASHBOARD_BASIC_AUTH_SECRET: "${HERMES_DASHBOARD_BASIC_AUTH_SECRET:-}"
     volumes: ["hermes-data:/opt/data"]
     healthcheck:
-      # Dashboard-first: probe the dashboard exactly as a browser reaches it.
-      # The auth gate is engaged (container bind is non-loopback), so an
-      # unauthenticated GET / answers the login redirect (302 -> /login);
-      # a plain 200 also counts (e.g. a loopback bind, gate off). Connection
-      # refused, 4xx or 5xx = dashboard down = container unhealthy. Note this
-      # covers the dashboard, not the gateway process: with HERMES_DASHBOARD=0
+      # Dashboard healthcheck: probe the unauthenticated dashboard liveness endpoint.
+      # GET /api/health returns 200 OK while the dashboard is running (auth_required: true).
+      # Connection refused, 4xx or 5xx = dashboard down = container unhealthy.
+      # Note this covers the dashboard, not the gateway process: with HERMES_DASHBOARD=0
       # nothing listens on 9119 and the container can never become healthy.
       # The API server is intentionally not probed — it is off by default.
       test:
         [
           "CMD-SHELL",
-          "curl -sS --max-time 5 -o /dev/null -D - http://127.0.0.1:9119/ | grep -qiE '^(location:.*login|HTTP/[0-9.]+ 200)'",
+          "curl -fsS --max-time 5 http://127.0.0.1:9119/api/health >/dev/null || exit 1",
         ]
       interval: 15s
       timeout: 5s
