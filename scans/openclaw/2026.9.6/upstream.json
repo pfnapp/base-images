@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-28T06:19:39.998Z",
+  "scannedAt": "2026-09-29T06:34:54.889Z",
   "system": {
-    "total": 501,
+    "total": 504,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -684,6 +684,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -858,6 +866,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
       },
       {
         "id": "CVE-2026-6276",
@@ -1746,6 +1762,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "TEMP-1149217-B31E38",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.42-1+deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
       },
       {
         "id": "CVE-2026-13221",
@@ -4014,7 +4038,7 @@
     ]
   },
   "app": {
-    "total": 19,
+    "total": 23,
     "cves": [
       {
         "id": "CVE-2026-83605",
@@ -4145,6 +4169,30 @@
         "title": "fast-uri: fast-uri: URI parsing flaw enables server-side request forgery and redirects"
       },
       {
+        "id": "CVE-2026-84292",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.5",
+        "fixedVersion": "2.4.6, 3.1.7, 4.1.4",
+        "severity": "HIGH",
+        "title": "fast-uri: fast-uri: Authority Injection via Unvalidated Port Serialization"
+      },
+      {
+        "id": "CVE-2026-101910",
+        "pkg": "ip-address",
+        "installedVersion": "10.4.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
+        "id": "CVE-2026-101913",
+        "pkg": "ip-address",
+        "installedVersion": "10.4.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
         "id": "CVE-2026-84367",
         "pkg": "joi",
         "installedVersion": "18.2.3",
@@ -4167,6 +4215,14 @@
         "fixedVersion": "4.3.2, 3.15.2",
         "severity": "HIGH",
         "title": "js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       }
     ]
   }

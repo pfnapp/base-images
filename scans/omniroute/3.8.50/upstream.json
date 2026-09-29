@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-28T06:19:38.172Z",
+  "scannedAt": "2026-09-29T06:34:53.643Z",
   "system": {
-    "total": 159,
+    "total": 162,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -324,6 +324,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u3",
@@ -498,6 +506,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
       },
       {
         "id": "CVE-2018-6829",
@@ -730,6 +746,14 @@
         "fixedVersion": "10.46-1~deb13u2",
         "severity": "LOW",
         "title": "pcre2: PCRE2: Information disclosure via pcre2_serialize_encode"
+      },
+      {
+        "id": "TEMP-1149217-B31E38",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.46-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
       },
       {
         "id": "CVE-2026-3184",
@@ -1278,7 +1302,7 @@
     ]
   },
   "app": {
-    "total": 7,
+    "total": 13,
     "cves": [
       {
         "id": "CVE-2026-77301",
@@ -1295,6 +1319,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "adm-zip: adm-zip: Arbitrary File Overwrite via Symlink Following"
+      },
+      {
+        "id": "CVE-2026-101910",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
+        "id": "CVE-2026-101913",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
       },
       {
         "id": "CVE-2026-75604",
@@ -1335,6 +1375,38 @@
         "fixedVersion": "0.35.4",
         "severity": "HIGH",
         "title": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       }
     ]
   }

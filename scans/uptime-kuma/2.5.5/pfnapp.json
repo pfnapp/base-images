@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-28T06:19:30.995Z",
+  "scannedAt": "2026-09-29T06:34:49.151Z",
   "system": {
-    "total": 1083,
+    "total": 1098,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -2708,6 +2708,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -2882,6 +2890,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
       },
       {
         "id": "CVE-2017-7475",
@@ -3279,7 +3295,7 @@
         "id": "CVE-2026-78030",
         "pkg": "libdbi-perl",
         "installedVersion": "1.643-4+deb12u2",
-        "fixedVersion": "None",
+        "fixedVersion": "1.643-4+deb12u3",
         "severity": "UNKNOWN",
         "title": "DBI versions before 1.653 for Perl load arbitrary modules via unvalida ..."
       },
@@ -3287,17 +3303,17 @@
         "id": "CVE-2026-88815",
         "pkg": "libdbi-perl",
         "installedVersion": "1.643-4+deb12u2",
-        "fixedVersion": "None",
+        "fixedVersion": "1.643-4+deb12u3",
         "severity": "UNKNOWN",
-        "title": "[Fix DBI::sql_type_cast on IV/NV]"
+        "title": "DBI versions before 1.654 for Perl incorrectly treat numeric values as ..."
       },
       {
         "id": "CVE-2026-88816",
         "pkg": "libdbi-perl",
         "installedVersion": "1.643-4+deb12u2",
-        "fixedVersion": "None",
+        "fixedVersion": "1.643-4+deb12u3",
         "severity": "UNKNOWN",
-        "title": "[Fix FetchHashKeyName   on IV/NV]"
+        "title": "DBI versions before 1.654 for Perl incorrectly treat numeric values as ..."
       },
       {
         "id": "CVE-2026-19617",
@@ -4612,6 +4628,14 @@
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
       },
       {
+        "id": "TEMP-1149217-B31E38",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.42-1+deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
+      },
+      {
         "id": "CVE-2026-13221",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
@@ -5828,6 +5852,30 @@
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
+        "id": "CVE-2026-94283",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
+      },
+      {
+        "id": "CVE-2026-94284",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
+      },
+      {
+        "id": "CVE-2026-94285",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
+      },
+      {
         "id": "CVE-2026-88806",
         "pkg": "libx11-data",
         "installedVersion": "2:1.8.4-2+deb12u2",
@@ -5836,12 +5884,60 @@
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
+        "id": "CVE-2026-94283",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
+      },
+      {
+        "id": "CVE-2026-94284",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
+      },
+      {
+        "id": "CVE-2026-94285",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
+      },
+      {
         "id": "CVE-2026-88806",
         "pkg": "libx11-xcb1",
         "installedVersion": "2:1.8.4-2+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
+      },
+      {
+        "id": "CVE-2026-94283",
+        "pkg": "libx11-xcb1",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
+      },
+      {
+        "id": "CVE-2026-94284",
+        "pkg": "libx11-xcb1",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
+      },
+      {
+        "id": "CVE-2026-94285",
+        "pkg": "libx11-xcb1",
+        "installedVersion": "2:1.8.4-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
       },
       {
         "id": "CVE-2026-93541",
@@ -6004,6 +6100,14 @@
         "title": "libXpm: libXpm: Denial of Service via out-of-bounds read in XPM file parsing"
       },
       {
+        "id": "CVE-2026-94287",
+        "pkg": "libxpm4",
+        "installedVersion": "1:3.5.12-1.1+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libXpm: libXpm: Denial of Service via unsigned integer underflow"
+      },
+      {
         "id": "CVE-2026-88807",
         "pkg": "libxrender1",
         "installedVersion": "1:0.9.10-1.1",
@@ -6018,6 +6122,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "iptables: --syn flag bypass"
+      },
+      {
+        "id": "CVE-2026-94286",
+        "pkg": "libxtst6",
+        "installedVersion": "2:1.2.3-1.1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "libXtst: libXtst: Denial of Service via out-of-bounds read in RECORD reply parser"
       },
       {
         "id": "CVE-2007-5686",
@@ -6946,6 +7058,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "nscd",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
       },
       {
         "id": "CVE-2025-27587",
@@ -8670,7 +8790,7 @@
     ]
   },
   "app": {
-    "total": 91,
+    "total": 93,
     "cves": [
       {
         "id": "CVE-2026-48068",
@@ -8863,6 +8983,14 @@
         "fixedVersion": "8.0.9",
         "severity": "MEDIUM",
         "title": "Nodemailer: CRLF injection in Nodemailer List-* header comments allows arbitrary message header injection"
+      },
+      {
+        "id": "GHSA-6vj9-mwq6-2f5v",
+        "pkg": "nodemailer",
+        "installedVersion": "7.0.13",
+        "fixedVersion": "10.0.2",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Process-global DNS cache reuses TLS `servername` across transports, enabling cross-tenant SMTP credential disclosure"
       },
       {
         "id": "GHSA-8m3c-c648-2xjj",
@@ -9127,6 +9255,14 @@
         "fixedVersion": "7.5.17",
         "severity": "MEDIUM",
         "title": "node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       },
       {
         "id": "CVE-2026-48779",

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-28T06:19:44.531Z",
+  "scannedAt": "2026-09-29T06:34:58.093Z",
   "system": {
     "total": 112,
     "cves": [
@@ -902,7 +902,7 @@
     ]
   },
   "app": {
-    "total": 31,
+    "total": 39,
     "cves": [
       {
         "id": "GHSA-j95f-988m-3j2f",
@@ -1009,6 +1009,22 @@
         "title": "Element Plus Link component (el-link) implements insufficient input validation for the href attribute"
       },
       {
+        "id": "CVE-2026-84292",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.6",
+        "fixedVersion": "2.4.6, 3.1.7, 4.1.4",
+        "severity": "HIGH",
+        "title": "fast-uri: fast-uri: Authority Injection via Unvalidated Port Serialization"
+      },
+      {
+        "id": "CVE-2026-84394",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.6",
+        "fixedVersion": "2.4.6, 3.1.7, 4.1.4",
+        "severity": "HIGH",
+        "title": "fast-uri: fast-uri: Host confusion via unbalanced URI brackets can bypass security policies"
+      },
+      {
         "id": "CVE-2026-84363",
         "pkg": "hono",
         "installedVersion": "4.12.34",
@@ -1033,6 +1049,22 @@
         "title": "Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory"
       },
       {
+        "id": "CVE-2026-101910",
+        "pkg": "ip-address",
+        "installedVersion": "10.3.1",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
+        "id": "CVE-2026-101913",
+        "pkg": "ip-address",
+        "installedVersion": "10.3.1",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
         "id": "CVE-2026-2327",
         "pkg": "markdown-it",
         "installedVersion": "13.0.2",
@@ -1049,6 +1081,14 @@
         "title": "markdown-it: markdown-it: Denial of Service via quadratic processing of smartquotes with typographer enabled"
       },
       {
+        "id": "CVE-2026-88932",
+        "pkg": "multer",
+        "installedVersion": "2.3.0",
+        "fixedVersion": "2.4.0",
+        "severity": "MEDIUM",
+        "title": "multer: multer: Denial of Service via orphaned disk writes on aborted uploads"
+      },
+      {
         "id": "CVE-2026-82659",
         "pkg": "nodemailer",
         "installedVersion": "8.0.10",
@@ -1063,6 +1103,14 @@
         "fixedVersion": "9.1.0",
         "severity": "HIGH",
         "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list"
+      },
+      {
+        "id": "GHSA-6vj9-mwq6-2f5v",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.2",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Process-global DNS cache reuses TLS `servername` across transports, enabling cross-tenant SMTP credential disclosure"
       },
       {
         "id": "GHSA-8m3c-c648-2xjj",
@@ -1151,6 +1199,22 @@
         "fixedVersion": "4.2.0",
         "severity": "HIGH",
         "title": "toml-node: toml-node: Denial of Service via uncontrolled recursion in TOML parsing"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-28T06:20:02.606Z",
+  "scannedAt": "2026-09-29T06:35:11.480Z",
   "system": {
-    "total": 3143,
+    "total": 3150,
     "cves": [
       {
         "id": "CVE-2001-1534",
@@ -3140,6 +3140,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -3300,6 +3308,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -3460,6 +3476,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
@@ -3618,6 +3642,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
       },
       {
         "id": "CVE-2017-13716",
@@ -6028,6 +6060,14 @@
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
       },
       {
+        "id": "TEMP-1149217-B31E38",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.46-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
+      },
+      {
         "id": "CVE-2026-9538",
         "pkg": "libperl5.40",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -7124,12 +7164,60 @@
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
       },
       {
+        "id": "CVE-2026-94283",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
+      },
+      {
+        "id": "CVE-2026-94284",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
+      },
+      {
+        "id": "CVE-2026-94285",
+        "pkg": "libx11-6",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
+      },
+      {
         "id": "CVE-2026-88806",
         "pkg": "libx11-data",
         "installedVersion": "2:1.8.12-1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
+      },
+      {
+        "id": "CVE-2026-94283",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
+      },
+      {
+        "id": "CVE-2026-94284",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
+      },
+      {
+        "id": "CVE-2026-94285",
+        "pkg": "libx11-data",
+        "installedVersion": "2:1.8.12-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
       },
       {
         "id": "CVE-2026-43185",
@@ -7698,14 +7786,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: Bluetooth: RFCOMM: serialize security confirmation handling"
-      },
-      {
-        "id": "CVE-2026-89579",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: bpf: Harden bloom filter sizing and indexing on 32-bit kernels"
       },
       {
         "id": "CVE-2026-89603",
@@ -12556,6 +12636,14 @@
         "title": "kernel: dm raid1: reserve space for NUL-terminator in build_constructor_string()"
       },
       {
+        "id": "CVE-2026-89579",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Harden bloom filter sizing and indexing on 32-bit kernels"
+      },
+      {
         "id": "CVE-2026-89580",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -15873,7 +15961,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+        "title": "kernel: ksmbd: Do not skip lock checks for single-byte ranges"
       },
       {
         "id": "CVE-2026-90177",
@@ -18804,6 +18892,46 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
+        "id": "CVE-2026-93782",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: vhost-scsi: flush backend after device ioctls"
+      },
+      {
+        "id": "CVE-2026-93786",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: ksmbd: preserve VFS inherited POSIX ACL mask"
+      },
+      {
+        "id": "CVE-2026-93787",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: smb: client: bound dirent name against end of SMB response in cifs_filldir"
+      },
+      {
+        "id": "CVE-2026-93789",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: iwlwifi: bound aligned TLV advance in FW parser"
+      },
+      {
+        "id": "CVE-2026-93790",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: iwlwifi: mvm: fix out-of-bounds tid_data access in BA notif"
+      },
+      {
         "id": "CVE-2004-0230",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -20116,6 +20244,22 @@
         "title": "kernel: bus: mhi: ep: Fix device refcount leak in the error path of MHI device creation"
       },
       {
+        "id": "CVE-2026-93785",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: cifs: validate idmap key payload length"
+      },
+      {
+        "id": "CVE-2026-93788",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: wifi: iwlwifi: acpi: validate WGDS table revision index"
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -20700,14 +20844,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
-        "id": "CVE-2026-93782",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
-      },
-      {
         "id": "CVE-2026-93783",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -20717,54 +20853,6 @@
       },
       {
         "id": "CVE-2026-93784",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-93785",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-      },
-      {
-        "id": "CVE-2026-93786",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-93787",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-93788",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-93789",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-93790",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
@@ -21452,14 +21540,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
       },
       {
-        "id": "CVE-2026-97474",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
         "id": "CVE-2026-97475",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -21644,14 +21724,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
-        "id": "CVE-2026-97498",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
         "id": "CVE-2026-97499",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -21748,14 +21820,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
       },
       {
-        "id": "CVE-2026-97511",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
         "id": "CVE-2026-97512",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -21810,14 +21874,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-97519",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
         "id": "CVE-2026-97520",
@@ -25150,7 +25206,32 @@
     ]
   },
   "app": {
-    "total": 0,
-    "cves": []
+    "total": 3,
+    "cves": [
+      {
+        "id": "CVE-2026-101910",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
+        "id": "CVE-2026-101913",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      }
+    ]
   }
 }
