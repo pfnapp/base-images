@@ -71,6 +71,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push ${{ matrix.id }}:${{ matrix.tag }}
+        id: build
         uses: docker/build-push-action@v7
         with:
           context: patches/${{ matrix.id }}
@@ -82,6 +83,64 @@ jobs:
           cache-from: type=gha,scope=${{ matrix.id }}
           cache-to: type=gha,scope=${{ matrix.id }},mode=max
           provenance: false
+
+      - name: Notify Green release webhooks
+        continue-on-error: true
+        env:
+          APP_ID: ${{ matrix.id }}
+          RELEASE_TAG: ${{ matrix.tag }}
+          IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
+          STAGING_WEBHOOK_URL: ${{ secrets.STAGING_WEBHOOK_URL }}
+          STAGING_WEBHOOK_SECRET: ${{ secrets.STAGING_WEBHOOK_SECRET }}
+          PROD_WEBHOOK_URL: ${{ secrets.PROD_WEBHOOK_URL }}
+          PROD_WEBHOOK_SECRET: ${{ secrets.PROD_WEBHOOK_SECRET }}
+        run: |
+          body_file=$(mktemp)
+          trap 'rm -f "$body_file"' EXIT
+          jq -cn --arg appId "$APP_ID" --arg tag "$RELEASE_TAG" --arg digest "$IMAGE_DIGEST" \
+            --slurpfile obs observatory.json \
+            '{appId: $appId, tag: $tag, digest: $digest, activeVersions: ([$obs[0].applications[] | select(.id == $appId) | .active_versions] | first // [])}' \
+            > "$body_file"
+
+          # Each Green environment has its own secret and its own template gate;
+          # one target failing never blocks the other or the build.
+          for target in STAGING PROD; do
+            url_var="${target}_WEBHOOK_URL"
+            secret_var="${target}_WEBHOOK_SECRET"
+            url=${!url_var}
+            secret=${!secret_var}
+            if [ -z "$url" ] || [ -z "$secret" ]; then
+              echo "::warning::$target webhook secrets not set; skipped"
+              continue
+            fi
+
+            status=000
+            delivered=false
+            for attempt in 1 2 3; do
+              timestamp=$(date +%s)
+              signature=$(bash scripts/sign-release-webhook.sh "$body_file" "$secret" "$timestamp")
+              status=$(curl --silent --show-error --connect-timeout 5 --max-time 10 \
+                --output /dev/null --write-out '%{http_code}' \
+                --request POST "$url" \
+                --header 'Content-Type: application/json' \
+                --header "x-pfnapp-release-timestamp: $timestamp" \
+                --header "x-pfnapp-release-signature-256: $signature" \
+                --data-binary "@$body_file") || status=000
+              if [ "$status" = 200 ]; then
+                delivered=true
+                break
+              fi
+              if [ "$attempt" -lt 3 ]; then
+                sleep "$attempt"
+              fi
+            done
+
+            if [ "$delivered" = true ]; then
+              echo "$target release webhook delivered"
+            else
+              echo "::warning::$target release webhook failed after 3 attempts (HTTP $status)"
+            fi
+          done
 
       - name: Summary
         run: |
