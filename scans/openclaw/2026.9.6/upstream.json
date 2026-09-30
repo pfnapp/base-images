@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-29T06:34:54.889Z",
+  "scannedAt": "2026-09-30T06:18:35.376Z",
   "system": {
-    "total": 504,
+    "total": 517,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -688,8 +688,8 @@
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-18374",
@@ -872,8 +872,8 @@
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-6276",
@@ -1386,6 +1386,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
+      },
+      {
+        "id": "CVE-2026-102633",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat versions 2.7.2 through 2.8.5 contain an integer overflow vuln ..."
       },
       {
         "id": "CVE-2022-27943",
@@ -2420,6 +2428,14 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-84782",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
         "id": "CVE-2026-63072",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u2",
@@ -2444,12 +2460,28 @@
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
       },
       {
+        "id": "CVE-2026-35189",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
         "id": "CVE-2026-42767",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
       },
       {
         "id": "CVE-2026-54874",
@@ -2474,6 +2506,30 @@
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
       },
       {
         "id": "CVE-2022-27943",
@@ -2956,6 +3012,14 @@
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
       },
       {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
         "id": "CVE-2026-63072",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u2",
@@ -2980,12 +3044,28 @@
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
       },
       {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
         "id": "CVE-2026-42767",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
       },
       {
         "id": "CVE-2026-54874",
@@ -3010,6 +3090,30 @@
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -4038,7 +4142,7 @@
     ]
   },
   "app": {
-    "total": 23,
+    "total": 43,
     "cves": [
       {
         "id": "CVE-2026-83605",
@@ -4121,6 +4225,86 @@
         "title": "xmldom: xmldom: Malformed XML end tag parsing leads to content discard and security bypass"
       },
       {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.7",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.7",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.7",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102673",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "41.10.4, 42.5.2, 43.0.0",
+        "severity": "HIGH",
+        "title": "Electron drops inherited HTML sandbox restrictions for popups opened through OpenURLFromTab"
+      },
+      {
+        "id": "CVE-2026-102674",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
+        "severity": "HIGH",
+        "title": "Electron: Windows opened from a sandboxed top-level document do not inherit its sandbox restrictions"
+      },
+      {
+        "id": "CVE-2026-102675",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
+        "severity": "HIGH",
+        "title": "Electron: File and HTTP protocol handlers allow cross-origin reads without corsEnabled"
+      },
+      {
+        "id": "CVE-2026-102676",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
+        "severity": "HIGH",
+        "title": "Electron: <webview> can enable Node.js integration in Web Workers despite embedder restrictions"
+      },
+      {
         "id": "CVE-2026-19693",
         "pkg": "extract-zip",
         "installedVersion": "2.0.1",
@@ -4177,12 +4361,52 @@
         "title": "fast-uri: fast-uri: Authority Injection via Unvalidated Port Serialization"
       },
       {
+        "id": "CVE-2026-86472",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.5",
+        "fixedVersion": "2.4.7, 3.1.8, 4.1.5",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Security bypass due to inconsistent host case normalization"
+      },
+      {
+        "id": "CVE-2026-86472",
+        "pkg": "fast-uri",
+        "installedVersion": "4.1.4",
+        "fixedVersion": "2.4.7, 3.1.8, 4.1.5",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Security bypass due to inconsistent host case normalization"
+      },
+      {
+        "id": "CVE-2026-86818",
+        "pkg": "fast-uri",
+        "installedVersion": "4.1.4",
+        "fixedVersion": "4.1.5",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Mailto header injection via percent-encoded field-name desynchronization"
+      },
+      {
         "id": "CVE-2026-101910",
         "pkg": "ip-address",
         "installedVersion": "10.4.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.4.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.4.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
       },
       {
         "id": "CVE-2026-101913",
@@ -4190,7 +4414,31 @@
         "installedVersion": "10.4.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.7.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.7.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
+      },
+      {
+        "id": "GHSA-6h2x-m376-mqjq",
+        "pkg": "joi",
+        "installedVersion": "18.2.3",
+        "fixedVersion": "17.13.7, 18.2.6",
+        "severity": "HIGH",
+        "title": "joi: Quadratic regular-expression backtracking in `Joi.string().isoDate()`"
       },
       {
         "id": "CVE-2026-84367",
@@ -4198,7 +4446,7 @@
         "installedVersion": "18.2.3",
         "fixedVersion": "17.13.5, 18.2.4",
         "severity": "LOW",
-        "title": "joi: object().rename() with a template target can set the validated object's prototype"
+        "title": "joi: joi: Prototype pollution via dynamic key renaming"
       },
       {
         "id": "CVE-2026-84368",
@@ -4217,12 +4465,28 @@
         "title": "js-yaml: js-yaml: Denial of Service vulnerability in YAML parsing"
       },
       {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
+      },
+      {
         "id": "CVE-2026-85024",
         "pkg": "undici",
         "installedVersion": "6.28.0",
         "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
       }
     ]
   }

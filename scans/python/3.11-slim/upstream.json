@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-29T06:35:31.004Z",
+  "scannedAt": "2026-09-30T06:19:39.438Z",
   "system": {
-    "total": 275,
+    "total": 287,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -640,8 +640,8 @@
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-18374",
@@ -824,8 +824,8 @@
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-6276",
@@ -1524,12 +1524,60 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-84782",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
         "id": "CVE-2025-27587",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
       },
       {
         "id": "CVE-2022-27943",
@@ -1852,12 +1900,60 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
         "id": "CVE-2025-27587",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
       },
       {
         "id": "CVE-2007-5686",

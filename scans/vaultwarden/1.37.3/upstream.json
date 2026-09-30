@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-29T06:35:03.564Z",
+  "scannedAt": "2026-09-30T06:18:59.353Z",
   "system": {
-    "total": 250,
+    "total": 290,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -520,8 +520,8 @@
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u3",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-18374",
@@ -704,8 +704,8 @@
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u3",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-8286",
@@ -1340,10 +1340,18 @@
         "title": "pcre2: PCRE2: Information disclosure via pcre2_serialize_encode"
       },
       {
+        "id": "DSA-6530-1",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.46-1~deb13u1",
+        "fixedVersion": "10.46-1~deb13u3",
+        "severity": "UNKNOWN",
+        "title": "pcre2 - security update"
+      },
+      {
         "id": "TEMP-1149217-B31E38",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.46-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.46-1~deb13u3",
         "severity": "UNKNOWN",
         "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
       },
@@ -1410,6 +1418,110 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
       },
       {
         "id": "CVE-2026-16742",
@@ -1754,6 +1866,214 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
       },
       {
         "id": "CVE-2007-5686",

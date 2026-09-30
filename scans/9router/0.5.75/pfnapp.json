@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-09-29T06:34:52.669Z",
+  "scannedAt": "2026-09-30T06:18:04.217Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 12,
+    "total": 17,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -16,6 +16,30 @@
         "title": "sigstore-core: @sigstore/core: Signature bypass due to incorrect encoding in preAuthEncoding"
       },
       {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.0.2",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.0.2",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.0.2",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
         "id": "CVE-2026-33750",
         "pkg": "brace-expansion",
         "installedVersion": "2.0.2",
@@ -24,12 +48,28 @@
         "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
       },
       {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.1.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.1.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
+      },
+      {
         "id": "CVE-2026-101913",
         "pkg": "ip-address",
         "installedVersion": "10.1.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
         "id": "CVE-2026-42338",

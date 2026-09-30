@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-29T06:34:57.121Z",
+  "scannedAt": "2026-09-30T06:18:50.202Z",
   "system": {
     "total": 112,
     "cves": [
@@ -902,7 +902,7 @@
     ]
   },
   "app": {
-    "total": 38,
+    "total": 58,
     "cves": [
       {
         "id": "GHSA-j95f-988m-3j2f",
@@ -985,6 +985,14 @@
         "title": "xmldom: xmldom: Malformed XML end tag parsing leads to content discard and security bypass"
       },
       {
+        "id": "CVE-2026-102282",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "HIGH",
+        "title": "adm-zip extraction preserves SUID/SGID bits from untrusted ZIPs -> local privilege escalation"
+      },
+      {
         "id": "CVE-2026-77301",
         "pkg": "adm-zip",
         "installedVersion": "0.6.0",
@@ -993,12 +1001,92 @@
         "title": "adm-zip: adm-zip: Denial of Service via uncontrolled memory allocation"
       },
       {
+        "id": "GHSA-8238-w5pm-2374",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "HIGH",
+        "title": "adm-zip: Unhandled error event in async DEFLATE decompression crashes Node.js process (DoS)"
+      },
+      {
+        "id": "GHSA-rcw4-f5rp-g42v",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "HIGH",
+        "title": "adm-zip: Decompression-bomb protection (fix for CVE-2026-39244) can be bypassed by declaring uncompressed size as 0"
+      },
+      {
         "id": "CVE-2026-76845",
         "pkg": "adm-zip",
         "installedVersion": "0.6.0",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "adm-zip: adm-zip: Arbitrary File Overwrite via Symlink Following"
+      },
+      {
+        "id": "GHSA-c6fg-446q-cg94",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "MEDIUM",
+        "title": "adm-zip: getDataAsync() bypasses the maxOutputLength size guard enforced by the synchronous getData() path"
+      },
+      {
+        "id": "GHSA-p634-w6r4-rjp2",
+        "pkg": "adm-zip",
+        "installedVersion": "0.6.0",
+        "fixedVersion": "0.6.1",
+        "severity": "MEDIUM",
+        "title": "adm-zip: Duplicate ZIP entry names: getEntry() and extractAllTo() resolve to different content"
+      },
+      {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.1.4",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.1.4",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.1.4",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
       },
       {
         "id": "CVE-2025-57665",
@@ -1023,6 +1111,14 @@
         "fixedVersion": "2.4.6, 3.1.7, 4.1.4",
         "severity": "HIGH",
         "title": "fast-uri: fast-uri: Host confusion via unbalanced URI brackets can bypass security policies"
+      },
+      {
+        "id": "CVE-2026-86472",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.6",
+        "fixedVersion": "2.4.7, 3.1.8, 4.1.5",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Security bypass due to inconsistent host case normalization"
       },
       {
         "id": "CVE-2026-84363",
@@ -1054,7 +1150,23 @@
         "installedVersion": "10.3.1",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.3.1",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.3.1",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
       },
       {
         "id": "CVE-2026-101913",
@@ -1062,7 +1174,7 @@
         "installedVersion": "10.3.1",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
         "id": "CVE-2026-2327",
@@ -1079,6 +1191,22 @@
         "fixedVersion": "14.2.0",
         "severity": "MEDIUM",
         "title": "markdown-it: markdown-it: Denial of Service via quadratic processing of smartquotes with typographer enabled"
+      },
+      {
+        "id": "GHSA-253c-mchw-3w2r",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "15.0.1, 14.3.1",
+        "severity": "MEDIUM",
+        "title": "markdown-it linkify: true has two quadratic paths, so a few hundred KB of markdown blocks the event loop for tens of seconds"
+      },
+      {
+        "id": "CVE-2026-17495",
+        "pkg": "moment",
+        "installedVersion": "2.30.1",
+        "fixedVersion": "2.31.0",
+        "severity": "MEDIUM",
+        "title": "moment: Moment: Path Traversal via crafted non-string input to locale function"
       },
       {
         "id": "CVE-2026-88932",
@@ -1105,6 +1233,14 @@
         "title": "Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list"
       },
       {
+        "id": "GHSA-v53p-9fqp-m79j",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.6",
+        "severity": "HIGH",
+        "title": "Nodemailer: Quadratic backtracking in the addressparser free-text fallback allows remote denial of service"
+      },
+      {
         "id": "GHSA-6vj9-mwq6-2f5v",
         "pkg": "nodemailer",
         "installedVersion": "8.0.10",
@@ -1119,6 +1255,14 @@
         "fixedVersion": "9.1.1",
         "severity": "MEDIUM",
         "title": "Nodemailer: resolveContent() on a MailMessage bypasses disableFileAccess/disableUrlAccess when called with the legacy signature"
+      },
+      {
+        "id": "GHSA-8vvx-rff5-p5rq",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.2",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Nested structured recipient arrays bypass the parser depth limit and cause stack exhaustion DoS"
       },
       {
         "id": "GHSA-cc9r-2j5m-2m83",
@@ -1201,12 +1345,28 @@
         "title": "toml-node: toml-node: Denial of Service via uncontrolled recursion in TOML parsing"
       },
       {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
+      },
+      {
         "id": "CVE-2026-85024",
         "pkg": "undici",
         "installedVersion": "6.28.0",
         "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-29T06:35:02.620Z",
+  "scannedAt": "2026-09-30T06:18:57.685Z",
   "system": {
-    "total": 840,
+    "total": 882,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -2296,8 +2296,8 @@
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2026-18374",
@@ -2464,8 +2464,8 @@
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The strncasecmp function in the GNU C Library 2.24 and later optimized ..."
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2022-0856",
@@ -3156,6 +3156,14 @@
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
       },
       {
+        "id": "CVE-2026-102633",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat versions 2.7.2 through 2.8.5 contain an integer overflow vuln ..."
+      },
+      {
         "id": "CVE-2023-45913",
         "pkg": "libgbm1",
         "installedVersion": "25.0.7-2+deb13u1",
@@ -3681,7 +3689,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50581",
@@ -3689,7 +3697,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -3713,7 +3721,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50586",
@@ -3737,7 +3745,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50640",
@@ -3745,7 +3753,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50713",
@@ -3761,7 +3769,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54441",
@@ -4052,10 +4060,18 @@
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
       },
       {
+        "id": "DSA-6530-1",
+        "pkg": "libpcre2-8-0",
+        "installedVersion": "10.46-1~deb13u2",
+        "fixedVersion": "10.46-1~deb13u3",
+        "severity": "UNKNOWN",
+        "title": "pcre2 - security update"
+      },
+      {
         "id": "TEMP-1149217-B31E38",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.46-1~deb13u2",
-        "fixedVersion": "None",
+        "fixedVersion": "10.46-1~deb13u3",
         "severity": "UNKNOWN",
         "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
       },
@@ -4122,6 +4138,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libpng: libpng: Heap-based buffer overflow in pnm2png allows information disclosure and denial of service"
+      },
+      {
+        "id": "CVE-2026-46675",
+        "pkg": "libpng16-16t64",
+        "installedVersion": "1.6.48-1+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
       },
       {
         "id": "CVE-2026-58049",
@@ -4698,6 +4722,110 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -6052,6 +6180,214 @@
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
       },
       {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+      },
+      {
+        "id": "CVE-2026-35191",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The OpenSSL QUIC server, when configured to not preform ..."
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A non-constant-time optimized implementation of scalar  ..."
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A TLS server that calls SSL_set_SSL_CTX() to switch a c ..."
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: OpenSSL QUIC stack does not enforce connection level fl ..."
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Issue summary: A malicious remote peer may flood the local QUIC stack  ..."
+      },
+      {
+        "id": "CVE-2026-42772",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: The QUIC stream reassembly algorithm performance deteri ..."
+      },
+      {
+        "id": "CVE-2026-54873",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: QUIC process may keep memory for QUIC packet buffer for ..."
+      },
+      {
         "id": "CVE-2007-5686",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
@@ -6726,7 +7062,7 @@
     ]
   },
   "app": {
-    "total": 58,
+    "total": 91,
     "cves": [
       {
         "id": "CVE-2026-84373",
@@ -6743,6 +7079,54 @@
         "fixedVersion": "2.11.0",
         "severity": "MEDIUM",
         "title": "baseline-browser-mapping: baseline-browser-mapping: Denial of Service via improper input handling"
+      },
+      {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.6",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.6",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.6",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102276",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-102278",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+        "severity": "HIGH",
+        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
       },
       {
         "id": "CVE-2026-73088",
@@ -6774,7 +7158,23 @@
         "installedVersion": "10.2.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.2.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.2.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
       },
       {
         "id": "CVE-2026-101913",
@@ -6782,7 +7182,7 @@
         "installedVersion": "10.2.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
         "id": "CVE-2026-54272",
@@ -6857,6 +7257,14 @@
         "title": "undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames"
       },
       {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
+      },
+      {
         "id": "CVE-2026-15157",
         "pkg": "undici",
         "installedVersion": "6.26.0",
@@ -6905,12 +7313,28 @@
         "title": "undici: undici: Weakening of cookie SameSite policy due to incorrect parsing of Set-Cookie header"
       },
       {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
+      },
+      {
         "id": "CVE-2026-6733",
         "pkg": "undici",
         "installedVersion": "6.26.0",
         "fixedVersion": "6.27.0, 7.28.0, 8.5.0",
         "severity": "LOW",
         "title": "undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery."
+      },
+      {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
       },
       {
         "id": "CVE-2026-85024",
@@ -6921,6 +7345,62 @@
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       },
       {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
+      },
+      {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
+      },
+      {
+        "id": "CVE-2026-84961",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
+      },
+      {
+        "id": "CVE-2026-18149",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service due to orphaned response body in retry handler"
+      },
+      {
+        "id": "CVE-2026-84890",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded decompression of compressed responses"
+      },
+      {
+        "id": "CVE-2026-84933",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Cross-user cookie disclosure via Set-Cookie caching"
+      },
+      {
+        "id": "CVE-2026-85014",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via WebSocketStream unclean close"
+      },
+      {
         "id": "CVE-2026-85024",
         "pkg": "undici",
         "installedVersion": "7.29.0",
@@ -6929,12 +7409,116 @@
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
       },
       {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
+      },
+      {
+        "id": "CVE-2026-84947",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: Undici: Response truncation and connection termination"
+      },
+      {
+        "id": "CVE-2026-85008",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
         "id": "CVE-2026-84373",
         "pkg": "vitest",
         "installedVersion": "4.1.10",
         "fixedVersion": "4.1.11, 5.0.0-rc.2",
         "severity": "MEDIUM",
         "title": "vitest: Vitest: Arbitrary File Read via Path Traversal in HMR WebSocket"
+      },
+      {
+        "id": "CVE-2026-102268",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "CRITICAL",
+        "title": "PyJWT is a Python implementation of JSON Web Token standards. Prior to ..."
+      },
+      {
+        "id": "CVE-2026-102266",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "HIGH",
+        "title": "pyjwt: pyjwt: Authentication bypass via empty HMAC key acceptance"
+      },
+      {
+        "id": "CVE-2026-102267",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "HIGH",
+        "title": "pyjwt: pyjwt: Verification key substitution via unvalidated JWKS redirects"
+      },
+      {
+        "id": "CVE-2026-102271",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "HIGH",
+        "title": "pyjwt: PyJWT: Authentication bypass via acceptance of DER public keys as HMAC secrets"
+      },
+      {
+        "id": "CVE-2026-102272",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "HIGH",
+        "title": "pyjwt: pyjwt: Token forgery via improper Unicode byte-order mark handling"
+      },
+      {
+        "id": "CVE-2026-102273",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "HIGH",
+        "title": "pyjwt: pyjwt: Token forgery via acceptance of public JWK containers as HMAC secrets"
+      },
+      {
+        "id": "CVE-2026-101917",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: PyJWT: Denial of Service via outbound request amplification on unknown key identifiers"
+      },
+      {
+        "id": "CVE-2026-102265",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: pyjwt: Denial of Service via deeply nested token headers"
+      },
+      {
+        "id": "CVE-2026-102269",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: PyJWT: Token revocation bypass via non-canonical signature decoding"
+      },
+      {
+        "id": "CVE-2026-102274",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.14.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: pyjwt: Denial of Service via malformed RSA key in JWK set"
       },
       {
         "id": "CVE-2026-63374",
@@ -6999,6 +7583,22 @@
         "fixedVersion": "2.11.0",
         "severity": "MEDIUM",
         "title": "httpx2: HTTPX2: Request Smuggling and Connection Desynchronization via Conflicting HTTP Headers"
+      },
+      {
+        "id": "CVE-2026-49264",
+        "pkg": "oauthlib",
+        "installedVersion": "3.3.1",
+        "fixedVersion": "4.0.0",
+        "severity": "MEDIUM",
+        "title": "Oauthlib : Unsafe JSONP callback injection in RevocationEndpoint allows arbitrary JavaScript response generation"
+      },
+      {
+        "id": "CVE-2026-49265",
+        "pkg": "oauthlib",
+        "installedVersion": "3.3.1",
+        "fixedVersion": "4.0.0",
+        "severity": "MEDIUM",
+        "title": "Oauthlib: Timing Attack Vulnerability in PKCE code_verifier Comparison (CWE-208)"
       },
       {
         "id": "GHSA-3cv2-h65g-fgmm",

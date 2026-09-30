@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-09-29T06:35:16.229Z",
+  "scannedAt": "2026-09-30T06:19:18.781Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 4,
+    "total": 16,
     "cves": [
       {
         "id": "CVE-2026-101910",
@@ -13,7 +13,23 @@
         "installedVersion": "10.5.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
       },
       {
         "id": "CVE-2026-101913",
@@ -21,7 +37,63 @@
         "installedVersion": "10.5.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
-        "title": "ip-address is a library for parsing and manipulating IPv4 and IPv6 add ..."
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
+      },
+      {
+        "id": "CVE-2026-19534",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
+      },
+      {
+        "id": "CVE-2026-84961",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
+      },
+      {
+        "id": "CVE-2026-85152",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "8.10.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Authentication bypass via cross-origin cache poisoning due to missing origin isolation"
+      },
+      {
+        "id": "CVE-2026-18149",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service due to orphaned response body in retry handler"
+      },
+      {
+        "id": "CVE-2026-84890",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded decompression of compressed responses"
+      },
+      {
+        "id": "CVE-2026-84933",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Cross-user cookie disclosure via Set-Cookie caching"
+      },
+      {
+        "id": "CVE-2026-85014",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via WebSocketStream unclean close"
       },
       {
         "id": "CVE-2026-85024",
@@ -30,6 +102,30 @@
         "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
+      },
+      {
+        "id": "CVE-2026-84947",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: Undici: Response truncation and connection termination"
+      },
+      {
+        "id": "CVE-2026-85008",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
       },
       {
         "id": "CVE-2026-84373",
