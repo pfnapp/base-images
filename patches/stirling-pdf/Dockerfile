@@ -1,5 +1,5 @@
 # PFNApp hardened image for Stirling PDF
-FROM docker.io/stirlingtools/stirling-pdf:3.0.0
+FROM docker.io/stirlingtools/stirling-pdf:3.0.2
 USER root
 RUN apt-get update && \
     apt-get install -y --reinstall debconf && \
