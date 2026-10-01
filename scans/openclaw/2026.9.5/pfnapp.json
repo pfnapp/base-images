@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-30T06:18:36.958Z",
+  "scannedAt": "2026-10-01T06:50:27.366Z",
   "system": {
-    "total": 518,
+    "total": 532,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -308,12 +308,36 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2026-102473",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
+      },
+      {
+        "id": "CVE-2026-102474",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "dash: dash: Heap out-of-bounds write in conv_escape via undersized Unicode escape reservation"
+      },
+      {
         "id": "CVE-2026-53910",
         "pkg": "diffutils",
         "installedVersion": "1:3.8-4",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "diffutils: heap‑based buffer overflow due to multiple signed integer overflows in line‑mapping calculations"
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -1276,10 +1300,18 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2024-28757",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u3",
+        "fixedVersion": "2.5.0-1+deb12u4",
+        "severity": "HIGH",
+        "title": "expat: XML Entity Expansion"
+      },
+      {
         "id": "CVE-2025-59375",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "HIGH",
         "title": "firefox: thunderbird: expat: libexpat in Expat allows attackers to trigger large dynamic memory allocations via a small document that is submitted for parsing"
       },
@@ -1287,7 +1319,7 @@
         "id": "CVE-2026-25210",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "HIGH",
         "title": "libexpat: libexpat: Information disclosure and data integrity issues due to integer overflow in buffer reallocation"
       },
@@ -1295,7 +1327,7 @@
         "id": "CVE-2026-45186",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "HIGH",
         "title": "libexpat: denial of service via crafted XML input"
       },
@@ -1303,7 +1335,7 @@
         "id": "CVE-2026-66046",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "HIGH",
         "title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing"
       },
@@ -1311,7 +1343,7 @@
         "id": "CVE-2026-93990",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "HIGH",
         "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
       },
@@ -1324,10 +1356,18 @@
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
       },
       {
-        "id": "CVE-2026-32776",
+        "id": "CVE-2026-102633",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
         "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
+      },
+      {
+        "id": "CVE-2026-32776",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u3",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of Service due to NULL pointer dereference"
       },
@@ -1335,7 +1375,7 @@
         "id": "CVE-2026-32777",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of Service via infinite loop in DTD content parsing"
       },
@@ -1343,7 +1383,7 @@
         "id": "CVE-2026-32778",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of Service via NULL pointer dereference after out-of-memory condition"
       },
@@ -1364,18 +1404,10 @@
         "title": "expat: recursive XML entity expansion vulnerability"
       },
       {
-        "id": "CVE-2024-28757",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "expat: XML Entity Expansion"
-      },
-      {
         "id": "CVE-2026-24515",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u4",
         "severity": "LOW",
         "title": "libexpat: libexpat null pointer dereference"
       },
@@ -1388,12 +1420,12 @@
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
       },
       {
-        "id": "CVE-2026-102633",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u3",
+        "id": "CVE-2026-102010",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "libexpat versions 2.7.2 through 2.8.5 contain an integer overflow vuln ..."
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -1426,6 +1458,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)"
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -1772,12 +1812,12 @@
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
       },
       {
-        "id": "TEMP-1149217-B31E38",
+        "id": "CVE-2026-103111",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-1+deb12u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
+        "severity": "HIGH",
+        "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
       },
       {
         "id": "CVE-2026-13221",
@@ -1882,14 +1922,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
-      },
-      {
-        "id": "CVE-2026-48961",
-        "pkg": "libperl5.36",
-        "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl-IO-Compress: IO::Compress: Denial of Service in zipdetails CLI tool via malformed Info-ZIP Unix Extra Field"
       },
       {
         "id": "CVE-2026-7010",
@@ -2028,6 +2060,14 @@
         "title": "python: Python tarfile module: Denial of Service via improper EOF handling in streaming mode"
       },
       {
+        "id": "CVE-2026-12345",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
         "id": "CVE-2026-1502",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -2122,6 +2162,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -2212,6 +2268,14 @@
         "title": "python: Python tarfile module: Denial of Service via improper EOF handling in streaming mode"
       },
       {
+        "id": "CVE-2026-12345",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
         "id": "CVE-2026-1502",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -2306,6 +2370,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2026-13595",
@@ -2433,7 +2513,15 @@
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
       },
       {
         "id": "CVE-2026-63072",
@@ -2452,6 +2540,30 @@
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
       },
       {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
+      },
+      {
         "id": "CVE-2025-27587",
         "pkg": "libssl3",
         "installedVersion": "3.0.20-1~deb12u2",
@@ -2465,7 +2577,7 @@
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
       },
       {
         "id": "CVE-2026-42767",
@@ -2474,14 +2586,6 @@
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
-      },
-      {
-        "id": "CVE-2026-54872",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
       },
       {
         "id": "CVE-2026-54874",
@@ -2508,28 +2612,12 @@
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
       },
       {
-        "id": "CVE-2026-75805",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.20-1~deb12u2",
+        "id": "CVE-2026-102010",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
         "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
-      },
-      {
-        "id": "CVE-2026-75806",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
-      },
-      {
-        "id": "CVE-2026-77696",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -3017,7 +3105,15 @@
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
       },
       {
         "id": "CVE-2026-63072",
@@ -3036,6 +3132,30 @@
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
       },
       {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.0.20-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
+      },
+      {
         "id": "CVE-2025-27587",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u2",
@@ -3049,7 +3169,7 @@
         "installedVersion": "3.0.20-1~deb12u2",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
       },
       {
         "id": "CVE-2026-42767",
@@ -3058,14 +3178,6 @@
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: NULL Pointer Dereference in CRMF EncryptedValue Decryption"
-      },
-      {
-        "id": "CVE-2026-54872",
-        "pkg": "openssl",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
       },
       {
         "id": "CVE-2026-54874",
@@ -3090,30 +3202,6 @@
         "fixedVersion": "3.0.22-1~deb12u1",
         "severity": "LOW",
         "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
-      },
-      {
-        "id": "CVE-2026-75805",
-        "pkg": "openssl",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
-      },
-      {
-        "id": "CVE-2026-75806",
-        "pkg": "openssl",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
-      },
-      {
-        "id": "CVE-2026-77696",
-        "pkg": "openssl",
-        "installedVersion": "3.0.20-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -3244,14 +3332,6 @@
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
       {
-        "id": "CVE-2026-48961",
-        "pkg": "perl",
-        "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl-IO-Compress: IO::Compress: Denial of Service in zipdetails CLI tool via malformed Info-ZIP Unix Extra Field"
-      },
-      {
         "id": "CVE-2026-7010",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
@@ -3396,14 +3476,6 @@
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
       {
-        "id": "CVE-2026-48961",
-        "pkg": "perl-base",
-        "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl-IO-Compress: IO::Compress: Denial of Service in zipdetails CLI tool via malformed Info-ZIP Unix Extra Field"
-      },
-      {
         "id": "CVE-2026-7010",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
@@ -3546,14 +3618,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
-      },
-      {
-        "id": "CVE-2026-48961",
-        "pkg": "perl-modules-5.36",
-        "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl-IO-Compress: IO::Compress: Denial of Service in zipdetails CLI tool via malformed Info-ZIP Unix Extra Field"
       },
       {
         "id": "CVE-2026-7010",
@@ -3692,6 +3756,14 @@
         "title": "python: Python tarfile module: Denial of Service via improper EOF handling in streaming mode"
       },
       {
+        "id": "CVE-2026-12345",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
         "id": "CVE-2026-1502",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -3786,6 +3858,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -3876,6 +3964,14 @@
         "title": "python: Python tarfile module: Denial of Service via improper EOF handling in streaming mode"
       },
       {
+        "id": "CVE-2026-12345",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
         "id": "CVE-2026-1502",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -3970,6 +4066,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "TEMP-0517018-A83CE6",
@@ -4150,7 +4262,7 @@
     ]
   },
   "app": {
-    "total": 44,
+    "total": 45,
     "cves": [
       {
         "id": "CVE-2026-83605",
@@ -4279,6 +4391,14 @@
         "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "GHSA-p98j-92pf-mc4p",
+        "pkg": "dompurify",
+        "installedVersion": "3.4.15",
+        "fixedVersion": "3.4.16",
+        "severity": "LOW",
+        "title": "DOMPurify: IN_PLACE: node-removing afterSanitize hook leaves detached subtree event handlers armed, causing DOM XSS"
       },
       {
         "id": "CVE-2026-102673",

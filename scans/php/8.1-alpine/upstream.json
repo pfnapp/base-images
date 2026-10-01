@@ -1,8 +1,265 @@
 {
-  "scannedAt": "2026-09-30T06:19:35.641Z",
+  "scannedAt": "2026-10-01T06:51:15.902Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 32,
+    "cves": [
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V"
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
+      },
+      {
+        "id": "CVE-2026-40930",
+        "pkg": "libpng",
+        "installedVersion": "1.6.57-r0",
+        "fixedVersion": "1.6.59-r0",
+        "severity": "MEDIUM",
+        "title": "libpng: libpng: Data integrity and availability impact due to improper APNG chunk handling"
+      },
+      {
+        "id": "CVE-2026-46675",
+        "pkg": "libpng",
+        "installedVersion": "1.6.57-r0",
+        "fixedVersion": "1.6.59-r0",
+        "severity": "UNKNOWN",
+        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V"
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "libssl3",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
+      },
+      {
+        "id": "CVE-2026-75804",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control"
+      },
+      {
+        "id": "CVE-2026-84782",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "HIGH",
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
+      },
+      {
+        "id": "CVE-2026-54875",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: information disclosure via non-constant-time SM2 scalar multiplication on ARM64 and RISC-V"
+      },
+      {
+        "id": "CVE-2026-72897",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds write during TLS context switch"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
+      },
+      {
+        "id": "CVE-2026-84784",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-35189",
+        "pkg": "openssl",
+        "installedVersion": "3.3.7-r1",
+        "fixedVersion": "3.3.7-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
+      }
+    ]
   },
   "app": {
     "total": 0,

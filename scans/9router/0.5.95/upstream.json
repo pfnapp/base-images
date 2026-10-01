@@ -1,16 +1,24 @@
 {
-  "scannedAt": "2026-10-01T06:51:48.102Z",
+  "scannedAt": "2026-10-01T06:50:13.439Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 10,
+    "total": 11,
     "cves": [
+      {
+        "id": "CVE-2026-48758",
+        "pkg": "@sigstore/core",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "3.2.1",
+        "severity": "MEDIUM",
+        "title": "sigstore-core: @sigstore/core: Signature bypass due to incorrect encoding in preAuthEncoding"
+      },
       {
         "id": "CVE-2026-102276",
         "pkg": "brace-expansion",
-        "installedVersion": "5.0.9",
+        "installedVersion": "2.0.2",
         "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
         "severity": "HIGH",
         "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
@@ -18,7 +26,7 @@
       {
         "id": "CVE-2026-102278",
         "pkg": "brace-expansion",
-        "installedVersion": "5.0.9",
+        "installedVersion": "2.0.2",
         "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
         "severity": "HIGH",
         "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
@@ -26,23 +34,23 @@
       {
         "id": "CVE-2026-102277",
         "pkg": "brace-expansion",
-        "installedVersion": "5.0.9",
+        "installedVersion": "2.0.2",
         "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
       },
       {
-        "id": "CVE-2026-101910",
-        "pkg": "ip-address",
-        "installedVersion": "10.5.0",
-        "fixedVersion": "10.5.1",
+        "id": "CVE-2026-33750",
+        "pkg": "brace-expansion",
+        "installedVersion": "2.0.2",
+        "fixedVersion": "5.0.5, 3.0.2, 2.0.3, 1.1.13",
         "severity": "MEDIUM",
-        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+        "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
       },
       {
         "id": "CVE-2026-101911",
         "pkg": "ip-address",
-        "installedVersion": "10.5.0",
+        "installedVersion": "10.1.0",
         "fixedVersion": "10.7.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
@@ -50,7 +58,7 @@
       {
         "id": "CVE-2026-101912",
         "pkg": "ip-address",
-        "installedVersion": "10.5.0",
+        "installedVersion": "10.1.0",
         "fixedVersion": "10.7.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
@@ -58,34 +66,34 @@
       {
         "id": "CVE-2026-101913",
         "pkg": "ip-address",
-        "installedVersion": "10.5.0",
+        "installedVersion": "10.1.0",
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
-        "id": "CVE-2026-19534",
-        "pkg": "undici",
-        "installedVersion": "6.28.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
-        "severity": "HIGH",
-        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
-      },
-      {
-        "id": "CVE-2026-85024",
-        "pkg": "undici",
-        "installedVersion": "6.28.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "id": "CVE-2026-42338",
+        "pkg": "ip-address",
+        "installedVersion": "10.1.0",
+        "fixedVersion": "10.1.1",
         "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+        "title": "ip-address: ip-address: Cross-site scripting via improper HTML escaping of untrusted input"
       },
       {
-        "id": "CVE-2026-18540",
-        "pkg": "undici",
-        "installedVersion": "6.28.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "id": "CVE-2026-33672",
+        "pkg": "picomatch",
+        "installedVersion": "4.0.3",
+        "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
+        "severity": "MEDIUM",
+        "title": "picomatch: Picomatch: Data integrity compromised via method injection with crafted POSIX bracket expressions"
+      },
+      {
+        "id": "CVE-2026-9358",
+        "pkg": "postcss-selector-parser",
+        "installedVersion": "7.1.1",
+        "fixedVersion": "6.1.3, 7.1.3",
         "severity": "LOW",
-        "title": "undici: undici: HTTP response splitting via retry interceptor"
+        "title": "postcss-selector-parser: Postcss: Denial of Service via uncontrolled recursion in AST Serialization"
       }
     ]
   }

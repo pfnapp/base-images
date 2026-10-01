@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-30T06:19:40.750Z",
+  "scannedAt": "2026-10-01T06:51:19.103Z",
   "system": {
-    "total": 287,
+    "total": 291,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -308,12 +308,36 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2026-102473",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
+      },
+      {
+        "id": "CVE-2026-102474",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "dash: dash: Heap out-of-bounds write in conv_escape via undersized Unicode escape reservation"
+      },
+      {
         "id": "CVE-2026-53910",
         "pkg": "diffutils",
         "installedVersion": "1:3.8-4",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "diffutils: heap‑based buffer overflow due to multiple signed integer overflows in line‑mapping calculations"
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -1028,6 +1052,14 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2026-102010",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
         "id": "CVE-2022-27943",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1396,12 +1428,12 @@
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
       },
       {
-        "id": "TEMP-1149217-B31E38",
+        "id": "CVE-2026-103111",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-1+deb12u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[GHSA-r9hj-j2rw-4q3m: PCRE2: out-of-bounds write in JIT matching with large stack allocations]"
+        "severity": "HIGH",
+        "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
       },
       {
         "id": "CVE-2026-13595",
@@ -1529,7 +1561,39 @@
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
       },
       {
         "id": "CVE-2025-27587",
@@ -1545,39 +1609,15 @@
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
       },
       {
-        "id": "CVE-2026-54872",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u1",
+        "id": "CVE-2026-102010",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
         "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
-      },
-      {
-        "id": "CVE-2026-75805",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
-      },
-      {
-        "id": "CVE-2026-75806",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
-      },
-      {
-        "id": "CVE-2026-77696",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
         "id": "CVE-2022-27943",
@@ -1905,7 +1945,39 @@
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "Issue summary: The DTLS retransmission logic does not correctly handle ..."
+        "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
+      },
+      {
+        "id": "CVE-2026-54872",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via timing side-channel in generic elliptic curve operations"
+      },
+      {
+        "id": "CVE-2026-75805",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMP certificate revocation response"
+      },
+      {
+        "id": "CVE-2026-75806",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via undersized DTLS record"
+      },
+      {
+        "id": "CVE-2026-77696",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Private key recovery via SM2 timing side-channel"
       },
       {
         "id": "CVE-2025-27587",
@@ -1921,39 +1993,7 @@
         "installedVersion": "3.0.22-1~deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Issue summary: A certificate with many nameRelativeToCRLIssuer CRL dis ..."
-      },
-      {
-        "id": "CVE-2026-54872",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: The generic elliptic-curve scalar multiplication used f ..."
-      },
-      {
-        "id": "CVE-2026-75805",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: A CMP client that requests certificate revocation on th ..."
-      },
-      {
-        "id": "CVE-2026-75806",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: An established DTLS 1.2 association using an AEAD ciphe ..."
-      },
-      {
-        "id": "CVE-2026-77696",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Issue summary: SM2 signature generation uses non-constant-time arithme ..."
+        "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
       },
       {
         "id": "CVE-2007-5686",
@@ -2082,14 +2122,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
-      },
-      {
-        "id": "CVE-2026-48961",
-        "pkg": "perl-base",
-        "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl-IO-Compress: IO::Compress: Denial of Service in zipdetails CLI tool via malformed Info-ZIP Unix Extra Field"
       },
       {
         "id": "CVE-2026-7010",
@@ -2302,7 +2334,32 @@
     ]
   },
   "app": {
-    "total": 0,
-    "cves": []
+    "total": 3,
+    "cves": [
+      {
+        "id": "CVE-2026-97687",
+        "pkg": "urllib3",
+        "installedVersion": "2.7.0",
+        "fixedVersion": "2.8.0",
+        "severity": "HIGH",
+        "title": "urllib3: urllib3: Traffic interception via HTTPS proxy TLS configuration override"
+      },
+      {
+        "id": "CVE-2026-97689",
+        "pkg": "urllib3",
+        "installedVersion": "2.7.0",
+        "fixedVersion": "2.8.0",
+        "severity": "HIGH",
+        "title": "urllib3: urllib3: Denial of Service via unbounded memory allocation in chunk parser"
+      },
+      {
+        "id": "CVE-2026-97688",
+        "pkg": "urllib3",
+        "installedVersion": "2.7.0",
+        "fixedVersion": "2.8.0",
+        "severity": "MEDIUM",
+        "title": "urllib3: urllib3: Denial of Service via infinite loop during chunked Deflate decoding"
+      }
+    ]
   }
 }

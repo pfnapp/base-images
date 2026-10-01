@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-09-30T06:19:18.781Z",
+  "scannedAt": "2026-10-01T06:51:00.764Z",
   "system": {
     "total": 20,
     "cves": [
@@ -166,8 +166,24 @@
     ]
   },
   "app": {
-    "total": 33,
+    "total": 36,
     "cves": [
+      {
+        "id": "CVE-2026-101916",
+        "pkg": "@grpc/grpc-js",
+        "installedVersion": "1.14.4",
+        "fixedVersion": "1.13.6, 1.14.5",
+        "severity": "HIGH",
+        "title": "grpc-js: grpc-js: Authentication bypass via improper peer certificate validation"
+      },
+      {
+        "id": "CVE-2026-101915",
+        "pkg": "@grpc/grpc-js",
+        "installedVersion": "1.14.4",
+        "fixedVersion": "1.13.6, 1.14.5",
+        "severity": "LOW",
+        "title": "@grpc/grpc-js: The server transmits some error messages thrown by method handlers to the client in status messages"
+      },
       {
         "id": "CVE-2026-48758",
         "pkg": "@sigstore/core",
@@ -271,6 +287,14 @@
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
+      },
+      {
+        "id": "GHSA-vcvr-r3jv-pc5j",
+        "pkg": "next",
+        "installedVersion": "16.3.3",
+        "fixedVersion": "16.3.6",
+        "severity": "CRITICAL",
+        "title": "Next.js: Remote Code Execution in next/og ImageResponse"
       },
       {
         "id": "CVE-2026-33672",

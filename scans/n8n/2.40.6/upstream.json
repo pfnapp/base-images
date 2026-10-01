@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-09-30T06:18:51.745Z",
+  "scannedAt": "2026-10-01T06:50:33.510Z",
   "system": {
-    "total": 112,
+    "total": 113,
     "cves": [
       {
         "id": "CVE-2026-14456",
@@ -202,6 +202,14 @@
         "fixedVersion": "2.8.5-r0",
         "severity": "HIGH",
         "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
+      },
+      {
+        "id": "CVE-2026-46675",
+        "pkg": "libpng",
+        "installedVersion": "1.6.58-r1",
+        "fixedVersion": "1.6.59-r0",
+        "severity": "UNKNOWN",
+        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
       },
       {
         "id": "CVE-2026-14456",
@@ -902,8 +910,24 @@
     ]
   },
   "app": {
-    "total": 68,
+    "total": 95,
     "cves": [
+      {
+        "id": "CVE-2026-101916",
+        "pkg": "@grpc/grpc-js",
+        "installedVersion": "1.14.4",
+        "fixedVersion": "1.13.6, 1.14.5",
+        "severity": "HIGH",
+        "title": "grpc-js: grpc-js: Authentication bypass via improper peer certificate validation"
+      },
+      {
+        "id": "CVE-2026-101915",
+        "pkg": "@grpc/grpc-js",
+        "installedVersion": "1.14.4",
+        "fixedVersion": "1.13.6, 1.14.5",
+        "severity": "LOW",
+        "title": "@grpc/grpc-js: The server transmits some error messages thrown by method handlers to the client in status messages"
+      },
       {
         "id": "GHSA-j95f-988m-3j2f",
         "pkg": "@tiptap/core",
@@ -1041,6 +1065,198 @@
         "title": "adm-zip: Duplicate ZIP entry names: getEntry() and extractAllTo() resolve to different content"
       },
       {
+        "id": "CVE-2026-101898",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Security control bypass via unapplied HTTP/2 proxy and DNS settings"
+      },
+      {
+        "id": "CVE-2026-101898",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Security control bypass via unapplied HTTP/2 proxy and DNS settings"
+      },
+      {
+        "id": "CVE-2026-101901",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Denial of Service via unhandled error in HTTP/2 session initialization"
+      },
+      {
+        "id": "CVE-2026-101901",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Denial of Service via unhandled error in HTTP/2 session initialization"
+      },
+      {
+        "id": "CVE-2026-101903",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Denial of Service via malformed data URLs"
+      },
+      {
+        "id": "CVE-2026-101903",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Denial of Service via malformed data URLs"
+      },
+      {
+        "id": "CVE-2026-101905",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Request socket hijacking via inherited createConnection property"
+      },
+      {
+        "id": "CVE-2026-101905",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Request socket hijacking via inherited createConnection property"
+      },
+      {
+        "id": "CVE-2026-101906",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Denial of Service via crafted redirect hostname"
+      },
+      {
+        "id": "CVE-2026-101906",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Denial of Service via crafted redirect hostname"
+      },
+      {
+        "id": "CVE-2026-101907",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Server-Side Request Forgery via bypassed redirect restrictions in fetch adapter"
+      },
+      {
+        "id": "CVE-2026-101907",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "HIGH",
+        "title": "axios: Axios: Server-Side Request Forgery via bypassed redirect restrictions in fetch adapter"
+      },
+      {
+        "id": "CVE-2026-101909",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "0.34.0, 1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Denial of Service via prototype pollution gadget in form serialization"
+      },
+      {
+        "id": "CVE-2026-101909",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "0.34.0, 1.20.0",
+        "severity": "HIGH",
+        "title": "axios: axios: Denial of Service via prototype pollution gadget in form serialization"
+      },
+      {
+        "id": "CVE-2026-101899",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "Axios: CIDR-form NO_PROXY entries are ignored, causing proxy exclusion bypass for internal IP ranges"
+      },
+      {
+        "id": "CVE-2026-101899",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "Axios: CIDR-form NO_PROXY entries are ignored, causing proxy exclusion bypass for internal IP ranges"
+      },
+      {
+        "id": "CVE-2026-101900",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: Outbound HTTP header injection via prototype pollution in fetch adapter"
+      },
+      {
+        "id": "CVE-2026-101900",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: Outbound HTTP header injection via prototype pollution in fetch adapter"
+      },
+      {
+        "id": "CVE-2026-101902",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "0.34.0, 1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: axios: Unintended HTTP method override via prototype pollution gadget"
+      },
+      {
+        "id": "CVE-2026-101902",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "0.34.0, 1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: axios: Unintended HTTP method override via prototype pollution gadget"
+      },
+      {
+        "id": "CVE-2026-101904",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: HTTP header injection via inherited prototype properties"
+      },
+      {
+        "id": "CVE-2026-101904",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: HTTP header injection via inherited prototype properties"
+      },
+      {
+        "id": "CVE-2026-101908",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: Outbound HTTP request manipulation via fetch adapter prototype pollution"
+      },
+      {
+        "id": "CVE-2026-101908",
+        "pkg": "axios",
+        "installedVersion": "1.18.0",
+        "fixedVersion": "1.20.0",
+        "severity": "MEDIUM",
+        "title": "axios: Axios: Outbound HTTP request manipulation via fetch adapter prototype pollution"
+      },
+      {
         "id": "CVE-2026-102276",
         "pkg": "brace-expansion",
         "installedVersion": "2.1.4",
@@ -1143,6 +1359,14 @@
         "fixedVersion": "4.13.5",
         "severity": "MEDIUM",
         "title": "Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory"
+      },
+      {
+        "id": "CVE-2026-93981",
+        "pkg": "hono",
+        "installedVersion": "4.12.34",
+        "fixedVersion": "4.13.7",
+        "severity": "MEDIUM",
+        "title": "hono: hono/jsx: Cross-Site Scripting via Unescaped Strings"
       },
       {
         "id": "CVE-2026-101910",
