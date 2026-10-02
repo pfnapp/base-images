@@ -1,15 +1,23 @@
 {
-  "scannedAt": "2026-10-01T06:50:06.216Z",
+  "scannedAt": "2026-10-02T06:41:28.179Z",
   "system": {
-    "total": 1,
+    "total": 2,
     "cves": [
       {
-        "id": "CVE-2026-46675",
-        "pkg": "libpng",
-        "installedVersion": "1.6.58-r1",
-        "fixedVersion": "1.6.59-r0",
-        "severity": "UNKNOWN",
-        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+        "id": "CVE-2026-58055",
+        "pkg": "nghttp2-libs",
+        "installedVersion": "1.69.0-r0",
+        "fixedVersion": "1.70.0-r0",
+        "severity": "MEDIUM",
+        "title": "nghttp2: nghttp2: HTTP Request/Response Smuggling and Response-Queue Poisoning via ambiguous HTTP/1.1 Upgrade requests"
+      },
+      {
+        "id": "CVE-2026-103111",
+        "pkg": "pcre2",
+        "installedVersion": "10.48-r0",
+        "fixedVersion": "10.49-r0",
+        "severity": "HIGH",
+        "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
       }
     ]
   },

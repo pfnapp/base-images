@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-01T06:50:45.486Z",
+  "scannedAt": "2026-10-02T06:42:32.322Z",
   "system": {
-    "total": 488,
+    "total": 489,
     "cves": [
       {
         "id": "CVE-2026-13608",
@@ -3332,6 +3332,14 @@
         "title": "Insufficient tracking and releasing of allocated used memory in libx26 ..."
       },
       {
+        "id": "CVE-2026-94287",
+        "pkg": "libxpm4",
+        "installedVersion": "1:3.5.17-1ubuntu0.24.04.1",
+        "fixedVersion": "1:3.5.17-1ubuntu0.24.04.2",
+        "severity": "MEDIUM",
+        "title": "libXpm: libXpm: Denial of Service via unsigned integer underflow"
+      },
+      {
         "id": "CVE-2026-88807",
         "pkg": "libxrender1",
         "installedVersion": "1:0.9.10-1.1build1",
@@ -3910,8 +3918,24 @@
     ]
   },
   "app": {
-    "total": 12,
+    "total": 16,
     "cves": [
+      {
+        "id": "CVE-2026-89407",
+        "pkg": "com.fasterxml.jackson.core:jackson-core",
+        "installedVersion": "2.21.5",
+        "fixedVersion": "2.18.11, 2.21.7, 2.22.3",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
+      },
+      {
+        "id": "CVE-2026-89425",
+        "pkg": "com.fasterxml.jackson.core:jackson-core",
+        "installedVersion": "2.21.5",
+        "fixedVersion": "2.21.7, 2.22.3, 2.18.11",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
+      },
       {
         "id": "CVE-2026-68497",
         "pkg": "com.fasterxml.jackson.core:jackson-databind",
@@ -3967,6 +3991,22 @@
         "fixedVersion": "1.23.1",
         "severity": "MEDIUM",
         "title": "org.jsoup/jsoup: jsoup: Cross-site scripting via malformed HTML tag names"
+      },
+      {
+        "id": "CVE-2026-89407",
+        "pkg": "tools.jackson.core:jackson-core",
+        "installedVersion": "3.1.5",
+        "fixedVersion": "3.1.7, 3.2.2",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
+      },
+      {
+        "id": "CVE-2026-89425",
+        "pkg": "tools.jackson.core:jackson-core",
+        "installedVersion": "3.1.5",
+        "fixedVersion": "3.1.7, 3.2.3",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
       },
       {
         "id": "CVE-2026-68497",

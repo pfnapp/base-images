@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-01T06:50:47.160Z",
+  "scannedAt": "2026-10-02T06:42:33.992Z",
   "system": {
-    "total": 422,
+    "total": 423,
     "cves": [
       {
         "id": "CVE-2026-13608",
@@ -3036,6 +3036,14 @@
         "title": "Insufficient tracking and releasing of allocated used memory in libx26 ..."
       },
       {
+        "id": "CVE-2026-94287",
+        "pkg": "libxpm4",
+        "installedVersion": "1:3.5.17-1ubuntu0.24.04.1",
+        "fixedVersion": "1:3.5.17-1ubuntu0.24.04.2",
+        "severity": "MEDIUM",
+        "title": "libXpm: libXpm: Denial of Service via unsigned integer underflow"
+      },
+      {
         "id": "CVE-2026-88807",
         "pkg": "libxrender1",
         "installedVersion": "1:0.9.10-1.1build1",
@@ -3382,7 +3390,7 @@
     ]
   },
   "app": {
-    "total": 135,
+    "total": 139,
     "cves": [
       {
         "id": "CVE-2026-10532",
@@ -3399,6 +3407,22 @@
         "fixedVersion": "1.5.33",
         "severity": "LOW",
         "title": "Deserialization of untrusted data vulnerability in QOS.CH Sarl logback ..."
+      },
+      {
+        "id": "CVE-2026-89407",
+        "pkg": "com.fasterxml.jackson.core:jackson-core",
+        "installedVersion": "2.21.2",
+        "fixedVersion": "2.18.11, 2.21.7, 2.22.3",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
+      },
+      {
+        "id": "CVE-2026-89425",
+        "pkg": "com.fasterxml.jackson.core:jackson-core",
+        "installedVersion": "2.21.2",
+        "fixedVersion": "2.21.7, 2.22.3, 2.18.11",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
       },
       {
         "id": "GHSA-r7wm-3cxj-wff9",
@@ -4167,6 +4191,22 @@
         "fixedVersion": "1.30.2, 1.31.71",
         "severity": "MEDIUM",
         "title": "veraPDF-validatio: Use of Default `DocumentBuilderFactory` leads to XXE When Processing Untrusted PDFs"
+      },
+      {
+        "id": "CVE-2026-89407",
+        "pkg": "tools.jackson.core:jackson-core",
+        "installedVersion": "3.1.2",
+        "fixedVersion": "3.1.7, 3.2.2",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
+      },
+      {
+        "id": "CVE-2026-89425",
+        "pkg": "tools.jackson.core:jackson-core",
+        "installedVersion": "3.1.2",
+        "fixedVersion": "3.1.7, 3.2.3",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
       },
       {
         "id": "GHSA-r7wm-3cxj-wff9",

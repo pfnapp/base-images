@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-01T06:50:33.510Z",
+  "scannedAt": "2026-10-02T06:42:06.252Z",
   "system": {
-    "total": 113,
+    "total": 121,
     "cves": [
       {
         "id": "CVE-2026-14456",
@@ -906,11 +906,75 @@
         "fixedVersion": "10.3_p1-r1",
         "severity": "LOW",
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-103111",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.49-r0",
+        "severity": "HIGH",
+        "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
+      },
+      {
+        "id": "CVE-2026-86145",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "HIGH",
+        "title": "pcre2: PCRE2: Out-of-bounds write allows arbitrary code execution via crafted regular expressions"
+      },
+      {
+        "id": "CVE-2026-89157",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "HIGH",
+        "title": "pcre2: PCRE2: Out-of-bounds write via large pattern input"
+      },
+      {
+        "id": "CVE-2026-89161",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "HIGH",
+        "title": "pcre2: PCRE2: Memory corruption vulnerability in pcre2_jit_match"
+      },
+      {
+        "id": "CVE-2026-89156",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "MEDIUM",
+        "title": "PCRE2: PCRE2: Out-of-bounds read via invalid UTF data during JIT fallback"
+      },
+      {
+        "id": "CVE-2026-89158",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "MEDIUM",
+        "title": "PCRE2: PCRE2: Out-of-bounds write via integer overflow on 32-bit platforms"
+      },
+      {
+        "id": "CVE-2026-89160",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "MEDIUM",
+        "title": "pcre2: PCRE2: Denial of Service via out-of-bounds read during invalid UTF matching"
+      },
+      {
+        "id": "CVE-2026-89162",
+        "pkg": "pcre2",
+        "installedVersion": "10.47-r1",
+        "fixedVersion": "10.48-r0",
+        "severity": "LOW",
+        "title": "pcre2: PCRE2: Information disclosure via pcre2_serialize_encode"
       }
     ]
   },
   "app": {
-    "total": 95,
+    "total": 110,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -1671,6 +1735,126 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
+        "id": "CVE-2026-92935",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 NodeVM Remote Code Execution via Array-Shaped Require"
+      },
+      {
+        "id": "CVE-2026-92937",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.11.6 Remote Code Execution via Promise call/apply"
+      },
+      {
+        "id": "CVE-2026-92938",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.11.3 through 3.11.6 Remote Code Execution via node:sqlite"
+      },
+      {
+        "id": "CVE-2026-92939",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.11.3 through 3.11.6 Native Code Execution via crypto.setEngine"
+      },
+      {
+        "id": "CVE-2026-92940",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.11.3 through 3.11.6 HTTPS Credential Exposure via globalAgent"
+      },
+      {
+        "id": "CVE-2026-92941",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.11.3 before 3.11.7 TLS Trust Store Manipulation"
+      },
+      {
+        "id": "CVE-2026-92944",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.10.2 through 3.11.6 Sandbox Escape via Promise Protector"
+      },
+      {
+        "id": "CVE-2026-92948",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 3.9.6 through 3.11.5 Sandbox Escape via node:test"
+      },
+      {
+        "id": "CVE-2026-92951",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 before 3.11.7 Module Allowlist Bypass via Custom Resolver"
+      },
+      {
+        "id": "CVE-2026-92957",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "CRITICAL",
+        "title": "vm2: vm2 before 3.11.7 Authentication Bypass via node: Prefix"
+      },
+      {
+        "id": "CVE-2026-92950",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "HIGH",
+        "title": "vm2: vm2 before 3.11.7 Sandbox Escape via CLI require"
+      },
+      {
+        "id": "CVE-2026-92958",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "HIGH",
+        "title": "vm2: vm2: Sandbox escape via denylist bypass in NodeVM"
+      },
+      {
+        "id": "CVE-2026-92945",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "MEDIUM",
+        "title": "vm2: vm2: Module allowlist bypass allows access to restricted packages"
+      },
+      {
+        "id": "CVE-2026-92949",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "MEDIUM",
+        "title": "vm2: vm2: Sandbox bypass allows unauthorized data modification."
+      },
+      {
+        "id": "CVE-2026-92952",
+        "pkg": "vm2",
+        "installedVersion": "3.11.6",
+        "fixedVersion": "3.11.7",
+        "severity": "MEDIUM",
+        "title": "vm2: vm2: Sandbox Symbol Filtering Bypass leading to Host Stream State Corruption"
       }
     ]
   }

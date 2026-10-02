@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-01T06:50:27.366Z",
+  "scannedAt": "2026-10-02T06:41:49.195Z",
   "system": {
     "total": 532,
     "cves": [
@@ -1996,6 +1996,14 @@
         "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
       },
       {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
         "id": "CVE-2026-3644",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -2170,14 +2178,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
-      },
-      {
-        "id": "CVE-2026-19553",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u8",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -2204,6 +2204,14 @@
         "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
       },
       {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
         "id": "CVE-2026-3644",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -2378,14 +2386,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
-      },
-      {
-        "id": "CVE-2026-19553",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u8",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2026-13595",
@@ -3692,6 +3692,14 @@
         "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
       },
       {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
         "id": "CVE-2026-3644",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -3866,14 +3874,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
-      },
-      {
-        "id": "CVE-2026-19553",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u8",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -3900,6 +3900,14 @@
         "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
       },
       {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u8",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
         "id": "CVE-2026-3644",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u8",
@@ -4074,14 +4082,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "A remote, unauthenticated TLS client can make a server crash or call t ..."
-      },
-      {
-        "id": "CVE-2026-19553",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u8",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "ssl.SSLContext.wrap_bio() didn't require the server_hostname argument  ..."
       },
       {
         "id": "TEMP-0517018-A83CE6",
@@ -4430,7 +4430,7 @@
         "installedVersion": "39.8.10",
         "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
         "severity": "HIGH",
-        "title": "Electron: <webview> can enable Node.js integration in Web Workers despite embedder restrictions"
+        "title": "electron: electron: Privilege escalation via unauthorized Node.js integration in web workers"
       },
       {
         "id": "CVE-2026-19693",

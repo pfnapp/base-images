@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-01T06:51:06.931Z",
+  "generatedAt": "2026-10-02T06:42:53.757Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -33,10 +33,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -78,7 +78,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -105,10 +105,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -150,7 +150,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -177,10 +177,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -222,7 +222,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -312,7 +312,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -384,7 +384,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -419,11 +419,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -434,10 +434,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -463,11 +509,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -478,10 +524,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -507,11 +599,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -522,10 +614,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -551,11 +689,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -566,10 +704,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -613,7 +797,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -639,11 +823,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 6,
-              "medium": 22,
-              "low": 3,
-              "fixable": 32,
-              "total": 32
+              "high": 14,
+              "medium": 38,
+              "low": 7,
+              "fixable": 64,
+              "total": 64
             },
             "app": {
               "critical": 0,
@@ -703,7 +887,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -756,7 +940,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -800,7 +984,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -899,14 +1083,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "3.11.16",
-            "latestPatchDate": "2026-08-13",
+            "latestPatch": "3.11.17",
+            "latestPatchDate": "2026-10-01",
             "source": "endoflife.date"
           }
         },
@@ -989,14 +1173,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "3.12.14",
-            "latestPatchDate": "2026-08-12",
+            "latestPatch": "3.12.15",
+            "latestPatchDate": "2026-10-01",
             "source": "endoflife.date"
           }
         }
@@ -1025,10 +1209,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1042,7 +1226,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1069,10 +1253,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1086,7 +1270,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1113,10 +1297,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1130,7 +1314,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1166,10 +1350,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1183,7 +1367,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1210,10 +1394,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1227,7 +1411,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1309,7 +1493,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1336,10 +1520,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1381,7 +1565,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1408,10 +1592,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1453,7 +1637,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1543,7 +1727,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1615,7 +1799,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1642,10 +1826,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -1687,7 +1871,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1777,7 +1961,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1849,7 +2033,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1910,11 +2094,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 6,
-              "medium": 22,
-              "low": 3,
-              "fixable": 32,
-              "total": 32
+              "high": 14,
+              "medium": 38,
+              "low": 7,
+              "fixable": 64,
+              "total": 64
             },
             "app": {
               "critical": 0,
@@ -1974,7 +2158,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -2000,11 +2184,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -2015,10 +2199,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -2044,11 +2274,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -2059,10 +2289,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -2088,11 +2364,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -2103,10 +2379,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -2132,11 +2454,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
-              "low": 0,
-              "fixable": 1,
-              "total": 1
+              "high": 9,
+              "medium": 13,
+              "low": 4,
+              "fixable": 31,
+              "total": 31
             },
             "app": {
               "critical": 0,
@@ -2147,10 +2469,56 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.48-r0",
+              "fixedVersion": "10.49-r0",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "pyc",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-19553",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-82049",
+              "pkg": "python3",
+              "installedVersion": "3.14.7-r1",
+              "fixedVersion": "3.14.8-r0",
+              "severity": "HIGH",
+              "title": "python: Python tarfile module: File modification and content disclosure via crafted archives",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2267,7 +2635,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2294,10 +2662,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -2339,7 +2707,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2366,10 +2734,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -2411,7 +2779,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2483,7 +2851,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2510,10 +2878,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -2555,7 +2923,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2645,7 +3013,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2717,7 +3085,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2744,10 +3112,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             },
             "app": {
               "critical": 0,
@@ -2789,7 +3157,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2868,7 +3236,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-01T06:51:06.931Z",
+          "scannedAt": "2026-10-02T06:42:53.757Z",
           "eol": {
             "date": null,
             "isEol": false,
