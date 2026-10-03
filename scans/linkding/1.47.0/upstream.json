@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-02T06:42:38.231Z",
+  "scannedAt": "2026-10-03T06:03:16.300Z",
   "system": {
-    "total": 3044,
+    "total": 3047,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -354,6 +354,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
         "id": "CVE-2026-41992",
@@ -1450,6 +1458,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
         "id": "CVE-2011-3389",
@@ -2924,6 +2940,14 @@
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
+        "id": "CVE-2026-95619",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
         "id": "CVE-2026-16742",
         "pkg": "libsystemd0",
         "installedVersion": "257.8-1~deb13u2",
@@ -3748,14 +3772,6 @@
         "title": "kernel: net/sched: cls_route: fix fastmap use-after-free on filter"
       },
       {
-        "id": "CVE-2026-74586",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.105-1",
-        "severity": "HIGH",
-        "title": "kernel: sctp: clear new_transport when removing a peer"
-      },
-      {
         "id": "CVE-2026-74588",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -3770,14 +3786,6 @@
         "fixedVersion": "6.12.105-1",
         "severity": "HIGH",
         "title": "kernel: ip6_tunnel: clear skb2->cb[] in ip6ip6_err()"
-      },
-      {
-        "id": "CVE-2026-74611",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: tls: rx: restore msg_iter before TLS 1.3 optimistic retry"
       },
       {
         "id": "CVE-2026-74615",
@@ -4196,20 +4204,20 @@
         "title": "kernel: scsi: qla2xxx: Bound rsp_info_len to avoid OOB sense-data read"
       },
       {
-        "id": "CVE-2026-93125",
+        "id": "CVE-2026-89943",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
-        "title": "kernel: bpf: Reject rdonly/rdwr_buf_size kfunc arguments that exceed u32 max"
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
       },
       {
-        "id": "CVE-2026-93144",
+        "id": "CVE-2026-89980",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
-        "title": "kernel: bpf: Reject writes through untrusted BTF pointers"
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
       },
       {
         "id": "CVE-2026-93817",
@@ -5106,6 +5114,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-100079",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: usb: typec: ucsi: unregister debugfs entries on teardown"
       },
       {
         "id": "CVE-2026-23007",
@@ -8012,6 +8028,14 @@
         "title": "kernel: thunderbolt: Bound the DROM dual link port number before indexing sw->ports"
       },
       {
+        "id": "CVE-2026-74586",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.105-1",
+        "severity": "MEDIUM",
+        "title": "kernel: sctp: clear new_transport when removing a peer"
+      },
+      {
         "id": "CVE-2026-74587",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -8154,6 +8178,14 @@
         "fixedVersion": "6.12.105-1",
         "severity": "MEDIUM",
         "title": "kernel: tls: don't leave a full plaintext sk_msg ring unpushed"
+      },
+      {
+        "id": "CVE-2026-74611",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: tls: rx: restore msg_iter before TLS 1.3 optimistic retry"
       },
       {
         "id": "CVE-2026-74612",
@@ -13588,14 +13620,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
-        "id": "CVE-2026-89943",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
         "id": "CVE-2026-89945",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -13829,14 +13853,6 @@
       },
       {
         "id": "CVE-2026-89979",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-89980",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
         "fixedVersion": "6.12.111-1",
@@ -17436,6 +17452,14 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
+        "id": "CVE-2026-93125",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Reject rdonly/rdwr_buf_size kfunc arguments that exceed u32 max"
+      },
+      {
         "id": "CVE-2026-93128",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -17530,6 +17554,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-93144",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Reject writes through untrusted BTF pointers"
       },
       {
         "id": "CVE-2026-93145",
@@ -17913,7 +17945,7 @@
         "installedVersion": "6.12.101-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  S ..."
+        "title": "kernel: SUNRPC: Zero rpc_gss_wire_cred at svcauth_gss_decode_credbody() entry"
       },
       {
         "id": "CVE-2026-93208",
@@ -18041,7 +18073,7 @@
         "installedVersion": "6.12.101-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: svcrdma: Reject Write/Reply chunks with segcount 0"
       },
       {
         "id": "CVE-2026-93229",
@@ -20404,6 +20436,14 @@
         "title": "kernel: ring-buffer: Add checking nr_subbufs to persistent ring buffer validation"
       },
       {
+        "id": "CVE-2026-98062",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Mark signal tracepoint siginfo arguments as scalar"
+      },
+      {
         "id": "CVE-2026-98063",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -21394,14 +21434,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: net: hsr: free learned nodes on device setup failure"
-      },
-      {
-        "id": "CVE-2026-100079",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "kernel: usb: typec: ucsi: unregister debugfs entries on teardown"
       },
       {
         "id": "CVE-2026-53284",
@@ -23346,14 +23378,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: bpf: Mark sched_process_wait argument as nullable"
-      },
-      {
-        "id": "CVE-2026-98062",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: bpf: Mark signal tracepoint siginfo arguments as scalar"
       },
       {
         "id": "CVE-2026-98064",

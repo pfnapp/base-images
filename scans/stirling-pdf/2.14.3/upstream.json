@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-02T06:42:33.990Z",
+  "scannedAt": "2026-10-03T06:03:13.788Z",
   "system": {
     "total": 879,
     "cves": [
@@ -4561,7 +4561,7 @@
         "installedVersion": "0.11.0-1build2",
         "fixedVersion": "0.11.0-1ubuntu0.2",
         "severity": "MEDIUM",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-61547",
@@ -7057,6 +7057,14 @@
         "title": "Deserialization of untrusted data vulnerability in QOS.CH Sarl logback ..."
       },
       {
+        "id": "CVE-2026-68494",
+        "pkg": "com.fasterxml.jackson.core:jackson-core",
+        "installedVersion": "2.21.2",
+        "fixedVersion": "2.18.8, 2.21.4",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: tools.jackson.core/jackson-core: jackson-core: Denial of Service via incomplete fix in async JSON parser"
+      },
+      {
         "id": "CVE-2026-89407",
         "pkg": "com.fasterxml.jackson.core:jackson-core",
         "installedVersion": "2.21.2",
@@ -7071,14 +7079,6 @@
         "fixedVersion": "2.21.7, 2.22.3, 2.18.11",
         "severity": "HIGH",
         "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
-      },
-      {
-        "id": "GHSA-r7wm-3cxj-wff9",
-        "pkg": "com.fasterxml.jackson.core:jackson-core",
-        "installedVersion": "2.21.2",
-        "fixedVersion": "2.18.8, 2.21.4",
-        "severity": "HIGH",
-        "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)"
       },
       {
         "id": "CVE-2026-54512",
@@ -7110,7 +7110,7 @@
         "installedVersion": "2.21.2",
         "fixedVersion": "2.18.11, 2.21.7, 2.22.3",
         "severity": "HIGH",
-        "title": "TypeDeserializerBase._findDeserializer() in FasterXML jackson-databind ..."
+        "title": "jackson-databind: com.fasterxml.jackson/jackson-core: jackson-databind: Denial of Service via unbounded cache growth in TypeDeserializerBase"
       },
       {
         "id": "CVE-2026-91777",
@@ -7118,7 +7118,7 @@
         "installedVersion": "2.21.2",
         "fixedVersion": "2.21.7, 2.18.11, 2.22.3",
         "severity": "HIGH",
-        "title": "Forward-reference completion for @JsonIdentityInfo object IDs in Faste ..."
+        "title": "com.fasterxml.jackson.core/jackson-databind: Jackson-databind: Denial of Service via quadratic forward-reference completion"
       },
       {
         "id": "CVE-2026-19032",
@@ -7841,6 +7841,14 @@
         "title": "veraPDF-validatio: Use of Default `DocumentBuilderFactory` leads to XXE When Processing Untrusted PDFs"
       },
       {
+        "id": "CVE-2026-68494",
+        "pkg": "tools.jackson.core:jackson-core",
+        "installedVersion": "3.1.2",
+        "fixedVersion": "3.1.4",
+        "severity": "HIGH",
+        "title": "com.fasterxml.jackson.core/jackson-core: tools.jackson.core/jackson-core: jackson-core: Denial of Service via incomplete fix in async JSON parser"
+      },
+      {
         "id": "CVE-2026-89407",
         "pkg": "tools.jackson.core:jackson-core",
         "installedVersion": "3.1.2",
@@ -7855,14 +7863,6 @@
         "fixedVersion": "3.1.7, 3.2.3",
         "severity": "HIGH",
         "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
-      },
-      {
-        "id": "GHSA-r7wm-3cxj-wff9",
-        "pkg": "tools.jackson.core:jackson-core",
-        "installedVersion": "3.1.2",
-        "fixedVersion": "3.1.4",
-        "severity": "HIGH",
-        "title": "jackson-core: Async parser maxNumberLength bypass via chunked digit accumulation (incomplete fix for GHSA-72hv-8253-57qq)"
       },
       {
         "id": "CVE-2026-54512",
@@ -7894,7 +7894,7 @@
         "installedVersion": "3.1.2",
         "fixedVersion": "3.1.7, 3.2.3",
         "severity": "HIGH",
-        "title": "TypeDeserializerBase._findDeserializer() in FasterXML jackson-databind ..."
+        "title": "jackson-databind: com.fasterxml.jackson/jackson-core: jackson-databind: Denial of Service via unbounded cache growth in TypeDeserializerBase"
       },
       {
         "id": "CVE-2026-91777",
@@ -7902,7 +7902,7 @@
         "installedVersion": "3.1.2",
         "fixedVersion": "3.1.7, 3.2.3",
         "severity": "HIGH",
-        "title": "Forward-reference completion for @JsonIdentityInfo object IDs in Faste ..."
+        "title": "com.fasterxml.jackson.core/jackson-databind: Jackson-databind: Denial of Service via quadratic forward-reference completion"
       },
       {
         "id": "CVE-2026-19032",

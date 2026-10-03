@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-02T06:41:45.349Z",
+  "scannedAt": "2026-10-03T06:02:54.015Z",
   "system": {
-    "total": 531,
+    "total": 535,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -338,6 +338,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
         "id": "CVE-2022-27943",
@@ -1428,6 +1436,14 @@
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
+        "id": "CVE-2026-95619",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
         "id": "CVE-2022-27943",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1466,6 +1482,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
         "id": "CVE-2022-27943",
@@ -2618,6 +2642,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
         "id": "CVE-2022-27943",
@@ -4254,7 +4286,7 @@
     ]
   },
   "app": {
-    "total": 44,
+    "total": 46,
     "cves": [
       {
         "id": "CVE-2026-83605",
@@ -4398,7 +4430,7 @@
         "installedVersion": "39.8.10",
         "fixedVersion": "41.10.4, 42.5.2, 43.0.0",
         "severity": "HIGH",
-        "title": "Electron drops inherited HTML sandbox restrictions for popups opened through OpenURLFromTab"
+        "title": "electron: Electron: Sandbox bypass via popups opened from sandboxed iframes"
       },
       {
         "id": "CVE-2026-102674",
@@ -4406,7 +4438,7 @@
         "installedVersion": "39.8.10",
         "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
         "severity": "HIGH",
-        "title": "Electron: Windows opened from a sandboxed top-level document do not inherit its sandbox restrictions"
+        "title": "electron: Electron: Sandbox bypass via popup window creation"
       },
       {
         "id": "CVE-2026-102675",
@@ -4414,7 +4446,7 @@
         "installedVersion": "39.8.10",
         "fixedVersion": "41.10.6, 42.9.2, 43.4.1, 44.0.0-beta.5",
         "severity": "HIGH",
-        "title": "Electron: File and HTTP protocol handlers allow cross-origin reads without corsEnabled"
+        "title": "electron: Electron: Cross-origin information disclosure via improper CORS enforcement in custom protocol handlers"
       },
       {
         "id": "CVE-2026-102676",
@@ -4503,6 +4535,22 @@
         "fixedVersion": "4.1.5",
         "severity": "MEDIUM",
         "title": "fast-uri: fast-uri: Mailto header injection via percent-encoded field-name desynchronization"
+      },
+      {
+        "id": "CVE-2026-93748",
+        "pkg": "http-cache-semantics",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive"
+      },
+      {
+        "id": "CVE-2026-93748",
+        "pkg": "http-cache-semantics",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive"
       },
       {
         "id": "CVE-2026-101910",
