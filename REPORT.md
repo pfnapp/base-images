@@ -2,17 +2,17 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-10-03T06:02:09.917Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-10-04T06:38:12.306Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
 - **Applications Monitored:** `17`
-- **Active Versions Audited:** `39`
-- **Images Running As Root:** `25` / `39` (⚠️ **64%** non-compliant)
+- **Active Versions Audited:** `40`
+- **Images Running As Root:** `26` / `40` (⚠️ **65%** non-compliant)
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `49`
 - **App High CVEs** _(upstream, unfixable by us)_**:** `748`
-- **PFNApp Images Scanned:** `36` / `39`
-- **Total System CVE Reduction:** `49`
+- **PFNApp Images Scanned:** `37` / `40`
+- **Total System CVE Reduction:** `71`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
 
@@ -24,7 +24,7 @@
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.2-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/1/1/0 | 0/0/0/0 | 0/1/1/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/1/0 | 0/0/0/0 | 0/2/1/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 191/1699/1917/1027 | 6/94/106/10 | 28/225/436/316 | 2/57/46/5 | -163/-1474 | 🔴 APP CRITICAL RISK |
+| **Uptime Kuma** | _Monitoring & Status_ | `2.5.5` | 🟢 **LATEST** | ⚠️ YES | 191/1701/1922/1031 | 6/94/106/10 | 28/227/441/320 | 2/57/46/5 | -163/-1474 | 🔴 APP CRITICAL RISK |
 | **9Router** | _AI Gateways & Proxies_ | `0.5.95` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/4/8/1 | 0/0/0/0 | 0/1/0/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `0.5.91` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/4/8/1 | 0/0/0/0 | 0/1/0/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `0.5.86` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 1/6/11/1 | 0/0/0/0 | 0/1/0/0 | 0/0 | 🔴 APP CRITICAL RISK |
@@ -32,10 +32,10 @@
 |  |  | `0.5.75` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 2/6/11/1 | 0/0/0/0 | 2/6/11/1 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.51` | 🟢 **LATEST** | ✅ NO | 0/14/90/68 | 1/7/12/4 | 4/30/106/69 | 4/17/24/10 | 4/16 | 🔴 APP CRITICAL RISK |
 |  |  | `3.8.50` | 🟢 **SUPPORTED** | ✅ NO | 4/30/106/69 | 4/17/24/10 | 4/30/106/69 | 4/17/24/10 | 0/0 | 🔴 APP CRITICAL RISK |
-| **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.8` | 🟢 **LATEST** | ✅ NO | 15/76/230/184 | 0/29/15/3 | ⏳ | ⏳ | ⏳ | 🟠 APP HIGH RISK |
-|  |  | `2026.9.7` | 🟢 **SUPPORTED** | ✅ NO | 15/82/233/185 | 0/29/15/3 | 15/82/237/193 | 0/28/14/4 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.6` | 🟢 **SUPPORTED** | ✅ NO | 15/82/237/193 | 0/28/14/4 | 15/82/237/193 | 0/28/14/4 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.5` | 🟠 **AGING** | ✅ NO | 15/82/237/193 | 0/28/15/4 | 15/82/237/193 | 0/28/15/4 | 0/0 | 🟠 APP HIGH RISK |
+| **OpenClaw 2** | _AI Agents & Automation_ | `2026.9.8` | 🟢 **LATEST** | ✅ NO | 15/76/229/184 | 0/29/15/3 | 15/82/236/193 | 0/28/14/4 | 0/6 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.7` | 🟢 **SUPPORTED** | ✅ NO | 15/82/232/185 | 0/29/15/3 | 15/82/236/193 | 0/28/14/4 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.6` | 🟢 **SUPPORTED** | ✅ NO | 15/82/236/193 | 0/28/14/4 | 15/82/236/193 | 0/28/14/4 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.5` | 🟠 **AGING** | ✅ NO | 15/82/236/193 | 0/28/15/4 | 15/82/236/193 | 0/28/15/4 | 0/0 | 🟠 APP HIGH RISK |
 | **n8n** | _AI Agents & Automation_ | `2.42.2` | 🟢 **LATEST** | ✅ NO | 7/25/61/26 | 0/39/45/2 | 7/25/61/26 | 0/39/45/2 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `2.42.1` | 🟢 **SUPPORTED** | ✅ NO | 7/25/61/26 | 0/39/45/2 | 7/25/61/26 | 0/39/45/2 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `2.42.0` | 🟢 **SUPPORTED** | ✅ NO | 7/25/61/26 | 0/39/45/2 | 7/25/61/26 | 0/39/45/2 | 0/0 | 🟠 APP HIGH RISK |
@@ -53,14 +53,15 @@
 | **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 0/0/0/1 | 0/0/0/0 | 0/0/0/1 | 0/-2 | 🟡 NON-COMPLIANT (ROOT) |
 | **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/222/2316/503 | 1/8/16/1 | 1/114/1897/421 | 1/8/16/1 | -3/-108 | 🔴 APP CRITICAL RISK |
 | **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/166/2018/1070 | 1/14/20/2 | 2/166/2018/1070 | 0/6/8/1 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/530/3852/1379 | 2/32/40/5 | 2/166/2018/1070 | 2/32/40/5 | -14/-364 | 🔴 APP CRITICAL RISK |
+|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/530/3851/1380 | 2/32/40/5 | 2/166/2018/1070 | 2/32/40/5 | -14/-364 | 🔴 APP CRITICAL RISK |
 | **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/3/0 | 3/21/5/5 | 0/0/1/0 | 3/21/5/5 | 0/-1 | 🔴 APP CRITICAL RISK |
 |  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/3/0 | 3/21/5/5 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/6/12 | 2/10/21/5 | 0/0/0/0 | 1/5/10/4 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **Dozzle** | _Operations & Logs_ | `v11.1.3` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+| **Dozzle** | _Operations & Logs_ | `v11.2.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.1.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `v11.1.2` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.1.1` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.1.0` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.1.1` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.1.0` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
 
 ---
 
@@ -99,7 +100,7 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 94 High | System: 191 Critical, 1699 High</b></summary>
+<summary><b>Uptime Kuma (<code>2.5.5</code>) — App: 6 Critical, 94 High | System: 191 Critical, 1701 High</b></summary>
 
 - **Full Reference:** `louislam/uptime-kuma:2.5.5`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -226,7 +227,12 @@ _No Critical or High system-level vulnerabilities detected._
 | `CVE-2026-8927` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
 | `CVE-2026-41992` | **HIGH** | `gzip` | `1.12-1` | `None` |
 
-> ⏳ **PFNApp image not yet built** — reduction data pending.
+#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
+
+| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| System | 0 | 6 | 7 | 9 | 22 |
+| App | 0 | -1 | — | — | -1 |
 
 </details>
 
@@ -591,9 +597,9 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Dozzle (<code>v11.1.3</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>Dozzle (<code>v11.2.0</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `amir20/dozzle:v11.1.3`
+- **Full Reference:** `amir20/dozzle:v11.2.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
 - **Posture:** 🟡 NON-COMPLIANT (ROOT)
 
@@ -605,12 +611,7 @@ _No Critical or High app-level vulnerabilities detected._
 
 _No Critical or High system-level vulnerabilities detected._
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | 0 | 0 | — | — | 0 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
