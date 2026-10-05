@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-04T06:38:12.306Z",
+    "generatedAt": "2026-10-05T06:33:17.975Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
@@ -9,7 +9,7 @@
     "runAsRootCount": 26,
     "criticalVulnerabilityCount": 49,
     "highVulnerabilityCount": 748,
-    "pfnappScannedCount": 37,
+    "pfnappScannedCount": 38,
     "totalCveReduction": 71
   },
   "applications": [
@@ -128,7 +128,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "7.1.1-php8.3-fpm-alpine",
@@ -270,7 +270,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -298,11 +298,11 @@
             "upstream": {
               "system": {
                 "critical": 191,
-                "high": 1701,
-                "medium": 1922,
-                "low": 1031,
+                "high": 1711,
+                "medium": 1924,
+                "low": 1033,
                 "fixable": 5151,
-                "total": 6041
+                "total": 6035
               },
               "app": {
                 "critical": 6,
@@ -317,11 +317,11 @@
               "scanned": true,
               "system": {
                 "critical": 28,
-                "high": 227,
-                "medium": 441,
-                "low": 320,
+                "high": 237,
+                "medium": 443,
+                "low": 322,
                 "fixable": 338,
-                "total": 1228,
+                "total": 1222,
                 "topCves": [
                   {
                     "id": "CVE-2026-102299",
@@ -356,12 +356,12 @@
                     "title": "chromium-browser: chromium-browser: Use after free in Passwords"
                   },
                   {
-                    "id": "CVE-2026-102309",
+                    "id": "CVE-2026-102306",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
-                    "title": "chromium-browser: chromium-browser: Use after free in FullScreen"
+                    "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
                   }
                 ],
                 "allCves": [
@@ -470,6 +470,22 @@
                     "title": "chromium-browser: chromium-browser: Use after free in Passwords"
                   },
                   {
+                    "id": "CVE-2026-102306",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
+                  },
+                  {
+                    "id": "CVE-2026-102307",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
+                  },
+                  {
                     "id": "CVE-2026-102309",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -494,12 +510,36 @@
                     "title": "chromium-browser: angle: chromium-browser: Information disclosure via uninitialized resource in ANGLE"
                   },
                   {
+                    "id": "CVE-2026-102315",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Media"
+                  },
+                  {
+                    "id": "CVE-2026-102316",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Views"
+                  },
+                  {
                     "id": "CVE-2026-102318",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: chromium-browser: Out of bounds read in WebGL"
+                  },
+                  {
+                    "id": "CVE-2026-102319",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in GPU"
                   },
                   {
                     "id": "CVE-2026-102321",
@@ -526,12 +566,28 @@
                     "title": "chromium-browser: chromium-browser: Use after free in PictureInPicture"
                   },
                   {
+                    "id": "CVE-2026-102326",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Type confusion in V8"
+                  },
+                  {
                     "id": "CVE-2026-102327",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: chromium-browser: Incorrect authorization in WebView"
+                  },
+                  {
+                    "id": "CVE-2026-102328",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Type confusion in V8"
                   },
                   {
                     "id": "CVE-2026-102329",
@@ -702,6 +758,14 @@
                     "title": "chromium-browser: chromium-browser: Uninitialized resource in GPU"
                   },
                   {
+                    "id": "CVE-2026-102305",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "MEDIUM",
+                    "title": "chromium-browser: chromium-browser: UI misrepresentation in SignIn"
+                  },
+                  {
                     "id": "CVE-2026-102310",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -724,6 +788,14 @@
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "MEDIUM",
                     "title": "chromium-browser: chromium-browser: Missing authorization in CORS"
+                  },
+                  {
+                    "id": "CVE-2026-102325",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "MEDIUM",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Skia"
                   },
                   {
                     "id": "CVE-2026-95297",
@@ -806,6 +878,14 @@
                     "title": "chromium-browser: Improper input validation in Auth"
                   },
                   {
+                    "id": "CVE-2026-102314",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "LOW",
+                    "title": "chromium-browser: chromium-browser: UI misrepresentation in TabStrip"
+                  },
+                  {
                     "id": "CVE-2026-102330",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -838,55 +918,7 @@
                     "title": "chromium-browser: Type confusion in V8"
                   },
                   {
-                    "id": "CVE-2026-102305",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "UI misrepresentation in SignIn in Google Chrome on on iOS prior to 154 ..."
-                  },
-                  {
-                    "id": "CVE-2026-102306",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-                  },
-                  {
-                    "id": "CVE-2026-102307",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Dawn in Google Chrome on on Android prior to ..."
-                  },
-                  {
                     "id": "CVE-2026-102308",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
-                  },
-                  {
-                    "id": "CVE-2026-102314",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "UI misrepresentation in TabStrip in Google Chrome prior to 154.0.8037. ..."
-                  },
-                  {
-                    "id": "CVE-2026-102315",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Media in Google Chrome on on Windows prior t ..."
-                  },
-                  {
-                    "id": "CVE-2026-102316",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
@@ -900,38 +932,6 @@
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "UNKNOWN",
                     "title": "Improper privilege management in Mojo in Google Chrome on on Windows p ..."
-                  },
-                  {
-                    "id": "CVE-2026-102319",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in GPU in Google Chrome prior to 154.0.8037.92  ..."
-                  },
-                  {
-                    "id": "CVE-2026-102325",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Skia in Google Chrome prior to 154.0.8037.92 ..."
-                  },
-                  {
-                    "id": "CVE-2026-102326",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Type confusion in V8 in Google Chrome prior to 154.0.8037.92 allowed a ..."
-                  },
-                  {
-                    "id": "CVE-2026-102328",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Type confusion in V8 in Google Chrome prior to 154.0.8037.92 allowed a ..."
                   },
                   {
                     "id": "CVE-2026-103621",
@@ -1678,6 +1678,22 @@
                     "title": "chromium-browser: chromium-browser: Use after free in Passwords"
                   },
                   {
+                    "id": "CVE-2026-102306",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
+                  },
+                  {
+                    "id": "CVE-2026-102307",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
+                  },
+                  {
                     "id": "CVE-2026-102309",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -1702,12 +1718,36 @@
                     "title": "chromium-browser: angle: chromium-browser: Information disclosure via uninitialized resource in ANGLE"
                   },
                   {
+                    "id": "CVE-2026-102315",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Media"
+                  },
+                  {
+                    "id": "CVE-2026-102316",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Views"
+                  },
+                  {
                     "id": "CVE-2026-102318",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: chromium-browser: Out of bounds read in WebGL"
+                  },
+                  {
+                    "id": "CVE-2026-102319",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in GPU"
                   },
                   {
                     "id": "CVE-2026-102321",
@@ -1734,12 +1774,28 @@
                     "title": "chromium-browser: chromium-browser: Use after free in PictureInPicture"
                   },
                   {
+                    "id": "CVE-2026-102326",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Type confusion in V8"
+                  },
+                  {
                     "id": "CVE-2026-102327",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: chromium-browser: Incorrect authorization in WebView"
+                  },
+                  {
+                    "id": "CVE-2026-102328",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Type confusion in V8"
                   },
                   {
                     "id": "CVE-2026-102329",
@@ -1910,6 +1966,14 @@
                     "title": "chromium-browser: chromium-browser: Uninitialized resource in GPU"
                   },
                   {
+                    "id": "CVE-2026-102305",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "MEDIUM",
+                    "title": "chromium-browser: chromium-browser: UI misrepresentation in SignIn"
+                  },
+                  {
                     "id": "CVE-2026-102310",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -1932,6 +1996,14 @@
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "MEDIUM",
                     "title": "chromium-browser: chromium-browser: Missing authorization in CORS"
+                  },
+                  {
+                    "id": "CVE-2026-102325",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "MEDIUM",
+                    "title": "chromium-browser: chromium-browser: Uninitialized resource in Skia"
                   },
                   {
                     "id": "CVE-2026-95297",
@@ -2014,6 +2086,14 @@
                     "title": "chromium-browser: Improper input validation in Auth"
                   },
                   {
+                    "id": "CVE-2026-102314",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "LOW",
+                    "title": "chromium-browser: chromium-browser: UI misrepresentation in TabStrip"
+                  },
+                  {
                     "id": "CVE-2026-102330",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -2046,55 +2126,7 @@
                     "title": "chromium-browser: Type confusion in V8"
                   },
                   {
-                    "id": "CVE-2026-102305",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "UI misrepresentation in SignIn in Google Chrome on on iOS prior to 154 ..."
-                  },
-                  {
-                    "id": "CVE-2026-102306",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-                  },
-                  {
-                    "id": "CVE-2026-102307",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Dawn in Google Chrome on on Android prior to ..."
-                  },
-                  {
                     "id": "CVE-2026-102308",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
-                  },
-                  {
-                    "id": "CVE-2026-102314",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "UI misrepresentation in TabStrip in Google Chrome prior to 154.0.8037. ..."
-                  },
-                  {
-                    "id": "CVE-2026-102315",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Media in Google Chrome on on Windows prior t ..."
-                  },
-                  {
-                    "id": "CVE-2026-102316",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
@@ -2108,38 +2140,6 @@
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "UNKNOWN",
                     "title": "Improper privilege management in Mojo in Google Chrome on on Windows p ..."
-                  },
-                  {
-                    "id": "CVE-2026-102319",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in GPU in Google Chrome prior to 154.0.8037.92  ..."
-                  },
-                  {
-                    "id": "CVE-2026-102325",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Uninitialized resource in Skia in Google Chrome prior to 154.0.8037.92 ..."
-                  },
-                  {
-                    "id": "CVE-2026-102326",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Type confusion in V8 in Google Chrome prior to 154.0.8037.92 allowed a ..."
-                  },
-                  {
-                    "id": "CVE-2026-102328",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Type confusion in V8 in Google Chrome prior to 154.0.8037.92 allowed a ..."
                   },
                   {
                     "id": "CVE-2026-103621",
@@ -3098,7 +3098,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-2",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -7246,14 +7246,6 @@
                     "title": "libxml2: libxml2: Arbitrary code execution via heap-based buffer overflow"
                   },
                   {
-                    "id": "CVE-2026-86139",
-                    "pkg": "libxml2",
-                    "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
-                    "fixedVersion": "None",
-                    "severity": "HIGH",
-                    "title": "libxml2: libxml2: Integer overflow in xmlURIEscapeStr may lead to arbitrary code execution"
-                  },
-                  {
                     "id": "CVE-2026-86140",
                     "pkg": "libxml2",
                     "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
@@ -7294,28 +7286,12 @@
                     "title": "libxml2: libxml2: NULL pointer dereference parsing nextCatalog without catalog attribute"
                   },
                   {
-                    "id": "CVE-2026-86137",
-                    "pkg": "libxml2",
-                    "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
-                    "fixedVersion": "None",
-                    "severity": "MEDIUM",
-                    "title": "libxml2: libxml2: Denial of Service via out-of-bounds read in xmlFAParsePosCharGroup"
-                  },
-                  {
                     "id": "CVE-2026-11979",
                     "pkg": "libxml2",
                     "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "libxml2: libxml2: Arbitrary code execution in xmlcatalog utility via buffer overflow"
-                  },
-                  {
-                    "id": "CVE-2026-86141",
-                    "pkg": "libxml2",
-                    "installedVersion": "2.9.14+dfsg-1.3~deb12u6",
-                    "fixedVersion": "None",
-                    "severity": "LOW",
-                    "title": "libxml2: libxml2: Denial of Service due to NULL pointer dereference in xmlRegNewParserCtxt"
                   },
                   {
                     "id": "CVE-2026-4367",
@@ -8902,14 +8878,6 @@
                     "title": "PyJWT is a Python implementation of JSON Web Token standards. Prior to ..."
                   },
                   {
-                    "id": "CVE-2026-102266",
-                    "pkg": "python3-jwt",
-                    "installedVersion": "2.6.0-1+deb12u1",
-                    "fixedVersion": "None",
-                    "severity": "HIGH",
-                    "title": "pyjwt: pyjwt: Authentication bypass via empty HMAC key acceptance"
-                  },
-                  {
                     "id": "CVE-2026-102267",
                     "pkg": "python3-jwt",
                     "installedVersion": "2.6.0-1+deb12u1",
@@ -8924,22 +8892,6 @@
                     "fixedVersion": "None",
                     "severity": "HIGH",
                     "title": "pyjwt: PyJWT: Authentication bypass via acceptance of DER public keys as HMAC secrets"
-                  },
-                  {
-                    "id": "CVE-2026-102272",
-                    "pkg": "python3-jwt",
-                    "installedVersion": "2.6.0-1+deb12u1",
-                    "fixedVersion": "None",
-                    "severity": "HIGH",
-                    "title": "pyjwt: pyjwt: Token forgery via improper Unicode byte-order mark handling"
-                  },
-                  {
-                    "id": "CVE-2026-102273",
-                    "pkg": "python3-jwt",
-                    "installedVersion": "2.6.0-1+deb12u1",
-                    "fixedVersion": "None",
-                    "severity": "HIGH",
-                    "title": "pyjwt: pyjwt: Token forgery via acceptance of public JWK containers as HMAC secrets"
                   },
                   {
                     "id": "CVE-2026-48526",
@@ -9004,14 +8956,6 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "pyjwt: PyJWT: Token verification bypass via mismatched OKP key components"
-                  },
-                  {
-                    "id": "CVE-2026-103001",
-                    "pkg": "python3-jwt",
-                    "installedVersion": "2.6.0-1+deb12u1",
-                    "fixedVersion": "None",
-                    "severity": "MEDIUM",
-                    "title": "pyjwt: pyjwt: Token validation bypass via options dictionary mutation"
                   },
                   {
                     "id": "CVE-2026-48522",
@@ -10188,6 +10132,14 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+                  },
+                  {
+                    "id": "CVE-2026-85091",
+                    "pkg": "zlib1g",
+                    "installedVersion": "1:1.2.13.dfsg-1",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
                   }
                 ]
               },
@@ -11233,7 +11185,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -11369,7 +11321,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "0.5.91",
@@ -11495,7 +11447,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "0.5.86",
@@ -11629,7 +11581,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "0.5.85",
@@ -11947,7 +11899,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "0.5.75",
@@ -12265,7 +12217,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -12294,8 +12246,8 @@
               "system": {
                 "critical": 0,
                 "high": 14,
-                "medium": 90,
-                "low": 68,
+                "medium": 89,
+                "low": 69,
                 "fixable": 40,
                 "total": 174
               },
@@ -12313,8 +12265,8 @@
               "system": {
                 "critical": 4,
                 "high": 30,
-                "medium": 106,
-                "low": 69,
+                "medium": 105,
+                "low": 70,
                 "fixable": 77,
                 "total": 211,
                 "topCves": [
@@ -12429,7 +12381,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -14644,7 +14596,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "3.8.50",
@@ -14663,8 +14615,8 @@
               "system": {
                 "critical": 4,
                 "high": 30,
-                "medium": 106,
-                "low": 69,
+                "medium": 105,
+                "low": 70,
                 "fixable": 77,
                 "total": 211
               },
@@ -14682,8 +14634,8 @@
               "system": {
                 "critical": 4,
                 "high": 30,
-                "medium": 106,
-                "low": 69,
+                "medium": 105,
+                "low": 70,
                 "fixable": 77,
                 "total": 211,
                 "topCves": [
@@ -14798,7 +14750,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -17013,7 +16965,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -17417,7 +17369,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-2",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -20221,14 +20173,6 @@
                     "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
                   },
                   {
-                    "id": "CVE-2026-55654",
-                    "pkg": "openssh-client",
-                    "installedVersion": "1:9.2p1-2+deb12u10",
-                    "fixedVersion": "None",
-                    "severity": "LOW",
-                    "title": "openssh: Heap out-of-bounds read in Red Hat Enterprise Linux versions of OpenSSH GSSAPI indicator cleanup due to missing NULL sentinel termination"
-                  },
-                  {
                     "id": "CVE-2026-73281",
                     "pkg": "openssh-client",
                     "installedVersion": "1:9.2p1-2+deb12u10",
@@ -21379,6 +21323,14 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+                  },
+                  {
+                    "id": "CVE-2026-85091",
+                    "pkg": "zlib1g",
+                    "installedVersion": "1:1.2.13.dfsg-1",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
                   }
                 ]
               },
@@ -21904,7 +21856,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2026.9.7",
@@ -22298,7 +22250,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-2",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -25102,14 +25054,6 @@
                     "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
                   },
                   {
-                    "id": "CVE-2026-55654",
-                    "pkg": "openssh-client",
-                    "installedVersion": "1:9.2p1-2+deb12u10",
-                    "fixedVersion": "None",
-                    "severity": "LOW",
-                    "title": "openssh: Heap out-of-bounds read in Red Hat Enterprise Linux versions of OpenSSH GSSAPI indicator cleanup due to missing NULL sentinel termination"
-                  },
-                  {
                     "id": "CVE-2026-73281",
                     "pkg": "openssh-client",
                     "installedVersion": "1:9.2p1-2+deb12u10",
@@ -26260,6 +26204,14 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+                  },
+                  {
+                    "id": "CVE-2026-85091",
+                    "pkg": "zlib1g",
+                    "installedVersion": "1:1.2.13.dfsg-1",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
                   }
                 ]
               },
@@ -26785,7 +26737,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2026.9.6",
@@ -27179,7 +27131,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-2",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -29981,14 +29933,6 @@
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
-                  },
-                  {
-                    "id": "CVE-2026-55654",
-                    "pkg": "openssh-client",
-                    "installedVersion": "1:9.2p1-2+deb12u10",
-                    "fixedVersion": "None",
-                    "severity": "LOW",
-                    "title": "openssh: Heap out-of-bounds read in Red Hat Enterprise Linux versions of OpenSSH GSSAPI indicator cleanup due to missing NULL sentinel termination"
                   },
                   {
                     "id": "CVE-2026-73281",
@@ -31141,6 +31085,14 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+                  },
+                  {
+                    "id": "CVE-2026-85091",
+                    "pkg": "zlib1g",
+                    "installedVersion": "1:1.2.13.dfsg-1",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
                   }
                 ]
               },
@@ -31666,7 +31618,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2026.9.5",
@@ -32060,7 +32012,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-2",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -34862,14 +34814,6 @@
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
-                  },
-                  {
-                    "id": "CVE-2026-55654",
-                    "pkg": "openssh-client",
-                    "installedVersion": "1:9.2p1-2+deb12u10",
-                    "fixedVersion": "None",
-                    "severity": "LOW",
-                    "title": "openssh: Heap out-of-bounds read in Red Hat Enterprise Linux versions of OpenSSH GSSAPI indicator cleanup due to missing NULL sentinel termination"
                   },
                   {
                     "id": "CVE-2026-73281",
@@ -36030,6 +35974,14 @@
                     "fixedVersion": "None",
                     "severity": "MEDIUM",
                     "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
+                  },
+                  {
+                    "id": "CVE-2026-85091",
+                    "pkg": "zlib1g",
+                    "installedVersion": "1:1.2.13.dfsg-1",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
                   }
                 ]
               },
@@ -36563,7 +36515,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -38470,7 +38422,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.42.1",
@@ -40367,7 +40319,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.42.0",
@@ -42264,7 +42216,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.41.3",
@@ -44161,7 +44113,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.40.6",
@@ -46258,7 +46210,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -46287,8 +46239,8 @@
               "system": {
                 "critical": 17,
                 "high": 384,
-                "medium": 2380,
-                "low": 1153,
+                "medium": 2379,
+                "low": 1154,
                 "fixable": 1597,
                 "total": 3975
               },
@@ -46306,8 +46258,8 @@
               "system": {
                 "critical": 2,
                 "high": 221,
-                "medium": 388,
-                "low": 264,
+                "medium": 387,
+                "low": 265,
                 "fixable": 41,
                 "total": 911,
                 "topCves": [
@@ -46614,7 +46566,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -50151,7 +50103,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -50159,7 +50111,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50584",
@@ -50183,7 +50135,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50587",
@@ -50199,7 +50151,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -50223,7 +50175,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -50231,7 +50183,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -54125,7 +54077,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v2026.9.21",
@@ -54144,8 +54096,8 @@
               "system": {
                 "critical": 17,
                 "high": 384,
-                "medium": 2380,
-                "low": 1153,
+                "medium": 2379,
+                "low": 1154,
                 "fixable": 1597,
                 "total": 3975
               },
@@ -54163,8 +54115,8 @@
               "system": {
                 "critical": 2,
                 "high": 221,
-                "medium": 388,
-                "low": 264,
+                "medium": 387,
+                "low": 265,
                 "fixable": 41,
                 "total": 911,
                 "topCves": [
@@ -54471,7 +54423,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -58008,7 +57960,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -58016,7 +57968,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50584",
@@ -58040,7 +57992,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50587",
@@ -58056,7 +58008,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -58080,7 +58032,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -58088,7 +58040,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -62478,7 +62430,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v2026.9.14",
@@ -62497,8 +62449,8 @@
               "system": {
                 "critical": 17,
                 "high": 384,
-                "medium": 2380,
-                "low": 1153,
+                "medium": 2379,
+                "low": 1154,
                 "fixable": 1597,
                 "total": 3975
               },
@@ -62516,8 +62468,8 @@
               "system": {
                 "critical": 2,
                 "high": 221,
-                "medium": 388,
-                "low": 264,
+                "medium": 387,
+                "low": 265,
                 "fixable": 41,
                 "total": 911,
                 "topCves": [
@@ -62824,7 +62776,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -66361,7 +66313,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -66369,7 +66321,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50584",
@@ -66393,7 +66345,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50587",
@@ -66409,7 +66361,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -66433,7 +66385,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -66441,7 +66393,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -70831,7 +70783,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -70860,8 +70812,8 @@
               "system": {
                 "critical": 7,
                 "high": 38,
-                "medium": 138,
-                "low": 112,
+                "medium": 137,
+                "low": 113,
                 "fixable": 68,
                 "total": 297
               },
@@ -70879,8 +70831,8 @@
               "system": {
                 "critical": 4,
                 "high": 28,
-                "medium": 124,
-                "low": 111,
+                "medium": 123,
+                "low": 112,
                 "fixable": 40,
                 "total": 269,
                 "topCves": [
@@ -71187,7 +71139,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -73151,7 +73103,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -73506,7 +73458,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -73649,7 +73601,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -77059,7 +77011,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "3.0.0",
@@ -80580,7 +80532,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.14.3",
@@ -85285,7 +85237,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -85404,7 +85356,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -85433,8 +85385,8 @@
               "system": {
                 "critical": 4,
                 "high": 222,
-                "medium": 2316,
-                "low": 503,
+                "medium": 2315,
+                "low": 504,
                 "fixable": 1979,
                 "total": 3047
               },
@@ -85452,8 +85404,8 @@
               "system": {
                 "critical": 1,
                 "high": 114,
-                "medium": 1897,
-                "low": 421,
+                "medium": 1896,
+                "low": 422,
                 "fixable": 1367,
                 "total": 2435,
                 "topCves": [
@@ -85768,7 +85720,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -105343,7 +105295,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -105372,8 +105324,8 @@
               "system": {
                 "critical": 2,
                 "high": 166,
-                "medium": 2018,
-                "low": 1070,
+                "medium": 2017,
+                "low": 1071,
                 "fixable": 1356,
                 "total": 3272
               },
@@ -105391,8 +105343,8 @@
               "system": {
                 "critical": 2,
                 "high": 166,
-                "medium": 2018,
-                "low": 1070,
+                "medium": 2017,
+                "low": 1071,
                 "fixable": 1354,
                 "total": 3270,
                 "topCves": [
@@ -107611,7 +107563,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -131874,7 +131826,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "2.15.1",
@@ -131893,8 +131845,8 @@
               "system": {
                 "critical": 16,
                 "high": 530,
-                "medium": 3851,
-                "low": 1380,
+                "medium": 3850,
+                "low": 1381,
                 "fixable": 3879,
                 "total": 5795
               },
@@ -131912,8 +131864,8 @@
               "system": {
                 "critical": 2,
                 "high": 166,
-                "medium": 2018,
-                "low": 1070,
+                "medium": 2017,
+                "low": 1071,
                 "fixable": 1356,
                 "total": 3272,
                 "topCves": [
@@ -134132,7 +134084,7 @@
                     "pkg": "dash",
                     "installedVersion": "0.5.12-12",
                     "fixedVersion": "None",
-                    "severity": "MEDIUM",
+                    "severity": "LOW",
                     "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
                   },
                   {
@@ -158923,7 +158875,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -159397,7 +159349,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "5.1.6",
@@ -159489,7 +159441,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -159834,7 +159786,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
@@ -159878,15 +159830,57 @@
               }
             },
             "pfnapp": {
-              "scanned": false
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 1,
+                "topCves": [],
+                "allCves": [
+                  {
+                    "id": "GO-2026-5932",
+                    "pkg": "golang.org/x/crypto",
+                    "installedVersion": "v0.57.0",
+                    "fixedVersion": "None",
+                    "severity": "UNKNOWN",
+                    "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+                  }
+                ]
+              }
             },
-            "reduction": null
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "total": 0
+              }
+            }
           },
           "topAppCves": [],
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v11.1.3",
@@ -159970,7 +159964,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v11.1.2",
@@ -160054,7 +160048,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v11.1.1",
@@ -160138,7 +160132,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         },
         {
           "tag": "v11.1.0",
@@ -160180,7 +160174,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-04T06:38:12.306Z"
+          "scannedAt": "2026-10-05T06:33:17.975Z"
         }
       ],
       "deprecatedVersions": []
