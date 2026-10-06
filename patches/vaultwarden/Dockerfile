@@ -1,4 +1,4 @@
-FROM docker.io/vaultwarden/server:1.37.3
+FROM docker.io/vaultwarden/server:1.37.4
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get autoremove -y && \
