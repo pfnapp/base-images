@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-05T06:33:57.161Z",
+  "scannedAt": "2026-10-06T07:12:16.038Z",
   "system": {
     "total": 121,
     "cves": [
@@ -974,7 +974,7 @@
     ]
   },
   "app": {
-    "total": 111,
+    "total": 99,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -993,6 +993,14 @@
         "title": "@grpc/grpc-js: The server transmits some error messages thrown by method handlers to the client in status messages"
       },
       {
+        "id": "CVE-2026-102829",
+        "pkg": "@simple-git/argv-parser",
+        "installedVersion": "1.1.1",
+        "fixedVersion": "2.0.1",
+        "severity": "CRITICAL",
+        "title": "simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection"
+      },
+      {
         "id": "GHSA-j95f-988m-3j2f",
         "pkg": "@tiptap/core",
         "installedVersion": "3.27.0",
@@ -1007,6 +1015,14 @@
         "fixedVersion": "3.30.4",
         "severity": "MEDIUM",
         "title": "Tiptap: mergeAttributes() turns an own __proto__ key into inherited executable DOM attributes"
+      },
+      {
+        "id": "GHSA-g2v6-rqmx-r4w6",
+        "pkg": "@vue/server-renderer",
+        "installedVersion": "3.5.40",
+        "fixedVersion": "3.5.42, 3.6.0-rc.6",
+        "severity": "HIGH",
+        "title": "@vue/server-renderer: XSS via missing CR in attribute-name blacklist"
       },
       {
         "id": "CVE-2026-83608",
@@ -1377,6 +1393,14 @@
         "title": "braces: braces: Denial of Service via Stack Overflow from Deeply Nested Patterns"
       },
       {
+        "id": "CVE-2026-87776",
+        "pkg": "compression",
+        "installedVersion": "1.8.1",
+        "fixedVersion": "1.8.2",
+        "severity": "HIGH",
+        "title": "compression: compression: Denial of Service via memory leak on premature response close"
+      },
+      {
         "id": "CVE-2025-57665",
         "pkg": "element-plus",
         "installedVersion": "2.4.3",
@@ -1577,6 +1601,22 @@
         "title": "Nodemailer: IDN/Punycode domain allow-list bypass leads to email delivery to an attacker-controlled domain"
       },
       {
+        "id": "CVE-2026-104847",
+        "pkg": "prosemirror-view",
+        "installedVersion": "1.41.8",
+        "fixedVersion": "1.42.3",
+        "severity": "HIGH",
+        "title": "ProseMirror has a XSS vulnerability in prosemirror-view's paste handling"
+      },
+      {
+        "id": "CVE-2026-90711",
+        "pkg": "proxy-addr",
+        "installedVersion": "2.0.7",
+        "fixedVersion": "2.0.8",
+        "severity": "CRITICAL",
+        "title": "proxy-addr is a Node.js module that determines a request's client addr ..."
+      },
+      {
         "id": "CVE-2026-82417",
         "pkg": "qs",
         "installedVersion": "6.15.2",
@@ -1615,6 +1655,70 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "showdown: Showdown: Cross-site scripting via unescaped metadata title allows arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-102828",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.1",
+        "severity": "CRITICAL",
+        "title": "simple-git unsafe-operation guard does not block trailer command configuration"
+      },
+      {
+        "id": "CVE-2026-102826",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "simple-git: simple-git allows command execution through unblocked Git configuration includes"
+      },
+      {
+        "id": "CVE-2026-102827",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "simple-git: unsafe-operations plugin bypass via git long-option abbreviation (--receive-p/--exe) -> command execution (residual of CVE-2026-28291)"
+      },
+      {
+        "id": "CVE-2026-93749",
+        "pkg": "source-map-js",
+        "installedVersion": "1.2.1",
+        "fixedVersion": "1.2.2",
+        "severity": "HIGH",
+        "title": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps"
+      },
+      {
+        "id": "CVE-2026-97058",
+        "pkg": "sprintf-js",
+        "installedVersion": "1.0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers"
+      },
+      {
+        "id": "CVE-2026-97058",
+        "pkg": "sprintf-js",
+        "installedVersion": "1.1.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers"
+      },
+      {
+        "id": "CVE-2026-104182",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Denial of Service via inefficient comment scanning"
+      },
+      {
+        "id": "CVE-2026-104183",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Object prototype manipulation via crafted JSON input"
       },
       {
         "id": "CVE-2026-71429",
@@ -1663,206 +1767,6 @@
         "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: HTTP response splitting via retry interceptor"
-      },
-      {
-        "id": "CVE-2026-19534",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
-        "severity": "HIGH",
-        "title": "undici: undici: Denial of Service via unrequested WebSocket subprotocol"
-      },
-      {
-        "id": "CVE-2026-84961",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "HIGH",
-        "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
-      },
-      {
-        "id": "CVE-2026-18149",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service due to orphaned response body in retry handler"
-      },
-      {
-        "id": "CVE-2026-84890",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via unbounded decompression of compressed responses"
-      },
-      {
-        "id": "CVE-2026-84933",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Cross-user cookie disclosure via Set-Cookie caching"
-      },
-      {
-        "id": "CVE-2026-85014",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via WebSocketStream unclean close"
-      },
-      {
-        "id": "CVE-2026-85024",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
-      },
-      {
-        "id": "CVE-2026-18540",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
-        "severity": "LOW",
-        "title": "undici: undici: HTTP response splitting via retry interceptor"
-      },
-      {
-        "id": "CVE-2026-84947",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "LOW",
-        "title": "undici: Undici: Response truncation and connection termination"
-      },
-      {
-        "id": "CVE-2026-85008",
-        "pkg": "undici",
-        "installedVersion": "7.29.0",
-        "fixedVersion": "7.29.1, 8.10.2",
-        "severity": "LOW",
-        "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
-      },
-      {
-        "id": "CVE-2026-92935",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 NodeVM Remote Code Execution via Array-Shaped Require"
-      },
-      {
-        "id": "CVE-2026-92937",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.11.6 Remote Code Execution via Promise call/apply"
-      },
-      {
-        "id": "CVE-2026-92938",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.11.3 through 3.11.6 Remote Code Execution via node:sqlite"
-      },
-      {
-        "id": "CVE-2026-92939",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.11.3 through 3.11.6 Native Code Execution via crypto.setEngine"
-      },
-      {
-        "id": "CVE-2026-92940",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.11.3 through 3.11.6 HTTPS Credential Exposure via globalAgent"
-      },
-      {
-        "id": "CVE-2026-92941",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.11.3 before 3.11.7 TLS Trust Store Manipulation"
-      },
-      {
-        "id": "CVE-2026-92944",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.10.2 through 3.11.6 Sandbox Escape via Promise Protector"
-      },
-      {
-        "id": "CVE-2026-92948",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 3.9.6 through 3.11.5 Sandbox Escape via node:test"
-      },
-      {
-        "id": "CVE-2026-92951",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 before 3.11.7 Module Allowlist Bypass via Custom Resolver"
-      },
-      {
-        "id": "CVE-2026-92957",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "CRITICAL",
-        "title": "vm2: vm2 before 3.11.7 Authentication Bypass via node: Prefix"
-      },
-      {
-        "id": "CVE-2026-92950",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "HIGH",
-        "title": "vm2: vm2 before 3.11.7 Sandbox Escape via CLI require"
-      },
-      {
-        "id": "CVE-2026-92958",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "HIGH",
-        "title": "vm2: vm2: Sandbox escape via denylist bypass in NodeVM"
-      },
-      {
-        "id": "CVE-2026-92945",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "MEDIUM",
-        "title": "vm2: vm2: Module allowlist bypass allows access to restricted packages"
-      },
-      {
-        "id": "CVE-2026-92949",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "MEDIUM",
-        "title": "vm2: vm2: Sandbox bypass allows unauthorized data modification."
-      },
-      {
-        "id": "CVE-2026-92952",
-        "pkg": "vm2",
-        "installedVersion": "3.11.6",
-        "fixedVersion": "3.11.7",
-        "severity": "MEDIUM",
-        "title": "vm2: vm2: Sandbox Symbol Filtering Bypass leading to Host Stream State Corruption"
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-05T06:33:30.402Z",
+  "scannedAt": "2026-10-06T07:11:48.170Z",
   "system": {
     "total": 6035,
     "cves": [
@@ -914,6 +914,14 @@
         "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Use after free in Views"
+      },
+      {
+        "id": "CVE-2026-102317",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Improper privilege management in Mojo"
       },
       {
         "id": "CVE-2026-102318",
@@ -5858,6 +5866,14 @@
         "fixedVersion": "154.0.8037.57-1",
         "severity": "HIGH",
         "title": "chromium-browser: Out of bounds write in WebGL"
+      },
+      {
+        "id": "CVE-2026-95350",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.57-1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-95351",
@@ -15268,14 +15284,6 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-102317",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper privilege management in Mojo in Google Chrome on on Windows p ..."
-      },
-      {
         "id": "CVE-2026-103621",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -19706,14 +19714,6 @@
         "fixedVersion": "154.0.8037.57-1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in WebGL in Google Chrome on on Android prior to 154.0 ..."
-      },
-      {
-        "id": "CVE-2026-95350",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.57-1",
-        "severity": "UNKNOWN",
-        "title": "Buffer overflow in ANGLE in Google Chrome on on Android prior to 154.0 ..."
       },
       {
         "id": "CVE-2026-95352",
@@ -20740,6 +20740,14 @@
         "title": "chromium-browser: chromium-browser: Use after free in Views"
       },
       {
+        "id": "CVE-2026-102317",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Improper privilege management in Mojo"
+      },
+      {
         "id": "CVE-2026-102318",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -25682,6 +25690,14 @@
         "fixedVersion": "154.0.8037.57-1",
         "severity": "HIGH",
         "title": "chromium-browser: Out of bounds write in WebGL"
+      },
+      {
+        "id": "CVE-2026-95350",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.57-1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-95351",
@@ -35092,14 +35108,6 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-102317",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper privilege management in Mojo in Google Chrome on on Windows p ..."
-      },
-      {
         "id": "CVE-2026-103621",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -39530,14 +39538,6 @@
         "fixedVersion": "154.0.8037.57-1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in WebGL in Google Chrome on on Android prior to 154.0 ..."
-      },
-      {
-        "id": "CVE-2026-95350",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.57-1",
-        "severity": "UNKNOWN",
-        "title": "Buffer overflow in ANGLE in Google Chrome on on Android prior to 154.0 ..."
       },
       {
         "id": "CVE-2026-95352",
@@ -43295,7 +43295,7 @@
         "id": "CVE-2026-13221",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Incorrect regular expression processing via large regular expressions"
       },
@@ -43303,7 +43303,7 @@
         "id": "CVE-2026-42496",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl-archive-tar: perl-archive-tar: Path traversal via crafted symlinks allows arbitrary file access"
       },
@@ -43311,7 +43311,7 @@
         "id": "CVE-2026-8376",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Heap buffer overflow when compiling regular expressions on 32-bit builds"
       },
@@ -43319,7 +43319,7 @@
         "id": "CVE-2026-42497",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-Archive-Tar: perl-Archive-Tar: Arbitrary file modification via crafted hardlinks during archive extraction"
       },
@@ -43327,7 +43327,7 @@
         "id": "CVE-2026-48962",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-IO-Compress: perl-IO-Compress: Arbitrary code execution via attacker-controlled output glob"
       },
@@ -43335,7 +43335,7 @@
         "id": "CVE-2026-57432",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl: Perl: Information disclosure via integer overflow in pack/unpack operations"
       },
@@ -43343,7 +43343,7 @@
         "id": "CVE-2026-57433",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "Storable: Storable: Denial of Service via signed integer overflow in deserialization"
       },
@@ -43359,7 +43359,7 @@
         "id": "CVE-2025-15649",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: Denial of Service via malformed DOS date in zip header"
       },
@@ -43367,7 +43367,7 @@
         "id": "CVE-2026-12087",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-Socket: perl-Socket: Information Disclosure due to Out-of-Bounds Read"
       },
@@ -43383,7 +43383,7 @@
         "id": "CVE-2026-19487",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl: Perl: Incorrect regular expression matching can lead to wrong access or filtering decisions."
       },
@@ -43391,7 +43391,7 @@
         "id": "CVE-2026-48959",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
@@ -43399,7 +43399,7 @@
         "id": "CVE-2026-7010",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP ..."
       },
@@ -43407,7 +43407,7 @@
         "id": "CVE-2026-7017",
         "pkg": "libperl5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.095 for Perl forward credential headers t ..."
       },
@@ -46391,7 +46391,7 @@
         "id": "CVE-2026-13221",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Incorrect regular expression processing via large regular expressions"
       },
@@ -46399,7 +46399,7 @@
         "id": "CVE-2026-42496",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl-archive-tar: perl-archive-tar: Path traversal via crafted symlinks allows arbitrary file access"
       },
@@ -46407,7 +46407,7 @@
         "id": "CVE-2026-8376",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Heap buffer overflow when compiling regular expressions on 32-bit builds"
       },
@@ -46415,7 +46415,7 @@
         "id": "CVE-2026-42497",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-Archive-Tar: perl-Archive-Tar: Arbitrary file modification via crafted hardlinks during archive extraction"
       },
@@ -46423,7 +46423,7 @@
         "id": "CVE-2026-48962",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-IO-Compress: perl-IO-Compress: Arbitrary code execution via attacker-controlled output glob"
       },
@@ -46431,7 +46431,7 @@
         "id": "CVE-2026-57432",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl: Perl: Information disclosure via integer overflow in pack/unpack operations"
       },
@@ -46439,7 +46439,7 @@
         "id": "CVE-2026-57433",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "Storable: Storable: Denial of Service via signed integer overflow in deserialization"
       },
@@ -46455,7 +46455,7 @@
         "id": "CVE-2025-15649",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: Denial of Service via malformed DOS date in zip header"
       },
@@ -46463,7 +46463,7 @@
         "id": "CVE-2026-12087",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-Socket: perl-Socket: Information Disclosure due to Out-of-Bounds Read"
       },
@@ -46479,7 +46479,7 @@
         "id": "CVE-2026-19487",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl: Perl: Incorrect regular expression matching can lead to wrong access or filtering decisions."
       },
@@ -46487,7 +46487,7 @@
         "id": "CVE-2026-48959",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
@@ -46495,7 +46495,7 @@
         "id": "CVE-2026-7010",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP ..."
       },
@@ -46503,7 +46503,7 @@
         "id": "CVE-2026-7017",
         "pkg": "perl",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.095 for Perl forward credential headers t ..."
       },
@@ -46535,7 +46535,7 @@
         "id": "CVE-2026-13221",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Incorrect regular expression processing via large regular expressions"
       },
@@ -46543,7 +46543,7 @@
         "id": "CVE-2026-42496",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl-archive-tar: perl-archive-tar: Path traversal via crafted symlinks allows arbitrary file access"
       },
@@ -46551,7 +46551,7 @@
         "id": "CVE-2026-8376",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Heap buffer overflow when compiling regular expressions on 32-bit builds"
       },
@@ -46559,7 +46559,7 @@
         "id": "CVE-2026-42497",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-Archive-Tar: perl-Archive-Tar: Arbitrary file modification via crafted hardlinks during archive extraction"
       },
@@ -46567,7 +46567,7 @@
         "id": "CVE-2026-48962",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-IO-Compress: perl-IO-Compress: Arbitrary code execution via attacker-controlled output glob"
       },
@@ -46575,7 +46575,7 @@
         "id": "CVE-2026-57432",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl: Perl: Information disclosure via integer overflow in pack/unpack operations"
       },
@@ -46583,7 +46583,7 @@
         "id": "CVE-2026-57433",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "Storable: Storable: Denial of Service via signed integer overflow in deserialization"
       },
@@ -46599,7 +46599,7 @@
         "id": "CVE-2025-15649",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: Denial of Service via malformed DOS date in zip header"
       },
@@ -46607,7 +46607,7 @@
         "id": "CVE-2026-12087",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-Socket: perl-Socket: Information Disclosure due to Out-of-Bounds Read"
       },
@@ -46623,7 +46623,7 @@
         "id": "CVE-2026-19487",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl: Perl: Incorrect regular expression matching can lead to wrong access or filtering decisions."
       },
@@ -46631,7 +46631,7 @@
         "id": "CVE-2026-48959",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
@@ -46639,7 +46639,7 @@
         "id": "CVE-2026-7010",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP ..."
       },
@@ -46647,7 +46647,7 @@
         "id": "CVE-2026-7017",
         "pkg": "perl-base",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.095 for Perl forward credential headers t ..."
       },
@@ -46679,7 +46679,7 @@
         "id": "CVE-2026-13221",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Incorrect regular expression processing via large regular expressions"
       },
@@ -46687,7 +46687,7 @@
         "id": "CVE-2026-42496",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl-archive-tar: perl-archive-tar: Path traversal via crafted symlinks allows arbitrary file access"
       },
@@ -46695,7 +46695,7 @@
         "id": "CVE-2026-8376",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "CRITICAL",
         "title": "perl: Perl: Heap buffer overflow when compiling regular expressions on 32-bit builds"
       },
@@ -46703,7 +46703,7 @@
         "id": "CVE-2026-42497",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-Archive-Tar: perl-Archive-Tar: Arbitrary file modification via crafted hardlinks during archive extraction"
       },
@@ -46711,7 +46711,7 @@
         "id": "CVE-2026-48962",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl-IO-Compress: perl-IO-Compress: Arbitrary code execution via attacker-controlled output glob"
       },
@@ -46719,7 +46719,7 @@
         "id": "CVE-2026-57432",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "perl: Perl: Information disclosure via integer overflow in pack/unpack operations"
       },
@@ -46727,7 +46727,7 @@
         "id": "CVE-2026-57433",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "HIGH",
         "title": "Storable: Storable: Denial of Service via signed integer overflow in deserialization"
       },
@@ -46743,7 +46743,7 @@
         "id": "CVE-2025-15649",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: Denial of Service via malformed DOS date in zip header"
       },
@@ -46751,7 +46751,7 @@
         "id": "CVE-2026-12087",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-Socket: perl-Socket: Information Disclosure due to Out-of-Bounds Read"
       },
@@ -46767,7 +46767,7 @@
         "id": "CVE-2026-19487",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl: Perl: Incorrect regular expression matching can lead to wrong access or filtering decisions."
       },
@@ -46775,7 +46775,7 @@
         "id": "CVE-2026-48959",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "perl-IO-Compress: perl-IO-Compress: CPU exhaustion via per-byte read loop in fastForward"
       },
@@ -46783,7 +46783,7 @@
         "id": "CVE-2026-7010",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.093 for Perl do not validate CRLF in HTTP ..."
       },
@@ -46791,7 +46791,7 @@
         "id": "CVE-2026-7017",
         "pkg": "perl-modules-5.36",
         "installedVersion": "5.36.0-7+deb12u3",
-        "fixedVersion": "None",
+        "fixedVersion": "5.36.0-7+deb12u4",
         "severity": "MEDIUM",
         "title": "HTTP::Tiny versions before 0.095 for Perl forward credential headers t ..."
       },
@@ -48286,7 +48286,7 @@
     ]
   },
   "app": {
-    "total": 217,
+    "total": 221,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -48489,6 +48489,14 @@
         "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
       },
       {
+        "id": "CVE-2026-87776",
+        "pkg": "compression",
+        "installedVersion": "1.8.1",
+        "fixedVersion": "1.8.2",
+        "severity": "HIGH",
+        "title": "compression: compression: Denial of Service via memory leak on premature response close"
+      },
+      {
         "id": "CVE-2026-102599",
         "pkg": "engine.io",
         "installedVersion": "6.6.9",
@@ -48657,6 +48665,14 @@
         "title": "nodemailer: Nodemailer: Arbitrary file read and Server-Side Request Forgery via raw option bypass"
       },
       {
+        "id": "CVE-2026-82662",
+        "pkg": "nodemailer",
+        "installedVersion": "7.0.13",
+        "fixedVersion": "8.0.8",
+        "severity": "HIGH",
+        "title": "nodemailer: Nodemailer: Information disclosure due to disabled TLS certificate verification"
+      },
+      {
         "id": "GHSA-2x7j-588g-ccc2",
         "pkg": "nodemailer",
         "installedVersion": "7.0.13",
@@ -48713,14 +48729,6 @@
         "title": "Nodemailer: Recipient-domain validation bypass via RFC 5322 comment mis-parsing leads to email delivery to an attacker-controlled domain"
       },
       {
-        "id": "GHSA-r7g4-qg5f-qqm2",
-        "pkg": "nodemailer",
-        "installedVersion": "7.0.13",
-        "fixedVersion": "8.0.8",
-        "severity": "MEDIUM",
-        "title": "Nodemailer: Improper TLS Certificate Validation in OAuth2 Token Fetch Enables Credential Interception"
-      },
-      {
         "id": "GHSA-vvjj-xcjg-gr5g",
         "pkg": "nodemailer",
         "installedVersion": "7.0.13",
@@ -48759,6 +48767,14 @@
         "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
         "severity": "MEDIUM",
         "title": "picomatch: Picomatch: Data integrity compromised via method injection with crafted POSIX bracket expressions"
+      },
+      {
+        "id": "CVE-2026-104844",
+        "pkg": "postcss-selector-parser",
+        "installedVersion": "7.1.1",
+        "fixedVersion": "7.1.6",
+        "severity": "MEDIUM",
+        "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
       },
       {
         "id": "CVE-2026-9358",
@@ -48857,6 +48873,14 @@
         "title": "protobufjs: protobufjs-cli: protobufjs: Denial of Service due to name collision with runtime helpers"
       },
       {
+        "id": "CVE-2026-90711",
+        "pkg": "proxy-addr",
+        "installedVersion": "2.0.7",
+        "fixedVersion": "2.0.8",
+        "severity": "CRITICAL",
+        "title": "proxy-addr is a Node.js module that determines a request's client addr ..."
+      },
+      {
         "id": "CVE-2026-82417",
         "pkg": "qs",
         "installedVersion": "6.14.2",
@@ -48911,6 +48935,14 @@
         "fixedVersion": "6.16.0",
         "severity": "MEDIUM",
         "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
+      },
+      {
+        "id": "CVE-2026-97058",
+        "pkg": "sprintf-js",
+        "installedVersion": "1.1.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers"
       },
       {
         "id": "CVE-2026-59873",

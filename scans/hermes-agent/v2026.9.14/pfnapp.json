@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-05T06:34:05.179Z",
+  "scannedAt": "2026-10-06T07:12:29.616Z",
   "system": {
     "total": 911,
     "cves": [
@@ -3769,7 +3769,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -3801,7 +3801,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -3833,7 +3833,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -3849,7 +3849,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50640",
@@ -3873,7 +3873,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54441",
@@ -7294,7 +7294,7 @@
     ]
   },
   "app": {
-    "total": 103,
+    "total": 109,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -7457,12 +7457,28 @@
         "title": "ip-address: ip-address: Server-Side Request Forgery (SSRF) and trust-boundary bypass"
       },
       {
+        "id": "CVE-2026-104844",
+        "pkg": "postcss-selector-parser",
+        "installedVersion": "7.1.4",
+        "fixedVersion": "7.1.6",
+        "severity": "MEDIUM",
+        "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
+      },
+      {
         "id": "CVE-2026-84371",
         "pkg": "sanitize-html",
         "installedVersion": "2.17.6",
         "fixedVersion": "2.17.7",
         "severity": "MEDIUM",
         "title": "sanitize-html: stored XSS via SVG SMIL URI-list scheme-policy bypass"
+      },
+      {
+        "id": "CVE-2026-93749",
+        "pkg": "source-map-js",
+        "installedVersion": "1.2.1",
+        "fixedVersion": "1.2.2",
+        "severity": "HIGH",
+        "title": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps"
       },
       {
         "id": "CVE-2026-59873",
@@ -7793,6 +7809,14 @@
         "title": "pyjwt: pyjwt: Denial of Service via malformed RSA key in JWK set"
       },
       {
+        "id": "CVE-2026-102275",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.15.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: PyJWT: Token verification bypass via mismatched OKP key components"
+      },
+      {
         "id": "CVE-2026-103001",
         "pkg": "PyJWT",
         "installedVersion": "2.13.0",
@@ -7863,6 +7887,14 @@
         "fixedVersion": "2.11.0",
         "severity": "MEDIUM",
         "title": "httpx2: HTTPX2: Request Smuggling and Connection Desynchronization via Conflicting HTTP Headers"
+      },
+      {
+        "id": "CVE-2026-104874",
+        "pkg": "multidict",
+        "installedVersion": "6.7.1",
+        "fixedVersion": "6.9.1",
+        "severity": "MEDIUM",
+        "title": "multidict: multidict: Denial of Service via memory leak in items-view operations"
       },
       {
         "id": "CVE-2026-49264",
@@ -7985,6 +8017,14 @@
         "title": "rkyv: Panic safety bugs in `InlineVec::clear` and `SerVec::clear` enable arbitrary code execution"
       },
       {
+        "id": "GHSA-2mjx-qc3c-rqvc",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.45",
+        "severity": "MEDIUM",
+        "title": "Rustls: TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries"
+      },
+      {
         "id": "GHSA-82j2-j2ch-gfr8",
         "pkg": "rustls-webpki",
         "installedVersion": "0.103.10",
@@ -8079,6 +8119,14 @@
         "fixedVersion": "0.8.16",
         "severity": "MEDIUM",
         "title": "rkyv: Panic safety bugs in `InlineVec::clear` and `SerVec::clear` enable arbitrary code execution"
+      },
+      {
+        "id": "GHSA-2mjx-qc3c-rqvc",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.45",
+        "severity": "MEDIUM",
+        "title": "Rustls: TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries"
       },
       {
         "id": "GHSA-82j2-j2ch-gfr8",

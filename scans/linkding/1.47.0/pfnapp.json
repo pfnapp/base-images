@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-05T06:34:18.928Z",
+  "scannedAt": "2026-10-06T07:13:17.166Z",
   "system": {
     "total": 2435,
     "cves": [
@@ -2468,6 +2468,14 @@
         "title": "kernel: xfrm: ah6: validate routing header segments_left"
       },
       {
+        "id": "CVE-2026-80921",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: KVM: s390: vsie: zero stale crypto bits"
+      },
+      {
         "id": "CVE-2026-80951",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -2716,12 +2724,36 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
       },
       {
+        "id": "CVE-2026-89972",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: nvme: add missing SRCU grace period in error path"
+      },
+      {
         "id": "CVE-2026-89980",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-90227",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: nvme/ioctl: check SUBMIT_IO with nvme_cmd_allowed()"
+      },
+      {
+        "id": "CVE-2026-93288",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: netfilter: nfnetlink_log: wait for rcu grace period before freeing pernet state"
       },
       {
         "id": "CVE-2026-93817",
@@ -6420,14 +6452,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
-        "id": "CVE-2026-80921",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
         "id": "CVE-2026-80922",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -9676,14 +9700,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
       },
       {
-        "id": "CVE-2026-89972",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
         "id": "CVE-2026-89973",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -11213,14 +11229,6 @@
       },
       {
         "id": "CVE-2026-90226",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-90227",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
@@ -14218,14 +14226,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: i2c: smbus: reject oversized block transfers in the common path"
-      },
-      {
-        "id": "CVE-2026-93288",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
       },
       {
         "id": "CVE-2026-93781",
@@ -19486,7 +19486,7 @@
     ]
   },
   "app": {
-    "total": 26,
+    "total": 27,
     "cves": [
       {
         "id": "CVE-2026-15307",
@@ -19599,6 +19599,14 @@
         "fixedVersion": "2.14.0",
         "severity": "MEDIUM",
         "title": "pyjwt: pyjwt: Denial of Service via malformed RSA key in JWK set"
+      },
+      {
+        "id": "CVE-2026-102275",
+        "pkg": "PyJWT",
+        "installedVersion": "2.13.0",
+        "fixedVersion": "2.15.0",
+        "severity": "MEDIUM",
+        "title": "pyjwt: PyJWT: Token verification bypass via mismatched OKP key components"
       },
       {
         "id": "CVE-2026-103001",

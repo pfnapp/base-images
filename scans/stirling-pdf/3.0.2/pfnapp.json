@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-05T06:34:11.909Z",
+  "scannedAt": "2026-10-06T07:13:09.308Z",
   "system": {
-    "total": 387,
+    "total": 388,
     "cves": [
       {
         "id": "CVE-2025-15269",
@@ -2196,6 +2196,14 @@
         "title": "poppler: recursive function call in JBIG2Stream::readTextRegion() in JBIG2Stream.cc causing denial of service"
       },
       {
+        "id": "CVE-2026-96889",
+        "pkg": "librsvg2-2",
+        "installedVersion": "2.58.0+dfsg-1build1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "librsvg: Use-after-free when XML includes have duplicated entities"
+      },
+      {
         "id": "CVE-2026-55868",
         "pkg": "libsrt1.5-gnutls",
         "installedVersion": "1.5.3-1build2",
@@ -3102,7 +3110,7 @@
     ]
   },
   "app": {
-    "total": 16,
+    "total": 18,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -3161,12 +3169,28 @@
         "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: Path traversal via incomplete type validation"
       },
       {
+        "id": "CVE-2026-75140",
+        "pkg": "org.jsoup:jsoup",
+        "installedVersion": "1.15.3",
+        "fixedVersion": "1.23.2",
+        "severity": "HIGH",
+        "title": "org.jsoup/jsoup: jsoup: Denial of Service via deeply nested XML documents"
+      },
+      {
         "id": "CVE-2026-71497",
         "pkg": "org.jsoup:jsoup",
         "installedVersion": "1.15.3",
         "fixedVersion": "1.23.1",
         "severity": "MEDIUM",
         "title": "org.jsoup/jsoup: jsoup: Cross-site scripting via malformed HTML tag names"
+      },
+      {
+        "id": "CVE-2026-75140",
+        "pkg": "org.jsoup:jsoup",
+        "installedVersion": "1.15.4",
+        "fixedVersion": "1.23.2",
+        "severity": "HIGH",
+        "title": "org.jsoup/jsoup: jsoup: Denial of Service via deeply nested XML documents"
       },
       {
         "id": "CVE-2026-71497",

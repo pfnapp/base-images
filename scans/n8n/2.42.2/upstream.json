@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-05T06:33:50.677Z",
+  "scannedAt": "2026-10-06T07:12:17.727Z",
   "system": {
     "total": 121,
     "cves": [
@@ -974,7 +974,7 @@
     ]
   },
   "app": {
-    "total": 86,
+    "total": 99,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -993,6 +993,14 @@
         "title": "@grpc/grpc-js: The server transmits some error messages thrown by method handlers to the client in status messages"
       },
       {
+        "id": "CVE-2026-102829",
+        "pkg": "@simple-git/argv-parser",
+        "installedVersion": "1.1.1",
+        "fixedVersion": "2.0.1",
+        "severity": "CRITICAL",
+        "title": "simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection"
+      },
+      {
         "id": "GHSA-j95f-988m-3j2f",
         "pkg": "@tiptap/core",
         "installedVersion": "3.27.0",
@@ -1007,6 +1015,14 @@
         "fixedVersion": "3.30.4",
         "severity": "MEDIUM",
         "title": "Tiptap: mergeAttributes() turns an own __proto__ key into inherited executable DOM attributes"
+      },
+      {
+        "id": "GHSA-g2v6-rqmx-r4w6",
+        "pkg": "@vue/server-renderer",
+        "installedVersion": "3.5.40",
+        "fixedVersion": "3.5.42, 3.6.0-rc.6",
+        "severity": "HIGH",
+        "title": "@vue/server-renderer: XSS via missing CR in attribute-name blacklist"
       },
       {
         "id": "CVE-2026-83608",
@@ -1377,6 +1393,14 @@
         "title": "braces: braces: Denial of Service via Stack Overflow from Deeply Nested Patterns"
       },
       {
+        "id": "CVE-2026-87776",
+        "pkg": "compression",
+        "installedVersion": "1.8.1",
+        "fixedVersion": "1.8.2",
+        "severity": "HIGH",
+        "title": "compression: compression: Denial of Service via memory leak on premature response close"
+      },
+      {
         "id": "CVE-2025-57665",
         "pkg": "element-plus",
         "installedVersion": "2.4.3",
@@ -1577,6 +1601,22 @@
         "title": "Nodemailer: IDN/Punycode domain allow-list bypass leads to email delivery to an attacker-controlled domain"
       },
       {
+        "id": "CVE-2026-104847",
+        "pkg": "prosemirror-view",
+        "installedVersion": "1.41.8",
+        "fixedVersion": "1.42.3",
+        "severity": "HIGH",
+        "title": "ProseMirror has a XSS vulnerability in prosemirror-view's paste handling"
+      },
+      {
+        "id": "CVE-2026-90711",
+        "pkg": "proxy-addr",
+        "installedVersion": "2.0.7",
+        "fixedVersion": "2.0.8",
+        "severity": "CRITICAL",
+        "title": "proxy-addr is a Node.js module that determines a request's client addr ..."
+      },
+      {
         "id": "CVE-2026-82417",
         "pkg": "qs",
         "installedVersion": "6.15.2",
@@ -1615,6 +1655,70 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "showdown: Showdown: Cross-site scripting via unescaped metadata title allows arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-102828",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.1",
+        "severity": "CRITICAL",
+        "title": "simple-git unsafe-operation guard does not block trailer command configuration"
+      },
+      {
+        "id": "CVE-2026-102826",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "simple-git: simple-git allows command execution through unblocked Git configuration includes"
+      },
+      {
+        "id": "CVE-2026-102827",
+        "pkg": "simple-git",
+        "installedVersion": "3.36.0",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "simple-git: unsafe-operations plugin bypass via git long-option abbreviation (--receive-p/--exe) -> command execution (residual of CVE-2026-28291)"
+      },
+      {
+        "id": "CVE-2026-93749",
+        "pkg": "source-map-js",
+        "installedVersion": "1.2.1",
+        "fixedVersion": "1.2.2",
+        "severity": "HIGH",
+        "title": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps"
+      },
+      {
+        "id": "CVE-2026-97058",
+        "pkg": "sprintf-js",
+        "installedVersion": "1.0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers"
+      },
+      {
+        "id": "CVE-2026-97058",
+        "pkg": "sprintf-js",
+        "installedVersion": "1.1.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sprintf-js: sprintf-js: Denial of Service via unbounded precision specifiers"
+      },
+      {
+        "id": "CVE-2026-104182",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Denial of Service via inefficient comment scanning"
+      },
+      {
+        "id": "CVE-2026-104183",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Object prototype manipulation via crafted JSON input"
       },
       {
         "id": "CVE-2026-71429",
