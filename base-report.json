@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-06T07:13:34.983Z",
+  "generatedAt": "2026-10-07T06:51:58.233Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -33,10 +33,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -87,7 +87,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -114,10 +114,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -168,7 +168,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -195,10 +195,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -249,7 +249,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -275,11 +275,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 4,
-              "medium": 14,
-              "low": 2,
-              "fixable": 20,
-              "total": 20
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -292,42 +292,6 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-75804",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-75804",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
               "id": "CVE-2026-102276",
               "pkg": "brace-expansion",
               "installedVersion": "2.0.2",
@@ -335,11 +299,29 @@
               "severity": "HIGH",
               "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
               "layer": "app"
+            },
+            {
+              "id": "CVE-2026-102278",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+              "severity": "HIGH",
+              "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-93748",
+              "pkg": "http-cache-semantics",
+              "installedVersion": "4.2.0",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -420,7 +402,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -473,7 +455,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -517,7 +499,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -561,7 +543,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -605,7 +587,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -649,7 +631,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -693,7 +675,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -746,7 +728,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -790,7 +772,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -827,9 +809,9 @@
               "critical": 5,
               "high": 27,
               "medium": 134,
-              "low": 127,
+              "low": 128,
               "fixable": 14,
-              "total": 294
+              "total": 295
             },
             "app": {
               "critical": 0,
@@ -889,7 +871,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -917,9 +899,9 @@
               "critical": 5,
               "high": 27,
               "medium": 134,
-              "low": 127,
+              "low": 128,
               "fixable": 14,
-              "total": 294
+              "total": 295
             },
             "app": {
               "critical": 0,
@@ -979,7 +961,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -1032,7 +1014,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1076,7 +1058,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1120,7 +1102,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1173,7 +1155,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1217,7 +1199,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1308,7 +1290,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1335,10 +1317,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1389,7 +1371,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1416,10 +1398,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1470,7 +1452,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1496,11 +1478,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 4,
-              "medium": 14,
-              "low": 2,
-              "fixable": 20,
-              "total": 20
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1513,42 +1495,6 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-75804",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-75804",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
               "id": "CVE-2026-102276",
               "pkg": "brace-expansion",
               "installedVersion": "2.0.2",
@@ -1556,11 +1502,29 @@
               "severity": "HIGH",
               "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
               "layer": "app"
+            },
+            {
+              "id": "CVE-2026-102278",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+              "severity": "HIGH",
+              "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-93748",
+              "pkg": "http-cache-semantics",
+              "installedVersion": "4.2.0",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1641,7 +1605,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1668,10 +1632,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1722,7 +1686,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1748,11 +1712,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 4,
-              "medium": 14,
-              "low": 2,
-              "fixable": 20,
-              "total": 20
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1765,42 +1729,6 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-75804",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-75804",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
               "id": "CVE-2026-102276",
               "pkg": "brace-expansion",
               "installedVersion": "2.0.2",
@@ -1808,11 +1736,29 @@
               "severity": "HIGH",
               "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
               "layer": "app"
+            },
+            {
+              "id": "CVE-2026-102278",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+              "severity": "HIGH",
+              "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-93748",
+              "pkg": "http-cache-semantics",
+              "installedVersion": "4.2.0",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1893,7 +1839,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1972,7 +1918,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -2016,7 +1962,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -2060,7 +2006,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -2104,7 +2050,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -2148,7 +2094,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2274,7 +2220,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2301,10 +2247,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2355,7 +2301,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2382,10 +2328,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2436,7 +2382,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2517,7 +2463,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2544,10 +2490,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2598,7 +2544,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2624,11 +2570,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 4,
-              "medium": 14,
-              "low": 2,
-              "fixable": 20,
-              "total": 20
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2641,42 +2587,6 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-75804",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-75804",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unenforced QUIC connection flow control",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-84782",
-              "pkg": "libssl3",
-              "installedVersion": "3.3.7-r1",
-              "fixedVersion": "3.3.7-r2",
-              "severity": "HIGH",
-              "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission",
-              "layer": "system"
-            },
-            {
               "id": "CVE-2026-102276",
               "pkg": "brace-expansion",
               "installedVersion": "2.0.2",
@@ -2684,11 +2594,29 @@
               "severity": "HIGH",
               "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns",
               "layer": "app"
+            },
+            {
+              "id": "CVE-2026-102278",
+              "pkg": "brace-expansion",
+              "installedVersion": "2.0.2",
+              "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
+              "severity": "HIGH",
+              "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-93748",
+              "pkg": "http-cache-semantics",
+              "installedVersion": "4.2.0",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive",
+              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2769,7 +2697,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2796,10 +2724,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 1,
+              "medium": 0,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2850,7 +2778,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2929,7 +2857,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-06T07:13:34.983Z",
+          "scannedAt": "2026-10-07T06:51:58.233Z",
           "eol": {
             "date": null,
             "isEol": false,

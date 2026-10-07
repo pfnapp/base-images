@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-06T07:11:57.736Z",
+  "scannedAt": "2026-10-07T06:51:14.079Z",
   "system": {
-    "total": 174,
+    "total": 173,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -1292,14 +1292,6 @@
         "title": "perl: Perl: Arbitrary code execution via out-of-bounds memory access in regular expression engine."
       },
       {
-        "id": "CVE-2026-19487",
-        "pkg": "perl-base",
-        "installedVersion": "5.40.1-6+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "perl: Perl: Incorrect regular expression matching can lead to wrong access or filtering decisions."
-      },
-      {
         "id": "CVE-2011-4116",
         "pkg": "perl-base",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -1398,8 +1390,16 @@
     ]
   },
   "app": {
-    "total": 27,
+    "total": 29,
     "cves": [
+      {
+        "id": "CVE-2026-104850",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.30.0",
+        "fixedVersion": "1.31.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: OAuth client could send credentials to an authorization server chosen by the MCP server"
+      },
       {
         "id": "CVE-2026-102276",
         "pkg": "brace-expansion",
@@ -1487,6 +1487,14 @@
         "fixedVersion": "7.1.6",
         "severity": "MEDIUM",
         "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
+      },
+      {
+        "id": "GHSA-wq5f-xc86-pv6w",
+        "pkg": "sharp",
+        "installedVersion": "0.35.4",
+        "fixedVersion": "0.35.5",
+        "severity": "HIGH",
+        "title": "sharp : Vulnerability in librsvg dependency CVE-2026-96889"
       },
       {
         "id": "CVE-2026-93749",

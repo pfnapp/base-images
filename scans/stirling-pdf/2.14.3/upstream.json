@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-06T07:13:12.597Z",
+  "scannedAt": "2026-10-07T06:51:45.639Z",
   "system": {
-    "total": 880,
+    "total": 886,
     "cves": [
       {
         "id": "CVE-2026-13595",
@@ -3308,6 +3308,14 @@
         "title": "fontforge: Fontforge memory leak"
       },
       {
+        "id": "CVE-2026-95512",
+        "pkg": "libfreetype6",
+        "installedVersion": "2.13.2+dfsg-1ubuntu0.1",
+        "fixedVersion": "2.13.2+dfsg-1ubuntu0.2",
+        "severity": "MEDIUM",
+        "title": "freetype: FreeType: Denial of Service via repeated subroutine allocations in CID font loader"
+      },
+      {
         "id": "CVE-2026-40393",
         "pkg": "libgbm1",
         "installedVersion": "25.2.8-0ubuntu0.24.04.1",
@@ -4108,12 +4116,36 @@
         "title": "libpng: libpng: Information disclosure and data corruption via use-after-free vulnerability"
       },
       {
+        "id": "CVE-2026-46675",
+        "pkg": "libpng16-16t64",
+        "installedVersion": "1.6.43-5ubuntu0.5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+      },
+      {
         "id": "CVE-2026-10118",
         "pkg": "libpoppler134",
         "installedVersion": "24.02.0-1ubuntu9.8",
         "fixedVersion": "24.02.0-1ubuntu9.9",
         "severity": "MEDIUM",
         "title": "poppler: Integer overflow in Poppler SplashOutputDev::tilingPatternFill leads to heap buffer overflow via unchecked dimension multiplication"
+      },
+      {
+        "id": "CVE-2026-93311",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93653",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: unbounded CPU loop in SplashOutputDev::tilingPatternFill via unvalidated tiling-pattern repeat count (denial of service)"
       },
       {
         "id": "CVE-2019-9543",
@@ -4583,7 +4615,7 @@
         "id": "CVE-2026-96889",
         "pkg": "librsvg2-2",
         "installedVersion": "2.58.0+dfsg-1build1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.58.0+dfsg-1ubuntu0.1",
         "severity": "MEDIUM",
         "title": "librsvg: Use-after-free when XML includes have duplicated entities"
       },
@@ -6466,6 +6498,22 @@
         "fixedVersion": "24.02.0-1ubuntu9.9",
         "severity": "MEDIUM",
         "title": "poppler: Integer overflow in Poppler SplashOutputDev::tilingPatternFill leads to heap buffer overflow via unchecked dimension multiplication"
+      },
+      {
+        "id": "CVE-2026-93311",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93653",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: unbounded CPU loop in SplashOutputDev::tilingPatternFill via unvalidated tiling-pattern repeat count (denial of service)"
       },
       {
         "id": "CVE-2019-9543",

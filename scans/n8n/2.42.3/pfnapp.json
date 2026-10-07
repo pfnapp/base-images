@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-06T07:12:16.038Z",
+  "scannedAt": "2026-10-07T06:51:29.179Z",
   "system": {
     "total": 121,
     "cves": [
@@ -208,7 +208,7 @@
         "pkg": "libpng",
         "installedVersion": "1.6.58-r1",
         "fixedVersion": "1.6.59-r0",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
       },
       {
@@ -974,7 +974,7 @@
     ]
   },
   "app": {
-    "total": 99,
+    "total": 102,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -991,6 +991,22 @@
         "fixedVersion": "1.13.6, 1.14.5",
         "severity": "LOW",
         "title": "@grpc/grpc-js: The server transmits some error messages thrown by method handlers to the client in status messages"
+      },
+      {
+        "id": "CVE-2026-105799",
+        "pkg": "@langchain/redis",
+        "installedVersion": "1.0.1",
+        "fixedVersion": "1.1.1",
+        "severity": "LOW",
+        "title": "LangChain: RediSearch Filter Injection via Unescaped Tag/Text Values"
+      },
+      {
+        "id": "CVE-2026-104850",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.26.0",
+        "fixedVersion": "1.31.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: OAuth client could send credentials to an authorization server chosen by the MCP server"
       },
       {
         "id": "CVE-2026-102829",
@@ -1094,7 +1110,7 @@
         "installedVersion": "0.6.0",
         "fixedVersion": "0.6.1",
         "severity": "HIGH",
-        "title": "adm-zip extraction preserves SUID/SGID bits from untrusted ZIPs -> local privilege escalation"
+        "title": "adm-zip: adm-zip: Privilege escalation via unfiltered permission bits in extracted archives"
       },
       {
         "id": "CVE-2026-77301",
@@ -1633,6 +1649,14 @@
         "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
       },
       {
+        "id": "CVE-2026-102422",
+        "pkg": "shell-quote",
+        "installedVersion": "1.9.0",
+        "fixedVersion": "1.11.0",
+        "severity": "CRITICAL",
+        "title": "shell-quote's `quote()` function emits a `{ comment }` token as `#` fo ..."
+      },
+      {
         "id": "CVE-2024-1899",
         "pkg": "showdown",
         "installedVersion": "2.1.0",
@@ -1662,7 +1686,7 @@
         "installedVersion": "3.36.0",
         "fixedVersion": "4.0.1",
         "severity": "CRITICAL",
-        "title": "simple-git unsafe-operation guard does not block trailer command configuration"
+        "title": "simple-git: simple-git unsafe-operation guard does not block trailer command configuration"
       },
       {
         "id": "CVE-2026-102826",
