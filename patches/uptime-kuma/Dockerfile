@@ -1,9 +1,9 @@
 FROM golang:1.24-alpine AS healthcheck-builder
 WORKDIR /src
-COPY --from=docker.io/louislam/uptime-kuma:2.5.5 /app/extra/healthcheck.go .
+COPY --from=docker.io/louislam/uptime-kuma:2.5.6 /app/extra/healthcheck.go .
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o healthcheck healthcheck.go
 
-FROM docker.io/louislam/uptime-kuma:2.5.5
+FROM docker.io/louislam/uptime-kuma:2.5.6
 COPY --from=healthcheck-builder /src/healthcheck /app/extra/healthcheck
 RUN apt-get update && \
     apt-get install -y --no-install-recommends --only-upgrade cloudflared && \
