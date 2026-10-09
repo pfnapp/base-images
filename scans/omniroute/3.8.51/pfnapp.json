@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-08T07:00:28.770Z",
+  "scannedAt": "2026-10-09T07:08:36.498Z",
   "system": {
-    "total": 211,
+    "total": 212,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -700,10 +700,18 @@
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
       },
       {
+        "id": "DSA-6549-1",
+        "pkg": "liblzma5",
+        "installedVersion": "5.8.1-1+deb13u1",
+        "fixedVersion": "5.8.1-1+deb13u2",
+        "severity": "UNKNOWN",
+        "title": "xz-utils - security update"
+      },
+      {
         "id": "TEMP-1147318-639065",
         "pkg": "liblzma5",
         "installedVersion": "5.8.1-1+deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "5.8.1-1+deb13u2",
         "severity": "UNKNOWN",
         "title": "[GHSA-5qpq-xqfv-j9pg: Invalid write if a decoder is reinitialized after allocation failure]"
       },
@@ -1694,7 +1702,7 @@
     ]
   },
   "app": {
-    "total": 60,
+    "total": 66,
     "cves": [
       {
         "id": "CVE-2026-102282",
@@ -1839,6 +1847,54 @@
         "fixedVersion": "16.3.6",
         "severity": "CRITICAL",
         "title": "Next.js: Remote Code Execution in next/og ImageResponse"
+      },
+      {
+        "id": "CVE-2026-94483",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "16.3.8",
+        "severity": "HIGH",
+        "title": "next: Next.js: Information disclosure via SSRF in Image Optimization"
+      },
+      {
+        "id": "CVE-2026-94484",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "16.3.8, 15.5.27",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Denial of Service via response cache poisoning"
+      },
+      {
+        "id": "CVE-2026-94485",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "16.3.8",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Information disclosure via unrestricted cross-site requests on development server"
+      },
+      {
+        "id": "CVE-2026-94543",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "15.5.27, 16.3.8",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Response cache poisoning via improper route binding"
+      },
+      {
+        "id": "CVE-2026-94544",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "16.3.8",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Information disclosure via shared cache fills in Draft Mode"
+      },
+      {
+        "id": "CVE-2026-94486",
+        "pkg": "next",
+        "installedVersion": "16.3.1",
+        "fixedVersion": "16.3.8",
+        "severity": "LOW",
+        "title": "next: Next.js: Information disclosure via unrestricted cross-site requests"
       },
       {
         "id": "CVE-2026-88062",

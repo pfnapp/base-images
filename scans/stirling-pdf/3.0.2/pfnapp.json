@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-08T07:01:06.663Z",
+  "scannedAt": "2026-10-09T07:09:46.504Z",
   "system": {
-    "total": 394,
+    "total": 405,
     "cves": [
       {
         "id": "CVE-2025-15269",
@@ -258,6 +258,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "fontforge: Fontforge memory leak"
+      },
+      {
+        "id": "CVE-2026-16517",
+        "pkg": "libarchive13t64",
+        "installedVersion": "3.7.2-2ubuntu0.8",
+        "fixedVersion": "3.7.2-2ubuntu0.9",
+        "severity": "MEDIUM",
+        "title": "libarchive: libarchive: Signed Integer Overflow in archive_write_zip_header"
       },
       {
         "id": "CVE-2025-59529",
@@ -2191,9 +2199,25 @@
         "id": "CVE-2026-46675",
         "pkg": "libpng16-16t64",
         "installedVersion": "1.6.43-5ubuntu0.6",
-        "fixedVersion": "None",
+        "fixedVersion": "1.6.43-5ubuntu0.7",
         "severity": "MEDIUM",
         "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+      },
+      {
+        "id": "CVE-2026-102620",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
+      },
+      {
+        "id": "CVE-2026-102621",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
       },
       {
         "id": "CVE-2026-93311",
@@ -2202,6 +2226,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93312",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
+      },
+      {
+        "id": "CVE-2026-93313",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
+      },
+      {
+        "id": "CVE-2026-93314",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
       },
       {
         "id": "CVE-2026-93653",
@@ -2980,12 +3028,52 @@
         "title": "shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise"
       },
       {
+        "id": "CVE-2026-102620",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
+      },
+      {
+        "id": "CVE-2026-102621",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
+      },
+      {
         "id": "CVE-2026-93311",
         "pkg": "poppler-utils",
         "installedVersion": "24.02.0-1ubuntu9.9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93312",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
+      },
+      {
+        "id": "CVE-2026-93313",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
+      },
+      {
+        "id": "CVE-2026-93314",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
       },
       {
         "id": "CVE-2026-93653",

@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-10-08T07:01:03.568Z",
+  "scannedAt": "2026-10-09T07:09:42.981Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 14,
+    "total": 33,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -54,6 +54,54 @@
         "fixedVersion": "0.45.0",
         "severity": "HIGH",
         "title": "golang.org/x/image/vp8l: golang.org/x/image/vp8l: Denial of Service via excessive memory allocation"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server memory exhaustion due to Trailer headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 transport accepts malformed framing-related headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "Double flow control refund on HTTP/2 server streams in net/http"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "Excessive CPU consumption from repeated initial window changes in net/http"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server crash due to HPACK encoder race in net/http"
+      },
+      {
+        "id": "CVE-2026-56851",
+        "pkg": "golang.org/x/text",
+        "installedVersion": "v0.40.0",
+        "fixedVersion": "0.41.0",
+        "severity": "UNKNOWN",
+        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
       },
       {
         "id": "CVE-2026-33818",
@@ -118,6 +166,110 @@
         "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
         "severity": "HIGH",
         "title": "crypto/tls: golang: Golang crypto/tls: Denial of Service via indefinite KeyUpdate messages"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Root.Mkdir(All) can follow junctions out of the root on Windows in os"
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/1 client connection desynchronization after CONNECT rejection in net/http"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server memory exhaustion due to Trailer headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 transport accepts malformed framing-related headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Double flow control refund on HTTP/2 server streams in net/http"
+      },
+      {
+        "id": "CVE-2026-78667",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Lack of limit on size of parsed Range headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Excessive CPU consumption from repeated initial window changes in net/http"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/1 server connection desynchronization after 2xx CONNECT response in net/http"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Memory limit bypass when parsing MIME headers in net/textproto, mime/multipart"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Reset context tracking on consecutive template expressions in html/template"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Recognize yield as regexp preceder keyword in html/template"
+      },
+      {
+        "id": "CVE-2026-97031",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Reject malformed ECH outer extension references in crypto/tls"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server crash due to HPACK encoder race in net/http"
       }
     ]
   }

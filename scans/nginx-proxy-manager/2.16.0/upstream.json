@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-08T07:01:15.431Z",
+  "scannedAt": "2026-10-09T07:09:56.735Z",
   "system": {
-    "total": 3454,
+    "total": 3469,
     "cves": [
       {
         "id": "CVE-2026-46729",
@@ -5580,6 +5580,14 @@
         "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
       },
       {
+        "id": "CVE-2026-77214",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer"
+      },
+      {
         "id": "CVE-2026-93990",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
@@ -5602,14 +5610,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
-      },
-      {
-        "id": "CVE-2026-77214",
-        "pkg": "libexpat1",
-        "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-102010",
@@ -6484,10 +6484,18 @@
         "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
+        "id": "DSA-6549-1",
+        "pkg": "liblzma5",
+        "installedVersion": "5.8.1-1+deb13u1",
+        "fixedVersion": "5.8.1-1+deb13u2",
+        "severity": "UNKNOWN",
+        "title": "xz-utils - security update"
+      },
+      {
         "id": "TEMP-1147318-639065",
         "pkg": "liblzma5",
         "installedVersion": "5.8.1-1+deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "5.8.1-1+deb13u2",
         "severity": "UNKNOWN",
         "title": "[GHSA-5qpq-xqfv-j9pg: Invalid write if a decoder is reinitialized after allocation failure]"
       },
@@ -6946,6 +6954,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
         "id": "CVE-2017-13716",
@@ -10836,6 +10860,14 @@
         "title": "kernel: net/handshake: hand off the pinned file reference to accept_doit"
       },
       {
+        "id": "CVE-2026-63999",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: ethtool: rss: fix indir_table and hkey leak on get_rxfh failure"
+      },
+      {
         "id": "CVE-2026-64006",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -12300,14 +12332,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
-        "id": "CVE-2026-80843",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
         "id": "CVE-2026-80845",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -12346,22 +12370,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
-        "id": "CVE-2026-80855",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
-      },
-      {
-        "id": "CVE-2026-80856",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
       },
       {
         "id": "CVE-2026-80860",
@@ -22316,6 +22324,14 @@
         "title": "kernel: net: stmmac: fix dma mapping leak in stmmac_tso_xmit()"
       },
       {
+        "id": "CVE-2026-98134",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: check_cond_jmp_op(): properly infer if register is null"
+      },
+      {
         "id": "CVE-2026-98142",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -22442,6 +22458,1366 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: smb: client: fix OOB struct field reads in move_smb2_ea_to_cifs()"
+      },
+      {
+        "id": "CVE-2026-98171",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98172",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: smb: client: fix smbd_connection leak on cifs_get_tcp_session() error"
+      },
+      {
+        "id": "CVE-2026-98173",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: smb: client: fix use-after-free of iface in cifs_try_adding_channels()"
+      },
+      {
+        "id": "CVE-2026-98174",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98175",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98176",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98177",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98179",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98180",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98181",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98182",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98184",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98185",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98186",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98187",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98188",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98189",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98190",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98191",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98192",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98193",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98194",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98195",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98196",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98197",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
+      },
+      {
+        "id": "CVE-2026-98198",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
+      },
+      {
+        "id": "CVE-2026-98199",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
+      },
+      {
+        "id": "CVE-2026-98200",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
+      },
+      {
+        "id": "CVE-2026-98201",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98202",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98203",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98204",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98205",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98206",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98207",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98208",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98209",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98210",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98211",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98212",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98213",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98214",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98215",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98216",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98217",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98218",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+      },
+      {
+        "id": "CVE-2026-98221",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
+      },
+      {
+        "id": "CVE-2026-98222",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
+      },
+      {
+        "id": "CVE-2026-98227",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98228",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-98229",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98230",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98231",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98232",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98233",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98234",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98235",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98236",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98237",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98238",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98239",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98241",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+      },
+      {
+        "id": "CVE-2026-98245",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+      },
+      {
+        "id": "CVE-2026-98246",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98247",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98248",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+      },
+      {
+        "id": "CVE-2026-98249",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+      },
+      {
+        "id": "CVE-2026-98251",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  o ..."
+      },
+      {
+        "id": "CVE-2026-98252",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98253",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98254",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98255",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-98257",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+      },
+      {
+        "id": "CVE-2026-98260",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+      },
+      {
+        "id": "CVE-2026-98261",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+      },
+      {
+        "id": "CVE-2026-98262",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+      },
+      {
+        "id": "CVE-2026-98263",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98264",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98265",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98266",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98267",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  9 ..."
+      },
+      {
+        "id": "CVE-2026-98269",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+      },
+      {
+        "id": "CVE-2026-98270",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98271",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98272",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98273",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98275",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98276",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98277",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+      },
+      {
+        "id": "CVE-2026-98279",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+      },
+      {
+        "id": "CVE-2026-98282",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-98283",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
+      },
+      {
+        "id": "CVE-2026-98284",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98285",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98286",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98287",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-98288",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98289",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+      },
+      {
+        "id": "CVE-2026-98290",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98291",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98292",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98293",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98294",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98295",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98296",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98297",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98298",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98299",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-98300",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-98301",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98302",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98303",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+      },
+      {
+        "id": "CVE-2026-98304",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98306",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98307",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98308",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98309",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98311",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98312",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98313",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98314",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98316",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98317",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98319",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98320",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98321",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98322",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98323",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98325",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98326",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98327",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98328",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98329",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98330",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98331",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98332",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98333",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98334",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98335",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98336",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98337",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98338",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98339",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98340",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98341",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98342",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98343",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98344",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98345",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98346",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98347",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+      },
+      {
+        "id": "CVE-2026-98348",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98349",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98351",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98352",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98353",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/erdma: Use IRQ-safe XArray helpers for QP and CQ tables"
+      },
+      {
+        "id": "CVE-2026-98354",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/mad: Fix receive buffer leak when PKey enforcement fails"
+      },
+      {
+        "id": "CVE-2026-98355",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/rtrs: guard against null kobj name"
+      },
+      {
+        "id": "CVE-2026-98357",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: IB/isert: wait for deferred control PDU completions before releasing the connection"
+      },
+      {
+        "id": "CVE-2026-98358",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: IB/iser: reject a remote invalidation of an unregistered direction"
+      },
+      {
+        "id": "CVE-2026-98359",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Reject unregistering netdevs in ib_get_eth_speed"
+      },
+      {
+        "id": "CVE-2026-98360",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/rxe: insert mcg into mcg_tree only after rxe_mcast_add() succeeds"
+      },
+      {
+        "id": "CVE-2026-98363",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+      },
+      {
+        "id": "CVE-2026-98364",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98365",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98366",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98367",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98368",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+      },
+      {
+        "id": "CVE-2026-98369",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-98370",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
       },
       {
         "id": "CVE-2004-0230",
@@ -22972,14 +24348,6 @@
         "title": "kernel: ethtool: module: call ethnl_ops_complete() on module flash errors"
       },
       {
-        "id": "CVE-2026-63999",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: ethtool: rss: fix indir_table and hkey leak on get_rxfh failure"
-      },
-      {
         "id": "CVE-2026-64388",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -23298,6 +24666,30 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: drm/amd/display: check if dml21_add_phantom_plane() is successful"
+      },
+      {
+        "id": "CVE-2026-80843",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: xfrm: fix xfrm_state_construct() auth-trunc leak"
+      },
+      {
+        "id": "CVE-2026-80855",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: fuse: fix invalidate lock leak on open O_TRUNC DAX failure"
+      },
+      {
+        "id": "CVE-2026-80856",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: fuse: fix invalidate lock leak on setattr writeback failure"
       },
       {
         "id": "CVE-2026-80930",
@@ -24988,14 +26380,6 @@
         "title": "kernel: scsi: mpi3mr: Fix NULL pointer dereference in mpi3mr_sas_port_add()"
       },
       {
-        "id": "CVE-2026-98134",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: bpf: check_cond_jmp_op(): properly infer if register is null"
-      },
-      {
         "id": "CVE-2026-98147",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -25020,6 +26404,14 @@
         "title": "kernel: EDAC/device_sysfs: Use kstrtouint() for poll_msec to prevent truncation"
       },
       {
+        "id": "CVE-2026-98362",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: clk: scpi: bound-check DVFS index in scpi_dvfs_recalc_rate"
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -25028,279 +26420,7 @@
         "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
-        "id": "CVE-2026-98171",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98172",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98173",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98174",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98175",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98176",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98177",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98179",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98180",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98181",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98182",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98184",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98185",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98186",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98187",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98188",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98189",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98190",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98191",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98192",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98193",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98194",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98195",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98196",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98197",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-98198",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-98199",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-98200",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-98201",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98202",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98203",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98204",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98205",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98206",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98207",
+        "id": "CVE-2026-98373",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
@@ -25308,1092 +26428,12 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
       },
       {
-        "id": "CVE-2026-98208",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98209",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98210",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98211",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98212",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98213",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98214",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98215",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98216",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98217",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98218",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-98221",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
-        "id": "CVE-2026-98222",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
-        "id": "CVE-2026-98227",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98228",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-98229",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98230",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98231",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98232",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98233",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98234",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98235",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98236",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98237",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98238",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98239",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98241",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-98245",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98246",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98247",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98248",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
-        "id": "CVE-2026-98249",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
-        "id": "CVE-2026-98251",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  o ..."
-      },
-      {
-        "id": "CVE-2026-98252",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98253",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98254",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98255",
+        "id": "CVE-2026-98374",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-      },
-      {
-        "id": "CVE-2026-98257",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
-      },
-      {
-        "id": "CVE-2026-98260",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-98261",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-      },
-      {
-        "id": "CVE-2026-98262",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
-        "id": "CVE-2026-98263",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98264",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98265",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98266",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98267",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  9 ..."
-      },
-      {
-        "id": "CVE-2026-98269",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98270",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98271",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98272",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98273",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98275",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98276",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98277",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-98279",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98282",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-98283",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
-        "id": "CVE-2026-98284",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98285",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98286",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98287",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-98288",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98289",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
-        "id": "CVE-2026-98290",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98291",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98292",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98293",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98294",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98295",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98296",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98297",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98298",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98299",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-      },
-      {
-        "id": "CVE-2026-98300",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-      },
-      {
-        "id": "CVE-2026-98301",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98302",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98303",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-98304",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98306",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98307",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98308",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98309",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98311",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98312",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98313",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98314",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98316",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98317",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98319",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98320",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98321",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98322",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98323",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98325",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98326",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98327",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98328",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98329",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98330",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98331",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98332",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98333",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98334",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98335",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98336",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98337",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98338",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98339",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98340",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98341",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98342",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98343",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98344",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98345",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98346",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98347",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98348",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98349",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98351",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98352",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98353",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98354",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98355",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98357",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98358",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
-      },
-      {
-        "id": "CVE-2026-98359",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98360",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98362",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-      },
-      {
-        "id": "CVE-2026-98363",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
-      },
-      {
-        "id": "CVE-2026-98364",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98365",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98366",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98367",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98368",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-98369",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-98370",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
       },
       {
         "id": "CVE-2026-3184",
@@ -26628,6 +26668,22 @@
         "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
       },
       {
+        "id": "CVE-2026-106584",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "In ssh-keygen in OpenSSH before 10.6, certificates could have incorrec ..."
+      },
+      {
+        "id": "CVE-2026-106586",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: Security restriction bypass via unenforced restrict directive in tunnel forwarding"
+      },
+      {
         "id": "CVE-2026-55654",
         "pkg": "openssh-client",
         "installedVersion": "1:10.0p1-7+deb13u4",
@@ -26642,6 +26698,62 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-106552",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sftp in OpenSSH before 10.6, a server can trigger directory travers ..."
+      },
+      {
+        "id": "CVE-2026-106553",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist af ..."
+      },
+      {
+        "id": "CVE-2026-106555",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sshd in OpenSSH before 10.6, GSSAPIAuthentication authentication st ..."
+      },
+      {
+        "id": "CVE-2026-106582",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can b ..."
+      },
+      {
+        "id": "CVE-2026-106583",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a comma ..."
+      },
+      {
+        "id": "CVE-2026-106585",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sshd and ssh in OpenSSH before 10.6, there is no check for whether  ..."
+      },
+      {
+        "id": "CVE-2026-106587",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In sshd in OpenSSH before 10.6, the value \"none\" for a configuration o ..."
       },
       {
         "id": "CVE-2026-75804",
@@ -27612,10 +27724,18 @@
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
       },
       {
+        "id": "DSA-6549-1",
+        "pkg": "xz-utils",
+        "installedVersion": "5.8.1-1+deb13u1",
+        "fixedVersion": "5.8.1-1+deb13u2",
+        "severity": "UNKNOWN",
+        "title": "xz-utils - security update"
+      },
+      {
         "id": "TEMP-1147318-639065",
         "pkg": "xz-utils",
         "installedVersion": "5.8.1-1+deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "5.8.1-1+deb13u2",
         "severity": "UNKNOWN",
         "title": "[GHSA-5qpq-xqfv-j9pg: Invalid write if a decoder is reinitialized after allocation failure]"
       },
@@ -27822,7 +27942,7 @@
         "installedVersion": "2.0.7",
         "fixedVersion": "2.0.8",
         "severity": "CRITICAL",
-        "title": "proxy-addr is a Node.js module that determines a request's client addr ..."
+        "title": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet"
       },
       {
         "id": "CVE-2026-59873",

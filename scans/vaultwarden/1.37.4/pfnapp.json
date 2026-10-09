@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-08T07:00:58.790Z",
+  "scannedAt": "2026-10-09T07:09:38.107Z",
   "system": {
-    "total": 228,
+    "total": 231,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -1092,10 +1092,18 @@
         "title": "OpenLDAP: OpenLDAP LMDB: Denial of Service and Information Disclosure via Heap Buffer Underflow"
       },
       {
+        "id": "DSA-6549-1",
+        "pkg": "liblzma5",
+        "installedVersion": "5.8.1-1+deb13u1",
+        "fixedVersion": "5.8.1-1+deb13u2",
+        "severity": "UNKNOWN",
+        "title": "xz-utils - security update"
+      },
+      {
         "id": "TEMP-1147318-639065",
         "pkg": "liblzma5",
         "installedVersion": "5.8.1-1+deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "5.8.1-1+deb13u2",
         "severity": "UNKNOWN",
         "title": "[GHSA-5qpq-xqfv-j9pg: Invalid write if a decoder is reinitialized after allocation failure]"
       },
@@ -1282,6 +1290,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
         "id": "CVE-2026-3184",

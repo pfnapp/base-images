@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-08T07:01:09.553Z",
+  "scannedAt": "2026-10-09T07:09:49.975Z",
   "system": {
-    "total": 430,
+    "total": 441,
     "cves": [
       {
         "id": "CVE-2026-13608",
@@ -290,6 +290,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "fontforge: Fontforge memory leak"
+      },
+      {
+        "id": "CVE-2026-16517",
+        "pkg": "libarchive13t64",
+        "installedVersion": "3.7.2-2ubuntu0.8",
+        "fixedVersion": "3.7.2-2ubuntu0.9",
+        "severity": "MEDIUM",
+        "title": "libarchive: libarchive: Signed Integer Overflow in archive_write_zip_header"
       },
       {
         "id": "CVE-2025-59529",
@@ -2375,9 +2383,25 @@
         "id": "CVE-2026-46675",
         "pkg": "libpng16-16t64",
         "installedVersion": "1.6.43-5ubuntu0.6",
-        "fixedVersion": "None",
+        "fixedVersion": "1.6.43-5ubuntu0.7",
         "severity": "MEDIUM",
         "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+      },
+      {
+        "id": "CVE-2026-102620",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
+      },
+      {
+        "id": "CVE-2026-102621",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
       },
       {
         "id": "CVE-2026-93311",
@@ -2386,6 +2410,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93312",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
+      },
+      {
+        "id": "CVE-2026-93313",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
+      },
+      {
+        "id": "CVE-2026-93314",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
       },
       {
         "id": "CVE-2026-93653",
@@ -3268,12 +3316,52 @@
         "title": "shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise"
       },
       {
+        "id": "CVE-2026-102620",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
+      },
+      {
+        "id": "CVE-2026-102621",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
+      },
+      {
         "id": "CVE-2026-93311",
         "pkg": "poppler-utils",
         "installedVersion": "24.02.0-1ubuntu9.9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
+      },
+      {
+        "id": "CVE-2026-93312",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
+      },
+      {
+        "id": "CVE-2026-93313",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
+      },
+      {
+        "id": "CVE-2026-93314",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.10",
+        "severity": "MEDIUM",
+        "title": "poppler: Poppler: Remote integer overflow vulnerability"
       },
       {
         "id": "CVE-2026-93653",
@@ -3446,7 +3534,7 @@
     ]
   },
   "app": {
-    "total": 141,
+    "total": 143,
     "cves": [
       {
         "id": "CVE-2026-10532",
@@ -4169,6 +4257,14 @@
         "title": "org.springframework/spring-webmvc: Spring Framework: Remote Code Execution via improper path limitation in XsltView"
       },
       {
+        "id": "CVE-2026-47890",
+        "pkg": "org.springframework:spring-webmvc",
+        "installedVersion": "7.0.7",
+        "fixedVersion": "7.0.9",
+        "severity": "CRITICAL",
+        "title": "org.springframework/spring-webmvc: org.springframework/spring-webflux: Spring Framework: Stream corruption in Server-Sent Events (SSE) with view fragments"
+      },
+      {
         "id": "CVE-2026-41842",
         "pkg": "org.springframework:spring-webmvc",
         "installedVersion": "7.0.7",
@@ -4559,6 +4655,14 @@
         "fixedVersion": "12.3.0",
         "severity": "MEDIUM",
         "title": "Pillow: Pillow: Denial of Service via crafted EPS file"
+      },
+      {
+        "id": "CVE-2026-106443",
+        "pkg": "weasyprint",
+        "installedVersion": "68.1",
+        "fixedVersion": "70.0",
+        "severity": "HIGH",
+        "title": "weasyprint: WeasyPrint: Arbitrary code execution via unsafe PostScript image processing"
       },
       {
         "id": "CVE-2026-49452",

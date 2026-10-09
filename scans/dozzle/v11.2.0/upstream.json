@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-10-08T07:01:24.324Z",
+  "scannedAt": "2026-10-09T07:10:07.393Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 1,
+    "total": 19,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -14,6 +14,150 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server memory exhaustion due to Trailer headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 transport accepts malformed framing-related headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "Double flow control refund on HTTP/2 server streams in net/http"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "Excessive CPU consumption from repeated initial window changes in net/http"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server crash due to HPACK encoder race in net/http"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Root.Mkdir(All) can follow junctions out of the root on Windows in os"
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/1 client connection desynchronization after CONNECT rejection in net/http"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server memory exhaustion due to Trailer headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 transport accepts malformed framing-related headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Double flow control refund on HTTP/2 server streams in net/http"
+      },
+      {
+        "id": "CVE-2026-78667",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Lack of limit on size of parsed Range headers in net/http"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Excessive CPU consumption from repeated initial window changes in net/http"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/1 server connection desynchronization after 2xx CONNECT response in net/http"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Memory limit bypass when parsing MIME headers in net/textproto, mime/multipart"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Reset context tracking on consecutive template expressions in html/template"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Recognize yield as regexp preceder keyword in html/template"
+      },
+      {
+        "id": "CVE-2026-97031",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "Reject malformed ECH outer extension references in crypto/tls"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "UNKNOWN",
+        "title": "HTTP/2 server crash due to HPACK encoder race in net/http"
       }
     ]
   }
