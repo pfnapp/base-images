@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-09T07:09:09.446Z",
+  "scannedAt": "2026-10-10T06:41:31.855Z",
   "system": {
-    "total": 531,
+    "total": 545,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -1484,12 +1484,60 @@
         "title": "libgcrypt: vulnerable to Marvin Attack"
       },
       {
+        "id": "CVE-2026-88647",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "gnutls: gnutls: Information disclosure via hostname verification bypass"
+      },
+      {
+        "id": "CVE-2026-88648",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "gnutls: gnutls: Cross-domain certificate restriction bypass via incomplete X.509 validation"
+      },
+      {
+        "id": "CVE-2026-67693",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gnutls: gnutls: Information disclosure via contradictory Key Usage and Extended Key Usage extensions"
+      },
+      {
         "id": "CVE-2011-3389",
         "pkg": "libgnutls30",
         "installedVersion": "3.7.9-2+deb12u7",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)"
+      },
+      {
+        "id": "CVE-2026-95184",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+      },
+      {
+        "id": "CVE-2026-95209",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "An issue in gnutls v3.8.13 causes legitimate CA certificates to be rej ..."
+      },
+      {
+        "id": "CVE-2026-95210",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -1516,6 +1564,22 @@
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
       },
       {
+        "id": "CVE-2026-107708",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
         "id": "CVE-2018-5709",
         "pkg": "libgssapi-krb5-2",
         "installedVersion": "1.20.1-2+deb12u5",
@@ -1548,6 +1612,22 @@
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
       },
       {
+        "id": "CVE-2026-107708",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
         "id": "CVE-2018-5709",
         "pkg": "libk5crypto3",
         "installedVersion": "1.20.1-2+deb12u5",
@@ -1580,6 +1660,22 @@
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
       },
       {
+        "id": "CVE-2026-107708",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
         "id": "CVE-2018-5709",
         "pkg": "libkrb5-3",
         "installedVersion": "1.20.1-2+deb12u5",
@@ -1610,6 +1706,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.20.1-2+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
       },
       {
         "id": "CVE-2018-5709",
@@ -3100,6 +3212,14 @@
         "title": "openssh: OpenSSH: Security restriction bypass via unenforced restrict directive in tunnel forwarding"
       },
       {
+        "id": "CVE-2026-106587",
+        "pkg": "openssh-client",
+        "installedVersion": "1:9.2p1-2+deb12u10",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "In sshd in OpenSSH before 10.6, the value \"none\" for a configuration o ..."
+      },
+      {
         "id": "CVE-2026-73281",
         "pkg": "openssh-client",
         "installedVersion": "1:9.2p1-2+deb12u10",
@@ -3154,14 +3274,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "In sshd and ssh in OpenSSH before 10.6, there is no check for whether  ..."
-      },
-      {
-        "id": "CVE-2026-106587",
-        "pkg": "openssh-client",
-        "installedVersion": "1:9.2p1-2+deb12u10",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In sshd in OpenSSH before 10.6, the value \"none\" for a configuration o ..."
       },
       {
         "id": "CVE-2026-84782",
@@ -4721,20 +4833,76 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
-        "id": "CVE-2026-56857",
+        "id": "CVE-2026-78667",
         "pkg": "stdlib",
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Root.Mkdir(All) can follow junctions out of the root on Windows in os"
+        "severity": "HIGH",
+        "title": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "HIGH",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
+      },
+      {
+        "id": "CVE-2026-97031",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "HIGH",
+        "title": "crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references"
       },
       {
         "id": "CVE-2026-56866",
         "pkg": "stdlib",
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "HTTP/1 client connection desynchronization after CONNECT rejection in net/http"
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "LOW",
+        "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
         "id": "CVE-2026-78659",
@@ -4742,7 +4910,7 @@
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "UNKNOWN",
-        "title": "HTTP/2 server memory exhaustion due to Trailer headers in net/http"
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
       },
       {
         "id": "CVE-2026-78660",
@@ -4750,39 +4918,7 @@
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "UNKNOWN",
-        "title": "HTTP/2 transport accepts malformed framing-related headers in net/http"
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Double flow control refund on HTTP/2 server streams in net/http"
-      },
-      {
-        "id": "CVE-2026-78667",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Lack of limit on size of parsed Range headers in net/http"
-      },
-      {
-        "id": "CVE-2026-78669",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Excessive CPU consumption from repeated initial window changes in net/http"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "HTTP/1 server connection desynchronization after 2xx CONNECT response in net/http"
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
       },
       {
         "id": "CVE-2026-94440",
@@ -4790,15 +4926,7 @@
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "UNKNOWN",
-        "title": "Memory limit bypass when parsing MIME headers in net/textproto, mime/multipart"
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Reset context tracking on consecutive template expressions in html/template"
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -4806,23 +4934,7 @@
         "installedVersion": "v1.27.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "UNKNOWN",
-        "title": "Recognize yield as regexp preceder keyword in html/template"
-      },
-      {
-        "id": "CVE-2026-97031",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Reject malformed ECH outer extension references in crypto/tls"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.27.1",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "HTTP/2 server crash due to HPACK encoder race in net/http"
+        "title": "A trusted template author may have previously written a valid template ..."
       }
     ]
   }
