@@ -1,0 +1,60 @@
+{
+  "scannedAt": "2026-10-11T06:49:53.076Z",
+  "system": {
+    "total": 0,
+    "cves": []
+  },
+  "app": {
+    "total": 6,
+    "cves": [
+      {
+        "id": "GO-2026-5932",
+        "pkg": "golang.org/x/crypto",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-78669",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.60.0",
+        "severity": "HIGH",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.60.0",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.60.0",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.60.0",
+        "severity": "UNKNOWN",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      }
+    ]
+  }
+}
