@@ -147,3 +147,74 @@ jobs:
           echo "### ✅ ${{ matrix.name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Upstream:** \`${{ matrix.upstream }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **PFNApp:** \`ghcr.io/pfnapp/${{ matrix.id }}:${{ matrix.tag }}\`" >> $GITHUB_STEP_SUMMARY
+
+  build-hotpatch-9router:
+    # Temporary image built from an upstream git commit (no upstream Docker image yet).
+    # Separate from the observatory matrix: no schedule, no Green release webhook.
+    name: Build 9Router hotpatch
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Read TAG and REF from runtime-manifest.json
+        id: manifest
+        run: |
+          m=patches/9router-hotpatch/runtime-manifest.json
+          echo "tag=$(jq -r .version $m)" >> "$GITHUB_OUTPUT"
+          echo "ref=$(jq -r .upstreamRef $m)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Build (local, not pushed yet)
+        uses: docker/build-push-action@v7
+        with:
+          context: patches/9router-hotpatch
+          load: true
+          tags: ghcr.io/pfnapp/9router-hotpatch:${{ steps.manifest.outputs.tag }}
+          build-args: |
+            TAG=${{ steps.manifest.outputs.tag }}
+            REF=${{ steps.manifest.outputs.ref }}
+          cache-from: type=gha,scope=9router-hotpatch
+          cache-to: type=gha,scope=9router-hotpatch,mode=max
+          provenance: false
+
+      - name: Verify labels
+        run: |
+          img=ghcr.io/pfnapp/9router-hotpatch:${{ steps.manifest.outputs.tag }}
+          lbl() { docker image inspect "$img" --format "{{ index .Config.Labels \"$1\" }}"; }
+          [ "$(lbl org.opencontainers.image.version)" = "${{ steps.manifest.outputs.tag }}" ]
+          [ "$(lbl org.opencontainers.image.revision)" = "${{ steps.manifest.outputs.ref }}" ]
+          [ "$(lbl io.pfnapp.hotpatch)" = "true" ]
+
+      - name: Smoke test (HTTP on :20128)
+        run: |
+          docker run -d --name hp -p 127.0.0.1:20128:20128 \
+            ghcr.io/pfnapp/9router-hotpatch:${{ steps.manifest.outputs.tag }}
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:20128/ || true)
+            case "$code" in 2??|3??) echo "HTTP $code"; exit 0 ;; esac
+            sleep 2
+          done
+          docker logs hp; exit 1
+
+      - name: Trivy scan (report only)
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ghcr.io/pfnapp/9router-hotpatch:${{ steps.manifest.outputs.tag }}
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: '0'
+
+      - name: Log in to GHCR
+        if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push
+        if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+        run: docker push ghcr.io/pfnapp/9router-hotpatch:${{ steps.manifest.outputs.tag }}
