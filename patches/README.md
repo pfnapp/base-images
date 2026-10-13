@@ -27,6 +27,7 @@ at `ghcr.io/pfnapp/<app-id>:<upstream-tag>`.
 | openclaw | Unknown | re-publish as-is |
 | omniroute | Unknown | re-publish as-is |
 | 9router | Unknown | re-publish as-is |
+| 9router-hotpatch | Alpine | **temporary**: built from an upstream git commit (`upstreamRef`) when upstream has no image yet; published as `ghcr.io/pfnapp/9router-hotpatch:<version>`. Retire when upstream publishes the same version: point deploys back to `ghcr.io/pfnapp/9router` and delete the folder |
 | memos | Unknown | re-publish as-is |
 | filebrowser | Unknown | re-publish as-is |
 | pocketbase | Unknown | re-publish as-is |
