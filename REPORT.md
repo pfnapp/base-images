@@ -2,7 +2,7 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-10-13T07:21:10.503Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-10-14T05:48:51.339Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
@@ -10,9 +10,9 @@
 - **Active Versions Audited:** `45`
 - **Images Running As Root:** `30` / `45` (⚠️ **67%** non-compliant)
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `78`
-- **App High CVEs** _(upstream, unfixable by us)_**:** `977`
-- **PFNApp Images Scanned:** `41` / `45`
-- **Total System CVE Reduction:** `453`
+- **App High CVEs** _(upstream, unfixable by us)_**:** `969`
+- **PFNApp Images Scanned:** `40` / `45`
+- **Total System CVE Reduction:** `562`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
 
@@ -34,12 +34,12 @@
 |  |  | `0.5.75` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/1/0 | 2/9/16/2 | 0/0/1/0 | 2/9/16/2 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.51` | 🟢 **LATEST** | ✅ NO | 0/11/91/69 | 1/11/17/5 | 4/27/108/70 | 4/21/29/11 | 4/16 | 🔴 APP CRITICAL RISK |
 |  |  | `3.8.50` | 🟢 **SUPPORTED** | ✅ NO | 4/27/108/70 | 4/21/29/11 | 4/27/108/70 | 4/21/29/11 | 0/0 | 🔴 APP CRITICAL RISK |
-| **OpenClaw 2** | _AI Agents & Automation_ | `2026.10.2` | 🟢 **LATEST** | ✅ NO | 3/42/192/181 | 0/31/26/4 | 15/85/247/198 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+| **OpenClaw 2** | _AI Agents & Automation_ | `2026.10.3` | 🟢 **LATEST** | ✅ NO | 3/42/192/181 | 0/31/26/4 | ⏳ | ⏳ | ⏳ | 🟠 APP HIGH RISK |
+|  |  | `2026.10.2` | 🟢 **SUPPORTED** | ✅ NO | 3/42/192/181 | 0/31/26/4 | 15/85/247/198 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
 |  |  | `2026.10.1` | 🟢 **SUPPORTED** | ✅ NO | 3/42/192/181 | 0/31/26/4 | 15/85/247/198 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.9` | 🟢 **SUPPORTED** | ✅ NO | 3/42/192/181 | 0/31/26/6 | 15/85/247/198 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.8` | 🟠 **AGING** | ✅ NO | 15/79/240/189 | 0/35/26/6 | 15/85/247/198 | 0/31/20/6 | 0/6 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.7` | 🔴 **EOL SOON** | ✅ NO | 15/85/243/190 | 0/35/26/6 | 15/85/247/198 | 0/31/20/6 | 0/0 | 🟠 APP HIGH RISK |
-| **n8n** | _AI Agents & Automation_ | `2.44.0` | 🟢 **LATEST** | ✅ NO | 0/1/1/0 | 4/8/29/1 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+|  |  | `2026.9.9` | 🟠 **AGING** | ✅ NO | 3/42/192/181 | 0/31/26/6 | 15/85/247/198 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.8` | 🔴 **EOL SOON** | ✅ NO | 15/79/240/189 | 0/35/26/6 | 15/85/247/198 | 0/31/20/6 | 0/6 | 🟠 APP HIGH RISK |
+| **n8n** | _AI Agents & Automation_ | `2.44.0` | 🟢 **LATEST** | ✅ NO | 0/1/1/0 | 4/8/29/1 | 7/26/63/26 | 6/46/49/3 | 7/25 | 🔴 APP CRITICAL RISK |
 |  |  | `2.43.4` | 🟢 **SUPPORTED** | ✅ NO | 7/26/63/26 | 6/46/49/3 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 |  |  | `2.43.3` | 🟢 **SUPPORTED** | ✅ NO | 7/26/63/26 | 6/46/49/3 | 7/26/63/26 | 6/46/49/3 | 0/0 | 🔴 APP CRITICAL RISK |
 |  |  | `2.43.2` | 🟠 **AGING** | ✅ NO | 7/26/63/26 | 6/46/49/3 | 7/26/63/26 | 6/46/49/3 | 0/0 | 🔴 APP CRITICAL RISK |
@@ -62,11 +62,11 @@
 | **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/5/0 | 3/25/13/6 | 0/0/3/0 | 3/25/13/6 | 0/-1 | 🔴 APP CRITICAL RISK |
 |  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/5/0 | 3/25/13/6 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/7/12 | 2/13/26/6 | 0/0/1/0 | 1/8/14/5 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **Dozzle** | _Operations & Logs_ | `v11.3.1` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/1/2/0 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟠 APP HIGH RISK |
+| **Dozzle** | _Operations & Logs_ | `v11.3.2` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.3.1` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/1/2/0 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `v11.3.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.2.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.1.3` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.1.2` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `v11.2.0` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `v11.1.3` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
 
 ---
 
@@ -74,6 +74,7 @@
 
 | Application | Deprecated Version | Dropped On | Advisory to Users |
 | :--- | :--- | :---: | :--- |
+| **OpenClaw 2** | `2026.9.7` | 2026-10-13 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.3 immediately. |
 | **OpenClaw 2** | `2026.9.6` | 2026-10-12 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.2 immediately. |
 | **OpenClaw 2** | `2026.9.5` | 2026-10-11 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.1 immediately. |
 | **n8n** | `2.43.0` | 2026-10-13 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.44.0 immediately. |
@@ -83,6 +84,7 @@
 | **n8n** | `2.42.0` | 2026-10-07 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.43.1 immediately. |
 | **n8n** | `2.41.3` | 2026-10-06 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.43.0 immediately. |
 | **n8n** | `2.40.6` | 2026-10-05 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.42.3 immediately. |
+| **Dozzle** | `v11.1.2` | 2026-10-13 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.2 immediately. |
 | **Dozzle** | `v11.1.1` | 2026-10-10 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.1 immediately. |
 | **Dozzle** | `v11.1.0` | 2026-10-05 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.0 immediately. |
 
@@ -218,9 +220,9 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>OpenClaw 2 (<code>2026.10.2</code>) — App: 0 Critical, 31 High | System: 3 Critical, 42 High</b></summary>
+<summary><b>OpenClaw 2 (<code>2026.10.3</code>) — App: 0 Critical, 31 High | System: 3 Critical, 42 High</b></summary>
 
-- **Full Reference:** `openclaw/openclaw:2026.10.2`
+- **Full Reference:** `openclaw/openclaw:2026.10.3`
 - **Root Status:** ✅ Runs non-root (`node`)
 - **Posture:** 🟠 APP HIGH RISK
 
@@ -244,12 +246,7 @@ _No Critical or High system-level vulnerabilities detected._
 | `CVE-2026-8927` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
 | `CVE-2026-41992` | **HIGH** | `gzip` | `1.12-1` | `None` |
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 12 | 43 | 55 | 17 | 127 |
-| App | 0 | 0 | — | — | -8 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
@@ -276,7 +273,12 @@ _No Critical or High system-level vulnerabilities detected._
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-4775` | **HIGH** | `tiff` | `4.7.1-r0` | `4.7.2-r0` |
 
-> ⏳ **PFNApp image not yet built** — reduction data pending.
+#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
+
+| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| System | 7 | 25 | 62 | 26 | 121 |
+| App | 2 | 38 | — | — | 62 |
 
 </details>
 
@@ -612,28 +614,21 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Dozzle (<code>v11.3.1</code>) — App: 0 Critical, 1 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>Dozzle (<code>v11.3.2</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `amir20/dozzle:v11.3.1`
+- **Full Reference:** `amir20/dozzle:v11.3.2`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
-- **Posture:** 🟠 APP HIGH RISK
+- **Posture:** 🟡 NON-COMPLIANT (ROOT)
 
 #### 🔴 App CVEs _(upstream dependency — only fixable by maintainer)_
 
-| CVE ID | Severity | Package | Installed | Fixed Version |
-| :--- | :---: | :--- | :--- | :--- |
-| `CVE-2026-78669` | **HIGH** | `golang.org/x/net` | `v0.59.0` | `0.60.0` |
+_No Critical or High app-level vulnerabilities detected._
 
 #### 🟡 System CVEs _(OS packages — mitigable via `apk upgrade` / `apt-get upgrade`)_
 
 _No Critical or High system-level vulnerabilities detected._
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | 0 | 0 | — | — | 0 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
