@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-14T05:49:39.156Z",
+  "scannedAt": "2026-10-15T05:34:46.025Z",
   "system": {
-    "total": 1045,
+    "total": 1101,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -71,7 +71,7 @@
         "id": "CVE-2026-8286",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
       },
@@ -87,9 +87,17 @@
         "id": "CVE-2026-8927",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "8.14.1-2+deb13u7",
+        "severity": "HIGH",
+        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -127,7 +135,7 @@
         "id": "CVE-2026-8924",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "MEDIUM",
         "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
       },
@@ -204,6 +212,22 @@
         "title": "curl: libssh key passphrase bypass without agent set"
       },
       {
+        "id": "CVE-2026-107928",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-13608",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -250,6 +274,126 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-87862"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-92387"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-9547",
@@ -778,6 +922,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "alsa-lib: ALSA library: Double-free vulnerability leading to memory corruption"
+      },
+      {
+        "id": "CVE-2026-95127",
+        "pkg": "libass9",
+        "installedVersion": "1:0.17.3-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "An issue in libass v.0.17.5 allows a remote attacker to cause a denial ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -3177,7 +3329,7 @@
         "installedVersion": "2.4.10-3+deb13u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "CVE-2026-55453"
       },
       {
         "id": "CVE-2026-55480",
@@ -3185,7 +3337,7 @@
         "installedVersion": "2.4.10-3+deb13u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-61702",
@@ -3239,7 +3391,7 @@
         "id": "CVE-2026-8286",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
       },
@@ -3255,9 +3407,17 @@
         "id": "CVE-2026-8927",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "8.14.1-2+deb13u7",
+        "severity": "HIGH",
+        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3295,7 +3455,7 @@
         "id": "CVE-2026-8924",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "MEDIUM",
         "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
       },
@@ -3372,6 +3532,22 @@
         "title": "curl: libssh key passphrase bypass without agent set"
       },
       {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-13608",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -3418,6 +3594,126 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-87862"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-92387"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-9547",
@@ -3431,7 +3727,7 @@
         "id": "CVE-2026-8286",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
       },
@@ -3447,9 +3743,17 @@
         "id": "CVE-2026-8927",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
         "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "8.14.1-2+deb13u7",
+        "severity": "HIGH",
+        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3487,7 +3791,7 @@
         "id": "CVE-2026-8924",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
+        "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "MEDIUM",
         "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
       },
@@ -3564,6 +3868,22 @@
         "title": "curl: libssh key passphrase bypass without agent set"
       },
       {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-13608",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -3610,6 +3930,126 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-87862"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "CVE-2026-92387"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-9547",
@@ -3956,30 +4396,6 @@
         "title": "libglxproto.c in OpenGL libglvnd bb06db5a was discovered to contain a  ..."
       },
       {
-        "id": "CVE-2026-88647",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.9-3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "gnutls: gnutls: Information disclosure via hostname verification bypass"
-      },
-      {
-        "id": "CVE-2026-88648",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.9-3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "gnutls: gnutls: Cross-domain certificate restriction bypass via incomplete X.509 validation"
-      },
-      {
-        "id": "CVE-2026-67693",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.9-3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gnutls: gnutls: Information disclosure via contradictory Key Usage and Extended Key Usage extensions"
-      },
-      {
         "id": "CVE-2011-3389",
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.9-3+deb13u4",
@@ -3988,11 +4404,35 @@
         "title": "HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)"
       },
       {
+        "id": "CVE-2026-67693",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Information disclosure via contradictory Key Usage and Extended Key Usage extensions"
+      },
+      {
+        "id": "CVE-2026-88647",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Information disclosure via hostname verification bypass"
+      },
+      {
+        "id": "CVE-2026-88648",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Cross-domain certificate restriction bypass via incomplete X.509 validation"
+      },
+      {
         "id": "CVE-2026-95184",
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "LOW",
         "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
       },
       {
@@ -4000,7 +4440,7 @@
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "LOW",
         "title": "An issue in gnutls v3.8.13 causes legitimate CA certificates to be rej ..."
       },
       {
@@ -4008,7 +4448,7 @@
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "LOW",
         "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
       },
       {
@@ -4425,7 +4865,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50580",
@@ -4449,7 +4889,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -4457,7 +4897,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50585",
@@ -4465,7 +4905,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50586",
@@ -4473,7 +4913,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50587",
@@ -4481,7 +4921,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50588",
@@ -4489,7 +4929,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50640",
@@ -4513,7 +4953,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-54441",
@@ -5463,7 +5903,7 @@
         "id": "CVE-2026-96889",
         "pkg": "librsvg2-2",
         "installedVersion": "2.60.0+dfsg-1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.60.0+dfsg-1+deb13u1",
         "severity": "HIGH",
         "title": "librsvg: Use-after-free when XML includes have duplicated entities"
       },
@@ -5546,6 +5986,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libsndfile: libsndfile: Denial of Service via misaligned memory access during WAV parsing"
+      },
+      {
+        "id": "CVE-2026-109828",
+        "pkg": "libsndfile1",
+        "installedVersion": "1.2.2-2+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "libsndfile: libsndfile: Information disclosure via uninitialized variable use in WAV parsing"
       },
       {
         "id": "CVE-2026-50812",
@@ -7028,6 +7476,30 @@
         "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
       },
       {
+        "id": "CVE-2026-106553",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist af ..."
+      },
+      {
+        "id": "CVE-2026-106555",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Information disclosure via GSSAPI authentication state persistence"
+      },
+      {
+        "id": "CVE-2026-106583",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a comma ..."
+      },
+      {
         "id": "CVE-2026-59999",
         "pkg": "openssh-client",
         "installedVersion": "1:10.0p1-7+deb13u4",
@@ -7042,6 +7514,38 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-106552",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In sftp in OpenSSH before 10.6, a server can trigger directory travers ..."
+      },
+      {
+        "id": "CVE-2026-106582",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can b ..."
+      },
+      {
+        "id": "CVE-2026-106585",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In sshd and ssh in OpenSSH before 10.6, there is no check for whether  ..."
+      },
+      {
+        "id": "CVE-2026-106586",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Security restriction bypass via unenforced restrict directive in tunnel forwarding"
       },
       {
         "id": "CVE-2026-59995",
@@ -7164,28 +7668,12 @@
         "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
       },
       {
-        "id": "CVE-2026-106555",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "openssh: OpenSSH: Information disclosure via GSSAPI authentication state persistence"
-      },
-      {
         "id": "CVE-2026-106584",
         "pkg": "openssh-client",
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "In ssh-keygen in OpenSSH before 10.6, certificates could have incorrec ..."
-      },
-      {
-        "id": "CVE-2026-106586",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "openssh: OpenSSH: Security restriction bypass via unenforced restrict directive in tunnel forwarding"
       },
       {
         "id": "CVE-2026-106587",
@@ -7210,46 +7698,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
-      },
-      {
-        "id": "CVE-2026-106552",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In sftp in OpenSSH before 10.6, a server can trigger directory travers ..."
-      },
-      {
-        "id": "CVE-2026-106553",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist af ..."
-      },
-      {
-        "id": "CVE-2026-106582",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can b ..."
-      },
-      {
-        "id": "CVE-2026-106583",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a comma ..."
-      },
-      {
-        "id": "CVE-2026-106585",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In sshd and ssh in OpenSSH before 10.6, there is no check for whether  ..."
       },
       {
         "id": "CVE-2026-84782",
@@ -8974,7 +9422,7 @@
         "installedVersion": "3.3.1",
         "fixedVersion": "4.0.0",
         "severity": "MEDIUM",
-        "title": "Oauthlib : Unsafe JSONP callback injection in RevocationEndpoint allows arbitrary JavaScript response generation"
+        "title": "oauthlib: oauthlib: Unsafe JSONP callback injection in RevocationEndpoint allows arbitrary JavaScript response generation"
       },
       {
         "id": "CVE-2026-49265",
@@ -8982,7 +9430,7 @@
         "installedVersion": "3.3.1",
         "fixedVersion": "4.0.0",
         "severity": "MEDIUM",
-        "title": "Oauthlib: Timing Attack Vulnerability in PKCE code_verifier Comparison (CWE-208)"
+        "title": "oauthlib: oauthlib: Timing attack vulnerability in PKCE code_verifier/code_challenge comparison allows authorization code recovery"
       },
       {
         "id": "GHSA-c2m8-h5v5-343r",
