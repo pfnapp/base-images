@@ -2,17 +2,17 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-10-15T05:34:03.362Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-10-16T05:26:51.354Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
 - **Applications Monitored:** `17`
-- **Active Versions Audited:** `45`
-- **Images Running As Root:** `30` / `45` (⚠️ **67%** non-compliant)
-- **App Critical CVEs** _(upstream, unfixable by us)_**:** `76`
-- **App High CVEs** _(upstream, unfixable by us)_**:** `931`
-- **PFNApp Images Scanned:** `42` / `45`
-- **Total System CVE Reduction:** `689`
+- **Active Versions Audited:** `46`
+- **Images Running As Root:** `31` / `46` (⚠️ **67%** non-compliant)
+- **App Critical CVEs** _(upstream, unfixable by us)_**:** `72`
+- **App High CVEs** _(upstream, unfixable by us)_**:** `897`
+- **PFNApp Images Scanned:** `41` / `46`
+- **Total System CVE Reduction:** `909`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
 
@@ -25,48 +25,49 @@
 | **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.3-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 0/1/1/1 | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/-1 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.2-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/3/1 | 0/0/0/0 | 0/2/2/1 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 0/3/3/1 | 0/0/0/0 | 0/3/3/1 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-| **Uptime Kuma** | _Monitoring & Status_ | `2.5.6` | 🟢 **LATEST** | ⚠️ YES | 196/1996/2249/1233 | 6/96/110/11 | 21/353/607/459 | 2/58/53/6 | -175/-1643 | 🔴 APP CRITICAL RISK |
-|  |  | `2.5.5` | 🟢 **SUPPORTED** | ⚠️ YES | 196/1996/2249/1233 | 7/103/119/12 | 33/514/768/522 | 3/66/58/7 | -163/-1482 | 🔴 APP CRITICAL RISK |
-| **9Router** | _AI Gateways & Proxies_ | `0.5.95` | 🟢 **LATEST** | ⚠️ YES | 0/0/1/0 | 0/4/9/1 | 0/0/1/0 | 0/1/0/0 | 0/0 | 🟠 APP HIGH RISK |
+| **Uptime Kuma** | _Monitoring & Status_ | `2.5.6` | 🟢 **LATEST** | ⚠️ YES | 196/2009/2250/1233 | 6/96/118/11 | 21/362/600/457 | 2/58/61/6 | -175/-1647 | 🔴 APP CRITICAL RISK |
+|  |  | `2.5.5` | 🟢 **SUPPORTED** | ⚠️ YES | 196/2009/2250/1233 | 7/103/127/12 | 33/523/761/520 | 3/66/66/7 | -163/-1486 | 🔴 APP CRITICAL RISK |
+| **9Router** | _AI Gateways & Proxies_ | `0.5.104` | 🟢 **LATEST** | ⚠️ YES | 0/0/1/0 | 0/4/9/1 | ⏳ | ⏳ | ⏳ | 🟠 APP HIGH RISK |
+|  |  | `0.5.95` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/1/0 | 0/4/9/1 | 0/0/1/0 | 0/1/0/0 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `0.5.91` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/1/0 | 0/7/13/2 | 0/0/1/0 | 0/4/4/1 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `0.5.86` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/1/0 | 1/9/16/2 | 0/0/1/0 | 0/4/4/1 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `0.5.85` | 🟠 **AGING** | ⚠️ YES | 0/0/1/0 | 2/9/16/2 | 0/0/1/0 | 2/9/16/2 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `0.5.75` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/1/0 | 2/9/16/2 | 0/0/1/0 | 2/9/16/2 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `0.5.86` | 🟠 **AGING** | ⚠️ YES | 0/0/1/0 | 1/9/16/2 | 0/0/1/0 | 0/4/4/1 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `0.5.85` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/1/0 | 2/9/16/2 | 0/0/1/0 | 2/9/16/2 | 0/0 | 🔴 APP CRITICAL RISK |
 | **OmniRoute** | _AI Gateways & Proxies_ | `3.8.51` | 🟢 **LATEST** | ✅ NO | 0/11/91/69 | 1/11/17/5 | 4/27/108/70 | 4/21/29/11 | 4/16 | 🔴 APP CRITICAL RISK |
 |  |  | `3.8.50` | 🟢 **SUPPORTED** | ✅ NO | 4/27/108/70 | 4/21/29/11 | 4/27/108/70 | 4/21/29/11 | 0/0 | 🔴 APP CRITICAL RISK |
-| **OpenClaw 2** | _AI Agents & Automation_ | `2026.10.3` | 🟢 **LATEST** | ✅ NO | 3/43/195/221 | 0/31/26/4 | 15/86/250/238 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.10.2` | 🟢 **SUPPORTED** | ✅ NO | 3/43/195/221 | 0/31/26/4 | 15/86/250/238 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.10.1` | 🟢 **SUPPORTED** | ✅ NO | 3/43/195/221 | 0/31/26/4 | 15/86/250/238 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.9` | 🟠 **AGING** | ✅ NO | 3/43/195/221 | 0/31/26/6 | 15/86/250/238 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
-|  |  | `2026.9.8` | 🔴 **EOL SOON** | ✅ NO | 15/80/243/229 | 0/35/26/6 | 15/86/250/238 | 0/31/20/6 | 0/6 | 🟠 APP HIGH RISK |
-| **n8n** | _AI Agents & Automation_ | `2.44.1` | 🟢 **LATEST** | ✅ NO | 0/1/1/0 | 4/8/29/1 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+| **OpenClaw 2** | _AI Agents & Automation_ | `2026.10.4` | 🟢 **LATEST** | ✅ NO | 3/51/190/218 | 0/31/29/4 | ⏳ | ⏳ | ⏳ | 🟠 APP HIGH RISK |
+|  |  | `2026.10.3` | 🟢 **SUPPORTED** | ✅ NO | 3/51/190/218 | 0/31/29/4 | 15/94/245/235 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+|  |  | `2026.10.2` | 🟢 **SUPPORTED** | ✅ NO | 3/51/190/218 | 0/31/29/4 | 15/94/245/235 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+|  |  | `2026.10.1` | 🟠 **AGING** | ✅ NO | 3/51/190/218 | 0/31/29/4 | 15/94/245/235 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+|  |  | `2026.9.9` | 🔴 **EOL SOON** | ✅ NO | 3/51/190/218 | 0/31/29/6 | 15/94/245/235 | 0/31/20/6 | 12/43 | 🟠 APP HIGH RISK |
+| **n8n** | _AI Agents & Automation_ | `2.44.2` | 🟢 **LATEST** | ✅ NO | 0/1/1/0 | 4/8/29/1 | 7/26/63/26 | 6/46/49/3 | 7/25 | 🔴 APP CRITICAL RISK |
+|  |  | `2.44.1` | 🟢 **SUPPORTED** | ✅ NO | 0/1/1/0 | 4/8/29/1 | 7/26/63/26 | 6/46/49/3 | 7/25 | 🔴 APP CRITICAL RISK |
 |  |  | `2.44.0` | 🟢 **SUPPORTED** | ✅ NO | 0/1/1/0 | 4/8/29/1 | 7/26/63/26 | 6/46/49/3 | 7/25 | 🔴 APP CRITICAL RISK |
-|  |  | `2.43.4` | 🟢 **SUPPORTED** | ✅ NO | 7/26/63/26 | 6/46/49/3 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
-|  |  | `2.43.3` | 🟠 **AGING** | ✅ NO | 7/26/63/26 | 6/46/49/3 | 7/26/63/26 | 6/46/49/3 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `2.43.2` | 🔴 **EOL SOON** | ✅ NO | 7/26/63/26 | 6/46/49/3 | 7/26/63/26 | 6/46/49/3 | 0/0 | 🔴 APP CRITICAL RISK |
-| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/440/2499/1357 | 3/30/53/18 | 2/240/467/351 | 1/16/22/5 | -15/-200 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/440/2499/1357 | 3/30/53/18 | 2/240/467/351 | 3/32/56/18 | -15/-200 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/440/2499/1357 | 3/32/56/18 | 2/240/467/351 | 3/32/56/18 | -15/-200 | 🔴 APP CRITICAL RISK |
-| **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.4` | 🟢 **LATEST** | ⚠️ YES | 4/30/113/146 | 0/0/0/0 | 4/29/113/146 | 0/0/0/0 | 0/-1 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `1.37.3` | 🟢 **SUPPORTED** | ⚠️ YES | 7/43/158/153 | 0/0/0/0 | 4/33/143/152 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
-| **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/17/2 | 0/5/7/2 | 0/2/17/2 | 0/5/7/2 | 0/0 | 🟠 APP HIGH RISK |
-| **File Browser** | _Storage & Files_ | `v2.63.23` | 🟢 **LATEST** | ✅ NO | 0/0/0/0 | 0/14/9/2 | 0/0/0/0 | 0/1/2/1 | 0/0 | 🟠 APP HIGH RISK |
-| **Stirling-PDF** | _Utilities & Tools_ | `3.1.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/468/107 | 0/12/6/0 | 0/0/404/84 | 0/12/6/0 | 0/-2 | 🟠 APP HIGH RISK |
-|  |  | `3.0.2` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/481/107 | 0/12/6/0 | 0/0/404/84 | 0/12/6/0 | 0/-2 | 🟠 APP HIGH RISK |
-|  |  | `3.0.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/481/107 | 0/12/6/0 | 0/2/405/94 | 0/12/6/0 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `2.14.3` | 🟠 **AGING** | ⚠️ YES | 0/4/808/168 | 4/67/66/6 | 0/2/428/94 | 4/67/66/6 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/7/12 | 0/4/7/2 | 0/0/1/0 | 0/4/7/2 | 0/-2 | 🟠 APP HIGH RISK |
-| **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/255/2366/661 | 1/8/17/1 | 1/145/1949/578 | 1/8/17/1 | -3/-110 | 🔴 APP CRITICAL RISK |
-| **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/209/2069/1256 | 2/14/21/2 | 2/209/2069/1256 | 1/6/8/1 | 0/0 | 🔴 APP CRITICAL RISK |
-|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/578/3898/1569 | 3/33/42/5 | 2/209/2069/1256 | 3/33/42/5 | -14/-369 | 🔴 APP CRITICAL RISK |
-| **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/5/0 | 3/25/13/6 | 0/0/3/0 | 3/25/13/6 | 0/-1 | 🔴 APP CRITICAL RISK |
-|  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/5/0 | 3/25/13/6 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+|  |  | `2.43.4` | 🟠 **AGING** | ✅ NO | 7/26/63/26 | 6/46/49/3 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
+|  |  | `2.43.3` | 🔴 **EOL SOON** | ✅ NO | 7/26/63/26 | 6/46/49/3 | 7/26/63/26 | 6/46/49/3 | 0/0 | 🔴 APP CRITICAL RISK |
+| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 17/449/2522/1362 | 3/30/54/18 | 2/240/470/348 | 1/16/23/5 | -15/-209 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 17/449/2522/1362 | 3/30/54/18 | 2/240/470/348 | 3/32/57/18 | -15/-209 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 17/449/2522/1362 | 3/32/57/18 | 2/240/470/348 | 3/32/57/18 | -15/-209 | 🔴 APP CRITICAL RISK |
+| **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.4` | 🟢 **LATEST** | ⚠️ YES | 4/30/115/144 | 0/0/0/0 | 4/29/115/144 | 0/0/0/0 | 0/-1 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `1.37.3` | 🟢 **SUPPORTED** | ⚠️ YES | 7/43/160/151 | 0/0/0/0 | 4/33/145/150 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
+| **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/17/2 | 0/5/12/2 | 0/2/17/2 | 0/5/12/2 | 0/0 | 🟠 APP HIGH RISK |
+| **File Browser** | _Storage & Files_ | `v2.63.23` | 🟢 **LATEST** | ✅ NO | 0/0/0/0 | 0/14/14/2 | 0/0/0/0 | 0/1/4/1 | 0/0 | 🟠 APP HIGH RISK |
+| **Stirling-PDF** | _Utilities & Tools_ | `3.2.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/476/107 | 0/12/6/0 | ⏳ | ⏳ | ⏳ | 🟠 APP HIGH RISK |
+|  |  | `3.1.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/476/107 | 0/12/6/0 | 0/0/412/84 | 0/12/6/0 | 0/-2 | 🟠 APP HIGH RISK |
+|  |  | `3.0.2` | 🟢 **SUPPORTED** | ⚠️ YES | 0/2/489/107 | 0/12/6/0 | 0/0/412/84 | 0/12/6/0 | 0/-2 | 🟠 APP HIGH RISK |
+|  |  | `3.0.0` | 🟠 **AGING** | ⚠️ YES | 0/2/489/107 | 0/12/6/0 | 0/2/413/94 | 0/12/6/0 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `2.14.3` | 🔴 **EOL SOON** | ⚠️ YES | 0/4/816/168 | 4/68/66/6 | 0/2/436/94 | 4/68/66/6 | 0/-2 | 🔴 APP CRITICAL RISK |
+| **PocketBase** | _Backend-as-a-Service_ | `0.40.4` | 🟢 **LATEST** | ⚠️ YES | 0/2/7/12 | 0/4/12/2 | 0/0/1/0 | 0/4/12/2 | 0/-2 | 🟠 APP HIGH RISK |
+| **Linkding** | _Bookmarks & Archiving_ | `1.47.0` | 🟢 **LATEST** | ⚠️ YES | 4/264/2388/667 | 1/8/17/1 | 1/145/1980/584 | 1/8/17/1 | -3/-119 | 🔴 APP CRITICAL RISK |
+| **Nginx Proxy Manager** | _Networking & Proxy_ | `2.16.0` | 🟢 **LATEST** | ⚠️ YES | 2/209/2101/1261 | 2/14/21/2 | 2/209/2101/1261 | 1/6/8/1 | 0/0 | 🔴 APP CRITICAL RISK |
+|  |  | `2.15.1` | 🟢 **SUPPORTED** | ⚠️ YES | 16/585/3918/1579 | 3/33/42/5 | 2/209/2101/1261 | 3/33/42/5 | -14/-376 | 🔴 APP CRITICAL RISK |
+| **Shlink** | _Networking & Shorteners_ | `5.1.7` | 🟢 **LATEST** | ✅ NO | 0/1/5/0 | 3/25/18/6 | 0/0/3/0 | 3/25/18/6 | 0/-1 | 🔴 APP CRITICAL RISK |
+|  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/1/5/0 | 3/25/18/6 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/7/12 | 2/13/26/6 | 0/0/1/0 | 1/8/14/5 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **Dozzle** | _Operations & Logs_ | `v11.3.2` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.3.1` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/1/2/0 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.3.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/1/2/0 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.2.0` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
-|  |  | `v11.1.3` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/4/7/1 | 0/0/0/0 | 0/4/7/1 | 0/0 | 🟠 APP HIGH RISK |
+| **Dozzle** | _Operations & Logs_ | `v11.3.2` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/1/4/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.3.1` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/1/4/0 | 0/0/0/0 | 0/1/4/0 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `v11.3.0` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/4/12/1 | 0/0/0/0 | 0/1/4/0 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `v11.2.0` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/4/12/1 | 0/0/0/0 | 0/4/12/1 | 0/0 | 🟠 APP HIGH RISK |
+|  |  | `v11.1.3` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/4/12/1 | 0/0/0/0 | 0/4/12/1 | 0/0 | 🟠 APP HIGH RISK |
 
 ---
 
@@ -74,9 +75,12 @@
 
 | Application | Deprecated Version | Dropped On | Advisory to Users |
 | :--- | :--- | :---: | :--- |
+| **9Router** | `0.5.75` | 2026-10-15 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 0.5.104 immediately. |
+| **OpenClaw 2** | `2026.9.8` | 2026-10-16 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.4 immediately. |
 | **OpenClaw 2** | `2026.9.7` | 2026-10-13 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.3 immediately. |
 | **OpenClaw 2** | `2026.9.6` | 2026-10-12 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.2 immediately. |
 | **OpenClaw 2** | `2026.9.5` | 2026-10-11 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.1 immediately. |
+| **n8n** | `2.43.2` | 2026-10-15 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.44.2 immediately. |
 | **n8n** | `2.43.1` | 2026-10-14 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.44.1 immediately. |
 | **n8n** | `2.43.0` | 2026-10-13 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.44.0 immediately. |
 | **n8n** | `2.42.3` | 2026-10-12 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.43.4 immediately. |
@@ -120,7 +124,7 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Uptime Kuma (<code>2.5.6</code>) — App: 6 Critical, 96 High | System: 196 Critical, 1996 High</b></summary>
+<summary><b>Uptime Kuma (<code>2.5.6</code>) — App: 6 Critical, 96 High | System: 196 Critical, 2009 High</b></summary>
 
 - **Full Reference:** `louislam/uptime-kuma:2.5.6`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -140,25 +144,25 @@ _No Critical or High app-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
+| `CVE-2026-53615` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
 | `CVE-2026-106195` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `155.0.8059.39-1~deb12u1` |
 | `CVE-2026-106237` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `155.0.8059.39-1~deb12u1` |
 | `CVE-2026-10931` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
 | `CVE-2026-10966` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
-| `CVE-2026-10971` | **CRITICAL** | `chromium` | `148.0.7778.178-1~deb12u1` | `149.0.7827.53-1~deb12u1` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -175 | -1643 | -1642 | -774 | -5216 |
+| System | -175 | -1647 | -1650 | -776 | -5216 |
 | App | -4 | -38 | — | — | -105 |
 
 </details>
 
 <details>
-<summary><b>9Router (<code>0.5.95</code>) — App: 0 Critical, 4 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>9Router (<code>0.5.104</code>) — App: 0 Critical, 4 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `decolua/9router:0.5.95`
+- **Full Reference:** `decolua/9router:0.5.104`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
 - **Posture:** 🟠 APP HIGH RISK
 
@@ -175,12 +179,7 @@ _No Critical or High app-level vulnerabilities detected._
 
 _No Critical or High system-level vulnerabilities detected._
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | 0 | -3 | — | — | -13 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
@@ -221,9 +220,9 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>OpenClaw 2 (<code>2026.10.3</code>) — App: 0 Critical, 31 High | System: 3 Critical, 43 High</b></summary>
+<summary><b>OpenClaw 2 (<code>2026.10.4</code>) — App: 0 Critical, 31 High | System: 3 Critical, 51 High</b></summary>
 
-- **Full Reference:** `openclaw/openclaw:2026.10.3`
+- **Full Reference:** `openclaw/openclaw:2026.10.4`
 - **Root Status:** ✅ Runs non-root (`node`)
 - **Posture:** 🟠 APP HIGH RISK
 
@@ -241,25 +240,20 @@ _No Critical or High system-level vulnerabilities detected._
 
 | CVE ID | Severity | Package | Installed | Fixed Version |
 | :--- | :---: | :--- | :--- | :--- |
+| `CVE-2026-53615` | **HIGH** | `bsdutils` | `1:2.38.1-5+deb12u3` | `None` |
 | `CVE-2026-6276` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
 | `CVE-2026-8286` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
 | `CVE-2026-8458` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
 | `CVE-2026-8927` | **HIGH** | `curl` | `7.88.1-10+deb12u15` | `None` |
-| `CVE-2026-41992` | **HIGH** | `gzip` | `1.12-1` | `None` |
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 12 | 43 | 55 | 17 | 127 |
-| App | 0 | 0 | — | — | -8 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
 <details>
-<summary><b>n8n (<code>2.44.1</code>) — App: 4 Critical, 8 High | System: 0 Critical, 1 High</b></summary>
+<summary><b>n8n (<code>2.44.2</code>) — App: 4 Critical, 8 High | System: 0 Critical, 1 High</b></summary>
 
-- **Full Reference:** `n8nio/n8n:2.44.1`
+- **Full Reference:** `n8nio/n8n:2.44.2`
 - **Root Status:** ✅ Runs non-root (`node`)
 - **Posture:** 🔴 APP CRITICAL RISK
 
@@ -279,12 +273,17 @@ _No Critical or High system-level vulnerabilities detected._
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-4775` | **HIGH** | `tiff` | `4.7.1-r0` | `4.7.2-r0` |
 
-> ⏳ **PFNApp image not yet built** — reduction data pending.
+#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
+
+| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| System | 7 | 25 | 62 | 26 | 121 |
+| App | 2 | 38 | — | — | 62 |
 
 </details>
 
 <details>
-<summary><b>Hermes Agent (<code>v2026.9.24</code>) — App: 3 Critical, 30 High | System: 17 Critical, 440 High</b></summary>
+<summary><b>Hermes Agent (<code>v2026.9.24</code>) — App: 3 Critical, 30 High | System: 17 Critical, 449 High</b></summary>
 
 - **Full Reference:** `nousresearch/hermes-agent:v2026.9.24`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -306,15 +305,15 @@ _No Critical or High system-level vulnerabilities detected._
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-53612` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-53614` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
+| `CVE-2026-53615` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `8.14.1-2+deb13u7` |
 | `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
-| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `8.14.1-2+deb13u7` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -15 | -200 | -2032 | -1006 | -3292 |
+| System | -15 | -209 | -2052 | -1014 | -3294 |
 | App | -2 | -14 | — | — | -60 |
 
 </details>
@@ -413,9 +412,9 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Stirling-PDF (<code>3.1.0</code>) — App: 0 Critical, 12 High | System: 0 Critical, 2 High</b></summary>
+<summary><b>Stirling-PDF (<code>3.2.0</code>) — App: 0 Critical, 12 High | System: 0 Critical, 2 High</b></summary>
 
-- **Full Reference:** `stirlingtools/stirling-pdf:3.1.0`
+- **Full Reference:** `stirlingtools/stirling-pdf:3.2.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
 - **Posture:** 🟠 APP HIGH RISK
 
@@ -436,12 +435,7 @@ _No Critical or High system-level vulnerabilities detected._
 | `CVE-2026-84782` | **HIGH** | `libssl3t64` | `3.0.13-0ubuntu3.12` | `3.0.13-0ubuntu3.16` |
 | `CVE-2026-84782` | **HIGH** | `openssl` | `3.0.13-0ubuntu3.12` | `3.0.13-0ubuntu3.16` |
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | -2 | -64 | -23 | -89 |
-| App | 0 | 0 | — | — | 0 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
@@ -478,7 +472,7 @@ _No Critical or High system-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Linkding (<code>1.47.0</code>) — App: 1 Critical, 8 High | System: 4 Critical, 255 High</b></summary>
+<summary><b>Linkding (<code>1.47.0</code>) — App: 1 Critical, 8 High | System: 4 Critical, 264 High</b></summary>
 
 - **Full Reference:** `sissbruecker/linkding:1.47.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
@@ -500,15 +494,15 @@ _No Critical or High system-level vulnerabilities detected._
 | :--- | :---: | :--- | :--- | :--- |
 | `CVE-2026-53612` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-53614` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
+| `CVE-2026-53615` | **HIGH** | `bsdutils` | `1:2.41-5` | `2.41.5-0+deb13u1` |
 | `CVE-2026-8286` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `8.14.1-2+deb13u7` |
 | `CVE-2026-8458` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `None` |
-| `CVE-2026-8927` | **HIGH** | `curl` | `8.14.1-2+deb13u4` | `8.14.1-2+deb13u7` |
 
 #### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | -3 | -110 | -417 | -83 | -613 |
+| System | -3 | -119 | -408 | -83 | -613 |
 | App | 0 | 0 | — | — | 0 |
 
 </details>
