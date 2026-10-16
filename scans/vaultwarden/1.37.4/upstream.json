@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T05:34:49.098Z",
+  "scannedAt": "2026-10-16T05:27:57.347Z",
   "system": {
     "total": 296,
     "cves": [
@@ -97,7 +97,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
-        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
       },
       {
         "id": "CVE-2026-10536",
@@ -172,6 +172,14 @@
         "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2026-9545",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -225,7 +233,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
       },
       {
         "id": "CVE-2026-13608",
@@ -281,7 +289,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -289,7 +297,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -297,7 +305,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87862",
@@ -321,7 +329,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -337,7 +345,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -356,20 +364,12 @@
         "title": "CVE-2026-92387"
       },
       {
-        "id": "CVE-2026-92388",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
         "id": "CVE-2026-92389",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -377,7 +377,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -393,7 +393,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -865,7 +865,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
-        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
       },
       {
         "id": "CVE-2026-10536",
@@ -940,6 +940,14 @@
         "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2026-9545",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -993,7 +1001,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
       },
       {
         "id": "CVE-2026-13608",
@@ -1049,7 +1057,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -1057,7 +1065,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -1065,7 +1073,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87862",
@@ -1089,7 +1097,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -1105,7 +1113,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -1124,20 +1132,12 @@
         "title": "CVE-2026-92387"
       },
       {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
         "id": "CVE-2026-92389",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -1145,7 +1145,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -1161,7 +1161,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",

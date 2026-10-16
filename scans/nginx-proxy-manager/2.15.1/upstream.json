@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-15T05:35:04.810Z",
+  "scannedAt": "2026-10-16T05:28:29.415Z",
   "system": {
-    "total": 6110,
+    "total": 6112,
     "cves": [
       {
         "id": "CVE-2026-34355",
@@ -2020,6 +2020,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "bsdutils",
+        "installedVersion": "1:2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "bsdutils",
         "installedVersion": "1:2.41-5",
@@ -2042,14 +2050,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2177,7 +2177,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
-        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
       },
       {
         "id": "CVE-2026-10536",
@@ -2324,6 +2324,14 @@
         "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2026-9545",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -2393,7 +2401,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
       },
       {
         "id": "CVE-2026-13608",
@@ -2449,7 +2457,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -2457,7 +2465,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -2465,7 +2473,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87862",
@@ -2489,7 +2497,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -2505,7 +2513,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -2524,20 +2532,12 @@
         "title": "CVE-2026-92387"
       },
       {
-        "id": "CVE-2026-92388",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
         "id": "CVE-2026-92389",
         "pkg": "curl",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -2545,7 +2545,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -2561,7 +2561,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -3924,6 +3924,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libblkid1",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libblkid1",
         "installedVersion": "2.41-5",
@@ -3946,14 +3954,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libblkid1",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -5881,7 +5881,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
-        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
       },
       {
         "id": "CVE-2026-10536",
@@ -6028,6 +6028,14 @@
         "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2026-9545",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -6097,7 +6105,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
       },
       {
         "id": "CVE-2026-13608",
@@ -6153,7 +6161,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -6161,7 +6169,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -6169,7 +6177,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87862",
@@ -6193,7 +6201,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -6209,7 +6217,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -6228,20 +6236,12 @@
         "title": "CVE-2026-92387"
       },
       {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
         "id": "CVE-2026-92389",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -6249,7 +6249,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -6265,7 +6265,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -6321,7 +6321,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "8.14.1-2+deb13u7",
         "severity": "HIGH",
-        "title": "During an upload, curl mishandles HTTP/2 `RST_STREAM` received from th ..."
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
       },
       {
         "id": "CVE-2026-10536",
@@ -6468,6 +6468,14 @@
         "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2026-9545",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u3",
@@ -6537,7 +6545,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
       },
       {
         "id": "CVE-2026-13608",
@@ -6593,7 +6601,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -6601,7 +6609,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -6609,7 +6617,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87862",
@@ -6633,7 +6641,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -6649,7 +6657,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -6668,20 +6676,12 @@
         "title": "CVE-2026-92387"
       },
       {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u3",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
         "id": "CVE-2026-92389",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -6689,7 +6689,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -6705,7 +6705,7 @@
         "installedVersion": "8.14.1-2+deb13u3",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -7972,6 +7972,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "liblastlog2-2",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "liblastlog2-2",
         "installedVersion": "2.41-5",
@@ -7994,14 +8002,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "liblastlog2-2",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -8116,6 +8116,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libmount1",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libmount1",
         "installedVersion": "2.41-5",
@@ -8138,14 +8146,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libmount1",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -9516,6 +9516,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libsmartcols1",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libsmartcols1",
         "installedVersion": "2.41-5",
@@ -9538,14 +9546,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -10268,6 +10268,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libuuid1",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libuuid1",
         "installedVersion": "2.41-5",
@@ -10290,14 +10298,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libuuid1",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -12084,14 +12084,6 @@
         "title": "kernel: cpufreq: qcom-cpufreq-hw: Fix possible double free"
       },
       {
-        "id": "CVE-2026-64378",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "HIGH",
-        "title": "kernel: writeback: fix race between cgroup_writeback_umount() and inode_switch_wbs()"
-      },
-      {
         "id": "CVE-2026-64381",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -12610,14 +12602,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: ipmi: Fix user refcount underflow in event delivery"
-      },
-      {
-        "id": "CVE-2026-72049",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.100-1",
-        "severity": "HIGH",
-        "title": "kernel: ieee802154: admin-gate legacy LLSEC dump operations"
       },
       {
         "id": "CVE-2026-72052",
@@ -14252,14 +14236,6 @@
         "title": "kernel: smc: Fix use-after-free in __pnet_find_base_ndev()"
       },
       {
-        "id": "CVE-2025-40065",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: RISC-V: KVM: Write hgatp register with valid mode bits"
-      },
-      {
         "id": "CVE-2025-40074",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -14298,14 +14274,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: scsi: ufs: core: Fix data race in CPU latency PM QoS request handling"
-      },
-      {
-        "id": "CVE-2025-40136",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: crypto: hisilicon/qm - request reserved interrupt for virtual function"
       },
       {
         "id": "CVE-2025-40139",
@@ -20636,6 +20604,14 @@
         "title": "kernel: firmware_loader: fix device reference leak in firmware_upload_register()"
       },
       {
+        "id": "CVE-2026-64378",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: writeback: fix race between cgroup_writeback_umount() and inode_switch_wbs()"
+      },
+      {
         "id": "CVE-2026-64379",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -21748,14 +21724,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
       },
       {
-        "id": "CVE-2026-68081",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
         "id": "CVE-2026-68082",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22076,14 +22044,6 @@
         "title": "kernel: fs: preserve ACL_DONT_CACHE state in forget_cached_acl()"
       },
       {
-        "id": "CVE-2026-68151",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.101-1",
-        "severity": "MEDIUM",
-        "title": "kernel: binfmt_elf_fdpic: only honour the first PT_INTERP"
-      },
-      {
         "id": "CVE-2026-68152",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22308,14 +22268,6 @@
         "title": "kernel: Linux kernel: Use-after-free in ath6kl Wi-Fi driver leading to denial of service"
       },
       {
-        "id": "CVE-2026-68203",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.101-1",
-        "severity": "MEDIUM",
-        "title": "kernel: media: vivid: fix cleanup bugs in vivid_init()"
-      },
-      {
         "id": "CVE-2026-68204",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22380,14 +22332,6 @@
         "title": "kernel: media: saa7134: Fix a possible memory leak in saa7134_video_init1"
       },
       {
-        "id": "CVE-2026-68213",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.101-1",
-        "severity": "MEDIUM",
-        "title": "kernel: media: rtl2832_sdr: Return queued buffers on start_streaming() failure"
-      },
-      {
         "id": "CVE-2026-68214",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22412,14 +22356,6 @@
         "title": "kernel: media: nxp: imx8-isi: Fix potential out-of-bounds issues"
       },
       {
-        "id": "CVE-2026-68220",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.101-1",
-        "severity": "MEDIUM",
-        "title": "kernel: media: nxp: imx8-isi: Add missing v4l2_subdev_cleanup() in crossbar and pipe"
-      },
-      {
         "id": "CVE-2026-68221",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22434,14 +22370,6 @@
         "fixedVersion": "6.12.101-1",
         "severity": "MEDIUM",
         "title": "kernel: media: msi2500: Return queued buffers on start_streaming() failure"
-      },
-      {
-        "id": "CVE-2026-68223",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.101-1",
-        "severity": "MEDIUM",
-        "title": "kernel: media: meson: vdec: Fix memory leak in error path of vdec_open"
       },
       {
         "id": "CVE-2026-68225",
@@ -23882,6 +23810,14 @@
         "fixedVersion": "6.12.100-1",
         "severity": "MEDIUM",
         "title": "kernel: ieee802154: ca8210: fix cas_ctl leak on spi_async failure"
+      },
+      {
+        "id": "CVE-2026-72049",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.100-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ieee802154: admin-gate legacy LLSEC dump operations"
       },
       {
         "id": "CVE-2026-72051",
@@ -41020,6 +40956,262 @@
         "title": "kernel: bpf: Fix out-of-bounds read of sk_protocol in bpf_sock_destroy()"
       },
       {
+        "id": "CVE-2026-98387",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: s390/crypto: Fix skcipher_walk return code handling in aes_s390"
+      },
+      {
+        "id": "CVE-2026-98388",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+      },
+      {
+        "id": "CVE-2026-98389",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98392",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98393",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98394",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+      },
+      {
+        "id": "CVE-2026-98398",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
+      },
+      {
+        "id": "CVE-2026-98399",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98400",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98401",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98403",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98406",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98407",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98408",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98409",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98410",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98411",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-98412",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-98413",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-98416",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98417",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98419",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-98420",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+      },
+      {
+        "id": "CVE-2026-98421",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98423",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98425",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98426",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98427",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-98428",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-98429",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98430",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
+        "id": "CVE-2026-98431",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+      },
+      {
         "id": "CVE-2004-0230",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -41492,12 +41684,28 @@
         "title": "kernel: max page sharing of Kernel Samepage Merging (KSM) may cause memory deduplication"
       },
       {
+        "id": "CVE-2025-40065",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: RISC-V: KVM: Write hgatp register with valid mode bits"
+      },
+      {
         "id": "CVE-2025-40086",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: drm/xe: Don't allow evicting of BOs in same VM in array of VM binds"
+      },
+      {
+        "id": "CVE-2025-40136",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: crypto: hisilicon/qm - request reserved interrupt for virtual function"
       },
       {
         "id": "CVE-2025-68193",
@@ -41964,6 +42172,14 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
+        "id": "CVE-2026-68081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: KVM: nVMX: Put vmcs12 pages if nested VM-Enter fails due to invalid guest state"
+      },
+      {
         "id": "CVE-2026-68090",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -42036,6 +42252,14 @@
         "title": "kernel: ice: fix PTP Call Trace during PTP release"
       },
       {
+        "id": "CVE-2026-68151",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.101-1",
+        "severity": "LOW",
+        "title": "kernel: binfmt_elf_fdpic: only honour the first PT_INTERP"
+      },
+      {
         "id": "CVE-2026-68164",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -42068,6 +42292,22 @@
         "title": "kernel: tracing: Fix mmiotrace possible NULL dereferencing of hiter->dev"
       },
       {
+        "id": "CVE-2026-68203",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.101-1",
+        "severity": "LOW",
+        "title": "kernel: media: vivid: fix cleanup bugs in vivid_init()"
+      },
+      {
+        "id": "CVE-2026-68213",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.101-1",
+        "severity": "LOW",
+        "title": "kernel: media: rtl2832_sdr: Return queued buffers on start_streaming() failure"
+      },
+      {
         "id": "CVE-2026-68216",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -42090,6 +42330,22 @@
         "fixedVersion": "6.12.101-1",
         "severity": "LOW",
         "title": "kernel: media: pci: dm1105: Free allocated workqueue"
+      },
+      {
+        "id": "CVE-2026-68220",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.101-1",
+        "severity": "LOW",
+        "title": "kernel: media: nxp: imx8-isi: Add missing v4l2_subdev_cleanup() in crossbar and pipe"
+      },
+      {
+        "id": "CVE-2026-68223",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.101-1",
+        "severity": "LOW",
+        "title": "kernel: media: meson: vdec: Fix memory leak in error path of vdec_open"
       },
       {
         "id": "CVE-2026-68226",
@@ -46092,6 +46348,46 @@
         "title": "kernel: clk: scpi: bound-check DVFS index in scpi_dvfs_recalc_rate"
       },
       {
+        "id": "CVE-2026-98386",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: scsi: qla2xxx: Use memset_io() to clear QLAFX00 request ring slot"
+      },
+      {
+        "id": "CVE-2026-98402",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: net: icmp: avoid invalid transport header access in icmp_send tracepoint"
+      },
+      {
+        "id": "CVE-2026-98404",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: drm/virtio: Fix a NULL vs ERR_PTR() bug in virtio_gpu_user_framebuffer_create()"
+      },
+      {
+        "id": "CVE-2026-98422",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: wifi: mac80211: reset the AP_VLAN tailroom counter on ifdown"
+      },
+      {
+        "id": "CVE-2026-98424",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: wifi: cfg80211: undo netns switch if renaming the wiphy fails"
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -46100,300 +46396,20 @@
         "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
-        "id": "CVE-2026-98386",
+        "id": "CVE-2026-98432",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "[ipv4: free inet_opt and ireq_opt after an RCU grace period]"
       },
       {
-        "id": "CVE-2026-98387",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98388",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-98389",
+        "id": "CVE-2026-99999",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98392",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98393",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98394",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
-        "id": "CVE-2026-98398",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
-      },
-      {
-        "id": "CVE-2026-98399",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98400",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98401",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98402",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98403",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98404",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98406",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98407",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98408",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98409",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98410",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98411",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-98412",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-98413",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98416",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98417",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98419",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-98420",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-98421",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98422",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98423",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98424",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98425",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98426",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-98427",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98428",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-98429",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98430",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-98431",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "[ipv4: validate checksum_start before completing checksum]"
       },
       {
         "id": "CVE-2026-53612",
@@ -46410,6 +46426,14 @@
         "fixedVersion": "2.41.5-0+deb13u1",
         "severity": "HIGH",
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
+      },
+      {
+        "id": "CVE-2026-53615",
+        "pkg": "login",
+        "installedVersion": "1:4.16.0-2+really2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
       },
       {
         "id": "CVE-2026-13595",
@@ -46434,14 +46458,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "login",
-        "installedVersion": "1:4.16.0-2+really2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -46500,6 +46516,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "mount",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "mount",
         "installedVersion": "2.41-5",
@@ -46522,14 +46546,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "mount",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -48796,6 +48812,14 @@
         "title": "util-linux: util-linux: SUID mount(8) allows nosuid/noexec bypass via LIBMOUNT_FORCE_MOUNT2"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "util-linux",
+        "installedVersion": "2.41-5",
+        "fixedVersion": "2.41.5-0+deb13u1",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.41-5",
@@ -48818,14 +48842,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "util-linux",
-        "installedVersion": "2.41-5",
-        "fixedVersion": "2.41.5-0+deb13u1",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",

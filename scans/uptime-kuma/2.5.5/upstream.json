@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T05:34:16.499Z",
+  "scannedAt": "2026-10-16T05:27:02.580Z",
   "system": {
     "total": 6668,
     "cves": [
@@ -28,6 +28,14 @@
         "title": "[Privilege escalation possible to other user than root]"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "bsdutils",
+        "installedVersion": "1:2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "bsdutils",
         "installedVersion": "1:2.38.1-5+deb12u3",
@@ -50,14 +58,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2537,7 +2537,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "chromium-browser: Buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-110153",
@@ -6124,6 +6124,14 @@
         "title": "chromium-browser: chromium-browser: Use of released resource in Mobile"
       },
       {
+        "id": "CVE-2026-85045",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Race condition in V8"
+      },
+      {
         "id": "CVE-2026-85046",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -6258,6 +6266,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Network"
+      },
+      {
+        "id": "CVE-2026-87517",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Race condition in Mobile"
       },
       {
         "id": "CVE-2026-87528",
@@ -13924,6 +13940,14 @@
         "title": "chromium-browser: skia: chromium-browser: Information leak in Skia"
       },
       {
+        "id": "CVE-2026-85047",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Improper input validation in Transactions Platform"
+      },
+      {
         "id": "CVE-2026-85052",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -14004,6 +14028,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Loader"
       },
       {
+        "id": "CVE-2026-87482",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Cleartext transmission of sensitive data in HttpsUpgrades"
+      },
+      {
         "id": "CVE-2026-87483",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -14050,6 +14082,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in FileAPI"
+      },
+      {
+        "id": "CVE-2026-87518",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Observable discrepancy in Safebrowsing"
       },
       {
         "id": "CVE-2026-87523",
@@ -14314,6 +14354,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: angle: ANGLE in Google Chrome: Information disclosure via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87609",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Use after free in Sharing"
       },
       {
         "id": "CVE-2026-87610",
@@ -18028,6 +18076,14 @@
         "title": "chromium-browser: chromium-browser: Clickjacking in TrustedWebActivities"
       },
       {
+        "id": "CVE-2026-87545",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: Information leak in Mobile"
+      },
+      {
         "id": "CVE-2026-87614",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -20988,22 +21044,6 @@
         "title": "Incomplete cleanup in Network in Google Chrome prior to 152.0.7977.82  ..."
       },
       {
-        "id": "CVE-2026-85045",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in V8 in Google Chrome prior to 152.0.7977.82 allowed a ..."
-      },
-      {
-        "id": "CVE-2026-85047",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Transactions Platform in Google Chrome on ..."
-      },
-      {
         "id": "CVE-2026-85048",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -21300,14 +21340,6 @@
         "title": "Incorrect authorization in WebView in Google Chrome on on Android prio ..."
       },
       {
-        "id": "CVE-2026-87482",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Cleartext transmission of sensitive data in HttpsUpgrades in Google Ch ..."
-      },
-      {
         "id": "CVE-2026-87484",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -21476,22 +21508,6 @@
         "title": "Observable discrepancy in Navigation in Google Chrome prior to 153.0.8 ..."
       },
       {
-        "id": "CVE-2026-87517",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in Mobile in Google Chrome on on iOS prior to 153.0.801 ..."
-      },
-      {
-        "id": "CVE-2026-87518",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Observable discrepancy in Safebrowsing in Google Chrome on on iOS prio ..."
-      },
-      {
         "id": "CVE-2026-87519",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -21602,14 +21618,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in Input in Google Chrome prior to 153.0.8010.36 allowe ..."
-      },
-      {
-        "id": "CVE-2026-87545",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Information leak in Mobile in Google Chrome on on iOS prior to 153.0.8 ..."
       },
       {
         "id": "CVE-2026-87550",
@@ -21818,14 +21826,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Improper certificate validation in FedCM in Google Chrome prior to 153 ..."
-      },
-      {
-        "id": "CVE-2026-87609",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Sharing in Google Chrome on on iOS prior to 153.0.80 ..."
       },
       {
         "id": "CVE-2026-87611",
@@ -24633,7 +24633,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "chromium-browser: Buffer overflow in ANGLE"
+        "title": "chromium-browser: angle: Buffer overflow in ANGLE"
       },
       {
         "id": "CVE-2026-110153",
@@ -28220,6 +28220,14 @@
         "title": "chromium-browser: chromium-browser: Use of released resource in Mobile"
       },
       {
+        "id": "CVE-2026-85045",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Race condition in V8"
+      },
+      {
         "id": "CVE-2026-85046",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -28354,6 +28362,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Network"
+      },
+      {
+        "id": "CVE-2026-87517",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Race condition in Mobile"
       },
       {
         "id": "CVE-2026-87528",
@@ -36020,6 +36036,14 @@
         "title": "chromium-browser: skia: chromium-browser: Information leak in Skia"
       },
       {
+        "id": "CVE-2026-85047",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Improper input validation in Transactions Platform"
+      },
+      {
         "id": "CVE-2026-85052",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -36100,6 +36124,14 @@
         "title": "chromium-browser: chromium-browser: Incorrect authorization in Loader"
       },
       {
+        "id": "CVE-2026-87482",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Cleartext transmission of sensitive data in HttpsUpgrades"
+      },
+      {
         "id": "CVE-2026-87483",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -36146,6 +36178,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: chromium-browser: Incorrect authorization in FileAPI"
+      },
+      {
+        "id": "CVE-2026-87518",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Observable discrepancy in Safebrowsing"
       },
       {
         "id": "CVE-2026-87523",
@@ -36410,6 +36450,14 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: angle: ANGLE in Google Chrome: Information disclosure via crafted HTML page"
+      },
+      {
+        "id": "CVE-2026-87609",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Use after free in Sharing"
       },
       {
         "id": "CVE-2026-87610",
@@ -40124,6 +40172,14 @@
         "title": "chromium-browser: chromium-browser: Clickjacking in TrustedWebActivities"
       },
       {
+        "id": "CVE-2026-87545",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "153.0.8010.52-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: Information leak in Mobile"
+      },
+      {
         "id": "CVE-2026-87614",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -43084,22 +43140,6 @@
         "title": "Incomplete cleanup in Network in Google Chrome prior to 152.0.7977.82  ..."
       },
       {
-        "id": "CVE-2026-85045",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in V8 in Google Chrome prior to 152.0.7977.82 allowed a ..."
-      },
-      {
-        "id": "CVE-2026-85047",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Transactions Platform in Google Chrome on ..."
-      },
-      {
         "id": "CVE-2026-85048",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -43396,14 +43436,6 @@
         "title": "Incorrect authorization in WebView in Google Chrome on on Android prio ..."
       },
       {
-        "id": "CVE-2026-87482",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Cleartext transmission of sensitive data in HttpsUpgrades in Google Ch ..."
-      },
-      {
         "id": "CVE-2026-87484",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -43572,22 +43604,6 @@
         "title": "Observable discrepancy in Navigation in Google Chrome prior to 153.0.8 ..."
       },
       {
-        "id": "CVE-2026-87517",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Race condition in Mobile in Google Chrome on on iOS prior to 153.0.801 ..."
-      },
-      {
-        "id": "CVE-2026-87518",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Observable discrepancy in Safebrowsing in Google Chrome on on iOS prio ..."
-      },
-      {
         "id": "CVE-2026-87519",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -43698,14 +43714,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Use after free in Input in Google Chrome prior to 153.0.8010.36 allowe ..."
-      },
-      {
-        "id": "CVE-2026-87545",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Information leak in Mobile in Google Chrome on on iOS prior to 153.0.8 ..."
       },
       {
         "id": "CVE-2026-87550",
@@ -43914,14 +43922,6 @@
         "fixedVersion": "153.0.8010.52-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Improper certificate validation in FedCM in Google Chrome prior to 153 ..."
-      },
-      {
-        "id": "CVE-2026-87609",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "153.0.8010.52-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Sharing in Google Chrome on on iOS prior to 153.0.80 ..."
       },
       {
         "id": "CVE-2026-87611",
@@ -44460,6 +44460,14 @@
         "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "7.88.1-10+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2024-2379",
         "pkg": "curl",
         "installedVersion": "7.88.1-10+deb12u14",
@@ -44577,7 +44585,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -44585,7 +44593,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -44593,7 +44601,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87864",
@@ -44601,7 +44609,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -44617,15 +44625,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "curl",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92389",
@@ -44633,7 +44633,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -44641,7 +44641,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -44657,7 +44657,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -45132,6 +45132,14 @@
         "title": "avahi: avahi-daemon: Avahi: Denial of Service via D-Bus method call"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libblkid1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libblkid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -45154,14 +45162,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -45817,7 +45817,7 @@
         "installedVersion": "2.4.2-3+deb12u9",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "CVE-2026-55480"
       },
       {
         "id": "CVE-2026-61702",
@@ -46012,6 +46012,14 @@
         "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4",
+        "installedVersion": "7.88.1-10+deb12u14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2024-2379",
         "pkg": "libcurl4",
         "installedVersion": "7.88.1-10+deb12u14",
@@ -46129,7 +46137,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -46137,7 +46145,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -46145,7 +46153,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87864",
@@ -46153,7 +46161,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -46169,15 +46177,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl4",
-        "installedVersion": "7.88.1-10+deb12u14",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92389",
@@ -46185,7 +46185,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -46193,7 +46193,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -46209,7 +46209,7 @@
         "installedVersion": "7.88.1-10+deb12u14",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -46644,6 +46644,14 @@
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libfdisk1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libfdisk1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -46666,14 +46674,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libfdisk1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -47780,6 +47780,14 @@
         "title": "mariadb: MariaDB: Privilege bypass allows unauthorized file write via subqueries"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libmount1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libmount1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -47802,14 +47810,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -49012,6 +49012,14 @@
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libsmartcols1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libsmartcols1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -49034,14 +49042,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -49820,6 +49820,14 @@
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libuuid1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libuuid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -49842,14 +49850,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -50956,6 +50956,14 @@
         "title": "mariadb: MariaDB: Privilege bypass allows unauthorized file write via subqueries"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "mount",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "mount",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -50978,14 +50986,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -53204,6 +53204,14 @@
         "title": "tzdata - new timezone database"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "util-linux",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -53226,14 +53234,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -53252,6 +53252,14 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "util-linux-extra",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux-extra",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -53274,14 +53282,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -54801,6 +54801,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.20.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.20.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.20.5",
@@ -54815,6 +54831,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.20.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -54863,30 +54887,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.20.5",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.20.5",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.20.5",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -55081,6 +55081,22 @@
         "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.55.0",
+        "fixedVersion": "0.60.0",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.55.0",
+        "fixedVersion": "0.60.0",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.55.0",
@@ -55095,22 +55111,6 @@
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.55.0",
-        "fixedVersion": "0.60.0",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.55.0",
-        "fixedVersion": "0.60.0",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
       },
       {
         "id": "CVE-2026-56852",
@@ -55305,6 +55305,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.3",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.3",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.26.3",
@@ -55319,6 +55335,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.3",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -55343,30 +55367,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.3",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.3",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.3",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",

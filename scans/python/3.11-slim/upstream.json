@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T05:35:22.503Z",
+  "scannedAt": "2026-10-16T05:28:39.072Z",
   "system": {
     "total": 335,
     "cves": [
@@ -18,6 +18,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[Privilege escalation possible to other user than root]"
+      },
+      {
+        "id": "CVE-2026-53615",
+        "pkg": "bsdutils",
+        "installedVersion": "1:2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
       },
       {
         "id": "CVE-2026-13595",
@@ -42,14 +50,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "bsdutils",
-        "installedVersion": "1:2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -220,6 +220,14 @@
         "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "7.88.1-10+deb12u15",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2024-2379",
         "pkg": "curl",
         "installedVersion": "7.88.1-10+deb12u15",
@@ -313,7 +321,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -321,7 +329,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -329,7 +337,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87864",
@@ -337,7 +345,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -353,15 +361,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "curl",
-        "installedVersion": "7.88.1-10+deb12u15",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92389",
@@ -369,7 +369,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -377,7 +377,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -393,7 +393,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -540,6 +540,14 @@
         "title": "attr: attr: Symlink Traversal Privilege Escalation via getfattr and setfattr"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libblkid1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libblkid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -562,14 +570,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libblkid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -1076,6 +1076,14 @@
         "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
       },
       {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4",
+        "installedVersion": "7.88.1-10+deb12u15",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
         "id": "CVE-2024-2379",
         "pkg": "libcurl4",
         "installedVersion": "7.88.1-10+deb12u15",
@@ -1169,7 +1177,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Setting `CURLOPT_AWS_SIGV4` to NULL does not disable SigV4 authen"
+        "title": "stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -1177,7 +1185,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A flaw in the curl command line tool's logic makes it only set SS"
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
       },
       {
         "id": "CVE-2026-86414",
@@ -1185,7 +1193,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "A HTTP proxy can trick libcurl into sending the origin's credenti"
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
       },
       {
         "id": "CVE-2026-87864",
@@ -1193,7 +1201,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "IMAP APPEND plus CRLF conversion command injection"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-87865",
@@ -1209,15 +1217,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl4",
-        "installedVersion": "7.88.1-10+deb12u15",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92389",
@@ -1225,7 +1225,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "TFTP direction confusion"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-92390",
@@ -1233,7 +1233,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
       },
       {
         "id": "CVE-2026-92391",
@@ -1249,7 +1249,7 @@
         "installedVersion": "7.88.1-10+deb12u15",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
       },
       {
         "id": "CVE-2026-9547",
@@ -1596,6 +1596,14 @@
         "title": "OpenLDAP: OpenLDAP LMDB: Denial of Service and Information Disclosure via Heap Buffer Underflow"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libmount1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libmount1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -1618,14 +1626,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libmount1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -1780,6 +1780,14 @@
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libsmartcols1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libsmartcols1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -1802,14 +1810,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libsmartcols1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2124,6 +2124,14 @@
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "libuuid1",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libuuid1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -2146,14 +2154,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "libuuid1",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2196,6 +2196,14 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "mount",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "mount",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -2218,14 +2226,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "mount",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2564,6 +2564,14 @@
         "title": "[tar's rmt command may have undesired side effects]"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "util-linux",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -2586,14 +2594,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "util-linux",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",
@@ -2612,6 +2612,14 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-53615",
+        "pkg": "util-linux-extra",
+        "installedVersion": "2.38.1-5+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux-extra",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -2634,14 +2642,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
-      },
-      {
-        "id": "CVE-2026-53615",
-        "pkg": "util-linux-extra",
-        "installedVersion": "2.38.1-5+deb12u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "util-linux is a random collection of Linux utilities. Before util-linu ..."
       },
       {
         "id": "CVE-2022-0563",

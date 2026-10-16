@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T05:35:23.855Z",
+  "scannedAt": "2026-10-16T05:28:39.779Z",
   "system": {
     "total": 0,
     "cves": []
@@ -40,6 +40,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -54,6 +70,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -78,30 +102,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -144,6 +144,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -158,6 +174,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -182,30 +206,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -248,6 +248,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -262,6 +278,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -286,30 +310,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -352,6 +352,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -366,6 +382,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -390,30 +414,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -456,6 +456,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -470,6 +486,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -494,30 +518,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -560,6 +560,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -574,6 +590,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -598,30 +622,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -664,6 +664,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -678,6 +694,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -702,30 +726,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -768,6 +768,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -782,6 +798,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -806,30 +830,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",
@@ -872,6 +872,22 @@
         "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
       },
       {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+      },
+      {
         "id": "CVE-2026-78663",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
@@ -886,6 +902,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
         "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-94448",
@@ -910,30 +934,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
       },
       {
         "id": "CVE-2026-97030",

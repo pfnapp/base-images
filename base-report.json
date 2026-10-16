@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-15T05:35:14.258Z",
+  "generatedAt": "2026-10-16T05:28:34.485Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -87,7 +87,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -168,7 +168,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -249,7 +249,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -321,7 +321,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -402,7 +402,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -455,7 +455,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -499,7 +499,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -543,7 +543,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -587,7 +587,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -631,7 +631,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -675,7 +675,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -728,7 +728,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -772,7 +772,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -807,9 +807,9 @@
           "vulnerabilities": {
             "system": {
               "critical": 5,
-              "high": 27,
-              "medium": 144,
-              "low": 158,
+              "high": 35,
+              "medium": 138,
+              "low": 156,
               "fixable": 14,
               "total": 335
             },
@@ -823,6 +823,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-53615",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-6276",
               "pkg": "curl",
@@ -858,20 +867,11 @@
               "severity": "HIGH",
               "title": "curl: Information disclosure due to uncleared proxy authentication state",
               "layer": "system"
-            },
-            {
-              "id": "CVE-2026-41992",
-              "pkg": "gzip",
-              "installedVersion": "1.12-1",
-              "fixedVersion": "None",
-              "severity": "HIGH",
-              "title": "gzip: gzip: Information disclosure via global buffer overflow in LZH decompression",
-              "layer": "system"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -897,9 +897,9 @@
           "vulnerabilities": {
             "system": {
               "critical": 5,
-              "high": 27,
-              "medium": 144,
-              "low": 158,
+              "high": 35,
+              "medium": 138,
+              "low": 156,
               "fixable": 14,
               "total": 335
             },
@@ -913,6 +913,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-53615",
+              "pkg": "bsdutils",
+              "installedVersion": "1:2.38.1-5+deb12u3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "util-linux: util-linux: Partition metadata compromise via integer overflow in DOS partition parser",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-6276",
               "pkg": "curl",
@@ -948,20 +957,11 @@
               "severity": "HIGH",
               "title": "curl: Information disclosure due to uncleared proxy authentication state",
               "layer": "system"
-            },
-            {
-              "id": "CVE-2026-41992",
-              "pkg": "gzip",
-              "installedVersion": "1.12-1",
-              "fixedVersion": "None",
-              "severity": "HIGH",
-              "title": "gzip: gzip: Information disclosure via global buffer overflow in LZH decompression",
-              "layer": "system"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -1005,7 +1005,7 @@
             "app": {
               "critical": 0,
               "high": 27,
-              "medium": 45,
+              "medium": 72,
               "low": 9,
               "fixable": 117,
               "total": 117
@@ -1060,7 +1060,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1104,7 +1104,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1148,7 +1148,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1201,7 +1201,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1245,7 +1245,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1336,7 +1336,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1417,7 +1417,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1498,7 +1498,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1570,7 +1570,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1651,7 +1651,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1732,7 +1732,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1804,7 +1804,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1885,7 +1885,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1964,7 +1964,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -2008,7 +2008,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -2052,7 +2052,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -2096,7 +2096,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -2140,7 +2140,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2266,7 +2266,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2347,7 +2347,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2428,7 +2428,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2509,7 +2509,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2590,7 +2590,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2662,7 +2662,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2743,7 +2743,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2824,7 +2824,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2903,7 +2903,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-15T05:35:14.258Z",
+          "scannedAt": "2026-10-16T05:28:34.485Z",
           "eol": {
             "date": null,
             "isEol": false,
