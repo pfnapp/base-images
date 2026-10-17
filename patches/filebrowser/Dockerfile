@@ -49,8 +49,10 @@ COPY --from=source /src /src
 # versions (golang:1.27 supplies the stdlib fix: >= 1.26.6 equivalent line).
 ARG X_CRYPTO_VERSION=v0.57.0
 ARG X_IMAGE_VERSION=v0.46.0
+ARG X_NET_VERSION=v0.60.0
 RUN go get "golang.org/x/crypto@${X_CRYPTO_VERSION}" \
-           "golang.org/x/image@${X_IMAGE_VERSION}"
+           "golang.org/x/image@${X_IMAGE_VERSION}" \
+           "golang.org/x/net@${X_NET_VERSION}"
 COPY --from=frontend /src/frontend/dist ./frontend/dist
 ARG FILEBROWSER_VERSION=2.63.23
 RUN CGO_ENABLED=0 go build -trimpath \
