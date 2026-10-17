@@ -40,6 +40,21 @@ CVE-2026-33671
 CVE-2026-48815
 
 # ==============================================================================
+# npm CLI Vendored Dependencies (languages/node, frameworks/nextjs, frameworks/nestjs)
+#
+# Scope: node:20/22/24/26-alpine and derived framework images.
+# Root cause: dependencies vendored inside the npm CLI itself
+# (/usr/local/lib/node_modules/npm/node_modules/minimatch/node_modules/brace-expansion
+# and /usr/local/lib/node_modules/npm/node_modules/node-gyp/node_modules/undici).
+# These packages are build tooling shipped by upstream npm@12.2.0, not runtime application
+# dependencies. Upstream npm has not yet released versions bumping these vendored deps.
+# ==============================================================================
+CVE-2026-102276
+CVE-2026-102278
+CVE-2026-19534
+CVE-2026-93748
+
+# ==============================================================================
 # Debian Bookworm / Trixie OS Packages — ACCEPTED RESIDUAL RISK (UNFIXABLE)
 #
 # Scope: Debian 12 (bookworm) / Debian 13 (trixie) container images.
