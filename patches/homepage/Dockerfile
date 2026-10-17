@@ -1,4 +1,4 @@
-FROM ghcr.io/gethomepage/homepage:v2.4.0
+FROM ghcr.io/gethomepage/homepage:v2.6.0
 RUN apk update && \
     apk upgrade --no-cache && \
     rm -rf /var/cache/apk/* \
