@@ -36,7 +36,7 @@
 # --- Stage 1: pinned upstream source (v11.3.2 = release 71d3d71) --------------
 FROM alpine:3.24 AS source
 RUN apk add --no-cache git
-ARG DOZZLE_VERSION=11.1.1
+ARG DOZZLE_VERSION=11.3.2
 RUN git clone -q --depth 1 --branch "v${DOZZLE_VERSION}" \
       https://github.com/amir20/dozzle.git /dozzle
 
@@ -78,7 +78,7 @@ RUN grep -a -o -Pz '(?s)-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----'
 ARG GRPC_VERSION=v1.83.2
 RUN go get "google.golang.org/grpc@${GRPC_VERSION}" && go mod download
 COPY --from=assets /build/dist ./dist
-ARG DOZZLE_VERSION=11.1.1
+ARG DOZZLE_VERSION=11.3.2
 # -buildvcs=false + no .git ⇒ main module stamps as (devel) like upstream
 # (see BUILD NOTE above).
 RUN rm -rf .git && \
