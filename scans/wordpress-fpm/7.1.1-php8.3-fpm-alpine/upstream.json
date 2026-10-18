@@ -1,8 +1,24 @@
 {
-  "scannedAt": "2026-10-17T05:19:49.160Z",
+  "scannedAt": "2026-10-18T05:26:26.162Z",
   "system": {
-    "total": 7,
+    "total": 10,
     "cves": [
+      {
+        "id": "CVE-2026-39919",
+        "pkg": "ghostscript",
+        "installedVersion": "10.07.1-r0",
+        "fixedVersion": "10.08.0-r0",
+        "severity": "MEDIUM",
+        "title": "ghostscript: ghostscript: Heap buffer overflow via JPEG 2000 output adapter"
+      },
+      {
+        "id": "CVE-2026-77214",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.4-r0",
+        "fixedVersion": "2.9.0-r0",
+        "severity": "HIGH",
+        "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer"
+      },
       {
         "id": "CVE-2026-93990",
         "pkg": "libexpat",
@@ -12,12 +28,20 @@
         "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
       },
       {
+        "id": "CVE-2026-102633",
+        "pkg": "libexpat",
+        "installedVersion": "2.8.4-r0",
+        "fixedVersion": "2.9.0-r0",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
+      },
+      {
         "id": "CVE-2026-46675",
         "pkg": "libpng",
         "installedVersion": "1.6.58-r1",
         "fixedVersion": "1.6.59-r0",
         "severity": "MEDIUM",
-        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+        "title": "libpng: libpng: Use-after-free in sequential reader when png_read_end called without reading image rows"
       },
       {
         "id": "CVE-2026-58055",

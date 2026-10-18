@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-17T05:20:26.376Z",
+  "scannedAt": "2026-10-18T05:27:00.904Z",
   "system": {
     "total": 0,
     "cves": []
@@ -100,7 +100,7 @@
         "pkg": "golang.org/x/text",
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.41.0",
-        "severity": "UNKNOWN",
+        "severity": "HIGH",
         "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
       },
       {
@@ -248,6 +248,14 @@
         "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
       },
       {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.5",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "A trusted template author may have previously written a valid template ..."
+      },
+      {
         "id": "CVE-2026-97032",
         "pkg": "stdlib",
         "installedVersion": "v1.26.5",
@@ -262,14 +270,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.5",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "A trusted template author may have previously written a valid template ..."
       }
     ]
   }

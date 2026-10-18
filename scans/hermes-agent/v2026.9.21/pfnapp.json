@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-17T05:20:21.104Z",
+  "scannedAt": "2026-10-18T05:26:54.237Z",
   "system": {
     "total": 1101,
     "cves": [
@@ -225,7 +225,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
       },
       {
         "id": "CVE-2026-107929",
@@ -233,7 +233,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
+        "title": "curl: curl: local interface connection reuse mixup"
       },
       {
         "id": "CVE-2026-13608",
@@ -289,7 +289,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "stale SigV4 headers sent unintended"
+        "title": "curl: curl: stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -313,7 +313,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-87862"
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
       },
       {
         "id": "CVE-2026-87863",
@@ -321,7 +321,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
       },
       {
         "id": "CVE-2026-87864",
@@ -329,7 +329,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
       },
       {
         "id": "CVE-2026-87865",
@@ -337,7 +337,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "knownhost callback mismatches key as missing"
+        "title": "curl: curl: knownhost callback mismatches key as missing"
       },
       {
         "id": "CVE-2026-87866",
@@ -345,7 +345,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "wolfSSL public-key pinning bypass"
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -353,7 +353,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
       },
       {
         "id": "CVE-2026-92387",
@@ -361,7 +361,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-92387"
+        "title": "curl: curl: never-ending loop via server response omission"
       },
       {
         "id": "CVE-2026-92389",
@@ -369,7 +369,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: TFTP direction confusion"
       },
       {
         "id": "CVE-2026-92390",
@@ -377,7 +377,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
       },
       {
         "id": "CVE-2026-92391",
@@ -385,7 +385,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
       },
       {
         "id": "CVE-2026-94266",
@@ -393,7 +393,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
         "id": "CVE-2026-9547",
@@ -3180,6 +3180,14 @@
         "title": "cups: OpenPrinting CUPS: Shared PostScript queue lets anonymous Print-Job requests reach `lp` code execution over the network"
       },
       {
+        "id": "CVE-2026-55453",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "cups: cups: Arbitrary code execution via newline injection in printer status messages"
+      },
+      {
         "id": "CVE-2025-58436",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
@@ -3316,6 +3324,14 @@
         "title": "cups: cups: Denial of Service via repeated IPP group tags"
       },
       {
+        "id": "CVE-2026-55467",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "cups: cups: Denial of Service via unsanitized fax job attributes"
+      },
+      {
         "id": "CVE-2026-87876",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
@@ -3324,20 +3340,12 @@
         "title": "cups: OpenPrinting CUPS: Remaining case-insensitive username matching in scheduler side paths (CVE-2026-27447 follow-up)"
       },
       {
-        "id": "CVE-2026-55453",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-55453"
-      },
-      {
         "id": "CVE-2026-55480",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-55480"
+        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
       },
       {
         "id": "CVE-2026-61702",
@@ -3345,15 +3353,7 @@
         "installedVersion": "2.4.10-3+deb13u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-61702"
-      },
-      {
-        "id": "TEMP-0000000-123A53",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[GHSA-69qc-prxg-h2c7: CUPS fax option values bypass the CVE-2026-34980 control-character sanitizer (incomplete fix)]"
+        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
       },
       {
         "id": "TEMP-0000000-3F659E",
@@ -3545,7 +3545,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
       },
       {
         "id": "CVE-2026-107929",
@@ -3553,7 +3553,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
+        "title": "curl: curl: local interface connection reuse mixup"
       },
       {
         "id": "CVE-2026-13608",
@@ -3609,7 +3609,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "stale SigV4 headers sent unintended"
+        "title": "curl: curl: stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -3633,7 +3633,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-87862"
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
       },
       {
         "id": "CVE-2026-87863",
@@ -3641,7 +3641,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
       },
       {
         "id": "CVE-2026-87864",
@@ -3649,7 +3649,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
       },
       {
         "id": "CVE-2026-87865",
@@ -3657,7 +3657,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "knownhost callback mismatches key as missing"
+        "title": "curl: curl: knownhost callback mismatches key as missing"
       },
       {
         "id": "CVE-2026-87866",
@@ -3665,7 +3665,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "wolfSSL public-key pinning bypass"
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -3673,7 +3673,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
       },
       {
         "id": "CVE-2026-92387",
@@ -3681,7 +3681,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-92387"
+        "title": "curl: curl: never-ending loop via server response omission"
       },
       {
         "id": "CVE-2026-92389",
@@ -3689,7 +3689,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: TFTP direction confusion"
       },
       {
         "id": "CVE-2026-92390",
@@ -3697,7 +3697,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
       },
       {
         "id": "CVE-2026-92391",
@@ -3705,7 +3705,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
       },
       {
         "id": "CVE-2026-94266",
@@ -3713,7 +3713,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
         "id": "CVE-2026-9547",
@@ -3881,7 +3881,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When curl is built with GnuTLS, a malicious WebSocket server can "
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
       },
       {
         "id": "CVE-2026-107929",
@@ -3889,7 +3889,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When `CURLOPT_INTERFACE` (or the command line tool's `--interface"
+        "title": "curl: curl: local interface connection reuse mixup"
       },
       {
         "id": "CVE-2026-13608",
@@ -3945,7 +3945,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "stale SigV4 headers sent unintended"
+        "title": "curl: curl: stale SigV4 headers sent unintended"
       },
       {
         "id": "CVE-2026-86410",
@@ -3969,7 +3969,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-87862"
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
       },
       {
         "id": "CVE-2026-87863",
@@ -3977,7 +3977,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
       },
       {
         "id": "CVE-2026-87864",
@@ -3985,7 +3985,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
       },
       {
         "id": "CVE-2026-87865",
@@ -3993,7 +3993,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "knownhost callback mismatches key as missing"
+        "title": "curl: curl: knownhost callback mismatches key as missing"
       },
       {
         "id": "CVE-2026-87866",
@@ -4001,7 +4001,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "wolfSSL public-key pinning bypass"
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
       },
       {
         "id": "CVE-2026-92386",
@@ -4009,7 +4009,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
       },
       {
         "id": "CVE-2026-92387",
@@ -4017,7 +4017,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "CVE-2026-92387"
+        "title": "curl: curl: never-ending loop via server response omission"
       },
       {
         "id": "CVE-2026-92389",
@@ -4025,7 +4025,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: TFTP direction confusion"
       },
       {
         "id": "CVE-2026-92390",
@@ -4033,7 +4033,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "When invoked with `--remote-header-name` (`-J`), curl fails to pr"
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
       },
       {
         "id": "CVE-2026-92391",
@@ -4041,7 +4041,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Title Not Available"
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
       },
       {
         "id": "CVE-2026-94266",
@@ -4049,7 +4049,7 @@
         "installedVersion": "8.14.1-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "libcurl could accidentally return a URL for curl_easy_getinfo's `"
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
         "id": "CVE-2026-9547",
@@ -4119,7 +4119,7 @@
         "id": "CVE-2026-66046",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "HIGH",
         "title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing"
       },
@@ -4127,7 +4127,7 @@
         "id": "CVE-2026-76956",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "HIGH",
         "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
       },
@@ -4135,7 +4135,7 @@
         "id": "CVE-2026-76957",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "HIGH",
         "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
       },
@@ -4143,7 +4143,7 @@
         "id": "CVE-2026-77214",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "HIGH",
         "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer"
       },
@@ -4151,7 +4151,7 @@
         "id": "CVE-2026-93990",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "HIGH",
         "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
       },
@@ -4167,7 +4167,7 @@
         "id": "CVE-2026-102633",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
+        "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
@@ -4527,7 +4527,7 @@
         "id": "CVE-2026-52584",
         "pkg": "libjxl0.11",
         "installedVersion": "0.11.2-0.1~deb13u2",
-        "fixedVersion": "None",
+        "fixedVersion": "0.11.2-0.1~deb13u3",
         "severity": "MEDIUM",
         "title": "libjxl: libjxl: Information disclosure via Buffer Overflow in DecodeImageAPNG function"
       },
@@ -4849,7 +4849,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-49300",
@@ -4881,7 +4881,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50583",
@@ -4905,7 +4905,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -4913,7 +4913,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -4937,7 +4937,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50713",
@@ -4953,7 +4953,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54441",
@@ -5297,7 +5297,7 @@
         "installedVersion": "1.6.48-1+deb13u5",
         "fixedVersion": "1.6.48-1+deb13u6",
         "severity": "MEDIUM",
-        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+        "title": "libpng: libpng: Use-after-free in sequential reader when png_read_end called without reading image rows"
       },
       {
         "id": "CVE-2021-4214",
@@ -5700,6 +5700,14 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-15310",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
         "id": "CVE-2026-15806",
         "pkg": "libpython3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -5738,14 +5746,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
-      },
-      {
-        "id": "CVE-2026-15310",
-        "pkg": "libpython3.13-minimal",
-        "installedVersion": "3.13.5-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "When decompressing crafted zip files using the bzip/LZMA/Zstandard   c ..."
       },
       {
         "id": "CVE-2026-18503",
@@ -5836,6 +5836,14 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-15310",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
         "id": "CVE-2026-15806",
         "pkg": "libpython3.13-stdlib",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -5874,14 +5882,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
-      },
-      {
-        "id": "CVE-2026-15310",
-        "pkg": "libpython3.13-stdlib",
-        "installedVersion": "3.13.5-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "When decompressing crafted zip files using the bzip/LZMA/Zstandard   c ..."
       },
       {
         "id": "CVE-2026-18503",
@@ -7233,7 +7233,7 @@
         "installedVersion": "2:1.8.2-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "libXi: OOB read in XI2 enter/leave/focus cookie conversion (`wireToEnterLeave`)"
+        "title": "libXi: libXi: Denial of Service via out-of-bounds read in XI2 event processing"
       },
       {
         "id": "CVE-2026-6653",
@@ -8156,6 +8156,14 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-15310",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
         "id": "CVE-2026-15806",
         "pkg": "python3.13",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8194,14 +8202,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
-      },
-      {
-        "id": "CVE-2026-15310",
-        "pkg": "python3.13",
-        "installedVersion": "3.13.5-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "When decompressing crafted zip files using the bzip/LZMA/Zstandard   c ..."
       },
       {
         "id": "CVE-2026-18503",
@@ -8292,6 +8292,14 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-15310",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
         "id": "CVE-2026-15806",
         "pkg": "python3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8330,14 +8338,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
-      },
-      {
-        "id": "CVE-2026-15310",
-        "pkg": "python3.13-minimal",
-        "installedVersion": "3.13.5-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "When decompressing crafted zip files using the bzip/LZMA/Zstandard   c ..."
       },
       {
         "id": "CVE-2026-18503",
@@ -8428,6 +8428,14 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-15310",
+        "pkg": "python3.13-venv",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
         "id": "CVE-2026-15806",
         "pkg": "python3.13-venv",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8466,14 +8474,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
-      },
-      {
-        "id": "CVE-2026-15310",
-        "pkg": "python3.13-venv",
-        "installedVersion": "3.13.5-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "When decompressing crafted zip files using the bzip/LZMA/Zstandard   c ..."
       },
       {
         "id": "CVE-2026-18503",
@@ -9414,7 +9414,7 @@
         "installedVersion": "2.0.0",
         "fixedVersion": "1.30.0, 2.2.0",
         "severity": "MEDIUM",
-        "title": "MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion"
+        "title": "mcp: mcp: Denial of Service via session memory exhaustion in streamable HTTP servers"
       },
       {
         "id": "CVE-2026-104874",

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-17T05:20:41.306Z",
+  "scannedAt": "2026-10-18T05:27:14.975Z",
   "system": {
     "total": 3,
     "cves": [
@@ -17,7 +17,7 @@
         "installedVersion": "1.6.57-r0",
         "fixedVersion": "1.6.59-r0",
         "severity": "MEDIUM",
-        "title": "[Use-after-free of zlib input in `png_read_end` after incomplete zTXt, iTXt or iCCP decompression]"
+        "title": "libpng: libpng: Use-after-free in sequential reader when png_read_end called without reading image rows"
       },
       {
         "id": "CVE-2026-85091",
@@ -241,20 +241,20 @@
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
       },
       {
+        "id": "CVE-2026-56851",
+        "pkg": "golang.org/x/text",
+        "installedVersion": "v0.38.0",
+        "fixedVersion": "0.41.0",
+        "severity": "HIGH",
+        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
+      },
+      {
         "id": "CVE-2026-56852",
         "pkg": "golang.org/x/text",
         "installedVersion": "v0.38.0",
         "fixedVersion": "0.39.0",
         "severity": "HIGH",
         "title": "golang.org/x/text: golang.org/x/text: Denial of Service via invalid UTF-8 input"
-      },
-      {
-        "id": "CVE-2026-56851",
-        "pkg": "golang.org/x/text",
-        "installedVersion": "v0.38.0",
-        "fixedVersion": "0.41.0",
-        "severity": "UNKNOWN",
-        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
       },
       {
         "id": "CVE-2026-84304",
@@ -449,6 +449,14 @@
         "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
       },
       {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.26.4",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "A trusted template author may have previously written a valid template ..."
+      },
+      {
         "id": "CVE-2026-97032",
         "pkg": "stdlib",
         "installedVersion": "v1.26.4",
@@ -463,14 +471,6 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "UNKNOWN",
-        "title": "A trusted template author may have previously written a valid template ..."
       }
     ]
   }

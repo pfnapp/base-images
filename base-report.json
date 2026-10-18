@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-17T05:20:47.266Z",
+  "generatedAt": "2026-10-18T05:27:24.086Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -87,7 +87,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -168,7 +168,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -249,7 +249,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -321,7 +321,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -402,7 +402,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -437,11 +437,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -452,10 +452,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -481,11 +491,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -496,10 +506,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -525,11 +545,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -540,10 +560,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -569,11 +599,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -584,10 +614,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -631,7 +671,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -675,7 +715,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -728,7 +768,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -772,7 +812,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -808,10 +848,10 @@
             "system": {
               "critical": 5,
               "high": 35,
-              "medium": 138,
+              "medium": 142,
               "low": 156,
               "fixable": 14,
-              "total": 335
+              "total": 339
             },
             "app": {
               "critical": 0,
@@ -871,7 +911,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -898,10 +938,10 @@
             "system": {
               "critical": 5,
               "high": 35,
-              "medium": 138,
+              "medium": 142,
               "low": 156,
               "fixable": 14,
-              "total": 335
+              "total": 339
             },
             "app": {
               "critical": 0,
@@ -961,7 +1001,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -1005,7 +1045,7 @@
             "app": {
               "critical": 0,
               "high": 27,
-              "medium": 72,
+              "medium": 81,
               "low": 9,
               "fixable": 117,
               "total": 117
@@ -1060,7 +1100,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1104,7 +1144,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1148,7 +1188,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1183,11 +1223,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -1198,10 +1238,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1227,11 +1277,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -1242,10 +1292,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1336,7 +1396,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1417,7 +1477,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1498,7 +1558,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1570,7 +1630,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1651,7 +1711,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1732,7 +1792,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1804,7 +1864,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1885,7 +1945,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1964,7 +2024,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1990,11 +2050,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -2005,10 +2065,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -2034,11 +2104,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -2049,10 +2119,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -2078,11 +2158,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -2093,10 +2173,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -2122,11 +2212,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 1,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 2,
+              "total": 2
             },
             "app": {
               "critical": 0,
@@ -2137,10 +2227,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2266,7 +2366,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2347,7 +2447,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2428,7 +2528,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2509,7 +2609,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2590,7 +2690,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2662,7 +2762,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2743,7 +2843,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2824,7 +2924,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2903,7 +3003,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-17T05:20:47.266Z",
+          "scannedAt": "2026-10-18T05:27:24.086Z",
           "eol": {
             "date": null,
             "isEol": false,
