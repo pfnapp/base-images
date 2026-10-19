@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-19T05:43:19.910Z",
+    "generatedAt": "2026-10-19T13:31:40.744Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
     "totalMonitoredVersions": 46,
     "runAsRootCount": 31,
-    "criticalVulnerabilityCount": 70,
-    "highVulnerabilityCount": 713,
-    "pfnappScannedCount": 44,
+    "criticalVulnerabilityCount": 68,
+    "highVulnerabilityCount": 680,
+    "pfnappScannedCount": 45,
     "totalCveReduction": 1030
   },
   "applications": [
@@ -62332,9 +62332,226 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "2.44.4",
+          "fullRef": "n8nio/n8n:2.44.4",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 2,
+                "low": 0,
+                "fixable": 0,
+                "total": 4
+              },
+              "app": {
+                "critical": 4,
+                "high": 8,
+                "medium": 29,
+                "low": 1,
+                "fixable": 0,
+                "total": 42
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 7,
+                "high": 27,
+                "medium": 64,
+                "low": 26,
+                "fixable": 0,
+                "total": 125,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-14456",
+                    "pkg": "libcrypto3",
+                    "installedVersion": "3.5.7-r1",
+                    "fixedVersion": "3.5.8-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-14456"
+                  },
+                  {
+                    "id": "CVE-2026-66046",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-66046"
+                  },
+                  {
+                    "id": "CVE-2026-76641",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76641"
+                  },
+                  {
+                    "id": "CVE-2026-76956",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76956"
+                  },
+                  {
+                    "id": "CVE-2026-76957",
+                    "pkg": "libexpat",
+                    "installedVersion": "2.8.3-r1",
+                    "fixedVersion": "2.8.4-r0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-76957"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 6,
+                "high": 41,
+                "medium": 49,
+                "low": 3,
+                "fixable": 0,
+                "total": 99,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-101916",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.14.4",
+                    "fixedVersion": "1.13.6, 1.14.5",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-101916"
+                  },
+                  {
+                    "id": "CVE-2026-104850",
+                    "pkg": "@modelcontextprotocol/sdk",
+                    "installedVersion": "1.26.0",
+                    "fixedVersion": "1.31.0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-104850"
+                  },
+                  {
+                    "id": "CVE-2026-102829",
+                    "pkg": "@simple-git/argv-parser",
+                    "installedVersion": "1.1.1",
+                    "fixedVersion": "2.0.1",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-102829"
+                  },
+                  {
+                    "id": "GHSA-j95f-988m-3j2f",
+                    "pkg": "@tiptap/core",
+                    "installedVersion": "3.27.0",
+                    "fixedVersion": "3.30.5",
+                    "severity": "HIGH",
+                    "title": "GHSA-j95f-988m-3j2f"
+                  },
+                  {
+                    "id": "GHSA-g2v6-rqmx-r4w6",
+                    "pkg": "@vue/server-renderer",
+                    "installedVersion": "3.5.40",
+                    "fixedVersion": "3.5.42, 3.6.0-rc.6",
+                    "severity": "HIGH",
+                    "title": "GHSA-g2v6-rqmx-r4w6"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 7,
+                "high": 25,
+                "medium": 62,
+                "low": 26,
+                "total": 121
+              },
+              "app": {
+                "critical": 2,
+                "high": 33,
+                "medium": 20,
+                "low": 2,
+                "total": 57
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-102829",
+              "pkg": "@simple-git/argv-parser",
+              "installedVersion": "1.1.1",
+              "fixedVersion": "2.0.1",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-102829"
+            },
+            {
+              "id": "CVE-2026-93687",
+              "pkg": "braces",
+              "installedVersion": "3.0.3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-93687"
+            },
+            {
+              "id": "CVE-2026-106445",
+              "pkg": "handlebars",
+              "installedVersion": "4.7.9",
+              "fixedVersion": "4.7.10",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-106445"
+            },
+            {
+              "id": "CVE-2026-106446",
+              "pkg": "handlebars",
+              "installedVersion": "4.7.9",
+              "fixedVersion": "4.7.10",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-106446"
+            },
+            {
+              "id": "CVE-2026-82659",
+              "pkg": "nodemailer",
+              "installedVersion": "8.0.10",
+              "fixedVersion": "9.0.1",
+              "severity": "HIGH",
+              "title": "CVE-2026-82659"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-77214",
+              "pkg": "libexpat",
+              "installedVersion": "2.8.5-r0",
+              "fixedVersion": "2.9.0-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-77214"
+            },
+            {
+              "id": "CVE-2026-4775",
+              "pkg": "tiff",
+              "installedVersion": "4.7.1-r0",
+              "fixedVersion": "4.7.2-r0",
+              "severity": "HIGH",
+              "title": "CVE-2026-4775"
+            }
+          ],
+          "posture": "APP CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-10-19T13:31:40.744Z"
+        },
+        {
           "tag": "2.44.3",
           "fullRef": "n8nio/n8n:2.44.3",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -64343,7 +64560,7 @@
         {
           "tag": "2.44.2",
           "fullRef": "n8nio/n8n:2.44.2",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -66352,7 +66569,7 @@
         {
           "tag": "2.44.1",
           "fullRef": "n8nio/n8n:2.44.1",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -68361,7 +68578,7 @@
         {
           "tag": "2.44.0",
           "fullRef": "n8nio/n8n:2.44.0",
-          "rank": 4,
+          "rank": 5,
           "lifecycleStatus": "AGING",
           "lifecycleBadge": "🟠",
           "lifecycleAdvice": "Plan upgrade to latest",
@@ -70366,133 +70583,14 @@
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
           "scannedAt": "2026-10-19T05:43:19.910Z"
-        },
-        {
-          "tag": "2.43.4",
-          "fullRef": "n8nio/n8n:2.43.4",
-          "rank": 5,
-          "lifecycleStatus": "EOL SOON",
-          "lifecycleBadge": "🔴",
-          "lifecycleAdvice": "Next upstream release will deprecate this version",
-          "security": {
-            "runAsRoot": false,
-            "configuredUser": "node",
-            "uidLabel": "node"
-          },
-          "vulnerabilities": {
-            "upstream": {
-              "system": {
-                "critical": 7,
-                "high": 27,
-                "medium": 64,
-                "low": 26,
-                "fixable": 125,
-                "total": 125
-              },
-              "app": {
-                "critical": 6,
-                "high": 41,
-                "medium": 49,
-                "low": 3,
-                "fixable": 93,
-                "total": 99
-              }
-            },
-            "pfnapp": {
-              "scanned": false
-            },
-            "reduction": null
-          },
-          "topAppCves": [
-            {
-              "id": "CVE-2026-101916",
-              "pkg": "@grpc/grpc-js",
-              "installedVersion": "1.14.4",
-              "fixedVersion": "1.13.6, 1.14.5",
-              "severity": "HIGH",
-              "title": "grpc-js: grpc-js: Authentication bypass via improper peer certificate validation"
-            },
-            {
-              "id": "CVE-2026-104850",
-              "pkg": "@modelcontextprotocol/sdk",
-              "installedVersion": "1.26.0",
-              "fixedVersion": "1.31.0",
-              "severity": "HIGH",
-              "title": "@modelcontextprotocol/sdk: @modelcontextprotocol/client: MCP TypeScript SDK: Information disclosure via unbound OAuth credentials"
-            },
-            {
-              "id": "CVE-2026-102829",
-              "pkg": "@simple-git/argv-parser",
-              "installedVersion": "1.1.1",
-              "fixedVersion": "2.0.1",
-              "severity": "CRITICAL",
-              "title": "simple-git: `VISUAL` editor environment variable is omitted from unsafe editor detection"
-            },
-            {
-              "id": "GHSA-j95f-988m-3j2f",
-              "pkg": "@tiptap/core",
-              "installedVersion": "3.27.0",
-              "fixedVersion": "3.30.5",
-              "severity": "HIGH",
-              "title": "Tiptap: Quadratic ReDoS in block and inline Markdown attribute parsing"
-            },
-            {
-              "id": "GHSA-g2v6-rqmx-r4w6",
-              "pkg": "@vue/server-renderer",
-              "installedVersion": "3.5.40",
-              "fixedVersion": "3.5.42, 3.6.0-rc.6",
-              "severity": "HIGH",
-              "title": "@vue/server-renderer: XSS via missing CR in attribute-name blacklist"
-            }
-          ],
-          "topSystemCves": [
-            {
-              "id": "CVE-2026-14456",
-              "pkg": "libcrypto3",
-              "installedVersion": "3.5.7-r1",
-              "fixedVersion": "3.5.8-r0",
-              "severity": "HIGH",
-              "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
-            },
-            {
-              "id": "CVE-2026-66046",
-              "pkg": "libexpat",
-              "installedVersion": "2.8.3-r1",
-              "fixedVersion": "2.8.4-r0",
-              "severity": "HIGH",
-              "title": "expat: Expat: Denial of Service via quadratic complexity in attribute processing"
-            },
-            {
-              "id": "CVE-2026-76641",
-              "pkg": "libexpat",
-              "installedVersion": "2.8.3-r1",
-              "fixedVersion": "2.8.4-r0",
-              "severity": "HIGH",
-              "title": "expat: Expat: Denial of Service via XML external entity parsing"
-            },
-            {
-              "id": "CVE-2026-76956",
-              "pkg": "libexpat",
-              "installedVersion": "2.8.3-r1",
-              "fixedVersion": "2.8.4-r0",
-              "severity": "HIGH",
-              "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
-            },
-            {
-              "id": "CVE-2026-76957",
-              "pkg": "libexpat",
-              "installedVersion": "2.8.3-r1",
-              "fixedVersion": "2.8.4-r0",
-              "severity": "HIGH",
-              "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
-            }
-          ],
-          "posture": "APP CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-10-19T05:43:19.910Z"
         }
       ],
       "deprecatedVersions": [
+        {
+          "tag": "2.43.4",
+          "droppedAt": "2026-10-19",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.44.4 immediately."
+        },
         {
           "tag": "2.43.3",
           "droppedAt": "2026-10-16",
