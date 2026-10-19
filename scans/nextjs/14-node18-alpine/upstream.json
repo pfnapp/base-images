@@ -1,11 +1,316 @@
 {
-  "scannedAt": "2026-10-18T05:27:38.605Z",
+  "scannedAt": "2026-10-19T05:51:14.831Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 38,
+    "cves": [
+      {
+        "id": "CVE-2026-5773",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse"
+      },
+      {
+        "id": "CVE-2026-6276",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers"
+      },
+      {
+        "id": "CVE-2026-8286",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
+      },
+      {
+        "id": "CVE-2026-8927",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2025-13034",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
+      },
+      {
+        "id": "CVE-2026-3783",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via OAuth2 bearer token leakage during HTTP(S) redirect"
+      },
+      {
+        "id": "CVE-2026-3784",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Unauthorized access due to improper HTTP proxy connection reuse"
+      },
+      {
+        "id": "CVE-2026-3805",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Arbitrary code execution or Denial of Service via use-after-free in SMB request handling"
+      },
+      {
+        "id": "CVE-2026-4873",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure due to incorrect TLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-5545",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Authentication bypass due to incorrect HTTP Negotiate connection reuse"
+      },
+      {
+        "id": "CVE-2026-6253",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Proxy credential disclosure via redirects to unauthenticated proxies"
+      },
+      {
+        "id": "CVE-2026-6429",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Credential leak via reused proxy connection during HTTP redirects"
+      },
+      {
+        "id": "CVE-2026-7168",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
+      },
+      {
+        "id": "CVE-2026-8924",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
+      },
+      {
+        "id": "CVE-2025-14524",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "LOW",
+        "title": "curl: Information disclosure via cross-protocol redirect with OAuth2 bearer token"
+      },
+      {
+        "id": "CVE-2025-14819",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
+      },
+      {
+        "id": "CVE-2026-1965_1",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_1"
+      },
+      {
+        "id": "CVE-2026-1965_2",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_2"
+      },
+      {
+        "id": "CVE-2026-5773",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse"
+      },
+      {
+        "id": "CVE-2026-6276",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers"
+      },
+      {
+        "id": "CVE-2026-8286",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
+      },
+      {
+        "id": "CVE-2026-8927",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2025-13034",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
+      },
+      {
+        "id": "CVE-2026-3783",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via OAuth2 bearer token leakage during HTTP(S) redirect"
+      },
+      {
+        "id": "CVE-2026-3784",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Unauthorized access due to improper HTTP proxy connection reuse"
+      },
+      {
+        "id": "CVE-2026-3805",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Arbitrary code execution or Denial of Service via use-after-free in SMB request handling"
+      },
+      {
+        "id": "CVE-2026-4873",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure due to incorrect TLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-5545",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Authentication bypass due to incorrect HTTP Negotiate connection reuse"
+      },
+      {
+        "id": "CVE-2026-6253",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Proxy credential disclosure via redirects to unauthenticated proxies"
+      },
+      {
+        "id": "CVE-2026-6429",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Credential leak via reused proxy connection during HTTP redirects"
+      },
+      {
+        "id": "CVE-2026-7168",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
+      },
+      {
+        "id": "CVE-2026-8924",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
+      },
+      {
+        "id": "CVE-2025-14524",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "LOW",
+        "title": "curl: Information disclosure via cross-protocol redirect with OAuth2 bearer token"
+      },
+      {
+        "id": "CVE-2025-14819",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
+      },
+      {
+        "id": "CVE-2026-1965_1",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_1"
+      },
+      {
+        "id": "CVE-2026-1965_2",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_2"
+      }
+    ]
   },
   "app": {
-    "total": 13,
+    "total": 10,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -14,22 +319,6 @@
         "fixedVersion": "3.2.1",
         "severity": "MEDIUM",
         "title": "sigstore-core: @sigstore/core: Signature bypass due to incorrect encoding in preAuthEncoding"
-      },
-      {
-        "id": "CVE-2026-102276",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.10, 3.0.7, 2.1.5, 1.1.19",
-        "severity": "HIGH",
-        "title": "brace-expansion: brace-expansion: Denial of Service via stack exhaustion from crafted brace patterns"
-      },
-      {
-        "id": "CVE-2026-102278",
-        "pkg": "brace-expansion",
-        "installedVersion": "2.0.2",
-        "fixedVersion": "5.0.11, 3.0.8, 2.1.6, 1.1.20",
-        "severity": "HIGH",
-        "title": "brace-expansion: brace-expansion: Denial of Service via uncontrolled recursion in nested brace patterns"
       },
       {
         "id": "CVE-2026-102277",
@@ -46,14 +335,6 @@
         "fixedVersion": "5.0.5, 3.0.2, 2.0.3, 1.1.13",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
-      },
-      {
-        "id": "CVE-2026-93748",
-        "pkg": "http-cache-semantics",
-        "installedVersion": "4.2.0",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "http-cache-semantics: http-cache-semantics: Information Disclosure via max-stale directive"
       },
       {
         "id": "CVE-2026-101911",

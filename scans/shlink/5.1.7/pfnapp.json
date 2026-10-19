@@ -1,8 +1,296 @@
 {
-  "scannedAt": "2026-10-18T05:27:14.975Z",
+  "scannedAt": "2026-10-19T05:50:30.124Z",
   "system": {
-    "total": 3,
+    "total": 39,
     "cves": [
+      {
+        "id": "CVE-2026-5773",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse"
+      },
+      {
+        "id": "CVE-2026-6276",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers"
+      },
+      {
+        "id": "CVE-2026-8286",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
+      },
+      {
+        "id": "CVE-2026-8927",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2025-13034",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
+      },
+      {
+        "id": "CVE-2026-3783",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via OAuth2 bearer token leakage during HTTP(S) redirect"
+      },
+      {
+        "id": "CVE-2026-3784",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Unauthorized access due to improper HTTP proxy connection reuse"
+      },
+      {
+        "id": "CVE-2026-3805",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Arbitrary code execution or Denial of Service via use-after-free in SMB request handling"
+      },
+      {
+        "id": "CVE-2026-4873",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure due to incorrect TLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-6253",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Proxy credential disclosure via redirects to unauthenticated proxies"
+      },
+      {
+        "id": "CVE-2026-6429",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Credential leak via reused proxy connection during HTTP redirects"
+      },
+      {
+        "id": "CVE-2026-7168",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
+      },
+      {
+        "id": "CVE-2026-8924",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
+      },
+      {
+        "id": "CVE-2025-14524",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "LOW",
+        "title": "curl: Information disclosure via cross-protocol redirect with OAuth2 bearer token"
+      },
+      {
+        "id": "CVE-2025-14819",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
+      },
+      {
+        "id": "CVE-2026-1965_1",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_1"
+      },
+      {
+        "id": "CVE-2026-1965_2",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_2"
+      },
+      {
+        "id": "CVE-2026-5773",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse"
+      },
+      {
+        "id": "CVE-2026-6276",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers"
+      },
+      {
+        "id": "CVE-2026-8286",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch"
+      },
+      {
+        "id": "CVE-2026-8927",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: Information disclosure due to uncleared proxy authentication state"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2025-13034",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
+      },
+      {
+        "id": "CVE-2026-3783",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via OAuth2 bearer token leakage during HTTP(S) redirect"
+      },
+      {
+        "id": "CVE-2026-3784",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Unauthorized access due to improper HTTP proxy connection reuse"
+      },
+      {
+        "id": "CVE-2026-3805",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Arbitrary code execution or Denial of Service via use-after-free in SMB request handling"
+      },
+      {
+        "id": "CVE-2026-4873",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure due to incorrect TLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-6253",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Proxy credential disclosure via redirects to unauthenticated proxies"
+      },
+      {
+        "id": "CVE-2026-6429",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Credential leak via reused proxy connection during HTTP redirects"
+      },
+      {
+        "id": "CVE-2026-7168",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect Proxy-Authorization header reuse"
+      },
+      {
+        "id": "CVE-2026-8924",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Cookie injection via malicious HTTP server using super cookies"
+      },
+      {
+        "id": "CVE-2025-14524",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "LOW",
+        "title": "curl: Information disclosure via cross-protocol redirect with OAuth2 bearer token"
+      },
+      {
+        "id": "CVE-2025-14819",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
+      },
+      {
+        "id": "CVE-2026-1965_1",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_1"
+      },
+      {
+        "id": "CVE-2026-1965_2",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r3",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-1965_2"
+      },
       {
         "id": "CVE-2026-40930",
         "pkg": "libpng",
@@ -30,7 +318,7 @@
     ]
   },
   "app": {
-    "total": 55,
+    "total": 8,
     "cves": [
       {
         "id": "CVE-2026-45045",
@@ -41,89 +329,9 @@
         "title": "GoFiber Vulnerable to X-Real-IP Spoofing via Header.Add() in BalancerForward"
       },
       {
-        "id": "CVE-2026-77405",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "CRITICAL",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Missing Explicit TLS Minimum Version Configuration In URI Parser"
-      },
-      {
-        "id": "CVE-2026-77408",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "CRITICAL",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Silent Data Truncation and State Corruption via Shortstr Integer Overflow"
-      },
-      {
-        "id": "CVE-2026-77411",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "CRITICAL",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Protocol Desynchronization and Frame Injection via Integer Overflow in readLongstr"
-      },
-      {
-        "id": "CVE-2026-77403",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via AMQP frame size negotiation"
-      },
-      {
-        "id": "CVE-2026-77404",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Connection configuration overwrite via unsanitized TLS path parameter injection"
-      },
-      {
-        "id": "CVE-2026-77406",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via signed-to-unsigned integer casting"
-      },
-      {
-        "id": "CVE-2026-77407",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Plaintext Credential Exposure via Exported PLAIN Authentication Fields"
-      },
-      {
-        "id": "CVE-2026-77410",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via unbounded body buffer allocation"
-      },
-      {
-        "id": "CVE-2026-77412",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: RabbitMQ amqp091-go: Denial of Service via Malicious AMQP Field Length"
-      },
-      {
-        "id": "CVE-2026-79921",
-        "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
-        "fixedVersion": "1.13.0",
-        "severity": "HIGH",
-        "title": "github.com/rabbitmq/amqp091-go: amqp091-go: Denial of Service via oversized AMQP payloads"
-      },
-      {
         "id": "CVE-2026-107386",
         "pkg": "github.com/rabbitmq/amqp091-go",
-        "installedVersion": "v1.12.0",
+        "installedVersion": "v1.13.0",
         "fixedVersion": "1.14.0",
         "severity": "MEDIUM",
         "title": "github.com/rabbitmq/amqp091-go: amqp091-go: Denial of Service via excessive memory allocation during frame parsing"
@@ -169,308 +377,12 @@
         "title": "github.com/open-telemetry/opentelemetry-go: OpenTelemetry-Go: Information disclosure via exporter configuration logging"
       },
       {
-        "id": "CVE-2026-56854",
-        "pkg": "golang.org/x/crypto",
-        "installedVersion": "v0.53.0",
-        "fixedVersion": "0.55.0",
-        "severity": "HIGH",
-        "title": "golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Authentication bypass due to unenforced source-address restrictions"
-      },
-      {
-        "id": "CVE-2026-56855",
-        "pkg": "golang.org/x/crypto",
-        "installedVersion": "v0.53.0",
-        "fixedVersion": "0.56.0",
-        "severity": "MEDIUM",
-        "title": "golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via crafted messages"
-      },
-      {
-        "id": "CVE-2026-78662",
-        "pkg": "golang.org/x/crypto",
-        "installedVersion": "v0.53.0",
-        "fixedVersion": "0.56.0",
-        "severity": "MEDIUM",
-        "title": "golang.org/x/crypto/ssh: golang.org/x/crypto/ssh: Denial of Service via channel request flooding"
-      },
-      {
         "id": "GO-2026-5932",
         "pkg": "golang.org/x/crypto",
-        "installedVersion": "v0.53.0",
+        "installedVersion": "v0.57.0",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
-      },
-      {
-        "id": "CVE-2026-78669",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.60.0",
-        "severity": "HIGH",
-        "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.60.0",
-        "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.60.0",
-        "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.60.0",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.60.0",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56851",
-        "pkg": "golang.org/x/text",
-        "installedVersion": "v0.38.0",
-        "fixedVersion": "0.41.0",
-        "severity": "HIGH",
-        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
-      },
-      {
-        "id": "CVE-2026-56852",
-        "pkg": "golang.org/x/text",
-        "installedVersion": "v0.38.0",
-        "fixedVersion": "0.39.0",
-        "severity": "HIGH",
-        "title": "golang.org/x/text: golang.org/x/text: Denial of Service via invalid UTF-8 input"
-      },
-      {
-        "id": "CVE-2026-84304",
-        "pkg": "google.golang.org/grpc",
-        "installedVersion": "v1.81.1",
-        "fixedVersion": "1.83.1",
-        "severity": "HIGH",
-        "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via HTTP/2 DATA Frame Fragmentation"
-      },
-      {
-        "id": "CVE-2026-84445",
-        "pkg": "google.golang.org/grpc",
-        "installedVersion": "v1.81.1",
-        "fixedVersion": "1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e",
-        "severity": "HIGH",
-        "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
-      },
-      {
-        "id": "GHSA-hrxh-6v49-42gf",
-        "pkg": "google.golang.org/grpc",
-        "installedVersion": "v1.81.1",
-        "fixedVersion": "1.82.1",
-        "severity": "HIGH",
-        "title": "gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities"
-      },
-      {
-        "id": "CVE-2026-84303",
-        "pkg": "google.golang.org/grpc",
-        "installedVersion": "v1.81.1",
-        "fixedVersion": "1.83.1",
-        "severity": "MEDIUM",
-        "title": "gRPC-Go is the Go language implementation of gRPC. Prior to 1.83.1, th ..."
-      },
-      {
-        "id": "CVE-2026-33818",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "encoding/asn1: golang: Go encoding/asn1: Denial of Service via excessive recursion in Unmarshal"
-      },
-      {
-        "id": "CVE-2026-39821",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing"
-      },
-      {
-        "id": "CVE-2026-39822",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.12, 1.26.5, 1.27.0-rc.2",
-        "severity": "HIGH",
-        "title": "golang: Go os.Root: Symlink following vulnerability allows directory traversal"
-      },
-      {
-        "id": "CVE-2026-46600",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "golang.org/x/net/dns/dnsmessage: golang.org/x/net/dns/dnsmessage: Denial of Service via invalid DNS record parsing"
-      },
-      {
-        "id": "CVE-2026-56853",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "net/http: golang: Go net/http: Unencrypted HTTP/2 connections vulnerable to Denial of Service"
-      },
-      {
-        "id": "CVE-2026-56858",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "html/template: golang: Go html/template: Cross-Site Scripting via pathological input"
-      },
-      {
-        "id": "CVE-2026-56859",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "encoding/xml: golang: Go: Denial of Service via XML decoding recursion depth issue"
-      },
-      {
-        "id": "CVE-2026-56860",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "net/url: golang: golang net/url: Denial of Service from quadratic complexity in path resolution"
-      },
-      {
-        "id": "CVE-2026-56862",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.13, 1.26.6, 1.27.0-rc.3",
-        "severity": "HIGH",
-        "title": "crypto/tls: golang: Golang crypto/tls: Denial of Service via indefinite KeyUpdate messages"
-      },
-      {
-        "id": "CVE-2026-78667",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "HIGH",
-        "title": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers"
-      },
-      {
-        "id": "CVE-2026-78669",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "HIGH",
-        "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-      },
-      {
-        "id": "CVE-2026-97031",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "HIGH",
-        "title": "crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references"
-      },
-      {
-        "id": "CVE-2026-42505",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.25.12, 1.26.5, 1.27.0-rc.2",
-        "severity": "MEDIUM",
-        "title": "crypto/tls: golang: Go crypto/tls: Information disclosure in Encrypted Client Hello"
-      },
-      {
-        "id": "CVE-2026-56866",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "A trusted template author may have previously written a valid template ..."
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56857",
-        "pkg": "stdlib",
-        "installedVersion": "v1.26.4",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "LOW",
-        "title": "os: golang: golang: Directory traversal via Windows junction handling"
       }
     ]
   }
