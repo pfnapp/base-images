@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-19T23:43:38.051Z",
+    "generatedAt": "2026-10-20T04:51:08.475Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 46,
+    "totalMonitoredVersions": 47,
     "runAsRootCount": 31,
     "criticalVulnerabilityCount": 68,
     "highVulnerabilityCount": 676,
-    "pfnappScannedCount": 45,
+    "pfnappScannedCount": 46,
     "totalCveReduction": 1030
   },
   "applications": [
@@ -31799,9 +31799,209 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "3.8.52",
+          "fullRef": "diegosouzapw/omniroute:3.8.52",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 7,
+                "medium": 61,
+                "low": 63,
+                "fixable": 0,
+                "total": 132
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 4,
+                "high": 27,
+                "medium": 108,
+                "low": 70,
+                "fixable": 0,
+                "total": 212,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-41992",
+                    "pkg": "gzip",
+                    "installedVersion": "1.13-1",
+                    "fixedVersion": "1.13-1+deb13u1",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-41992"
+                  },
+                  {
+                    "id": "CVE-2026-54369",
+                    "pkg": "libacl1",
+                    "installedVersion": "2.3.2-2+b1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-54369"
+                  },
+                  {
+                    "id": "CVE-2026-58016",
+                    "pkg": "libglib2.0-0t64",
+                    "installedVersion": "2.84.4-3~deb13u3",
+                    "fixedVersion": "2.84.4-3~deb13u4",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-58016"
+                  },
+                  {
+                    "id": "CVE-2026-58010",
+                    "pkg": "libglib2.0-0t64",
+                    "installedVersion": "2.84.4-3~deb13u3",
+                    "fixedVersion": "2.84.4-3~deb13u4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-58010"
+                  },
+                  {
+                    "id": "CVE-2026-58011",
+                    "pkg": "libglib2.0-0t64",
+                    "installedVersion": "2.84.4-3~deb13u3",
+                    "fixedVersion": "2.84.4-3~deb13u4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-58011"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 4,
+                "high": 14,
+                "medium": 29,
+                "low": 11,
+                "fixable": 0,
+                "total": 58,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-102282",
+                    "pkg": "adm-zip",
+                    "installedVersion": "0.6.0",
+                    "fixedVersion": "0.6.1",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-102282"
+                  },
+                  {
+                    "id": "CVE-2026-77301",
+                    "pkg": "adm-zip",
+                    "installedVersion": "0.6.0",
+                    "fixedVersion": "0.6.1",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-77301"
+                  },
+                  {
+                    "id": "GHSA-8238-w5pm-2374",
+                    "pkg": "adm-zip",
+                    "installedVersion": "0.6.0",
+                    "fixedVersion": "0.6.1",
+                    "severity": "HIGH",
+                    "title": "GHSA-8238-w5pm-2374"
+                  },
+                  {
+                    "id": "GHSA-rcw4-f5rp-g42v",
+                    "pkg": "adm-zip",
+                    "installedVersion": "0.6.0",
+                    "fixedVersion": "0.6.1",
+                    "severity": "HIGH",
+                    "title": "GHSA-rcw4-f5rp-g42v"
+                  },
+                  {
+                    "id": "CVE-2026-75604",
+                    "pkg": "next",
+                    "installedVersion": "16.3.1",
+                    "fixedVersion": "15.5.24, 16.3.3",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-75604"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 4,
+                "high": 20,
+                "medium": 47,
+                "low": 7,
+                "total": 80
+              },
+              "app": {
+                "critical": 4,
+                "high": 14,
+                "medium": 29,
+                "low": 11,
+                "total": 58
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-54369",
+              "pkg": "libacl1",
+              "installedVersion": "2.3.2-2+b1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-54369"
+            },
+            {
+              "id": "CVE-2026-16742",
+              "pkg": "libsystemd0",
+              "installedVersion": "257.13-1~deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-16742"
+            },
+            {
+              "id": "CVE-2025-69720",
+              "pkg": "libtinfo6",
+              "installedVersion": "6.5+20250216-2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2025-69720"
+            },
+            {
+              "id": "CVE-2026-16742",
+              "pkg": "libudev1",
+              "installedVersion": "257.13-1~deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-16742"
+            },
+            {
+              "id": "CVE-2025-69720",
+              "pkg": "ncurses-base",
+              "installedVersion": "6.5+20250216-2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2025-69720"
+            }
+          ],
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-20T04:51:08.475Z"
+        },
+        {
           "tag": "3.8.51",
           "fullRef": "diegosouzapw/omniroute:3.8.51",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -34202,7 +34402,7 @@
         {
           "tag": "3.8.50",
           "fullRef": "diegosouzapw/omniroute:3.8.50",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
