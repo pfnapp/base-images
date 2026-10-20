@@ -2,15 +2,28 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "runtime": "omniroute",
   "framework": "OmniRoute",
-  "version": "3.8.50",
-  "baseImage": "ghcr.io/pfnapp/omniroute:3.8.50",
-  "ports": { "default": 20128, "protocol": "HTTP" },
-  "security": { "runAsUser": 1000, "runAsGroup": 1000, "readOnlyRoot": false },
-  "probes": {
-    "liveness": { "path": "/", "port": 20128 },
-    "readiness": { "path": "/dashboard", "port": 20128 }
+  "version": "3.8.52",
+  "baseImage": "ghcr.io/pfnapp/omniroute:3.8.52",
+  "ports": {
+    "default": 20128,
+    "protocol": "HTTP"
   },
-  "notes": "Upstream entrypoint (/app/check-permissions.sh) only tests write access to DATA_DIR without requiring root privileges or su-exec. Compatible with Kubernetes runAsNonRoot: true and arbitrary non-root UIDs (e.g. 1000 or 10001). Ensure volume permissions (via fsGroup) permit write access to /app/data to avoid warning logs.",
+  "security": {
+    "runAsUser": 1000,
+    "runAsGroup": 1000,
+    "readOnlyRoot": false
+  },
+  "probes": {
+    "liveness": {
+      "path": "/",
+      "port": 20128
+    },
+    "readiness": {
+      "path": "/dashboard",
+      "port": 20128
+    }
+  },
+  "notes": "Health: GET / answers 307 (redirect to the dashboard) and GET /dashboard serves the UI; the image's own healthcheck script probes GET /healthz. GET / on the published host port doubles as the compose smoke test. Provider credentials are external requirements and are intentionally absent.",
   "tunables": [
     {
       "key": "JWT_SECRET",
@@ -234,6 +247,5 @@
       "description": "Custom key for encrypting persisted OAuth tokens in /app/data/server.env (auto-generated if unset).",
       "troubleshooting": "Set it before first boot and back up the key with the data — losing the key means the previously encrypted OAuth tokens in /app/data/server.env cannot be decrypted again; upstream auto-generates one there while it is unset. The example is a syntactically valid placeholder, not a real key."
     }
-  ],
-  "notes": "Health: GET / answers 307 (redirect to the dashboard) and GET /dashboard serves the UI; the image's own healthcheck script probes GET /healthz. GET / on the published host port doubles as the compose smoke test. Provider credentials are external requirements and are intentionally absent."
+  ]
 }
