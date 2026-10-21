@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-20T05:44:51.908Z",
+  "scannedAt": "2026-10-21T05:48:18.696Z",
   "system": {
-    "total": 1101,
+    "total": 1102,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -34,6 +34,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "DSA-6572-1",
+        "pkg": "ca-certificates",
+        "installedVersion": "20250419",
+        "fixedVersion": "20250419+deb13u1",
+        "severity": "UNKNOWN",
+        "title": "ca-certificates - security update"
       },
       {
         "id": "CVE-2017-18018",
@@ -122,14 +130,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
-      },
-      {
-        "id": "CVE-2026-80229",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
         "id": "CVE-2026-8924",
@@ -250,6 +250,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
       },
       {
         "id": "CVE-2026-80230",
@@ -3212,12 +3220,36 @@
         "title": "cups: NULL pointer dereference via embedded job ticket comments allows remote denial of service"
       },
       {
+        "id": "CVE-2026-107885",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via improper job submission timeout handling"
+      },
+      {
+        "id": "CVE-2026-107886",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via double-free in printer class management"
+      },
+      {
         "id": "CVE-2026-107888",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cups: CUPS: Denial of Service via deleted temporary printer"
+      },
+      {
+        "id": "CVE-2026-107890",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via repeated IPP group tags"
       },
       {
         "id": "CVE-2026-27447",
@@ -3276,6 +3308,22 @@
         "title": "cups: CUPS: Information disclosure via crafted SNMP response"
       },
       {
+        "id": "CVE-2026-55480",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Arbitrary file overwrite via insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-61702",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.10-3+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Information disclosure via path traversal in banner processing"
+      },
+      {
         "id": "CVE-2026-87875",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
@@ -3300,30 +3348,6 @@
         "title": "cups: cups: argument injection in mailto notifier via notify-recipient-uri"
       },
       {
-        "id": "CVE-2026-107885",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via improper job submission timeout handling"
-      },
-      {
-        "id": "CVE-2026-107886",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via double-free in printer class management"
-      },
-      {
-        "id": "CVE-2026-107890",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via repeated IPP group tags"
-      },
-      {
         "id": "CVE-2026-55467",
         "pkg": "libcups2t64",
         "installedVersion": "2.4.10-3+deb13u2",
@@ -3338,22 +3362,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "cups: OpenPrinting CUPS: Remaining case-insensitive username matching in scheduler side paths (CVE-2026-27447 follow-up)"
-      },
-      {
-        "id": "CVE-2026-55480",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
-      },
-      {
-        "id": "CVE-2026-61702",
-        "pkg": "libcups2t64",
-        "installedVersion": "2.4.10-3+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
       },
       {
         "id": "TEMP-0000000-3F659E",
@@ -3442,14 +3450,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
-      },
-      {
-        "id": "CVE-2026-80229",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
       },
       {
         "id": "CVE-2026-8924",
@@ -3570,6 +3570,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
       },
       {
         "id": "CVE-2026-80230",
@@ -3780,14 +3788,6 @@
         "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
       },
       {
-        "id": "CVE-2026-80229",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.14.1-2+deb13u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "When performing transfers via libcurl\\u2019s multi interface, pooled T ..."
-      },
-      {
         "id": "CVE-2026-8924",
         "pkg": "libcurl4t64",
         "installedVersion": "8.14.1-2+deb13u5",
@@ -3906,6 +3906,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
       },
       {
         "id": "CVE-2026-80230",
@@ -4849,7 +4857,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -4865,7 +4873,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50580",
@@ -4881,7 +4889,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -4889,7 +4897,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50584",
@@ -4897,7 +4905,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50585",
@@ -4905,7 +4913,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -4913,7 +4921,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -4937,7 +4945,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50713",
@@ -4945,7 +4953,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-54435",
@@ -4953,7 +4961,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54441",
@@ -4961,7 +4969,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-73064",
@@ -7481,7 +7489,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist af ..."
+        "title": "openssh: OpenSSH: Credential disclosure via failed GSSAPI authentication"
       },
       {
         "id": "CVE-2026-106555",
@@ -7497,7 +7505,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a comma ..."
+        "title": "openssh: openssh: Command injection via unvalidated command-line username"
       },
       {
         "id": "CVE-2026-59999",
@@ -7521,15 +7529,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In sftp in OpenSSH before 10.6, a server can trigger directory travers ..."
-      },
-      {
-        "id": "CVE-2026-106582",
-        "pkg": "openssh-client",
-        "installedVersion": "1:10.0p1-7+deb13u4",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In sshd and ssh in OpenSSH before 10.6, an LZ77 dictionary coder can b ..."
+        "title": "openssh: openssh: Arbitrary file write via directory traversal during sftp recursive copy"
       },
       {
         "id": "CVE-2026-106585",
@@ -7537,7 +7537,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In sshd and ssh in OpenSSH before 10.6, there is no check for whether  ..."
+        "title": "openssh: openssh: Denial of service via oversized decompressed packets"
       },
       {
         "id": "CVE-2026-106586",
@@ -7668,12 +7668,20 @@
         "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
       },
       {
+        "id": "CVE-2026-106582",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: openssh: Information disclosure via shared compression side-channel"
+      },
+      {
         "id": "CVE-2026-106584",
         "pkg": "openssh-client",
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In ssh-keygen in OpenSSH before 10.6, certificates could have incorrec ..."
+        "title": "openssh: openssh: Incorrect certificate expiration times via Daylight Saving Time mishandling"
       },
       {
         "id": "CVE-2026-106587",
@@ -7681,7 +7689,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In sshd in OpenSSH before 10.6, the value \"none\" for a configuration o ..."
+        "title": "openssh: OpenSSH: Improper access control via misinterpretation of disabled configuration options"
       },
       {
         "id": "CVE-2026-55654",
@@ -8814,7 +8822,7 @@
     ]
   },
   "app": {
-    "total": 44,
+    "total": 65,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -8847,6 +8855,30 @@
         "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-113654",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "MEDIUM",
+        "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render"
+      },
+      {
+        "id": "CVE-2026-113661",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "MEDIUM",
+        "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs"
+      },
+      {
+        "id": "CVE-2026-113657",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "LOW",
+        "title": "ApostropheCMS sanitize-html: SMIL animation namespace-prefix bypass allows javascript: URI injection (XSS)"
       },
       {
         "id": "CVE-2026-93749",
@@ -8943,6 +8975,30 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
+        "id": "CVE-2026-112942",
+        "pkg": "vite",
+        "installedVersion": "8.2.0",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "HIGH",
+        "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows"
+      },
+      {
+        "id": "CVE-2026-112943",
+        "pkg": "vite",
+        "installedVersion": "8.2.0",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "MEDIUM",
+        "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows"
+      },
+      {
+        "id": "CVE-2026-112944",
+        "pkg": "vite",
+        "installedVersion": "8.2.0",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "MEDIUM",
+        "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors"
       },
       {
         "id": "CVE-2026-84373",
@@ -9070,7 +9126,15 @@
         "installedVersion": "3.14.3",
         "fixedVersion": "3.14.4",
         "severity": "HIGH",
-        "title": "aiohttp server lacks an initial request/header timeout"
+        "title": "aiohttp: aiohttp: Denial of Service via missing initial request timeout"
+      },
+      {
+        "id": "CVE-2026-111066",
+        "pkg": "aiohttp",
+        "installedVersion": "3.14.3",
+        "fixedVersion": "3.14.4",
+        "severity": "HIGH",
+        "title": "aiohttp: aiohttp: Denial of Service via file descriptor exhaustion in multipart request processing"
       },
       {
         "id": "GHSA-2g87-pp6c-29x5",
@@ -9081,12 +9145,52 @@
         "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use"
       },
       {
+        "id": "CVE-2026-111065",
+        "pkg": "aiohttp",
+        "installedVersion": "3.14.3",
+        "fixedVersion": "3.14.4",
+        "severity": "MEDIUM",
+        "title": "aiohttp: aiohttp: Denial of Service via Max-Age processing overflow"
+      },
+      {
+        "id": "CVE-2026-111748",
+        "pkg": "aiohttp",
+        "installedVersion": "3.14.3",
+        "fixedVersion": "3.14.4",
+        "severity": "MEDIUM",
+        "title": "aiohttp: aiohttp: Security control bypass via request scheme spoofing"
+      },
+      {
+        "id": "CVE-2026-111750",
+        "pkg": "aiohttp",
+        "installedVersion": "3.14.3",
+        "fixedVersion": "3.14.4",
+        "severity": "MEDIUM",
+        "title": "aiohttp: aiohttp: HTTP request smuggling via ambiguous request framing"
+      },
+      {
         "id": "CVE-2026-111063",
         "pkg": "aiohttp",
         "installedVersion": "3.14.3",
         "fixedVersion": "3.14.4",
         "severity": "LOW",
-        "title": "AIOHTTP: Secure attribute not enforced for shared cookie"
+        "title": "aiohttp: aiohttp: Information disclosure via unenforced Secure attribute on shared cookies"
+      },
+      {
+        "id": "CVE-2026-111749",
+        "pkg": "aiohttp",
+        "installedVersion": "3.14.3",
+        "fixedVersion": "3.14.4",
+        "severity": "LOW",
+        "title": "aiohttp: aiohttp: Host-Only cookie protection bypass via untrusted subdomain"
+      },
+      {
+        "id": "GHSA-6q48-6c7w-9gw2",
+        "pkg": "certifi",
+        "installedVersion": "2026.5.20",
+        "fixedVersion": "2026.10.19",
+        "severity": "CRITICAL",
+        "title": "certifi bundles emSign root CAs with compromised intermediate CA keys"
       },
       {
         "id": "CVE-2026-59951",
@@ -9119,6 +9223,78 @@
         "fixedVersion": "4.0.0",
         "severity": "MEDIUM",
         "title": "oauthlib: oauthlib: Timing attack vulnerability in PKCE code_verifier/code_challenge comparison allows authorization code recovery"
+      },
+      {
+        "id": "CVE-2026-112403",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's JPEG dec ..."
+      },
+      {
+        "id": "CVE-2026-112397",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via out-of-bounds memory access on zero-width images"
+      },
+      {
+        "id": "CVE-2026-112400",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via memory exhaustion from crafted GIF image"
+      },
+      {
+        "id": "CVE-2026-112404",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in TIFF decoding"
+      },
+      {
+        "id": "CVE-2026-112895",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of service via crafted PDF during append operations"
+      },
+      {
+        "id": "CVE-2026-112896",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in TIFF encoder"
+      },
+      {
+        "id": "CVE-2026-112897",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Information disclosure via uninitialized buffer in TIFF decoding"
+      },
+      {
+        "id": "CVE-2026-112395",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Information disclosure via crafted tiled TIFF image"
+      },
+      {
+        "id": "CVE-2026-112899",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "Pillow: EPS load(scale) lets Ghostscript render past the decompression bomb limit"
       },
       {
         "id": "GHSA-c2m8-h5v5-343r",

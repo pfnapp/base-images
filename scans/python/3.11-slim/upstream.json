@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-20T05:47:42.791Z",
+  "scannedAt": "2026-10-21T05:51:05.573Z",
   "system": {
-    "total": 339,
+    "total": 340,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -66,6 +66,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
+      },
+      {
+        "id": "DLA-4845-1",
+        "pkg": "ca-certificates",
+        "installedVersion": "20250419~deb12u1",
+        "fixedVersion": "20250419~deb12u2",
+        "severity": "UNKNOWN",
+        "title": "ca-certificates - security update"
       },
       {
         "id": "CVE-2016-2781",
@@ -2718,8 +2726,16 @@
     ]
   },
   "app": {
-    "total": 3,
+    "total": 4,
     "cves": [
+      {
+        "id": "GHSA-6q48-6c7w-9gw2",
+        "pkg": "certifi",
+        "installedVersion": "2026.6.17",
+        "fixedVersion": "2026.10.19",
+        "severity": "CRITICAL",
+        "title": "certifi bundles emSign root CAs with compromised intermediate CA keys"
+      },
       {
         "id": "CVE-2026-97687",
         "pkg": "urllib3",

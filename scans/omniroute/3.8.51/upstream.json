@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-20T05:41:31.159Z",
+  "scannedAt": "2026-10-21T05:45:13.907Z",
   "system": {
-    "total": 174,
+    "total": 175,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -34,6 +34,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "DSA-6572-1",
+        "pkg": "ca-certificates",
+        "installedVersion": "20250419",
+        "fixedVersion": "20250419+deb13u1",
+        "severity": "UNKNOWN",
+        "title": "ca-certificates - security update"
       },
       {
         "id": "CVE-2017-18018",
@@ -1398,7 +1406,7 @@
     ]
   },
   "app": {
-    "total": 29,
+    "total": 33,
     "cves": [
       {
         "id": "CVE-2026-104850",
@@ -1407,6 +1415,38 @@
         "fixedVersion": "1.31.0",
         "severity": "HIGH",
         "title": "@modelcontextprotocol/sdk: @modelcontextprotocol/client: MCP TypeScript SDK: Information disclosure via unbound OAuth credentials"
+      },
+      {
+        "id": "CVE-2026-111767",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.30.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them"
+      },
+      {
+        "id": "CVE-2026-111768",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.30.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation"
+      },
+      {
+        "id": "CVE-2026-111769",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.30.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript client SDK: HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies"
+      },
+      {
+        "id": "CVE-2026-111771",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.30.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service"
       },
       {
         "id": "CVE-2026-102277",

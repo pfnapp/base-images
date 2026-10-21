@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-20T05:47:04.632Z",
+  "scannedAt": "2026-10-21T05:50:22.133Z",
   "system": {
     "total": 42,
     "cves": [
@@ -342,7 +342,7 @@
     ]
   },
   "app": {
-    "total": 56,
+    "total": 57,
     "cves": [
       {
         "id": "CVE-2026-45045",
@@ -351,6 +351,14 @@
         "fixedVersion": "2.52.14",
         "severity": "MEDIUM",
         "title": "GoFiber Vulnerable to X-Real-IP Spoofing via Header.Add() in BalancerForward"
+      },
+      {
+        "id": "CVE-2026-63209",
+        "pkg": "github.com/klauspost/compress",
+        "installedVersion": "v1.18.6",
+        "fixedVersion": "1.18.7",
+        "severity": "HIGH",
+        "title": "github.com/klauspost/compress: klauspost/compress: Denial of Service via integer overflow in dictionary processing"
       },
       {
         "id": "CVE-2026-77405",
@@ -558,7 +566,7 @@
         "installedVersion": "v0.38.0",
         "fixedVersion": "0.41.0",
         "severity": "HIGH",
-        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
+        "title": "golang.org/x/text: golang.org/x/text: Denial of Service via out-of-bounds slice error in Nickname profile"
       },
       {
         "id": "CVE-2026-56852",
@@ -788,7 +796,7 @@
         "id": "CVE-2026-108082",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "6.1.0, 6.3.0, 7.4.0, 7.4.19, 8.1.0, 5.4.54, 6.2.0, 6.4.0, 6.4.46, 7.1.0, 7.2.0, 7.3.0, 8.1.7",
+        "fixedVersion": "7.2.0, 7.4.0, 7.4.19, 6.1.0, 6.3.0, 7.3.0, 8.1.0, 8.1.7, 5.4.54, 6.2.0, 6.4.0, 6.4.46, 7.1.0",
         "severity": "UNKNOWN",
         "title": "Symfony is a PHP framework for web and console applications and a set  ..."
       }

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-20T05:47:07.373Z",
+  "scannedAt": "2026-10-21T05:50:25.287Z",
   "system": {
     "total": 21,
     "cves": [
@@ -174,7 +174,7 @@
     ]
   },
   "app": {
-    "total": 42,
+    "total": 47,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -215,6 +215,22 @@
         "fixedVersion": "5.0.5, 3.0.2, 2.0.3, 1.1.13",
         "severity": "MEDIUM",
         "title": "brace-expansion: brace-expansion: Denial of Service via zero step value in brace pattern"
+      },
+      {
+        "id": "CVE-2026-111755",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via improper regular expression escaping in sensitive header filtering"
+      },
+      {
+        "id": "CVE-2026-111756",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
       },
       {
         "id": "CVE-2026-101911",
@@ -503,6 +519,30 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
+        "id": "CVE-2026-112942",
+        "pkg": "vite",
+        "installedVersion": "8.2.1",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "HIGH",
+        "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows"
+      },
+      {
+        "id": "CVE-2026-112943",
+        "pkg": "vite",
+        "installedVersion": "8.2.1",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "MEDIUM",
+        "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows"
+      },
+      {
+        "id": "CVE-2026-112944",
+        "pkg": "vite",
+        "installedVersion": "8.2.1",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "MEDIUM",
+        "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors"
       },
       {
         "id": "CVE-2026-84373",

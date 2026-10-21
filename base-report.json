@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-20T05:47:19.258Z",
+  "generatedAt": "2026-10-21T05:50:38.256Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
     "totalVersions": 42,
-    "criticalCount": 0,
+    "criticalCount": 2,
     "highCount": 31,
-    "cleanCount": 18
+    "cleanCount": 25
   },
   "baseImages": [
     {
@@ -50,7 +50,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -94,7 +94,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -138,7 +138,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -164,11 +164,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 10,
-              "medium": 20,
-              "low": 4,
-              "fixable": 38,
-              "total": 38
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -179,56 +179,10 @@
               "total": 10
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-5773",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-6276",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8286",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8927",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: Information disclosure due to uncleared proxy authentication state",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -263,16 +217,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -325,7 +279,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -369,7 +323,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -413,7 +367,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -457,7 +411,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -501,7 +455,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -545,7 +499,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -598,7 +552,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -642,7 +596,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -680,16 +634,16 @@
               "high": 35,
               "medium": 142,
               "low": 156,
-              "fixable": 14,
-              "total": 339
+              "fixable": 15,
+              "total": 340
             },
             "app": {
-              "critical": 0,
+              "critical": 1,
               "high": 2,
               "medium": 1,
               "low": 0,
-              "fixable": 3,
-              "total": 3
+              "fixable": 4,
+              "total": 4
             }
           },
           "topCves": [
@@ -739,9 +693,9 @@
               "layer": "system"
             }
           ],
-          "posture": "HIGH RISK",
-          "postureBadge": "🟠",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -770,16 +724,16 @@
               "high": 35,
               "medium": 142,
               "low": 156,
-              "fixable": 14,
-              "total": 339
+              "fixable": 15,
+              "total": 340
             },
             "app": {
-              "critical": 0,
+              "critical": 1,
               "high": 2,
               "medium": 1,
               "low": 0,
-              "fixable": 3,
-              "total": 3
+              "fixable": 4,
+              "total": 4
             }
           },
           "topCves": [
@@ -829,9 +783,9 @@
               "layer": "system"
             }
           ],
-          "posture": "HIGH RISK",
-          "postureBadge": "🟠",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -930,7 +884,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -974,14 +928,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": null,
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "1.26.9",
-            "latestPatchDate": "2026-10-08",
+            "latestPatch": "1.26.10",
+            "latestPatchDate": "2026-10-19",
             "source": "endoflife.date"
           }
         },
@@ -1018,14 +972,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": null,
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "1.27.2",
-            "latestPatchDate": "2026-10-08",
+            "latestPatch": "1.27.3",
+            "latestPatchDate": "2026-10-19",
             "source": "endoflife.date"
           }
         }
@@ -1071,7 +1025,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1115,7 +1069,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1160,16 +1114,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1213,7 +1167,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1257,7 +1211,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1283,11 +1237,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 10,
-              "medium": 20,
-              "low": 4,
-              "fixable": 38,
-              "total": 38
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1298,56 +1252,10 @@
               "total": 10
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-5773",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-6276",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8286",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8927",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: Information disclosure due to uncleared proxy authentication state",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1382,16 +1290,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1435,7 +1343,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1461,11 +1369,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 10,
-              "medium": 20,
-              "low": 4,
-              "fixable": 38,
-              "total": 38
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1476,56 +1384,10 @@
               "total": 10
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-5773",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-6276",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8286",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8927",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: Information disclosure due to uncleared proxy authentication state",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1560,16 +1422,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1630,11 +1492,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 4,
+              "medium": 3,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 7,
+              "total": 7
             },
             "app": {
               "critical": 0,
@@ -1645,10 +1507,47 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-103111",
+              "pkg": "pcre2",
+              "installedVersion": "10.43-r0",
+              "fixedVersion": "10.43-r1",
+              "severity": "HIGH",
+              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-86145",
+              "pkg": "pcre2",
+              "installedVersion": "10.43-r0",
+              "fixedVersion": "10.43-r1",
+              "severity": "HIGH",
+              "title": "pcre2: PCRE2: Out-of-bounds write allows arbitrary code execution via crafted regular expressions",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-89157",
+              "pkg": "pcre2",
+              "installedVersion": "10.43-r0",
+              "fixedVersion": "10.43-r1",
+              "severity": "HIGH",
+              "title": "pcre2: PCRE2: Out-of-bounds write via large pattern input",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-89161",
+              "pkg": "pcre2",
+              "installedVersion": "10.43-r0",
+              "fixedVersion": "10.43-r1",
+              "severity": "HIGH",
+              "title": "pcre2: PCRE2: Memory corruption vulnerability in pcre2_jit_match",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1692,7 +1591,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1736,7 +1635,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1780,7 +1679,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1824,7 +1723,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1904,16 +1803,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1957,7 +1856,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2001,7 +1900,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2036,16 +1935,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2089,7 +1988,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2115,11 +2014,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 10,
-              "medium": 20,
-              "low": 4,
-              "fixable": 38,
-              "total": 38
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2130,56 +2029,10 @@
               "total": 10
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-5773",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-6276",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8286",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8927",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: Information disclosure due to uncleared proxy authentication state",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r2",
-              "fixedVersion": "8.14.1-r3",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2214,16 +2067,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
-              "low": 1,
-              "fixable": 8,
-              "total": 8
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             }
           },
           "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2267,7 +2120,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2328,11 +2181,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 10,
-              "medium": 18,
-              "low": 4,
-              "fixable": 36,
-              "total": 36
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2343,56 +2196,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-5773",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r3",
-              "fixedVersion": "8.14.1-r4",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Wrong file transfer due to incorrect SMB connection reuse",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-6276",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r3",
-              "fixedVersion": "8.14.1-r4",
-              "severity": "HIGH",
-              "title": "curl: libcurl: Information disclosure due to cookie leak when reusing connections with custom Host headers",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8286",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r3",
-              "fixedVersion": "8.14.1-r4",
-              "severity": "HIGH",
-              "title": "curl: curl: Insecure connection establishment due to TLS configuration mismatch",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-8927",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r3",
-              "fixedVersion": "8.14.1-r4",
-              "severity": "HIGH",
-              "title": "curl: Information disclosure due to uncleared proxy authentication state",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.14.1-r3",
-              "fixedVersion": "8.14.1-r4",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-20T05:47:19.258Z",
+          "scannedAt": "2026-10-21T05:50:38.256Z",
           "eol": {
             "date": null,
             "isEol": false,

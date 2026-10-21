@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-20T05:44:20.745Z",
+  "scannedAt": "2026-10-21T05:47:58.312Z",
   "system": {
     "total": 4,
     "cves": [
@@ -38,7 +38,7 @@
     ]
   },
   "app": {
-    "total": 42,
+    "total": 59,
     "cves": [
       {
         "id": "CVE-2026-106119",
@@ -55,6 +55,62 @@
         "fixedVersion": "1.1.1",
         "severity": "LOW",
         "title": "LangChain: RediSearch Filter Injection via Unescaped Tag/Text Values"
+      },
+      {
+        "id": "CVE-2026-111767",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them"
+      },
+      {
+        "id": "CVE-2026-111768",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation"
+      },
+      {
+        "id": "CVE-2026-111769",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript client SDK: HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies"
+      },
+      {
+        "id": "CVE-2026-111771",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service"
+      },
+      {
+        "id": "CVE-2026-111768",
+        "pkg": "@modelcontextprotocol/server",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.3.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation"
+      },
+      {
+        "id": "CVE-2026-111770",
+        "pkg": "@modelcontextprotocol/server",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.3.0",
+        "severity": "HIGH",
+        "title": "MCP  TypeScript server SDK: Shared transport or server instances delivered one HTTP client's messages to another"
+      },
+      {
+        "id": "CVE-2026-111771",
+        "pkg": "@modelcontextprotocol/server",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.3.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service"
       },
       {
         "id": "CVE-2026-102829",
@@ -81,6 +137,38 @@
         "title": "Element Plus Link component (el-link) implements insufficient input validation for the href attribute"
       },
       {
+        "id": "CVE-2026-111755",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via improper regular expression escaping in sensitive header filtering"
+      },
+      {
+        "id": "CVE-2026-111755",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via improper regular expression escaping in sensitive header filtering"
+      },
+      {
+        "id": "CVE-2026-111756",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
+      },
+      {
+        "id": "CVE-2026-111756",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
+      },
+      {
         "id": "CVE-2026-106445",
         "pkg": "handlebars",
         "installedVersion": "4.7.9",
@@ -103,6 +191,14 @@
         "fixedVersion": "4.7.10",
         "severity": "MEDIUM",
         "title": "handlebars: Handlebars: Cross-Site Scripting via unescaped closing script tags in precompiled templates"
+      },
+      {
+        "id": "CVE-2026-111757",
+        "pkg": "hono",
+        "installedVersion": "4.12.34",
+        "fixedVersion": "4.13.11",
+        "severity": "MEDIUM",
+        "title": "hono: hono: Information disclosure via malformed percent-encoded paths in serveStatic"
       },
       {
         "id": "CVE-2026-84363",
@@ -169,6 +265,14 @@
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
+        "id": "CVE-2026-111759",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "15.0.2, 14.3.2",
+        "severity": "HIGH",
+        "title": "markdown-it: markdown-it: Denial of Service via mismatched quote parsing"
+      },
+      {
         "id": "CVE-2026-2327",
         "pkg": "markdown-it",
         "installedVersion": "13.0.2",
@@ -191,6 +295,14 @@
         "fixedVersion": "15.0.1, 14.3.1",
         "severity": "MEDIUM",
         "title": "markdown-it linkify: true has two quadratic paths, so a few hundred KB of markdown blocks the event loop for tens of seconds"
+      },
+      {
+        "id": "CVE-2026-111766",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.3.3, 15.0.3",
+        "severity": "LOW",
+        "title": "markdown-it: markdown-it: Denial of Service via repeated unterminated inline HTML constructs"
       },
       {
         "id": "CVE-2026-17495",
@@ -287,6 +399,30 @@
         "fixedVersion": "6.16.0",
         "severity": "MEDIUM",
         "title": "qs: qs: Denial of Service via array limit bypass in query string parsing"
+      },
+      {
+        "id": "CVE-2026-113654",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "MEDIUM",
+        "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render"
+      },
+      {
+        "id": "CVE-2026-113661",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "MEDIUM",
+        "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs"
+      },
+      {
+        "id": "CVE-2026-113657",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.17.7",
+        "fixedVersion": "2.18.0",
+        "severity": "LOW",
+        "title": "ApostropheCMS sanitize-html: SMIL animation namespace-prefix bypass allows javascript: URI injection (XSS)"
       },
       {
         "id": "CVE-2024-1899",

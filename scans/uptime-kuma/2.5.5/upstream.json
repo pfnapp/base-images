@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-20T05:40:32.147Z",
+  "scannedAt": "2026-10-21T05:44:07.165Z",
   "system": {
-    "total": 6728,
+    "total": 6731,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -82,6 +82,14 @@
         "fixedVersion": "20250419~deb12u1",
         "severity": "UNKNOWN",
         "title": "ca-certificates - CA certificates update"
+      },
+      {
+        "id": "DLA-4845-1",
+        "pkg": "ca-certificates",
+        "installedVersion": "20230311+deb12u1",
+        "fixedVersion": "20250419~deb12u2",
+        "severity": "UNKNOWN",
+        "title": "ca-certificates - security update"
       },
       {
         "id": "CVE-2026-106195",
@@ -45852,12 +45860,36 @@
         "title": "cups: NULL pointer dereference via embedded job ticket comments allows remote denial of service"
       },
       {
+        "id": "CVE-2026-107885",
+        "pkg": "libcups2",
+        "installedVersion": "2.4.2-3+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via improper job submission timeout handling"
+      },
+      {
+        "id": "CVE-2026-107886",
+        "pkg": "libcups2",
+        "installedVersion": "2.4.2-3+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via double-free in printer class management"
+      },
+      {
         "id": "CVE-2026-107888",
         "pkg": "libcups2",
         "installedVersion": "2.4.2-3+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cups: CUPS: Denial of Service via deleted temporary printer"
+      },
+      {
+        "id": "CVE-2026-107890",
+        "pkg": "libcups2",
+        "installedVersion": "2.4.2-3+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Denial of Service via repeated IPP group tags"
       },
       {
         "id": "CVE-2026-27447",
@@ -45916,6 +45948,22 @@
         "title": "cups: CUPS: Information disclosure via crafted SNMP response"
       },
       {
+        "id": "CVE-2026-55480",
+        "pkg": "libcups2",
+        "installedVersion": "2.4.2-3+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Arbitrary file overwrite via insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-61702",
+        "pkg": "libcups2",
+        "installedVersion": "2.4.2-3+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Information disclosure via path traversal in banner processing"
+      },
+      {
         "id": "CVE-2026-87875",
         "pkg": "libcups2",
         "installedVersion": "2.4.2-3+deb12u9",
@@ -45940,30 +45988,6 @@
         "title": "cups: cups: argument injection in mailto notifier via notify-recipient-uri"
       },
       {
-        "id": "CVE-2026-107885",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via improper job submission timeout handling"
-      },
-      {
-        "id": "CVE-2026-107886",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via double-free in printer class management"
-      },
-      {
-        "id": "CVE-2026-107890",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via repeated IPP group tags"
-      },
-      {
         "id": "CVE-2026-55467",
         "pkg": "libcups2",
         "installedVersion": "2.4.2-3+deb12u9",
@@ -45978,22 +46002,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "cups: OpenPrinting CUPS: Remaining case-insensitive username matching in scheduler side paths (CVE-2026-27447 follow-up)"
-      },
-      {
-        "id": "CVE-2026-55480",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
-      },
-      {
-        "id": "CVE-2026-61702",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "OpenPrinting CUPS is an open source printing system for Linux and othe ..."
       },
       {
         "id": "TEMP-0000000-3F659E",
@@ -46498,6 +46506,22 @@
         "fixedVersion": "1.643-4+deb12u3",
         "severity": "MEDIUM",
         "title": "perl-DBI: perl-DBI: Denial of Service via numeric FetchHashKeyName attribute"
+      },
+      {
+        "id": "CVE-2026-108518",
+        "pkg": "libdbi-perl",
+        "installedVersion": "1.643-4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-111879",
+        "pkg": "libdbi-perl",
+        "installedVersion": "1.643-4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-19617",
@@ -53830,7 +53854,7 @@
     ]
   },
   "app": {
-    "total": 244,
+    "total": 247,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -53999,6 +54023,22 @@
         "fixedVersion": "6.6.10",
         "severity": "HIGH",
         "title": "engine.io: engine.io: Denial of Service via protocol revision mismatch during transport upgrade"
+      },
+      {
+        "id": "CVE-2026-111755",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via improper regular expression escaping in sensitive header filtering"
+      },
+      {
+        "id": "CVE-2026-111756",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.1",
+        "severity": "HIGH",
+        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
       },
       {
         "id": "CVE-2025-64756",
@@ -55321,6 +55361,14 @@
         "title": "Gorilla WebSocket Uses Cryptographically Weak PRNG for WebSocket Mask Key"
       },
       {
+        "id": "CVE-2026-63209",
+        "pkg": "github.com/klauspost/compress",
+        "installedVersion": "v1.18.0",
+        "fixedVersion": "1.18.7",
+        "severity": "HIGH",
+        "title": "github.com/klauspost/compress: klauspost/compress: Denial of Service via integer overflow in dictionary processing"
+      },
+      {
         "id": "CVE-2026-81870",
         "pkg": "go.opentelemetry.io/otel/exporters/otlp/otlptrace",
         "installedVersion": "v1.43.0",
@@ -55526,7 +55574,7 @@
         "installedVersion": "v0.37.0",
         "fixedVersion": "0.41.0",
         "severity": "HIGH",
-        "title": "The Nickname profile can panic with an out-of-bounds slice error when  ..."
+        "title": "golang.org/x/text: golang.org/x/text: Denial of Service via out-of-bounds slice error in Nickname profile"
       },
       {
         "id": "CVE-2026-56852",
