@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# PFNApp hardened image for Shlink 5.1.7
+# PFNApp hardened image for Shlink 5.1.8
 # Remediates CVE-2026-77405, CVE-2026-77408, CVE-2026-77411 (amqp091-go) in RoadRunner binary
 
 # Stage 1: Build hardened RoadRunner binary
@@ -15,7 +15,7 @@ RUN git clone --depth 1 --branch v2025.1.15 https://github.com/roadrunner-server
       -o /out/rr ./cmd/rr
 
 # Stage 2: Hardened Shlink runtime
-FROM docker.io/shlinkio/shlink:5.1.7
+FROM docker.io/shlinkio/shlink:5.1.8
 USER root
 RUN apk update && \
     apk upgrade --no-cache && \

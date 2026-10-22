@@ -76,13 +76,18 @@
       "image": "openclaw/openclaw",
       "tag_pattern": "^[0-9]{4}\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "2026.10.6",
         "2026.10.5",
         "2026.10.4",
         "2026.10.3",
-        "2026.10.2",
-        "2026.10.1"
+        "2026.10.2"
       ],
       "deprecated_versions": [
+        {
+          "tag": "2026.10.1",
+          "droppedAt": "2026-10-22",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.10.6 immediately."
+        },
         {
           "tag": "2026.9.9",
           "droppedAt": "2026-10-18",
@@ -118,13 +123,18 @@
       "image": "n8nio/n8n",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "2.45.2",
         "2.45.1",
         "2.45.0",
         "2.44.4",
-        "2.44.3",
-        "2.44.2"
+        "2.44.3"
       ],
       "deprecated_versions": [
+        {
+          "tag": "2.44.2",
+          "droppedAt": "2026-10-22",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.45.2 immediately."
+        },
         {
           "tag": "2.44.1",
           "droppedAt": "2026-10-21",
@@ -310,6 +320,7 @@
       "image": "shlinkio/shlink",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "5.1.8",
         "5.1.7",
         "5.1.6"
       ],
