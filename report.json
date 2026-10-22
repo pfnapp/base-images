@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-22T13:49:25.673Z",
+    "generatedAt": "2026-10-22T13:51:42.883Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 47,
+    "totalMonitoredVersions": 48,
     "runAsRootCount": 31,
     "criticalVulnerabilityCount": 83,
     "highVulnerabilityCount": 806,
-    "pfnappScannedCount": 46,
+    "pfnappScannedCount": 47,
     "totalCveReduction": 1231
   },
   "applications": [
@@ -214535,9 +214535,95 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "5.1.8",
+          "fullRef": "shlinkio/shlink:5.1.8",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "1001",
+            "uidLabel": "1001"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 1
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 2,
+                "low": 5,
+                "fixable": 0,
+                "total": 9,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-63209",
+                    "pkg": "github.com/klauspost/compress",
+                    "installedVersion": "v1.18.6",
+                    "fixedVersion": "1.18.7",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-63209"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 2,
+                "low": 5,
+                "total": 8
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
+          "posture": "COMPLIANT",
+          "postureBadge": "🟢",
+          "scannedAt": "2026-10-22T13:51:42.883Z"
+        },
+        {
           "tag": "5.1.7",
           "fullRef": "shlinkio/shlink:5.1.7",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -215146,7 +215232,7 @@
         {
           "tag": "5.1.6",
           "fullRef": "shlinkio/shlink:5.1.6",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
