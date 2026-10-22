@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-21T05:47:58.312Z",
+  "scannedAt": "2026-10-22T05:48:38.396Z",
   "system": {
-    "total": 4,
+    "total": 5,
     "cves": [
       {
         "id": "CVE-2026-77214",
@@ -18,6 +18,14 @@
         "fixedVersion": "2.9.0-r0",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
+      },
+      {
+        "id": "CVE-2026-107891",
+        "pkg": "musl",
+        "installedVersion": "1.2.6-r2",
+        "fixedVersion": "1.2.6-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107891"
       },
       {
         "id": "CVE-2026-4775",
@@ -62,7 +70,7 @@
         "installedVersion": "1.31.0",
         "fixedVersion": "1.32.0",
         "severity": "HIGH",
-        "title": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them"
+        "title": "@modelcontextprotocol/sdk: @modelcontextprotocol/sdk: Unauthorized cross-session task access via taskStore"
       },
       {
         "id": "CVE-2026-111768",
@@ -158,7 +166,7 @@
         "installedVersion": "1.16.0",
         "fixedVersion": "1.16.1",
         "severity": "HIGH",
-        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
+        "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
       },
       {
         "id": "CVE-2026-111756",
@@ -166,7 +174,7 @@
         "installedVersion": "1.16.0",
         "fixedVersion": "1.16.1",
         "severity": "HIGH",
-        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
+        "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
       },
       {
         "id": "CVE-2026-106445",
@@ -406,7 +414,7 @@
         "installedVersion": "2.17.7",
         "fixedVersion": "2.18.0",
         "severity": "MEDIUM",
-        "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render"
+        "title": "sanitize-html: sanitize-html: HTML sanitization bypass via improper noscript tag handling"
       },
       {
         "id": "CVE-2026-113661",
@@ -414,7 +422,7 @@
         "installedVersion": "2.17.7",
         "fixedVersion": "2.18.0",
         "severity": "MEDIUM",
-        "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs"
+        "title": "sanitize-html: sanitize-html: Cross-site scripting via unsafe meta refresh content attributes"
       },
       {
         "id": "CVE-2026-113657",
@@ -422,7 +430,7 @@
         "installedVersion": "2.17.7",
         "fixedVersion": "2.18.0",
         "severity": "LOW",
-        "title": "ApostropheCMS sanitize-html: SMIL animation namespace-prefix bypass allows javascript: URI injection (XSS)"
+        "title": "sanitize-html: sanitize-html: arbitrary script execution via namespace-prefixed SVG animation elements"
       },
       {
         "id": "CVE-2024-1899",

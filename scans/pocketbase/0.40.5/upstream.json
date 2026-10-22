@@ -1,8 +1,24 @@
 {
-  "scannedAt": "2026-10-21T05:49:52.546Z",
+  "scannedAt": "2026-10-22T05:50:02.963Z",
   "system": {
-    "total": 1,
+    "total": 3,
     "cves": [
+      {
+        "id": "CVE-2026-107891",
+        "pkg": "musl",
+        "installedVersion": "1.2.6-r2",
+        "fixedVersion": "1.2.6-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107891"
+      },
+      {
+        "id": "CVE-2026-107891",
+        "pkg": "musl-utils",
+        "installedVersion": "1.2.6-r2",
+        "fixedVersion": "1.2.6-r3",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107891"
+      },
       {
         "id": "CVE-2026-85091",
         "pkg": "zlib",
@@ -14,7 +30,7 @@
     ]
   },
   "app": {
-    "total": 7,
+    "total": 8,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -71,6 +87,14 @@
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-111943",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.2",
+        "fixedVersion": "1.26.10, 1.27.3",
+        "severity": "HIGH",
+        "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
       }
     ]
   }

@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-10-21T05:50:38.167Z",
+  "scannedAt": "2026-10-22T05:50:38.815Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 19,
+    "total": 20,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -54,6 +54,14 @@
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-111943",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.10, 1.27.3",
+        "severity": "HIGH",
+        "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
       },
       {
         "id": "CVE-2026-78667",

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-21T05:50:06.002Z",
+  "scannedAt": "2026-10-22T05:50:14.354Z",
   "system": {
     "total": 3933,
     "cves": [
@@ -6137,7 +6137,7 @@
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95209",
@@ -6145,7 +6145,7 @@
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "An issue in gnutls v3.8.13 causes legitimate CA certificates to be rej ..."
+        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -6153,7 +6153,7 @@
         "installedVersion": "3.8.9-3+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
       },
       {
         "id": "CVE-2026-102010",
@@ -8756,6 +8756,14 @@
         "title": "kernel: Kernel: Privilege escalation via use-after-free in drm/panthor"
       },
       {
+        "id": "CVE-2026-100072",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: ACPI: platform: Use acpi_bus_get_primary_device()"
+      },
+      {
         "id": "CVE-2026-23102",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -9580,36 +9588,12 @@
         "title": "kernel: net: skbuff: don't skb_tx_error() the source skb in skb_zerocopy()"
       },
       {
-        "id": "CVE-2026-90057",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-90111",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: ip6mr: do not clone dst in ip6mr_cache_report()"
-      },
-      {
-        "id": "CVE-2026-90167",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-90169",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
       },
       {
         "id": "CVE-2026-90206",
@@ -9634,142 +9618,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: PCI/sysfs: Add lockdown checks to legacy I/O and memory handlers"
-      },
-      {
-        "id": "CVE-2026-90375",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90380",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90392",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-90398",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90417",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92499",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-92507",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92509",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92510",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92511",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92512",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-93105",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-93148",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-93154",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-93175",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-93176",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-93210",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-93288",
@@ -9948,36 +9796,12 @@
         "title": "kernel: KVM: arm64: Transfer the hyp stack pages out of the host stage-2"
       },
       {
-        "id": "CVE-2026-98479",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98487",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
         "id": "CVE-2026-98490",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98491",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net: openvswitch: conntrack: fix helper UAF due to extensions realloc"
       },
       {
         "id": "CVE-2026-98524",
@@ -10020,20 +9844,12 @@
         "title": "kernel: net: skbuff: fix pull-bound underflow in skb_checksum_setup_ipv6()"
       },
       {
-        "id": "CVE-2026-98601",
+        "id": "CVE-2026-98614",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98606",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: sctp: avoid livelock while updating retransmit path"
       },
       {
         "id": "CVE-2026-98624",
@@ -10077,14 +9893,6 @@
       },
       {
         "id": "CVE-2026-98641",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98642",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
@@ -10140,14 +9948,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
       },
       {
-        "id": "CVE-2026-98708",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
         "id": "CVE-2026-98709",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -10164,14 +9964,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
       },
       {
-        "id": "CVE-2026-98733",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
         "id": "CVE-2026-98734",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -10181,22 +9973,6 @@
       },
       {
         "id": "CVE-2026-98735",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98737",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
-        "id": "CVE-2026-98738",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
@@ -10225,7 +10001,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: kernel: Use-after-free via race condition in ALSA sequencer compatibility ioctls"
       },
       {
         "id": "CVE-2026-98752",
@@ -10277,14 +10053,6 @@
       },
       {
         "id": "CVE-2026-98799",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98800",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
@@ -11148,12 +10916,12 @@
         "title": "kernel: netfilter: nf_nat_sip: rewind offset when NAT shrinks the packet"
       },
       {
-        "id": "CVE-2026-100072",
+        "id": "CVE-2026-100071",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "kernel: ACPI: platform: Use acpi_bus_get_primary_device()"
+        "title": "kernel: net: hsr: free learned nodes on device setup failure"
       },
       {
         "id": "CVE-2026-100074",
@@ -13556,14 +13324,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
       },
       {
-        "id": "CVE-2026-80828",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
         "id": "CVE-2026-80829",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -13644,14 +13404,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
-        "id": "CVE-2026-80845",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
         "id": "CVE-2026-80846",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -13684,14 +13436,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
       },
       {
-        "id": "CVE-2026-80861",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
         "id": "CVE-2026-80862",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -13716,20 +13460,12 @@
         "title": "kernel: RDMA/rxe: Fix responder UAF on IB_QP_MAX_DEST_RD_ATOMIC modify_qp"
       },
       {
-        "id": "CVE-2026-80866",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-      },
-      {
         "id": "CVE-2026-80914",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+        "title": "kernel: Bluetooth: ISO: fix use-after-free of listener socket in iso_conn_ready"
       },
       {
         "id": "CVE-2026-80920",
@@ -13737,7 +13473,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: io_uring: defer eventfd signaling when queued from a wakeup handler"
       },
       {
         "id": "CVE-2026-80922",
@@ -13745,7 +13481,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: qcom-rng - Allow zero as a random number"
       },
       {
         "id": "CVE-2026-80923",
@@ -13753,7 +13489,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+        "title": "kernel: xhci: dbgtty: Fix unregister on tty_register_driver() failure"
       },
       {
         "id": "CVE-2026-80925",
@@ -13761,7 +13497,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+        "title": "kernel: vlan: fix skb_under_panic and races when toggling HW VLAN offload"
       },
       {
         "id": "CVE-2026-80926",
@@ -14780,14 +14516,6 @@
         "title": "kernel: ipv6: rpl: fix NULL dereference of idev in ipv6_rpl_srh_rcv()"
       },
       {
-        "id": "CVE-2026-89562",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-89565",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -15716,14 +15444,6 @@
         "title": "kernel: xfrm6: fix out-of-bounds write in xfrm6_input_addr() when secpath is full"
       },
       {
-        "id": "CVE-2026-89784",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  S ..."
-      },
-      {
         "id": "CVE-2026-89785",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -15780,28 +15500,12 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
       },
       {
-        "id": "CVE-2026-89796",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
         "id": "CVE-2026-89798",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
-      },
-      {
-        "id": "CVE-2026-89800",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
         "id": "CVE-2026-89801",
@@ -15832,30 +15536,6 @@
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-89808",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-89812",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-89813",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
@@ -16036,14 +15716,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
-        "id": "CVE-2026-89851",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-89852",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16061,14 +15733,6 @@
       },
       {
         "id": "CVE-2026-89854",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-89855",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
@@ -16149,22 +15813,6 @@
       },
       {
         "id": "CVE-2026-89871",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-89874",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-89876",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
@@ -16372,14 +16020,6 @@
         "title": "kernel: KVM: arm64: vgic-its: Don't dereference a NULL collection on ITT save"
       },
       {
-        "id": "CVE-2026-89926",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
         "id": "CVE-2026-89927",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16548,14 +16188,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
       },
       {
-        "id": "CVE-2026-89955",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-89956",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16565,14 +16197,6 @@
       },
       {
         "id": "CVE-2026-89957",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-89958",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
@@ -16660,14 +16284,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
       },
       {
-        "id": "CVE-2026-89979",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
         "id": "CVE-2026-89983",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16682,14 +16298,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-89986",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
       },
       {
         "id": "CVE-2026-89987",
@@ -16836,14 +16444,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
-        "id": "CVE-2026-90019",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
         "id": "CVE-2026-90020",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16900,14 +16500,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
       },
       {
-        "id": "CVE-2026-90031",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
         "id": "CVE-2026-90032",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -16922,22 +16514,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-90034",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
-        "id": "CVE-2026-90035",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
         "id": "CVE-2026-90039",
@@ -16986,6 +16562,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: net: fec: only stop PTP if it was initialized"
+      },
+      {
+        "id": "CVE-2026-90057",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: slip: remove slip_hangup() to fix use-after-free in slip_receive_buf()"
       },
       {
         "id": "CVE-2026-90061",
@@ -17361,7 +16945,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+        "title": "kernel: ksmbd: bound smb_check_perm_dacl() ACE walks by DACL size"
       },
       {
         "id": "CVE-2026-90154",
@@ -17385,7 +16969,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+        "title": "kernel: ksmbd: safely discard unregistered deferred locks"
       },
       {
         "id": "CVE-2026-90157",
@@ -17442,6 +17026,22 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: smb/server: fix null-ptr-deref in ksmbd_ipc_tree_connect_request()"
+      },
+      {
+        "id": "CVE-2026-90167",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: ksmbd: serialize oplock close with pending break ownership"
+      },
+      {
+        "id": "CVE-2026-90169",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ksmbd: free preauth sessions on connection teardown"
       },
       {
         "id": "CVE-2026-90170",
@@ -18201,7 +17801,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+        "title": "kernel: HID: synchronize input before cleaning up a failed probe"
       },
       {
         "id": "CVE-2026-90333",
@@ -18284,6 +17884,14 @@
         "title": "kernel: wifi: ath10k: snoc: use memcpy_fromio() for MSA ramdump"
       },
       {
+        "id": "CVE-2026-90351",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: mt7996: do not attach hif2 WED when the main WED attach failed"
+      },
+      {
         "id": "CVE-2026-90352",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -18297,7 +17905,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7915: fix ext PHY use-after-free on register error path"
       },
       {
         "id": "CVE-2026-90354",
@@ -18313,7 +17921,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7915: unlink TWT flow if the MCU rejects the agreement"
       },
       {
         "id": "CVE-2026-90358",
@@ -18321,15 +17929,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf, x86: Fix trampoline stack size for 128-bit arguments"
       },
       {
-        "id": "CVE-2026-90360",
+        "id": "CVE-2026-90359",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
+        "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: bpf: Reject >8 byte return values on return-reading trampoline paths"
       },
       {
         "id": "CVE-2026-90361",
@@ -18348,6 +17956,14 @@
         "title": "kernel: drm/msm/dsi: Drop dev_pm_opp_set_rate(0)"
       },
       {
+        "id": "CVE-2026-90363",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/msm: don't tear down KMS twice when KMS init fails"
+      },
+      {
         "id": "CVE-2026-90364",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -18356,12 +17972,28 @@
         "title": "kernel: ACPI: processor: Unregister cpufreq notifier on init failure"
       },
       {
+        "id": "CVE-2026-90365",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: cancel reset and rc work on device unregister"
+      },
+      {
         "id": "CVE-2026-90366",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7996: reserve space for the CSA-abort countdown TLV"
+      },
+      {
+        "id": "CVE-2026-90367",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: mt7996: hold dev->mt76.mutex while disabling tx worker in SER"
       },
       {
         "id": "CVE-2026-90368",
@@ -18369,7 +18001,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7915: unwind state on add_interface failure"
       },
       {
         "id": "CVE-2026-90370",
@@ -18377,7 +18009,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7996: bound TLV walk in mt7996_mcu_get_chip_config"
       },
       {
         "id": "CVE-2026-90372",
@@ -18385,7 +18017,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7915: avoid nss underflow in mt7915_mcu_get_sta_nss"
       },
       {
         "id": "CVE-2026-90373",
@@ -18393,7 +18025,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7915: clear wcid mask under mutex after RCU pointer clear"
       },
       {
         "id": "CVE-2026-90374",
@@ -18401,7 +18033,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt7996: validate RX band_idx before dereferencing phys[]"
+      },
+      {
+        "id": "CVE-2026-90375",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: fix non-AQL packet accounting for MLO stations"
       },
       {
         "id": "CVE-2026-90378",
@@ -18412,28 +18052,36 @@
         "title": "kernel: wifi: mt76: mt792x: Fix memory leak in SDIO TX path"
       },
       {
+        "id": "CVE-2026-90379",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: mt7921: Add PCIe AER handler support to prevent system crash"
+      },
+      {
+        "id": "CVE-2026-90380",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: mt76: mt792x: fix use-after-free in mt76_rx_poll_complete"
+      },
+      {
         "id": "CVE-2026-90382",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mt76: mt76x02: do not WARN on invalid rx descriptor length"
       },
       {
-        "id": "CVE-2026-90386",
+        "id": "CVE-2026-90383",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-90387",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: misc: sgi-gru: remove interrupt-context page-table walks"
       },
       {
         "id": "CVE-2026-90388",
@@ -18441,15 +18089,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: iommu/dma: Check atomic pool allocation result directly"
       },
       {
-        "id": "CVE-2026-90391",
+        "id": "CVE-2026-90392",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
+        "title": "kernel: bpf: Fix potential UAF when reading bpf link info"
       },
       {
         "id": "CVE-2026-90393",
@@ -18457,7 +18105,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Fix potential UAF in bpf_netns_link_update_prog"
       },
       {
         "id": "CVE-2026-90394",
@@ -18465,7 +18113,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: power: supply: sc2731_charger: cancel work on remove"
       },
       {
         "id": "CVE-2026-90395",
@@ -18473,7 +18121,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: power: supply: isp1704_charger: cancel work on remove"
       },
       {
         "id": "CVE-2026-90397",
@@ -18481,7 +18129,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: qcom: scm: Fix NULL dereference in IRQ handler before __scm is published"
+      },
+      {
+        "id": "CVE-2026-90398",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: ath11k: fix stride mismatch in mac_phy_caps_parse()"
       },
       {
         "id": "CVE-2026-90399",
@@ -18489,7 +18145,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: ath12k: fix stride mismatch in mac_phy_caps_parse()"
       },
       {
         "id": "CVE-2026-90400",
@@ -18497,7 +18153,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: md: recheck spare changes before starting sync"
+      },
+      {
+        "id": "CVE-2026-90401",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: md: remove REQ_NOWAIT support from raid1/10/456"
       },
       {
         "id": "CVE-2026-90403",
@@ -18505,7 +18169,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: rtlwifi: pci: fix error path in rtl_pci_probe()"
       },
       {
         "id": "CVE-2026-90404",
@@ -18524,12 +18188,28 @@
         "title": "kernel: wifi: ath11k: fix overreads in ath11k_wmi_process_csa_switch_count_event()"
       },
       {
+        "id": "CVE-2026-90408",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: wifi: ath12k: fix overreads in ath12k_wmi_process_csa_switch_count_event()"
+      },
+      {
         "id": "CVE-2026-90409",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/panthor: Add vm_bind region with kbo range overlap check"
+      },
+      {
+        "id": "CVE-2026-90410",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: spi: davinci: switch to managed controller allocation"
       },
       {
         "id": "CVE-2026-90413",
@@ -18537,7 +18217,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+        "title": "kernel: IB/isert: reject login PDUs declaring more data than was received"
       },
       {
         "id": "CVE-2026-90414",
@@ -18553,7 +18233,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/mlx5: Fix stack out-of-bounds read in cc_params debugfs"
+      },
+      {
+        "id": "CVE-2026-90417",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/cxgb4: Fix dereg_skb leak and double free in write_tpt_entry()"
+      },
+      {
+        "id": "CVE-2026-90418",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: nilfs2: fix BUG in nilfs_copy_dirty_pages() on dirty state mismatch"
       },
       {
         "id": "CVE-2026-90419",
@@ -18561,7 +18257,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nilfs2: prevent out-of-bounds read in super root block parsing"
       },
       {
         "id": "CVE-2026-90420",
@@ -18569,7 +18265,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nilfs2: fix infinite loop in nilfs_clean_segments()"
+      },
+      {
+        "id": "CVE-2026-90421",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: PCI: Fix UAF when probe runs concurrent to dyn ID removal"
       },
       {
         "id": "CVE-2026-90422",
@@ -18585,7 +18289,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: iommu/tegra241-cmdqv: Free the error IRQ before tearing down VINTFs"
       },
       {
         "id": "CVE-2026-90427",
@@ -18596,28 +18300,20 @@
         "title": "kernel: iommu/tegra241-cmdqv: Don't fall back to a freed smmu after devm_krealloc()"
       },
       {
-        "id": "CVE-2026-90428",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-90430",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-90431",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: remoteproc: Prevent crash handling to race with rproc_del()"
+      },
+      {
+        "id": "CVE-2026-90433",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: spi: oc-tiny: switch to managed controller allocation"
       },
       {
         "id": "CVE-2026-90434",
@@ -18633,7 +18329,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/mlx5: Fix integer overflow of user QP buffer size"
       },
       {
         "id": "CVE-2026-92476",
@@ -18641,7 +18337,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: keembay - Initialize completion before requesting IRQ"
       },
       {
         "id": "CVE-2026-92477",
@@ -18649,7 +18345,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: ufs: debugfs: Reserve space for a string terminator"
       },
       {
         "id": "CVE-2026-92480",
@@ -18657,7 +18353,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: ufs: core: Validate string descriptors"
+      },
+      {
+        "id": "CVE-2026-92481",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: pinctrl: mediatek: free EINT resources on unbind"
+      },
+      {
+        "id": "CVE-2026-92482",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: pinctrl: mediatek: use devm_gpiochip_add_data() for GPIO chip"
       },
       {
         "id": "CVE-2026-92484",
@@ -18665,7 +18377,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: cxl/region: Fix use-after-free in find_pos_and_ways() error path"
       },
       {
         "id": "CVE-2026-92485",
@@ -18673,7 +18385,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Fix WARNING in bpf_tracing_link_release"
       },
       {
         "id": "CVE-2026-92488",
@@ -18689,7 +18401,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+        "title": "kernel: xfrm: Fix skb double-free in xfrm_dev_direct_output()"
       },
       {
         "id": "CVE-2026-92490",
@@ -18697,7 +18409,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Unrequest devices if driver registration fails"
       },
       {
         "id": "CVE-2026-92491",
@@ -18705,7 +18417,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Roll back partial protocol table registration"
       },
       {
         "id": "CVE-2026-92495",
@@ -18713,7 +18425,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/bnxt_re: Clear VM_MAYWRITE on DBR/toggle page mmap"
       },
       {
         "id": "CVE-2026-92496",
@@ -18721,7 +18433,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: ath11k: Avoid buffer overread in ath11k_wmi_tlv_op_rx()"
       },
       {
         "id": "CVE-2026-92497",
@@ -18729,7 +18441,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: ath12k: Avoid buffer overread in ath12k_wmi_op_rx()"
       },
       {
         "id": "CVE-2026-92498",
@@ -18737,7 +18449,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: ath6kl: avoid buffer overreads in WMI event handlers"
+      },
+      {
+        "id": "CVE-2026-92499",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: ext4: validate readdir offset before accessing dirent"
       },
       {
         "id": "CVE-2026-92500",
@@ -18745,7 +18465,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: use fsdata to track inline data write state and fix race"
       },
       {
         "id": "CVE-2026-92501",
@@ -18753,7 +18473,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: drain in-flight DIO before buffered write fallback"
       },
       {
         "id": "CVE-2026-92502",
@@ -18761,7 +18481,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: clear stale xarray tags on folios skipped during writeback"
       },
       {
         "id": "CVE-2026-92503",
@@ -18769,7 +18489,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: fix ABBA deadlock in ext4_xattr_inode_cache_find()"
       },
       {
         "id": "CVE-2026-92504",
@@ -18785,7 +18505,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Fix requested device removal race"
+      },
+      {
+        "id": "CVE-2026-92507",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Fix potential use after free in ib_dealloc_pd_user()"
       },
       {
         "id": "CVE-2026-92508",
@@ -18793,7 +18521,39 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/core: Fix potential use after free in ib_free_cq()"
+      },
+      {
+        "id": "CVE-2026-92509",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Fix potential use after free in counter_release()"
+      },
+      {
+        "id": "CVE-2026-92510",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Fix potential use after free in ib_destroy_srq_user()"
+      },
+      {
+        "id": "CVE-2026-92511",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Fix potential use after free in ib_destroy_cq_user()"
+      },
+      {
+        "id": "CVE-2026-92512",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/core: Fix use after free in ib_query_qp()"
       },
       {
         "id": "CVE-2026-92514",
@@ -18801,15 +18561,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
-      },
-      {
-        "id": "CVE-2026-92515",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: RDMA/erdma: Fix CEQ tasklet use-after-free on removal"
       },
       {
         "id": "CVE-2026-92518",
@@ -18817,7 +18569,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: riscv, bpf: Fix kernel stack corruption in tailcall with CFI"
       },
       {
         "id": "CVE-2026-92519",
@@ -18833,7 +18585,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Zero queue and stack outputs on lock failure"
       },
       {
         "id": "CVE-2026-92521",
@@ -18841,7 +18593,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: ACPI: PCI: Clear driver_data on all paths that free the acpi_pci_root"
       },
       {
         "id": "CVE-2026-92522",
@@ -18849,15 +18601,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-92523",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: ACPI: processor: validate MADT IOAPIC entry bounds"
       },
       {
         "id": "CVE-2026-92525",
@@ -18865,7 +18609,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/rxe: Validate num_sge/cur_sge before indexing wqe->dma.sge[]"
       },
       {
         "id": "CVE-2026-93037",
@@ -18873,7 +18617,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/hfi1: Propagate sdma_txinit_ahg() errors"
       },
       {
         "id": "CVE-2026-93039",
@@ -18881,7 +18625,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: ASoC: meson: Keep link pointers valid on realloc failure"
       },
       {
         "id": "CVE-2026-93040",
@@ -18889,7 +18633,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: dmaengine: dw-edma: Serialize channel state checks"
       },
       {
         "id": "CVE-2026-93041",
@@ -18897,7 +18641,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: dmaengine: dw-edma: Serialize abort state updates"
+      },
+      {
+        "id": "CVE-2026-93042",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: dmaengine: dw-edma: Terminate all descriptors without callbacks"
       },
       {
         "id": "CVE-2026-93044",
@@ -18905,7 +18657,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Disallow interpreter fallback for arena-related insns"
       },
       {
         "id": "CVE-2026-93045",
@@ -18913,7 +18665,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Reject arena frees below the arena base"
       },
       {
         "id": "CVE-2026-93046",
@@ -18921,7 +18673,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: software node: Fix software_node_get_reference_args() with index -1"
+      },
+      {
+        "id": "CVE-2026-93047",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/v3d: Associate BOs with every job that accesses them"
       },
       {
         "id": "CVE-2026-93048",
@@ -18929,7 +18689,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mtd: part: reject MTDPART_OFS_RETAIN in mtd_add_partition()"
       },
       {
         "id": "CVE-2026-93049",
@@ -18937,7 +18697,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mtd: mtdswap: Avoid freeing registered blktrans device twice"
+      },
+      {
+        "id": "CVE-2026-93050",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ipack: ipoctal: fix UAF, null-ptr-deref, and use-after-free in cleanup on remove"
       },
       {
         "id": "CVE-2026-93051",
@@ -18945,7 +18713,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: misc: ad525x_dpot: use driver core groups for sysfs files"
       },
       {
         "id": "CVE-2026-93052",
@@ -18953,7 +18721,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: misc: bcm-vk: Use acquire/release for msgq_inited"
       },
       {
         "id": "CVE-2026-93053",
@@ -18961,7 +18729,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: speakup: keyhelp: guard letter_offsets possible out-of-range indexing"
       },
       {
         "id": "CVE-2026-93054",
@@ -18969,7 +18737,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: uio: Fix stale info pointer in failed registration path"
       },
       {
         "id": "CVE-2026-93055",
@@ -18977,7 +18745,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
+        "title": "kernel: UDF symlink pathComponent header OOB read"
       },
       {
         "id": "CVE-2026-93056",
@@ -18988,12 +18756,20 @@
         "title": "kernel: usb: gadget: f_uac1_legacy: remove broken string configfs attributes"
       },
       {
+        "id": "CVE-2026-93058",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/msm: Only fini scheduler after successful init"
+      },
+      {
         "id": "CVE-2026-93061",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  g ..."
+        "title": "kernel: gpu: host1x: Avoid stack over-read in debug output helpers"
       },
       {
         "id": "CVE-2026-93063",
@@ -19001,7 +18777,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: iwlwifi: mei: check SAP message length before reading it"
       },
       {
         "id": "CVE-2026-93064",
@@ -19009,7 +18785,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: iwlwifi: mvm: fix off-by-one in TXF key sanitiser"
       },
       {
         "id": "CVE-2026-93065",
@@ -19017,7 +18793,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: iwlwifi: fix counter type in iwl_fwrt_dump_error_logs"
       },
       {
         "id": "CVE-2026-93067",
@@ -19025,7 +18801,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/bridge: tc358767: clamp the reported AUX read size to the request"
       },
       {
         "id": "CVE-2026-93070",
@@ -19033,7 +18809,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: media: ipu6: Do not free aux device pdata after init"
       },
       {
         "id": "CVE-2026-93071",
@@ -19049,7 +18825,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: dax: read holder_ops once in dax_holder_notify_failure()"
+      },
+      {
+        "id": "CVE-2026-93081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: firmware: arm_scmi: Fix SCMI device destroy lifetimes"
       },
       {
         "id": "CVE-2026-93084",
@@ -19057,7 +18841,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Drop handle on protocol bind failures"
       },
       {
         "id": "CVE-2026-93085",
@@ -19065,7 +18849,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Reject out of range DT protocol IDs"
       },
       {
         "id": "CVE-2026-93086",
@@ -19073,7 +18857,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Avoid IDR updates while cleaning channels"
       },
       {
         "id": "CVE-2026-93089",
@@ -19092,12 +18876,20 @@
         "title": "kernel: firmware: arm_scmi: Clean up channels on setup failure"
       },
       {
+        "id": "CVE-2026-93091",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: firmware: arm_scmi: Quiesce notifications before teardown"
+      },
+      {
         "id": "CVE-2026-93092",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Unregister device notifier before IDR teardown"
       },
       {
         "id": "CVE-2026-93095",
@@ -19105,15 +18897,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-93097",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: hfsplus: validate thread record before delete key rebuild"
       },
       {
         "id": "CVE-2026-93098",
@@ -19121,7 +18905,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: rpmsg: glink: fix deadlock in endpoint destroy during driver detach"
+      },
+      {
+        "id": "CVE-2026-93099",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: fs/resctrl: Fix UAF from worker threads when domains are removed"
+      },
+      {
+        "id": "CVE-2026-93100",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: fs/resctrl: Prevent use-after-free in rdtgroup_kn_put()"
       },
       {
         "id": "CVE-2026-93101",
@@ -19132,12 +18932,20 @@
         "title": "kernel: media: v4l2-async: Unregister sub-device if asc_list is empty"
       },
       {
-        "id": "CVE-2026-93103",
+        "id": "CVE-2026-93104",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
+        "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/rvt: Return NULL after port allocation failure"
+      },
+      {
+        "id": "CVE-2026-93105",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: esp: do not unref managed frag pages in esp_ssg_unref()"
       },
       {
         "id": "CVE-2026-93107",
@@ -19145,7 +18953,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/rxe: Avoid reprocessing the current packet after the QP enters the error state"
       },
       {
         "id": "CVE-2026-93108",
@@ -19153,7 +18961,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/ipoib: Drain RCU callbacks during module teardown"
       },
       {
         "id": "CVE-2026-93109",
@@ -19161,7 +18969,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/mlx5: Drain RCU callbacks during module teardown"
       },
       {
         "id": "CVE-2026-93110",
@@ -19169,7 +18977,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/core: Wait for RCU callbacks before unloading ib_core"
       },
       {
         "id": "CVE-2026-93113",
@@ -19177,7 +18985,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: clk: qcom: camcc-sc8280xp: unregister CAMCC_GDSC_CLK"
       },
       {
         "id": "CVE-2026-93114",
@@ -19185,15 +18993,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-93115",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: platform/surface: acpi-notify: Check ACPI companion before use"
       },
       {
         "id": "CVE-2026-93117",
@@ -19209,7 +19009,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: gadget: aspeed_udc: check endpoint DMA allocation"
       },
       {
         "id": "CVE-2026-93119",
@@ -19217,7 +19017,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: ljca: bound bank_num in ljca_enumerate_gpio()"
       },
       {
         "id": "CVE-2026-93120",
@@ -19225,7 +19025,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: gadget: configfs: fix out-of-bounds read of qw_sign"
       },
       {
         "id": "CVE-2026-93121",
@@ -19233,7 +19033,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: gadget: f_fs: Fix fence cleanup in ffs_dmabuf_transfer() error paths"
+      },
+      {
+        "id": "CVE-2026-93122",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: usb: gadget: uac: validate rate list length before storing"
+      },
+      {
+        "id": "CVE-2026-93128",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: platform/x86: lg-laptop: Fix LED resource handling"
       },
       {
         "id": "CVE-2026-93131",
@@ -19241,23 +19057,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-93132",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
-        "id": "CVE-2026-93133",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: platform/x86: dell-privacy: Fix race condition"
       },
       {
         "id": "CVE-2026-93134",
@@ -19265,7 +19065,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: printk: Fix possible console use-after-free"
       },
       {
         "id": "CVE-2026-93135",
@@ -19273,7 +19073,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Reject programs with inlined helpers if JIT is not available"
       },
       {
         "id": "CVE-2026-93137",
@@ -19281,7 +19081,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Fix use-after-free on mm_struct in bpf_find_vma()"
       },
       {
         "id": "CVE-2026-93138",
@@ -19289,15 +19089,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-93140",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: bpf: Fix vmlinux BTF prep race in bpf_get_btf_vmlinux"
       },
       {
         "id": "CVE-2026-93141",
@@ -19305,7 +19097,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: gadget: r8a66597: avoid double free of ep0_req in probe error path"
+      },
+      {
+        "id": "CVE-2026-93142",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: thermal/drivers/rcar: Fix error checking in probe()"
+      },
+      {
+        "id": "CVE-2026-93148",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Reject MEM_ALLOC BTF accesses past object bounds"
       },
       {
         "id": "CVE-2026-93149",
@@ -19313,7 +19121,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: mac80211_hwsim: avoid NULL skb in stop queue drain"
+      },
+      {
+        "id": "CVE-2026-93150",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: cgroup/cpuset: Make nr_deadline_tasks an atomic_t"
       },
       {
         "id": "CVE-2026-93151",
@@ -19329,7 +19145,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nvme-apple: Use acquire/release for queue enabled state"
+      },
+      {
+        "id": "CVE-2026-93154",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: RDMA/irdma: Add refcounting to user ring MRs"
+      },
+      {
+        "id": "CVE-2026-93155",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: crypto: keembay - Fix AEAD unregister count in error path"
       },
       {
         "id": "CVE-2026-93156",
@@ -19337,15 +19169,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-      },
-      {
-        "id": "CVE-2026-93158",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: rk3288 - fail ahash requests on HASH idle timeout"
       },
       {
         "id": "CVE-2026-93159",
@@ -19361,7 +19185,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: atmel-ecc - reject hardware ECDH without a public key"
       },
       {
         "id": "CVE-2026-93162",
@@ -19369,7 +19193,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: qat - cancel work on re-enable SR-IOV timeout"
+      },
+      {
+        "id": "CVE-2026-93163",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: hwrng: core - fix rng list on registration error"
       },
       {
         "id": "CVE-2026-93165",
@@ -19377,7 +19209,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: platform/chrome: sensorhub: Fix memory overread in ring handler"
       },
       {
         "id": "CVE-2026-93167",
@@ -19385,7 +19217,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: csky: Fix a4/a5 restoration in syscall trace path"
+      },
+      {
+        "id": "CVE-2026-93168",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: dmaengine: xilinx_dma: Fix CPU stall in xilinx_dma_poll_timeout"
       },
       {
         "id": "CVE-2026-93170",
@@ -19393,15 +19233,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-93173",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: dmaengine: xilinx_dma: Fix channel idle state management in AXIDMA and MCDMA interrupt handlers"
       },
       {
         "id": "CVE-2026-93174",
@@ -19409,7 +19241,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Copy per-CPU map value padding in copy_map_value_long()"
+      },
+      {
+        "id": "CVE-2026-93175",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/amd/display: Fix dangling pointer in CRTC reset function"
+      },
+      {
+        "id": "CVE-2026-93176",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/amd/display: Fix dangling pointer in plane reset function"
       },
       {
         "id": "CVE-2026-93177",
@@ -19417,7 +19265,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amdgpu/pm/powerplay: bounds-check voltage index in Vega10 lookup"
       },
       {
         "id": "CVE-2026-93178",
@@ -19425,7 +19273,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amdgpu/pm/powerplay: bounds-check voltage index in SMU7 lookup"
       },
       {
         "id": "CVE-2026-93179",
@@ -19433,7 +19281,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amd/powerplay: fix VoltageObjectInfo zero-stride loop and OOB read"
       },
       {
         "id": "CVE-2026-93182",
@@ -19441,7 +19289,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: sched/fair: Fix overflow in update_tg_cfs_runnable()"
       },
       {
         "id": "CVE-2026-93183",
@@ -19449,7 +19297,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/lima: call drm_mm_init() with a valid allocation range"
       },
       {
         "id": "CVE-2026-93184",
@@ -19457,7 +19305,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: ASoC: fsl_audmix: rework runtime PM handling in probe"
       },
       {
         "id": "CVE-2026-93185",
@@ -19540,14 +19388,6 @@
         "title": "kernel: batman-adv: dat: atomically update mac addresses"
       },
       {
-        "id": "CVE-2026-93206",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  P ..."
-      },
-      {
         "id": "CVE-2026-93207",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -19556,44 +19396,12 @@
         "title": "kernel: SUNRPC: Zero rpc_gss_wire_cred at svcauth_gss_decode_credbody() entry"
       },
       {
-        "id": "CVE-2026-93208",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-93209",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-      },
-      {
         "id": "CVE-2026-93211",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-93212",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-93213",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  o ..."
       },
       {
         "id": "CVE-2026-93214",
@@ -19620,14 +19428,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
       },
       {
-        "id": "CVE-2026-93222",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-93223",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -19644,36 +19444,12 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
-        "id": "CVE-2026-93226",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-93228",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: svcrdma: Reject Write/Reply chunks with segcount 0"
-      },
-      {
-        "id": "CVE-2026-93229",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-93234",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
         "id": "CVE-2026-93236",
@@ -19690,30 +19466,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-93242",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-93243",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
-      },
-      {
-        "id": "CVE-2026-93244",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
       },
       {
         "id": "CVE-2026-93245",
@@ -19746,14 +19498,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  o ..."
-      },
-      {
-        "id": "CVE-2026-93256",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
       },
       {
         "id": "CVE-2026-93259",
@@ -19882,14 +19626,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: i2c: smbus: reject oversized block transfers in the common path"
-      },
-      {
-        "id": "CVE-2026-93781",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-93782",
@@ -21084,14 +20820,6 @@
         "title": "kernel: fbdev: vfb: defer cleanup until the last reference"
       },
       {
-        "id": "CVE-2026-97605",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
         "id": "CVE-2026-97608",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -22004,28 +21732,12 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
-        "id": "CVE-2026-98079",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
         "id": "CVE-2026-98080",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: btrfs: do not force reloc root creation during qgroup_account_snapshot()"
-      },
-      {
-        "id": "CVE-2026-98081",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
         "id": "CVE-2026-98082",
@@ -22098,14 +21810,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98095",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
       },
       {
         "id": "CVE-2026-98096",
@@ -23876,12 +23580,20 @@
         "title": "kernel: perf/core: Fix NULL pmu_ctx passed to pmu->sched_task()"
       },
       {
+        "id": "CVE-2026-98479",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: scsi: libiscsi_tcp: Check the data direction of a Data-In PDU"
+      },
+      {
         "id": "CVE-2026-98481",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nfc: port100: reject frames whose declared length exceeds the received data"
       },
       {
         "id": "CVE-2026-98482",
@@ -23889,7 +23601,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nfc: llcp: drop truncated I/RR/RNR PDUs in nfc_llcp_recv_hdlc()"
+      },
+      {
+        "id": "CVE-2026-98483",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: nfc: fix use-after-free in nfc_get_local_general_bytes"
       },
       {
         "id": "CVE-2026-98485",
@@ -23897,7 +23617,47 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: netfilter: ip6t_rt: fix zero-address non-strict match out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-98487",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: net: bridge: mdb: restart port group walk after deletion"
+      },
+      {
+        "id": "CVE-2026-98488",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: net: atl1e: fix soft lockup on out-of-range hw_next_to_clean read"
+      },
+      {
+        "id": "CVE-2026-98489",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: net: atl1c: fix soft lockup on out-of-range tpd_cons read"
+      },
+      {
+        "id": "CVE-2026-98491",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: net: openvswitch: conntrack: avoid modifying shared unconfirmed ct entry"
+      },
+      {
+        "id": "CVE-2026-98493",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: net: ipconfig: bound DHCP option construction"
       },
       {
         "id": "CVE-2026-98494",
@@ -23905,7 +23665,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net: atl1: fix soft lockup on out-of-range cmb_tpd_next_to_clean read"
       },
       {
         "id": "CVE-2026-98495",
@@ -23913,15 +23673,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98498",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net: arp: terminate device name before lookup"
       },
       {
         "id": "CVE-2026-98499",
@@ -23929,7 +23681,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+        "title": "kernel: HID: wacom: fix OOB read in wacom_wac_pen_serial_enforce()"
       },
       {
         "id": "CVE-2026-98501",
@@ -24412,28 +24164,36 @@
         "title": "kernel: Bluetooth: RFCOMM: Reject short EA=0 frames in rfcomm_recv_frame()"
       },
       {
-        "id": "CVE-2026-98607",
+        "id": "CVE-2026-98601",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: Bluetooth: btintel_pcie: validate device-supplied DMA indices"
       },
       {
-        "id": "CVE-2026-98608",
+        "id": "CVE-2026-98602",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: Bluetooth: bnep: fix out-of-bounds reads on short RX/TX frames and control fallthrough"
       },
       {
-        "id": "CVE-2026-98609",
+        "id": "CVE-2026-98605",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/bridge: samsung-dsim: fix TE GPIO lifetime for host attach"
+      },
+      {
+        "id": "CVE-2026-98606",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/virtio: release the GEM object on virtio_gpu_vram_create() errors"
       },
       {
         "id": "CVE-2026-98610",
@@ -24441,7 +24201,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net/sched: sch_hfsc: bound the classify inner-filter walk with a drift budget"
+      },
+      {
+        "id": "CVE-2026-98611",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Check params size before reading reserved fields"
       },
       {
         "id": "CVE-2026-98612",
@@ -24449,7 +24217,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net: usb: catc: bound the RX packet length in catc_rx_done()"
       },
       {
         "id": "CVE-2026-98613",
@@ -24457,15 +24225,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bpf: Bound ownership depth through local kptrs and graph roots"
       },
       {
-        "id": "CVE-2026-98614",
+        "id": "CVE-2026-98615",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: eth: fbnic: Set AW_FLUSH_MODE alongside AW_FLUSH when flushing the mailbox"
+      },
+      {
+        "id": "CVE-2026-98616",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: eth: fbnic: reset num_napi when the napi vectors are freed"
       },
       {
         "id": "CVE-2026-98622",
@@ -24506,6 +24282,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+      },
+      {
+        "id": "CVE-2026-98642",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via race condition in BPF memory allocator"
       },
       {
         "id": "CVE-2026-98643",
@@ -24588,6 +24372,14 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
       },
       {
+        "id": "CVE-2026-98696",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in USB serial driver deregistration"
+      },
+      {
         "id": "CVE-2026-98698",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -24618,6 +24410,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+      },
+      {
+        "id": "CVE-2026-98708",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: mac80211: Denial of Service via use-after-free in channel context replacement"
       },
       {
         "id": "CVE-2026-98711",
@@ -24668,12 +24468,36 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
       },
       {
+        "id": "CVE-2026-98733",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in Bluetooth ISO packet queueing"
+      },
+      {
         "id": "CVE-2026-98736",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-98737",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of service via Bluetooth inquiry cache use-after-free"
+      },
+      {
+        "id": "CVE-2026-98738",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: denial of service via race condition in Bluetooth SMP remote OOB handling"
       },
       {
         "id": "CVE-2026-98743",
@@ -24721,7 +24545,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: kernel: use-after-free via race condition in TTY device registration"
       },
       {
         "id": "CVE-2026-98753",
@@ -24746,6 +24570,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+      },
+      {
+        "id": "CVE-2026-98762",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in USB DWC2 driver"
       },
       {
         "id": "CVE-2026-98768",
@@ -24810,6 +24642,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+      },
+      {
+        "id": "CVE-2026-98800",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in BPF trampoline"
       },
       {
         "id": "CVE-2026-98801",
@@ -24892,6 +24732,14 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
       },
       {
+        "id": "CVE-2026-98830",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via buffer overflow in WFx Wi-Fi driver"
+      },
+      {
         "id": "CVE-2026-98838",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -24905,7 +24753,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+        "title": "kernel: kernel: Denial of Service via use-after-free in virtual console screen driver"
       },
       {
         "id": "CVE-2026-98843",
@@ -24969,7 +24817,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+        "title": "kernel: kernel: Denial of service via use-after-free in HID multitouch driver"
       },
       {
         "id": "CVE-2004-0230",
@@ -25508,14 +25356,6 @@
         "title": "kernel: staging: most: remove broken i2c driver"
       },
       {
-        "id": "CVE-2026-100071",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "kernel: net: hsr: free learned nodes on device setup failure"
-      },
-      {
         "id": "CVE-2026-31536",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -25985,7 +25825,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: fbdev: Wrap user-invoked calls to fb_set_var() in helper"
+      },
+      {
+        "id": "CVE-2026-80828",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ALSA: usb-audio: Complete cleanup after system-resume errors"
       },
       {
         "id": "CVE-2026-80843",
@@ -25994,6 +25842,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: xfrm: fix xfrm_state_construct() auth-trunc leak"
+      },
+      {
+        "id": "CVE-2026-80845",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: xfrm: avoid lock inversion in nat keepalive work"
       },
       {
         "id": "CVE-2026-80851",
@@ -26020,6 +25876,22 @@
         "title": "kernel: fuse: fix invalidate lock leak on setattr writeback failure"
       },
       {
+        "id": "CVE-2026-80861",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: usb: xhci: bail out of setup if the controller is inaccessible"
+      },
+      {
+        "id": "CVE-2026-80866",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: tipc: avoid busy looping in tipc_exit_net()"
+      },
+      {
         "id": "CVE-2026-80872",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26033,7 +25905,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: ntb: Store original DMA address for future release"
       },
       {
         "id": "CVE-2026-80899",
@@ -26244,6 +26116,14 @@
         "title": "kernel: params: fix charp corruption on allocation failure"
       },
       {
+        "id": "CVE-2026-89562",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ip6_gre: fix hardware header length for NBMA tunnels"
+      },
+      {
         "id": "CVE-2026-89566",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26428,12 +26308,28 @@
         "title": "kernel: isofs: fix out-of-bounds page array access on empty zisofs block"
       },
       {
+        "id": "CVE-2026-89784",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: SUNRPC: check rpc_sockaddr2uaddr() return value in rpcb_register_inet4/6"
+      },
+      {
         "id": "CVE-2026-89795",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  P ..."
+        "title": "kernel: PCI: Allow per function PCI slots to fix slot reset on s390"
+      },
+      {
+        "id": "CVE-2026-89796",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: mm/damon/core: avoid infinite kdamond_merge_regions() internal loop"
       },
       {
         "id": "CVE-2026-89797",
@@ -26452,6 +26348,38 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
+        "id": "CVE-2026-89800",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: drm/nouveau/uvmm: clear the dirty flag when unwinding an OP_UNMAP_SPARSE"
+      },
+      {
+        "id": "CVE-2026-89808",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: drm/amdkfd: Fix the case that vm range is hole at svm_migrate_copy_to_vram"
+      },
+      {
+        "id": "CVE-2026-89812",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: drm/amdgpu: force complete the MES ring fences on reset"
+      },
+      {
+        "id": "CVE-2026-89813",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: drm/amdgpu: force complete the KIQ ring fences on reset"
+      },
+      {
         "id": "CVE-2026-89816",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26465,7 +26393,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/i915: Guard against NULL driver_data in i915_pci_probe()"
       },
       {
         "id": "CVE-2026-89834",
@@ -26498,6 +26426,22 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-89851",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: scsi: qla2xxx: Fix FCE trace enable parsing in debugfs"
+      },
+      {
+        "id": "CVE-2026-89855",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: scsi: qla2xxx: Serialize flash version read in reset handler"
       },
       {
         "id": "CVE-2026-89859",
@@ -26538,6 +26482,22 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: media: v4l2-fwnode: Fix fwnode leak in v4l2_fwnode_parse_link"
+      },
+      {
+        "id": "CVE-2026-89874",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: media: v4l2-async: avoid deleting unlinked ASC entry on link error"
+      },
+      {
+        "id": "CVE-2026-89876",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: media: tda18250: fix possible integer overflow"
       },
       {
         "id": "CVE-2026-89877",
@@ -26612,6 +26572,14 @@
         "title": "kernel: KVM: s390: Fix memory leak in guest debug handling"
       },
       {
+        "id": "CVE-2026-89926",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: KVM: s390: Fix length check __import_wp_info()"
+      },
+      {
         "id": "CVE-2026-89929",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26644,6 +26612,22 @@
         "title": "kernel: mtd: mtdoops: free page bitmap when the backing MTD is removed"
       },
       {
+        "id": "CVE-2026-89955",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: s390/vfio-ap: Fix NULL deref in status_show() during queue probe"
+      },
+      {
+        "id": "CVE-2026-89958",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: s390/vfio-ap: Fix dereference matrix_mdev->kvm without checking for NULL"
+      },
+      {
         "id": "CVE-2026-89960",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26668,12 +26652,28 @@
         "title": "kernel: nvme-fabrics: fix DHCHAP secret leak on parse failure"
       },
       {
+        "id": "CVE-2026-89979",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ALSA: pcm: Fix race between non-atomic ops and trigger-start"
+      },
+      {
         "id": "CVE-2026-89982",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: i2c: mux: Fix channel node leak on adapter add failure"
+      },
+      {
+        "id": "CVE-2026-89986",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: mm/mempolicy: fix sleeping allocation in alloc_pages_bulk_weighted_interleave()"
       },
       {
         "id": "CVE-2026-89988",
@@ -26708,6 +26708,14 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
       },
       {
+        "id": "CVE-2026-90019",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: usb: gadget: fix null pointer dereference in usb_put_function_instance()"
+      },
+      {
         "id": "CVE-2026-90022",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26730,6 +26738,30 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+      },
+      {
+        "id": "CVE-2026-90031",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: usb-storage: ene_ub6250: fix race between scan work and probe"
+      },
+      {
+        "id": "CVE-2026-90034",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: usb: image: mdc800: change kmalloc() to kzalloc()"
+      },
+      {
+        "id": "CVE-2026-90035",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: drm/amd/display: fix division by zero in get_estimated_bw()"
       },
       {
         "id": "CVE-2026-90044",
@@ -27204,60 +27236,12 @@
         "title": "kernel: wifi: nl80211: clean up color-change beacon data on errors"
       },
       {
-        "id": "CVE-2026-90351",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90359",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-90363",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-90365",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90367",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90379",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90383",
+        "id": "CVE-2026-90360",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: regulator: core: use system_freezable_wq for init complete work"
       },
       {
         "id": "CVE-2026-90385",
@@ -27265,7 +27249,23 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: md/raid1: create serial pool adding rdev to array with serialize_policy=1"
+      },
+      {
+        "id": "CVE-2026-90386",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: i3c: dw: avoid shift-out-of-bounds when DAA assigns no devices"
+      },
+      {
+        "id": "CVE-2026-90387",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: swiotlb: Preserve allocation virtual address for dynamic pools"
       },
       {
         "id": "CVE-2026-90389",
@@ -27273,7 +27273,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: md: scope memalloc_noio to allocation critical sections"
       },
       {
         "id": "CVE-2026-90390",
@@ -27284,12 +27284,12 @@
         "title": "kernel: md/bitmap: resume array on backlog_store() error path"
       },
       {
-        "id": "CVE-2026-90401",
+        "id": "CVE-2026-90391",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: lib/test_hmm: fail dmirror_fault() when the mirrored mm is gone"
       },
       {
         "id": "CVE-2026-90402",
@@ -27298,22 +27298,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: bus: mhi: host: Fix controller cleanup on EDL sysfs failure"
-      },
-      {
-        "id": "CVE-2026-90408",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-      },
-      {
-        "id": "CVE-2026-90410",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-90411",
@@ -27332,22 +27316,6 @@
         "title": "kernel: RDMA/cxgb4: free STAG index when TPT entry write fails"
       },
       {
-        "id": "CVE-2026-90418",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-90421",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  P ..."
-      },
-      {
         "id": "CVE-2026-90424",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -27356,28 +27324,20 @@
         "title": "kernel: iommu/tegra241-cmdqv: Fix VINTF0 leak on the init-failure path"
       },
       {
-        "id": "CVE-2026-90433",
+        "id": "CVE-2026-90428",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: iommu/tegra241-cmdqv: Don't run the error ISR before probe sets up vintfs"
       },
       {
-        "id": "CVE-2026-92481",
+        "id": "CVE-2026-90430",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-92482",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: iommu/tegra241-cmdqv: Publish an LVCMDQ only after it is fully initialized"
       },
       {
         "id": "CVE-2026-92493",
@@ -27396,6 +27356,22 @@
         "title": "kernel: ext4: fix buffer_head leak in ext4_init_orphan_info"
       },
       {
+        "id": "CVE-2026-92515",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: bpf: Preserve unique-field state across nested structs"
+      },
+      {
+        "id": "CVE-2026-92523",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: RDMA/nldev: validate dynamic counter attribute length"
+      },
+      {
         "id": "CVE-2026-92524",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -27404,44 +27380,12 @@
         "title": "kernel: irqchip/gic-v3-its: Prevent leak in its_vpe_irq_domain_alloc()"
       },
       {
-        "id": "CVE-2026-93042",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-93047",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
-        "id": "CVE-2026-93050",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-93058",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
         "id": "CVE-2026-93062",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: iwlwifi: guard against division by zero in iwl_dbg_tlv_alloc_fragments"
       },
       {
         "id": "CVE-2026-93072",
@@ -27450,14 +27394,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: irqchip/renesas-irqc: Fix generic interrupt chip leak on remove"
-      },
-      {
-        "id": "CVE-2026-93081",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
       },
       {
         "id": "CVE-2026-93082",
@@ -27476,36 +27412,20 @@
         "title": "kernel: firmware: arm_scmi: Unwind TX receiver mailbox setup failure"
       },
       {
-        "id": "CVE-2026-93091",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
-      },
-      {
         "id": "CVE-2026-93093",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: firmware: arm_scmi: Publish channel state before callbacks"
       },
       {
-        "id": "CVE-2026-93099",
+        "id": "CVE-2026-93097",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
-      },
-      {
-        "id": "CVE-2026-93100",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: cxl/mbox: Break poison list loop on an empty payload"
       },
       {
         "id": "CVE-2026-93102",
@@ -27516,12 +27436,20 @@
         "title": "kernel: RDMA/hfi1: Free RX data on late probe failure"
       },
       {
-        "id": "CVE-2026-93104",
+        "id": "CVE-2026-93103",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/hfi1: Preserve unit 0 on allocation failure"
+      },
+      {
+        "id": "CVE-2026-93115",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: platform/mellanox: mlxbf-pmc: Check ACPI_COMPANION() against NULL"
       },
       {
         "id": "CVE-2026-93116",
@@ -27532,20 +27460,12 @@
         "title": "kernel: platform/x86: asus-wmi: fix resource leaks on probe failure"
       },
       {
-        "id": "CVE-2026-93122",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
         "id": "CVE-2026-93123",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: serial: qcom-geni: do not advance stale DMA completions"
       },
       {
         "id": "CVE-2026-93125",
@@ -27564,20 +27484,12 @@
         "title": "kernel: remoteproc: qcom_q6v5_adsp: Fix reference leak for device node"
       },
       {
-        "id": "CVE-2026-93128",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
         "id": "CVE-2026-93129",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: platform/x86: dell-wmi-base: Fix handling of ultra performance key"
       },
       {
         "id": "CVE-2026-93130",
@@ -27588,6 +27500,22 @@
         "title": "kernel: platform/x86: dell-wmi-base: Fix resource leak on module load failure"
       },
       {
+        "id": "CVE-2026-93132",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ACPI: RISC-V: Fix riscv_acpi_add_prt_dep() loop handling"
+      },
+      {
+        "id": "CVE-2026-93133",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ACPI: RISC-V: Check acpi_get_handle() status in riscv_acpi_add_prt_dep()"
+      },
+      {
         "id": "CVE-2026-93136",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -27596,12 +27524,12 @@
         "title": "kernel: bus: mhi: ep: Fix device refcount leak in the error path of MHI device creation"
       },
       {
-        "id": "CVE-2026-93142",
+        "id": "CVE-2026-93140",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: udf: Mark LVID buffer as uptodate before marking it dirty"
       },
       {
         "id": "CVE-2026-93144",
@@ -27625,23 +27553,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: time/namespace: Validate nanosecond field in proc_timens_set_offset()"
       },
       {
-        "id": "CVE-2026-93150",
+        "id": "CVE-2026-93158",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-      },
-      {
-        "id": "CVE-2026-93155",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: sa2ul - stop probe if context pool creation fails"
       },
       {
         "id": "CVE-2026-93161",
@@ -27652,28 +27572,20 @@
         "title": "kernel: crypto: qat - clear AES key schedule from stack"
       },
       {
-        "id": "CVE-2026-93163",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  h ..."
-      },
-      {
-        "id": "CVE-2026-93168",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
         "id": "CVE-2026-93172",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mm/mm_init: handle alloc_percpu failure in free_area_init_core_hotplug"
+      },
+      {
+        "id": "CVE-2026-93173",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: bpf,lsm: Drop bpf_prog_free from sleepable_lsm_hooks"
       },
       {
         "id": "CVE-2026-93181",
@@ -27681,7 +27593,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: perf/x86/intel/uncore: Fix uncore_box ref/unref ordering"
       },
       {
         "id": "CVE-2026-93186",
@@ -27716,12 +27628,84 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
+        "id": "CVE-2026-93206",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: PCI/proc: Use file_ns_capable() when checking config space read access"
+      },
+      {
+        "id": "CVE-2026-93208",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: kasan: fix cache shrink race with CPU hotplug"
+      },
+      {
+        "id": "CVE-2026-93209",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: Bluetooth: hci_core: use skb_get() instead of skb_clone() for req_skb"
+      },
+      {
+        "id": "CVE-2026-93210",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: smb: client: harden DFS cache against invalid target hints"
+      },
+      {
+        "id": "CVE-2026-93212",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: nfsd: guard nfsd_serv deref in nfsd_file_net_dispose"
+      },
+      {
+        "id": "CVE-2026-93213",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: of: fix out-of-bounds read in of_alias_scan() stem parser"
+      },
+      {
         "id": "CVE-2026-93216",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mm/page_owner: use memcg_data snapshot to avoid TOCTOU in print_page_owner_memcg()"
+      },
+      {
+        "id": "CVE-2026-93222",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: signal: avoid shared siginfo namespace rewrites"
+      },
+      {
+        "id": "CVE-2026-93226",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: ipv6: use RCU iterator to dump route exceptions"
+      },
+      {
+        "id": "CVE-2026-93229",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: nfsd: add missing read barrier to rpc_status_get dumpit seqcount retry"
       },
       {
         "id": "CVE-2026-93230",
@@ -27729,7 +27713,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mm/hugetlb: initialize gigantic bootmem hugepage struct pages earlier"
       },
       {
         "id": "CVE-2026-93231",
@@ -27737,7 +27721,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
+        "title": "kernel: lockd: fix swapped arguments in nlmsvc_match_ip()"
+      },
+      {
+        "id": "CVE-2026-93234",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: drm/gud: validate TV mode names before creating enum property"
       },
       {
         "id": "CVE-2026-93235",
@@ -27769,7 +27761,31 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: memcg: make the v1 soft limit knob inert"
+      },
+      {
+        "id": "CVE-2026-93242",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: scsi: qla2xxx: Fix response queue over-consumption in __qla_consume_iocb()"
+      },
+      {
+        "id": "CVE-2026-93243",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "LOW",
+        "title": "kernel: mm/secretmem: properly account locked pages"
+      },
+      {
+        "id": "CVE-2026-93244",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "LOW",
+        "title": "kernel: drm/sysfb: simpledrm: Improve stride validation"
       },
       {
         "id": "CVE-2026-93251",
@@ -27778,6 +27794,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+      },
+      {
+        "id": "CVE-2026-93256",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: arm64: hibernate: mask DAIF before restoring hibernated kernel"
       },
       {
         "id": "CVE-2026-93260",
@@ -27826,6 +27850,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: net: appletalk: fix NULL pointer dereference in aarp_send_ddp()"
+      },
+      {
+        "id": "CVE-2026-93781",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: scsi: core: Do not block on tag allocation in scsi_eh_lock_door()"
       },
       {
         "id": "CVE-2026-93785",
@@ -28236,6 +28268,14 @@
         "title": "kernel: ieee802154: 6lowpan: fix NULL dereference in lowpan_newlink"
       },
       {
+        "id": "CVE-2026-97605",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: erofs: preserve LZMA decoders on resize failure"
+      },
+      {
         "id": "CVE-2026-97606",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -28604,12 +28644,36 @@
         "title": "kernel: bonding: do not clear curr_active_slave prematurely when releasing all slaves"
       },
       {
+        "id": "CVE-2026-98079",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: btrfs: zstd: fix lost wakeup when waiting for a workspace"
+      },
+      {
+        "id": "CVE-2026-98081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: btrfs: zoned: finish active block group cleanup if call_zone_finish() fails"
+      },
+      {
         "id": "CVE-2026-98087",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: sched/rt,dl: Skip migrate-disabled tasks when picking a push candidate"
+      },
+      {
+        "id": "CVE-2026-98095",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "LOW",
+        "title": "kernel: af_packet: Don't cast tpacket_hdr.tp_len to int in tpacket_parse_header()"
       },
       {
         "id": "CVE-2026-98101",
@@ -29196,20 +29260,12 @@
         "title": "kernel: s390/vfio-ap: fix KVM GISC and page leak when queue removed from host config"
       },
       {
-        "id": "CVE-2026-98483",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
         "id": "CVE-2026-98484",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: netfilter: nf_tables: skip expired catchall elements on insert and delete"
       },
       {
         "id": "CVE-2026-98486",
@@ -29217,31 +29273,15 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net: ena: fix MMIO read buffer leak on probe failure"
       },
       {
-        "id": "CVE-2026-98488",
+        "id": "CVE-2026-98498",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98489",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-98493",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: net/mlx5: Fix rev_entry reference leak in mlx5_tc_ct_shared_counter_get()"
       },
       {
         "id": "CVE-2026-98502",
@@ -29372,44 +29412,28 @@
         "title": "kernel: tg3: clean up PHYLIB resources on probe failure"
       },
       {
-        "id": "CVE-2026-98602",
+        "id": "CVE-2026-98607",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+        "title": "kernel: drm/virtio: fix object leaks in virtio_gpu_resource_create_blob_ioctl()"
       },
       {
-        "id": "CVE-2026-98605",
+        "id": "CVE-2026-98608",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/virtio: fix object leak in virtio_gpu_resource_create_ioctl()"
       },
       {
-        "id": "CVE-2026-98611",
+        "id": "CVE-2026-98609",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-98615",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
-      },
-      {
-        "id": "CVE-2026-98616",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: drm/virtio: fix object leak when drm_gem_handle_create() fails"
       },
       {
         "id": "CVE-2026-98618",
@@ -29636,14 +29660,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
       },
       {
-        "id": "CVE-2026-98696",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
-      },
-      {
         "id": "CVE-2026-98697",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -29794,14 +29810,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
-      },
-      {
-        "id": "CVE-2026-98762",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
       },
       {
         "id": "CVE-2026-98764",
@@ -30018,14 +30026,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
-      },
-      {
-        "id": "CVE-2026-98830",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
       },
       {
         "id": "CVE-2026-98831",

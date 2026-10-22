@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-21T05:46:16.821Z",
+  "scannedAt": "2026-10-22T05:47:17.287Z",
   "system": {
     "total": 471,
     "cves": [
@@ -1737,7 +1737,7 @@
         "installedVersion": "3.7.9-2+deb12u7",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95209",
@@ -1745,7 +1745,7 @@
         "installedVersion": "3.7.9-2+deb12u7",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "An issue in gnutls v3.8.13 causes legitimate CA certificates to be rej ..."
+        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -1753,7 +1753,7 @@
         "installedVersion": "3.7.9-2+deb12u7",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
       },
       {
         "id": "CVE-2026-102010",
@@ -3774,7 +3774,7 @@
     ]
   },
   "app": {
-    "total": 70,
+    "total": 79,
     "cves": [
       {
         "id": "CVE-2026-111769",
@@ -3790,7 +3790,7 @@
         "installedVersion": "1.31.0",
         "fixedVersion": "1.32.0",
         "severity": "HIGH",
-        "title": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them"
+        "title": "@modelcontextprotocol/sdk: @modelcontextprotocol/sdk: Unauthorized cross-session task access via taskStore"
       },
       {
         "id": "CVE-2026-111768",
@@ -3815,6 +3815,38 @@
         "fixedVersion": "1.32.0",
         "severity": "MEDIUM",
         "title": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service"
+      },
+      {
+        "id": "CVE-2026-112948",
+        "pkg": "@vitest/browser",
+        "installedVersion": "5.0.1",
+        "fixedVersion": "5.0.5",
+        "severity": "MEDIUM",
+        "title": "vitest: vitest: Information disclosure via improper file access restrictions"
+      },
+      {
+        "id": "CVE-2026-112949",
+        "pkg": "@vitest/mocker",
+        "installedVersion": "5.0.1",
+        "fixedVersion": "4.1.12, 5.0.3",
+        "severity": "MEDIUM",
+        "title": "vitest: Vitest: Cross-site scripting via unescaped mock module URL"
+      },
+      {
+        "id": "CVE-2026-112950",
+        "pkg": "@vitest/mocker",
+        "installedVersion": "5.0.1",
+        "fixedVersion": "4.1.12, 5.0.3",
+        "severity": "MEDIUM",
+        "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix"
+      },
+      {
+        "id": "CVE-2026-112948",
+        "pkg": "@vitest/ui",
+        "installedVersion": "5.0.1",
+        "fixedVersion": "5.0.5",
+        "severity": "MEDIUM",
+        "title": "vitest: vitest: Information disclosure via improper file access restrictions"
       },
       {
         "id": "CVE-2026-83605",
@@ -3945,6 +3977,14 @@
         "title": "electron: electron: Privilege escalation via unauthorized Node.js integration in web workers"
       },
       {
+        "id": "CVE-2026-113800",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "45.0.0-alpha.5, 44.3.0, 43.7.0, 42.11.3",
+        "severity": "MEDIUM",
+        "title": "Electron: HID and USB permission checks can be attributed to the wrong origin"
+      },
+      {
         "id": "CVE-2026-19693",
         "pkg": "extract-zip",
         "installedVersion": "2.0.1",
@@ -4022,7 +4062,7 @@
         "installedVersion": "1.16.0",
         "fixedVersion": "1.16.1",
         "severity": "HIGH",
-        "title": "follow-redirects array-form headers bypass cross-origin credential stripping"
+        "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
       },
       {
         "id": "CVE-2026-111757",
@@ -4118,7 +4158,7 @@
         "installedVersion": "15.0.2",
         "fixedVersion": "14.3.3, 15.0.3",
         "severity": "HIGH",
-        "title": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)"
+        "title": "markdown-it: markdown-it: Denial of Service via unclosed link reference definitions"
       },
       {
         "id": "CVE-2026-111766",
@@ -4214,7 +4254,7 @@
         "installedVersion": "8.3.1",
         "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
         "severity": "HIGH",
-        "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows"
+        "title": "launch-editor: launch-editor: Command injection via improper file path validation"
       },
       {
         "id": "CVE-2026-112943",
@@ -4222,7 +4262,7 @@
         "installedVersion": "8.3.1",
         "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
         "severity": "MEDIUM",
-        "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows"
+        "title": "launch-editor: launch-editor: Arbitrary code execution via improper argument escaping on Windows"
       },
       {
         "id": "CVE-2026-112944",
@@ -4230,7 +4270,39 @@
         "installedVersion": "8.3.1",
         "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
         "severity": "MEDIUM",
-        "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors"
+        "title": "launch-editor: launch-editor: Arbitrary command execution via improper filename handling"
+      },
+      {
+        "id": "CVE-2026-112946",
+        "pkg": "vite",
+        "installedVersion": "8.3.1",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "MEDIUM",
+        "title": "vite: Vite: Information disclosure via improper module path handling"
+      },
+      {
+        "id": "CVE-2026-112947",
+        "pkg": "vite",
+        "installedVersion": "8.3.1",
+        "fixedVersion": "8.3.3, 8.2.4",
+        "severity": "MEDIUM",
+        "title": "vite: vite: Information disclosure via crafted WebAssembly query parameter"
+      },
+      {
+        "id": "CVE-2026-112945",
+        "pkg": "vite",
+        "installedVersion": "8.3.1",
+        "fixedVersion": "8.3.3, 8.2.4, 8.1.6, 7.3.7, 6.4.4",
+        "severity": "LOW",
+        "title": "vite: vite: Arbitrary script execution via improper URL handling during HTML transformation"
+      },
+      {
+        "id": "CVE-2026-111943",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.1",
+        "fixedVersion": "1.26.10, 1.27.3",
+        "severity": "HIGH",
+        "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
       },
       {
         "id": "CVE-2026-78667",

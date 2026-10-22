@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-21T05:48:45.755Z",
+  "scannedAt": "2026-10-22T05:49:10.858Z",
   "system": {
-    "total": 21,
+    "total": 23,
     "cves": [
       {
         "id": "CVE-2026-84782",
@@ -164,6 +164,22 @@
         "title": "openssl: openssl: Denial of Service via excessive memory allocation in CRL distribution point processing"
       },
       {
+        "id": "CVE-2026-107891",
+        "pkg": "musl",
+        "installedVersion": "1.2.5-r11",
+        "fixedVersion": "1.2.5-r12",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107891"
+      },
+      {
+        "id": "CVE-2026-107891",
+        "pkg": "musl-utils",
+        "installedVersion": "1.2.5-r11",
+        "fixedVersion": "1.2.5-r12",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107891"
+      },
+      {
         "id": "CVE-2026-85091",
         "pkg": "zlib",
         "installedVersion": "1.3.2-r0",
@@ -174,7 +190,7 @@
     ]
   },
   "app": {
-    "total": 21,
+    "total": 22,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -239,6 +255,14 @@
         "fixedVersion": "1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e",
         "severity": "HIGH",
         "title": "google.golang.org/grpc: gRPC-Go: Denial of Service via malformed RPC requests"
+      },
+      {
+        "id": "CVE-2026-111943",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.0",
+        "fixedVersion": "1.26.10, 1.27.3",
+        "severity": "HIGH",
+        "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
       },
       {
         "id": "CVE-2026-78667",

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-21T05:49:36.282Z",
+  "scannedAt": "2026-10-22T05:50:00.927Z",
   "system": {
-    "total": 598,
+    "total": 600,
     "cves": [
       {
         "id": "CVE-2026-13608",
@@ -2897,7 +2897,7 @@
         "installedVersion": "3.8.3-1.1ubuntu3.6",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95209",
@@ -2905,7 +2905,7 @@
         "installedVersion": "3.8.3-1.1ubuntu3.6",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "An issue in gnutls v3.8.13 causes legitimate CA certificates to be rej ..."
+        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -2913,7 +2913,7 @@
         "installedVersion": "3.8.3-1.1ubuntu3.6",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Improper certificate validation in gnutls v3.8.13 causes the applicati ..."
+        "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
       },
       {
         "id": "CVE-2026-85150",
@@ -3154,6 +3154,14 @@
         "fixedVersion": "24.02.0-1ubuntu9.10",
         "severity": "MEDIUM",
         "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
+      },
+      {
+        "id": "CVE-2026-107705",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.11",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via stack-based buffer overflow in PDF decryption"
       },
       {
         "id": "CVE-2026-93311",
@@ -4580,6 +4588,14 @@
         "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
       },
       {
+        "id": "CVE-2026-107705",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.9",
+        "fixedVersion": "24.02.0-1ubuntu9.11",
+        "severity": "MEDIUM",
+        "title": "poppler: poppler: Denial of Service via stack-based buffer overflow in PDF decryption"
+      },
+      {
         "id": "CVE-2026-93311",
         "pkg": "poppler-utils",
         "installedVersion": "24.02.0-1ubuntu9.9",
@@ -4790,7 +4806,7 @@
     ]
   },
   "app": {
-    "total": 27,
+    "total": 46,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -4937,12 +4953,44 @@
         "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: Path traversal via incomplete type validation"
       },
       {
+        "id": "CVE-2026-112393",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. From 2.0.0 until 13.0.0, Pillow ha ..."
+      },
+      {
         "id": "CVE-2026-112403",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
         "title": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's JPEG dec ..."
+      },
+      {
+        "id": "CVE-2026-112900",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. From 2.6.0 until 13.0.0, Pillow is ..."
+      },
+      {
+        "id": "CVE-2026-112390",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via infinite loop during crafted MIC image parsing"
+      },
+      {
+        "id": "CVE-2026-112392",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via zero-size images in rank filters"
       },
       {
         "id": "CVE-2026-112397",
@@ -4953,6 +5001,14 @@
         "title": "pillow: pillow: Denial of Service via out-of-bounds memory access on zero-width images"
       },
       {
+        "id": "CVE-2026-112399",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of service via crafted APNG image"
+      },
+      {
         "id": "CVE-2026-112400",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -4961,12 +5017,60 @@
         "title": "pillow: pillow: Denial of Service via memory exhaustion from crafted GIF image"
       },
       {
+        "id": "CVE-2026-112402",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of service via double free during image transformation"
+      },
+      {
         "id": "CVE-2026-112404",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
         "title": "pillow: Pillow: Denial of Service via out-of-bounds read in TIFF decoding"
+      },
+      {
+        "id": "CVE-2026-112405",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via null pointer dereference in Image.merge()"
+      },
+      {
+        "id": "CVE-2026-112406",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via infinite loop during PDF page rewriting"
+      },
+      {
+        "id": "CVE-2026-112892",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's  ..."
+      },
+      {
+        "id": "CVE-2026-112893",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via invalid pointer free during font rendering"
+      },
+      {
+        "id": "CVE-2026-112894",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via crafted multi-frame image conversion"
       },
       {
         "id": "CVE-2026-112895",
@@ -4993,6 +5097,30 @@
         "title": "pillow: pillow: Information disclosure via uninitialized buffer in TIFF decoding"
       },
       {
+        "id": "CVE-2026-112902",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": " Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
+      },
+      {
+        "id": "CVE-2026-112391",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: Pillow: Denial of Service via unbounded recursion in PDF parser"
+      },
+      {
+        "id": "CVE-2026-112394",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Information disclosure via out-of-bounds read in raw decoders"
+      },
+      {
         "id": "CVE-2026-112395",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -5001,12 +5129,52 @@
         "title": "pillow: pillow: Information disclosure via crafted tiled TIFF image"
       },
       {
+        "id": "CVE-2026-112396",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: arbitrary code execution via heap use-after-free during TIFF encoding"
+      },
+      {
+        "id": "CVE-2026-112401",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Denial of Service via crafted GIF comments"
+      },
+      {
+        "id": "CVE-2026-112891",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Denial of Service via large GIF comments"
+      },
+      {
+        "id": "CVE-2026-112898",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: Pillow: Information disclosure via empty palette quantization"
+      },
+      {
         "id": "CVE-2026-112899",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "Pillow: EPS load(scale) lets Ghostscript render past the decompression bomb limit"
+      },
+      {
+        "id": "CVE-2026-112901",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: Pillow: Denial of Service via crafted XBM image header"
       }
     ]
   }
