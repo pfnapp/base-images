@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-22T05:46:34.842Z",
+  "scannedAt": "2026-10-23T05:44:36.893Z",
   "system": {
     "total": 175,
     "cves": [
@@ -1406,7 +1406,7 @@
     ]
   },
   "app": {
-    "total": 33,
+    "total": 38,
     "cves": [
       {
         "id": "CVE-2026-104850",
@@ -1497,6 +1497,30 @@
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "GHSA-2464-fhr4-w9xw",
+        "pkg": "next",
+        "installedVersion": "16.3.5",
+        "fixedVersion": "15.5.28, 16.4.1",
+        "severity": "CRITICAL",
+        "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used"
+      },
+      {
+        "id": "GHSA-673q-mjm6-r5xr",
+        "pkg": "next",
+        "installedVersion": "16.3.5",
+        "fixedVersion": "16.4.1",
+        "severity": "CRITICAL",
+        "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays"
+      },
+      {
         "id": "GHSA-vcvr-r3jv-pc5j",
         "pkg": "next",
         "installedVersion": "16.3.5",
@@ -1505,12 +1529,28 @@
         "title": "Next.js: Remote Code Execution in next/og ImageResponse"
       },
       {
+        "id": "CVE-2026-94482",
+        "pkg": "next",
+        "installedVersion": "16.3.5",
+        "fixedVersion": "15.5.28, 16.4.1",
+        "severity": "HIGH",
+        "title": "Next.js: Denial of Service in App Router using Server Actions"
+      },
+      {
         "id": "CVE-2026-94483",
         "pkg": "next",
         "installedVersion": "16.3.5",
         "fixedVersion": "16.3.8",
         "severity": "HIGH",
         "title": "next: Next.js: Information disclosure via SSRF in Image Optimization"
+      },
+      {
+        "id": "CVE-2026-103004",
+        "pkg": "next",
+        "installedVersion": "16.3.5",
+        "fixedVersion": "16.3.8",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Information disclosure via cache key omission in nested cache handlers"
       },
       {
         "id": "CVE-2026-94484",

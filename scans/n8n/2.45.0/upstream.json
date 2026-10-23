@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-22T05:48:22.543Z",
+  "scannedAt": "2026-10-23T05:45:05.432Z",
   "system": {
     "total": 5,
     "cves": [
@@ -46,7 +46,7 @@
     ]
   },
   "app": {
-    "total": 42,
+    "total": 46,
     "cves": [
       {
         "id": "CVE-2026-106119",
@@ -241,6 +241,14 @@
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.3.1",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
         "id": "CVE-2026-111759",
         "pkg": "markdown-it",
         "installedVersion": "13.0.2",
@@ -383,6 +391,30 @@
         "fixedVersion": "3.5.0",
         "severity": "MEDIUM",
         "title": "stream-json: stream-json: Denial of Service due to inefficient processing of deeply nested JSON"
+      },
+      {
+        "id": "CVE-2026-114141",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml: Denial of Service via crafted array-of-tables headers"
+      },
+      {
+        "id": "CVE-2026-114143",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml-node: Denial of Service via long dotted keys in TOML input"
+      },
+      {
+        "id": "CVE-2026-114144",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml-node: Denial of Service via unbounded integer parsing"
       }
     ]
   }

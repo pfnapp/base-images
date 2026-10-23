@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-22T05:47:49.825Z",
+  "scannedAt": "2026-10-23T05:44:55.587Z",
   "system": {
-    "total": 471,
+    "total": 473,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -642,6 +642,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
+      },
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "libbrotli1",
+        "installedVersion": "1.0.9-2+b6",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-42250",
@@ -1612,10 +1620,18 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2025-59375",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u4",
+        "fixedVersion": "2.5.0-1+deb12u5",
+        "severity": "HIGH",
+        "title": "firefox: thunderbird: expat: libexpat in Expat allows attackers to trigger large dynamic memory allocations via a small document that is submitted for parsing"
+      },
+      {
         "id": "CVE-2026-77214",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u4",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u5",
         "severity": "HIGH",
         "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer"
       },
@@ -1631,7 +1647,7 @@
         "id": "CVE-2026-102633",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u4",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u5",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
@@ -1639,7 +1655,7 @@
         "id": "CVE-2026-56132",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u4",
-        "fixedVersion": "None",
+        "fixedVersion": "2.5.0-1+deb12u5",
         "severity": "MEDIUM",
         "title": "expat: libexpat: Arbitrary Code Execution via Heap-based Buffer Overflow"
       },
@@ -3774,7 +3790,7 @@
     ]
   },
   "app": {
-    "total": 79,
+    "total": 91,
     "cves": [
       {
         "id": "CVE-2026-111769",
@@ -3945,6 +3961,30 @@
         "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
       },
       {
+        "id": "GHSA-cg2g-xh64-v4q7",
+        "pkg": "dompurify",
+        "installedVersion": "3.4.16",
+        "fixedVersion": "3.4.17",
+        "severity": "CRITICAL",
+        "title": "DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes"
+      },
+      {
+        "id": "GHSA-mrv2-3pqr-j5jr",
+        "pkg": "dompurify",
+        "installedVersion": "3.4.16",
+        "fixedVersion": "3.4.17",
+        "severity": "HIGH",
+        "title": "DOMPurify IN_PLACE: hook that removes a parent or sibling leaves the detached subtree's event handlers armed (incomplete fix for GHSA-p98j-92pf-mc4p)"
+      },
+      {
+        "id": "GHSA-c6gr-qvv4-5v3f",
+        "pkg": "dompurify",
+        "installedVersion": "3.4.16",
+        "fixedVersion": "3.4.17",
+        "severity": "LOW",
+        "title": "DOMPurify: SMIL attributeName=href guard is skipped when PARSER_MEDIA_TYPE is application/xhtml+xml"
+      },
+      {
         "id": "CVE-2026-102673",
         "pkg": "electron",
         "installedVersion": "39.8.10",
@@ -3977,12 +4017,60 @@
         "title": "electron: electron: Privilege escalation via unauthorized Node.js integration in web workers"
       },
       {
+        "id": "CVE-2026-113796",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "45.0.0-alpha.6, 44.3.0, 43.7.0, 42.11.3",
+        "severity": "MEDIUM",
+        "title": "Electron: SameSite cookie restrictions are not applied to windows opened from links"
+      },
+      {
+        "id": "CVE-2026-113798",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "45.0.0-alpha.13, 44.5.0, 43.7.6, 42.11.9",
+        "severity": "MEDIUM",
+        "title": "Electron: Pointer lock permission requests can be attributed to the wrong frame"
+      },
+      {
         "id": "CVE-2026-113800",
         "pkg": "electron",
         "installedVersion": "39.8.10",
         "fixedVersion": "45.0.0-alpha.5, 44.3.0, 43.7.0, 42.11.3",
         "severity": "MEDIUM",
         "title": "Electron: HID and USB permission checks can be attributed to the wrong origin"
+      },
+      {
+        "id": "CVE-2026-114121",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "42.11.3, 43.7.0, 44.3.0, 45.0.0-alpha.5",
+        "severity": "MEDIUM",
+        "title": "Electron: openExternal permission requests can be attributed to the wrong origin"
+      },
+      {
+        "id": "CVE-2026-113797",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "45.0.0-alpha.4, 44.1.1, 43.5.1, 42.11.1",
+        "severity": "LOW",
+        "title": "Electron: Extension tabs.query returns tab URLs and titles without the tabs permission"
+      },
+      {
+        "id": "CVE-2026-114122",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "42.11.6, 43.7.3, 44.4.3, 45.0.0-alpha.9",
+        "severity": "LOW",
+        "title": "Electron: Frame subscription trusts GPU-supplied frame geometry"
+      },
+      {
+        "id": "CVE-2026-114124",
+        "pkg": "electron",
+        "installedVersion": "39.8.10",
+        "fixedVersion": "42.11.6, 43.7.3, 44.4.3, 45.0.0-alpha.9",
+        "severity": "LOW",
+        "title": "Electron: Off-screen rendering on macOS trusts GPU-supplied frame geometry"
       },
       {
         "id": "CVE-2026-19693",
@@ -4105,6 +4193,14 @@
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
       },
       {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.4.0",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
         "id": "CVE-2026-101910",
         "pkg": "ip-address",
         "installedVersion": "10.5.0",
@@ -4135,6 +4231,22 @@
         "fixedVersion": "10.5.1",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
+      },
+      {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.7.2",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
       },
       {
         "id": "CVE-2026-84375",

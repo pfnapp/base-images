@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-22T05:49:36.489Z",
+  "scannedAt": "2026-10-23T05:45:15.341Z",
   "system": {
-    "total": 587,
+    "total": 588,
     "cves": [
       {
         "id": "CVE-2026-86409",
@@ -2796,6 +2796,14 @@
         "title": "gnutls: gnutls: Information disclosure via hostname verification bypass"
       },
       {
+        "id": "CVE-2026-88648",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.3-1.1ubuntu3.6",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gnutls: gnutls: Cross-domain certificate restriction bypass via incomplete X.509 validation"
+      },
+      {
         "id": "CVE-2026-95184",
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.3-1.1ubuntu3.6",
@@ -4702,7 +4710,7 @@
     ]
   },
   "app": {
-    "total": 46,
+    "total": 57,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -4873,6 +4881,14 @@
         "title": "Pillow is a Python imaging library. From 2.6.0 until 13.0.0, Pillow is ..."
       },
       {
+        "id": "CVE-2026-96639",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, multi-fr ..."
+      },
+      {
         "id": "CVE-2026-112390",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -5001,6 +5017,62 @@
         "title": " Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
+        "id": "CVE-2026-96637",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via decompression bomb bypass in SPIDER images"
+      },
+      {
+        "id": "CVE-2026-96640",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via duplicate page references in PDF files"
+      },
+      {
+        "id": "CVE-2026-96642",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via negative archive member size in TarIO"
+      },
+      {
+        "id": "CVE-2026-96643",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Denial of Service via repeated EXIF headers"
+      },
+      {
+        "id": "CVE-2026-96644",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in metafile parser"
+      },
+      {
+        "id": "CVE-2026-96778",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "pillow: pillow: Arbitrary code execution via JPEG encoder buffer overflow"
+      },
+      {
+        "id": "GHSA-78g4-xqwv-q3g8",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()"
+      },
+      {
         "id": "CVE-2026-112391",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -5071,6 +5143,30 @@
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "pillow: Pillow: Denial of Service via crafted XBM image header"
+      },
+      {
+        "id": "CVE-2026-96636",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Denial of Service via decompression bomb check bypass in multi-frame images"
+      },
+      {
+        "id": "CVE-2026-96638",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Denial of Service via crafted RLE BMP image"
+      },
+      {
+        "id": "CVE-2026-96641",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: pillow: Denial of Service via integer overflow in text-width calculation"
       }
     ]
   }

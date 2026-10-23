@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-22T05:50:14.357Z",
+  "scannedAt": "2026-10-23T05:45:22.068Z",
   "system": {
-    "total": 1953,
+    "total": 1954,
     "cves": [
       {
         "id": "CVE-2001-1534",
@@ -3330,6 +3330,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "libbrotli1",
+        "installedVersion": "1.1.0-2+b7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-42250",
@@ -8580,14 +8588,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
-        "id": "CVE-2026-98085",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
         "id": "CVE-2026-98364",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -8602,14 +8602,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: KVM: arm64: Transfer the hyp stack pages out of the host stage-2"
-      },
-      {
-        "id": "CVE-2026-98652",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
       },
       {
         "id": "CVE-2026-98799",
@@ -12468,6 +12460,14 @@
         "title": "kernel: bpf: Mark signal tracepoint siginfo arguments as scalar"
       },
       {
+        "id": "CVE-2026-98085",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: backtrack_insn(): Handle ld_{abs,ind} subprog exit edge"
+      },
+      {
         "id": "CVE-2026-98099",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -12490,6 +12490,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: netfs: Fix readahead synchronisation issues by loading all folios upfront"
+      },
+      {
+        "id": "CVE-2026-98124",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: smb/client: invalidate fscache for fallocate range operations"
+      },
+      {
+        "id": "CVE-2026-98125",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: smb/client: fix stale page cache in insert/collapse range"
       },
       {
         "id": "CVE-2026-98131",
@@ -12780,20 +12796,20 @@
         "title": "kernel: eth: fbnic: reset num_napi when the napi vectors are freed"
       },
       {
-        "id": "CVE-2026-98628",
+        "id": "CVE-2026-98652",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: KVM: s390: Add missing srcu in kvm_s390_set_irq_state()"
       },
       {
-        "id": "CVE-2026-98685",
+        "id": "CVE-2026-98674",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: iio: adc: adi-axi-adc: Initialize state mutex"
       },
       {
         "id": "CVE-2026-98789",
@@ -14252,22 +14268,6 @@
         "title": "kernel: netfs: break unbuffered write when netfs_alloc_subrequest() fails"
       },
       {
-        "id": "CVE-2026-98124",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: smb/client: invalidate fscache for fallocate range operations"
-      },
-      {
-        "id": "CVE-2026-98125",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: smb/client: fix stale page cache in insert/collapse range"
-      },
-      {
         "id": "CVE-2026-98147",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -14404,12 +14404,12 @@
         "title": "kernel: perf/core: Fill branch entries with a single assignment"
       },
       {
-        "id": "CVE-2026-98674",
+        "id": "CVE-2026-98628",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: bpf: Make post-verification instruction rewrites killable"
       },
       {
         "id": "CVE-2026-98682",
@@ -14417,7 +14417,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: smb: client: drain and invalidate before server-side copy/clone"
       },
       {
         "id": "CVE-2026-98683",
@@ -14425,7 +14425,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: smb: client: flush dirty data before zeroing a range"
       },
       {
         "id": "CVE-2026-98684",
@@ -14433,7 +14433,15 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: smb: client: flush and commit data before querying allocated ranges"
+      },
+      {
+        "id": "CVE-2026-98685",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: smb: client: discard post-EOF pagecache when extending a file via clone range"
       },
       {
         "id": "CVE-2026-98714",

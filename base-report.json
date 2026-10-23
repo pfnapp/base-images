@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-22T05:50:38.899Z",
+  "generatedAt": "2026-10-23T05:45:31.584Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
     "totalVersions": 42,
     "criticalCount": 2,
     "highCount": 40,
-    "cleanCount": 25
+    "cleanCount": 18
   },
   "baseImages": [
     {
@@ -41,16 +41,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -85,16 +85,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -129,16 +129,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -173,16 +173,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 9,
+              "medium": 10,
               "low": 1,
-              "fixable": 10,
-              "total": 10
+              "fixable": 11,
+              "total": 11
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -217,16 +217,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -261,11 +261,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -276,17 +276,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.2.34",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.2.35",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -305,11 +333,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -320,17 +348,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.3.35",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.3.36",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -349,11 +405,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -364,17 +420,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.4.26",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.4.27",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -393,11 +477,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -408,17 +492,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.5.11",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.5.12",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -455,7 +567,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -499,7 +611,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -552,7 +664,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -596,7 +708,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -635,7 +747,7 @@
               "medium": 142,
               "low": 156,
               "fixable": 15,
-              "total": 340
+              "total": 341
             },
             "app": {
               "critical": 1,
@@ -695,7 +807,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -725,7 +837,7 @@
               "medium": 142,
               "low": 156,
               "fixable": 15,
-              "total": 340
+              "total": 341
             },
             "app": {
               "critical": 1,
@@ -785,7 +897,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -884,7 +996,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -928,7 +1040,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -972,7 +1084,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1025,14 +1137,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
             "isLts": true,
             "ltsFrom": null,
-            "latestPatch": "17.0.20.1+1",
-            "latestPatchDate": "2026-08-19",
+            "latestPatch": "17.0.21+9",
+            "latestPatchDate": "2026-10-22",
             "source": "endoflife.date"
           }
         },
@@ -1069,14 +1181,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
             "isLts": true,
             "ltsFrom": null,
-            "latestPatch": "21.0.12.1+1",
-            "latestPatchDate": "2026-08-19",
+            "latestPatch": "21.0.13+9",
+            "latestPatchDate": "2026-10-22",
             "source": "endoflife.date"
           }
         }
@@ -1114,16 +1226,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1158,16 +1270,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1202,16 +1314,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1246,16 +1358,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 9,
+              "medium": 10,
               "low": 1,
-              "fixable": 10,
-              "total": 10
+              "fixable": 11,
+              "total": 11
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1290,16 +1402,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1334,16 +1446,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1378,16 +1490,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 9,
+              "medium": 10,
               "low": 1,
-              "fixable": 10,
-              "total": 10
+              "fixable": 11,
+              "total": 11
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1422,16 +1534,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1547,7 +1659,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1573,11 +1685,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -1588,17 +1700,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.2.34",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.2.35",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -1617,11 +1757,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -1632,17 +1772,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.3.35",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.3.36",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -1661,11 +1829,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -1676,17 +1844,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.4.26",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.4.27",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         },
@@ -1705,11 +1901,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 3,
+              "medium": 3,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 8,
+              "total": 8
             },
             "app": {
               "critical": 0,
@@ -1720,17 +1916,45 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-15176",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-93479",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX map directive and regex matching vulnerability",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-97205",
+              "pkg": "nginx",
+              "installedVersion": "1.30.4-r1",
+              "fixedVersion": "1.30.6-r0",
+              "severity": "HIGH",
+              "title": "nginx: NGINX ngx_http_core_module vulnerability",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "8.5.11",
-            "latestPatchDate": "2026-09-24",
+            "latestPatch": "8.5.12",
+            "latestPatchDate": "2026-10-21",
             "source": "endoflife.date"
           }
         }
@@ -1803,16 +2027,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1847,16 +2071,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1891,16 +2115,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1935,16 +2159,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1979,16 +2203,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2023,16 +2247,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 9,
+              "medium": 10,
               "low": 1,
-              "fixable": 10,
-              "total": 10
+              "fixable": 11,
+              "total": 11
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2067,16 +2291,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 0,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 1,
+              "total": 1
             }
           },
           "topCves": [],
-          "posture": "COMPLIANT",
-          "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "posture": "MEDIUM RISK",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2111,16 +2335,16 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 7,
+              "medium": 8,
               "low": 1,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             }
           },
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2236,7 +2460,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-22T05:50:38.899Z",
+          "scannedAt": "2026-10-23T05:45:31.584Z",
           "eol": {
             "date": null,
             "isEol": false,

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-22T05:51:17.591Z",
+  "scannedAt": "2026-10-23T05:45:41.831Z",
   "system": {
-    "total": 2,
+    "total": 8,
     "cves": [
       {
         "id": "CVE-2026-107891",
@@ -18,6 +18,54 @@
         "fixedVersion": "1.2.6-r3",
         "severity": "UNKNOWN",
         "title": "CVE-2026-107891"
+      },
+      {
+        "id": "CVE-2026-15176",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "HIGH",
+        "title": "nginx: nginx: heap-based buffer overflow in ngx_http_core_module via alias with rewrite referencing $request_filename"
+      },
+      {
+        "id": "CVE-2026-93479",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "HIGH",
+        "title": "nginx: NGINX map directive and regex matching vulnerability"
+      },
+      {
+        "id": "CVE-2026-97205",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "HIGH",
+        "title": "nginx: NGINX ngx_http_core_module vulnerability"
+      },
+      {
+        "id": "CVE-2026-90439",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "MEDIUM",
+        "title": "nginx: NGINX ngx_http_v3_module: Denial of Service via TLS handshake heap buffer overflow"
+      },
+      {
+        "id": "CVE-2026-95101",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "MEDIUM",
+        "title": "nginx: nginx: Data injection in proxied requests via HTTP/3 request buffering"
+      },
+      {
+        "id": "CVE-2026-97629",
+        "pkg": "nginx",
+        "installedVersion": "1.30.4-r1",
+        "fixedVersion": "1.30.6-r0",
+        "severity": "MEDIUM",
+        "title": "nginx: nginx: Client certificate verification bypass via forged SSL sessions"
       }
     ]
   },
