@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:45:13.805Z",
+  "scannedAt": "2026-10-24T05:24:51.931Z",
   "system": {
     "total": 23,
     "cves": [
@@ -190,7 +190,7 @@
     ]
   },
   "app": {
-    "total": 22,
+    "total": 26,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -199,6 +199,38 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "disintegration Imaging 1.6.2 allows attackers to cause a panic (becaus ..."
+      },
+      {
+        "id": "GHSA-cxf3-9h37-7rr8",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "CRITICAL",
+        "title": "Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls"
+      },
+      {
+        "id": "GHSA-9969-6676-49h5",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "HIGH",
+        "title": "Echo: WebSocket proxy can retain connections and handlers after client disconnect"
+      },
+      {
+        "id": "GHSA-h53f-rm2w-w7rg",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "MEDIUM",
+        "title": "Echo: X-Real-IP extractor trusts the header value instead of the sending peer"
+      },
+      {
+        "id": "GHSA-x9ff-22gv-65f4",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "MEDIUM",
+        "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests"
       },
       {
         "id": "GO-2026-5932",
@@ -222,7 +254,7 @@
         "installedVersion": "v0.58.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -230,7 +262,7 @@
         "installedVersion": "v0.58.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -302,7 +334,7 @@
         "installedVersion": "v1.27.0",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -310,7 +342,7 @@
         "installedVersion": "v1.27.0",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -334,7 +366,7 @@
         "installedVersion": "v1.27.0",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
       },
       {
         "id": "CVE-2026-94448",
@@ -350,7 +382,7 @@
         "installedVersion": "v1.27.0",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "A trusted template author may have previously written a valid template ..."
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
       },
       {
         "id": "CVE-2026-97032",

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-23T05:45:22.068Z",
+  "scannedAt": "2026-10-24T05:25:08.399Z",
   "system": {
-    "total": 1954,
+    "total": 2009,
     "cves": [
       {
         "id": "CVE-2001-1534",
@@ -3335,9 +3335,9 @@
         "id": "CVE-2026-111497",
         "pkg": "libbrotli1",
         "installedVersion": "1.1.0-2+b7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "fixedVersion": "1.1.0-2+deb13u1",
+        "severity": "HIGH",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
       },
       {
         "id": "CVE-2026-42250",
@@ -5756,6 +5756,22 @@
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
+        "id": "CVE-2026-115506",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.9.0 contains a denial of service vulnerability beca ..."
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "libgcc-14-dev",
         "installedVersion": "14.2.0-19",
@@ -7028,6 +7044,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "libpython3.13-stdlib",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -7162,6 +7186,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -8602,6 +8634,14 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: KVM: arm64: Transfer the hyp stack pages out of the host stage-2"
+      },
+      {
+        "id": "CVE-2026-98715",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: KVM: SVM: Preserve TLB control (i.e. pending TLB flush) on failed VMRUN"
       },
       {
         "id": "CVE-2026-98799",
@@ -11028,14 +11068,6 @@
         "title": "kernel: Bluetooth: ISO: fix race of kfree vs kref_get_unless_zero"
       },
       {
-        "id": "CVE-2026-74534",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: Bluetooth: ISO: fix refcounting of iso_conn"
-      },
-      {
         "id": "CVE-2026-74537",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -12812,6 +12844,38 @@
         "title": "kernel: iio: adc: adi-axi-adc: Initialize state mutex"
       },
       {
+        "id": "CVE-2026-98714",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: KVM: SVM: Update control fields on #VMEXIT if and only if VMRUN succeeded"
+      },
+      {
+        "id": "CVE-2026-98740",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: EDAC/altera: Drop __init from ECC setup paths for re-probe safety"
+      },
+      {
+        "id": "CVE-2026-98747",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: serial: core: fix NULL pointer dereference in serial_core_unregister_port()"
+      },
+      {
+        "id": "CVE-2026-98786",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/amd/display: guard dc_sink dereferences in MST mode validation"
+      },
+      {
         "id": "CVE-2026-98789",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -14444,46 +14508,6 @@
         "title": "kernel: smb: client: discard post-EOF pagecache when extending a file via clone range"
       },
       {
-        "id": "CVE-2026-98714",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
-        "id": "CVE-2026-98715",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
-      },
-      {
-        "id": "CVE-2026-98740",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  E ..."
-      },
-      {
-        "id": "CVE-2026-98747",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-98786",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
         "id": "CVE-2026-98795",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -14538,6 +14562,390 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[Kernel: Unprivileged user can freeze journald]"
+      },
+      {
+        "id": "CVE-2026-98874",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[wifi: iwlwifi: mld: don't WARN on WoWLAN suspend w/o netdetect]"
+      },
+      {
+        "id": "CVE-2026-98875",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/nouveau/gsp: add SEC2 to GA100 chip table]"
+      },
+      {
+        "id": "CVE-2026-98878",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[irqchip/gic-v5: Immediately exec priority drop following activate]"
+      },
+      {
+        "id": "CVE-2026-98883",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[serial: 8250_port: recognize UPIO_AU]"
+      },
+      {
+        "id": "CVE-2026-98894",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/amd/ras: reset CPER ring on corrupt entry size]"
+      },
+      {
+        "id": "CVE-2026-98897",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ksmbd: don't hold ci->m_lock while waiting for a lease break ack]"
+      },
+      {
+        "id": "CVE-2026-98914",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/amdgpu: cap ATOM command table nesting depth]"
+      },
+      {
+        "id": "CVE-2026-98916",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[wifi: nl80211: check link is beaconing for color change]"
+      },
+      {
+        "id": "CVE-2026-98917",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[parisc: Increase kernel stack size to 32kb]"
+      },
+      {
+        "id": "CVE-2026-98924",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[fs: avoid repeated scans in evict_inodes()]"
+      },
+      {
+        "id": "CVE-2026-98926",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/amd/display: Remove sink usage from DPMS]"
+      },
+      {
+        "id": "CVE-2026-98929",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[macsec: initialize SecY before registering the netdevice]"
+      },
+      {
+        "id": "CVE-2026-98932",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[EDAC/altera: Fix use-after-free in error paths]"
+      },
+      {
+        "id": "CVE-2026-98942",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[sched_ext: Build the cid tables privately and publish them with RCU]"
+      },
+      {
+        "id": "CVE-2026-98946",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/vc4: Disable the V3D interrupt across runtime suspend]"
+      },
+      {
+        "id": "CVE-2026-98951",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[riscv: ptrace: Zero-initialize regset buffers before copyin]"
+      },
+      {
+        "id": "CVE-2026-98954",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[net: always dissect GSO packets in __virtio_net_hdr_to_skb()]"
+      },
+      {
+        "id": "CVE-2026-98958",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[wifi: mt76: account non-AQL frames per peer rather than per link]"
+      },
+      {
+        "id": "CVE-2026-98966",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[bonding: fix the program leak when XDP is replaced]"
+      },
+      {
+        "id": "CVE-2026-98972",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[cgroup/cpuset: Don't access cpuset_cgrp_subsys.root in is_in_v2_mode()]"
+      },
+      {
+        "id": "CVE-2026-98974",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[xfs: fix exchange-range-to-eof file size exchange]"
+      },
+      {
+        "id": "CVE-2026-98975",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[xfs: stop exchanging reflink flags when exchanging mappings]"
+      },
+      {
+        "id": "CVE-2026-98977",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: handle mount locking for automounts correctly]"
+      },
+      {
+        "id": "CVE-2026-98978",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: never expire a locked mount]"
+      },
+      {
+        "id": "CVE-2026-98981",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: unhash a dentry before detaching the mounts on it]"
+      },
+      {
+        "id": "CVE-2026-98983",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[unshare: don't drop active namespace references that were never taken]"
+      },
+      {
+        "id": "CVE-2026-98985",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: check the mounts before reading their parents in pivot_root()]"
+      },
+      {
+        "id": "CVE-2026-98989",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: check a recursive bind mount for mount namespace loops]"
+      },
+      {
+        "id": "CVE-2026-98993",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[namespace: don't inherit MNT_UMOUNT in clone_mnt()]"
+      },
+      {
+        "id": "CVE-2026-98996",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[fs: don't silently unmount busy mounts]"
+      },
+      {
+        "id": "CVE-2026-98999",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/xe: Fix stale pinned_link entry when fb-pin performs the final unpin]"
+      },
+      {
+        "id": "CVE-2026-99002",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[drm/vmwgfx: validate pitch coming from userspace]"
+      },
+      {
+        "id": "CVE-2026-99009",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Bluetooth: RFCOMM: connect the session socket without rfcomm_mutex]"
+      },
+      {
+        "id": "CVE-2026-99014",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Bluetooth: hci_sync: Fix command skb lifetime during scan setup]"
+      },
+      {
+        "id": "CVE-2026-99019",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[scsi: ch: Do not keep references to data transfer element devices]"
+      },
+      {
+        "id": "CVE-2026-99021",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[regulator: of: fill in supply names in of_regulator_bulk_get_all()]"
+      },
+      {
+        "id": "CVE-2026-99026",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[net: team: free skb when broadcast has no txable port]"
+      },
+      {
+        "id": "CVE-2026-99027",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[net: team: stop reusing skb after queue override]"
+      },
+      {
+        "id": "CVE-2026-99028",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[net: xilinx: axienet: Free outstanding DMA buffers on dmaengine stop]"
+      },
+      {
+        "id": "CVE-2026-99041",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ip6_gre: remove obsolete ERSPAN PMTU update]"
+      },
+      {
+        "id": "CVE-2026-99044",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ice: fix use-after-free in dynamic port cleanup]"
+      },
+      {
+        "id": "CVE-2026-99076",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ipv6: udp: Create exceptions before socket matching]"
+      },
+      {
+        "id": "CVE-2026-99077",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ipv4: udp: Create exceptions before socket matching]"
+      },
+      {
+        "id": "CVE-2026-99082",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[KVM: x86: Use active memslots for the per-vCPU MMIO cache]"
+      },
+      {
+        "id": "CVE-2026-99083",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[ksmbd: fix heap out-of-bounds write in krb5_authenticate()]"
+      },
+      {
+        "id": "CVE-2026-99085",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[sched_ext: Fix CPU hotplug hang when a dying CPU's tasks sit in the BPF scheduler]"
+      },
+      {
+        "id": "CVE-2026-99086",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[dm-integrity: validate the superblock on resume]"
+      },
+      {
+        "id": "CVE-2026-99087",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[dm-integrity: fix NULL pointer dereference when the 'R' flag is used]"
       },
       {
         "id": "CVE-2026-3184",
@@ -14884,6 +15292,14 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
+        "id": "CVE-2026-115207",
+        "pkg": "patch",
+        "installedVersion": "2.8-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "patch: Filename validation bypass in reversal fallback allows file creation outside the working directory"
+      },
+      {
         "id": "CVE-2010-4651",
         "pkg": "patch",
         "installedVersion": "2.8-2",
@@ -15220,6 +15636,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "python3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -15356,6 +15780,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "python3.13-venv",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -15490,6 +15922,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13-venv",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2026-16742",
@@ -15638,8 +16078,48 @@
     ]
   },
   "app": {
-    "total": 1,
+    "total": 10,
     "cves": [
+      {
+        "id": "CVE-2026-111181",
+        "pkg": "body-parser",
+        "installedVersion": "2.3.0",
+        "fixedVersion": "2.4.0, 1.20.9",
+        "severity": "HIGH",
+        "title": "body-parser: body-parser: Denial of Service via unhandled decompression stream error"
+      },
+      {
+        "id": "CVE-2026-110180",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Security policy bypass via improper host canonicalization"
+      },
+      {
+        "id": "CVE-2026-110306",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Cross-Site Scripting via improper URI scheme decoding"
+      },
+      {
+        "id": "CVE-2026-110095",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "LOW",
+        "title": "fast-uri: fast-uri: Path traversal via improper relative URI normalization"
+      },
+      {
+        "id": "CVE-2026-110725",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "LOW",
+        "title": "fast-uri: fast-uri: Cross-site scripting via unescaped colon in relative URI paths"
+      },
       {
         "id": "GHSA-6q48-6c7w-9gw2",
         "pkg": "certifi",
@@ -15647,6 +16127,38 @@
         "fixedVersion": "2026.10.19",
         "severity": "CRITICAL",
         "title": "certifi bundles emSign root CAs with compromised intermediate CA keys"
+      },
+      {
+        "id": "CVE-2026-112940",
+        "pkg": "filelock",
+        "installedVersion": "4.0.1",
+        "fixedVersion": "4.2.1",
+        "severity": "HIGH",
+        "title": "filelock: filelock: Arbitrary file overwrite via insecure database file reopening"
+      },
+      {
+        "id": "CVE-2026-112907",
+        "pkg": "filelock",
+        "installedVersion": "4.0.1",
+        "fixedVersion": "4.2.1",
+        "severity": "LOW",
+        "title": "filelock: On Windows an oplock on a soft lock's marker holds SoftFileLock.acquire() past its timeout and blocks the stale break"
+      },
+      {
+        "id": "CVE-2026-112913",
+        "pkg": "filelock",
+        "installedVersion": "4.0.1",
+        "fixedVersion": "4.2.1",
+        "severity": "LOW",
+        "title": "filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database"
+      },
+      {
+        "id": "GHSA-xmj3-9gf7-h52w",
+        "pkg": "setuptools",
+        "installedVersion": "84.0.0",
+        "fixedVersion": "84.1.0",
+        "severity": "LOW",
+        "title": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description"
       }
     ]
   }

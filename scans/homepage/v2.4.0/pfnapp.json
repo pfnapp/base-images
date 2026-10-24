@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:45:28.476Z",
+  "scannedAt": "2026-10-24T05:25:15.945Z",
   "system": {
     "total": 2,
     "cves": [
@@ -22,7 +22,7 @@
     ]
   },
   "app": {
-    "total": 6,
+    "total": 9,
     "cves": [
       {
         "id": "CVE-2026-111755",
@@ -70,7 +70,31 @@
         "installedVersion": "16.3.8",
         "fixedVersion": "15.5.28, 16.4.1",
         "severity": "HIGH",
-        "title": "Next.js: Denial of Service in App Router using Server Actions"
+        "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       }
     ]
   }

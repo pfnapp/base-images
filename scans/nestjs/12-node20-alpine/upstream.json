@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-10-23T05:45:42.157Z",
+  "scannedAt": "2026-10-24T05:25:44.411Z",
   "system": {
-    "total": 2,
+    "total": 3,
     "cves": [
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "brotli-libs",
+        "installedVersion": "1.2.0-r0",
+        "fixedVersion": "1.2.1-r0",
+        "severity": "HIGH",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+      },
       {
         "id": "CVE-2026-107891",
         "pkg": "musl",
@@ -22,7 +30,7 @@
     ]
   },
   "app": {
-    "total": 1,
+    "total": 3,
     "cves": [
       {
         "id": "CVE-2026-111997",
@@ -31,6 +39,22 @@
         "fixedVersion": "10.7.4",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       }
     ]
   }

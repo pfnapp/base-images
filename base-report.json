@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-23T05:45:31.584Z",
+  "generatedAt": "2026-10-24T05:25:22.694Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
     "totalVersions": 42,
     "criticalCount": 2,
-    "highCount": 40,
+    "highCount": 57,
     "cleanCount": 18
   },
   "baseImages": [
@@ -32,25 +32,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -76,25 +95,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -120,25 +158,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -164,11 +221,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -179,10 +236,20 @@
               "total": 11
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -208,25 +275,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -261,11 +347,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             },
             "app": {
               "critical": 0,
@@ -277,6 +363,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -307,7 +402,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -333,11 +428,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             },
             "app": {
               "critical": 0,
@@ -349,6 +444,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -379,7 +483,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -405,11 +509,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             },
             "app": {
               "critical": 0,
@@ -421,6 +525,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -451,7 +564,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -477,11 +590,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 9,
+              "total": 9
             },
             "app": {
               "critical": 0,
@@ -493,6 +606,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -523,7 +645,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -567,7 +689,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -593,11 +715,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -608,10 +730,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -664,7 +796,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -690,11 +822,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -705,10 +837,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -743,19 +885,19 @@
           "vulnerabilities": {
             "system": {
               "critical": 5,
-              "high": 35,
+              "high": 36,
               "medium": 142,
               "low": 156,
-              "fixable": 15,
-              "total": 341
+              "fixable": 17,
+              "total": 342
             },
             "app": {
               "critical": 1,
               "high": 2,
               "medium": 1,
-              "low": 0,
-              "fixable": 4,
-              "total": 4
+              "low": 2,
+              "fixable": 6,
+              "total": 6
             }
           },
           "topCves": [
@@ -807,7 +949,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -833,19 +975,19 @@
           "vulnerabilities": {
             "system": {
               "critical": 5,
-              "high": 35,
+              "high": 36,
               "medium": 142,
               "low": 156,
-              "fixable": 15,
-              "total": 341
+              "fixable": 17,
+              "total": 342
             },
             "app": {
               "critical": 1,
               "high": 2,
               "medium": 1,
-              "low": 0,
-              "fixable": 4,
-              "total": 4
+              "low": 2,
+              "fixable": 6,
+              "total": 6
             }
           },
           "topCves": [
@@ -897,7 +1039,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -932,11 +1074,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -948,6 +1090,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-111943",
               "pkg": "stdlib",
@@ -983,20 +1134,11 @@
               "severity": "HIGH",
               "title": "crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references",
               "layer": "app"
-            },
-            {
-              "id": "CVE-2026-111943",
-              "pkg": "stdlib",
-              "installedVersion": "v1.25.14",
-              "fixedVersion": "1.26.10, 1.27.3",
-              "severity": "HIGH",
-              "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates",
-              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1022,11 +1164,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1037,10 +1179,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1066,11 +1218,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1081,10 +1233,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1119,11 +1281,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1134,10 +1296,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1163,11 +1335,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1178,10 +1350,20 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1217,25 +1399,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1261,25 +1462,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1305,25 +1525,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1349,11 +1588,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1364,10 +1603,20 @@
               "total": 11
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1393,25 +1642,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1437,25 +1705,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1481,11 +1768,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -1496,10 +1783,20 @@
               "total": 11
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1525,25 +1822,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1604,11 +1920,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 4,
+              "high": 5,
               "medium": 3,
               "low": 0,
-              "fixable": 9,
-              "total": 9
+              "fixable": 16,
+              "total": 16
             },
             "app": {
               "critical": 0,
@@ -1620,6 +1936,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-103111",
               "pkg": "pcre2",
@@ -1659,7 +1984,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1685,11 +2010,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 18,
+              "total": 18
             },
             "app": {
               "critical": 0,
@@ -1701,6 +2026,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -1731,7 +2065,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1757,11 +2091,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 18,
+              "total": 18
             },
             "app": {
               "critical": 0,
@@ -1773,6 +2107,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -1803,7 +2146,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1829,11 +2172,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 18,
+              "total": 18
             },
             "app": {
               "critical": 0,
@@ -1845,6 +2188,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -1875,7 +2227,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1901,11 +2253,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
+              "high": 4,
               "medium": 3,
               "low": 0,
-              "fixable": 8,
-              "total": 8
+              "fixable": 18,
+              "total": 18
             },
             "app": {
               "critical": 0,
@@ -1917,6 +2269,15 @@
             }
           },
           "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
             {
               "id": "CVE-2026-15176",
               "pkg": "nginx",
@@ -1947,7 +2308,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2018,25 +2379,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2062,25 +2442,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2106,25 +2505,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2150,25 +2568,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2194,25 +2631,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2238,11 +2694,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
@@ -2253,10 +2709,20 @@
               "total": 11
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.1.0-r2",
+              "fixedVersion": "1.1.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            }
+          ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2282,25 +2748,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 1,
+              "high": 1,
+              "medium": 2,
               "low": 0,
-              "fixable": 1,
-              "total": 1
+              "fixable": 3,
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r0",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.29.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2326,25 +2811,44 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 0,
               "low": 0,
-              "fixable": 2,
-              "total": 2
+              "fixable": 3,
+              "total": 3
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 8,
+              "high": 1,
+              "medium": 9,
               "low": 1,
-              "fixable": 9,
-              "total": 9
+              "fixable": 11,
+              "total": 11
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-111497",
+              "pkg": "brotli-libs",
+              "installedVersion": "1.2.0-r1",
+              "fixedVersion": "1.2.1-r0",
+              "severity": "HIGH",
+              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-109869",
+              "pkg": "undici",
+              "installedVersion": "6.28.0",
+              "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+              "severity": "HIGH",
+              "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2460,7 +2964,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-23T05:45:31.584Z",
+          "scannedAt": "2026-10-24T05:25:22.694Z",
           "eol": {
             "date": null,
             "isEol": false,

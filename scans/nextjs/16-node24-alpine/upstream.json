@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-10-23T05:45:38.781Z",
+  "scannedAt": "2026-10-24T05:25:37.607Z",
   "system": {
-    "total": 2,
+    "total": 3,
     "cves": [
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "brotli-libs",
+        "installedVersion": "1.2.0-r1",
+        "fixedVersion": "1.2.1-r0",
+        "severity": "HIGH",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+      },
       {
         "id": "CVE-2026-107891",
         "pkg": "musl",
@@ -22,7 +30,7 @@
     ]
   },
   "app": {
-    "total": 9,
+    "total": 11,
     "cves": [
       {
         "id": "CVE-2026-102277",
@@ -79,6 +87,22 @@
         "fixedVersion": "7.1.6",
         "severity": "MEDIUM",
         "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       },
       {
         "id": "CVE-2026-85024",

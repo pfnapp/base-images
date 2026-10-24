@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:44:32.596Z",
+  "scannedAt": "2026-10-24T05:24:09.805Z",
   "system": {
     "total": 2,
     "cves": [
@@ -22,7 +22,7 @@
     ]
   },
   "app": {
-    "total": 331,
+    "total": 332,
     "cves": [
       {
         "id": "CVE-2026-85393",
@@ -135,6 +135,14 @@
         "fixedVersion": "5.2.4",
         "severity": "MEDIUM",
         "title": "go-chi/chi: Go-chi/chi: Open Redirect vulnerability allows redirection to malicious websites"
+      },
+      {
+        "id": "CVE-2026-114437",
+        "pkg": "github.com/go-chi/chi/v5",
+        "installedVersion": "v5.2.2",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "github.com/go-chi/chi: chi: client IP spoofing via unverified direct connection in ClientIPFromXFF middleware"
       },
       {
         "id": "CVE-2026-34986",
@@ -446,7 +454,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -454,7 +462,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -942,7 +950,7 @@
         "installedVersion": "v1.24.4",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -950,7 +958,7 @@
         "installedVersion": "v1.24.4",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -974,7 +982,7 @@
         "installedVersion": "v1.24.4",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
       },
       {
         "id": "CVE-2026-94448",
@@ -990,7 +998,7 @@
         "installedVersion": "v1.24.4",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "A trusted template author may have previously written a valid template ..."
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
       },
       {
         "id": "CVE-2026-97032",
@@ -1358,7 +1366,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -1366,7 +1374,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -1798,7 +1806,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -1806,7 +1814,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -1830,7 +1838,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
       },
       {
         "id": "CVE-2026-94448",
@@ -1846,7 +1854,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "A trusted template author may have previously written a valid template ..."
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
       },
       {
         "id": "CVE-2026-97032",
@@ -2150,7 +2158,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -2158,7 +2166,7 @@
         "installedVersion": "v0.40.0",
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -2590,7 +2598,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "When \"Trailer\" headers are sent by a client, the HTTP server internall ..."
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
       },
       {
         "id": "CVE-2026-78660",
@@ -2598,7 +2606,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Historically, we have been rather lax about malformed framing-related  ..."
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
       },
       {
         "id": "CVE-2026-78663",
@@ -2622,7 +2630,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "Parsing a multipart form can bypass memory limits and read an arbitrar ..."
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
       },
       {
         "id": "CVE-2026-94448",
@@ -2638,7 +2646,7 @@
         "installedVersion": "v1.25.1",
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "MEDIUM",
-        "title": "A trusted template author may have previously written a valid template ..."
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
       },
       {
         "id": "CVE-2026-97032",

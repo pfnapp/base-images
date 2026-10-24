@@ -1,28 +1,11 @@
 {
-  "scannedAt": "2026-10-23T05:45:13.805Z",
+  "scannedAt": "2026-10-24T05:24:51.931Z",
   "system": {
-    "total": 2,
-    "cves": [
-      {
-        "id": "CVE-2026-107891",
-        "pkg": "musl",
-        "installedVersion": "1.2.5-r11",
-        "fixedVersion": "1.2.5-r12",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-107891"
-      },
-      {
-        "id": "CVE-2026-107891",
-        "pkg": "musl-utils",
-        "installedVersion": "1.2.5-r11",
-        "fixedVersion": "1.2.5-r12",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-107891"
-      }
-    ]
+    "total": 0,
+    "cves": []
   },
   "app": {
-    "total": 2,
+    "total": 6,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -31,6 +14,38 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "disintegration Imaging 1.6.2 allows attackers to cause a panic (becaus ..."
+      },
+      {
+        "id": "GHSA-cxf3-9h37-7rr8",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "CRITICAL",
+        "title": "Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls"
+      },
+      {
+        "id": "GHSA-9969-6676-49h5",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "HIGH",
+        "title": "Echo: WebSocket proxy can retain connections and handlers after client disconnect"
+      },
+      {
+        "id": "GHSA-h53f-rm2w-w7rg",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "MEDIUM",
+        "title": "Echo: X-Real-IP extractor trusts the header value instead of the sending peer"
+      },
+      {
+        "id": "GHSA-x9ff-22gv-65f4",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "MEDIUM",
+        "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests"
       },
       {
         "id": "GO-2026-5932",

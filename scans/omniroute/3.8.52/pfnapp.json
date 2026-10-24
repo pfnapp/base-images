@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:44:36.201Z",
+  "scannedAt": "2026-10-24T05:24:15.721Z",
   "system": {
     "total": 213,
     "cves": [
@@ -1710,7 +1710,7 @@
     ]
   },
   "app": {
-    "total": 63,
+    "total": 76,
     "cves": [
       {
         "id": "CVE-2026-102282",
@@ -1862,7 +1862,7 @@
         "installedVersion": "16.3.1",
         "fixedVersion": "15.5.28, 16.4.1",
         "severity": "HIGH",
-        "title": "Next.js: Denial of Service in App Router using Server Actions"
+        "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
       },
       {
         "id": "CVE-2026-94483",
@@ -1977,6 +1977,22 @@
         "title": "source-map-js: source-map-js: Denial of Service via malformed indexed source maps"
       },
       {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
         "id": "CVE-2026-85024",
         "pkg": "undici",
         "installedVersion": "6.28.0",
@@ -1993,6 +2009,22 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
         "id": "CVE-2026-84961",
         "pkg": "undici",
         "installedVersion": "7.29.0",
@@ -2007,6 +2039,38 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "HIGH",
         "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       },
       {
         "id": "CVE-2026-18149",
@@ -2135,6 +2199,14 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
       },
       {
         "id": "CVE-2026-84961",
@@ -2153,6 +2225,22 @@
         "title": "undici: undici: Authentication bypass via cross-origin cache poisoning due to missing origin isolation"
       },
       {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "8.10.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
         "id": "CVE-2026-18149",
         "pkg": "undici",
         "installedVersion": "8.10.0",
@@ -2215,6 +2303,22 @@
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "LOW",
         "title": "undici: undici: Integrity failure due to caching of unsafe HTTP method responses"
+      },
+      {
+        "id": "CVE-2023-54404",
+        "pkg": "zod",
+        "installedVersion": "4.4.3",
+        "fixedVersion": "4.6.6",
+        "severity": "HIGH",
+        "title": "zod: zod: Denial of service via unbounded array validation"
+      },
+      {
+        "id": "CVE-2023-54404",
+        "pkg": "zod",
+        "installedVersion": "4.4.3",
+        "fixedVersion": "4.6.6",
+        "severity": "HIGH",
+        "title": "zod: zod: Denial of service via unbounded array validation"
       }
     ]
   }

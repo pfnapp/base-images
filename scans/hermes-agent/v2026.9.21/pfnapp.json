@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:45:10.060Z",
+  "scannedAt": "2026-10-24T05:24:43.870Z",
   "system": {
     "total": 1114,
     "cves": [
@@ -586,14 +586,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
-      },
-      {
-        "id": "CVE-2025-52290",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
       },
       {
         "id": "CVE-2026-107675",
@@ -1292,14 +1284,6 @@
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
-        "id": "CVE-2025-52290",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
-      },
-      {
         "id": "CVE-2026-107675",
         "pkg": "libavcodec61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -1610,14 +1594,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
-      },
-      {
-        "id": "CVE-2025-52290",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
       },
       {
         "id": "CVE-2026-107675",
@@ -1932,14 +1908,6 @@
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
-        "id": "CVE-2025-52290",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
-      },
-      {
         "id": "CVE-2026-107675",
         "pkg": "libavfilter10",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2252,14 +2220,6 @@
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
-        "id": "CVE-2025-52290",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
-      },
-      {
         "id": "CVE-2026-107675",
         "pkg": "libavformat61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2570,14 +2530,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
-      },
-      {
-        "id": "CVE-2025-52290",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
       },
       {
         "id": "CVE-2026-107675",
@@ -2783,9 +2735,9 @@
         "id": "CVE-2026-111497",
         "pkg": "libbrotli1",
         "installedVersion": "1.1.0-2+b7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "fixedVersion": "1.1.0-2+deb13u1",
+        "severity": "HIGH",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
       },
       {
         "id": "CVE-2026-42250",
@@ -4236,6 +4188,22 @@
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
+        "id": "CVE-2026-115506",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.9.0 contains a denial of service vulnerability beca ..."
+      },
+      {
         "id": "CVE-2026-95512",
         "pkg": "libfreetype6",
         "installedVersion": "2.13.3+dfsg-1+deb13u1",
@@ -4580,6 +4548,22 @@
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
       },
       {
+        "id": "CVE-2026-113679",
+        "pkg": "libharfbuzz0b",
+        "installedVersion": "10.2.0-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "harfbuzz: HarfBuzz: Out-of-bounds write via crafted font in WebAssembly shaper"
+      },
+      {
+        "id": "CVE-2026-113680",
+        "pkg": "libharfbuzz0b",
+        "installedVersion": "10.2.0-1+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "harfbuzz: harfbuzz: Denial of Service via crafted font in WebAssembly shaper"
+      },
+      {
         "id": "CVE-2017-9937",
         "pkg": "libjbig0",
         "installedVersion": "2.1-6.1+b2",
@@ -4921,7 +4905,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50579",
@@ -4929,7 +4913,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -4945,7 +4929,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50583",
@@ -4977,7 +4961,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50587",
@@ -5017,7 +5001,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-54441",
@@ -5508,14 +5492,6 @@
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
-        "id": "CVE-2025-52290",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
-      },
-      {
         "id": "CVE-2026-107675",
         "pkg": "libpostproc58",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -5836,6 +5812,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "libpython3.13-stdlib",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -5970,6 +5954,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2026-96889",
@@ -6348,14 +6340,6 @@
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
-        "id": "CVE-2025-52290",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
-      },
-      {
         "id": "CVE-2026-107675",
         "pkg": "libswresample5",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -6666,14 +6650,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
-      },
-      {
-        "id": "CVE-2025-52290",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: ffmpeg: Denial of Service via crafted media file"
       },
       {
         "id": "CVE-2026-107675",
@@ -8324,6 +8300,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "python3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8460,6 +8444,14 @@
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "python3.13-venv",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8594,6 +8586,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13-venv",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "TEMP-0517018-A83CE6",
@@ -8918,7 +8918,7 @@
     ]
   },
   "app": {
-    "total": 162,
+    "total": 175,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -9137,12 +9137,28 @@
         "title": "node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata"
       },
       {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
         "id": "CVE-2026-12151",
         "pkg": "undici",
         "installedVersion": "6.26.0",
         "fixedVersion": "6.27.0, 7.28.0, 8.5.0",
         "severity": "HIGH",
         "title": "undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       },
       {
         "id": "CVE-2026-15157",
@@ -9209,6 +9225,22 @@
         "title": "undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery."
       },
       {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
         "id": "CVE-2026-85024",
         "pkg": "undici",
         "installedVersion": "6.28.0",
@@ -9225,12 +9257,36 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
         "id": "CVE-2026-84961",
         "pkg": "undici",
         "installedVersion": "7.29.0",
         "fixedVersion": "7.29.1, 8.10.2",
         "severity": "HIGH",
         "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
       },
       {
         "id": "CVE-2026-18149",
@@ -9351,6 +9407,22 @@
         "fixedVersion": "4.1.11, 5.0.0-rc.2",
         "severity": "MEDIUM",
         "title": "vitest: Vitest: Arbitrary File Read via Path Traversal in HMR WebSocket"
+      },
+      {
+        "id": "CVE-2023-54404",
+        "pkg": "zod",
+        "installedVersion": "4.4.3",
+        "fixedVersion": "4.6.6",
+        "severity": "HIGH",
+        "title": "zod: zod: Denial of service via unbounded array validation"
+      },
+      {
+        "id": "CVE-2023-54404",
+        "pkg": "zod",
+        "installedVersion": "4.5.4",
+        "fixedVersion": "4.6.6",
+        "severity": "HIGH",
+        "title": "zod: zod: Denial of service via unbounded array validation"
       },
       {
         "id": "CVE-2026-102268",
@@ -9553,6 +9625,14 @@
         "title": "anyio: AnyIO: Denial of Service due to undrained stderr in process-pool workers"
       },
       {
+        "id": "GHSA-9v8h-qqgm-4m35",
+        "pkg": "brotlicffi",
+        "installedVersion": "1.2.0.2",
+        "fixedVersion": "1.2.1.0",
+        "severity": "CRITICAL",
+        "title": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package"
+      },
+      {
         "id": "GHSA-6q48-6c7w-9gw2",
         "pkg": "certifi",
         "installedVersion": "2026.5.20",
@@ -9646,7 +9726,7 @@
         "installedVersion": "1.39.1",
         "fixedVersion": "1.45.1",
         "severity": "MEDIUM",
-        "title": "OpenTelemetry Python: Unbounded tracestate parsing in opentelemetry-api"
+        "title": "opentelemetry-api: opentelemetry-api: Denial of Service via regular expression backtracking in header parsing"
       },
       {
         "id": "CVE-2026-112393",
@@ -9655,6 +9735,14 @@
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
         "title": "Pillow is a Python imaging library. From 2.0.0 until 13.0.0, Pillow ha ..."
+      },
+      {
+        "id": "CVE-2026-112398",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's FlashPix ..."
       },
       {
         "id": "CVE-2026-112403",
@@ -9758,7 +9846,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
-        "title": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's  ..."
+        "title": "pillow: pillow: Denial of Service via unbounded memory expansion in MSP image decoder"
       },
       {
         "id": "CVE-2026-112893",
@@ -9937,6 +10025,14 @@
         "title": "pillow: Pillow: Denial of Service via crafted XBM image header"
       },
       {
+        "id": "CVE-2026-114501",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: Pillow: Information disclosure via improper memory alignment during Arrow export"
+      },
+      {
         "id": "CVE-2026-96636",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -9959,6 +10055,14 @@
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "pillow: pillow: Denial of Service via integer overflow in text-width calculation"
+      },
+      {
+        "id": "GHSA-xmj3-9gf7-h52w",
+        "pkg": "setuptools",
+        "installedVersion": "84.0.0",
+        "fixedVersion": "84.1.0",
+        "severity": "LOW",
+        "title": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description"
       },
       {
         "id": "GHSA-c2m8-h5v5-343r",

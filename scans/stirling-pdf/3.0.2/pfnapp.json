@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T05:45:17.784Z",
+  "scannedAt": "2026-10-24T05:25:01.149Z",
   "system": {
     "total": 499,
     "cves": [
@@ -3991,14 +3991,14 @@
         "id": "CVE-2026-85091",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg-3.1ubuntu2.2",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg-3.1ubuntu2.3",
         "severity": "MEDIUM",
         "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
       }
     ]
   },
   "app": {
-    "total": 57,
+    "total": 60,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -4145,12 +4145,28 @@
         "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: Path traversal via incomplete type validation"
       },
       {
+        "id": "GHSA-9v8h-qqgm-4m35",
+        "pkg": "brotli",
+        "installedVersion": "1.2.0",
+        "fixedVersion": "1.2.1",
+        "severity": "CRITICAL",
+        "title": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package"
+      },
+      {
         "id": "CVE-2026-112393",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
         "title": "Pillow is a Python imaging library. From 2.0.0 until 13.0.0, Pillow ha ..."
+      },
+      {
+        "id": "CVE-2026-112398",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "CRITICAL",
+        "title": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's FlashPix ..."
       },
       {
         "id": "CVE-2026-112403",
@@ -4254,7 +4270,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
-        "title": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's  ..."
+        "title": "pillow: pillow: Denial of Service via unbounded memory expansion in MSP image decoder"
       },
       {
         "id": "CVE-2026-112893",
@@ -4431,6 +4447,14 @@
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "pillow: Pillow: Denial of Service via crafted XBM image header"
+      },
+      {
+        "id": "CVE-2026-114501",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "pillow: Pillow: Information disclosure via improper memory alignment during Arrow export"
       },
       {
         "id": "CVE-2026-96636",
