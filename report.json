@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-24T11:00:46.534Z",
+    "generatedAt": "2026-10-24T14:34:43.359Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
     "totalMonitoredVersions": 49,
     "runAsRootCount": 32,
     "criticalVulnerabilityCount": 125,
-    "highVulnerabilityCount": 1032,
+    "highVulnerabilityCount": 1027,
     "pfnappScannedCount": 48,
     "totalCveReduction": 1750
   },
@@ -241829,9 +241829,86 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "v11.3.5",
+          "fullRef": "amir20/dozzle:v11.3.5",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 1
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 1,
+                "low": 0,
+                "fixable": 0,
+                "total": 2,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 1,
+                "low": 0,
+                "total": 1
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-10-24T14:34:43.359Z"
+        },
+        {
           "tag": "v11.3.4",
           "fullRef": "amir20/dozzle:v11.3.4",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -241923,7 +242000,7 @@
         {
           "tag": "v11.3.3",
           "fullRef": "amir20/dozzle:v11.3.3",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -242024,7 +242101,7 @@
         {
           "tag": "v11.3.2",
           "fullRef": "amir20/dozzle:v11.3.2",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -242142,7 +242219,7 @@
         {
           "tag": "v11.3.1",
           "fullRef": "amir20/dozzle:v11.3.1",
-          "rank": 4,
+          "rank": 5,
           "lifecycleStatus": "AGING",
           "lifecycleBadge": "🟠",
           "lifecycleAdvice": "Plan upgrade to latest",
@@ -242312,207 +242389,14 @@
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
           "scannedAt": "2026-10-24T05:23:44.672Z"
-        },
-        {
-          "tag": "v11.3.0",
-          "fullRef": "amir20/dozzle:v11.3.0",
-          "rank": 5,
-          "lifecycleStatus": "EOL SOON",
-          "lifecycleBadge": "🔴",
-          "lifecycleAdvice": "Next upstream release will deprecate this version",
-          "security": {
-            "runAsRoot": true,
-            "configuredUser": "root",
-            "uidLabel": "0 (root)"
-          },
-          "vulnerabilities": {
-            "upstream": {
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "fixable": 0,
-                "total": 0
-              },
-              "app": {
-                "critical": 0,
-                "high": 5,
-                "medium": 14,
-                "low": 1,
-                "fixable": 20,
-                "total": 21
-              }
-            },
-            "pfnapp": {
-              "scanned": true,
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "fixable": 0,
-                "total": 0,
-                "topCves": [],
-                "allCves": []
-              },
-              "app": {
-                "critical": 0,
-                "high": 2,
-                "medium": 5,
-                "low": 0,
-                "fixable": 7,
-                "total": 8,
-                "topCves": [
-                  {
-                    "id": "CVE-2026-78669",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "HIGH",
-                    "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-                  },
-                  {
-                    "id": "CVE-2026-111943",
-                    "pkg": "stdlib",
-                    "installedVersion": "v1.27.2",
-                    "fixedVersion": "1.26.10, 1.27.3",
-                    "severity": "HIGH",
-                    "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
-                  }
-                ],
-                "allCves": [
-                  {
-                    "id": "CVE-2026-114437",
-                    "pkg": "github.com/go-chi/chi/v5",
-                    "installedVersion": "v5.3.2",
-                    "fixedVersion": "5.4.0",
-                    "severity": "MEDIUM",
-                    "title": "github.com/go-chi/chi: chi: client IP spoofing via unverified direct connection in ClientIPFromXFF middleware"
-                  },
-                  {
-                    "id": "GO-2026-5932",
-                    "pkg": "golang.org/x/crypto",
-                    "installedVersion": "v0.57.0",
-                    "fixedVersion": "None",
-                    "severity": "UNKNOWN",
-                    "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
-                  },
-                  {
-                    "id": "CVE-2026-78669",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "HIGH",
-                    "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-                  },
-                  {
-                    "id": "CVE-2026-78659",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "MEDIUM",
-                    "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
-                  },
-                  {
-                    "id": "CVE-2026-78660",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "MEDIUM",
-                    "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
-                  },
-                  {
-                    "id": "CVE-2026-78663",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "MEDIUM",
-                    "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-                  },
-                  {
-                    "id": "CVE-2026-97032",
-                    "pkg": "golang.org/x/net",
-                    "installedVersion": "v0.58.0",
-                    "fixedVersion": "0.60.0",
-                    "severity": "MEDIUM",
-                    "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-                  },
-                  {
-                    "id": "CVE-2026-111943",
-                    "pkg": "stdlib",
-                    "installedVersion": "v1.27.2",
-                    "fixedVersion": "1.26.10, 1.27.3",
-                    "severity": "HIGH",
-                    "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
-                  }
-                ]
-              }
-            },
-            "reduction": {
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "total": 0
-              },
-              "app": {
-                "critical": 0,
-                "high": -3,
-                "total": -13
-              }
-            }
-          },
-          "topAppCves": [
-            {
-              "id": "CVE-2026-78669",
-              "pkg": "golang.org/x/net",
-              "installedVersion": "v0.58.0",
-              "fixedVersion": "0.60.0",
-              "severity": "HIGH",
-              "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-            },
-            {
-              "id": "CVE-2026-111943",
-              "pkg": "stdlib",
-              "installedVersion": "v1.27.1",
-              "fixedVersion": "1.26.10, 1.27.3",
-              "severity": "HIGH",
-              "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates"
-            },
-            {
-              "id": "CVE-2026-78667",
-              "pkg": "stdlib",
-              "installedVersion": "v1.27.1",
-              "fixedVersion": "1.26.9, 1.27.2",
-              "severity": "HIGH",
-              "title": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers"
-            },
-            {
-              "id": "CVE-2026-78669",
-              "pkg": "stdlib",
-              "installedVersion": "v1.27.1",
-              "fixedVersion": "1.26.9, 1.27.2",
-              "severity": "HIGH",
-              "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames"
-            },
-            {
-              "id": "CVE-2026-97031",
-              "pkg": "stdlib",
-              "installedVersion": "v1.27.1",
-              "fixedVersion": "1.26.9, 1.27.2",
-              "severity": "HIGH",
-              "title": "crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references"
-            }
-          ],
-          "topSystemCves": [],
-          "posture": "APP HIGH RISK",
-          "postureBadge": "🟠",
-          "scannedAt": "2026-10-24T05:23:44.672Z"
         }
       ],
       "deprecatedVersions": [
+        {
+          "tag": "v11.3.0",
+          "droppedAt": "2026-10-24",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.5 immediately."
+        },
         {
           "tag": "v11.2.0",
           "droppedAt": "2026-10-20",
