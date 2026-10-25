@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-24T05:24:00.698Z",
+  "scannedAt": "2026-10-25T05:41:40.806Z",
   "system": {
     "total": 7449,
     "cves": [
@@ -610,14 +610,6 @@
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "CRITICAL",
         "title": "chromium-browser: angle: Use after free in ANGLE"
-      },
-      {
-        "id": "CVE-2026-9879",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "148.0.7778.215-1~deb12u1",
-        "severity": "CRITICAL",
-        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9880",
@@ -7474,6 +7466,14 @@
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: angle: Use after free in ANGLE"
+      },
+      {
+        "id": "CVE-2026-9879",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "148.0.7778.215-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9887",
@@ -25612,14 +25612,6 @@
         "title": "chromium-browser: angle: Use after free in ANGLE"
       },
       {
-        "id": "CVE-2026-9879",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "148.0.7778.215-1~deb12u1",
-        "severity": "CRITICAL",
-        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
-      },
-      {
         "id": "CVE-2026-9880",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -32474,6 +32466,14 @@
         "fixedVersion": "148.0.7778.215-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: angle: Use after free in ANGLE"
+      },
+      {
+        "id": "CVE-2026-9879",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "148.0.7778.215-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Out of bounds write in ANGLE"
       },
       {
         "id": "CVE-2026-9887",
@@ -53140,22 +53140,6 @@
         "title": "harfbuzz: allows attackers to trigger O(n^2) growth via consecutive marks"
       },
       {
-        "id": "CVE-2026-113679",
-        "pkg": "libharfbuzz-subset0",
-        "installedVersion": "6.0.0+dfsg-3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "harfbuzz: HarfBuzz: Out-of-bounds write via crafted font in WebAssembly shaper"
-      },
-      {
-        "id": "CVE-2026-113680",
-        "pkg": "libharfbuzz-subset0",
-        "installedVersion": "6.0.0+dfsg-3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "harfbuzz: harfbuzz: Denial of Service via crafted font in WebAssembly shaper"
-      },
-      {
         "id": "CVE-2026-22693",
         "pkg": "libharfbuzz-subset0",
         "installedVersion": "6.0.0+dfsg-3",
@@ -53170,22 +53154,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "harfbuzz: allows attackers to trigger O(n^2) growth via consecutive marks"
-      },
-      {
-        "id": "CVE-2026-113679",
-        "pkg": "libharfbuzz0b",
-        "installedVersion": "6.0.0+dfsg-3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "harfbuzz: HarfBuzz: Out-of-bounds write via crafted font in WebAssembly shaper"
-      },
-      {
-        "id": "CVE-2026-113680",
-        "pkg": "libharfbuzz0b",
-        "installedVersion": "6.0.0+dfsg-3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "harfbuzz: harfbuzz: Denial of Service via crafted font in WebAssembly shaper"
       },
       {
         "id": "CVE-2026-22693",
@@ -53532,22 +53500,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "libmariadb3",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "libmariadb3",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "libmariadb3",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -53612,12 +53564,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "libmariadb3",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "libmariadb3",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "libmariadb3",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -54636,6 +54604,14 @@
         "title": "cpython: cpython: `tarfile` module misinterprets crafted tar archives leading to data integrity issues"
       },
       {
+        "id": "CVE-2026-115557",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Python has added a denylist for known compromised certificates to the  ..."
+      },
+      {
         "id": "CVE-2026-12003",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -54890,6 +54866,14 @@
         "fixedVersion": "3.11.2-6+deb12u8",
         "severity": "LOW",
         "title": "cpython: cpython: `tarfile` module misinterprets crafted tar archives leading to data integrity issues"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Python has added a denylist for known compromised certificates to the  ..."
       },
       {
         "id": "CVE-2026-12003",
@@ -56196,22 +56180,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "mariadb-client",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "mariadb-client",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "mariadb-client",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -56276,12 +56244,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "mariadb-client",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "mariadb-client",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "mariadb-client",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -56396,22 +56380,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "mariadb-client-core",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "mariadb-client-core",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "mariadb-client-core",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -56476,12 +56444,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "mariadb-client-core",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "mariadb-client-core",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "mariadb-client-core",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -56596,22 +56580,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "mariadb-common",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "mariadb-common",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "mariadb-common",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -56676,12 +56644,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "mariadb-common",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "mariadb-common",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "mariadb-common",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -56796,22 +56780,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "mariadb-server",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "mariadb-server",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "mariadb-server",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -56876,12 +56844,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "mariadb-server",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "mariadb-server",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "mariadb-server",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -56996,22 +56980,6 @@
         "title": "mariadb: MariaDB Server: Arbitrary code execution via wsrep_notify_cmd"
       },
       {
-        "id": "CVE-2026-85746",
-        "pkg": "mariadb-server-core",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
-        "id": "CVE-2026-92262",
-        "pkg": "mariadb-server-core",
-        "installedVersion": "1:10.11.14-0+deb12u2",
-        "fixedVersion": "None",
-        "severity": "CRITICAL",
-        "title": "MariaDB server is a community developed fork of MySQL server. From 10. ..."
-      },
-      {
         "id": "CVE-2025-13699",
         "pkg": "mariadb-server-core",
         "installedVersion": "1:10.11.14-0+deb12u2",
@@ -57076,12 +57044,28 @@
         "title": "mariadb: Arbitrary code execution via global system variable manipulation by a high-privileged user"
       },
       {
+        "id": "CVE-2026-85746",
+        "pkg": "mariadb-server-core",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Out-of-bound buffer write on in `ST_AsText` of nested GeometryCollections"
+      },
+      {
         "id": "CVE-2026-86047",
         "pkg": "mariadb-server-core",
         "installedVersion": "1:10.11.14-0+deb12u2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "mariadb: mariadb: SQL injection via improper identifier quoting"
+      },
+      {
+        "id": "CVE-2026-92262",
+        "pkg": "mariadb-server-core",
+        "installedVersion": "1:10.11.14-0+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Numerous issues caused by historical #mysql50# tablename encoding bypass."
       },
       {
         "id": "CVE-2026-97380",
@@ -58580,6 +58564,14 @@
         "title": "cpython: cpython: `tarfile` module misinterprets crafted tar archives leading to data integrity issues"
       },
       {
+        "id": "CVE-2026-115557",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Python has added a denylist for known compromised certificates to the  ..."
+      },
+      {
         "id": "CVE-2026-12003",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -58834,6 +58826,14 @@
         "fixedVersion": "3.11.2-6+deb12u8",
         "severity": "LOW",
         "title": "cpython: cpython: `tarfile` module misinterprets crafted tar archives leading to data integrity issues"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Python has added a denylist for known compromised certificates to the  ..."
       },
       {
         "id": "CVE-2026-12003",
