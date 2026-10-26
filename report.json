@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-25T05:40:56.224Z",
+    "generatedAt": "2026-10-26T05:46:21.013Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
@@ -36,11 +36,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 1,
-                "medium": 7,
-                "low": 0,
-                "fixable": 8,
-                "total": 8
+                "high": 3,
+                "medium": 9,
+                "low": 44,
+                "fixable": 56,
+                "total": 56
               },
               "app": {
                 "critical": 0,
@@ -55,13 +55,414 @@
               "scanned": true,
               "system": {
                 "critical": 0,
-                "high": 0,
-                "medium": 7,
-                "low": 0,
-                "fixable": 7,
-                "total": 7,
-                "topCves": [],
+                "high": 2,
+                "medium": 9,
+                "low": 44,
+                "fixable": 55,
+                "total": 55,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  }
+                ],
                 "allCves": [
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  },
                   {
                     "id": "CVE-2026-45382",
                     "pkg": "libde265",
@@ -155,11 +556,27 @@
               "fixedVersion": "1.2.1-r0",
               "severity": "HIGH",
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "curl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
             }
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "7.1.2-php8.3-fpm-alpine",
@@ -177,11 +594,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 5,
-                "medium": 15,
-                "low": 1,
-                "fixable": 23,
-                "total": 23
+                "high": 7,
+                "medium": 17,
+                "low": 45,
+                "fixable": 71,
+                "total": 71
               },
               "app": {
                 "critical": 0,
@@ -196,11 +613,11 @@
               "scanned": true,
               "system": {
                 "critical": 0,
-                "high": 5,
-                "medium": 14,
-                "low": 1,
-                "fixable": 22,
-                "total": 22,
+                "high": 7,
+                "medium": 16,
+                "low": 45,
+                "fixable": 70,
+                "total": 70,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -209,6 +626,22 @@
                     "fixedVersion": "1.2.1-r0",
                     "severity": "HIGH",
                     "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
                   },
                   {
                     "id": "CVE-2026-77214",
@@ -225,22 +658,6 @@
                     "fixedVersion": "1.8.14-r0",
                     "severity": "HIGH",
                     "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-                  },
-                  {
-                    "id": "CVE-2026-103111",
-                    "pkg": "pcre2",
-                    "installedVersion": "10.48-r0",
-                    "fixedVersion": "10.49-r0",
-                    "severity": "HIGH",
-                    "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
-                  },
-                  {
-                    "id": "CVE-2026-4775",
-                    "pkg": "tiff",
-                    "installedVersion": "4.7.1-r0",
-                    "fixedVersion": "4.7.2-r0",
-                    "severity": "HIGH",
-                    "title": "libtiff: libtiff: Arbitrary code execution or denial of service via signed integer overflow in TIFF file processing"
                   }
                 ],
                 "allCves": [
@@ -253,12 +670,396 @@
                     "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  },
+                  {
                     "id": "CVE-2026-39919",
                     "pkg": "ghostscript",
                     "installedVersion": "10.07.1-r0",
                     "fixedVersion": "10.08.0-r0",
                     "severity": "MEDIUM",
                     "title": "ghostscript: ghostscript: Heap buffer overflow via JPEG 2000 output adapter"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-45382",
@@ -459,6 +1260,22 @@
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
             },
             {
+              "id": "CVE-2026-92392",
+              "pkg": "curl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
               "id": "CVE-2026-77214",
               "pkg": "libexpat",
               "installedVersion": "2.8.5-r0",
@@ -473,27 +1290,11 @@
               "fixedVersion": "1.8.14-r0",
               "severity": "HIGH",
               "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-            },
-            {
-              "id": "CVE-2026-103111",
-              "pkg": "pcre2",
-              "installedVersion": "10.48-r0",
-              "fixedVersion": "10.49-r0",
-              "severity": "HIGH",
-              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
-            },
-            {
-              "id": "CVE-2026-4775",
-              "pkg": "tiff",
-              "installedVersion": "4.7.1-r0",
-              "fixedVersion": "4.7.2-r0",
-              "severity": "HIGH",
-              "title": "libtiff: libtiff: Arbitrary code execution or denial of service via signed integer overflow in TIFF file processing"
             }
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "7.1.1-php8.3-fpm-alpine",
@@ -511,11 +1312,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 6,
-                "medium": 8,
-                "low": 1,
-                "fixable": 17,
-                "total": 17
+                "high": 8,
+                "medium": 10,
+                "low": 45,
+                "fixable": 65,
+                "total": 65
               },
               "app": {
                 "critical": 0,
@@ -530,11 +1331,11 @@
               "scanned": true,
               "system": {
                 "critical": 0,
-                "high": 6,
-                "medium": 8,
-                "low": 1,
-                "fixable": 17,
-                "total": 17,
+                "high": 8,
+                "medium": 10,
+                "low": 45,
+                "fixable": 65,
+                "total": 65,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -543,6 +1344,22 @@
                     "fixedVersion": "1.2.1-r0",
                     "severity": "HIGH",
                     "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
                   },
                   {
                     "id": "CVE-2026-77214",
@@ -559,22 +1376,6 @@
                     "fixedVersion": "2.8.5-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
-                  },
-                  {
-                    "id": "CVE-2026-88806",
-                    "pkg": "libx11",
-                    "installedVersion": "1.8.13-r0",
-                    "fixedVersion": "1.8.14-r0",
-                    "severity": "HIGH",
-                    "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-                  },
-                  {
-                    "id": "CVE-2026-103111",
-                    "pkg": "pcre2",
-                    "installedVersion": "10.48-r0",
-                    "fixedVersion": "10.49-r0",
-                    "severity": "HIGH",
-                    "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
                   }
                 ],
                 "allCves": [
@@ -587,12 +1388,396 @@
                     "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  },
+                  {
                     "id": "CVE-2026-39919",
                     "pkg": "ghostscript",
                     "installedVersion": "10.07.1-r0",
                     "fixedVersion": "10.08.0-r0",
                     "severity": "MEDIUM",
                     "title": "ghostscript: ghostscript: Heap buffer overflow via JPEG 2000 output adapter"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-77214",
@@ -753,6 +1938,22 @@
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
             },
             {
+              "id": "CVE-2026-92392",
+              "pkg": "curl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
               "id": "CVE-2026-77214",
               "pkg": "libexpat",
               "installedVersion": "2.8.4-r0",
@@ -767,27 +1968,11 @@
               "fixedVersion": "2.8.5-r0",
               "severity": "HIGH",
               "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
-            },
-            {
-              "id": "CVE-2026-88806",
-              "pkg": "libx11",
-              "installedVersion": "1.8.13-r0",
-              "fixedVersion": "1.8.14-r0",
-              "severity": "HIGH",
-              "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-            },
-            {
-              "id": "CVE-2026-103111",
-              "pkg": "pcre2",
-              "installedVersion": "10.48-r0",
-              "fixedVersion": "10.49-r0",
-              "severity": "HIGH",
-              "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
             }
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -20070,7 +21255,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.5.6",
@@ -39343,7 +40528,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.5.5",
@@ -61872,7 +63057,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -64664,7 +65849,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "0.5.104",
@@ -67463,7 +68648,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "0.5.95",
@@ -67662,7 +68847,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "0.5.91",
@@ -67949,7 +69134,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "0.5.86",
@@ -68236,7 +69421,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": [
@@ -70810,7 +71995,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.8.51",
@@ -73363,7 +74548,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.8.50",
@@ -75916,7 +77101,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -80231,7 +81416,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2026.10.6",
@@ -84552,7 +85737,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2026.10.5",
@@ -88929,7 +90114,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2026.10.4",
@@ -94954,7 +96139,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2026.10.3",
@@ -100979,7 +102164,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": [
@@ -101043,11 +102228,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 1,
-                "medium": 7,
-                "low": 0,
-                "fixable": 8,
-                "total": 8
+                "high": 2,
+                "medium": 8,
+                "low": 22,
+                "fixable": 32,
+                "total": 32
               },
               "app": {
                 "critical": 0,
@@ -101062,11 +102247,11 @@
               "scanned": true,
               "system": {
                 "critical": 7,
-                "high": 28,
-                "medium": 70,
-                "low": 27,
-                "fixable": 134,
-                "total": 134,
+                "high": 29,
+                "medium": 71,
+                "low": 49,
+                "fixable": 158,
+                "total": 158,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -101085,6 +102270,14 @@
                     "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-66046",
                     "pkg": "libexpat",
                     "installedVersion": "2.8.3-r1",
@@ -101099,14 +102292,6 @@
                     "fixedVersion": "2.8.4-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: Denial of Service via XML external entity parsing"
-                  },
-                  {
-                    "id": "CVE-2026-76956",
-                    "pkg": "libexpat",
-                    "installedVersion": "2.8.3-r1",
-                    "fixedVersion": "2.8.4-r0",
-                    "severity": "HIGH",
-                    "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
                   }
                 ],
                 "allCves": [
@@ -101199,6 +102384,14 @@
                     "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-19931",
                     "pkg": "libcurl",
                     "installedVersion": "8.21.0-r0",
@@ -101213,6 +102406,30 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "MEDIUM",
                     "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
                   },
                   {
                     "id": "CVE-2026-13608",
@@ -101269,6 +102486,166 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "LOW",
                     "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-80256",
@@ -103398,11 +104775,19 @@
               "fixedVersion": "1.2.1-r0",
               "severity": "HIGH",
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
             }
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.45.2",
@@ -103420,11 +104805,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 1,
-                "medium": 7,
-                "low": 0,
-                "fixable": 8,
-                "total": 8
+                "high": 2,
+                "medium": 8,
+                "low": 22,
+                "fixable": 32,
+                "total": 32
               },
               "app": {
                 "critical": 0,
@@ -103439,11 +104824,11 @@
               "scanned": true,
               "system": {
                 "critical": 7,
-                "high": 28,
-                "medium": 70,
-                "low": 27,
-                "fixable": 134,
-                "total": 134,
+                "high": 29,
+                "medium": 71,
+                "low": 49,
+                "fixable": 158,
+                "total": 158,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -103462,6 +104847,14 @@
                     "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-66046",
                     "pkg": "libexpat",
                     "installedVersion": "2.8.3-r1",
@@ -103476,14 +104869,6 @@
                     "fixedVersion": "2.8.4-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: Denial of Service via XML external entity parsing"
-                  },
-                  {
-                    "id": "CVE-2026-76956",
-                    "pkg": "libexpat",
-                    "installedVersion": "2.8.3-r1",
-                    "fixedVersion": "2.8.4-r0",
-                    "severity": "HIGH",
-                    "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
                   }
                 ],
                 "allCves": [
@@ -103576,6 +104961,14 @@
                     "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-19931",
                     "pkg": "libcurl",
                     "installedVersion": "8.21.0-r0",
@@ -103590,6 +104983,30 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "MEDIUM",
                     "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
                   },
                   {
                     "id": "CVE-2026-13608",
@@ -103646,6 +105063,166 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "LOW",
                     "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-80256",
@@ -105775,11 +107352,19 @@
               "fixedVersion": "1.2.1-r0",
               "severity": "HIGH",
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
             }
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.45.1",
@@ -105797,11 +107382,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 3,
-                "medium": 9,
-                "low": 0,
-                "fixable": 13,
-                "total": 13
+                "high": 4,
+                "medium": 10,
+                "low": 22,
+                "fixable": 37,
+                "total": 37
               },
               "app": {
                 "critical": 0,
@@ -105816,11 +107401,11 @@
               "scanned": true,
               "system": {
                 "critical": 7,
-                "high": 28,
-                "medium": 70,
-                "low": 27,
-                "fixable": 134,
-                "total": 134,
+                "high": 29,
+                "medium": 71,
+                "low": 49,
+                "fixable": 158,
+                "total": 158,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -105839,6 +107424,14 @@
                     "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-66046",
                     "pkg": "libexpat",
                     "installedVersion": "2.8.3-r1",
@@ -105853,14 +107446,6 @@
                     "fixedVersion": "2.8.4-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: Denial of Service via XML external entity parsing"
-                  },
-                  {
-                    "id": "CVE-2026-76956",
-                    "pkg": "libexpat",
-                    "installedVersion": "2.8.3-r1",
-                    "fixedVersion": "2.8.4-r0",
-                    "severity": "HIGH",
-                    "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
                   }
                 ],
                 "allCves": [
@@ -105953,6 +107538,14 @@
                     "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-19931",
                     "pkg": "libcurl",
                     "installedVersion": "8.21.0-r0",
@@ -105967,6 +107560,30 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "MEDIUM",
                     "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
                   },
                   {
                     "id": "CVE-2026-13608",
@@ -106023,6 +107640,166 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "LOW",
                     "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-80256",
@@ -108154,6 +109931,14 @@
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
             },
             {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
               "id": "CVE-2026-77214",
               "pkg": "libexpat",
               "installedVersion": "2.8.5-r0",
@@ -108172,7 +109957,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.45.0",
@@ -108190,11 +109975,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 3,
-                "medium": 9,
-                "low": 0,
-                "fixable": 13,
-                "total": 13
+                "high": 4,
+                "medium": 10,
+                "low": 22,
+                "fixable": 37,
+                "total": 37
               },
               "app": {
                 "critical": 0,
@@ -108209,11 +109994,11 @@
               "scanned": true,
               "system": {
                 "critical": 7,
-                "high": 28,
-                "medium": 70,
-                "low": 27,
-                "fixable": 134,
-                "total": 134,
+                "high": 29,
+                "medium": 71,
+                "low": 49,
+                "fixable": 158,
+                "total": 158,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -108232,6 +110017,14 @@
                     "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-66046",
                     "pkg": "libexpat",
                     "installedVersion": "2.8.3-r1",
@@ -108246,14 +110039,6 @@
                     "fixedVersion": "2.8.4-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: Denial of Service via XML external entity parsing"
-                  },
-                  {
-                    "id": "CVE-2026-76956",
-                    "pkg": "libexpat",
-                    "installedVersion": "2.8.3-r1",
-                    "fixedVersion": "2.8.4-r0",
-                    "severity": "HIGH",
-                    "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
                   }
                 ],
                 "allCves": [
@@ -108346,6 +110131,14 @@
                     "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-19931",
                     "pkg": "libcurl",
                     "installedVersion": "8.21.0-r0",
@@ -108360,6 +110153,30 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "MEDIUM",
                     "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
                   },
                   {
                     "id": "CVE-2026-13608",
@@ -108416,6 +110233,166 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "LOW",
                     "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-80256",
@@ -110547,6 +112524,14 @@
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
             },
             {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
               "id": "CVE-2026-77214",
               "pkg": "libexpat",
               "installedVersion": "2.8.5-r0",
@@ -110565,7 +112550,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.44.4",
@@ -110583,11 +112568,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 3,
-                "medium": 9,
-                "low": 0,
-                "fixable": 13,
-                "total": 13
+                "high": 4,
+                "medium": 10,
+                "low": 22,
+                "fixable": 37,
+                "total": 37
               },
               "app": {
                 "critical": 4,
@@ -110602,11 +112587,11 @@
               "scanned": true,
               "system": {
                 "critical": 7,
-                "high": 28,
-                "medium": 70,
-                "low": 27,
-                "fixable": 134,
-                "total": 134,
+                "high": 29,
+                "medium": 71,
+                "low": 49,
+                "fixable": 158,
+                "total": 158,
                 "topCves": [
                   {
                     "id": "CVE-2026-111497",
@@ -110625,6 +112610,14 @@
                     "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-66046",
                     "pkg": "libexpat",
                     "installedVersion": "2.8.3-r1",
@@ -110639,14 +112632,6 @@
                     "fixedVersion": "2.8.4-r0",
                     "severity": "HIGH",
                     "title": "expat: Expat: Denial of Service via XML external entity parsing"
-                  },
-                  {
-                    "id": "CVE-2026-76956",
-                    "pkg": "libexpat",
-                    "installedVersion": "2.8.3-r1",
-                    "fixedVersion": "2.8.4-r0",
-                    "severity": "HIGH",
-                    "title": "libexpat: libexpat: Denial of Service via hash flooding attack with crafted XML"
                   }
                 ],
                 "allCves": [
@@ -110739,6 +112724,14 @@
                     "title": "openssl: openssl: AEAD forgeries possible with empty ciphertext in EVP_Cipher()"
                   },
                   {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
                     "id": "CVE-2026-19931",
                     "pkg": "libcurl",
                     "installedVersion": "8.21.0-r0",
@@ -110753,6 +112746,30 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "MEDIUM",
                     "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
                   },
                   {
                     "id": "CVE-2026-13608",
@@ -110809,6 +112826,166 @@
                     "fixedVersion": "8.22.0-r0",
                     "severity": "LOW",
                     "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.21.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
                   },
                   {
                     "id": "CVE-2026-80256",
@@ -112940,6 +115117,14 @@
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
             },
             {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
               "id": "CVE-2026-77214",
               "pkg": "libexpat",
               "installedVersion": "2.8.5-r0",
@@ -112958,7 +115143,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": [
@@ -113061,8 +115246,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 18,
-                "high": 491,
+                "critical": 21,
+                "high": 515,
                 "medium": 2646,
                 "low": 1562,
                 "fixable": 2345,
@@ -117831,7 +120016,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50579",
@@ -117839,7 +120024,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50580",
@@ -117855,7 +120040,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -117895,7 +120080,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -117903,7 +120088,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -117927,7 +120112,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -117935,7 +120120,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -122482,8 +124667,8 @@
             },
             "reduction": {
               "system": {
-                "critical": -16,
-                "high": -269,
+                "critical": -19,
+                "high": -293,
                 "medium": -2205,
                 "low": -1216,
                 "total": -3893
@@ -122581,7 +124766,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v2026.9.21",
@@ -122598,8 +124783,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 18,
-                "high": 491,
+                "critical": 21,
+                "high": 515,
                 "medium": 2646,
                 "low": 1562,
                 "fixable": 2345,
@@ -127552,7 +129737,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50579",
@@ -127560,7 +129745,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50580",
@@ -127576,7 +129761,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -127616,7 +129801,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -127624,7 +129809,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -127648,7 +129833,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -127656,7 +129841,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -133059,8 +135244,8 @@
             },
             "reduction": {
               "system": {
-                "critical": -16,
-                "high": -249,
+                "critical": -19,
+                "high": -273,
                 "medium": -2169,
                 "low": -1210,
                 "total": -3826
@@ -133158,7 +135343,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v2026.9.14",
@@ -133175,8 +135360,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 18,
-                "high": 491,
+                "critical": 21,
+                "high": 515,
                 "medium": 2646,
                 "low": 1562,
                 "fixable": 2345,
@@ -138129,7 +140314,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50579",
@@ -138137,7 +140322,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50580",
@@ -138153,7 +140338,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -138193,7 +140378,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -138201,7 +140386,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -138225,7 +140410,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -138233,7 +140418,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-73064",
@@ -143636,8 +145821,8 @@
             },
             "reduction": {
               "system": {
-                "critical": -16,
-                "high": -249,
+                "critical": -19,
+                "high": -273,
                 "medium": -2169,
                 "low": -1210,
                 "total": -3826
@@ -143735,7 +145920,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -146375,7 +148560,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "1.37.3",
@@ -149325,7 +151510,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -149534,7 +151719,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -149677,7 +151862,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -153839,7 +156024,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.2.1",
@@ -157991,7 +160176,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.2.0",
@@ -162175,7 +164360,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.1.0",
@@ -166823,7 +169008,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "3.0.2",
@@ -171471,7 +173656,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": [
@@ -171618,7 +173803,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -171645,8 +173830,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 5,
-                "high": 304,
+                "critical": 8,
+                "high": 328,
                 "medium": 2490,
                 "low": 873,
                 "fixable": 2703,
@@ -181218,8 +183403,8 @@
             },
             "reduction": {
               "system": {
-                "critical": -4,
-                "high": -235,
+                "critical": -7,
+                "high": -259,
                 "medium": -1829,
                 "low": -504,
                 "total": -2703
@@ -181317,7 +183502,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -181344,8 +183529,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 3,
-                "high": 250,
+                "critical": 6,
+                "high": 274,
                 "medium": 2222,
                 "low": 1455,
                 "fixable": 2111,
@@ -197645,8 +199830,8 @@
             },
             "reduction": {
               "system": {
-                "critical": -1,
-                "high": -130,
+                "critical": -4,
+                "high": -154,
                 "medium": -1435,
                 "low": -409,
                 "total": -2109
@@ -197744,7 +199929,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "2.15.1",
@@ -197761,8 +199946,8 @@
           "vulnerabilities": {
             "upstream": {
               "system": {
-                "critical": 16,
-                "high": 616,
+                "critical": 19,
+                "high": 640,
                 "medium": 4021,
                 "low": 1801,
                 "fixable": 4637,
@@ -197780,8 +199965,8 @@
             "pfnapp": {
               "scanned": true,
               "system": {
-                "critical": 3,
-                "high": 250,
+                "critical": 6,
+                "high": 274,
                 "medium": 2222,
                 "low": 1455,
                 "fixable": 2111,
@@ -206454,6 +208639,30 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
                   },
                   {
+                    "id": "CVE-2026-98959",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "CRITICAL",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+                  },
+                  {
+                    "id": "CVE-2026-99078",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "CRITICAL",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-99079",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "CRITICAL",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
                     "id": "CVE-2013-7445",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -207756,6 +209965,198 @@
                     "fixedVersion": "6.12.113-1",
                     "severity": "HIGH",
                     "title": "kernel: ipvs: bound LBLCR and LBLC cache growth"
+                  },
+                  {
+                    "id": "CVE-2026-98889",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.111-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+                  },
+                  {
+                    "id": "CVE-2026-98895",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.111-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-98899",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.111-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-98911",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.111-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+                  },
+                  {
+                    "id": "CVE-2026-98927",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
+                  },
+                  {
+                    "id": "CVE-2026-98944",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+                  },
+                  {
+                    "id": "CVE-2026-98945",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+                  },
+                  {
+                    "id": "CVE-2026-98952",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+                  },
+                  {
+                    "id": "CVE-2026-98964",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-98968",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+                  },
+                  {
+                    "id": "CVE-2026-98980",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-98982",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-99006",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+                  },
+                  {
+                    "id": "CVE-2026-99012",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+                  },
+                  {
+                    "id": "CVE-2026-99013",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+                  },
+                  {
+                    "id": "CVE-2026-99018",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+                  },
+                  {
+                    "id": "CVE-2026-99030",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-99032",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+                  },
+                  {
+                    "id": "CVE-2026-99053",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+                  },
+                  {
+                    "id": "CVE-2026-99054",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+                  },
+                  {
+                    "id": "CVE-2026-99056",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+                  },
+                  {
+                    "id": "CVE-2026-99059",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+                  },
+                  {
+                    "id": "CVE-2026-99064",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+                  },
+                  {
+                    "id": "CVE-2026-99081",
+                    "pkg": "linux-libc-dev",
+                    "installedVersion": "6.12.107-1",
+                    "fixedVersion": "6.12.113-1",
+                    "severity": "HIGH",
+                    "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
                   },
                   {
                     "id": "CVE-2026-99999",
@@ -228174,14 +230575,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
                   },
                   {
-                    "id": "CVE-2026-98889",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.111-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-                  },
-                  {
                     "id": "CVE-2026-98890",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228222,14 +230615,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
                   },
                   {
-                    "id": "CVE-2026-98895",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.111-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
                     "id": "CVE-2026-98896",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228252,14 +230637,6 @@
                     "fixedVersion": "6.12.111-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-                  },
-                  {
-                    "id": "CVE-2026-98899",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.111-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
                   },
                   {
                     "id": "CVE-2026-98900",
@@ -228350,14 +230727,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
                   },
                   {
-                    "id": "CVE-2026-98911",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.111-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-                  },
-                  {
                     "id": "CVE-2026-98912",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228436,14 +230805,6 @@
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-                  },
-                  {
-                    "id": "CVE-2026-98927",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
                   },
                   {
                     "id": "CVE-2026-98929",
@@ -228542,22 +230903,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
                   },
                   {
-                    "id": "CVE-2026-98944",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
-                  },
-                  {
-                    "id": "CVE-2026-98945",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
-                  },
-                  {
                     "id": "CVE-2026-98946",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228604,14 +230949,6 @@
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
-                  },
-                  {
-                    "id": "CVE-2026-98952",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
                   },
                   {
                     "id": "CVE-2026-98953",
@@ -228662,22 +230999,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
                   },
                   {
-                    "id": "CVE-2026-98959",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-                  },
-                  {
-                    "id": "CVE-2026-98964",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
                     "id": "CVE-2026-98966",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228692,14 +231013,6 @@
                     "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
-                  },
-                  {
-                    "id": "CVE-2026-98968",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
                   },
                   {
                     "id": "CVE-2026-98969",
@@ -228774,26 +231087,10 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
                   },
                   {
-                    "id": "CVE-2026-98980",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
                     "id": "CVE-2026-98981",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
                     "fixedVersion": "None",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
-                    "id": "CVE-2026-98982",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
                   },
@@ -228902,14 +231199,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
                   },
                   {
-                    "id": "CVE-2026-99006",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-                  },
-                  {
                     "id": "CVE-2026-99007",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228942,22 +231231,6 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
                   },
                   {
-                    "id": "CVE-2026-99012",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-                  },
-                  {
-                    "id": "CVE-2026-99013",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-                  },
-                  {
                     "id": "CVE-2026-99014",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
@@ -228972,14 +231245,6 @@
                     "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
-                  },
-                  {
-                    "id": "CVE-2026-99018",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
                   },
                   {
                     "id": "CVE-2026-99019",
@@ -229062,23 +231327,7 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
                   },
                   {
-                    "id": "CVE-2026-99030",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
                     "id": "CVE-2026-99031",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
-                    "id": "CVE-2026-99032",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
                     "fixedVersion": "6.12.113-1",
@@ -229198,36 +231447,12 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
                   },
                   {
-                    "id": "CVE-2026-99053",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-                  },
-                  {
-                    "id": "CVE-2026-99054",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-                  },
-                  {
                     "id": "CVE-2026-99055",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
                     "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-                  },
-                  {
-                    "id": "CVE-2026-99056",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
                   },
                   {
                     "id": "CVE-2026-99057",
@@ -229239,14 +231464,6 @@
                   },
                   {
                     "id": "CVE-2026-99058",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
-                  },
-                  {
-                    "id": "CVE-2026-99059",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
                     "fixedVersion": "6.12.113-1",
@@ -229284,14 +231501,6 @@
                     "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-                  },
-                  {
-                    "id": "CVE-2026-99064",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
                   },
                   {
                     "id": "CVE-2026-99067",
@@ -229366,36 +231575,12 @@
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
                   },
                   {
-                    "id": "CVE-2026-99078",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
-                    "id": "CVE-2026-99079",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-                  },
-                  {
                     "id": "CVE-2026-99080",
                     "pkg": "linux-libc-dev",
                     "installedVersion": "6.12.107-1",
                     "fixedVersion": "6.12.113-1",
                     "severity": "UNKNOWN",
                     "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
-                  },
-                  {
-                    "id": "CVE-2026-99081",
-                    "pkg": "linux-libc-dev",
-                    "installedVersion": "6.12.107-1",
-                    "fixedVersion": "6.12.113-1",
-                    "severity": "UNKNOWN",
-                    "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
                   },
                   {
                     "id": "CVE-2026-99082",
@@ -231689,7 +233874,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -231717,11 +233902,11 @@
             "upstream": {
               "system": {
                 "critical": 0,
-                "high": 1,
-                "medium": 0,
-                "low": 0,
-                "fixable": 1,
-                "total": 1
+                "high": 3,
+                "medium": 2,
+                "low": 44,
+                "fixable": 49,
+                "total": 49
               },
               "app": {
                 "critical": 0,
@@ -231736,13 +233921,415 @@
               "scanned": true,
               "system": {
                 "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "fixable": 0,
-                "total": 0,
-                "topCves": [],
-                "allCves": []
+                "high": 2,
+                "medium": 2,
+                "low": 44,
+                "fixable": 48,
+                "total": 48,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  }
+                ],
+                "allCves": [
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "curl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  },
+                  {
+                    "id": "CVE-2026-92392",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "HIGH",
+                    "title": "curl: curl: HTTP/2 upload Use-After-Free"
+                  },
+                  {
+                    "id": "CVE-2026-92388",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "MEDIUM",
+                    "title": "curl: curl: FTP wildcard write callback mixup"
+                  },
+                  {
+                    "id": "CVE-2026-107928",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+                  },
+                  {
+                    "id": "CVE-2026-107929",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: local interface connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-86409",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: stale SigV4 headers sent unintended"
+                  },
+                  {
+                    "id": "CVE-2026-86410",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+                  },
+                  {
+                    "id": "CVE-2026-86411",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: FTP connection reuse inherits client-certificate"
+                  },
+                  {
+                    "id": "CVE-2026-86412",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie erases cookie jar"
+                  },
+                  {
+                    "id": "CVE-2026-86413",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Negotiate credentials sent to redirected origin"
+                  },
+                  {
+                    "id": "CVE-2026-86414",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: leaking host credentials to HTTP proxy"
+                  },
+                  {
+                    "id": "CVE-2026-86415",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: auto client cert connection reuse mixup"
+                  },
+                  {
+                    "id": "CVE-2026-87861",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+                  },
+                  {
+                    "id": "CVE-2026-87862",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: HSTS cache import drops longer-lived child"
+                  },
+                  {
+                    "id": "CVE-2026-87863",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Hsts Response Erases Persisted Entries"
+                  },
+                  {
+                    "id": "CVE-2026-87864",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+                  },
+                  {
+                    "id": "CVE-2026-87865",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: knownhost callback mismatches key as missing"
+                  },
+                  {
+                    "id": "CVE-2026-87866",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: wolfSSL public-key pinning bypass"
+                  },
+                  {
+                    "id": "CVE-2026-92386",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: server-set cookie aborts cookie jar load"
+                  },
+                  {
+                    "id": "CVE-2026-92387",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: never-ending loop via server response omission"
+                  },
+                  {
+                    "id": "CVE-2026-92389",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: TFTP direction confusion"
+                  },
+                  {
+                    "id": "CVE-2026-92390",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+                  },
+                  {
+                    "id": "CVE-2026-92391",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: curl_mime_free stack overflow by recursion"
+                  },
+                  {
+                    "id": "CVE-2026-94265",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+                  },
+                  {
+                    "id": "CVE-2026-94266",
+                    "pkg": "libcurl",
+                    "installedVersion": "8.22.0-r0",
+                    "fixedVersion": "8.23.0-r0",
+                    "severity": "LOW",
+                    "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+                  }
+                ]
               },
               "app": {
                 "critical": 0,
@@ -231861,11 +234448,27 @@
               "fixedVersion": "1.2.1-r0",
               "severity": "HIGH",
               "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "curl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
+            },
+            {
+              "id": "CVE-2026-92392",
+              "pkg": "libcurl",
+              "installedVersion": "8.22.0-r0",
+              "fixedVersion": "8.23.0-r0",
+              "severity": "HIGH",
+              "title": "curl: curl: HTTP/2 upload Use-After-Free"
             }
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "5.1.7",
@@ -232474,7 +235077,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "5.1.6",
@@ -232598,7 +235201,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -232872,7 +235475,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": []
@@ -232974,7 +235577,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v11.3.4",
@@ -233066,7 +235669,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v11.3.3",
@@ -233167,7 +235770,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v11.3.2",
@@ -233285,7 +235888,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         },
         {
           "tag": "v11.3.1",
@@ -233459,7 +236062,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-25T05:40:56.224Z"
+          "scannedAt": "2026-10-26T05:46:21.013Z"
         }
       ],
       "deprecatedVersions": [
