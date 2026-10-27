@@ -140,13 +140,18 @@
       "image": "n8nio/n8n",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "3.0.0",
         "2.45.4",
         "2.45.3",
         "2.45.2",
-        "2.45.1",
-        "2.45.0"
+        "2.45.1"
       ],
       "deprecated_versions": [
+        {
+          "tag": "2.45.0",
+          "droppedAt": "2026-10-27",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 3.0.0 immediately."
+        },
         {
           "tag": "2.44.4",
           "droppedAt": "2026-10-26",
