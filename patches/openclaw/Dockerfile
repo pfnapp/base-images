@@ -1,5 +1,5 @@
-# PFNApp hardened image for OpenClaw 2026.10.7
-FROM ghcr.io/openclaw/openclaw:2026.10.7
+# PFNApp hardened image for OpenClaw 2026.10.8
+FROM ghcr.io/openclaw/openclaw:2026.10.8
 USER root
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
