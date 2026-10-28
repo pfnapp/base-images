@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-27T06:04:17.525Z",
+  "scannedAt": "2026-10-28T06:43:09.511Z",
   "system": {
-    "total": 1118,
+    "total": 1120,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -4881,7 +4881,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -4889,7 +4889,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50579",
@@ -4905,7 +4905,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50581",
@@ -4913,7 +4913,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -4937,7 +4937,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -4945,7 +4945,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50587",
@@ -4977,7 +4977,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54435",
@@ -4993,7 +4993,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-73064",
@@ -5140,6 +5140,14 @@
         "title": "openjpeg: Resource exhaustion will occur in the opj_t1_decode_cblks function in the tcd.c"
       },
       {
+        "id": "CVE-2026-107080",
+        "pkg": "libopenjp2-7",
+        "installedVersion": "2.5.3-2.1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openjpeg2: openjpeg2: Denial of Service via out-of-bounds memory access in opj_dwt_encode_and_deinterleave_v"
+      },
+      {
         "id": "CVE-2016-10505",
         "pkg": "libopenjp2-7",
         "installedVersion": "2.5.3-2.1~deb13u2",
@@ -5226,14 +5234,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openjpeg: Malicious files can cause the program to enter a large loop"
-      },
-      {
-        "id": "CVE-2026-107080",
-        "pkg": "libopenjp2-7",
-        "installedVersion": "2.5.3-2.1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "OpenJPEG 2.4.0 through 2.5.4, and git master through commit 8314119b,  ..."
       },
       {
         "id": "CVE-2026-13757",
@@ -7308,6 +7308,22 @@
         "title": "libXi: libXi: Denial of Service via out-of-bounds read in XI2 event processing"
       },
       {
+        "id": "CVE-2026-109089",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8.2-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A buffer overflow when handling DEVICE_RESOLUTION in libXi before 1.8. ..."
+      },
+      {
+        "id": "CVE-2026-109090",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8.2-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A malicious X server could cause a heap overflow by injecting a largeD ..."
+      },
+      {
         "id": "CVE-2026-6653",
         "pkg": "libxml2",
         "installedVersion": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
@@ -8950,7 +8966,7 @@
     ]
   },
   "app": {
-    "total": 175,
+    "total": 197,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -9031,6 +9047,14 @@
         "fixedVersion": "2.9.4",
         "severity": "MEDIUM",
         "title": "colord: omgovich/colord: Colord: Denial of Service via oversized malformed color strings"
+      },
+      {
+        "id": "CVE-2026-93753",
+        "pkg": "deepmerge",
+        "installedVersion": "4.3.1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "deepmerge: deepmerge: Prototype Poisoning via mergeObject function"
       },
       {
         "id": "CVE-2026-101910",
@@ -9169,6 +9193,14 @@
         "title": "node-tar: node-tar: Denial of Service via crafted archive with NUL bytes in metadata"
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "6.26.0",
@@ -9185,12 +9217,28 @@
         "title": "undici: undici: Denial of Service due to unbounded memory growth via WebSocket frames"
       },
       {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
         "id": "CVE-2026-109924",
         "pkg": "undici",
         "installedVersion": "6.26.0",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.26.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
       },
       {
         "id": "CVE-2026-15157",
@@ -9257,6 +9305,14 @@
         "title": "undici: Undici: Response queue poisoning on reused keep-alive sockets can lead to incorrect response delivery."
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "6.28.0",
@@ -9265,12 +9321,28 @@
         "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
       },
       {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
         "id": "CVE-2026-109924",
         "pkg": "undici",
         "installedVersion": "6.28.0",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
       },
       {
         "id": "CVE-2026-85024",
@@ -9289,6 +9361,22 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
+        "id": "CVE-2026-109829",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "7.29.0",
@@ -9305,6 +9393,14 @@
         "title": "undici: undici: TLS certificate validation bypass in BalancedPool via dropped connect options"
       },
       {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
         "id": "CVE-2026-109841",
         "pkg": "undici",
         "installedVersion": "7.29.0",
@@ -9319,6 +9415,14 @@
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
       },
       {
         "id": "CVE-2026-18149",
@@ -9359,6 +9463,14 @@
         "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-87029",
+        "pkg": "undici",
+        "installedVersion": "7.29.0",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
       },
       {
         "id": "CVE-2026-18540",
@@ -9721,6 +9833,30 @@
         "title": "httpx2: HTTPX2: Request Smuggling and Connection Desynchronization via Conflicting HTTP Headers"
       },
       {
+        "id": "CVE-2026-116684",
+        "pkg": "mcp",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.2.0, 1.30.0",
+        "severity": "MEDIUM",
+        "title": "Model Context Protocol Python SDK: Server bearer-token authentication accepts tokens issued for a different resource server"
+      },
+      {
+        "id": "CVE-2026-116685",
+        "pkg": "mcp",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.2.0, 1.30.0",
+        "severity": "MEDIUM",
+        "title": "Model Context Protocol Python SDK: HTTP client transports followed cross-origin redirects carrying custom headers and bodies"
+      },
+      {
+        "id": "CVE-2026-116686",
+        "pkg": "mcp",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.2.0, 1.30.0",
+        "severity": "MEDIUM",
+        "title": "Model Context Protocol Python SDK: Client fetched server-chosen $ref URLs while validating tool results against output schemas"
+      },
+      {
         "id": "CVE-2026-59951",
         "pkg": "mcp",
         "installedVersion": "2.0.0",
@@ -9735,6 +9871,14 @@
         "fixedVersion": "6.9.1",
         "severity": "MEDIUM",
         "title": "multidict: multidict: Denial of Service via memory leak in items-view operations"
+      },
+      {
+        "id": "CVE-2026-49272",
+        "pkg": "oauthlib",
+        "installedVersion": "3.3.1",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "OAuthLib: Bearer token can be retrieved as long as client knows a valid client ID for device workflow"
       },
       {
         "id": "CVE-2026-49264",
@@ -10209,6 +10353,30 @@
         "title": "Rustls: TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries"
       },
       {
+        "id": "GHSA-c8m5-c952-6cm4",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "MEDIUM",
+        "title": "Rustls: Session Debug formatting exposes TLS master secrets and resumption PSKs"
+      },
+      {
+        "id": "GHSA-h2v8-394m-p7vv",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "LOW",
+        "title": "Rustls: Brotli certificate decompression can allocate an attacker-controlled amount of memory up to 1 GiB before authentication."
+      },
+      {
+        "id": "GHSA-w44r-93j7-qv28",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "LOW",
+        "title": "rustls: An unauthenticated ServerHello poisons the per-name key-exchange record, so later ClientHellos carry only a classical X25519 share"
+      },
+      {
         "id": "GHSA-82j2-j2ch-gfr8",
         "pkg": "rustls-webpki",
         "installedVersion": "0.103.10",
@@ -10311,6 +10479,30 @@
         "fixedVersion": "0.23.45",
         "severity": "MEDIUM",
         "title": "Rustls: TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries"
+      },
+      {
+        "id": "GHSA-c8m5-c952-6cm4",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "MEDIUM",
+        "title": "Rustls: Session Debug formatting exposes TLS master secrets and resumption PSKs"
+      },
+      {
+        "id": "GHSA-h2v8-394m-p7vv",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "LOW",
+        "title": "Rustls: Brotli certificate decompression can allocate an attacker-controlled amount of memory up to 1 GiB before authentication."
+      },
+      {
+        "id": "GHSA-w44r-93j7-qv28",
+        "pkg": "rustls",
+        "installedVersion": "0.23.37",
+        "fixedVersion": "0.23.46, 0.24.0-dev.2",
+        "severity": "LOW",
+        "title": "rustls: An unauthenticated ServerHello poisons the per-name key-exchange record, so later ClientHellos carry only a classical X25519 share"
       },
       {
         "id": "GHSA-82j2-j2ch-gfr8",

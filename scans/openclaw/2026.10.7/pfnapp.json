@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-27T06:01:03.597Z",
+  "scannedAt": "2026-10-28T06:40:08.552Z",
   "system": {
     "total": 477,
     "cves": [
@@ -3822,7 +3822,7 @@
     ]
   },
   "app": {
-    "total": 31,
+    "total": 40,
     "cves": [
       {
         "id": "CVE-2026-111181",
@@ -4001,6 +4001,22 @@
         "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
       },
       {
+        "id": "CVE-2026-110816",
+        "pkg": "qs",
+        "installedVersion": "6.16.0",
+        "fixedVersion": "6.16.1",
+        "severity": "MEDIUM",
+        "title": "qs: qs: Denial of Service via unhandled exception during array serialization"
+      },
+      {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "6.28.0",
@@ -4009,12 +4025,28 @@
         "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
       },
       {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
         "id": "CVE-2026-109924",
         "pkg": "undici",
         "installedVersion": "6.28.0",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
       },
       {
         "id": "CVE-2026-85024",
@@ -4033,12 +4065,36 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
+        "id": "CVE-2026-109829",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "8.11.2",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "HIGH",
         "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
       },
       {
         "id": "CVE-2026-109841",
@@ -4055,6 +4111,22 @@
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-87029",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
       },
       {
         "id": "CVE-2023-54404",

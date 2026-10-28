@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-10-27T06:06:07.460Z",
+  "scannedAt": "2026-10-28T06:45:20.780Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 8,
+    "total": 10,
     "cves": [
       {
         "id": "CVE-2026-114437",
@@ -62,6 +62,22 @@
         "fixedVersion": "0.60.0",
         "severity": "MEDIUM",
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-78661",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.62.0",
+        "severity": "UNKNOWN",
+        "title": "Avoid quadratic complexity when coalescing text nodes in html in golang.org/x/net"
+      },
+      {
+        "id": "CVE-2026-97045",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.59.0",
+        "fixedVersion": "0.62.0",
+        "severity": "UNKNOWN",
+        "title": "Check all ancestor namespace transitions when rendering raw text in html in golang.org/x/net"
       },
       {
         "id": "CVE-2026-111943",

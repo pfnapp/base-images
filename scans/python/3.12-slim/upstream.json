@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-27T06:06:29.600Z",
+  "scannedAt": "2026-10-28T06:45:51.862Z",
   "system": {
     "total": 342,
     "cves": [
@@ -2742,7 +2742,7 @@
     ]
   },
   "app": {
-    "total": 6,
+    "total": 7,
     "cves": [
       {
         "id": "GHSA-6q48-6c7w-9gw2",
@@ -2751,6 +2751,14 @@
         "fixedVersion": "2026.10.18",
         "severity": "CRITICAL",
         "title": "certifi bundles emSign root CAs with compromised intermediate CA keys"
+      },
+      {
+        "id": "CVE-2026-114613",
+        "pkg": "msgpack",
+        "installedVersion": "1.1.2",
+        "fixedVersion": "1.2.3",
+        "severity": "HIGH",
+        "title": "msgpack: msgpack: Denial of Service via memory leak during map deserialization"
       },
       {
         "id": "GHSA-xmj3-9gf7-h52w",

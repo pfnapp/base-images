@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-10-27T06:06:01.475Z",
+  "scannedAt": "2026-10-28T06:45:12.787Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 1,
+    "total": 3,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -14,6 +14,22 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-78661",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.60.0",
+        "fixedVersion": "0.62.0",
+        "severity": "UNKNOWN",
+        "title": "Avoid quadratic complexity when coalescing text nodes in html in golang.org/x/net"
+      },
+      {
+        "id": "CVE-2026-97045",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.60.0",
+        "fixedVersion": "0.62.0",
+        "severity": "UNKNOWN",
+        "title": "Check all ancestor namespace transitions when rendering raw text in html in golang.org/x/net"
       }
     ]
   }

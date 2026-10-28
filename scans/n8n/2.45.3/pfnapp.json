@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-27T06:03:14.033Z",
+  "scannedAt": "2026-10-28T06:42:08.267Z",
   "system": {
     "total": 158,
     "cves": [
@@ -1270,7 +1270,7 @@
     ]
   },
   "app": {
-    "total": 138,
+    "total": 154,
     "cves": [
       {
         "id": "CVE-2026-109461",
@@ -1321,6 +1321,14 @@
         "title": "LangChain: RediSearch Filter Injection via Unescaped Tag/Text Values"
       },
       {
+        "id": "GHSA-f897-62hf-6gxq",
+        "pkg": "@modelcontextprotocol/node",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.1.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length"
+      },
+      {
         "id": "CVE-2026-104850",
         "pkg": "@modelcontextprotocol/sdk",
         "installedVersion": "1.26.0",
@@ -1343,6 +1351,14 @@
         "fixedVersion": "1.32.0",
         "severity": "HIGH",
         "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation"
+      },
+      {
+        "id": "GHSA-f897-62hf-6gxq",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.26.0",
+        "fixedVersion": "1.30.1",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length"
       },
       {
         "id": "CVE-2026-111769",
@@ -1375,6 +1391,14 @@
         "fixedVersion": "2.3.0",
         "severity": "HIGH",
         "title": "MCP  TypeScript server SDK: Shared transport or server instances delivered one HTTP client's messages to another"
+      },
+      {
+        "id": "GHSA-f897-62hf-6gxq",
+        "pkg": "@modelcontextprotocol/server",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.1.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length"
       },
       {
         "id": "CVE-2026-111771",
@@ -1761,6 +1785,14 @@
         "title": "compression: compression: Denial of Service via memory leak on premature response close"
       },
       {
+        "id": "CVE-2026-93753",
+        "pkg": "deepmerge",
+        "installedVersion": "4.3.1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "deepmerge: deepmerge: Prototype Poisoning via mergeObject function"
+      },
+      {
         "id": "CVE-2025-57665",
         "pkg": "element-plus",
         "installedVersion": "2.4.3",
@@ -1870,7 +1902,7 @@
         "installedVersion": "4.7.9",
         "fixedVersion": "4.7.10",
         "severity": "CRITICAL",
-        "title": "handlebars: Handlebars: JavaScript Injection via AST Type Confusion in compile (Program.blockParams)"
+        "title": "Handlebars provides the power necessary to let users build semantic te ..."
       },
       {
         "id": "CVE-2026-106444",
@@ -2057,6 +2089,22 @@
         "title": "nodemailer: nodemailer: Denial of Service via inefficient header parsing"
       },
       {
+        "id": "GHSA-4ffr-jq9g-5ffx",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.13",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Quadratic backtracking in SMTP AUTH mechanism detection regexes allows pre-auth remote denial of service"
+      },
+      {
+        "id": "GHSA-4g23-2xm8-66gc",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.10",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: Quadratic (O(n^2)) SMTP client reply parsing lets a malicious server or MITM cause a pre-auth remote denial of service"
+      },
+      {
         "id": "GHSA-6vj9-mwq6-2f5v",
         "pkg": "nodemailer",
         "installedVersion": "8.0.10",
@@ -2105,6 +2153,14 @@
         "title": "Nodemailer: Recipient-domain validation bypass via RFC 5322 comment mis-parsing leads to email delivery to an attacker-controlled domain"
       },
       {
+        "id": "GHSA-g73g-hqqh-jr95",
+        "pkg": "nodemailer",
+        "installedVersion": "8.0.10",
+        "fixedVersion": "10.0.13",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: RFC 5322 comment inside an angle-bracket address is never stripped"
+      },
+      {
         "id": "GHSA-m943-m63m-w62w",
         "pkg": "nodemailer",
         "installedVersion": "8.0.10",
@@ -2135,6 +2191,14 @@
         "fixedVersion": "2.0.8",
         "severity": "CRITICAL",
         "title": "proxy-addr: proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet"
+      },
+      {
+        "id": "CVE-2026-110816",
+        "pkg": "qs",
+        "installedVersion": "6.15.2",
+        "fixedVersion": "6.16.1",
+        "severity": "MEDIUM",
+        "title": "qs: qs: Denial of Service via unhandled exception during array serialization"
       },
       {
         "id": "CVE-2026-82417",
@@ -2313,6 +2377,14 @@
         "title": "toml-node: toml-node: Denial of Service via uncontrolled recursion in TOML parsing"
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "6.28.0",
@@ -2321,12 +2393,28 @@
         "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
       },
       {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
         "id": "CVE-2026-109924",
         "pkg": "undici",
         "installedVersion": "6.28.0",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
       },
       {
         "id": "CVE-2026-85024",
@@ -2345,12 +2433,36 @@
         "title": "undici: undici: HTTP response splitting via retry interceptor"
       },
       {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
+        "id": "CVE-2026-109829",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
+      },
+      {
         "id": "CVE-2026-109869",
         "pkg": "undici",
         "installedVersion": "7.29.1",
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "HIGH",
         "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
       },
       {
         "id": "CVE-2026-109841",
@@ -2367,6 +2479,22 @@
         "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
         "severity": "MEDIUM",
         "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-87029",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
       },
       {
         "id": "CVE-2023-54404",
