@@ -1,0 +1,621 @@
+{
+  "scannedAt": "2026-10-28T08:31:08.468Z",
+  "system": {
+    "total": 25,
+    "cves": [
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "brotli-libs",
+        "installedVersion": "1.2.0-r1",
+        "fixedVersion": "1.2.1-r0",
+        "severity": "HIGH",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86411",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: FTP connection reuse inherits client-certificate"
+      },
+      {
+        "id": "CVE-2026-86412",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie erases cookie jar"
+      },
+      {
+        "id": "CVE-2026-86413",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Negotiate credentials sent to redirected origin"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-86415",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: auto client cert connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-87861",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94265",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      }
+    ]
+  },
+  "app": {
+    "total": 51,
+    "cves": [
+      {
+        "id": "CVE-2026-109461",
+        "pkg": "@azure/msal-node",
+        "installedVersion": "5.1.5",
+        "fixedVersion": "7.1.0",
+        "severity": "HIGH",
+        "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint"
+      },
+      {
+        "id": "CVE-2026-109461",
+        "pkg": "@azure/msal-node",
+        "installedVersion": "5.6.0",
+        "fixedVersion": "7.1.0",
+        "severity": "HIGH",
+        "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint"
+      },
+      {
+        "id": "GHSA-f897-62hf-6gxq",
+        "pkg": "@modelcontextprotocol/node",
+        "installedVersion": "2.0.0",
+        "fixedVersion": "2.1.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length"
+      },
+      {
+        "id": "CVE-2026-111767",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "@modelcontextprotocol/sdk: @modelcontextprotocol/sdk: Unauthorized cross-session task access via taskStore"
+      },
+      {
+        "id": "CVE-2026-111768",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "HIGH",
+        "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation"
+      },
+      {
+        "id": "CVE-2026-111769",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript client SDK: HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies"
+      },
+      {
+        "id": "CVE-2026-111771",
+        "pkg": "@modelcontextprotocol/sdk",
+        "installedVersion": "1.31.0",
+        "fixedVersion": "1.32.0",
+        "severity": "MEDIUM",
+        "title": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service"
+      },
+      {
+        "id": "CVE-2026-111181",
+        "pkg": "body-parser",
+        "installedVersion": "2.3.0",
+        "fixedVersion": "2.4.0, 1.20.9",
+        "severity": "HIGH",
+        "title": "body-parser: body-parser: Denial of Service via unhandled decompression stream error"
+      },
+      {
+        "id": "CVE-2026-93753",
+        "pkg": "deepmerge",
+        "installedVersion": "4.3.1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "deepmerge: deepmerge: Prototype Poisoning via mergeObject function"
+      },
+      {
+        "id": "CVE-2025-57665",
+        "pkg": "element-plus",
+        "installedVersion": "2.4.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Element Plus Link component (el-link) implements insufficient input validation for the href attribute"
+      },
+      {
+        "id": "CVE-2026-110180",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Security policy bypass via improper host canonicalization"
+      },
+      {
+        "id": "CVE-2026-110306",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "MEDIUM",
+        "title": "fast-uri: fast-uri: Cross-Site Scripting via improper URI scheme decoding"
+      },
+      {
+        "id": "CVE-2026-110095",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "LOW",
+        "title": "fast-uri: fast-uri: Path traversal via improper relative URI normalization"
+      },
+      {
+        "id": "CVE-2026-110725",
+        "pkg": "fast-uri",
+        "installedVersion": "3.1.8",
+        "fixedVersion": "2.4.8, 3.1.9, 4.2.3",
+        "severity": "LOW",
+        "title": "fast-uri: fast-uri: Cross-site scripting via unescaped colon in relative URI paths"
+      },
+      {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.7.1",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-111759",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "15.0.2, 14.3.2",
+        "severity": "HIGH",
+        "title": "markdown-it: markdown-it: Denial of Service via mismatched quote parsing"
+      },
+      {
+        "id": "CVE-2026-2327",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.1.1",
+        "severity": "MEDIUM",
+        "title": "markdown-it: markdown-it: Denial of Service via Regular Expression Denial of Service in linkify function"
+      },
+      {
+        "id": "CVE-2026-48988",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.2.0",
+        "severity": "MEDIUM",
+        "title": "markdown-it: markdown-it: Denial of Service via quadratic processing of smartquotes with typographer enabled"
+      },
+      {
+        "id": "GHSA-253c-mchw-3w2r",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "15.0.1, 14.3.1",
+        "severity": "MEDIUM",
+        "title": "markdown-it linkify: true has two quadratic paths, so a few hundred KB of markdown blocks the event loop for tens of seconds"
+      },
+      {
+        "id": "CVE-2026-111766",
+        "pkg": "markdown-it",
+        "installedVersion": "13.0.2",
+        "fixedVersion": "14.3.3, 15.0.3",
+        "severity": "LOW",
+        "title": "markdown-it: markdown-it: Denial of Service via repeated unterminated inline HTML constructs"
+      },
+      {
+        "id": "CVE-2026-17495",
+        "pkg": "moment",
+        "installedVersion": "2.30.1",
+        "fixedVersion": "2.31.0",
+        "severity": "MEDIUM",
+        "title": "moment: Moment: Path Traversal via crafted non-string input to locale function"
+      },
+      {
+        "id": "CVE-2026-113872",
+        "pkg": "multer",
+        "installedVersion": "2.4.0",
+        "fixedVersion": "2.5.0",
+        "severity": "HIGH",
+        "title": "multer: multer: Denial of Service via aborted request during asynchronous file filtering"
+      },
+      {
+        "id": "GHSA-85x2-q946-cp5h",
+        "pkg": "nodemailer",
+        "installedVersion": "10.0.14",
+        "fixedVersion": "10.1.4",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: A \">\" inside a quoted local part ends an angle-addr early in addressparser, delivering to a domain the header does not name"
+      },
+      {
+        "id": "GHSA-8c8m-p3m8-cjg8",
+        "pkg": "nodemailer",
+        "installedVersion": "10.0.14",
+        "fixedVersion": "10.1.4",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: A nested comment ends early in addressparser, releasing the rest of the comment as a recipient"
+      },
+      {
+        "id": "GHSA-m943-m63m-w62w",
+        "pkg": "nodemailer",
+        "installedVersion": "10.0.14",
+        "fixedVersion": "10.1.4",
+        "severity": "MEDIUM",
+        "title": "Nodemailer: A \";\" inside a quoted string or comment ends an address group early in addressparser, turning display text into a recipient"
+      },
+      {
+        "id": "CVE-2026-110816",
+        "pkg": "qs",
+        "installedVersion": "6.16.0",
+        "fixedVersion": "6.16.1",
+        "severity": "MEDIUM",
+        "title": "qs: qs: Denial of Service via unhandled exception during array serialization"
+      },
+      {
+        "id": "CVE-2026-113650",
+        "pkg": "sanitize-html",
+        "installedVersion": "2.18.0",
+        "fixedVersion": "2.18.1",
+        "severity": "MEDIUM",
+        "title": "sanitize-html: sanitize-html: Denial of Service via unbounded recursion in iframe tag processing"
+      },
+      {
+        "id": "CVE-2024-1899",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Showdown vulnerable to Regular Expression Denial of Service (ReDoS) in link/anchor parsing"
+      },
+      {
+        "id": "CVE-2026-59710",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "showdown: Showdown: Stored Cross-Site Scripting via unescaped table header ID attributes in markdown"
+      },
+      {
+        "id": "CVE-2026-59711",
+        "pkg": "showdown",
+        "installedVersion": "2.1.0",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "showdown: Showdown: Cross-site scripting via unescaped metadata title allows arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-104182",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Denial of Service via inefficient comment scanning"
+      },
+      {
+        "id": "CVE-2026-104183",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.6.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Object prototype manipulation via crafted JSON input"
+      },
+      {
+        "id": "CVE-2026-71429",
+        "pkg": "stream-json",
+        "installedVersion": "1.9.1",
+        "fixedVersion": "3.5.0",
+        "severity": "MEDIUM",
+        "title": "stream-json: stream-json: Denial of Service due to inefficient processing of deeply nested JSON"
+      },
+      {
+        "id": "CVE-2026-114141",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml: Denial of Service via crafted array-of-tables headers"
+      },
+      {
+        "id": "CVE-2026-114142",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml-node: Prototype pollution: parsing a TOML document can write to Object.prototype"
+      },
+      {
+        "id": "CVE-2026-114143",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml-node: Denial of Service via long dotted keys in TOML input"
+      },
+      {
+        "id": "CVE-2026-114144",
+        "pkg": "toml",
+        "installedVersion": "4.2.0",
+        "fixedVersion": "5.0.1",
+        "severity": "HIGH",
+        "title": "toml: toml-node: Denial of Service via unbounded integer parsing"
+      },
+      {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.29.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-109383",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Certificate validation bypass via dropped TLS options in Agent"
+      },
+      {
+        "id": "CVE-2026-109829",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
+      },
+      {
+        "id": "CVE-2026-109869",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via unhandled stream error on excessive content encodings"
+      },
+      {
+        "id": "CVE-2026-87018",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Denial of Service via TLS renegotiation with mismatched certificate"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-87029",
+        "pkg": "undici",
+        "installedVersion": "7.29.1",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
+      },
+      {
+        "id": "CVE-2023-54404",
+        "pkg": "zod",
+        "installedVersion": "3.25.76",
+        "fixedVersion": "4.6.6",
+        "severity": "HIGH",
+        "title": "zod: zod: Denial of service via unbounded array validation"
+      }
+    ]
+  }
+}
