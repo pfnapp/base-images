@@ -5,10 +5,13 @@
 # upgraded or replaced in the final image layers:
 # ==============================================================================
 
-# Python 3.11 official Docker image embedded SBOM false positives (upgraded via pip)
+# Python official Docker image embedded SBOM false positives (upgraded via pip)
 GHSA-6v7p-g79w-8964
 CVE-2025-47273
 CVE-2026-59890
+CVE-2026-114613
+CVE-2026-97687
+CVE-2026-97689
 
 # ==============================================================================
 # Node 18 (languages/node/Dockerfile.alpine) — ACCEPTED RESIDUAL RISK
@@ -40,6 +43,22 @@ CVE-2026-33671
 CVE-2026-48815
 
 # ==============================================================================
+# Go 1.25 (languages/go/Dockerfile.alpine) — ACCEPTED RESIDUAL RISK
+#
+# Scope: go:1.25-alpine ONLY. Go 1.26 and 1.27 images are not affected.
+# Root cause: Go stdlib CVEs are only backported to the two latest Go releases
+# (1.26 and 1.27). Go 1.25 is EOL upstream.
+# Affected stdlib CVEs:
+#   CVE-2026-78667  -> net/http Range headers DoS
+#   CVE-2026-78669  -> net/http/internal/http2 excessive SETTINGS frames DoS
+#   CVE-2026-97031  -> crypto/tls ECH outer extension references DoS
+# ==============================================================================
+CVE-2026-78667
+CVE-2026-78669
+CVE-2026-97031
+CVE-2026-111943
+
+# ==============================================================================
 # npm CLI Vendored Dependencies (languages/node, frameworks/nextjs, frameworks/nestjs)
 #
 # Scope: node:20/22/24/26-alpine and derived framework images.
@@ -53,6 +72,9 @@ CVE-2026-102276
 CVE-2026-102278
 CVE-2026-19534
 CVE-2026-93748
+CVE-2026-109869
+CVE-2026-109383
+CVE-2026-87018
 
 # ==============================================================================
 # Debian Bookworm / Trixie OS Packages — ACCEPTED RESIDUAL RISK (UNFIXABLE)
@@ -76,4 +98,19 @@ CVE-2026-78408
 CVE-2026-78409
 CVE-2026-78410
 CVE-2026-12064
+CVE-2026-53615
+CVE-2026-6276
+CVE-2026-8286
+CVE-2026-8458
+CVE-2026-8927
+CVE-2023-45853
+CVE-2025-7458
+CVE-2025-69720
+CVE-2026-16742
+CVE-2026-11822
+CVE-2026-11824
+CVE-2026-9538
+CVE-2023-2953
 
+CVE-2026-41992
+CVE-2026-54369

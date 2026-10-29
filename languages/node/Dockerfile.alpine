@@ -36,6 +36,13 @@ RUN node -e "const v=parseInt(process.version.slice(1)); \
   process.stdout.write(v<=18?'10':v<=20?'11':'latest')" \
   | xargs -I{} npm install -g npm@{} && \
   echo "npm upgraded to $(npm -v)" && \
+  if [ -d /usr/local/lib/node_modules/npm/node_modules/undici ]; then \
+    cd /tmp && npm pack undici@6.29.1 && \
+    tar -xzf undici-*.tgz && \
+    rm -rf /usr/local/lib/node_modules/npm/node_modules/undici/* && \
+    cp -r package/* /usr/local/lib/node_modules/npm/node_modules/undici/ && \
+    rm -rf /tmp/undici* /tmp/package; \
+  fi && \
   npm cache clean --force && rm -rf /root/.npm
 
 # Create dedicated non-root user and group
