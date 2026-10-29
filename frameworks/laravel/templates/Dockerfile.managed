@@ -15,6 +15,9 @@ ARG PHP_VERSION=8.4
 # ==============================================================================
 FROM ghcr.io/pfnapp/base/frameworks/laravel:php${PHP_VERSION}-alpine
 
+USER root
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /var/www/html
 
 ENV COMPOSER_POLICY_ADVISORIES_BLOCK=false \

@@ -44,6 +44,9 @@ RUN \
 # Stage 2: Hardened Unprivileged Next.js Standalone Runner
 FROM ghcr.io/pfnapp/base/frameworks/nextjs:${NODE_VERSION}-alpine
 
+USER root
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /app
 
 # Copy Next.js standalone output and assets with non-root ownership (UID 10001 / GID 10001)

@@ -11,6 +11,8 @@ on:
     workflows: ['Build and Audit Node Base Images']
     types:
       - completed
+  schedule:
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -307,9 +309,17 @@ jobs:
             echo "Failed to push $tag after 3 attempts."
             return 1
           }
-
           push_with_retry "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}-alpine"
           push_with_retry "${TARGET_REPO}:${{ matrix.framework_version }}-node${{ matrix.node_version }}"
+
+          # Tag and push node version alias for Dockerfile.managed compatibility (${NODE_VERSION}-alpine)
+          if [ "${{ matrix.framework_version }}" = "${{ needs.resolve-matrix.outputs.latest_framework }}" ] || \
+             ([ "${{ matrix.node_version }}" = "18" ] && [ "${{ matrix.framework_version }}" = "10" ]); then
+            docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
+            docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.node_version }}"
+            push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}-alpine"
+            push_with_retry "${TARGET_REPO}:${{ matrix.node_version }}"
+          fi
 
           if [ "${{ matrix.framework_version }}" = "${{ needs.resolve-matrix.outputs.latest_framework }}" ] && \
              [ "${{ matrix.node_version }}" = "${{ needs.resolve-matrix.outputs.latest_node }}" ]; then

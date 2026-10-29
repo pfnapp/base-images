@@ -35,6 +35,9 @@ RUN bun run build
 # Stage 2: Hardened Unprivileged Bun Runtime
 FROM ghcr.io/pfnapp/base/languages/bun:${BUN_VERSION}-alpine
 
+USER root
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /app
 
 ENV NODE_ENV=production

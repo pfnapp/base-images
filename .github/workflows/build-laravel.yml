@@ -11,6 +11,8 @@ on:
     workflows: ['Build and Audit PHP Base Images']
     types:
       - completed
+  schedule:
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:

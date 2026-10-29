@@ -34,6 +34,9 @@ RUN bun run build
 # Stage 2: Hardened Unprivileged Bun Runner
 FROM ghcr.io/pfnapp/base/languages/bun:${BUN_VERSION}-alpine
 
+USER root
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /app
 
 # Copy Next.js standalone output and assets with non-root ownership (UID 10001 / GID 10001)

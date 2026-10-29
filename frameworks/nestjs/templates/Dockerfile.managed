@@ -45,6 +45,9 @@ RUN \
 # Stage 2: Hardened Unprivileged NestJS Runtime
 FROM ghcr.io/pfnapp/base/frameworks/nestjs:${NODE_VERSION}-alpine
 
+USER root
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /app
 
 ENV NODE_ENV=production
