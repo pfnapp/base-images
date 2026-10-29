@@ -1,6 +1,8 @@
-# PFNApp hardened image for n8n
-# NOTE: Base OS is Docker Hardened Images (Alpine 3.24) with no package manager (apk stripped).
-# Standard package manager upgrade is not applicable.
-# This image is re-published as-is from upstream.
-# CVE reduction depends on upstream releasing a new version.
-FROM docker.io/n8nio/n8n:2.42.0
+FROM docker.io/n8nio/n8n:3.0.1
+
+# Upgrade Alpine packages when apk is present; some hardened variants omit it.
+RUN if command -v apk >/dev/null 2>&1; then \
+      apk update && apk upgrade --no-cache && rm -rf /var/cache/apk/*; \
+    else \
+      echo "apk unavailable; OS package upgrades must be applied in the upstream base image"; \
+    fi
