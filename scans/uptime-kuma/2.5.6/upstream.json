@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-29T06:45:43.617Z",
+  "scannedAt": "2026-10-29T15:32:16.055Z",
   "system": {
     "total": 7559,
     "cves": [
@@ -465,7 +465,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
+        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-79188",
@@ -473,7 +473,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
+        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79189",
@@ -874,6 +874,14 @@
         "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Use after free in Passwords"
+      },
+      {
+        "id": "CVE-2026-102306",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
       },
       {
         "id": "CVE-2026-102307",
@@ -1386,6 +1394,14 @@
         "fixedVersion": "155.0.8059.39-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: Use after free in Media"
+      },
+      {
+        "id": "CVE-2026-106323",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Missing authorization in Chrome for iOS"
       },
       {
         "id": "CVE-2026-106329",
@@ -9340,14 +9356,6 @@
         "title": "chromium-browser: Missing authorization in Permissions"
       },
       {
-        "id": "CVE-2026-106414",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "MEDIUM",
-        "title": "chromium-browser: Improper input validation in Mobile"
-      },
-      {
         "id": "CVE-2026-106415",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -15748,14 +15756,6 @@
         "title": "chromium-browser: Missing authorization in Browser"
       },
       {
-        "id": "CVE-2026-106294",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "LOW",
-        "title": "chromium-browser: Incomplete cleanup in Chromoting"
-      },
-      {
         "id": "CVE-2026-106296",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18948,14 +18948,6 @@
         "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
-        "id": "CVE-2026-102306",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-      },
-      {
         "id": "CVE-2026-102308",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18964,12 +18956,20 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-106323",
+        "id": "CVE-2026-106294",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "155.0.8059.39-1~deb12u1",
         "severity": "UNKNOWN",
-        "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+        "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+      },
+      {
+        "id": "CVE-2026-106414",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "UNKNOWN",
+        "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
       },
       {
         "id": "CVE-2026-112992",
@@ -25881,7 +25881,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
+        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
       },
       {
         "id": "CVE-2026-79188",
@@ -25889,7 +25889,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
+        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
       },
       {
         "id": "CVE-2026-79189",
@@ -26290,6 +26290,14 @@
         "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Use after free in Passwords"
+      },
+      {
+        "id": "CVE-2026-102306",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
       },
       {
         "id": "CVE-2026-102307",
@@ -26802,6 +26810,14 @@
         "fixedVersion": "155.0.8059.39-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: Use after free in Media"
+      },
+      {
+        "id": "CVE-2026-106323",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Missing authorization in Chrome for iOS"
       },
       {
         "id": "CVE-2026-106329",
@@ -34756,14 +34772,6 @@
         "title": "chromium-browser: Missing authorization in Permissions"
       },
       {
-        "id": "CVE-2026-106414",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "MEDIUM",
-        "title": "chromium-browser: Improper input validation in Mobile"
-      },
-      {
         "id": "CVE-2026-106415",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -41164,14 +41172,6 @@
         "title": "chromium-browser: Missing authorization in Browser"
       },
       {
-        "id": "CVE-2026-106294",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "LOW",
-        "title": "chromium-browser: Incomplete cleanup in Chromoting"
-      },
-      {
         "id": "CVE-2026-106296",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -44364,14 +44364,6 @@
         "title": "chromium-browser: angle: Uninitialized Use in ANGLE"
       },
       {
-        "id": "CVE-2026-102306",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-      },
-      {
         "id": "CVE-2026-102308",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -44380,12 +44372,20 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-106323",
+        "id": "CVE-2026-106294",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "155.0.8059.39-1~deb12u1",
         "severity": "UNKNOWN",
-        "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+        "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+      },
+      {
+        "id": "CVE-2026-106414",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "UNKNOWN",
+        "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
       },
       {
         "id": "CVE-2026-112992",

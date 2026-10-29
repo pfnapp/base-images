@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-29T06:45:28.056Z",
+    "generatedAt": "2026-10-29T15:31:27.307Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
@@ -576,7 +576,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "7.1.2-php8.3-fpm-alpine",
@@ -1294,7 +1294,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "7.1.1-php8.3-fpm-alpine",
@@ -1972,7 +1972,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -2019,9 +2019,9 @@
               "scanned": true,
               "system": {
                 "critical": 22,
-                "high": 506,
-                "medium": 653,
-                "low": 463,
+                "high": 508,
+                "medium": 651,
+                "low": 461,
                 "fixable": 1379,
                 "total": 2344,
                 "topCves": [
@@ -2538,6 +2538,14 @@
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: Use after free in Media"
+                  },
+                  {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
                   },
                   {
                     "id": "CVE-2026-106329",
@@ -4420,14 +4428,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -4780,14 +4780,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -5108,12 +5100,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -8220,6 +8220,14 @@
                     "title": "chromium-browser: Use after free in Media"
                   },
                   {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
+                  },
+                  {
                     "id": "CVE-2026-106329",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -10100,14 +10108,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -10460,14 +10460,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -10788,12 +10780,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -22149,9 +22149,9 @@
             "reduction": {
               "system": {
                 "critical": 12,
-                "high": 234,
-                "medium": 264,
-                "low": 126,
+                "high": 236,
+                "medium": 262,
+                "low": 124,
                 "total": 639
               },
               "app": {
@@ -22247,7 +22247,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.5.7",
@@ -22284,9 +22284,9 @@
               "scanned": true,
               "system": {
                 "critical": 22,
-                "high": 506,
-                "medium": 653,
-                "low": 463,
+                "high": 508,
+                "medium": 651,
+                "low": 461,
                 "fixable": 1379,
                 "total": 2344,
                 "topCves": [
@@ -22803,6 +22803,14 @@
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: Use after free in Media"
+                  },
+                  {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
                   },
                   {
                     "id": "CVE-2026-106329",
@@ -24685,14 +24693,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -25045,14 +25045,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -25373,12 +25365,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -28485,6 +28485,14 @@
                     "title": "chromium-browser: Use after free in Media"
                   },
                   {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
+                  },
+                  {
                     "id": "CVE-2026-106329",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -30365,14 +30373,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -30725,14 +30725,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -31053,12 +31045,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -42414,9 +42414,9 @@
             "reduction": {
               "system": {
                 "critical": 12,
-                "high": 234,
-                "medium": 264,
-                "low": 126,
+                "high": 236,
+                "medium": 262,
+                "low": 124,
                 "total": 639
               },
               "app": {
@@ -42512,7 +42512,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.5.6",
@@ -42530,9 +42530,9 @@
             "upstream": {
               "system": {
                 "critical": 195,
-                "high": 2158,
-                "medium": 2307,
-                "low": 1235,
+                "high": 2162,
+                "medium": 2305,
+                "low": 1233,
                 "fixable": 6594,
                 "total": 7559
               },
@@ -42549,9 +42549,9 @@
               "scanned": true,
               "system": {
                 "critical": 22,
-                "high": 506,
-                "medium": 653,
-                "low": 463,
+                "high": 508,
+                "medium": 651,
+                "low": 461,
                 "fixable": 1379,
                 "total": 2344,
                 "topCves": [
@@ -43068,6 +43068,14 @@
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: Use after free in Media"
+                  },
+                  {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
                   },
                   {
                     "id": "CVE-2026-106329",
@@ -44950,14 +44958,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -45310,14 +45310,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -45638,12 +45630,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -48750,6 +48750,14 @@
                     "title": "chromium-browser: Use after free in Media"
                   },
                   {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
+                  },
+                  {
                     "id": "CVE-2026-106329",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -50630,14 +50638,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -50990,14 +50990,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.92-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
@@ -51318,12 +51310,20 @@
                     "title": "chromium-browser: angle: Use after free in ANGLE"
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.92-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.92-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -62679,7 +62679,7 @@
             "reduction": {
               "system": {
                 "critical": -173,
-                "high": -1652,
+                "high": -1654,
                 "medium": -1654,
                 "low": -772,
                 "total": -5215
@@ -62777,7 +62777,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.5.5",
@@ -62795,9 +62795,9 @@
             "upstream": {
               "system": {
                 "critical": 195,
-                "high": 2158,
-                "medium": 2307,
-                "low": 1235,
+                "high": 2162,
+                "medium": 2305,
+                "low": 1233,
                 "fixable": 6594,
                 "total": 7559
               },
@@ -62814,9 +62814,9 @@
               "scanned": true,
               "system": {
                 "critical": 34,
-                "high": 664,
-                "medium": 818,
-                "low": 522,
+                "high": 668,
+                "medium": 816,
+                "low": 520,
                 "fixable": 1777,
                 "total": 2742,
                 "topCves": [
@@ -62989,6 +62989,14 @@
                     "fixedVersion": "154.0.8037.92-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: chromium-browser: Use after free in Passwords"
+                  },
+                  {
+                    "id": "CVE-2026-102306",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
                   },
                   {
                     "id": "CVE-2026-102307",
@@ -63501,6 +63509,14 @@
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: Use after free in Media"
+                  },
+                  {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
                   },
                   {
                     "id": "CVE-2026-106329",
@@ -65727,14 +65743,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -66479,14 +66487,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -67007,14 +67007,6 @@
                     "title": "chromium-browser: Inappropriate implementation in PlatformIntegration"
                   },
                   {
-                    "id": "CVE-2026-102306",
-                    "pkg": "chromium",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-                  },
-                  {
                     "id": "CVE-2026-102308",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -67023,12 +67015,20 @@
                     "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -69791,6 +69791,14 @@
                     "title": "chromium-browser: chromium-browser: Use after free in Passwords"
                   },
                   {
+                    "id": "CVE-2026-102306",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "154.0.8037.92-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: chromium-browser: Use after free in Bluetooth"
+                  },
+                  {
                     "id": "CVE-2026-102307",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -70301,6 +70309,14 @@
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "HIGH",
                     "title": "chromium-browser: Use after free in Media"
+                  },
+                  {
+                    "id": "CVE-2026-106323",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "HIGH",
+                    "title": "chromium-browser: Missing authorization in Chrome for iOS"
                   },
                   {
                     "id": "CVE-2026-106329",
@@ -72527,14 +72543,6 @@
                     "title": "chromium-browser: Missing authorization in Permissions"
                   },
                   {
-                    "id": "CVE-2026-106414",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "MEDIUM",
-                    "title": "chromium-browser: Improper input validation in Mobile"
-                  },
-                  {
                     "id": "CVE-2026-106415",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -73279,14 +73287,6 @@
                     "title": "chromium-browser: Missing authorization in Browser"
                   },
                   {
-                    "id": "CVE-2026-106294",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "155.0.8059.39-1~deb12u1",
-                    "severity": "LOW",
-                    "title": "chromium-browser: Incomplete cleanup in Chromoting"
-                  },
-                  {
                     "id": "CVE-2026-106296",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -73807,14 +73807,6 @@
                     "title": "chromium-browser: Inappropriate implementation in PlatformIntegration"
                   },
                   {
-                    "id": "CVE-2026-102306",
-                    "pkg": "chromium-common",
-                    "installedVersion": "154.0.8037.57-1~deb12u1",
-                    "fixedVersion": "154.0.8037.92-1~deb12u1",
-                    "severity": "UNKNOWN",
-                    "title": "Use after free in Bluetooth in Google Chrome prior to 154.0.8037.92 al ..."
-                  },
-                  {
                     "id": "CVE-2026-102308",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
@@ -73823,12 +73815,20 @@
                     "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
                   },
                   {
-                    "id": "CVE-2026-106323",
+                    "id": "CVE-2026-106294",
                     "pkg": "chromium-common",
                     "installedVersion": "154.0.8037.57-1~deb12u1",
                     "fixedVersion": "155.0.8059.39-1~deb12u1",
                     "severity": "UNKNOWN",
-                    "title": "Missing authorization in Chrome for iOS in Google Chrome on on iOS pri ..."
+                    "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
+                  },
+                  {
+                    "id": "CVE-2026-106414",
+                    "pkg": "chromium-common",
+                    "installedVersion": "154.0.8037.57-1~deb12u1",
+                    "fixedVersion": "155.0.8059.39-1~deb12u1",
+                    "severity": "UNKNOWN",
+                    "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
                   },
                   {
                     "id": "CVE-2026-112992",
@@ -86298,7 +86298,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -89145,7 +89145,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "0.5.111",
@@ -91999,7 +91999,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "0.5.109",
@@ -94853,7 +94853,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "0.5.104",
@@ -97724,7 +97724,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "0.5.95",
@@ -97923,7 +97923,7 @@
           "topSystemCves": [],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": [
@@ -100635,7 +100635,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.8.51",
@@ -103316,7 +103316,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.8.50",
@@ -105997,7 +105997,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -110288,7 +110288,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2026.10.7",
@@ -114665,7 +114665,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2026.10.6",
@@ -119058,7 +119058,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2026.10.5",
@@ -123531,7 +123531,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2026.10.4",
@@ -129804,7 +129804,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": [
@@ -132608,7 +132608,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.0.0",
@@ -135361,7 +135361,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.45.4",
@@ -138114,7 +138114,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.45.3",
@@ -140867,7 +140867,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.45.2",
@@ -143620,7 +143620,7 @@
           ],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": [
@@ -143740,10 +143740,10 @@
               "system": {
                 "critical": 20,
                 "high": 494,
-                "medium": 2819,
+                "medium": 2820,
                 "low": 1569,
                 "fixable": 2351,
-                "total": 5037
+                "total": 5038
               },
               "app": {
                 "critical": 12,
@@ -143759,10 +143759,10 @@
               "system": {
                 "critical": 2,
                 "high": 222,
-                "medium": 442,
+                "medium": 443,
                 "low": 346,
                 "fixable": 0,
-                "total": 1055,
+                "total": 1056,
                 "topCves": [
                   {
                     "id": "CVE-2026-8458",
@@ -148548,7 +148548,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -148588,7 +148588,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -148596,7 +148596,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -148620,7 +148620,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -149677,6 +149677,14 @@
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "libsndfile: libsndfile: Information disclosure via uninitialized variable use in WAV parsing"
+                  },
+                  {
+                    "id": "CVE-2026-116741",
+                    "pkg": "libspeex1",
+                    "installedVersion": "1.2.1-3",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "speex: speex: Denial of Service via out-of-bounds write"
                   },
                   {
                     "id": "CVE-2026-50812",
@@ -153474,7 +153482,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v2026.9.21",
@@ -153493,10 +153501,10 @@
               "system": {
                 "critical": 20,
                 "high": 494,
-                "medium": 2819,
+                "medium": 2820,
                 "low": 1569,
                 "fixable": 2351,
-                "total": 5037
+                "total": 5038
               },
               "app": {
                 "critical": 12,
@@ -153512,10 +153520,10 @@
               "system": {
                 "critical": 3,
                 "high": 241,
-                "medium": 478,
+                "medium": 479,
                 "low": 352,
                 "fixable": 67,
-                "total": 1122,
+                "total": 1123,
                 "topCves": [
                   {
                     "id": "CVE-2026-8286",
@@ -158485,7 +158493,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -158525,7 +158533,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -158533,7 +158541,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -158557,7 +158565,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -159638,6 +159646,14 @@
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "libsndfile: libsndfile: Information disclosure via uninitialized variable use in WAV parsing"
+                  },
+                  {
+                    "id": "CVE-2026-116741",
+                    "pkg": "libspeex1",
+                    "installedVersion": "1.2.1-3",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "speex: speex: Denial of Service via out-of-bounds write"
                   },
                   {
                     "id": "CVE-2026-50812",
@@ -164291,7 +164307,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v2026.9.14",
@@ -164310,10 +164326,10 @@
               "system": {
                 "critical": 20,
                 "high": 494,
-                "medium": 2819,
+                "medium": 2820,
                 "low": 1569,
                 "fixable": 2351,
-                "total": 5037
+                "total": 5038
               },
               "app": {
                 "critical": 12,
@@ -164329,10 +164345,10 @@
               "system": {
                 "critical": 3,
                 "high": 241,
-                "medium": 478,
+                "medium": 479,
                 "low": 352,
                 "fixable": 67,
-                "total": 1122,
+                "total": 1123,
                 "topCves": [
                   {
                     "id": "CVE-2026-8286",
@@ -169302,7 +169318,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50583",
@@ -169342,7 +169358,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-50588",
@@ -169350,7 +169366,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "Title Not Available"
+                    "title": "[Unknown description]"
                   },
                   {
                     "id": "CVE-2026-50640",
@@ -169374,7 +169390,7 @@
                     "installedVersion": "3.6.6-0.1~deb13u1",
                     "fixedVersion": "None",
                     "severity": "UNKNOWN",
-                    "title": "[Unknown description]"
+                    "title": "Title Not Available"
                   },
                   {
                     "id": "CVE-2026-54441",
@@ -170455,6 +170471,14 @@
                     "fixedVersion": "None",
                     "severity": "LOW",
                     "title": "libsndfile: libsndfile: Information disclosure via uninitialized variable use in WAV parsing"
+                  },
+                  {
+                    "id": "CVE-2026-116741",
+                    "pkg": "libspeex1",
+                    "installedVersion": "1.2.1-3",
+                    "fixedVersion": "None",
+                    "severity": "MEDIUM",
+                    "title": "speex: speex: Denial of Service via out-of-bounds write"
                   },
                   {
                     "id": "CVE-2026-50812",
@@ -175108,7 +175132,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -177748,7 +177772,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "1.37.3",
@@ -180698,7 +180722,7 @@
           ],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -180841,7 +180865,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo has CSRF Protection Bypass via MethodOverride Rewriting POST to Safe Method"
+                    "title": "Echo is a Go web framework. Prior to 4.16.0 and 5.4.0, Echo's MethodOv ..."
                   },
                   {
                     "id": "CVE-2026-118651",
@@ -180849,7 +180873,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo: Reverse Proxy Forwards Attacker-Supplied X-Real-IP to Upstream by Default"
+                    "title": "Echo is a Go web framework. From 4.0.0 until 5.4.0, the Proxy middlewa ..."
                   },
                   {
                     "id": "CVE-2026-118652",
@@ -180857,7 +180881,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo vulnerable to Reflected Cross-Site Scripting (XSS) via unsanitized JSONP callback in Context.JSONP / Context.JSONPBlob"
+                    "title": "Echo is a Go web framework. Prior to 4.16.0 and 5.4.0, Context.JSONP a ..."
                   },
                   {
                     "id": "CVE-2026-118654",
@@ -180865,7 +180889,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo static file middleware route protection bypass via encoded dot-dot traversal"
+                    "title": "Echo is a Go web framework. Prior to 4.16.0 and 5.4.0, Echo's static f ..."
                   },
                   {
                     "id": "CVE-2026-118656",
@@ -180873,7 +180897,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo has Open Redirect via Control-Character Prefix Defeating sanitizeURI"
+                    "title": "Echo is a Go web framework. Prior to 4.16.0 and 5.4.0, sanitizeURI che ..."
                   },
                   {
                     "id": "CVE-2026-118657",
@@ -180881,7 +180905,7 @@
                     "installedVersion": "v5.3.1",
                     "fixedVersion": "5.4.0",
                     "severity": "MEDIUM",
-                    "title": "Echo: HTTPS Redirect and HSTS Bypass via Unconditional Trust of Forwarded Scheme Headers"
+                    "title": "Echo is a Go web framework. Prior to 4.16.0 and 5.4.0, Context.Scheme  ..."
                   },
                   {
                     "id": "GO-2026-5932",
@@ -180987,7 +181011,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -181146,7 +181170,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -185341,7 +185365,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.2.1",
@@ -189526,7 +189550,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.2.0",
@@ -193743,7 +193767,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.1.0",
@@ -198424,7 +198448,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "3.0.2",
@@ -203105,7 +203129,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": [
@@ -203251,7 +203275,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -213598,7 +213622,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -230785,7 +230809,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "2.15.1",
@@ -265522,7 +265546,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -266132,7 +266156,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "5.1.7",
@@ -266757,7 +266781,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "5.1.6",
@@ -266881,7 +266905,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -267211,7 +267235,7 @@
           ],
           "posture": "APP CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": []
@@ -267329,7 +267353,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v11.3.4",
@@ -267437,7 +267461,7 @@
           "topSystemCves": [],
           "posture": "NON-COMPLIANT (ROOT)",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v11.3.3",
@@ -267554,7 +267578,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v11.3.2",
@@ -267688,7 +267712,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         },
         {
           "tag": "v11.3.1",
@@ -267878,7 +267902,7 @@
           "topSystemCves": [],
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-29T06:45:28.056Z"
+          "scannedAt": "2026-10-29T15:31:27.307Z"
         }
       ],
       "deprecatedVersions": [
