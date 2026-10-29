@@ -2,7 +2,7 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-10-29T06:45:28.056Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-10-29T15:31:27.307Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
@@ -25,10 +25,10 @@
 | **WordPress (PHP-FPM)** | _CMS & Publishing_ | `7.1.3-php8.3-fpm-alpine` | 🟢 **LATEST** | ⚠️ YES | 1/2/9/44 | 0/0/0/0 | 0/2/9/44 | 0/0/0/0 | -1/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.2-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 1/6/17/45 | 0/0/0/0 | 1/6/16/45 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `7.1.1-php8.3-fpm-alpine` | 🟢 **SUPPORTED** | ⚠️ YES | 1/7/10/45 | 0/0/0/0 | 1/7/10/45 | 0/0/0/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-| **Uptime Kuma** | _Monitoring & Status_ | `2.5.8` | 🟢 **LATEST** | ⚠️ YES | 10/272/389/337 | 4/68/110/8 | 22/506/653/463 | 2/69/79/6 | 12/234 | 🔴 APP CRITICAL RISK |
-|  |  | `2.5.7` | 🟢 **SUPPORTED** | ⚠️ YES | 10/272/389/337 | 4/70/110/8 | 22/506/653/463 | 2/69/79/6 | 12/234 | 🔴 APP CRITICAL RISK |
-|  |  | `2.5.6` | 🟢 **SUPPORTED** | ⚠️ YES | 195/2158/2307/1235 | 6/104/137/11 | 22/506/653/463 | 2/69/79/6 | -173/-1652 | 🔴 APP CRITICAL RISK |
-|  |  | `2.5.5` | 🟠 **AGING** | ⚠️ YES | 195/2158/2307/1235 | 7/106/146/12 | 34/664/818/522 | 3/71/84/7 | -161/-1494 | 🔴 APP CRITICAL RISK |
+| **Uptime Kuma** | _Monitoring & Status_ | `2.5.8` | 🟢 **LATEST** | ⚠️ YES | 10/272/389/337 | 4/68/110/8 | 22/508/651/461 | 2/69/79/6 | 12/236 | 🔴 APP CRITICAL RISK |
+|  |  | `2.5.7` | 🟢 **SUPPORTED** | ⚠️ YES | 10/272/389/337 | 4/70/110/8 | 22/508/651/461 | 2/69/79/6 | 12/236 | 🔴 APP CRITICAL RISK |
+|  |  | `2.5.6` | 🟢 **SUPPORTED** | ⚠️ YES | 195/2162/2305/1233 | 6/104/137/11 | 22/508/651/461 | 2/69/79/6 | -173/-1654 | 🔴 APP CRITICAL RISK |
+|  |  | `2.5.5` | 🟠 **AGING** | ⚠️ YES | 195/2162/2305/1233 | 7/106/146/12 | 34/668/816/520 | 3/71/84/7 | -161/-1494 | 🔴 APP CRITICAL RISK |
 | **9Router** | _AI Gateways & Proxies_ | `0.5.112` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/10/1 | 0/0/0/0 | 4/153/157/14 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `0.5.111` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/1/10/1 | 0/0/0/0 | 4/154/157/14 | 0/0 | 🟠 APP HIGH RISK |
 |  |  | `0.5.109` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/1/10/1 | 0/0/0/0 | 4/154/157/14 | 0/0 | 🟠 APP HIGH RISK |
@@ -47,9 +47,9 @@
 |  |  | `2.45.4` | 🟢 **SUPPORTED** | ✅ NO | 1/1/8/22 | 0/29/43/8 | 8/28/71/49 | 6/70/73/10 | 7/27 | 🟠 APP HIGH RISK |
 |  |  | `2.45.3` | 🟠 **AGING** | ✅ NO | 1/1/8/22 | 0/29/43/8 | 8/28/71/49 | 6/70/73/10 | 7/27 | 🟠 APP HIGH RISK |
 |  |  | `2.45.2` | 🔴 **EOL SOON** | ✅ NO | 1/1/8/22 | 0/29/43/8 | 8/28/71/49 | 6/70/73/10 | 7/27 | 🟠 APP HIGH RISK |
-| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 20/494/2819/1569 | 12/61/95/28 | 2/222/442/346 | 8/48/61/17 | -18/-272 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 20/494/2819/1569 | 12/61/95/28 | 3/241/478/352 | 12/63/98/27 | -17/-253 | 🔴 APP CRITICAL RISK |
-|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 20/494/2819/1569 | 12/63/98/27 | 3/241/478/352 | 12/63/98/27 | -17/-253 | 🔴 APP CRITICAL RISK |
+| **Hermes Agent** | _AI Agents & Automation_ | `v2026.9.24` | 🟢 **LATEST** | ⚠️ YES | 20/494/2820/1569 | 12/61/95/28 | 2/222/443/346 | 8/48/61/17 | -18/-272 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.21` | 🟢 **SUPPORTED** | ⚠️ YES | 20/494/2820/1569 | 12/61/95/28 | 3/241/479/352 | 12/63/98/27 | -17/-253 | 🔴 APP CRITICAL RISK |
+|  |  | `v2026.9.14` | 🟢 **SUPPORTED** | ⚠️ YES | 20/494/2820/1569 | 12/63/98/27 | 3/241/479/352 | 12/63/98/27 | -17/-253 | 🔴 APP CRITICAL RISK |
 | **Vaultwarden (Bitwarden)** | _Security & Identity_ | `1.37.4` | 🟢 **LATEST** | ⚠️ YES | 5/38/117/146 | 0/0/0/0 | 5/37/117/146 | 0/0/0/0 | 0/-1 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `1.37.3` | 🟢 **SUPPORTED** | ⚠️ YES | 8/51/162/153 | 0/0/0/0 | 5/41/147/152 | 0/0/0/0 | -3/-10 | 🟡 NON-COMPLIANT (ROOT) |
 | **Memos** | _Knowledge & Notes_ | `0.31.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/17/2 | 1/8/21/2 | 0/0/0/0 | 1/2/8/1 | 0/-2 | 🔴 APP CRITICAL RISK |
@@ -181,7 +181,7 @@ _No Critical or High app-level vulnerabilities detected._
 
 | Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 12 | 234 | 264 | 126 | 639 |
+| System | 12 | 236 | 262 | 124 | 639 |
 | App | -2 | 1 | — | — | -34 |
 
 </details>
