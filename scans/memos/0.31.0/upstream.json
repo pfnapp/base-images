@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-28T06:43:17.786Z",
+  "scannedAt": "2026-10-29T06:46:30.585Z",
   "system": {
     "total": 23,
     "cves": [
@@ -190,7 +190,7 @@
     ]
   },
   "app": {
-    "total": 28,
+    "total": 35,
     "cves": [
       {
         "id": "CVE-2023-36308",
@@ -201,23 +201,39 @@
         "title": "disintegration Imaging 1.6.2 allows attackers to cause a panic (becaus ..."
       },
       {
-        "id": "GHSA-cxf3-9h37-7rr8",
+        "id": "CVE-2026-118264",
         "pkg": "github.com/labstack/echo/v5",
         "installedVersion": "v5.3.1",
         "fixedVersion": "5.4.1",
         "severity": "CRITICAL",
-        "title": "Echo: Rejected WebSocket upgrades can bypass Echo route-level access controls"
+        "title": "Echo is a Go web framework. From 4.0.0 until 4.16.1 and 5.4.1, Echo's  ..."
       },
       {
-        "id": "GHSA-9969-6676-49h5",
+        "id": "CVE-2026-118262",
         "pkg": "github.com/labstack/echo/v5",
         "installedVersion": "v5.3.1",
         "fixedVersion": "5.4.1",
         "severity": "HIGH",
-        "title": "Echo: WebSocket proxy can retain connections and handlers after client disconnect"
+        "title": "Echo is a Go web framework. From 4.15.0 until 4.16.1 and 5.4.1, Echo's ..."
       },
       {
-        "id": "GHSA-h53f-rm2w-w7rg",
+        "id": "CVE-2026-118650",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "HIGH",
+        "title": "Echo's middleware.Static: `%2F`-encoded path bypasses route/group middleware guarding a statically-served path"
+      },
+      {
+        "id": "CVE-2026-118263",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.1",
+        "severity": "MEDIUM",
+        "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests"
+      },
+      {
+        "id": "CVE-2026-118265",
         "pkg": "github.com/labstack/echo/v5",
         "installedVersion": "v5.3.1",
         "fixedVersion": "5.4.1",
@@ -225,12 +241,52 @@
         "title": "Echo: X-Real-IP extractor trusts the header value instead of the sending peer"
       },
       {
-        "id": "GHSA-x9ff-22gv-65f4",
+        "id": "CVE-2026-118266",
         "pkg": "github.com/labstack/echo/v5",
         "installedVersion": "v5.3.1",
-        "fixedVersion": "5.4.1",
+        "fixedVersion": "5.4.0",
         "severity": "MEDIUM",
-        "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests"
+        "title": "Echo has CSRF Protection Bypass via MethodOverride Rewriting POST to Safe Method"
+      },
+      {
+        "id": "CVE-2026-118651",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "Echo: Reverse Proxy Forwards Attacker-Supplied X-Real-IP to Upstream by Default"
+      },
+      {
+        "id": "CVE-2026-118652",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "Echo vulnerable to Reflected Cross-Site Scripting (XSS) via unsanitized JSONP callback in Context.JSONP / Context.JSONPBlob"
+      },
+      {
+        "id": "CVE-2026-118654",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "Echo static file middleware route protection bypass via encoded dot-dot traversal"
+      },
+      {
+        "id": "CVE-2026-118656",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "Echo has Open Redirect via Control-Character Prefix Defeating sanitizeURI"
+      },
+      {
+        "id": "CVE-2026-118657",
+        "pkg": "github.com/labstack/echo/v5",
+        "installedVersion": "v5.3.1",
+        "fixedVersion": "5.4.0",
+        "severity": "MEDIUM",
+        "title": "Echo: HTTPS Redirect and HSTS Bypass via Unconditional Trust of Forwarded Scheme Headers"
       },
       {
         "id": "GO-2026-5932",
@@ -286,7 +342,7 @@
         "installedVersion": "v0.58.0",
         "fixedVersion": "0.62.0",
         "severity": "UNKNOWN",
-        "title": "Avoid quadratic complexity when coalescing text nodes in html in golang.org/x/net"
+        "title": "When coalescing adjacent text nodes in addText and fosterParent, appen ..."
       },
       {
         "id": "CVE-2026-97045",
@@ -294,7 +350,7 @@
         "installedVersion": "v0.58.0",
         "fixedVersion": "0.62.0",
         "severity": "UNKNOWN",
-        "title": "Check all ancestor namespace transitions when rendering raw text in html in golang.org/x/net"
+        "title": "In childTextNodesAreLiteral, walking up the tree previously stopped at ..."
       },
       {
         "id": "CVE-2026-84445",

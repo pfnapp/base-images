@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-28T06:42:44.782Z",
+  "scannedAt": "2026-10-29T06:46:22.688Z",
   "system": {
-    "total": 1053,
+    "total": 1055,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -4044,6 +4044,22 @@
         "title": "libexpat through 2.9.0 contains a denial of service vulnerability beca ..."
       },
       {
+        "id": "CVE-2026-117610",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+      },
+      {
+        "id": "CVE-2026-118370",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+      },
+      {
         "id": "CVE-2026-95512",
         "pkg": "libfreetype6",
         "installedVersion": "2.13.3+dfsg-1+deb13u1",
@@ -4697,7 +4713,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-49300",
@@ -4705,7 +4721,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50579",
@@ -4753,7 +4769,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50586",
@@ -4761,7 +4777,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -4769,7 +4785,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50588",
@@ -4785,7 +4801,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50713",
@@ -8430,7 +8446,7 @@
     ]
   },
   "app": {
-    "total": 133,
+    "total": 134,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -8759,22 +8775,6 @@
         "fixedVersion": "4.1.11, 5.0.0-rc.2",
         "severity": "MEDIUM",
         "title": "vitest: Vitest: Arbitrary File Read via Path Traversal in HMR WebSocket"
-      },
-      {
-        "id": "CVE-2023-54404",
-        "pkg": "zod",
-        "installedVersion": "4.4.3",
-        "fixedVersion": "4.6.6",
-        "severity": "HIGH",
-        "title": "zod: zod: Denial of service via unbounded array validation"
-      },
-      {
-        "id": "CVE-2023-54404",
-        "pkg": "zod",
-        "installedVersion": "4.5.4",
-        "fixedVersion": "4.6.6",
-        "severity": "HIGH",
-        "title": "zod: zod: Denial of service via unbounded array validation"
       },
       {
         "id": "CVE-2026-102268",
@@ -9401,12 +9401,36 @@
         "title": "tornado: CurlAsyncHTTPClient enforces no response-size limit — decompression bomb drives unbounded memory accumulation to OOM"
       },
       {
+        "id": "CVE-2026-115927",
+        "pkg": "tornado",
+        "installedVersion": "6.5.8",
+        "fixedVersion": "6.6",
+        "severity": "MEDIUM",
+        "title": "tornado: Tornado: Denial of Service via chunked transfer encoding processing"
+      },
+      {
+        "id": "CVE-2026-116577",
+        "pkg": "tornado",
+        "installedVersion": "6.5.8",
+        "fixedVersion": "6.6",
+        "severity": "MEDIUM",
+        "title": "tornado: tornado: Denial of Service via obsolete HTTP header line folding"
+      },
+      {
         "id": "GHSA-3hv7-mjh2-fv65",
         "pkg": "tornado",
         "installedVersion": "6.5.8",
         "fixedVersion": "6.5.9",
         "severity": "MEDIUM",
         "title": "Tornado: Unbounded query-string argument count allows event-loop-stalling DoS"
+      },
+      {
+        "id": "CVE-2026-116578",
+        "pkg": "tornado",
+        "installedVersion": "6.5.8",
+        "fixedVersion": "6.6",
+        "severity": "LOW",
+        "title": "tornado: tornado: Open redirect via crafted request paths in RedirectHandler URL templates"
       },
       {
         "id": "CVE-2026-97687",

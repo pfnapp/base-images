@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-10-28T06:45:20.891Z",
+  "generatedAt": "2026-10-29T06:46:57.672Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -78,7 +78,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -150,14 +150,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
             "isLts": true,
             "ltsFrom": "2025-10-28",
-            "latestPatch": "24.22.1",
-            "latestPatchDate": "2026-10-21",
+            "latestPatch": "24.22.2",
+            "latestPatchDate": "2026-10-28",
             "source": "endoflife.date"
           }
         },
@@ -222,14 +222,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
-            "isLts": false,
+            "isLts": true,
             "ltsFrom": "2026-10-28",
-            "latestPatch": "26.12.1",
-            "latestPatchDate": "2026-10-21",
+            "latestPatch": "26.13.0",
+            "latestPatchDate": "2026-10-28",
             "source": "endoflife.date"
           }
         },
@@ -266,7 +266,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -338,7 +338,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -428,7 +428,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -509,7 +509,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -590,7 +590,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -671,7 +671,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -715,7 +715,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -740,12 +740,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 0,
+              "critical": 4,
               "high": 0,
               "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
+              "low": 4,
+              "fixable": 12,
+              "total": 12
             },
             "app": {
               "critical": 0,
@@ -756,10 +756,47 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "pyc",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3-pyc",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3-pycache-pyc0",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -812,7 +849,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -856,7 +893,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -890,8 +927,8 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 5,
-              "high": 36,
+              "critical": 6,
+              "high": 35,
               "medium": 142,
               "low": 156,
               "fixable": 29,
@@ -955,7 +992,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -980,8 +1017,8 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 5,
-              "high": 36,
+              "critical": 6,
+              "high": 35,
               "medium": 142,
               "low": 156,
               "fixable": 29,
@@ -1045,7 +1082,7 @@
           ],
           "posture": "CRITICAL RISK",
           "postureBadge": "🔴",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -1080,11 +1117,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
-              "medium": 2,
-              "low": 44,
-              "fixable": 51,
-              "total": 51
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1096,33 +1133,6 @@
             }
           },
           "topCves": [
-            {
-              "id": "CVE-2026-111497",
-              "pkg": "brotli-libs",
-              "installedVersion": "1.2.0-r1",
-              "fixedVersion": "1.2.1-r0",
-              "severity": "HIGH",
-              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "libcurl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
             {
               "id": "CVE-2026-111943",
               "pkg": "stdlib",
@@ -1140,11 +1150,38 @@
               "severity": "HIGH",
               "title": "net/http: golang: golang: Denial of Service via crafted HTTP Range headers",
               "layer": "app"
+            },
+            {
+              "id": "CVE-2026-78669",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.9, 1.27.2",
+              "severity": "HIGH",
+              "title": "net/http: net/http/internal/http2: golang.org/x/net/http2: net/http: Denial of Service via excessive HTTP/2 SETTINGS frames",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-97031",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.9, 1.27.2",
+              "severity": "HIGH",
+              "title": "crypto/tls: golang: crypto/tls: Denial of Service via multiple ECH outer extension references",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-111943",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.10, 1.27.3",
+              "severity": "HIGH",
+              "title": "crypto/x509: golang: crypto/x509: Man-in-the-middle attacks via untrusted intermediate certificates",
+              "layer": "app"
             }
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1170,11 +1207,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
-              "medium": 2,
-              "low": 44,
-              "fixable": 51,
-              "total": 51
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1185,38 +1222,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-111497",
-              "pkg": "brotli-libs",
-              "installedVersion": "1.2.0-r1",
-              "fixedVersion": "1.2.1-r0",
-              "severity": "HIGH",
-              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "libcurl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1242,11 +1251,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
-              "medium": 2,
-              "low": 44,
-              "fixable": 51,
-              "total": 51
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1257,38 +1266,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-111497",
-              "pkg": "brotli-libs",
-              "installedVersion": "1.2.0-r1",
-              "fixedVersion": "1.2.1-r0",
-              "severity": "HIGH",
-              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "libcurl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1323,11 +1304,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
-              "medium": 2,
-              "low": 44,
-              "fixable": 51,
-              "total": 51
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1338,38 +1319,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-111497",
-              "pkg": "brotli-libs",
-              "installedVersion": "1.2.0-r1",
-              "fixedVersion": "1.2.1-r0",
-              "severity": "HIGH",
-              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "libcurl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1395,11 +1348,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 3,
-              "medium": 2,
-              "low": 44,
-              "fixable": 51,
-              "total": 51
+              "high": 0,
+              "medium": 0,
+              "low": 0,
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1410,38 +1363,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-111497",
-              "pkg": "brotli-libs",
-              "installedVersion": "1.2.0-r1",
-              "fixedVersion": "1.2.1-r0",
-              "severity": "HIGH",
-              "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "curl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-92392",
-              "pkg": "libcurl",
-              "installedVersion": "8.22.0-r0",
-              "fixedVersion": "8.23.0-r0",
-              "severity": "HIGH",
-              "title": "curl: curl: HTTP/2 upload Use-After-Free",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1523,7 +1448,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1595,7 +1520,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1667,14 +1592,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
             "isLts": true,
             "ltsFrom": "2025-10-28",
-            "latestPatch": "24.22.1",
-            "latestPatchDate": "2026-10-21",
+            "latestPatch": "24.22.2",
+            "latestPatchDate": "2026-10-28",
             "source": "endoflife.date"
           }
         },
@@ -1711,7 +1636,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1783,7 +1708,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1855,7 +1780,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1899,7 +1824,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1971,7 +1896,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2031,12 +1956,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 0,
+              "critical": 4,
               "high": 0,
               "medium": 0,
-              "low": 0,
-              "fixable": 0,
-              "total": 0
+              "low": 4,
+              "fixable": 12,
+              "total": 12
             },
             "app": {
               "critical": 0,
@@ -2047,10 +1972,47 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "pyc",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3-pyc",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-115557",
+              "pkg": "python3-pycache-pyc0",
+              "installedVersion": "3.12.15-r0",
+              "fixedVersion": "3.12.16-r0",
+              "severity": "CRITICAL",
+              "title": "Python has added a denylist for known compromised certificates to the  ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -2131,7 +2093,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -2212,7 +2174,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -2293,7 +2255,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -2374,7 +2336,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2491,7 +2453,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2563,7 +2525,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2635,14 +2597,14 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
             "isLts": true,
             "ltsFrom": "2025-10-28",
-            "latestPatch": "24.22.1",
-            "latestPatchDate": "2026-10-21",
+            "latestPatch": "24.22.2",
+            "latestPatchDate": "2026-10-28",
             "source": "endoflife.date"
           }
         },
@@ -2707,7 +2669,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2779,7 +2741,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2823,7 +2785,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2895,7 +2857,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2967,7 +2929,7 @@
           ],
           "posture": "HIGH RISK",
           "postureBadge": "🟠",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -3046,7 +3008,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-10-28T06:45:20.891Z",
+          "scannedAt": "2026-10-29T06:46:57.672Z",
           "eol": {
             "date": null,
             "isEol": false,
