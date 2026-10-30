@@ -2,7 +2,7 @@
 
 > Automated audit of upstream application templates evaluating non-root execution, privilege posture, and CVE metrics.
 > **Policy:** Active Support Window = **Latest 5 Versions (N-4)**. Older versions are automatically marked **DEPRECATED**.
-> **Last Scan:** 2026-10-29T19:59:24.213Z | **Scanner:** Aqua Trivy
+> **Last Scan:** 2026-10-30T06:48:31.930Z | **Scanner:** Aqua Trivy
 
 ### 📊 Governance Summary
 
@@ -11,7 +11,7 @@
 - **Images Running As Root:** `33` / `50` (⚠️ **66%** non-compliant)
 - **App Critical CVEs** _(upstream, unfixable by us)_**:** `126`
 - **App High CVEs** _(upstream, unfixable by us)_**:** `920`
-- **PFNApp Images Scanned:** `49` / `50`
+- **PFNApp Images Scanned:** `48` / `50`
 - **Total System CVE Reduction:** `1294`
 
 > **CVE split:** `system` = OS packages fixable via `apk upgrade` / `apt-get upgrade`. `app` = upstream app dependencies, only the maintainer can fix.
@@ -67,11 +67,11 @@
 |  |  | `5.1.7` | 🟢 **SUPPORTED** | ✅ NO | 0/5/23/4 | 3/23/19/6 | 0/4/21/4 | 0/1/2/5 | 0/-1 | 🔴 APP CRITICAL RISK |
 |  |  | `5.1.6` | 🟢 **SUPPORTED** | ✅ NO | 0/5/23/4 | 3/24/19/6 | ⏳ | ⏳ | ⏳ | 🔴 APP CRITICAL RISK |
 | **Homepage Dashboard** | _Dashboards & Homelab_ | `v2.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/2/7/12 | 4/14/38/8 | 0/0/0/0 | 2/5/5/1 | 0/-2 | 🔴 APP CRITICAL RISK |
-| **Dozzle** | _Operations & Logs_ | `v11.3.5` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+| **Dozzle** | _Operations & Logs_ | `v11.4.0` | 🟢 **LATEST** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | ⏳ | ⏳ | ⏳ | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.3.5` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 |  |  | `v11.3.4` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.3.3` | 🟢 **SUPPORTED** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.3.2` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/0/1/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
-|  |  | `v11.3.1` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/0/5/0 | 0/0/0/0 | 0/0/5/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.3.3` | 🟠 **AGING** | ⚠️ YES | 0/0/0/0 | 0/0/0/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
+|  |  | `v11.3.2` | 🔴 **EOL SOON** | ⚠️ YES | 0/0/0/0 | 0/0/1/0 | 0/0/0/0 | 0/0/1/0 | 0/0 | 🟡 NON-COMPLIANT (ROOT) |
 
 ---
 
@@ -112,6 +112,7 @@
 | **n8n** | `2.40.6` | 2026-10-05 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.42.3 immediately. |
 | **Stirling-PDF** | `3.0.0` | 2026-10-24 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 3.2.2 immediately. |
 | **Stirling-PDF** | `2.14.3` | 2026-10-21 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 3.2.1 immediately. |
+| **Dozzle** | `v11.3.1` | 2026-10-30 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.4.0 immediately. |
 | **Dozzle** | `v11.3.0` | 2026-10-24 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.5 immediately. |
 | **Dozzle** | `v11.2.0` | 2026-10-20 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.4 immediately. |
 | **Dozzle** | `v11.1.3` | 2026-10-19 | ⛔ **UNSUPPORTED**: UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to v11.3.3 immediately. |
@@ -628,9 +629,9 @@ _No Critical or High app-level vulnerabilities detected._
 </details>
 
 <details>
-<summary><b>Dozzle (<code>v11.3.5</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
+<summary><b>Dozzle (<code>v11.4.0</code>) — App: 0 Critical, 0 High | System: 0 Critical, 0 High</b></summary>
 
-- **Full Reference:** `amir20/dozzle:v11.3.5`
+- **Full Reference:** `amir20/dozzle:v11.4.0`
 - **Root Status:** ⚠️ Runs as root (`0 (root)`)
 - **Posture:** 🟡 NON-COMPLIANT (ROOT)
 
@@ -642,12 +643,7 @@ _No Critical or High app-level vulnerabilities detected._
 
 _No Critical or High system-level vulnerabilities detected._
 
-#### 🟢 PFNApp CVE Reduction (Upstream → PFNApp Hardened)
-
-| Layer | Critical Δ | High Δ | Medium Δ | Low Δ | Total Δ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| System | 0 | 0 | 0 | 0 | 0 |
-| App | 0 | 0 | — | — | 1 |
+> ⏳ **PFNApp image not yet built** — reduction data pending.
 
 </details>
 
