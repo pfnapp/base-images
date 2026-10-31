@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-10-30T06:48:54.825Z",
+  "scannedAt": "2026-10-31T06:38:26.905Z",
   "system": {
-    "total": 7437,
+    "total": 7484,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -178,6 +178,22 @@
         "fixedVersion": "149.0.7827.53-1~deb12u1",
         "severity": "CRITICAL",
         "title": "chromium-browser: Insufficient validation of untrusted input in Enterprise Reporting"
+      },
+      {
+        "id": "CVE-2026-118333",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: Missing authorization in Video"
+      },
+      {
+        "id": "CVE-2026-118337",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: Improper access control in Forms"
       },
       {
         "id": "CVE-2026-13032",
@@ -457,7 +473,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
+        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
       },
       {
         "id": "CVE-2026-79188",
@@ -465,7 +481,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
       },
       {
         "id": "CVE-2026-79189",
@@ -882,14 +898,6 @@
         "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
-      },
-      {
-        "id": "CVE-2026-102309",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in FullScreen"
       },
       {
         "id": "CVE-2026-102311",
@@ -3732,6 +3740,406 @@
         "title": "chromium-browser: Use after free in Bluetooth"
       },
       {
+        "id": "CVE-2026-118304",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in SVG"
+      },
+      {
+        "id": "CVE-2026-118305",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Turbolev"
+      },
+      {
+        "id": "CVE-2026-118306",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118307",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Paint"
+      },
+      {
+        "id": "CVE-2026-118308",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in SVG"
+      },
+      {
+        "id": "CVE-2026-118309",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in UI"
+      },
+      {
+        "id": "CVE-2026-118310",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Views"
+      },
+      {
+        "id": "CVE-2026-118311",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Media"
+      },
+      {
+        "id": "CVE-2026-118313",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Video"
+      },
+      {
+        "id": "CVE-2026-118314",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in UI"
+      },
+      {
+        "id": "CVE-2026-118315",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in SVG"
+      },
+      {
+        "id": "CVE-2026-118316",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in V8"
+      },
+      {
+        "id": "CVE-2026-118317",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in HTML"
+      },
+      {
+        "id": "CVE-2026-118318",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper access control in V8"
+      },
+      {
+        "id": "CVE-2026-118319",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118320",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in V8"
+      },
+      {
+        "id": "CVE-2026-118321",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Core"
+      },
+      {
+        "id": "CVE-2026-118322",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Memory corruption in ANGLE"
+      },
+      {
+        "id": "CVE-2026-118327",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Media"
+      },
+      {
+        "id": "CVE-2026-118328",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in WebRTC"
+      },
+      {
+        "id": "CVE-2026-118329",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Improper input validation in ANGLE"
+      },
+      {
+        "id": "CVE-2026-118330",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Browser"
+      },
+      {
+        "id": "CVE-2026-118331",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in FileAPI"
+      },
+      {
+        "id": "CVE-2026-118332",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Compositing"
+      },
+      {
+        "id": "CVE-2026-118334",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in ImageCapture"
+      },
+      {
+        "id": "CVE-2026-118335",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Metrics"
+      },
+      {
+        "id": "CVE-2026-118336",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Headless"
+      },
+      {
+        "id": "CVE-2026-118339",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Animation"
+      },
+      {
+        "id": "CVE-2026-118340",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118341",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Modularization"
+      },
+      {
+        "id": "CVE-2026-118342",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Out of bounds write in Editing"
+      },
+      {
+        "id": "CVE-2026-118343",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in ReadingList"
+      },
+      {
+        "id": "CVE-2026-118344",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Layout"
+      },
+      {
+        "id": "CVE-2026-118345",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in PDFium"
+      },
+      {
+        "id": "CVE-2026-118346",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Compositing"
+      },
+      {
+        "id": "CVE-2026-118347",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118348",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Improper input validation in Skia"
+      },
+      {
+        "id": "CVE-2026-118349",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Payments"
+      },
+      {
+        "id": "CVE-2026-118350",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Turbolev"
+      },
+      {
+        "id": "CVE-2026-118351",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118352",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Cache"
+      },
+      {
+        "id": "CVE-2026-118353",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Paint"
+      },
+      {
+        "id": "CVE-2026-118354",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Improper input validation in Skia"
+      },
+      {
+        "id": "CVE-2026-118355",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Command"
+      },
+      {
+        "id": "CVE-2026-118356",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in WTF"
+      },
+      {
+        "id": "CVE-2026-118357",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118358",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in WebAudio"
+      },
+      {
+        "id": "CVE-2026-118359",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in V8"
+      },
+      {
+        "id": "CVE-2026-119269",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Blink"
+      },
+      {
+        "id": "CVE-2026-119271",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Skia"
+      },
+      {
         "id": "CVE-2026-12007",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -6292,6 +6700,14 @@
         "title": "chromium-browser: chromium-browser: Improper resource control in Linux Toolkit Theming"
       },
       {
+        "id": "CVE-2026-76025",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in FileSystem"
+      },
+      {
         "id": "CVE-2026-76033",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -6610,6 +7026,14 @@
         "fixedVersion": "152.0.7977.82-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Type confusion in V8"
+      },
+      {
+        "id": "CVE-2026-85048",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Chromium: Arbitrary code execution via use-after-free in Compositing"
       },
       {
         "id": "CVE-2026-85049",
@@ -9348,6 +9772,14 @@
         "title": "chromium-browser: Missing authorization in Permissions"
       },
       {
+        "id": "CVE-2026-106414",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Improper input validation in Mobile"
+      },
+      {
         "id": "CVE-2026-106415",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -11314,6 +11746,30 @@
         "fixedVersion": "149.0.7827.102-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: Insufficient validation of untrusted input in Guest View"
+      },
+      {
+        "id": "CVE-2026-118312",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Memory corruption in Paint"
+      },
+      {
+        "id": "CVE-2026-118338",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Use after free in Animation"
+      },
+      {
+        "id": "CVE-2026-119272",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: chromium-browser: Out of bounds read in FileSystem"
       },
       {
         "id": "CVE-2026-12015",
@@ -15748,6 +16204,14 @@
         "title": "chromium-browser: Missing authorization in Browser"
       },
       {
+        "id": "CVE-2026-106294",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: Incomplete cleanup in Chromoting"
+      },
+      {
         "id": "CVE-2026-106296",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -18948,20 +19412,12 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-106294",
+        "id": "CVE-2026-102309",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "UNKNOWN",
-        "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
-      },
-      {
-        "id": "CVE-2026-106414",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
+        "title": "Use after free in FullScreen in Google Chrome prior to 154.0.8037.92 a ..."
       },
       {
         "id": "CVE-2026-112992",
@@ -21260,103 +21716,23 @@
         "title": "Memory corruption in Sandbox in Google Chrome prior to 156.0.8078.47 a ..."
       },
       {
-        "id": "CVE-2026-118304",
+        "id": "CVE-2026-119260",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper input validation in SVG in Google Chrome prior to 156.0.8078. ..."
+        "title": "Use after free in Frames in Google Chrome prior to 156.0.8078.79 allow ..."
       },
       {
-        "id": "CVE-2026-118305",
+        "id": "CVE-2026-119261",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Turbolev in Google Chrome prior to 156.0.8078.73  ..."
+        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
       },
       {
-        "id": "CVE-2026-118306",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.7 ..."
-      },
-      {
-        "id": "CVE-2026-118307",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Paint in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118308",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in SVG in Google Chrome prior to 156.0.8078.73 allowed  ..."
-      },
-      {
-        "id": "CVE-2026-118309",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in UI in Google Chrome on on Android prior t ..."
-      },
-      {
-        "id": "CVE-2026-118310",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Views in Google Chrome on on Windows prio ..."
-      },
-      {
-        "id": "CVE-2026-118311",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Media in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118312",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Paint in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118313",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Video in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118314",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in UI in Google Chrome on on Android prior t ..."
-      },
-      {
-        "id": "CVE-2026-118315",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in SVG in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118316",
+        "id": "CVE-2026-119262",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
@@ -21364,316 +21740,60 @@
         "title": "Improper input validation in V8 in Google Chrome prior to 156.0.8078.7 ..."
       },
       {
-        "id": "CVE-2026-118317",
+        "id": "CVE-2026-119263",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in HTML in Google Chrome prior to 156.0.8078.73 allo ..."
+        "title": "Memory corruption in GarbageCollection in Google Chrome prior to 156.0 ..."
       },
       {
-        "id": "CVE-2026-118318",
+        "id": "CVE-2026-119264",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper access control in V8 in Google Chrome prior to 156.0.8078.73  ..."
+        "title": "Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allo ..."
       },
       {
-        "id": "CVE-2026-118319",
+        "id": "CVE-2026-119265",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
+        "title": "Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 all ..."
       },
       {
-        "id": "CVE-2026-118320",
+        "id": "CVE-2026-119266",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in V8 in Google Chrome prior to 156.0.8078.73 allowe ..."
+        "title": "Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowe ..."
       },
       {
-        "id": "CVE-2026-118321",
+        "id": "CVE-2026-119267",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper input validation in Core in Google Chrome on on Android prior ..."
+        "title": "Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allow ..."
       },
       {
-        "id": "CVE-2026-118322",
+        "id": "CVE-2026-119268",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in ANGLE in Google Chrome prior to 156.0.8078.73 all ..."
+        "title": "Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 al ..."
       },
       {
-        "id": "CVE-2026-118327",
+        "id": "CVE-2026-119270",
         "pkg": "chromium",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Media in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118328",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in WebRTC in Google Chrome prior to 156.0.80 ..."
-      },
-      {
-        "id": "CVE-2026-118329",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ANGLE in Google Chrome on on Mac prior to ..."
-      },
-      {
-        "id": "CVE-2026-118330",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Browser in Google Chrome on on Windows prior to 156. ..."
-      },
-      {
-        "id": "CVE-2026-118331",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in FileAPI in Google Chrome prior to 156.0.8 ..."
-      },
-      {
-        "id": "CVE-2026-118332",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Compositing in Google Chrome prior to 156 ..."
-      },
-      {
-        "id": "CVE-2026-118333",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in Video in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118334",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ImageCapture in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118335",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Metrics in Google Chrome on on Mac prior  ..."
-      },
-      {
-        "id": "CVE-2026-118336",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Headless in Google Chrome prior to 156.0. ..."
-      },
-      {
-        "id": "CVE-2026-118337",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper access control in Forms in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118338",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Animation in Google Chrome prior to 156.0.8078.73 al ..."
-      },
-      {
-        "id": "CVE-2026-118339",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Animation in Google Chrome prior to 156.0.8078.73 al ..."
-      },
-      {
-        "id": "CVE-2026-118340",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
-      },
-      {
-        "id": "CVE-2026-118341",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Modularization in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118342",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in Editing in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118343",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ReadingList in Google Chrome prior to 156 ..."
-      },
-      {
-        "id": "CVE-2026-118344",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Layout in Google Chrome prior to 156.0.8078.73 allow ..."
-      },
-      {
-        "id": "CVE-2026-118345",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PDFium in Google Chrome prior to 156.0.8078.73 allow ..."
-      },
-      {
-        "id": "CVE-2026-118346",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Compositing in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118347",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.73 a ..."
-      },
-      {
-        "id": "CVE-2026-118348",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
-      },
-      {
-        "id": "CVE-2026-118349",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Payments in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118350",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Turbolev in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118351",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
-      },
-      {
-        "id": "CVE-2026-118352",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Cache in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118353",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Paint in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118354",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
-      },
-      {
-        "id": "CVE-2026-118355",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Command in Google Chrome prior to 156.0.8 ..."
-      },
-      {
-        "id": "CVE-2026-118356",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in WTF in Google Chrome prior to 156.0.8078.73 allowed  ..."
-      },
-      {
-        "id": "CVE-2026-118357",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.73 a ..."
-      },
-      {
-        "id": "CVE-2026-118358",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in WebAudio in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118359",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in V8 in Google Chrome prior to 156.0.8078.73 allowe ..."
+        "title": "Improper input validation in CacheStorage in Google Chrome prior to 15 ..."
       },
       {
         "id": "CVE-2026-12010",
@@ -22194,6 +22314,62 @@
         "fixedVersion": "151.0.7922.173-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in Network in Google Chrome prior to 151.0.7922.173 al ..."
+      },
+      {
+        "id": "CVE-2026-76024",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in MediaStream in Google Chrome prior to 156.0.8078. ..."
+      },
+      {
+        "id": "CVE-2026-76026",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in Autofill in Google Chrome prior to 156.0.8078.79  ..."
+      },
+      {
+        "id": "CVE-2026-76027",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in CacheStorage in Google Chrome prior to 156.0.8078 ..."
+      },
+      {
+        "id": "CVE-2026-76028",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 a ..."
+      },
+      {
+        "id": "CVE-2026-76029",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in Network in Google Chrome prior to 156.0.8078.79 a ..."
+      },
+      {
+        "id": "CVE-2026-76030",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.7 ..."
+      },
+      {
+        "id": "CVE-2026-76031",
+        "pkg": "chromium",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Use after free in Input in Google Chrome prior to 156.0.8078.79 allowe ..."
       },
       {
         "id": "CVE-2026-76034",
@@ -24386,14 +24562,6 @@
         "fixedVersion": "152.0.7977.82-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incomplete cleanup in Network in Google Chrome prior to 152.0.7977.82  ..."
-      },
-      {
-        "id": "CVE-2026-85048",
-        "pkg": "chromium",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Compositing in Google Chrome prior to 152.0.7977.82  ..."
       },
       {
         "id": "CVE-2026-85050",
@@ -25596,6 +25764,22 @@
         "title": "chromium-browser: Insufficient validation of untrusted input in Enterprise Reporting"
       },
       {
+        "id": "CVE-2026-118333",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: Missing authorization in Video"
+      },
+      {
+        "id": "CVE-2026-118337",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "chromium-browser: Improper access control in Forms"
+      },
+      {
         "id": "CVE-2026-13032",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -25873,7 +26057,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowe ..."
+        "title": "ANGLE: chromium-browser: angle: ANGLE: Arbitrary code execution via use-after-free vulnerability"
       },
       {
         "id": "CVE-2026-79188",
@@ -25881,7 +26065,7 @@
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "152.0.7977.75-1~deb12u1",
         "severity": "CRITICAL",
-        "title": "Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65 a ..."
+        "title": "chromium-browser: angle: Chromium ANGLE: Arbitrary code execution via crafted HTML page"
       },
       {
         "id": "CVE-2026-79189",
@@ -26298,14 +26482,6 @@
         "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Uninitialized resource in Dawn"
-      },
-      {
-        "id": "CVE-2026-102309",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "154.0.8037.92-1~deb12u1",
-        "severity": "HIGH",
-        "title": "chromium-browser: chromium-browser: Use after free in FullScreen"
       },
       {
         "id": "CVE-2026-102311",
@@ -29148,6 +29324,406 @@
         "title": "chromium-browser: Use after free in Bluetooth"
       },
       {
+        "id": "CVE-2026-118304",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in SVG"
+      },
+      {
+        "id": "CVE-2026-118305",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Turbolev"
+      },
+      {
+        "id": "CVE-2026-118306",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118307",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Paint"
+      },
+      {
+        "id": "CVE-2026-118308",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in SVG"
+      },
+      {
+        "id": "CVE-2026-118309",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in UI"
+      },
+      {
+        "id": "CVE-2026-118310",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Views"
+      },
+      {
+        "id": "CVE-2026-118311",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Media"
+      },
+      {
+        "id": "CVE-2026-118313",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Video"
+      },
+      {
+        "id": "CVE-2026-118314",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in UI"
+      },
+      {
+        "id": "CVE-2026-118315",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in SVG"
+      },
+      {
+        "id": "CVE-2026-118316",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in V8"
+      },
+      {
+        "id": "CVE-2026-118317",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in HTML"
+      },
+      {
+        "id": "CVE-2026-118318",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper access control in V8"
+      },
+      {
+        "id": "CVE-2026-118319",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118320",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in V8"
+      },
+      {
+        "id": "CVE-2026-118321",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Core"
+      },
+      {
+        "id": "CVE-2026-118322",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Memory corruption in ANGLE"
+      },
+      {
+        "id": "CVE-2026-118327",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Media"
+      },
+      {
+        "id": "CVE-2026-118328",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in WebRTC"
+      },
+      {
+        "id": "CVE-2026-118329",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: angle: Improper input validation in ANGLE"
+      },
+      {
+        "id": "CVE-2026-118330",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Browser"
+      },
+      {
+        "id": "CVE-2026-118331",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in FileAPI"
+      },
+      {
+        "id": "CVE-2026-118332",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Compositing"
+      },
+      {
+        "id": "CVE-2026-118334",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in ImageCapture"
+      },
+      {
+        "id": "CVE-2026-118335",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Metrics"
+      },
+      {
+        "id": "CVE-2026-118336",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Headless"
+      },
+      {
+        "id": "CVE-2026-118339",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Animation"
+      },
+      {
+        "id": "CVE-2026-118340",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118341",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Modularization"
+      },
+      {
+        "id": "CVE-2026-118342",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Out of bounds write in Editing"
+      },
+      {
+        "id": "CVE-2026-118343",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in ReadingList"
+      },
+      {
+        "id": "CVE-2026-118344",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Layout"
+      },
+      {
+        "id": "CVE-2026-118345",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in PDFium"
+      },
+      {
+        "id": "CVE-2026-118346",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Compositing"
+      },
+      {
+        "id": "CVE-2026-118347",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118348",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Improper input validation in Skia"
+      },
+      {
+        "id": "CVE-2026-118349",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Payments"
+      },
+      {
+        "id": "CVE-2026-118350",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Turbolev"
+      },
+      {
+        "id": "CVE-2026-118351",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Memory corruption in Skia"
+      },
+      {
+        "id": "CVE-2026-118352",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in Cache"
+      },
+      {
+        "id": "CVE-2026-118353",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in Paint"
+      },
+      {
+        "id": "CVE-2026-118354",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: skia: Improper input validation in Skia"
+      },
+      {
+        "id": "CVE-2026-118355",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Command"
+      },
+      {
+        "id": "CVE-2026-118356",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in WTF"
+      },
+      {
+        "id": "CVE-2026-118357",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Use after free in FileSystem"
+      },
+      {
+        "id": "CVE-2026-118358",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in WebAudio"
+      },
+      {
+        "id": "CVE-2026-118359",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Memory corruption in V8"
+      },
+      {
+        "id": "CVE-2026-119269",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Blink"
+      },
+      {
+        "id": "CVE-2026-119271",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in Skia"
+      },
+      {
         "id": "CVE-2026-12007",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -31708,6 +32284,14 @@
         "title": "chromium-browser: chromium-browser: Improper resource control in Linux Toolkit Theming"
       },
       {
+        "id": "CVE-2026-76025",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: chromium-browser: Use after free in FileSystem"
+      },
+      {
         "id": "CVE-2026-76033",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -32026,6 +32610,14 @@
         "fixedVersion": "152.0.7977.82-1~deb12u1",
         "severity": "HIGH",
         "title": "chromium-browser: chromium-browser: Type confusion in V8"
+      },
+      {
+        "id": "CVE-2026-85048",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "152.0.7977.82-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Chromium: Arbitrary code execution via use-after-free in Compositing"
       },
       {
         "id": "CVE-2026-85049",
@@ -34764,6 +35356,14 @@
         "title": "chromium-browser: Missing authorization in Permissions"
       },
       {
+        "id": "CVE-2026-106414",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Improper input validation in Mobile"
+      },
+      {
         "id": "CVE-2026-106415",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -36730,6 +37330,30 @@
         "fixedVersion": "149.0.7827.102-1~deb12u1",
         "severity": "MEDIUM",
         "title": "chromium-browser: Insufficient validation of untrusted input in Guest View"
+      },
+      {
+        "id": "CVE-2026-118312",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Memory corruption in Paint"
+      },
+      {
+        "id": "CVE-2026-118338",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: Use after free in Animation"
+      },
+      {
+        "id": "CVE-2026-119272",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "chromium-browser: chromium-browser: Out of bounds read in FileSystem"
       },
       {
         "id": "CVE-2026-12015",
@@ -41164,6 +41788,14 @@
         "title": "chromium-browser: Missing authorization in Browser"
       },
       {
+        "id": "CVE-2026-106294",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "severity": "LOW",
+        "title": "chromium-browser: Incomplete cleanup in Chromoting"
+      },
+      {
         "id": "CVE-2026-106296",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
@@ -44364,20 +44996,12 @@
         "title": "Use after free in Views in Google Chrome prior to 154.0.8037.92 allowe ..."
       },
       {
-        "id": "CVE-2026-106294",
+        "id": "CVE-2026-102309",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
+        "fixedVersion": "154.0.8037.92-1~deb12u1",
         "severity": "UNKNOWN",
-        "title": "Incomplete cleanup in Chromoting in Google Chrome on on Mac prior to 1 ..."
-      },
-      {
-        "id": "CVE-2026-106414",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "155.0.8059.39-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Mobile in Google Chrome on on iOS prior t ..."
+        "title": "Use after free in FullScreen in Google Chrome prior to 154.0.8037.92 a ..."
       },
       {
         "id": "CVE-2026-112992",
@@ -46676,103 +47300,23 @@
         "title": "Memory corruption in Sandbox in Google Chrome prior to 156.0.8078.47 a ..."
       },
       {
-        "id": "CVE-2026-118304",
+        "id": "CVE-2026-119260",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper input validation in SVG in Google Chrome prior to 156.0.8078. ..."
+        "title": "Use after free in Frames in Google Chrome prior to 156.0.8078.79 allow ..."
       },
       {
-        "id": "CVE-2026-118305",
+        "id": "CVE-2026-119261",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Turbolev in Google Chrome prior to 156.0.8078.73  ..."
+        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
       },
       {
-        "id": "CVE-2026-118306",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.7 ..."
-      },
-      {
-        "id": "CVE-2026-118307",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Paint in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118308",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in SVG in Google Chrome prior to 156.0.8078.73 allowed  ..."
-      },
-      {
-        "id": "CVE-2026-118309",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in UI in Google Chrome on on Android prior t ..."
-      },
-      {
-        "id": "CVE-2026-118310",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Views in Google Chrome on on Windows prio ..."
-      },
-      {
-        "id": "CVE-2026-118311",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Media in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118312",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Paint in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118313",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Video in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118314",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in UI in Google Chrome on on Android prior t ..."
-      },
-      {
-        "id": "CVE-2026-118315",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in SVG in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118316",
+        "id": "CVE-2026-119262",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
@@ -46780,316 +47324,60 @@
         "title": "Improper input validation in V8 in Google Chrome prior to 156.0.8078.7 ..."
       },
       {
-        "id": "CVE-2026-118317",
+        "id": "CVE-2026-119263",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in HTML in Google Chrome prior to 156.0.8078.73 allo ..."
+        "title": "Memory corruption in GarbageCollection in Google Chrome prior to 156.0 ..."
       },
       {
-        "id": "CVE-2026-118318",
+        "id": "CVE-2026-119264",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper access control in V8 in Google Chrome prior to 156.0.8078.73  ..."
+        "title": "Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allo ..."
       },
       {
-        "id": "CVE-2026-118319",
+        "id": "CVE-2026-119265",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
+        "title": "Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 all ..."
       },
       {
-        "id": "CVE-2026-118320",
+        "id": "CVE-2026-119266",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in V8 in Google Chrome prior to 156.0.8078.73 allowe ..."
+        "title": "Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowe ..."
       },
       {
-        "id": "CVE-2026-118321",
+        "id": "CVE-2026-119267",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Improper input validation in Core in Google Chrome on on Android prior ..."
+        "title": "Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allow ..."
       },
       {
-        "id": "CVE-2026-118322",
+        "id": "CVE-2026-119268",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in ANGLE in Google Chrome prior to 156.0.8078.73 all ..."
+        "title": "Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 al ..."
       },
       {
-        "id": "CVE-2026-118327",
+        "id": "CVE-2026-119270",
         "pkg": "chromium-common",
         "installedVersion": "148.0.7778.178-1~deb12u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Memory corruption in Media in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118328",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in WebRTC in Google Chrome prior to 156.0.80 ..."
-      },
-      {
-        "id": "CVE-2026-118329",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ANGLE in Google Chrome on on Mac prior to ..."
-      },
-      {
-        "id": "CVE-2026-118330",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Browser in Google Chrome on on Windows prior to 156. ..."
-      },
-      {
-        "id": "CVE-2026-118331",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in FileAPI in Google Chrome prior to 156.0.8 ..."
-      },
-      {
-        "id": "CVE-2026-118332",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Compositing in Google Chrome prior to 156 ..."
-      },
-      {
-        "id": "CVE-2026-118333",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in Video in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118334",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in ImageCapture in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118335",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Metrics in Google Chrome on on Mac prior  ..."
-      },
-      {
-        "id": "CVE-2026-118336",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Headless in Google Chrome prior to 156.0. ..."
-      },
-      {
-        "id": "CVE-2026-118337",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper access control in Forms in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118338",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Animation in Google Chrome prior to 156.0.8078.73 al ..."
-      },
-      {
-        "id": "CVE-2026-118339",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Animation in Google Chrome prior to 156.0.8078.73 al ..."
-      },
-      {
-        "id": "CVE-2026-118340",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
-      },
-      {
-        "id": "CVE-2026-118341",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Modularization in Google Chrome prior to 156.0.8078. ..."
-      },
-      {
-        "id": "CVE-2026-118342",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Out of bounds write in Editing in Google Chrome prior to 156.0.8078.73 ..."
-      },
-      {
-        "id": "CVE-2026-118343",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in ReadingList in Google Chrome prior to 156 ..."
-      },
-      {
-        "id": "CVE-2026-118344",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Layout in Google Chrome prior to 156.0.8078.73 allow ..."
-      },
-      {
-        "id": "CVE-2026-118345",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PDFium in Google Chrome prior to 156.0.8078.73 allow ..."
-      },
-      {
-        "id": "CVE-2026-118346",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Compositing in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118347",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.73 a ..."
-      },
-      {
-        "id": "CVE-2026-118348",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
-      },
-      {
-        "id": "CVE-2026-118349",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Payments in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118350",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Turbolev in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118351",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Skia in Google Chrome prior to 156.0.8078.73 allo ..."
-      },
-      {
-        "id": "CVE-2026-118352",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in Cache in Google Chrome prior to 156.0.8078.73 all ..."
-      },
-      {
-        "id": "CVE-2026-118353",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Paint in Google Chrome prior to 156.0.8078.73 allowe ..."
-      },
-      {
-        "id": "CVE-2026-118354",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Skia in Google Chrome prior to 156.0.8078 ..."
-      },
-      {
-        "id": "CVE-2026-118355",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in Command in Google Chrome prior to 156.0.8 ..."
-      },
-      {
-        "id": "CVE-2026-118356",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in WTF in Google Chrome prior to 156.0.8078.73 allowed  ..."
-      },
-      {
-        "id": "CVE-2026-118357",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.73 a ..."
-      },
-      {
-        "id": "CVE-2026-118358",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in WebAudio in Google Chrome prior to 156.0.8078.73  ..."
-      },
-      {
-        "id": "CVE-2026-118359",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Memory corruption in V8 in Google Chrome prior to 156.0.8078.73 allowe ..."
+        "title": "Improper input validation in CacheStorage in Google Chrome prior to 15 ..."
       },
       {
         "id": "CVE-2026-12010",
@@ -47610,6 +47898,62 @@
         "fixedVersion": "151.0.7922.173-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Buffer overflow in Network in Google Chrome prior to 151.0.7922.173 al ..."
+      },
+      {
+        "id": "CVE-2026-76024",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in MediaStream in Google Chrome prior to 156.0.8078. ..."
+      },
+      {
+        "id": "CVE-2026-76026",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in Autofill in Google Chrome prior to 156.0.8078.79  ..."
+      },
+      {
+        "id": "CVE-2026-76027",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in CacheStorage in Google Chrome prior to 156.0.8078 ..."
+      },
+      {
+        "id": "CVE-2026-76028",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 a ..."
+      },
+      {
+        "id": "CVE-2026-76029",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in Network in Google Chrome prior to 156.0.8078.79 a ..."
+      },
+      {
+        "id": "CVE-2026-76030",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.7 ..."
+      },
+      {
+        "id": "CVE-2026-76031",
+        "pkg": "chromium-common",
+        "installedVersion": "148.0.7778.178-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Use after free in Input in Google Chrome prior to 156.0.8078.79 allowe ..."
       },
       {
         "id": "CVE-2026-76034",
@@ -49802,14 +50146,6 @@
         "fixedVersion": "152.0.7977.82-1~deb12u1",
         "severity": "UNKNOWN",
         "title": "Incomplete cleanup in Network in Google Chrome prior to 152.0.7977.82  ..."
-      },
-      {
-        "id": "CVE-2026-85048",
-        "pkg": "chromium-common",
-        "installedVersion": "148.0.7778.178-1~deb12u1",
-        "fixedVersion": "152.0.7977.82-1~deb12u1",
-        "severity": "UNKNOWN",
-        "title": "Use after free in Compositing in Google Chrome prior to 152.0.7977.82  ..."
       },
       {
         "id": "CVE-2026-85050",
@@ -51972,6 +52308,14 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-84243",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The gettext family of functions in the GNU C Library version 2.0 and l ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -52154,6 +52498,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
+      },
+      {
+        "id": "CVE-2026-84243",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The gettext family of functions in the GNU C Library version 2.0 and l ..."
       },
       {
         "id": "CVE-2017-7475",
@@ -53161,7 +53513,7 @@
         "installedVersion": "2.5.0-1+deb12u2",
         "fixedVersion": "2.5.0-1+deb12u3",
         "severity": "MEDIUM",
-        "title": "libexpat before 2.8.2 has an integer overflow in copyString."
+        "title": "libexpat: libexpat: Information disclosure and arbitrary code execution via integer overflow"
       },
       {
         "id": "CVE-2026-56409",
@@ -53169,7 +53521,7 @@
         "installedVersion": "2.5.0-1+deb12u2",
         "fixedVersion": "2.5.0-1+deb12u3",
         "severity": "MEDIUM",
-        "title": "xmlwf in libexpat before 2.8.2 has an integer overflow for the output  ..."
+        "title": "libexpat: libexpat: Integer overflow in xmlwf may lead to information disclosure or arbitrary code execution"
       },
       {
         "id": "CVE-2026-56410",
@@ -55116,6 +55468,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-11972",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -55258,14 +55618,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
-      },
-      {
-        "id": "CVE-2026-114583",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -55380,6 +55732,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-11972",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -55524,18 +55884,10 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
-        "id": "CVE-2026-114583",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
-      },
-      {
         "id": "CVE-2026-107161",
         "pkg": "libsasl2-2",
         "installedVersion": "2.1.28+dfsg-10",
-        "fixedVersion": "None",
+        "fixedVersion": "2.1.28+dfsg-10+deb12u1",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
@@ -55543,7 +55895,7 @@
         "id": "CVE-2026-107161",
         "pkg": "libsasl2-modules-db",
         "installedVersion": "2.1.28+dfsg-10",
-        "fixedVersion": "None",
+        "fixedVersion": "2.1.28+dfsg-10+deb12u1",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
@@ -57452,6 +57804,14 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-84243",
+        "pkg": "nscd",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The gettext family of functions in the GNU C Library version 2.0 and l ..."
+      },
+      {
         "id": "CVE-2026-45447",
         "pkg": "openssl",
         "installedVersion": "3.0.20-1~deb12u1",
@@ -58268,6 +58628,14 @@
         "title": "pyjwt v2.10.1 was discovered to contain weak encryption. NOTE: this is ..."
       },
       {
+        "id": "CVE-2026-118669",
+        "pkg": "python3-oauthlib",
+        "installedVersion": "3.2.2-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "oauthlib: oauthlib: privilege escalation via client identity confusion in token grant handlers"
+      },
+      {
         "id": "CVE-2026-49264",
         "pkg": "python3-oauthlib",
         "installedVersion": "3.2.2-1",
@@ -58444,6 +58812,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-11972",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -58586,14 +58962,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
-      },
-      {
-        "id": "CVE-2026-114583",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2025-69534",
@@ -58708,6 +59076,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+      },
+      {
         "id": "CVE-2026-11972",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u7",
@@ -58850,14 +59226,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
-      },
-      {
-        "id": "CVE-2026-114583",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u7",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
       },
       {
         "id": "CVE-2026-53783",
@@ -59380,6 +59748,14 @@
         "title": "tzdata - new timezone database"
       },
       {
+        "id": "DLA-4867-1",
+        "pkg": "tzdata",
+        "installedVersion": "2026b-0+deb12u1",
+        "fixedVersion": "2026f-0+deb12u1",
+        "severity": "UNKNOWN",
+        "title": "tzdata - new timezone database"
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "util-linux",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -59502,7 +59878,7 @@
     ]
   },
   "app": {
-    "total": 262,
+    "total": 268,
     "cves": [
       {
         "id": "CVE-2026-109461",
@@ -59705,12 +60081,36 @@
         "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
       },
       {
+        "id": "CVE-2026-116689",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.2",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via cross-origin redirects"
+      },
+      {
         "id": "CVE-2025-64756",
         "pkg": "glob",
         "installedVersion": "10.3.16",
         "fixedVersion": "11.1.0, 10.5.0",
         "severity": "HIGH",
         "title": "glob: glob: Command Injection Vulnerability via Malicious Filenames"
+      },
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "10.3.16",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
+      },
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
       },
       {
         "id": "CVE-2026-101911",
@@ -59825,6 +60225,14 @@
         "title": "lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass"
       },
       {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "3.1.5",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
+      },
+      {
         "id": "CVE-2026-26996",
         "pkg": "minimatch",
         "installedVersion": "9.0.3",
@@ -59847,6 +60255,22 @@
         "fixedVersion": "10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4",
         "severity": "HIGH",
         "title": "minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "9.0.3",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "9.0.9",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
       },
       {
         "id": "GHSA-3f6p-5ww8-9rcr",
@@ -61118,7 +61542,7 @@
         "installedVersion": "v4.1.4",
         "fixedVersion": "4.1.6",
         "severity": "HIGH",
-        "title": "Go JOSE: DoS when parsing JWKs that contain RSA keys"
+        "title": "github.com/go-jose/go-jose: go-jose: Denial of Service via crafted RSA parameters in JWKs"
       },
       {
         "id": "CVE-2026-116585",
@@ -61126,7 +61550,7 @@
         "installedVersion": "v4.1.4",
         "fixedVersion": "4.1.5",
         "severity": "MEDIUM",
-        "title": "Go JOSE: Panic during CBC-HMAC processing"
+        "title": "github.com/go-jose/go-jose: go-jose: Denial of Service via empty ciphertext buffer during JWE decryption"
       },
       {
         "id": "CVE-2026-116586",
@@ -61134,7 +61558,7 @@
         "installedVersion": "v4.1.4",
         "fixedVersion": "4.1.5",
         "severity": "MEDIUM",
-        "title": "Go JOSE: Panics in JSON parsing"
+        "title": "github.com/go-jose/go-jose: go-jose: Denial of Service via deeply nested JSON parsing"
       },
       {
         "id": "GHSA-w67g-5rqw-f597",

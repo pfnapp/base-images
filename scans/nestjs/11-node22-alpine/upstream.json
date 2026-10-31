@@ -1,12 +1,20 @@
 {
-  "scannedAt": "2026-10-30T06:50:58.559Z",
+  "scannedAt": "2026-10-31T06:44:06.694Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 1,
+    "total": 3,
     "cves": [
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "13.0.6",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
+      },
       {
         "id": "CVE-2026-111997",
         "pkg": "ip-address",
@@ -14,6 +22,14 @@
         "fixedVersion": "10.7.4",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "10.2.5",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
       }
     ]
   }

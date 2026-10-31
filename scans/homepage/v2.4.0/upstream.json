@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-30T06:50:19.562Z",
+  "scannedAt": "2026-10-31T06:43:07.452Z",
   "system": {
     "total": 23,
     "cves": [
@@ -190,7 +190,7 @@
     ]
   },
   "app": {
-    "total": 64,
+    "total": 67,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -247,6 +247,22 @@
         "fixedVersion": "1.16.1",
         "severity": "HIGH",
         "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
+      },
+      {
+        "id": "CVE-2026-116689",
+        "pkg": "follow-redirects",
+        "installedVersion": "1.16.0",
+        "fixedVersion": "1.16.2",
+        "severity": "HIGH",
+        "title": "follow-redirects: follow-redirects: Information disclosure via cross-origin redirects"
+      },
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
       },
       {
         "id": "CVE-2026-101911",
@@ -327,6 +343,14 @@
         "fixedVersion": "10.7.4",
         "severity": "MEDIUM",
         "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "9.0.9",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
       },
       {
         "id": "GHSA-2464-fhr4-w9xw",
@@ -470,7 +494,7 @@
         "installedVersion": "5.33.1",
         "fixedVersion": "5.33.13",
         "severity": "MEDIUM",
-        "title": "systeminformation is a System and OS information library for node.js.  ..."
+        "title": "systeminformation: systeminformation: Prototype pollution via crafted interface name"
       },
       {
         "id": "CVE-2026-116673",
@@ -478,7 +502,7 @@
         "installedVersion": "5.33.1",
         "fixedVersion": "5.33.14",
         "severity": "LOW",
-        "title": "systeminformation is a System and OS information library for node.js.  ..."
+        "title": "systeminformation: systeminformation: Information disclosure via path traversal in network statistics"
       },
       {
         "id": "CVE-2026-59873",
