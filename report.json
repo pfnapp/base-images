@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-10-31T06:37:16.665Z",
+    "generatedAt": "2026-10-31T17:44:39.261Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 50,
+    "totalMonitoredVersions": 51,
     "runAsRootCount": 33,
-    "criticalVulnerabilityCount": 126,
-    "highVulnerabilityCount": 993,
-    "pfnappScannedCount": 49,
+    "criticalVulnerabilityCount": 130,
+    "highVulnerabilityCount": 1055,
+    "pfnappScannedCount": 50,
     "totalCveReduction": 1294
   },
   "applications": [
@@ -1527,9 +1527,250 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "2.5.9",
+          "fullRef": "louislam/uptime-kuma:2.5.9",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 11,
+                "high": 368,
+                "medium": 402,
+                "low": 337,
+                "fixable": 0,
+                "total": 1666
+              },
+              "app": {
+                "critical": 4,
+                "high": 62,
+                "medium": 110,
+                "low": 8,
+                "fixable": 0,
+                "total": 187
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 10,
+                "high": 204,
+                "medium": 364,
+                "low": 331,
+                "fixable": 0,
+                "total": 923,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-118333",
+                    "pkg": "chromium",
+                    "installedVersion": "156.0.8078.73-1~deb12u1",
+                    "fixedVersion": "None",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-118333"
+                  },
+                  {
+                    "id": "CVE-2026-118337",
+                    "pkg": "chromium",
+                    "installedVersion": "156.0.8078.73-1~deb12u1",
+                    "fixedVersion": "None",
+                    "severity": "CRITICAL",
+                    "title": "CVE-2026-118337"
+                  },
+                  {
+                    "id": "CVE-2026-118304",
+                    "pkg": "chromium",
+                    "installedVersion": "156.0.8078.73-1~deb12u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-118304"
+                  },
+                  {
+                    "id": "CVE-2026-118305",
+                    "pkg": "chromium",
+                    "installedVersion": "156.0.8078.73-1~deb12u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-118305"
+                  },
+                  {
+                    "id": "CVE-2026-118306",
+                    "pkg": "chromium",
+                    "installedVersion": "156.0.8078.73-1~deb12u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-118306"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 10,
+                "medium": 25,
+                "low": 2,
+                "fixable": 0,
+                "total": 40,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-109461",
+                    "pkg": "@azure/msal-node",
+                    "installedVersion": "5.6.0",
+                    "fixedVersion": "7.1.0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-109461"
+                  },
+                  {
+                    "id": "CVE-2026-101916",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.8.22",
+                    "fixedVersion": "1.13.6, 1.14.5",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-101916"
+                  },
+                  {
+                    "id": "CVE-2026-48068",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.8.22",
+                    "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-48068"
+                  },
+                  {
+                    "id": "CVE-2026-48069",
+                    "pkg": "@grpc/grpc-js",
+                    "installedVersion": "1.8.22",
+                    "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-48069"
+                  },
+                  {
+                    "id": "CVE-2026-101909",
+                    "pkg": "axios",
+                    "installedVersion": "0.32.0",
+                    "fixedVersion": "0.34.0, 1.20.0",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-101909"
+                  }
+                ],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -1,
+                "high": -164,
+                "medium": -38,
+                "low": -6,
+                "total": -743
+              },
+              "app": {
+                "critical": -4,
+                "high": -52,
+                "medium": -85,
+                "low": -6,
+                "total": -147
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-109461",
+              "pkg": "@azure/msal-node",
+              "installedVersion": "5.6.0",
+              "fixedVersion": "7.1.0",
+              "severity": "HIGH",
+              "title": "CVE-2026-109461"
+            },
+            {
+              "id": "CVE-2026-101916",
+              "pkg": "@grpc/grpc-js",
+              "installedVersion": "1.8.22",
+              "fixedVersion": "1.13.6, 1.14.5",
+              "severity": "HIGH",
+              "title": "CVE-2026-101916"
+            },
+            {
+              "id": "CVE-2026-48068",
+              "pkg": "@grpc/grpc-js",
+              "installedVersion": "1.8.22",
+              "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+              "severity": "HIGH",
+              "title": "CVE-2026-48068"
+            },
+            {
+              "id": "CVE-2026-48069",
+              "pkg": "@grpc/grpc-js",
+              "installedVersion": "1.8.22",
+              "fixedVersion": "1.9.16, 1.10.12, 1.11.4, 1.12.7, 1.13.5, 1.14.4",
+              "severity": "HIGH",
+              "title": "CVE-2026-48069"
+            },
+            {
+              "id": "CVE-2026-101909",
+              "pkg": "axios",
+              "installedVersion": "0.32.0",
+              "fixedVersion": "0.34.0, 1.20.0",
+              "severity": "HIGH",
+              "title": "CVE-2026-101909"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-118333",
+              "pkg": "chromium",
+              "installedVersion": "155.0.8059.79-1~deb12u1",
+              "fixedVersion": "None",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-118333"
+            },
+            {
+              "id": "CVE-2026-118337",
+              "pkg": "chromium",
+              "installedVersion": "155.0.8059.79-1~deb12u1",
+              "fixedVersion": "None",
+              "severity": "CRITICAL",
+              "title": "CVE-2026-118337"
+            },
+            {
+              "id": "CVE-2026-110913",
+              "pkg": "chromium",
+              "installedVersion": "155.0.8059.79-1~deb12u1",
+              "fixedVersion": "156.0.8078.47-1~deb12u1",
+              "severity": "HIGH",
+              "title": "CVE-2026-110913"
+            },
+            {
+              "id": "CVE-2026-110917",
+              "pkg": "chromium",
+              "installedVersion": "155.0.8059.79-1~deb12u1",
+              "fixedVersion": "156.0.8078.47-1~deb12u1",
+              "severity": "HIGH",
+              "title": "CVE-2026-110917"
+            },
+            {
+              "id": "CVE-2026-110918",
+              "pkg": "chromium",
+              "installedVersion": "155.0.8059.79-1~deb12u1",
+              "fixedVersion": "156.0.8078.47-1~deb12u1",
+              "severity": "HIGH",
+              "title": "CVE-2026-110918"
+            }
+          ],
+          "posture": "APP CRITICAL RISK",
+          "postureBadge": "🔴",
+          "scannedAt": "2026-10-31T17:44:39.261Z"
+        },
+        {
           "tag": "2.5.8",
           "fullRef": "louislam/uptime-kuma:2.5.8",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -9514,7 +9755,7 @@
         {
           "tag": "2.5.7",
           "fullRef": "louislam/uptime-kuma:2.5.7",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -29211,7 +29452,7 @@
         {
           "tag": "2.5.6",
           "fullRef": "louislam/uptime-kuma:2.5.6",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -48908,7 +49149,7 @@
         {
           "tag": "2.5.5",
           "fullRef": "louislam/uptime-kuma:2.5.5",
-          "rank": 4,
+          "rank": 5,
           "lifecycleStatus": "AGING",
           "lifecycleBadge": "🟠",
           "lifecycleAdvice": "Plan upgrade to latest",
