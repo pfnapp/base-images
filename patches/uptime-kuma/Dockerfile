@@ -15,15 +15,28 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     cd /app && \
     node -e 'const fs=require("fs"); const pkg=JSON.parse(fs.readFileSync("package.json")); \
-      pkg.dependencies["tar"]="^7.5.21"; \
-      pkg.dependencies["protobufjs"]="^7.5.5"; \
-      pkg.dependencies["ws"]="^8.21.0"; \
-      pkg.dependencies["mysql2"]="^3.22.0"; \
-      pkg.dependencies["liquidjs"]="^10.27.2"; \
-      pkg.dependencies["nodemailer"]="^8.0.8"; \
-      pkg.overrides = { ...pkg.overrides, "body-parser":"^1.20.9", "glob":"^10.5.0", "lodash":"^4.18.0", "minimatch":"^9.0.6", "undici":"^6.29.1" }; \
+      pkg.dependencies = { ...pkg.dependencies, \
+        "@azure/msal-node":"^7.1.0", \
+        "@grpc/grpc-js":"^1.14.5", \
+        "axios":"^1.20.0", \
+        "tar":"^7.5.21", \
+        "protobufjs":"^7.5.5", \
+        "ws":"^8.21.0", \
+        "mysql2":"^3.22.0", \
+        "liquidjs":"^10.27.2", \
+        "nodemailer":"^8.0.8" }; \
+      pkg.overrides = { ...pkg.overrides, \
+        "@azure/msal-node":"^7.1.0", \
+        "@grpc/grpc-js":"^1.14.5", \
+        "axios":"^1.20.0", \
+        "body-parser":"^1.20.9", \
+        "glob":"^10.5.0", \
+        "lodash":"^4.18.0", \
+        "minimatch":"^9.0.6", \
+        "undici":"^6.29.1" }; \
       fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2))' && \
-    (npm install --omit=dev --no-audit 2>/dev/null || true) && \
+    npm install --omit=dev --no-audit --no-fund && \
+    npm prune --omit=dev --no-audit --no-fund && \
     rm -rf /app/node_modules/cacache \
            /app/node_modules/@mapbox/node-pre-gyp \
            /app/node_modules/node-gyp \
