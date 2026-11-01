@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-11-01T15:08:24.870Z",
+    "generatedAt": "2026-11-01T23:36:45.606Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 53,
+    "totalMonitoredVersions": 54,
     "runAsRootCount": 35,
     "criticalVulnerabilityCount": 130,
     "highVulnerabilityCount": 1055,
-    "pfnappScannedCount": 51,
+    "pfnappScannedCount": 52,
     "totalCveReduction": 1294
   },
   "applications": [
@@ -160591,9 +160591,120 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "1.37.5",
+          "fullRef": "vaultwarden/server:1.37.5",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 119,
+                "low": 146,
+                "fixable": 0,
+                "total": 275
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 2,
+                "medium": 119,
+                "low": 146,
+                "fixable": 0,
+                "total": 275,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-119373",
+                    "pkg": "libsqlite3-0",
+                    "installedVersion": "3.46.1-7+deb13u2",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-119373"
+                  },
+                  {
+                    "id": "CVE-2026-119586",
+                    "pkg": "libsqlite3-0",
+                    "installedVersion": "3.46.1-7+deb13u2",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-119586"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-119373",
+              "pkg": "libsqlite3-0",
+              "installedVersion": "3.46.1-7+deb13u2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-119373"
+            },
+            {
+              "id": "CVE-2026-119586",
+              "pkg": "libsqlite3-0",
+              "installedVersion": "3.46.1-7+deb13u2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-119586"
+            }
+          ],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-11-01T23:36:45.606Z"
+        },
+        {
           "tag": "1.37.4",
           "fullRef": "vaultwarden/server:1.37.4",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -162814,7 +162925,7 @@
         {
           "tag": "1.37.3",
           "fullRef": "vaultwarden/server:1.37.3",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
