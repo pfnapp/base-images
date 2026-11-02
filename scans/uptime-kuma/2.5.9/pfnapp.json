@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-01T07:08:22.395Z",
+  "scannedAt": "2026-11-02T07:13:37.875Z",
   "system": {
-    "total": 923,
+    "total": 957,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -1612,6 +1612,30 @@
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
+        "id": "CVE-2026-114690",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "gcc-12-base",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -3220,6 +3244,30 @@
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
+        "id": "CVE-2026-114690",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -4580,6 +4628,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-11940",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4692,6 +4748,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libsmartcols1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -4780,12 +4844,36 @@
         "title": "libsndfile: libsndfile: Information disclosure via uninitialized variable use in WAV parsing"
       },
       {
+        "id": "CVE-2026-119373",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
+      },
+      {
         "id": "CVE-2025-7709",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.40.1-2+deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "An integer overflow exists in the  FTS5 https://sqlite.org/fts5.html e ..."
+      },
+      {
+        "id": "CVE-2026-119378",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in R-Tree extension"
+      },
+      {
+        "id": "CVE-2026-119591",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion in countOfViewOptimization()"
       },
       {
         "id": "CVE-2026-50812",
@@ -4828,6 +4916,62 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-119371",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS3/FTS4 and SQLITE_ENABLE_FTS3_PAREN ..."
+      },
+      {
+        "id": "CVE-2026-119374",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow i ..."
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an information disclosure vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with the session extension contains a heap  ..."
+      },
+      {
         "id": "CVE-2025-27587",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
@@ -4842,6 +4986,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
         "id": "CVE-2026-95619",
@@ -6484,6 +6652,14 @@
         "title": "pyjwt v2.10.1 was discovered to contain weak encryption. NOTE: this is ..."
       },
       {
+        "id": "CVE-2019-25781",
+        "pkg": "python3-markdown",
+        "installedVersion": "3.4.1-2+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "markdown: python-markdown: Denial of Service via inefficient inline link parsing"
+      },
+      {
         "id": "CVE-2026-118669",
         "pkg": "python3-oauthlib",
         "installedVersion": "3.2.2-1",
@@ -6660,6 +6836,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-11940",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -6770,6 +6954,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
       },
       {
         "id": "CVE-2026-53783",
@@ -7044,12 +7236,36 @@
         "title": "socat: arbitrary file overwrite via predictable /tmp directory"
       },
       {
+        "id": "CVE-2026-119373",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
+      },
+      {
         "id": "CVE-2025-7709",
         "pkg": "sqlite3",
         "installedVersion": "3.40.1-2+deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "An integer overflow exists in the  FTS5 https://sqlite.org/fts5.html e ..."
+      },
+      {
+        "id": "CVE-2026-119378",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in R-Tree extension"
+      },
+      {
+        "id": "CVE-2026-119591",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion in countOfViewOptimization()"
       },
       {
         "id": "CVE-2026-50812",
@@ -7090,6 +7306,62 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
+      },
+      {
+        "id": "CVE-2026-119371",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS3/FTS4 and SQLITE_ENABLE_FTS3_PAREN ..."
+      },
+      {
+        "id": "CVE-2026-119374",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow i ..."
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an information disclosure vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119377",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "sqlite3",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with the session extension contains a heap  ..."
       },
       {
         "id": "CVE-2026-96512",

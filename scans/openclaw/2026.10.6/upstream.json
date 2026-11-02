@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-01T07:10:36.398Z",
+  "scannedAt": "2026-11-02T07:16:03.221Z",
   "system": {
-    "total": 447,
+    "total": 473,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -394,6 +394,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
         "id": "CVE-2026-95619",
@@ -1564,6 +1588,30 @@
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
       },
       {
+        "id": "CVE-2026-114690",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1658,6 +1706,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
         "id": "CVE-2026-95619",
@@ -2204,6 +2276,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-11940",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -2316,6 +2396,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-107161",
         "pkg": "libsasl2-2",
         "installedVersion": "2.1.28+dfsg-10",
@@ -2372,12 +2460,36 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-119373",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
+      },
+      {
         "id": "CVE-2025-7709",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.40.1-2+deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "An integer overflow exists in the  FTS5 https://sqlite.org/fts5.html e ..."
+      },
+      {
+        "id": "CVE-2026-119378",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in R-Tree extension"
+      },
+      {
+        "id": "CVE-2026-119591",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion in countOfViewOptimization()"
       },
       {
         "id": "CVE-2026-50812",
@@ -2418,6 +2530,62 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
+      },
+      {
+        "id": "CVE-2026-119371",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS3/FTS4 and SQLITE_ENABLE_FTS3_PAREN ..."
+      },
+      {
+        "id": "CVE-2026-119374",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow i ..."
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an information disclosure vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
+      },
+      {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "SQLite before 3.54.0 built with the session extension contains a heap  ..."
       },
       {
         "id": "CVE-2026-84782",
@@ -2482,6 +2650,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
         "id": "CVE-2026-95619",
@@ -3308,6 +3500,14 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
+      },
+      {
         "id": "CVE-2026-11940",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3418,6 +3618,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "socket.getaddrinfo() previously accepted null bytes within *host* and  ..."
       },
       {
         "id": "TEMP-0517018-A83CE6",
