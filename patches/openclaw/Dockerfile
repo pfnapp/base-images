@@ -1,11 +1,12 @@
-# PFNApp hardened image for OpenClaw 2026.10.8
-FROM ghcr.io/openclaw/openclaw:2026.10.8
+FROM ghcr.io/openclaw/openclaw:2026.10.10
+
 USER root
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /root/.npm
+
 USER node
 
 # Env-driven ingress config (OPENCLAW_TRUSTED_PROXIES / OPENCLAW_ALLOWED_ORIGINS)
