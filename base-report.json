@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-02T07:19:37.980Z",
+  "generatedAt": "2026-11-03T07:39:50.927Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -50,7 +50,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -94,7 +94,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -138,7 +138,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -182,7 +182,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -226,7 +226,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -261,11 +261,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -276,10 +276,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -305,11 +324,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -320,10 +339,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -349,11 +387,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -364,10 +402,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -393,11 +450,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -408,10 +465,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -455,7 +531,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -481,11 +557,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -496,10 +572,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -552,7 +647,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -596,7 +691,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -632,7 +727,7 @@
             "system": {
               "critical": 0,
               "high": 1,
-              "medium": 139,
+              "medium": 140,
               "low": 154,
               "fixable": 0,
               "total": 302
@@ -659,7 +754,7 @@
           ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -686,7 +781,7 @@
             "system": {
               "critical": 0,
               "high": 1,
-              "medium": 139,
+              "medium": 140,
               "low": 154,
               "fixable": 0,
               "total": 302
@@ -713,7 +808,7 @@
           ],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -766,7 +861,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -810,7 +905,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -854,7 +949,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -889,11 +984,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -904,10 +999,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -933,11 +1047,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -948,10 +1062,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1005,7 +1138,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1049,7 +1182,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1093,7 +1226,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1137,7 +1270,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1181,7 +1314,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1225,7 +1358,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1269,7 +1402,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1313,7 +1446,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1374,11 +1507,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -1389,10 +1522,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1418,11 +1570,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -1433,10 +1585,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1462,11 +1633,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -1477,10 +1648,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1506,11 +1696,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -1521,10 +1711,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1550,11 +1759,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 0,
-              "medium": 0,
+              "high": 2,
+              "medium": 1,
               "low": 0,
-              "fixable": 0,
-              "total": 0
+              "fixable": 4,
+              "total": 4
             },
             "app": {
               "critical": 0,
@@ -1565,10 +1774,29 @@
               "total": 0
             }
           },
-          "topCves": [],
+          "topCves": [
+            {
+              "id": "CVE-2026-117610",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ...",
+              "layer": "system"
+            },
+            {
+              "id": "CVE-2026-118370",
+              "pkg": "libexpat",
+              "installedVersion": "2.9.0-r0",
+              "fixedVersion": "2.10.0-r0",
+              "severity": "HIGH",
+              "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ...",
+              "layer": "system"
+            }
+          ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1657,7 +1885,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1701,7 +1929,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1745,7 +1973,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1789,7 +2017,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1833,7 +2061,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1877,7 +2105,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1921,7 +2149,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1965,7 +2193,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2044,7 +2272,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-02T07:19:37.980Z",
+          "scannedAt": "2026-11-03T07:39:50.927Z",
           "eol": {
             "date": null,
             "isEol": false,

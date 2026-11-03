@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-02T07:16:33.372Z",
+  "scannedAt": "2026-11-03T07:36:42.527Z",
   "system": {
-    "total": 25,
+    "total": 29,
     "cves": [
       {
         "id": "CVE-2026-111497",
@@ -202,11 +202,43 @@
         "fixedVersion": "8.23.0-r0",
         "severity": "LOW",
         "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-117610",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r1",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "HIGH",
+        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+      },
+      {
+        "id": "CVE-2026-118370",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r1",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "HIGH",
+        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r1",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
+        "id": "CVE-2026-115506",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r1",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.9.0 contains a denial of service vulnerability beca ..."
       }
     ]
   },
   "app": {
-    "total": 57,
+    "total": 56,
     "cves": [
       {
         "id": "CVE-2026-109461",
@@ -303,14 +335,6 @@
         "fixedVersion": "2.4.0, 1.20.9",
         "severity": "HIGH",
         "title": "body-parser: body-parser: Denial of Service via unhandled decompression stream error"
-      },
-      {
-        "id": "CVE-2026-93753",
-        "pkg": "deepmerge",
-        "installedVersion": "4.3.1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "deepmerge: deepmerge: Prototype Poisoning via mergeObject function"
       },
       {
         "id": "CVE-2025-57665",
