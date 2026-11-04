@@ -203,19 +203,28 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Tag and push production images to GHCR
+      - name: Determine production image tags
         if: github.ref == 'refs/heads/main'
+        id: meta
         run: |
           TARGET_REPO="ghcr.io/pfnapp/base/languages/php"
-          SRC_IMAGE="local/php:${{ matrix.php_version }}-test"
-
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
-          docker tag "$SRC_IMAGE" "${TARGET_REPO}:${{ matrix.php_version }}"
-
-          docker push "${TARGET_REPO}:${{ matrix.php_version }}-alpine"
-          docker push "${TARGET_REPO}:${{ matrix.php_version }}"
-
+          TAGS="${TARGET_REPO}:${{ matrix.php_version }}-alpine,${TARGET_REPO}:${{ matrix.php_version }}"
           if [ "${{ matrix.php_version }}" = "${{ needs.resolve-matrix.outputs.default }}" ]; then
-            docker tag "$SRC_IMAGE" "${TARGET_REPO}:latest"
-            docker push "${TARGET_REPO}:latest"
+            TAGS="${TAGS},${TARGET_REPO}:latest"
           fi
+          echo "tags=${TAGS}" >> $GITHUB_OUTPUT
+
+      - name: Build and push multi-arch production images to GHCR
+        if: github.ref == 'refs/heads/main'
+        uses: docker/build-push-action@v7
+        with:
+          context: languages/php
+          file: languages/php/Dockerfile.alpine
+          platforms: linux/amd64,linux/arm64
+          build-args: |
+            PHP_VERSION=${{ matrix.php_version }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          provenance: false

@@ -23,6 +23,7 @@ Production-ready, hardened PHP runtime images with integrated Nginx and PHP-FPM 
 - **Listen Port**: `8080` (unprivileged).
 - **Temporary Buffers**: PIDs and Nginx client buffers write to `/tmp/`.
 - **Dynamic Config**: Runtime configuration overrides generate cleanly into `/etc/php/conf.d/custom/` without requiring `root` or `chown`.
+- **Multi-Architecture**: Multi-arch image index supporting both `linux/amd64` and `linux/arm64` under unified tags (no architecture prefix required).
 
 ---
 
