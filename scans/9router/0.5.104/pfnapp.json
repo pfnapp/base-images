@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-03T07:34:47.775Z",
+  "scannedAt": "2026-11-05T07:43:42.932Z",
   "system": {
     "total": 2,
     "cves": [
@@ -22,7 +22,7 @@
     ]
   },
   "app": {
-    "total": 337,
+    "total": 338,
     "cves": [
       {
         "id": "CVE-2026-118779",
@@ -231,6 +231,14 @@
         "fixedVersion": "5.4.0",
         "severity": "MEDIUM",
         "title": "github.com/go-chi/chi: chi: client IP spoofing via unverified direct connection in ClientIPFromXFF middleware"
+      },
+      {
+        "id": "GHSA-3fxj-6jh8-hvhx",
+        "pkg": "github.com/go-chi/chi/v5",
+        "installedVersion": "v5.2.2",
+        "fixedVersion": "5.3.0",
+        "severity": "MEDIUM",
+        "title": "chi Has an IP Spoofing Vulnerability in `middleware.RealIP`"
       },
       {
         "id": "CVE-2026-116587",

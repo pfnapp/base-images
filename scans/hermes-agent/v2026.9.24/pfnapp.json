@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-11-03T07:37:25.409Z",
+  "scannedAt": "2026-11-05T07:46:28.422Z",
   "system": {
-    "total": 1131,
+    "total": 1133,
     "cves": [
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "apt",
+        "installedVersion": "3.0.3",
+        "fixedVersion": "3.0.4",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+      },
       {
         "id": "CVE-2011-3374",
         "pkg": "apt",
@@ -588,6 +596,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "ffmpeg",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -724,54 +780,6 @@
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
       },
       {
-        "id": "CVE-2026-120210",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
         "id": "CVE-2026-102010",
         "pkg": "gcc-14-base",
         "installedVersion": "14.2.0-19",
@@ -874,6 +882,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "libapt-pkg7.0",
+        "installedVersion": "3.0.3",
+        "fixedVersion": "3.0.4",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
       },
       {
         "id": "CVE-2011-3374",
@@ -1372,6 +1388,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavcodec61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -1506,54 +1570,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -1732,6 +1748,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavdevice61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -1866,54 +1930,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -2092,6 +2108,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavfilter10",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2226,54 +2290,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -2452,6 +2468,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavformat61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2586,54 +2650,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -2812,6 +2828,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavutil59",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2946,54 +3010,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-3184",
@@ -4340,12 +4356,20 @@
         "title": "elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx denial of service"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat1",
         "installedVersion": "2.9.0-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -4353,7 +4377,7 @@
         "installedVersion": "2.9.0-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2025-66382",
@@ -4362,14 +4386,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat1",
-        "installedVersion": "2.9.0-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
       },
       {
         "id": "CVE-2026-115506",
@@ -4690,14 +4706,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
-      },
-      {
-        "id": "CVE-2026-95209",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.9-3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -5105,7 +5113,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -5113,7 +5121,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50579",
@@ -5121,7 +5129,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -5145,7 +5153,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -5153,7 +5161,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50585",
@@ -5169,7 +5177,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50587",
@@ -5185,7 +5193,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50640",
@@ -5217,7 +5225,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-73064",
@@ -5724,6 +5732,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libpostproc58",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -5860,54 +5916,6 @@
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
       },
       {
-        "id": "CVE-2026-120210",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
         "id": "CVE-2026-15308",
         "pkg": "libpython3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -5977,7 +5985,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-12345",
@@ -6033,7 +6041,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -6137,7 +6145,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-12345",
@@ -6193,7 +6201,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -6380,6 +6388,14 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
         "id": "CVE-2026-119371",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.46.1-7+deb13u2",
@@ -6418,14 +6434,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119377",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
       },
       {
         "id": "CVE-2026-119379",
@@ -6652,6 +6660,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libswresample5",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -6786,54 +6842,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -7012,6 +7020,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libswscale8",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -7146,54 +7202,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-15059",
@@ -7585,7 +7593,7 @@
         "installedVersion": "2:1.8.2-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "A buffer overflow when handling DEVICE_RESOLUTION in libXi before 1.8. ..."
+        "title": "libXi: libXi: Arbitrary code execution via DEVICE_RESOLUTION heap-based buffer overflow"
       },
       {
         "id": "CVE-2026-109090",
@@ -7593,7 +7601,7 @@
         "installedVersion": "2:1.8.2-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "A malicious X server could cause a heap overflow by injecting a largeD ..."
+        "title": "libXi: libXi: Arbitrary code execution via oversized DEVICE_ENABLE reply"
       },
       {
         "id": "CVE-2026-93541",
@@ -8337,7 +8345,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-12345",
@@ -8393,7 +8401,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -8497,7 +8505,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-12345",
@@ -8553,7 +8561,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -8657,7 +8665,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-12345",
@@ -8713,7 +8721,7 @@
         "installedVersion": "3.13.5-2+deb13u5",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -9034,6 +9042,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "xorg-x11-server: xorg-x11-server: Denial of Service via use-after-free in gesture event handling"
+      },
+      {
+        "id": "CVE-2026-76844",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
       {
         "id": "CVE-2026-27171",
@@ -9654,7 +9670,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
-        "title": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, multi-fr ..."
+        "title": "pillow: Pillow multi-frame loaders can reuse stale native image storage after mode transitions"
       },
       {
         "id": "CVE-2026-112390",
@@ -9782,7 +9798,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
-        "title": " Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
+        "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
         "id": "CVE-2026-96637",

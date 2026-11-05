@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-03T15:07:02.200Z",
+  "scannedAt": "2026-11-05T07:45:40.654Z",
   "system": {
     "total": 29,
     "cves": [
@@ -204,12 +204,20 @@
         "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r1",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat",
         "installedVersion": "2.9.0-r1",
         "fixedVersion": "2.10.0-r0",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -217,15 +225,7 @@
         "installedVersion": "2.9.0-r1",
         "fixedVersion": "2.10.0-r0",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat",
-        "installedVersion": "2.9.0-r1",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2026-115506",
@@ -238,7 +238,7 @@
     ]
   },
   "app": {
-    "total": 48,
+    "total": 47,
     "cves": [
       {
         "id": "CVE-2026-109461",
@@ -436,14 +436,6 @@
         "id": "CVE-2026-118764",
         "pkg": "minimatch",
         "installedVersion": "10.2.3",
-        "fixedVersion": "11.0.1",
-        "severity": "MEDIUM",
-        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
-      },
-      {
-        "id": "CVE-2026-118764",
-        "pkg": "minimatch",
-        "installedVersion": "5.1.8",
         "fixedVersion": "11.0.1",
         "severity": "MEDIUM",
         "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"

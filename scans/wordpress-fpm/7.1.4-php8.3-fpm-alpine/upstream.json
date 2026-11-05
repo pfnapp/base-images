@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-03T07:33:23.991Z",
+  "scannedAt": "2026-11-05T07:42:27.033Z",
   "system": {
     "total": 52,
     "cves": [
@@ -388,12 +388,20 @@
         "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat",
+        "installedVersion": "2.9.0-r0",
+        "fixedVersion": "2.10.0-r0",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat",
         "installedVersion": "2.9.0-r0",
         "fixedVersion": "2.10.0-r0",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -401,15 +409,7 @@
         "installedVersion": "2.9.0-r0",
         "fixedVersion": "2.10.0-r0",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat",
-        "installedVersion": "2.9.0-r0",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2026-115506",

@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-11-03T07:38:41.166Z",
+  "scannedAt": "2026-11-05T07:47:42.394Z",
   "system": {
-    "total": 500,
+    "total": 502,
     "cves": [
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "apt",
+        "installedVersion": "2.8.3",
+        "fixedVersion": "2.8.4ubuntu0.1",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+      },
       {
         "id": "CVE-2026-86409",
         "pkg": "curl",
@@ -346,6 +354,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "fontforge: Fontforge memory leak"
+      },
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "libapt-pkg6.0t64",
+        "installedVersion": "2.8.3",
+        "fixedVersion": "2.8.4ubuntu0.1",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
       },
       {
         "id": "CVE-2026-16517",
@@ -2508,20 +2524,20 @@
         "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
       },
       {
-        "id": "CVE-2026-95209",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.3-1.1ubuntu3.6",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
-      },
-      {
         "id": "CVE-2026-95210",
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.3-1.1ubuntu3.6",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
+      },
+      {
+        "id": "CVE-2026-111183",
+        "pkg": "libgstreamer-plugins-base1.0-0",
+        "installedVersion": "1.24.2-1ubuntu0.5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gstreamer: GStreamer rtpL16depay Heap-based Buffer Overflow Remote Code Execution Vulnerability"
       },
       {
         "id": "CVE-2026-85150",
@@ -2655,7 +2671,7 @@
         "id": "CVE-2026-103111",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
       },
@@ -2663,7 +2679,7 @@
         "id": "CVE-2026-86145",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "pcre2: PCRE2: Out-of-bounds write allows arbitrary code execution via crafted regular expressions"
       },
@@ -2671,7 +2687,7 @@
         "id": "CVE-2026-89156",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "PCRE2: PCRE2: Out-of-bounds read via invalid UTF data during JIT fallback"
       },
@@ -2679,7 +2695,7 @@
         "id": "CVE-2026-89157",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "pcre2: PCRE2: Out-of-bounds write via large pattern input"
       },
@@ -2687,7 +2703,7 @@
         "id": "CVE-2026-89158",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "PCRE2: PCRE2: Out-of-bounds write via integer overflow on 32-bit platforms"
       },
@@ -2695,7 +2711,7 @@
         "id": "CVE-2026-89160",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "pcre2: PCRE2: Denial of Service via out-of-bounds read during invalid UTF matching"
       },
@@ -2703,7 +2719,7 @@
         "id": "CVE-2026-89161",
         "pkg": "libpcre2-8-0",
         "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "None",
+        "fixedVersion": "10.42-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "pcre2: PCRE2: Memory corruption vulnerability in pcre2_jit_match"
       },
@@ -4206,7 +4222,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
-        "title": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, multi-fr ..."
+        "title": "pillow: Pillow multi-frame loaders can reuse stale native image storage after mode transitions"
       },
       {
         "id": "CVE-2026-112390",
@@ -4334,7 +4350,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
-        "title": " Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
+        "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
         "id": "CVE-2026-96637",

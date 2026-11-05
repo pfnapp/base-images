@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-11-03T07:40:20.565Z",
+  "scannedAt": "2026-11-05T07:49:05.845Z",
   "system": {
-    "total": 302,
+    "total": 304,
     "cves": [
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "apt",
+        "installedVersion": "2.6.1",
+        "fixedVersion": "2.6.2",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+      },
       {
         "id": "CVE-2011-3374",
         "pkg": "apt",
@@ -490,6 +498,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "libapt-pkg6.0",
+        "installedVersion": "2.6.1",
+        "fixedVersion": "2.6.2",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
       },
       {
         "id": "CVE-2011-3374",
@@ -1308,14 +1324,6 @@
         "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
       },
       {
-        "id": "CVE-2026-95209",
-        "pkg": "libgnutls30",
-        "installedVersion": "3.7.9-2+deb12u7",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
-      },
-      {
         "id": "CVE-2026-95210",
         "pkg": "libgnutls30",
         "installedVersion": "3.7.9-2+deb12u7",
@@ -1812,6 +1820,14 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
         "id": "CVE-2026-119371",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.40.1-2+deb12u2",
@@ -1850,14 +1866,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119377",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
       },
       {
         "id": "CVE-2026-119379",
@@ -2404,6 +2412,14 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-76844",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.2.13.dfsg-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
+      },
+      {
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.2.13.dfsg-1",
@@ -2422,7 +2438,7 @@
     ]
   },
   "app": {
-    "total": 2,
+    "total": 1,
     "cves": [
       {
         "id": "GHSA-xmj3-9gf7-h52w",
@@ -2431,14 +2447,6 @@
         "fixedVersion": "84.1.0",
         "severity": "LOW",
         "title": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description"
-      },
-      {
-        "id": "CVE-2026-97688",
-        "pkg": "urllib3",
-        "installedVersion": "2.7.0",
-        "fixedVersion": "2.8.0",
-        "severity": "MEDIUM",
-        "title": "urllib3: urllib3: Denial of Service via infinite loop during chunked Deflate decoding"
       }
     ]
   }

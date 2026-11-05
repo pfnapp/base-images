@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-11-03T07:37:42.867Z",
+  "scannedAt": "2026-11-05T07:46:46.655Z",
   "system": {
-    "total": 5171,
+    "total": 5182,
     "cves": [
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "apt",
+        "installedVersion": "3.0.3",
+        "fixedVersion": "3.0.4",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+      },
       {
         "id": "CVE-2011-3374",
         "pkg": "apt",
@@ -2404,6 +2412,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "ffmpeg",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2538,54 +2594,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "ffmpeg",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -2858,6 +2866,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "libapt-pkg7.0",
+        "installedVersion": "3.0.3",
+        "fixedVersion": "3.0.4",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
       },
       {
         "id": "CVE-2011-3374",
@@ -3460,6 +3476,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavcodec61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -3594,54 +3658,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavcodec61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -3820,6 +3836,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavdevice61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -3954,54 +4018,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavdevice61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -4180,6 +4196,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavfilter10",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -4314,54 +4378,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavfilter10",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -4540,6 +4556,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavformat61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -4674,54 +4738,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavformat61",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -4900,6 +4916,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libavutil59",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -5034,54 +5098,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libavutil59",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2017-13716",
@@ -8628,12 +8644,20 @@
         "title": "elfutils: GNU elfutils eu-strip strip.c gelf_getsymshndx denial of service"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat1",
         "installedVersion": "2.8.3-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -8641,7 +8665,7 @@
         "installedVersion": "2.8.3-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2026-66046",
@@ -8698,14 +8722,6 @@
         "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat1",
-        "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
       },
       {
         "id": "CVE-2026-115506",
@@ -8716,12 +8732,20 @@
         "title": "libexpat through 2.9.0 contains a denial of service vulnerability beca ..."
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1-dev",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat1-dev",
         "installedVersion": "2.8.3-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -8729,7 +8753,7 @@
         "installedVersion": "2.8.3-1~deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2026-66046",
@@ -8786,14 +8810,6 @@
         "fixedVersion": "2.9.0-1~deb13u1",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat1-dev",
-        "installedVersion": "2.8.3-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
       },
       {
         "id": "CVE-2026-115506",
@@ -9154,14 +9170,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
-      },
-      {
-        "id": "CVE-2026-95209",
-        "pkg": "libgnutls30t64",
-        "installedVersion": "3.8.9-3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -10369,7 +10377,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -10377,7 +10385,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50579",
@@ -10385,7 +10393,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -10409,7 +10417,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -10417,7 +10425,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50585",
@@ -10433,7 +10441,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50587",
@@ -10449,7 +10457,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50640",
@@ -10481,7 +10489,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-73064",
@@ -11220,6 +11228,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libpostproc58",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -11356,54 +11412,6 @@
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
       },
       {
-        "id": "CVE-2026-120210",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libpostproc58",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
         "id": "CVE-2026-11940",
         "pkg": "libpython3.13",
         "installedVersion": "3.13.5-2+deb13u4",
@@ -11489,7 +11497,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -11561,7 +11569,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -11689,7 +11697,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -11761,7 +11769,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -11889,7 +11897,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -11961,7 +11969,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -12089,7 +12097,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -12161,7 +12169,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -12996,6 +13004,14 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
         "id": "CVE-2026-119371",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.46.1-7+deb13u1",
@@ -13034,14 +13050,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119377",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
       },
       {
         "id": "CVE-2026-119379",
@@ -13460,6 +13468,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libswresample5",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -13594,54 +13650,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libswresample5",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -13820,6 +13828,54 @@
         "title": "ffmpeg: ffmpeg: Security restriction bypass via crafted HLS master playlist"
       },
       {
+        "id": "CVE-2026-120210",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via path traversal in IMF demuxer"
+      },
+      {
+        "id": "CVE-2026-120243",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: information disclosure via crafted Go2Meeting stream"
+      },
+      {
+        "id": "CVE-2026-120244",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via truncated PCX image"
+      },
+      {
+        "id": "CVE-2026-120245",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via crafted Sun Raster image"
+      },
+      {
+        "id": "CVE-2026-120246",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized palette entries in CDXL decoder"
+      },
+      {
+        "id": "CVE-2026-120247",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: ffmpeg: Information disclosure via uninitialized heap memory in Huffyuv decoder"
+      },
+      {
         "id": "CVE-2026-18393",
         "pkg": "libswscale8",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -13954,54 +14010,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "FFmpeg: FFmpeg: Denial of Service via heap buffer overflow in av_bprint_finalize()"
-      },
-      {
-        "id": "CVE-2026-120210",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 5.0 through 9.0.2 contains a path traversal vulnerability in th ..."
-      },
-      {
-        "id": "CVE-2026-120243",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.0 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120244",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.1 through 9.0.2 contains a use of uninitialized resource vuln ..."
-      },
-      {
-        "id": "CVE-2026-120245",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 0.10 through 9.0.2 contains a use of uninitialized resource vul ..."
-      },
-      {
-        "id": "CVE-2026-120246",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vuln ..."
-      },
-      {
-        "id": "CVE-2026-120247",
-        "pkg": "libswscale8",
-        "installedVersion": "7:7.1.5-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vuln ..."
       },
       {
         "id": "CVE-2026-15059",
@@ -14577,7 +14585,7 @@
         "installedVersion": "2:1.8.2-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "A buffer overflow when handling DEVICE_RESOLUTION in libXi before 1.8. ..."
+        "title": "libXi: libXi: Arbitrary code execution via DEVICE_RESOLUTION heap-based buffer overflow"
       },
       {
         "id": "CVE-2026-109090",
@@ -14585,7 +14593,7 @@
         "installedVersion": "2:1.8.2-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "A malicious X server could cause a heap overflow by injecting a largeD ..."
+        "title": "libXi: libXi: Arbitrary code execution via oversized DEVICE_ENABLE reply"
       },
       {
         "id": "CVE-2026-93541",
@@ -15921,7 +15929,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Use-after-free in SMB client via malformed compound encrypted frames"
       },
       {
         "id": "CVE-2026-98222",
@@ -15948,12 +15956,12 @@
         "title": "kernel: exec: Cleanup POSIX timers right after de_thread()"
       },
       {
-        "id": "CVE-2026-98320",
+        "id": "CVE-2026-98275",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
-        "title": "kernel: netfilter: flowtable: hold reference on ct until flow is released"
+        "title": "kernel: kernel: Denial of Service via improper interrupt acknowledgment in Cortina Ethernet driver"
       },
       {
         "id": "CVE-2026-98323",
@@ -16034,14 +16042,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
         "title": "kernel: sctp: discard the rest of the packet on a stale-cookie error"
-      },
-      {
-        "id": "CVE-2026-98550",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "kernel: tipc: reject invalid and unexpected GRP_ACK_MSG to prevent bc_ackers underflow"
       },
       {
         "id": "CVE-2026-98573",
@@ -16212,12 +16212,84 @@
         "title": "kernel: smb: client: fix heap overflow in cifs_do_set_acl()"
       },
       {
+        "id": "CVE-2026-99152",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of Service via unvalidated task in iSCSI management responses"
+      },
+      {
+        "id": "CVE-2026-99153",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of service via unvalidated task tag in iSCSI Reject PDU"
+      },
+      {
         "id": "CVE-2026-99167",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "HIGH",
         "title": "kernel: net/sched: fix use-after-free in __tcf_action_put()"
+      },
+      {
+        "id": "CVE-2026-99227",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Privilege escalation via reference counter wrap in io_uring"
+      },
+      {
+        "id": "CVE-2026-99231",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Privilege escalation via use-after-free in io_uring waitid"
+      },
+      {
+        "id": "CVE-2026-99233",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Privilege escalation via use-after-free in tracing subsystem"
+      },
+      {
+        "id": "CVE-2026-99235",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Privilege escalation via use-after-free in event tracing subsystem"
+      },
+      {
+        "id": "CVE-2026-99236",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: privilege escalation via incomplete event filter expressions"
+      },
+      {
+        "id": "CVE-2026-99239",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Privilege escalation via race condition in Bluetooth L2CAP"
+      },
+      {
+        "id": "CVE-2026-99246",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Arbitrary code execution via use-after-free in TIPC subsystem"
       },
       {
         "id": "CVE-2026-99999",
@@ -19388,6 +19460,22 @@
         "title": "kernel: serial: amba-pl011: synchronize DMA teardown"
       },
       {
+        "id": "CVE-2026-80738",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Check sk_state before sk_protocol in bpf_tcp_*_syncookie"
+      },
+      {
+        "id": "CVE-2026-80747",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: drm/amdkfd: Add bounds check for CRAT subtype length"
+      },
+      {
         "id": "CVE-2026-80755",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -19409,7 +19497,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+        "title": "kernel: Bluetooth: ISO: zero the sockaddr before returning it in getname"
       },
       {
         "id": "CVE-2026-80762",
@@ -19425,7 +19513,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.107-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+        "title": "kernel: Bluetooth: hci_event: validate LE Set CIG Parameters response"
       },
       {
         "id": "CVE-2026-80764",
@@ -19497,7 +19585,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+        "title": "kernel: HID: asus: fix missing hid_is_usb() check"
       },
       {
         "id": "CVE-2026-80779",
@@ -19513,7 +19601,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.107-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  H ..."
+        "title": "kernel: HID: core: fix OOB read of field->usage in hid_set_field()"
       },
       {
         "id": "CVE-2026-80782",
@@ -19689,7 +19777,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.107-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: stop retrying saturated xattr cache entries"
       },
       {
         "id": "CVE-2026-80809",
@@ -19705,7 +19793,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.107-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: ALSA: dummy: Check card index validity at probe"
       },
       {
         "id": "CVE-2026-80814",
@@ -19713,7 +19801,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.107-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: rndis_host: add overflow check in rndis_rx_fixup()"
       },
       {
         "id": "CVE-2026-80819",
@@ -19753,7 +19841,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  U ..."
+        "title": "kernel: USB: serial: option: fix slab OOB read in interrupt URB callback"
       },
       {
         "id": "CVE-2026-80829",
@@ -19809,7 +19897,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: crypto: qcom-rng - Remove crypto_rng interface"
       },
       {
         "id": "CVE-2026-80836",
@@ -19849,7 +19937,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: tcp: clamp route advmss to TCP_MIN_MSS"
       },
       {
         "id": "CVE-2026-80854",
@@ -19890,6 +19978,22 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: RDMA/rxe: Fix responder UAF on IB_QP_MAX_DEST_RD_ATOMIC modify_qp"
+      },
+      {
+        "id": "CVE-2026-80872",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: ALSA: hda/tas2781: Cancel async firmware request at unbind"
+      },
+      {
+        "id": "CVE-2026-80899",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: erofs: remove fscache backend entirely"
       },
       {
         "id": "CVE-2026-80905",
@@ -20258,14 +20362,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: interconnect: Fix use after free in icc_get() and of_icc_get_by_index()"
-      },
-      {
-        "id": "CVE-2026-81010",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "kernel: io_uring/waitid: honor task_work cancellation"
       },
       {
         "id": "CVE-2026-81011",
@@ -21849,7 +21945,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+        "title": "kernel: vxlan: vnifilter: enforce exact length of GROUP/GROUP6 attributes"
       },
       {
         "id": "CVE-2026-89779",
@@ -21913,7 +22009,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
+        "title": "kernel: ext4: check dir entry fits before reading the hash trailer in ext4_search_dir()"
       },
       {
         "id": "CVE-2026-89789",
@@ -21954,6 +22050,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: rpcrdma: arm rn_done before publishing the notification"
+      },
+      {
+        "id": "CVE-2026-89799",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Disable preemption in bpf_get_stackid"
       },
       {
         "id": "CVE-2026-89801",
@@ -22009,7 +22113,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/gud: NUL-terminate TV mode names read from the device"
       },
       {
         "id": "CVE-2026-89818",
@@ -22017,7 +22121,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amdgpu/vcn: fix integer overflow in dec_msg buffer count check"
       },
       {
         "id": "CVE-2026-89819",
@@ -22025,7 +22129,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amd/display: validate plane degamma LUT size for private color prop"
       },
       {
         "id": "CVE-2026-89821",
@@ -22033,7 +22137,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amd/display: avoid divide-by-zero in __is_lut_linear()"
       },
       {
         "id": "CVE-2026-89823",
@@ -22073,7 +22177,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/amdgpu: avoid force-completing uninitialized UVD rings"
       },
       {
         "id": "CVE-2026-89830",
@@ -22137,7 +22241,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Skip NVMe LS reject IOCB when FW not started"
       },
       {
         "id": "CVE-2026-89843",
@@ -22145,7 +22249,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Zero-init bsg stack buffers to avoid info leak"
       },
       {
         "id": "CVE-2026-89844",
@@ -22185,7 +22289,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Reject non-SCSI SRB on status IOCB fast path"
       },
       {
         "id": "CVE-2026-89850",
@@ -22193,7 +22297,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Don't query firmware state while chip is down"
       },
       {
         "id": "CVE-2026-89852",
@@ -22201,7 +22305,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Zero mailbox struct in qla2x00_get_firmware_state()"
       },
       {
         "id": "CVE-2026-89853",
@@ -22244,6 +22348,14 @@
         "title": "kernel: scsi: qla2xxx: Bound image count in qla2x00_update_fru_versions()"
       },
       {
+        "id": "CVE-2026-89859",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: scsi: qla2xxx: Zero dport diagnostics buffer to avoid info leak"
+      },
+      {
         "id": "CVE-2026-89860",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -22281,7 +22393,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: qla2xxx: Zero SFP DMA buffer in FRU/I2C bsg handlers"
       },
       {
         "id": "CVE-2026-89866",
@@ -22313,7 +22425,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: media: s2255: check firmware size before reading trailing marker"
       },
       {
         "id": "CVE-2026-89879",
@@ -22409,7 +22521,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: media: cx23885: cancel NetUP CI work before teardown"
       },
       {
         "id": "CVE-2026-89895",
@@ -22532,6 +22644,14 @@
         "title": "kernel: KVM: s390: Fix memory corruption by not reinjecting CK machine checks"
       },
       {
+        "id": "CVE-2026-89921",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: KVM: s390: Zero initialize data structures for inject_pfault_token"
+      },
+      {
         "id": "CVE-2026-89922",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -22569,7 +22689,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
+        "title": "kernel: KVM: nVMX: Ensure KVM_REQ_GET_NESTED_STATE_PAGES is cleared on VM-Exit"
       },
       {
         "id": "CVE-2026-89933",
@@ -22641,7 +22761,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: iio: buffer: Fix potential use-after-free in anonymous buffer release"
       },
       {
         "id": "CVE-2026-89945",
@@ -22705,7 +22825,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mtd: rawnand: validate ONFI extended parameter page sections"
       },
       {
         "id": "CVE-2026-89954",
@@ -22746,6 +22866,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: powerpc/mm: fix wrong addr_pfn tracking in compound vmemmap population"
+      },
+      {
+        "id": "CVE-2026-89962",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: powerpc/kexec_file: Prevent kexec range truncation"
       },
       {
         "id": "CVE-2026-89963",
@@ -22793,7 +22921,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: nvme: skip the zoned limits update if the zone info query failed"
       },
       {
         "id": "CVE-2026-89973",
@@ -22825,7 +22953,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: perf/x86/intel: Fix kernel address leakages in LBR stack"
       },
       {
         "id": "CVE-2026-89987",
@@ -22834,6 +22962,14 @@
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
         "title": "kernel: mm/huge_memory: transfer the pmd dirty bit to the folio on zap"
+      },
+      {
+        "id": "CVE-2026-89988",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kprobes: Protect kprobe_blacklist with RCU"
       },
       {
         "id": "CVE-2026-89989",
@@ -22857,7 +22993,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: cpuidle: dt_idle_genpd: kfree() the original name allocation"
       },
       {
         "id": "CVE-2026-89993",
@@ -22873,7 +23009,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: dmaengine: fsl-edma: tracing: no ptr dereference during log output"
       },
       {
         "id": "CVE-2026-89995",
@@ -22930,6 +23066,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: HID: bpf: serialize device reference release in struct_ops destroy path"
+      },
+      {
+        "id": "CVE-2026-90002",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ftrace: Take trace_array reference before accessing its ftrace_ops"
       },
       {
         "id": "CVE-2026-90003",
@@ -23033,7 +23177,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: typec: ucsi: displayport: Fix OOB altmode array index"
       },
       {
         "id": "CVE-2026-90026",
@@ -23049,7 +23193,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: usb: storage: realtek_cr: fix use-after-free on disconnect"
       },
       {
         "id": "CVE-2026-90030",
@@ -23113,7 +23257,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: ceph: properly decrypt filenames in vmalloc() buffers"
       },
       {
         "id": "CVE-2026-90054",
@@ -25956,6 +26100,14 @@
         "title": "kernel: batman-adv: dat: atomically update mac addresses"
       },
       {
+        "id": "CVE-2026-93205",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: iommu/arm-smmu-v3: Manage teardown with devm"
+      },
+      {
         "id": "CVE-2026-93207",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -26049,7 +26201,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: s390/vfio-ap: fix potential use of uninitialized apm_filtered bitmap"
+      },
+      {
+        "id": "CVE-2026-93239",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: arm64: mm: Fix the lockless page-table walk in show_pte()"
       },
       {
         "id": "CVE-2026-93245",
@@ -26076,6 +26236,14 @@
         "title": "kernel: vxlan: mdb: Fix use-after-free in vxlan_mdb_flush()"
       },
       {
+        "id": "CVE-2026-93251",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: ACPI: bus: Introduce acpi_bus_get_primary_device()"
+      },
+      {
         "id": "CVE-2026-93252",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -26089,7 +26257,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: powerpc/irq: Fix missing r2 clobber in PCREL inline assembly"
+      },
+      {
+        "id": "CVE-2026-93260",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: powerpc/xive: propagate IPI init errors to prevent use-after-free"
       },
       {
         "id": "CVE-2026-93261",
@@ -26225,7 +26401,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+        "title": "kernel: Bluetooth: RFCOMM: validate skb length in rfcomm_recv_frame"
       },
       {
         "id": "CVE-2026-93784",
@@ -26233,7 +26409,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  w ..."
+        "title": "kernel: wifi: cfg80211: validate IEs in cfg80211_wext_siwgenie()"
       },
       {
         "id": "CVE-2026-93786",
@@ -27209,7 +27385,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: mptcp: syncookies: remember the request backup flag"
       },
       {
         "id": "CVE-2026-97571",
@@ -27426,14 +27602,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: ring-buffer: Check resize_disabled before publishing the new subbuf order"
-      },
-      {
-        "id": "CVE-2026-97618",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "kernel: io_uring/net: don't overconsume buffers when using MSG_TRUNC"
       },
       {
         "id": "CVE-2026-97620",
@@ -28204,6 +28372,14 @@
         "title": "kernel: ring-buffer: Add checking nr_subbufs to persistent ring buffer validation"
       },
       {
+        "id": "CVE-2026-98058",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: Mark syscall helpers as sleepable"
+      },
+      {
         "id": "CVE-2026-98059",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -28289,7 +28465,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: tracing/probes: Fix use-after-free on field name/type of events with multiple probes"
       },
       {
         "id": "CVE-2026-98077",
@@ -28297,7 +28473,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: netfilter: nf_conntrack_sip: fix OOB read in sip_skip_whitespace()"
       },
       {
         "id": "CVE-2026-98078",
@@ -28353,7 +28529,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: scsi: mpt3sas: Avoid out-of-bounds cpumask_of_node() call in _base_assign_reply_queues()"
       },
       {
         "id": "CVE-2026-98089",
@@ -28361,7 +28537,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: bonding: alb: fix uninitialized transport header access in alb_determine_nd()"
       },
       {
         "id": "CVE-2026-98090",
@@ -28377,7 +28553,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: btrfs: detach failed sprout device from transaction update list"
       },
       {
         "id": "CVE-2026-98092",
@@ -28417,7 +28593,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: tipc: Dont send random pad bytes in RESET/ACTIVATE messages"
       },
       {
         "id": "CVE-2026-98098",
@@ -28433,7 +28609,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: ipv6: mcast: use rcu_assign_pointer() for __rcu list updates"
+      },
+      {
+        "id": "CVE-2026-98102",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ipv6: mcast: fix RCU list diversion in ip6_mc_del1_src()"
       },
       {
         "id": "CVE-2026-98103",
@@ -29300,14 +29484,6 @@
         "title": "kernel: x86/kprobes: Fix crash when probing CS CALL instructions"
       },
       {
-        "id": "CVE-2026-98275",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
         "id": "CVE-2026-98276",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -29537,7 +29713,15 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
+        "title": "kernel: kernel: Denial of Service via race condition in ALSA bcd2000 driver"
+      },
+      {
+        "id": "CVE-2026-98320",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: netfilter: flowtable: hold reference on ct until flow is released"
       },
       {
         "id": "CVE-2026-98322",
@@ -30538,6 +30722,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: tcp: prevent collapsing skbs across boundary in rtx queue"
+      },
+      {
+        "id": "CVE-2026-98550",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: tipc: reject invalid and unexpected GRP_ACK_MSG to prevent bc_ackers underflow"
       },
       {
         "id": "CVE-2026-98554",
@@ -32857,7 +33049,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: kernel: Denial of Service via out-of-bounds read in TPS6594 regulator driver"
       },
       {
         "id": "CVE-2026-99021",
@@ -33065,7 +33257,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  I ..."
+        "title": "kernel: kernel: Denial of Service via type confusion in ati_remote2 driver attribute handlers"
       },
       {
         "id": "CVE-2026-99071",
@@ -33073,7 +33265,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: kernel: Denial of Service via route notification sizing race in IPv4"
       },
       {
         "id": "CVE-2026-99072",
@@ -33081,7 +33273,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: kernel: Denial of Service via NULL pointer dereference in IPv4 route notification sizing"
       },
       {
         "id": "CVE-2026-99073",
@@ -33100,28 +33292,12 @@
         "title": "kernel: ipv4: stop PMTU walk when nexthop group shrinks"
       },
       {
-        "id": "CVE-2026-99076",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
-        "id": "CVE-2026-99077",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-99078",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: Denial of service via stale buffer release in mlx5e driver"
       },
       {
         "id": "CVE-2026-99079",
@@ -33178,14 +33354,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: drm/amdgpu: serialize vblank counter reads against GPU reset"
-      },
-      {
-        "id": "CVE-2026-99091",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
       },
       {
         "id": "CVE-2026-99094",
@@ -33444,28 +33612,12 @@
         "title": "kernel: kernel: Denial of Service via double reference count drop in amdgpu debugfs"
       },
       {
-        "id": "CVE-2026-99152",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-99153",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-99154",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of Service via out-of-bounds read in libiscsi"
       },
       {
         "id": "CVE-2026-99155",
@@ -33473,7 +33625,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: xen-scsifront: Denial of Service via NULL pointer dereference"
       },
       {
         "id": "CVE-2026-99156",
@@ -33481,7 +33633,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of Service via use-after-free race condition in SCSI tape driver"
       },
       {
         "id": "CVE-2026-99157",
@@ -33489,7 +33641,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of Service via out-of-bounds write in UFS BSG request handling"
       },
       {
         "id": "CVE-2026-99158",
@@ -33497,7 +33649,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: kernel: Denial of Service via false warning in memory-mapped ring buffer"
       },
       {
         "id": "CVE-2026-99159",
@@ -33505,7 +33657,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+        "title": "kernel: kernel: Denial of Service via null pointer dereference in persistent ring buffer"
       },
       {
         "id": "CVE-2026-99160",
@@ -33513,15 +33665,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
-      },
-      {
-        "id": "CVE-2026-99161",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: kernel: Denial of Service via null pointer dereference in ring buffer metadata"
       },
       {
         "id": "CVE-2026-99163",
@@ -33537,7 +33681,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of service via NULL pointer dereference in SCTP stream handling"
       },
       {
         "id": "CVE-2026-99166",
@@ -33545,7 +33689,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: Denial of Service via uninitialized pointer dereference in RDS"
       },
       {
         "id": "CVE-2026-99169",
@@ -33617,7 +33761,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: kernel: Denial of Service via use-after-free in Unicode subsystem"
       },
       {
         "id": "CVE-2026-99181",
@@ -33625,7 +33769,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
+        "title": "kernel: kernel: Denial of Service via improper notification pipe error handling in autofs"
       },
       {
         "id": "CVE-2026-99182",
@@ -33641,7 +33785,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+        "title": "kernel: kernel: Denial of Service (DoS) via incomplete PMU event migration during CPU hotplug"
       },
       {
         "id": "CVE-2026-99189",
@@ -33649,15 +33793,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  g ..."
-      },
-      {
-        "id": "CVE-2026-99191",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: kernel: Denial of Service via race condition during MXC GPIO driver initialization"
       },
       {
         "id": "CVE-2026-99192",
@@ -33665,15 +33801,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
-      },
-      {
-        "id": "CVE-2026-99201",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: Denial of Service via shared packet buffer handling in bcmgenet"
       },
       {
         "id": "CVE-2026-99202",
@@ -33681,7 +33809,7 @@
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: libsas: Denial of Service via deadlock during host adapter resume"
       },
       {
         "id": "CVE-2026-99203",
@@ -33754,6 +33882,158 @@
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
         "title": "kernel: Drivers: hv: Don't reset VMBus connection state on error/exit paths"
+      },
+      {
+        "id": "CVE-2026-99218",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: privilege escalation via use-after-free in coredump subsystem"
+      },
+      {
+        "id": "CVE-2026-99219",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via uninitialized pointer dereference in ftrace"
+      },
+      {
+        "id": "CVE-2026-99220",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via NULL pointer dereference in asymmetric key restriction"
+      },
+      {
+        "id": "CVE-2026-99222",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in keyctl_read_key"
+      },
+      {
+        "id": "CVE-2026-99224",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in keyctl_describe_key"
+      },
+      {
+        "id": "CVE-2026-99225",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via NULL pointer dereference during keyring searches"
+      },
+      {
+        "id": "CVE-2026-99226",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in named keyring lookup"
+      },
+      {
+        "id": "CVE-2026-99229",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via stuck io_uring overflow list"
+      },
+      {
+        "id": "CVE-2026-99230",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via uninitialized list node in io_uring"
+      },
+      {
+        "id": "CVE-2026-99234",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via improper event trigger cleanup in tracing"
+      },
+      {
+        "id": "CVE-2026-99247",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-99249",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-99250",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-99251",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  D ..."
+      },
+      {
+        "id": "CVE-2026-99254",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+      },
+      {
+        "id": "CVE-2026-99255",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+      },
+      {
+        "id": "CVE-2026-99256",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+      },
+      {
+        "id": "CVE-2026-99258",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-99270",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
       },
       {
         "id": "CVE-2004-0230",
@@ -34724,22 +35004,6 @@
         "title": "kernel: drm/amd/display: check if dml21_add_phantom_plane() is successful"
       },
       {
-        "id": "CVE-2026-80738",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
-        "id": "CVE-2026-80747",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
-      },
-      {
         "id": "CVE-2026-80784",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -34836,28 +35100,12 @@
         "title": "kernel: tipc: avoid busy looping in tipc_exit_net()"
       },
       {
-        "id": "CVE-2026-80872",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
         "id": "CVE-2026-80884",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-2",
         "severity": "LOW",
         "title": "kernel: ntb: Store original DMA address for future release"
-      },
-      {
-        "id": "CVE-2026-80899",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  e ..."
       },
       {
         "id": "CVE-2026-80915",
@@ -35308,14 +35556,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
       },
       {
-        "id": "CVE-2026-89799",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
-      },
-      {
         "id": "CVE-2026-89800",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -35396,14 +35636,6 @@
         "title": "kernel: scsi: qla2xxx: Serialize flash version read in reset handler"
       },
       {
-        "id": "CVE-2026-89859",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-89862",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -35466,14 +35698,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: media: cec: core: Fix kmemleak due to missed rc_free_device() call"
-      },
-      {
-        "id": "CVE-2026-89921",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
       },
       {
         "id": "CVE-2026-89923",
@@ -35556,14 +35780,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
-        "id": "CVE-2026-89962",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
         "id": "CVE-2026-89975",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -35594,22 +35810,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: mm/mempolicy: fix sleeping allocation in alloc_pages_bulk_weighted_interleave()"
-      },
-      {
-        "id": "CVE-2026-89988",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-90002",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
       },
       {
         "id": "CVE-2026-90019",
@@ -36516,14 +36716,6 @@
         "title": "kernel: i3c: master: Fix recursive locking during device registration"
       },
       {
-        "id": "CVE-2026-93205",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-93206",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -36636,14 +36828,6 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
       },
       {
-        "id": "CVE-2026-93239",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
         "id": "CVE-2026-93240",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -36676,28 +36860,12 @@
         "title": "kernel: drm/sysfb: simpledrm: Improve stride validation"
       },
       {
-        "id": "CVE-2026-93251",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  A ..."
-      },
-      {
         "id": "CVE-2026-93256",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.111-1",
         "severity": "LOW",
         "title": "kernel: arm64: hibernate: mask DAIF before restoring hibernated kernel"
-      },
-      {
-        "id": "CVE-2026-93260",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
       },
       {
         "id": "CVE-2026-93268",
@@ -37500,14 +37668,6 @@
         "title": "kernel: ASoC: Intel: avs: Clean up the bus when fetching ML caps fails"
       },
       {
-        "id": "CVE-2026-98058",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "kernel: bpf: Mark syscall helpers as sleepable"
-      },
-      {
         "id": "CVE-2026-98064",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -37570,14 +37730,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
         "title": "kernel: ipv6: mcast: use copy-on-write RCU updates in ip6_mc_source()"
-      },
-      {
-        "id": "CVE-2026-98102",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
         "id": "CVE-2026-98176",
@@ -38804,6 +38956,22 @@
         "title": "kernel: ipv6: do not warn on route notification size race"
       },
       {
+        "id": "CVE-2026-99076",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: kernel: Information disclosure via IPv6 UDP route exception cache side channel"
+      },
+      {
+        "id": "CVE-2026-99077",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "LOW",
+        "title": "kernel: kernel: Information disclosure via routing exception cache side channel in IPv4 UDP"
+      },
+      {
         "id": "CVE-2026-99080",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -38826,6 +38994,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
         "title": "kernel: ASoC: samsung: i2s: enable op_clk in probe to balance runtime PM"
+      },
+      {
+        "id": "CVE-2026-99091",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "LOW",
+        "title": "kernel: Bluetooth: MGMT: Fix status of pending commands flushed on power off"
       },
       {
         "id": "CVE-2026-99092",
@@ -38876,12 +39052,36 @@
         "title": "kernel: kernel: Denial of Service via race condition in tracing subsystem"
       },
       {
+        "id": "CVE-2026-99161",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "LOW",
+        "title": "kernel: kernel: Denial of service via clock resource leak in wmt_i2c_probe"
+      },
+      {
         "id": "CVE-2026-99172",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: ipc: drop the mqueue mount with kern_unmount() on setup failure"
+      },
+      {
+        "id": "CVE-2026-99191",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "LOW",
+        "title": "kernel: calipso: keep BIG TCP payload_len in calipso_skbuff_setattr()"
+      },
+      {
+        "id": "CVE-2026-99201",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "LOW",
+        "title": "kernel: kernel: Information disclosure via netlink network namespace pointer hashing"
       },
       {
         "id": "CVE-2026-99211",
@@ -38900,180 +39100,52 @@
         "title": "kernel: drm/vc4: hdmi: Move packet RAM enable to PM runtime"
       },
       {
-        "id": "TEMP-0000000-F7A20F",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "[Kernel: Unprivileged user can freeze journald]"
-      },
-      {
-        "id": "CVE-2026-99217",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[fork: release the files of a failed fork after sched_cancel_fork()]"
-      },
-      {
-        "id": "CVE-2026-99218",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[coredump: hold RCU while releasing parked threads]"
-      },
-      {
-        "id": "CVE-2026-99219",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[ftrace: Initialize modname and offset in print_rec()]"
-      },
-      {
-        "id": "CVE-2026-99220",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[asymmetric_keys: reject trust keys without IDs]"
-      },
-      {
         "id": "CVE-2026-99221",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys/trusted_keys: return immediately after TPM unseal failure]"
-      },
-      {
-        "id": "CVE-2026-99222",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys: Protect the read method check against type removal]"
+        "severity": "LOW",
+        "title": "kernel: kernel: invalid trusted key instantiation via unhandled TPM unseal failure"
       },
       {
         "id": "CVE-2026-99223",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys: make keyring indexes independent of kernel addresses]"
-      },
-      {
-        "id": "CVE-2026-99224",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys: Protect the type name while describing a key]"
-      },
-      {
-        "id": "CVE-2026-99225",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys: Check the authorization payload in process keyring searches]"
-      },
-      {
-        "id": "CVE-2026-99226",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[keys: Avoid the owner account dereference in named keyring lookup]"
-      },
-      {
-        "id": "CVE-2026-99227",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[io_uring/waitid: prevent cancel reference wrap]"
+        "severity": "LOW",
+        "title": "kernel: kernel: Information disclosure via predictable keyring index ordering"
       },
       {
         "id": "CVE-2026-99228",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[io_uring/io-wq: don't lose the signal that ends work]"
+        "severity": "LOW",
+        "title": "kernel: kernel: Denial of Service via io_uring worker hang during thread exit"
       },
       {
-        "id": "CVE-2026-99229",
+        "id": "CVE-2026-99244",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[io_uring/wait: don't spin on a stuck overflow list]"
+        "severity": "LOW",
+        "title": "kernel: kernel: Denial of Service via busy-wait loop during PID namespace cleanup"
       },
       {
-        "id": "CVE-2026-99230",
+        "id": "CVE-2026-99245",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[io_uring/cmd: don't leave list poison in ->hash_node]"
+        "severity": "LOW",
+        "title": "kernel: kernel: Keyring restriction bypass via race condition in key_reject_and_link()"
       },
       {
-        "id": "CVE-2026-99231",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[io_uring/waitid: own the request before clearing ->head]"
-      },
-      {
-        "id": "CVE-2026-99233",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[tracing/histograms: Verify event_call identity when updating synth_event refcount]"
-      },
-      {
-        "id": "CVE-2026-99234",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[tracing: Unregister field variable histograms when the command fails]"
-      },
-      {
-        "id": "CVE-2026-99235",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[tracing: Save the event file instead of the compatible histogram]"
-      },
-      {
-        "id": "CVE-2026-99236",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[tracing: Reject incomplete event filter expressions]"
-      },
-      {
-        "id": "CVE-2026-99239",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "UNKNOWN",
-        "title": "[Bluetooth: L2CAP: refuse __l2cap_chan_add if chan already has conn]"
-      },
-      {
-        "id": "CVE-2026-99240",
+        "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[mm/damon/core: error damos_commit_quota_goal() for zero target_value]"
+        "severity": "LOW",
+        "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
         "id": "CVE-2026-53612",
@@ -40273,7 +40345,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -40345,7 +40417,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -40473,7 +40545,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -40545,7 +40617,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -40673,7 +40745,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -40745,7 +40817,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -40873,7 +40945,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -40945,7 +41017,7 @@
         "installedVersion": "3.13.5-2+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -41340,6 +41412,14 @@
         "title": "[GHSA-5qpq-xqfv-j9pg: Invalid write if a decoder is reinitialized after allocation failure]"
       },
       {
+        "id": "CVE-2026-76844",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
+      },
+      {
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
@@ -41354,6 +41434,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
+      },
+      {
+        "id": "CVE-2026-76844",
+        "pkg": "zlib1g-dev",
+        "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
       {
         "id": "CVE-2026-27171",
@@ -42254,7 +42342,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "CRITICAL",
-        "title": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, multi-fr ..."
+        "title": "pillow: Pillow multi-frame loaders can reuse stale native image storage after mode transitions"
       },
       {
         "id": "CVE-2026-112390",
@@ -42382,7 +42470,7 @@
         "installedVersion": "12.3.0",
         "fixedVersion": "13.0.0",
         "severity": "HIGH",
-        "title": " Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
+        "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
         "id": "CVE-2026-96637",
@@ -42774,7 +42862,7 @@
         "installedVersion": "8.1.0",
         "fixedVersion": "9.0.5",
         "severity": "CRITICAL",
-        "title": "zip is a zip library for Rust that supports reading and writing simple ..."
+        "title": "zip2: zip: Critical Parser Differential & Security Control Bypass via Dual-Header Inconsistencies (Zip Cloaking) Leading to Arbitrary File Overwrite & RCE"
       },
       {
         "id": "CVE-2026-115907",
@@ -42942,7 +43030,7 @@
         "installedVersion": "8.1.0",
         "fixedVersion": "9.0.5",
         "severity": "CRITICAL",
-        "title": "zip is a zip library for Rust that supports reading and writing simple ..."
+        "title": "zip2: zip: Critical Parser Differential & Security Control Bypass via Dual-Header Inconsistencies (Zip Cloaking) Leading to Arbitrary File Overwrite & RCE"
       },
       {
         "id": "CVE-2026-115907",

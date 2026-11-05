@@ -1,8 +1,16 @@
 {
-  "scannedAt": "2026-11-03T07:36:27.631Z",
+  "scannedAt": "2026-11-05T07:45:24.641Z",
   "system": {
-    "total": 473,
+    "total": 475,
     "cves": [
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "apt",
+        "installedVersion": "2.6.1",
+        "fixedVersion": "2.6.2",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+      },
       {
         "id": "CVE-2011-3374",
         "pkg": "apt",
@@ -538,6 +546,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2026-109518",
+        "pkg": "libapt-pkg6.0",
+        "installedVersion": "2.6.1",
+        "fixedVersion": "2.6.2",
+        "severity": "HIGH",
+        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
       },
       {
         "id": "CVE-2011-3374",
@@ -1524,12 +1540,20 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-117610",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u5",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a NULL pointer dereference vulnerabili ..."
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
       },
       {
         "id": "CVE-2026-118370",
@@ -1537,7 +1561,7 @@
         "installedVersion": "2.5.0-1+deb12u5",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "libexpat through 2.9.0 contains a signed integer overflow vulnerabilit ..."
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2025-66382",
@@ -1546,14 +1570,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
       },
       {
         "id": "CVE-2023-52426",
@@ -1682,14 +1698,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
-      },
-      {
-        "id": "CVE-2026-95209",
-        "pkg": "libgnutls30",
-        "installedVersion": "3.7.9-2+deb12u7",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "gnutls: gnutls: legitimate CA certificates incorrectly rejected causing denial of service"
       },
       {
         "id": "CVE-2026-95210",
@@ -2217,7 +2225,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -2249,7 +2257,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -2337,7 +2345,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -2369,7 +2377,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -2532,6 +2540,14 @@
         "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
       },
       {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
+      },
+      {
         "id": "CVE-2026-119371",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.40.1-2+deb12u2",
@@ -2570,14 +2586,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119377",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
       },
       {
         "id": "CVE-2026-119379",
@@ -3441,7 +3449,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -3473,7 +3481,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -3561,7 +3569,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "tarfile.tar_filter could be bypassed using crafted link entries, inclu ..."
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
       },
       {
         "id": "CVE-2026-11972",
@@ -3593,7 +3601,7 @@
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Python has added a denylist for known compromised certificates to the  ..."
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
       },
       {
         "id": "CVE-2026-12003",
@@ -3770,6 +3778,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
+      },
+      {
+        "id": "CVE-2026-76844",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.2.13.dfsg-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
       {
         "id": "CVE-2026-27171",
