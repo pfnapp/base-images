@@ -95,13 +95,18 @@
       "image": "openclaw/openclaw",
       "tag_pattern": "^[0-9]{4}\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "2026.11.1",
         "2026.10.10",
         "2026.10.9",
         "2026.10.8",
-        "2026.10.7",
-        "2026.10.6"
+        "2026.10.7"
       ],
       "deprecated_versions": [
+        {
+          "tag": "2026.10.6",
+          "droppedAt": "2026-11-05",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2026.11.1 immediately."
+        },
         {
           "tag": "2026.10.5",
           "droppedAt": "2026-11-03",
@@ -328,13 +333,18 @@
       "image": "stirlingtools/stirling-pdf",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "3.3.0",
         "3.2.2",
         "3.2.1",
         "3.2.0",
-        "3.1.0",
-        "3.0.2"
+        "3.1.0"
       ],
       "deprecated_versions": [
+        {
+          "tag": "3.0.2",
+          "droppedAt": "2026-11-05",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 3.3.0 immediately."
+        },
         {
           "tag": "3.0.0",
           "droppedAt": "2026-10-24",
