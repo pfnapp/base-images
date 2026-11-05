@@ -9,8 +9,8 @@ RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o healthcheck healthcheck.go
 FROM upstream
 COPY --from=healthcheck-builder /src/healthcheck /app/extra/healthcheck
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends --only-upgrade cloudflared && \
     apt-get upgrade -y --no-install-recommends && \
+    apt-get install -y --no-install-recommends --only-upgrade cloudflared && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
     cd /app && \
@@ -24,12 +24,13 @@ RUN apt-get update && \
         "ws":"^8.21.0", \
         "mysql2":"^3.22.0", \
         "liquidjs":"^10.27.2", \
-        "nodemailer":"^8.0.8" }; \
+        "nodemailer":"^10.0.6" }; \
       pkg.overrides = { ...pkg.overrides, \
         "@azure/msal-node":"^7.1.0", \
         "@grpc/grpc-js":"^1.14.5", \
         "axios":"^1.20.0", \
         "body-parser":"^1.20.9", \
+        "follow-redirects":"^1.16.2", \
         "glob":"^10.5.0", \
         "lodash":"^4.18.0", \
         "minimatch":"^9.0.6", \
