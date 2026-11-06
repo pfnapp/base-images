@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-05T07:48:27.121Z",
+  "scannedAt": "2026-11-06T07:43:44.272Z",
   "system": {
-    "total": 38,
+    "total": 36,
     "cves": [
       {
         "id": "CVE-2026-33630",
@@ -36,6 +36,14 @@
         "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
       },
       {
+        "id": "CVE-2026-1965",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Authentication bypass due to incorrect connection reuse with Negotiate authentication"
+      },
+      {
         "id": "CVE-2026-3783",
         "pkg": "curl",
         "installedVersion": "8.14.1-r2",
@@ -122,22 +130,6 @@
         "fixedVersion": "8.14.1-r4",
         "severity": "LOW",
         "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
-      },
-      {
-        "id": "CVE-2026-1965_1",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-r2",
-        "fixedVersion": "8.14.1-r4",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-1965_1"
-      },
-      {
-        "id": "CVE-2026-1965_2",
-        "pkg": "curl",
-        "installedVersion": "8.14.1-r2",
-        "fixedVersion": "8.14.1-r4",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-1965_2"
       },
       {
         "id": "CVE-2026-5773",
@@ -164,6 +156,14 @@
         "title": "curl: Public key pinning bypass via QUIC and GnuTLS allows server impersonation"
       },
       {
+        "id": "CVE-2026-1965",
+        "pkg": "libcurl",
+        "installedVersion": "8.14.1-r2",
+        "fixedVersion": "8.14.1-r4",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Authentication bypass due to incorrect connection reuse with Negotiate authentication"
+      },
+      {
         "id": "CVE-2026-3783",
         "pkg": "libcurl",
         "installedVersion": "8.14.1-r2",
@@ -252,22 +252,6 @@
         "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
       },
       {
-        "id": "CVE-2026-1965_1",
-        "pkg": "libcurl",
-        "installedVersion": "8.14.1-r2",
-        "fixedVersion": "8.14.1-r4",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-1965_1"
-      },
-      {
-        "id": "CVE-2026-1965_2",
-        "pkg": "libcurl",
-        "installedVersion": "8.14.1-r2",
-        "fixedVersion": "8.14.1-r4",
-        "severity": "UNKNOWN",
-        "title": "CVE-2026-1965_2"
-      },
-      {
         "id": "CVE-2026-40930",
         "pkg": "libpng",
         "installedVersion": "1.6.57-r0",
@@ -289,7 +273,7 @@
         "installedVersion": "1.2.5-r12",
         "fixedVersion": "1.2.5-r13",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
       },
       {
         "id": "CVE-2026-107891",
@@ -297,15 +281,15 @@
         "installedVersion": "1.2.5-r12",
         "fixedVersion": "1.2.5-r13",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
       },
       {
         "id": "CVE-2026-85091",
         "pkg": "zlib",
         "installedVersion": "1.3.2-r0",
         "fixedVersion": "1.3.2-r1",
-        "severity": "MEDIUM",
-        "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
+        "severity": "HIGH",
+        "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
       }
     ]
   },
@@ -582,7 +566,7 @@
         "installedVersion": "v1.81.1",
         "fixedVersion": "1.83.1",
         "severity": "MEDIUM",
-        "title": "gRPC-Go is the Go language implementation of gRPC. Prior to 1.83.1, th ..."
+        "title": "github.com/grpc/grpc-go: gRPC-Go: RBAC policy bypass and validation evasion via mixed-case header matching"
       },
       {
         "id": "CVE-2026-33818",
@@ -748,7 +732,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "6.4.50, 7.1.0, 7.2.0, 7.4.0, 8.1.11, 5.2.0, 7.3.0, 8.1.0, 3.0.0, 4.0.0, 5.0.0, 5.4.56, 6.1.0, 6.3.0, 7.4.23, 5.1.0, 5.3.0, 5.4.0, 6.2.0, 6.4.0",
+        "fixedVersion": "8.1.0, 7.1.0, 5.0.0, 6.4.0, 7.4.0, 8.1.11, 3.0.0, 4.0.0, 5.1.0, 5.3.0, 5.4.0, 6.1.0, 6.4.50, 7.2.0, 5.2.0, 5.4.56, 6.2.0, 6.3.0, 7.3.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "CVE-2026-118514: HEAD Requests Bypass the methods Option of security.access_control Rules and Firewalls: Incomplete Fix for CVE-2026-45075"
       }

@@ -1,20 +1,12 @@
 {
-  "scannedAt": "2026-11-05T07:49:05.845Z",
+  "scannedAt": "2026-11-06T07:44:20.552Z",
   "system": {
-    "total": 304,
+    "total": 302,
     "cves": [
-      {
-        "id": "CVE-2026-109518",
-        "pkg": "apt",
-        "installedVersion": "2.6.1",
-        "fixedVersion": "2.6.2",
-        "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
-      },
       {
         "id": "CVE-2011-3374",
         "pkg": "apt",
-        "installedVersion": "2.6.1",
+        "installedVersion": "2.6.2",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "It was found that apt-key in apt, all versions, do not correctly valid ..."
@@ -500,17 +492,9 @@
         "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
       },
       {
-        "id": "CVE-2026-109518",
-        "pkg": "libapt-pkg6.0",
-        "installedVersion": "2.6.1",
-        "fixedVersion": "2.6.2",
-        "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
-      },
-      {
         "id": "CVE-2011-3374",
         "pkg": "libapt-pkg6.0",
-        "installedVersion": "2.6.1",
+        "installedVersion": "2.6.2",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "It was found that apt-key in apt, all versions, do not correctly valid ..."
@@ -1756,12 +1740,60 @@
         "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
       },
       {
+        "id": "CVE-2026-119374",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index"
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via crafted session changesets"
+      },
+      {
         "id": "CVE-2025-7709",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.40.1-2+deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "An integer overflow exists in the  FTS5 https://sqlite.org/fts5.html e ..."
+      },
+      {
+        "id": "CVE-2026-119371",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from deeply nested Common Table Expressions"
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in full-text search"
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Information disclosure via undersized WAL page size"
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.40.1-2+deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from chained COLLATE operators"
       },
       {
         "id": "CVE-2026-119378",
@@ -1825,55 +1857,7 @@
         "installedVersion": "3.40.1-2+deb12u2",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
-      },
-      {
-        "id": "CVE-2026-119371",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119372",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with FTS3/FTS4 and SQLITE_ENABLE_FTS3_PAREN ..."
-      },
-      {
-        "id": "CVE-2026-119374",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow i ..."
-      },
-      {
-        "id": "CVE-2026-119375",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an information disclosure vulnerability  ..."
-      },
-      {
-        "id": "CVE-2026-119376",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119379",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.40.1-2+deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with the session extension contains a heap  ..."
+        "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
         "id": "CVE-2025-27587",
@@ -2420,20 +2404,20 @@
         "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
       {
+        "id": "CVE-2026-85091",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.2.13.dfsg-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
+      },
+      {
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.2.13.dfsg-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
-      },
-      {
-        "id": "CVE-2026-85091",
-        "pkg": "zlib1g",
-        "installedVersion": "1:1.2.13.dfsg-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
       }
     ]
   },

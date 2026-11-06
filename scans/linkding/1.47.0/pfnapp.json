@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-05T07:48:00.843Z",
+  "scannedAt": "2026-11-06T07:43:22.301Z",
   "system": {
     "total": 1276,
     "cves": [
@@ -2052,6 +2052,54 @@
         "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
       },
       {
+        "id": "CVE-2026-119374",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index"
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via crafted session changesets"
+      },
+      {
+        "id": "CVE-2026-119371",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from deeply nested Common Table Expressions"
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in full-text search"
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Information disclosure via undersized WAL page size"
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from chained COLLATE operators"
+      },
+      {
         "id": "CVE-2026-119378",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.46.1-7+deb13u2",
@@ -2105,55 +2153,7 @@
         "installedVersion": "3.46.1-7+deb13u2",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "SQLite before 3.54.0 contains an authorization bypass vulnerability in ..."
-      },
-      {
-        "id": "CVE-2026-119371",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119372",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with FTS3/FTS4 and SQLITE_ENABLE_FTS3_PAREN ..."
-      },
-      {
-        "id": "CVE-2026-119374",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow i ..."
-      },
-      {
-        "id": "CVE-2026-119375",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains an information disclosure vulnerability  ..."
-      },
-      {
-        "id": "CVE-2026-119376",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that al ..."
-      },
-      {
-        "id": "CVE-2026-119379",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7+deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQLite before 3.54.0 built with the session extension contains a heap  ..."
+        "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
         "id": "CVE-2026-102010",
@@ -2716,14 +2716,6 @@
         "title": "kernel: nfsd: fix UAF in async copy cancel and shutdown"
       },
       {
-        "id": "CVE-2026-89788",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
         "id": "CVE-2026-89811",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -2754,14 +2746,6 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: PCI/sysfs: Add lockdown checks to legacy I/O and memory handlers"
-      },
-      {
-        "id": "CVE-2026-98084",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
       },
       {
         "id": "CVE-2026-98118",
@@ -5561,7 +5545,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  b ..."
+        "title": "kernel: btrfs: initialize inode mapping flags for cached inodes"
       },
       {
         "id": "CVE-2026-80738",
@@ -5756,6 +5740,14 @@
         "title": "kernel: mm/mglru: fix and remove redundant unevictable folio handling"
       },
       {
+        "id": "CVE-2026-89788",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: ksmbd: fix tree connection use-after-free in smb2_tree_connect()"
+      },
+      {
         "id": "CVE-2026-89810",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -5769,7 +5761,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: drm/panthor: harden firmware build-info bounds checks"
       },
       {
         "id": "CVE-2026-89833",
@@ -5777,7 +5769,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: f2fs: fix to avoid potential deadloop in f2fs_fsync_node_pages()"
       },
       {
         "id": "CVE-2026-89866",
@@ -5785,7 +5777,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: media: chips-media: wave5: Resume device before setting EOS flag"
       },
       {
         "id": "CVE-2026-89906",
@@ -5793,7 +5785,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  L ..."
+        "title": "kernel: LoongArch: BPF: Refactor jump offset calculation in tail call"
       },
       {
         "id": "CVE-2026-89913",
@@ -6834,6 +6826,14 @@
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
         "title": "kernel: bpf: Mark signal tracepoint siginfo arguments as scalar"
+      },
+      {
+        "id": "CVE-2026-98084",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: bpf: backtracking shouldn't clear outer frame R1-R5 for callbacks"
       },
       {
         "id": "CVE-2026-98085",
@@ -8268,20 +8268,12 @@
         "title": "In the Linux kernel, the following vulnerability has been resolved:  D ..."
       },
       {
-        "id": "CVE-2026-99254",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
-      },
-      {
         "id": "CVE-2026-99255",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: kernel: Denial of Service via race condition in io_uring task cancellation"
       },
       {
         "id": "CVE-2026-99256",
@@ -8289,7 +8281,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  d ..."
+        "title": "kernel: kernel: Denial of Service via improper lock ownership handling in dm-cache"
       },
       {
         "id": "CVE-2026-99258",
@@ -8297,7 +8289,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+        "title": "kernel: kernel: hyperv: Memory corruption via unallocated hypercall output page"
       },
       {
         "id": "CVE-2026-99270",
@@ -8305,7 +8297,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+        "title": "kernel: kernel: Denial of Service via use-after-free in TCP socket migration"
       },
       {
         "id": "CVE-2004-0230",
@@ -9996,6 +9988,14 @@
         "title": "kernel: kernel: Keyring restriction bypass via race condition in key_reject_and_link()"
       },
       {
+        "id": "CVE-2026-99254",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "LOW",
+        "title": "kernel: kernel: Denial of Service via task_work flood during cancellation in io_uring"
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -10196,20 +10196,20 @@
         "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
       {
+        "id": "CVE-2026-85091",
+        "pkg": "zlib1g",
+        "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
+      },
+      {
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
-      },
-      {
-        "id": "CVE-2026-85091",
-        "pkg": "zlib1g",
-        "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "zlib versions 1.3.1.2 through 1.3.2 contain a heap buffer overflow vul ..."
       }
     ]
   },

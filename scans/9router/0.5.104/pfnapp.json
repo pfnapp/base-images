@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-05T07:43:42.932Z",
+  "scannedAt": "2026-11-06T07:40:01.521Z",
   "system": {
     "total": 2,
     "cves": [
@@ -9,7 +9,7 @@
         "installedVersion": "1.2.6-r2",
         "fixedVersion": "1.2.6-r3",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
       },
       {
         "id": "CVE-2026-107891",
@@ -17,7 +17,7 @@
         "installedVersion": "1.2.6-r2",
         "fixedVersion": "1.2.6-r3",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
       }
     ]
   },
@@ -30,7 +30,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "HIGH",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Denial of Service via inefficient regular expression in PEM decoding"
       },
       {
         "id": "CVE-2026-118782",
@@ -38,7 +38,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "HIGH",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Integrity verification bypass via zero iteration count in PKCS#12 handling"
       },
       {
         "id": "CVE-2026-119187",
@@ -62,7 +62,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "HIGH",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Server or client impersonation via improper handling of deprecated certificate extensions"
       },
       {
         "id": "CVE-2026-85393",
@@ -78,7 +78,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "MEDIUM",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Prototype pollution via crafted HTTP cookie headers"
       },
       {
         "id": "CVE-2026-118778",
@@ -94,7 +94,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "MEDIUM",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Cryptographic authentication bypass via unvalidated AES-GCM tag length"
       },
       {
         "id": "CVE-2026-118775",
@@ -102,7 +102,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "LOW",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Authorization bypass via improper OID encoding"
       },
       {
         "id": "CVE-2026-118780",
@@ -110,7 +110,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "LOW",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Denial of Service via trusted certificate removal during chain verification"
       },
       {
         "id": "CVE-2026-118781",
@@ -118,7 +118,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "LOW",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Denial of Service via infinite loop on negative input"
       },
       {
         "id": "CVE-2025-58063",
@@ -670,7 +670,7 @@
         "installedVersion": "v1.72.2",
         "fixedVersion": "1.83.1",
         "severity": "MEDIUM",
-        "title": "gRPC-Go is the Go language implementation of gRPC. Prior to 1.83.1, th ..."
+        "title": "github.com/grpc/grpc-go: gRPC-Go: RBAC policy bypass and validation evasion via mixed-case header matching"
       },
       {
         "id": "CVE-2025-68121",
@@ -1297,14 +1297,6 @@
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
       },
       {
-        "id": "CVE-2026-46602",
-        "pkg": "golang.org/x/image",
-        "installedVersion": "v0.27.0",
-        "fixedVersion": "0.43.0",
-        "severity": "HIGH",
-        "title": "The TIFF decoder does not set a limit on the size of tiles in tiled im ..."
-      },
-      {
         "id": "CVE-2026-46603",
         "pkg": "golang.org/x/image",
         "installedVersion": "v0.27.0",
@@ -1359,6 +1351,14 @@
         "fixedVersion": "0.43.0",
         "severity": "MEDIUM",
         "title": "golang.org/x/image/webp: golang.org/x/image/webp: Denial of Service via malformed VP8 chunk in WebP images"
+      },
+      {
+        "id": "CVE-2026-46602",
+        "pkg": "golang.org/x/image",
+        "installedVersion": "v0.27.0",
+        "fixedVersion": "0.43.0",
+        "severity": "MEDIUM",
+        "title": "golang.org/x/image: golang.org/x/image: Denial of Service due to unbounded memory consumption in TIFF decoder"
       },
       {
         "id": "CVE-2026-46604",
