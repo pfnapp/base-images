@@ -1,5 +1,5 @@
 # PFNApp hardened image for OmniRoute
-ARG TAG=3.8.52
+ARG TAG=3.8.53
 
 FROM docker.io/diegosouzapw/omniroute:${TAG}
 USER root
