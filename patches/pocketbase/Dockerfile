@@ -1,12 +1,12 @@
 # PFNApp hardened image for PocketBase 0.40.5
-# Recompiles binary with patched golang.org/x/net to eliminate CVE-2026-78669.
+# Recompiles with patched golang.org/x/net to address CVE-2026-78661.
 
 FROM golang:1.27-alpine AS builder
 RUN apk add --no-cache git
 WORKDIR /src
 RUN git clone --depth 1 --branch v0.40.5 https://github.com/pocketbase/pocketbase.git . && \
     cd examples/base && \
-    go get golang.org/x/net@v0.60.0 && \
+    go get golang.org/x/net@v0.62.0 && \
     go mod download && \
     CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/pocketbase
 
