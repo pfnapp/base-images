@@ -1,8 +1,17 @@
 {
-  "scannedAt": "2026-11-06T07:43:18.133Z",
+  "scannedAt": "2026-11-07T06:56:29.246Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 1,
+    "cves": [
+      {
+        "id": "CVE-2026-4738",
+        "pkg": "zlib",
+        "installedVersion": "1.3.2-r1",
+        "fixedVersion": "1.4-r0",
+        "severity": "MEDIUM",
+        "title": "Improper Restriction of Operations within the Bounds of a Memory Buffe ..."
+      }
+    ]
   },
   "app": {
     "total": 4,
@@ -28,16 +37,16 @@
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.60.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "When coalescing adjacent text nodes in addText and fosterParent, appen ..."
+        "severity": "HIGH",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input"
       },
       {
         "id": "CVE-2026-97045",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.60.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "In childTextNodesAreLiteral, walking up the tree previously stopped at ..."
+        "severity": "MEDIUM",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-06T07:43:49.181Z",
+  "scannedAt": "2026-11-07T06:57:11.052Z",
   "system": {
-    "total": 23,
+    "total": 24,
     "cves": [
       {
         "id": "CVE-2026-14456",
@@ -168,16 +168,16 @@
         "pkg": "musl",
         "installedVersion": "1.2.6-r2",
         "fixedVersion": "1.2.6-r3",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-107891",
         "pkg": "musl-utils",
         "installedVersion": "1.2.6-r2",
         "fixedVersion": "1.2.6-r3",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-85091",
@@ -186,6 +186,14 @@
         "fixedVersion": "1.3.2-r1",
         "severity": "HIGH",
         "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
+      },
+      {
+        "id": "CVE-2026-4738",
+        "pkg": "zlib",
+        "installedVersion": "1.3.2-r0",
+        "fixedVersion": "1.4-r0",
+        "severity": "MEDIUM",
+        "title": "Improper Restriction of Operations within the Bounds of a Memory Buffe ..."
       }
     ]
   },

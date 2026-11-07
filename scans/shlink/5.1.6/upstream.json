@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-06T07:43:46.135Z",
+  "scannedAt": "2026-11-07T06:57:07.403Z",
   "system": {
     "total": 36,
     "cves": [
@@ -272,16 +272,16 @@
         "pkg": "musl",
         "installedVersion": "1.2.5-r12",
         "fixedVersion": "1.2.5-r13",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-107891",
         "pkg": "musl-utils",
         "installedVersion": "1.2.5-r12",
         "fixedVersion": "1.2.5-r13",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-85091",
@@ -473,6 +473,14 @@
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
       },
       {
+        "id": "CVE-2026-78661",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.56.0",
+        "fixedVersion": "0.62.0",
+        "severity": "HIGH",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input"
+      },
+      {
         "id": "CVE-2026-78659",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.56.0",
@@ -505,20 +513,12 @@
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
       },
       {
-        "id": "CVE-2026-78661",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.56.0",
-        "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "When coalescing adjacent text nodes in addText and fosterParent, appen ..."
-      },
-      {
         "id": "CVE-2026-97045",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.56.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "In childTextNodesAreLiteral, walking up the tree previously stopped at ..."
+        "severity": "MEDIUM",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
       },
       {
         "id": "CVE-2026-56851",
@@ -732,7 +732,7 @@
         "id": "CVE-2026-108082",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "7.4.19, 8.1.0, 8.1.7, 6.2.0, 6.3.0, 6.4.46, 7.1.0, 7.2.0, 5.4.54, 6.1.0, 6.4.0, 7.3.0, 7.4.0",
+        "fixedVersion": "7.2.0, 7.4.19, 8.1.0, 8.1.7, 6.1.0, 6.3.0, 6.4.0, 7.1.0, 7.3.0, 7.4.0, 5.4.54, 6.2.0, 6.4.46",
         "severity": "HIGH",
         "title": "symfony/http-foundation: symfony/http-foundation: Denial of Service via crafted HTTP headers"
       },
@@ -740,9 +740,9 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "8.1.0, 7.1.0, 5.0.0, 6.4.0, 7.4.0, 8.1.11, 3.0.0, 4.0.0, 5.1.0, 5.3.0, 5.4.0, 6.1.0, 6.4.50, 7.2.0, 5.2.0, 5.4.56, 6.2.0, 6.3.0, 7.3.0, 7.4.23",
+        "fixedVersion": "7.2.0, 7.4.0, 7.4.23, 8.1.11, 6.3.0, 4.0.0, 6.2.0, 6.4.0, 7.1.0, 7.3.0, 8.1.0, 6.1.0, 6.4.50, 3.0.0, 5.0.0, 5.1.0, 5.2.0, 5.3.0, 5.4.0, 5.4.56",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-118514: HEAD Requests Bypass the methods Option of security.access_control Rules and Firewalls: Incomplete Fix for CVE-2026-45075"
+        "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       }
     ]
   }

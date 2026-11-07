@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-06T07:39:23.333Z",
+  "scannedAt": "2026-11-07T06:50:23.035Z",
   "system": {
-    "total": 2129,
+    "total": 2134,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -17,7 +17,7 @@
         "installedVersion": "2.6.1",
         "fixedVersion": "2.6.2",
         "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+        "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
         "id": "CVE-2011-3374",
@@ -3028,6 +3028,22 @@
         "title": "chromium-browser: skia: Use after free in Skia"
       },
       {
+        "id": "CVE-2026-120930",
+        "pkg": "chromium",
+        "installedVersion": "155.0.8059.79-1~deb12u1",
+        "fixedVersion": "156.0.8078.47-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Incorrect authorization in Blink"
+      },
+      {
+        "id": "CVE-2026-120931",
+        "pkg": "chromium",
+        "installedVersion": "155.0.8059.79-1~deb12u1",
+        "fixedVersion": "156.0.8078.47-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Out of bounds write in WebGL"
+      },
+      {
         "id": "CVE-2026-121032",
         "pkg": "chromium",
         "installedVersion": "155.0.8059.79-1~deb12u1",
@@ -8220,6 +8236,22 @@
         "title": "chromium-browser: skia: Use after free in Skia"
       },
       {
+        "id": "CVE-2026-120930",
+        "pkg": "chromium-common",
+        "installedVersion": "155.0.8059.79-1~deb12u1",
+        "fixedVersion": "156.0.8078.47-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Incorrect authorization in Blink"
+      },
+      {
+        "id": "CVE-2026-120931",
+        "pkg": "chromium-common",
+        "installedVersion": "155.0.8059.79-1~deb12u1",
+        "fixedVersion": "156.0.8078.47-1~deb12u1",
+        "severity": "HIGH",
+        "title": "chromium-browser: Out of bounds write in WebGL"
+      },
+      {
         "id": "CVE-2026-121032",
         "pkg": "chromium-common",
         "installedVersion": "155.0.8059.79-1~deb12u1",
@@ -10953,7 +10985,7 @@
         "installedVersion": "2.6.1",
         "fixedVersion": "2.6.2",
         "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+        "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
         "id": "CVE-2011-3374",
@@ -16012,6 +16044,14 @@
         "title": "oauthlib: oauthlib: privilege escalation via client identity confusion in token grant handlers"
       },
       {
+        "id": "CVE-2026-49272",
+        "pkg": "python3-oauthlib",
+        "installedVersion": "3.2.2-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "oauthlib: oauthlib: Authentication bypass via missing device code validation"
+      },
+      {
         "id": "CVE-2026-49264",
         "pkg": "python3-oauthlib",
         "installedVersion": "3.2.2-1",
@@ -18557,16 +18597,16 @@
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.61.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "When coalescing adjacent text nodes in addText and fosterParent, appen ..."
+        "severity": "HIGH",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input"
       },
       {
         "id": "CVE-2026-97045",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.61.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "In childTextNodesAreLiteral, walking up the tree previously stopped at ..."
+        "severity": "MEDIUM",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
       }
     ]
   }

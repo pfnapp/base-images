@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-06T07:43:38.558Z",
+  "scannedAt": "2026-11-07T06:56:58.358Z",
   "system": {
-    "total": 4304,
+    "total": 4308,
     "cves": [
       {
         "id": "CVE-2026-46729",
@@ -225,7 +225,7 @@
         "installedVersion": "3.0.3",
         "fixedVersion": "3.0.4",
         "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+        "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
         "id": "CVE-2011-3374",
@@ -241,7 +241,7 @@
         "installedVersion": "3.0.3",
         "fixedVersion": "3.0.4",
         "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+        "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
         "id": "CVE-2011-3374",
@@ -3065,7 +3065,7 @@
         "installedVersion": "3.0.3",
         "fixedVersion": "3.0.4",
         "severity": "HIGH",
-        "title": "On Debian, Ubuntu, and derivative Linux distributions, an on-path atta ..."
+        "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
         "id": "CVE-2011-3374",
@@ -33076,6 +33076,30 @@
         "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
+        "id": "CVE-2026-100080",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-100081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
+        "id": "CVE-2026-100082",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+      },
+      {
         "id": "CVE-2026-3184",
         "pkg": "login",
         "installedVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
@@ -33362,6 +33386,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssh: OpenSSH: Improper access control via misinterpretation of disabled configuration options"
+      },
+      {
+        "id": "CVE-2026-123158",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: Password authentication bypass via password hash misinterpretation"
       },
       {
         "id": "CVE-2026-55654",
@@ -35134,7 +35166,7 @@
         "installedVersion": "3.29.0",
         "fixedVersion": "4.2.1",
         "severity": "MEDIUM",
-        "title": "filelock: WindowsFileLock ignores mode: a 0o600 lock file and the ReadWriteLock database inherit the directory ACL"
+        "title": "filelock: filelock: Denial of Service via improper lock file permissions on Windows"
       },
       {
         "id": "CVE-2026-112915",
@@ -35174,7 +35206,7 @@
         "installedVersion": "3.29.0",
         "fixedVersion": "4.2.1",
         "severity": "LOW",
-        "title": "filelock: On Windows an oplock on a soft lock's marker holds SoftFileLock.acquire() past its timeout and blocks the stale break"
+        "title": "filelock: filelock: Denial of Service via Windows opportunistic lock on lock markers"
       },
       {
         "id": "CVE-2026-112913",
@@ -35182,7 +35214,7 @@
         "installedVersion": "3.29.0",
         "fixedVersion": "4.2.1",
         "severity": "LOW",
-        "title": "filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database"
+        "title": "filelock: filelock: Denial of service via pre-created SQLite side files"
       },
       {
         "id": "CVE-2026-13346",

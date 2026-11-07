@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-06T07:42:30.934Z",
+  "scannedAt": "2026-11-07T06:55:16.315Z",
   "system": {
     "total": 23,
     "cves": [
@@ -168,16 +168,16 @@
         "pkg": "musl",
         "installedVersion": "1.2.5-r11",
         "fixedVersion": "1.2.5-r12",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-107891",
         "pkg": "musl-utils",
         "installedVersion": "1.2.5-r11",
         "fixedVersion": "1.2.5-r12",
-        "severity": "UNKNOWN",
-        "title": "musl libc before 1.2.7, when an untrusted regular expression is u ..."
+        "severity": "HIGH",
+        "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
         "id": "CVE-2026-85091",
@@ -297,6 +297,14 @@
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
       },
       {
+        "id": "CVE-2026-78661",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.58.0",
+        "fixedVersion": "0.62.0",
+        "severity": "HIGH",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input"
+      },
+      {
         "id": "CVE-2026-78659",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.58.0",
@@ -329,20 +337,12 @@
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
       },
       {
-        "id": "CVE-2026-78661",
-        "pkg": "golang.org/x/net",
-        "installedVersion": "v0.58.0",
-        "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "When coalescing adjacent text nodes in addText and fosterParent, appen ..."
-      },
-      {
         "id": "CVE-2026-97045",
         "pkg": "golang.org/x/net",
         "installedVersion": "v0.58.0",
         "fixedVersion": "0.62.0",
-        "severity": "UNKNOWN",
-        "title": "In childTextNodesAreLiteral, walking up the tree previously stopped at ..."
+        "severity": "MEDIUM",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
       },
       {
         "id": "CVE-2026-84445",
