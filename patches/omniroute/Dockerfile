@@ -1,8 +1,8 @@
-# PFNApp hardened image for OmniRoute
 ARG TAG=3.8.53
-
 FROM docker.io/diegosouzapw/omniroute:${TAG}
+
 USER root
+
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get autoremove -y && \
@@ -19,4 +19,5 @@ RUN apt-get update && \
            /usr/local/bin/npx \
            /root/.npm \
            /root/.cache
+
 USER node
