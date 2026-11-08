@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-07T06:54:59.768Z",
+  "scannedAt": "2026-11-08T06:59:06.726Z",
   "system": {
-    "total": 1187,
+    "total": 1196,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -836,6 +836,14 @@
         "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
+        "id": "CVE-2026-115456",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
         "id": "CVE-2018-1000021",
         "pkg": "git",
         "installedVersion": "1:2.47.3-0+deb13u1",
@@ -1026,6 +1034,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libatomic1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-54371",
@@ -4316,6 +4332,14 @@
         "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
       },
       {
+        "id": "CVE-2026-120749",
+        "pkg": "libdbus-1-3",
+        "installedVersion": "1.16.2-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
         "id": "CVE-2024-25260",
         "pkg": "libelf1t64",
         "installedVersion": "0.192-4",
@@ -4460,6 +4484,14 @@
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
       {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.8.3-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
         "id": "CVE-2026-95512",
         "pkg": "libfreetype6",
         "installedVersion": "2.13.3+dfsg-1+deb13u1",
@@ -4540,6 +4572,14 @@
         "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
+        "id": "CVE-2026-115456",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
         "id": "CVE-2026-16768",
         "pkg": "libgdk-pixbuf-2.0-0",
         "installedVersion": "2.42.12+dfsg-4+deb13u1",
@@ -4626,6 +4666,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgfortran5",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2023-45924",
@@ -4818,6 +4866,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-107708",
@@ -5554,6 +5610,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openjpeg: Malicious files can cause the program to enter a large loop"
+      },
+      {
+        "id": "TEMP-1153269-522F63",
+        "pkg": "libopenjp2-7",
+        "installedVersion": "2.5.3-2.1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Heap buffer overlfow in opj_j2k_read_sod]"
       },
       {
         "id": "CVE-2026-13757",
@@ -6698,6 +6762,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-58049",
@@ -9479,7 +9551,7 @@
         "id": "CVE-2026-76844",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "HIGH",
         "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
@@ -9487,7 +9559,7 @@
         "id": "CVE-2026-85091",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "HIGH",
         "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
       },
@@ -9495,7 +9567,7 @@
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "MEDIUM",
         "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
       }

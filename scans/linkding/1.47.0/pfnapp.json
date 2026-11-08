@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-07T06:56:34.851Z",
+  "scannedAt": "2026-11-08T07:00:06.107Z",
   "system": {
-    "total": 1279,
+    "total": 1291,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -442,6 +442,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-107708",
@@ -1588,6 +1596,14 @@
         "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
+        "id": "CVE-2026-115456",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
         "id": "CVE-2011-3389",
         "pkg": "libgnutls30t64",
         "installedVersion": "3.8.9-3+deb13u4",
@@ -2196,6 +2212,14 @@
         "title": "gcc: libstdc++ integer overflow in `new` operator"
       },
       {
+        "id": "CVE-2026-115456",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
         "id": "CVE-2026-15059",
         "pkg": "libsystemd0",
         "installedVersion": "257.13-1~deb13u1",
@@ -2442,14 +2466,6 @@
         "fixedVersion": "6.12.115-2",
         "severity": "HIGH",
         "title": "kernel: iommu/s390: Make attach succeed when the device was surprise removed"
-      },
-      {
-        "id": "CVE-2025-40025",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "kernel: f2fs: fix to do sanity check on node footer for non inode dnode"
       },
       {
         "id": "CVE-2025-68174",
@@ -2898,6 +2914,22 @@
         "fixedVersion": "6.12.115-1",
         "severity": "HIGH",
         "title": "kernel: kernel: Arbitrary code execution via use-after-free in TIPC subsystem"
+      },
+      {
+        "id": "CVE-2026-99272",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: kernel: out-of-bounds read in SMB client via crafted read response"
+      },
+      {
+        "id": "CVE-2026-99281",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Unauthorized network device access via missing permission checks on ownerless TUN/TAP devices"
       },
       {
         "id": "CVE-2019-15213",
@@ -3530,6 +3562,30 @@
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
         "title": "kernel: drm/msm: Recover HW before retire hung submit"
+      },
+      {
+        "id": "CVE-2026-100080",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: xen-netback: Denial of Service via use-after-free during queue teardown"
+      },
+      {
+        "id": "CVE-2026-100081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: xen-netback: Denial of Service via race condition during interface disconnect"
+      },
+      {
+        "id": "CVE-2026-100082",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: xen-blkback: Denial of Service via race condition reading I/O statistics"
       },
       {
         "id": "CVE-2026-23007",
@@ -5073,7 +5129,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-2",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  R ..."
+        "title": "kernel: RDMA/bnxt_re: Initialize dpi variable to zero"
       },
       {
         "id": "CVE-2026-74257",
@@ -7092,14 +7148,6 @@
         "title": "kernel: ksmbd: follow SMB2 session expiration semantics"
       },
       {
-        "id": "CVE-2026-98436",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  a ..."
-      },
-      {
         "id": "CVE-2026-98439",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -8300,6 +8348,46 @@
         "title": "kernel: kernel: Denial of Service via use-after-free in TCP socket migration"
       },
       {
+        "id": "CVE-2026-99271",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of service via use-after-free in ALSA Line 6 audio driver"
+      },
+      {
+        "id": "CVE-2026-99273",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: ksmbd: Denial of Service via out-of-bounds write in get_file_stream_info()"
+      },
+      {
+        "id": "CVE-2026-99274",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of service via empty truncated responses in SMB client"
+      },
+      {
+        "id": "CVE-2026-99275",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Information disclosure via crafted SMB session setup responses"
+      },
+      {
+        "id": "CVE-2026-99282",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in sch_teql"
+      },
+      {
         "id": "CVE-2004-0230",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -8770,6 +8858,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "kernel: max page sharing of Kernel Samepage Merging (KSM) may cause memory deduplication"
+      },
+      {
+        "id": "CVE-2025-40025",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: f2fs: fix to do sanity check on node footer for non inode dnode"
       },
       {
         "id": "CVE-2025-40065",
@@ -9716,6 +9812,14 @@
         "title": "kernel: RDMA/uverbs: Fix mmap_lock/disassociation_lock circular dependency"
       },
       {
+        "id": "CVE-2026-98436",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: accel/amdxdna: Disable device buffer exporting"
+      },
+      {
         "id": "CVE-2026-98551",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -9996,6 +10100,14 @@
         "title": "kernel: kernel: Denial of Service via task_work flood during cancellation in io_uring"
       },
       {
+        "id": "CVE-2026-99283",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "kernel: kernel: Denial of Service via premature connection tracking expiration on TCP RST packets"
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -10004,28 +10116,12 @@
         "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
-        "id": "CVE-2026-100080",
+        "id": "CVE-2026-99284",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.115-1",
         "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-100081",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
-      },
-      {
-        "id": "CVE-2026-100082",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  x ..."
+        "title": "[net: skbuff: propagate shared-frag marker in skb_zerocopy()]"
       },
       {
         "id": "CVE-2026-3184",
@@ -10215,7 +10311,7 @@
         "id": "CVE-2026-76844",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "HIGH",
         "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
       },
@@ -10223,7 +10319,7 @@
         "id": "CVE-2026-85091",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "HIGH",
         "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
       },
@@ -10231,7 +10327,7 @@
         "id": "CVE-2026-27171",
         "pkg": "zlib1g",
         "installedVersion": "1:1.3.dfsg+really1.3.1-1+b1",
-        "fixedVersion": "None",
+        "fixedVersion": "1:1.3.dfsg+really1.3.1-1+deb13u1",
         "severity": "MEDIUM",
         "title": "zlib: zlib: Denial of Service via infinite loop in CRC32 combine functions"
       }

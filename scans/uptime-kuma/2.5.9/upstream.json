@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-07T06:50:15.390Z",
+  "scannedAt": "2026-11-08T06:55:51.463Z",
   "system": {
-    "total": 2134,
+    "total": 2149,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -10812,6 +10812,54 @@
         "title": "dash: dash: Heap out-of-bounds write in conv_escape via undersized Unicode escape reservation"
       },
       {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus-bin",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus-daemon",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus-session-bus-common",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus-system-bus-common",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
+        "id": "CVE-2026-120749",
+        "pkg": "dbus-user-session",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
         "id": "CVE-2026-53910",
         "pkg": "diffutils",
         "installedVersion": "1:3.8-4",
@@ -10884,14 +10932,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "gcc-12-base",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "gcc-12-base",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -10906,6 +10946,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2025-30258",
@@ -12308,6 +12356,14 @@
         "title": "perl-DBI: perl-DBI: Denial of Service via unreleased table lock on error"
       },
       {
+        "id": "CVE-2026-120749",
+        "pkg": "libdbus-1-3",
+        "installedVersion": "1.14.10-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
+      },
+      {
         "id": "CVE-2026-19617",
         "pkg": "libdevmapper1.02.1",
         "installedVersion": "2:1.02.185-2",
@@ -12428,6 +12484,14 @@
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
       },
       {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
         "id": "CVE-2026-13595",
         "pkg": "libfdisk1",
         "installedVersion": "2.38.1-5+deb12u3",
@@ -12532,14 +12596,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "libgcc-s1",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -12554,6 +12610,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2018-6829",
@@ -13244,6 +13308,14 @@
         "title": "clang: CMSE secure state may leak from stack to floating-point registers"
       },
       {
+        "id": "CVE-2026-102523",
+        "pkg": "libmariadb3",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
+      },
+      {
         "id": "CVE-2026-107816",
         "pkg": "libmariadb3",
         "installedVersion": "1:10.11.19-0+deb12u1",
@@ -13546,6 +13618,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openjpeg: Malicious files can cause the program to enter a large loop"
+      },
+      {
+        "id": "TEMP-1153269-522F63",
+        "pkg": "libopenjp2-7",
+        "installedVersion": "2.5.0-2+deb12u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Heap buffer overlfow in opj_j2k_read_sod]"
       },
       {
         "id": "CVE-2026-13757",
@@ -14332,14 +14412,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "libstdc++6",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "libstdc++6",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -14354,6 +14426,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-15059",
@@ -15100,6 +15180,14 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
+        "id": "CVE-2026-102523",
+        "pkg": "mariadb-client",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
+      },
+      {
         "id": "CVE-2026-107816",
         "pkg": "mariadb-client",
         "installedVersion": "1:10.11.19-0+deb12u1",
@@ -15156,6 +15244,14 @@
         "title": "mariadb: MariaDB: Unauthorized file access via CONNECT engine functions"
       },
       {
+        "id": "CVE-2026-102523",
+        "pkg": "mariadb-client-core",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
+      },
+      {
         "id": "CVE-2026-107816",
         "pkg": "mariadb-client-core",
         "installedVersion": "1:10.11.19-0+deb12u1",
@@ -15212,6 +15308,14 @@
         "title": "mariadb: MariaDB: Unauthorized file access via CONNECT engine functions"
       },
       {
+        "id": "CVE-2026-102523",
+        "pkg": "mariadb-common",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
+      },
+      {
         "id": "CVE-2026-107816",
         "pkg": "mariadb-common",
         "installedVersion": "1:10.11.19-0+deb12u1",
@@ -15268,6 +15372,14 @@
         "title": "mariadb: MariaDB: Unauthorized file access via CONNECT engine functions"
       },
       {
+        "id": "CVE-2026-102523",
+        "pkg": "mariadb-server",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
+      },
+      {
         "id": "CVE-2026-107816",
         "pkg": "mariadb-server",
         "installedVersion": "1:10.11.19-0+deb12u1",
@@ -15322,6 +15434,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "mariadb: MariaDB: Unauthorized file access via CONNECT engine functions"
+      },
+      {
+        "id": "CVE-2026-102523",
+        "pkg": "mariadb-server-core",
+        "installedVersion": "1:10.11.19-0+deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "mariadb: MariaDB: Unauthorized table access via unencoded partition names"
       },
       {
         "id": "CVE-2026-107816",

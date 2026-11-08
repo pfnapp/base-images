@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-07T06:52:31.240Z",
+  "scannedAt": "2026-11-08T06:57:22.956Z",
   "system": {
-    "total": 457,
+    "total": 458,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -412,14 +412,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "gcc-12-base",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "gcc-12-base",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -434,6 +426,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2018-1000021",
@@ -1572,6 +1572,14 @@
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
       },
       {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1596,14 +1604,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "libgcc-s1",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1618,6 +1618,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2018-6829",
@@ -1708,14 +1716,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "libgomp1",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "libgomp1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1730,6 +1730,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-107708",
@@ -2588,14 +2596,6 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
-        "id": "CVE-2026-115455",
-        "pkg": "libstdc++6",
-        "installedVersion": "12.2.0-14+deb12u1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "gcc: Stack overflow in std::bitset on libstdc++"
-      },
-      {
         "id": "CVE-2026-95619",
         "pkg": "libstdc++6",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -2610,6 +2610,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows stack exhaustion in demangle_const"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
         "id": "CVE-2026-15059",
