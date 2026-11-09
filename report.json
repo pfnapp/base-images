@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-11-08T23:43:36.594Z",
+    "generatedAt": "2026-11-09T06:27:15.989Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
     "totalMonitoredVersions": 56,
     "runAsRootCount": 38,
-    "criticalVulnerabilityCount": 124,
-    "highVulnerabilityCount": 1024,
+    "criticalVulnerabilityCount": 122,
+    "highVulnerabilityCount": 1017,
     "pfnappScannedCount": 53,
     "totalCveReduction": 1168
   },
@@ -96987,9 +96987,86 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "0.5.116",
+          "fullRef": "decolua/9router:0.5.116",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 1,
+                "low": 0,
+                "fixable": 0,
+                "total": 1
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 12,
+                "low": 1,
+                "fixable": 0,
+                "total": 13
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "fixable": 0,
+                "total": 0,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": -1,
+                "low": 0,
+                "total": -1
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": -12,
+                "low": -1,
+                "total": -13
+              }
+            }
+          },
+          "topAppCves": [],
+          "topSystemCves": [],
+          "posture": "NON-COMPLIANT (ROOT)",
+          "postureBadge": "🟡",
+          "scannedAt": "2026-11-09T06:27:15.989Z"
+        },
+        {
           "tag": "0.5.112",
           "fullRef": "decolua/9router:0.5.112",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -97106,7 +97183,7 @@
         {
           "tag": "0.5.111",
           "fullRef": "decolua/9router:0.5.111",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -100075,7 +100152,7 @@
         {
           "tag": "0.5.109",
           "fullRef": "decolua/9router:0.5.109",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -103044,7 +103121,7 @@
         {
           "tag": "0.5.104",
           "fullRef": "decolua/9router:0.5.104",
-          "rank": 4,
+          "rank": 5,
           "lifecycleStatus": "AGING",
           "lifecycleBadge": "🟠",
           "lifecycleAdvice": "Plan upgrade to latest",
@@ -105969,370 +106046,14 @@
           "posture": "APP HIGH RISK",
           "postureBadge": "🟠",
           "scannedAt": "2026-11-08T06:55:24.142Z"
-        },
-        {
-          "tag": "0.5.95",
-          "fullRef": "decolua/9router:0.5.95",
-          "rank": 5,
-          "lifecycleStatus": "EOL SOON",
-          "lifecycleBadge": "🔴",
-          "lifecycleAdvice": "Next upstream release will deprecate this version",
-          "security": {
-            "runAsRoot": true,
-            "configuredUser": "root",
-            "uidLabel": "0 (root)"
-          },
-          "vulnerabilities": {
-            "upstream": {
-              "system": {
-                "critical": 0,
-                "high": 3,
-                "medium": 1,
-                "low": 0,
-                "fixable": 4,
-                "total": 4
-              },
-              "app": {
-                "critical": 2,
-                "high": 7,
-                "medium": 15,
-                "low": 4,
-                "fixable": 27,
-                "total": 28
-              }
-            },
-            "pfnapp": {
-              "scanned": true,
-              "system": {
-                "critical": 0,
-                "high": 3,
-                "medium": 1,
-                "low": 0,
-                "fixable": 4,
-                "total": 4,
-                "topCves": [
-                  {
-                    "id": "CVE-2026-107891",
-                    "pkg": "musl",
-                    "installedVersion": "1.2.6-r2",
-                    "fixedVersion": "1.2.6-r3",
-                    "severity": "HIGH",
-                    "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-                  },
-                  {
-                    "id": "CVE-2026-107891",
-                    "pkg": "musl-utils",
-                    "installedVersion": "1.2.6-r2",
-                    "fixedVersion": "1.2.6-r3",
-                    "severity": "HIGH",
-                    "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-                  },
-                  {
-                    "id": "CVE-2026-85091",
-                    "pkg": "zlib",
-                    "installedVersion": "1.3.2-r0",
-                    "fixedVersion": "1.3.2-r1",
-                    "severity": "HIGH",
-                    "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
-                  }
-                ],
-                "allCves": [
-                  {
-                    "id": "CVE-2026-107891",
-                    "pkg": "musl",
-                    "installedVersion": "1.2.6-r2",
-                    "fixedVersion": "1.2.6-r3",
-                    "severity": "HIGH",
-                    "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-                  },
-                  {
-                    "id": "CVE-2026-107891",
-                    "pkg": "musl-utils",
-                    "installedVersion": "1.2.6-r2",
-                    "fixedVersion": "1.2.6-r3",
-                    "severity": "HIGH",
-                    "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-                  },
-                  {
-                    "id": "CVE-2026-85091",
-                    "pkg": "zlib",
-                    "installedVersion": "1.3.2-r0",
-                    "fixedVersion": "1.3.2-r1",
-                    "severity": "HIGH",
-                    "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
-                  },
-                  {
-                    "id": "CVE-2026-4738",
-                    "pkg": "zlib",
-                    "installedVersion": "1.3.2-r0",
-                    "fixedVersion": "1.4-r0",
-                    "severity": "MEDIUM",
-                    "title": "Improper Restriction of Operations within the Bounds of a Memory Buffe ..."
-                  }
-                ]
-              },
-              "app": {
-                "critical": 2,
-                "high": 7,
-                "medium": 3,
-                "low": 3,
-                "fixable": 14,
-                "total": 15,
-                "topCves": [
-                  {
-                    "id": "GHSA-2464-fhr4-w9xw",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "15.5.28, 16.4.1",
-                    "severity": "CRITICAL",
-                    "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used"
-                  },
-                  {
-                    "id": "GHSA-673q-mjm6-r5xr",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "16.4.1",
-                    "severity": "CRITICAL",
-                    "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays"
-                  },
-                  {
-                    "id": "CVE-2026-94482",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "15.5.28, 16.4.1",
-                    "severity": "HIGH",
-                    "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
-                  },
-                  {
-                    "id": "CVE-2026-118779",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Denial of Service via inefficient regular expression in PEM decoding"
-                  },
-                  {
-                    "id": "CVE-2026-118782",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Integrity verification bypass via zero iteration count in PKCS#12 handling"
-                  }
-                ],
-                "allCves": [
-                  {
-                    "id": "GHSA-2464-fhr4-w9xw",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "15.5.28, 16.4.1",
-                    "severity": "CRITICAL",
-                    "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used"
-                  },
-                  {
-                    "id": "GHSA-673q-mjm6-r5xr",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "16.4.1",
-                    "severity": "CRITICAL",
-                    "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays"
-                  },
-                  {
-                    "id": "CVE-2026-94482",
-                    "pkg": "next",
-                    "installedVersion": "16.3.8",
-                    "fixedVersion": "15.5.28, 16.4.1",
-                    "severity": "HIGH",
-                    "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
-                  },
-                  {
-                    "id": "CVE-2026-118779",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Denial of Service via inefficient regular expression in PEM decoding"
-                  },
-                  {
-                    "id": "CVE-2026-118782",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Integrity verification bypass via zero iteration count in PKCS#12 handling"
-                  },
-                  {
-                    "id": "CVE-2026-119187",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Denial of Service via call stack exhaustion in TLS record processing"
-                  },
-                  {
-                    "id": "CVE-2026-119188",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Denial of Service via interleaved record during fragmented TLS handshake"
-                  },
-                  {
-                    "id": "CVE-2026-119190",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Server or client impersonation via improper handling of deprecated certificate extensions"
-                  },
-                  {
-                    "id": "CVE-2026-85393",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "None",
-                    "severity": "HIGH",
-                    "title": "node-forge: node-forge: Signature forgery vulnerability in RSA PKCS#1 v1.5 verification"
-                  },
-                  {
-                    "id": "CVE-2026-118777",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "MEDIUM",
-                    "title": "node-forge: node-forge: Prototype pollution via crafted HTTP cookie headers"
-                  },
-                  {
-                    "id": "CVE-2026-118778",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "MEDIUM",
-                    "title": "node-forge: node-forge: Denial of Service via missing TLS server certificate"
-                  },
-                  {
-                    "id": "CVE-2026-119186",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "MEDIUM",
-                    "title": "node-forge: node-forge: Cryptographic authentication bypass via unvalidated AES-GCM tag length"
-                  },
-                  {
-                    "id": "CVE-2026-118775",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "LOW",
-                    "title": "node-forge: node-forge: Authorization bypass via improper OID encoding"
-                  },
-                  {
-                    "id": "CVE-2026-118780",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "LOW",
-                    "title": "node-forge: node-forge: Denial of Service via trusted certificate removal during chain verification"
-                  },
-                  {
-                    "id": "CVE-2026-118781",
-                    "pkg": "node-forge",
-                    "installedVersion": "1.4.0",
-                    "fixedVersion": "1.4.1",
-                    "severity": "LOW",
-                    "title": "node-forge: node-forge: Denial of Service via infinite loop on negative input"
-                  }
-                ]
-              }
-            },
-            "reduction": {
-              "system": {
-                "critical": 0,
-                "high": 0,
-                "medium": 0,
-                "low": 0,
-                "total": 0
-              },
-              "app": {
-                "critical": 0,
-                "high": 0,
-                "total": -13
-              }
-            }
-          },
-          "topAppCves": [
-            {
-              "id": "GHSA-2464-fhr4-w9xw",
-              "pkg": "next",
-              "installedVersion": "16.3.8",
-              "fixedVersion": "15.5.28, 16.4.1",
-              "severity": "CRITICAL",
-              "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used"
-            },
-            {
-              "id": "GHSA-673q-mjm6-r5xr",
-              "pkg": "next",
-              "installedVersion": "16.3.8",
-              "fixedVersion": "16.4.1",
-              "severity": "CRITICAL",
-              "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays"
-            },
-            {
-              "id": "CVE-2026-94482",
-              "pkg": "next",
-              "installedVersion": "16.3.8",
-              "fixedVersion": "15.5.28, 16.4.1",
-              "severity": "HIGH",
-              "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
-            },
-            {
-              "id": "CVE-2026-118779",
-              "pkg": "node-forge",
-              "installedVersion": "1.4.0",
-              "fixedVersion": "1.4.1",
-              "severity": "HIGH",
-              "title": "node-forge: node-forge: Denial of Service via inefficient regular expression in PEM decoding"
-            },
-            {
-              "id": "CVE-2026-118782",
-              "pkg": "node-forge",
-              "installedVersion": "1.4.0",
-              "fixedVersion": "1.4.1",
-              "severity": "HIGH",
-              "title": "node-forge: node-forge: Integrity verification bypass via zero iteration count in PKCS#12 handling"
-            }
-          ],
-          "topSystemCves": [
-            {
-              "id": "CVE-2026-107891",
-              "pkg": "musl",
-              "installedVersion": "1.2.6-r2",
-              "fixedVersion": "1.2.6-r3",
-              "severity": "HIGH",
-              "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-            },
-            {
-              "id": "CVE-2026-107891",
-              "pkg": "musl-utils",
-              "installedVersion": "1.2.6-r2",
-              "fixedVersion": "1.2.6-r3",
-              "severity": "HIGH",
-              "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
-            },
-            {
-              "id": "CVE-2026-85091",
-              "pkg": "zlib",
-              "installedVersion": "1.3.2-r0",
-              "fixedVersion": "1.3.2-r1",
-              "severity": "HIGH",
-              "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
-            }
-          ],
-          "posture": "APP CRITICAL RISK",
-          "postureBadge": "🔴",
-          "scannedAt": "2026-11-08T06:55:24.142Z"
         }
       ],
       "deprecatedVersions": [
+        {
+          "tag": "0.5.95",
+          "droppedAt": "2026-11-09",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 0.5.116 immediately."
+        },
         {
           "tag": "0.5.91",
           "droppedAt": "2026-10-28",
