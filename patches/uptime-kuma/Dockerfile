@@ -9,7 +9,7 @@ RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o healthcheck healthcheck.go
 FROM upstream
 COPY --from=healthcheck-builder /src/healthcheck /app/extra/healthcheck
 RUN apt-get update && \
-    apt-get upgrade -y --no-install-recommends && \
+    apt-get dist-upgrade -y --no-install-recommends && \
     apt-get install -y --no-install-recommends --only-upgrade cloudflared && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
