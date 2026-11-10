@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-08T06:59:50.293Z",
+  "scannedAt": "2026-11-10T08:05:45.700Z",
   "system": {
-    "total": 440,
+    "total": 441,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -292,6 +292,22 @@
         "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
+        "id": "CVE-2026-90781",
+        "pkg": "libasound2-data",
+        "installedVersion": "1.2.11-1ubuntu0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
+      },
+      {
+        "id": "CVE-2026-90781",
+        "pkg": "libasound2t64",
+        "installedVersion": "1.2.11-1ubuntu0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
+      },
+      {
         "id": "CVE-2025-59529",
         "pkg": "libavahi-client3",
         "installedVersion": "0.8-13ubuntu6.2",
@@ -874,6 +890,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Information disclosure or denial of service via crafted AV1 RTP packet"
+      },
+      {
+        "id": "CVE-2026-8461",
+        "pkg": "libavcodec60",
+        "installedVersion": "7:6.1.1-3ubuntu5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: FFmpeg: Remote code execution via out-of-bounds write in MagicYUV decoder"
       },
       {
         "id": "CVE-2025-12343",
@@ -1396,6 +1420,14 @@
         "title": "ffmpeg: FFmpeg: Information disclosure or denial of service via crafted AV1 RTP packet"
       },
       {
+        "id": "CVE-2026-8461",
+        "pkg": "libavformat60",
+        "installedVersion": "7:6.1.1-3ubuntu5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: FFmpeg: Remote code execution via out-of-bounds write in MagicYUV decoder"
+      },
+      {
         "id": "CVE-2025-12343",
         "pkg": "libavformat60",
         "installedVersion": "7:6.1.1-3ubuntu5",
@@ -1914,6 +1946,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Information disclosure or denial of service via crafted AV1 RTP packet"
+      },
+      {
+        "id": "CVE-2026-8461",
+        "pkg": "libavutil58",
+        "installedVersion": "7:6.1.1-3ubuntu5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: FFmpeg: Remote code execution via out-of-bounds write in MagicYUV decoder"
       },
       {
         "id": "CVE-2025-12343",
@@ -1930,38 +1970,6 @@
         "fixedVersion": "1.1.0-2ubuntu0.1",
         "severity": "HIGH",
         "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
-      },
-      {
-        "id": "CVE-2026-18374",
-        "pkg": "libc-bin",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
-      },
-      {
-        "id": "CVE-2026-89092",
-        "pkg": "libc-bin",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
-      },
-      {
-        "id": "CVE-2026-18374",
-        "pkg": "libc6",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
-      },
-      {
-        "id": "CVE-2026-89092",
-        "pkg": "libc6",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
       },
       {
         "id": "CVE-2017-7475",
@@ -2068,6 +2076,14 @@
         "title": "cJSON: cJSON: Data destruction due to non-atomic JSON Patch application"
       },
       {
+        "id": "CVE-2026-87933",
+        "pkg": "libcjson1",
+        "installedVersion": "1.7.17-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cJSON: cJSON: Memory corruption via use after free in cJSONUtils_MergePatch"
+      },
+      {
         "id": "CVE-2026-19617",
         "pkg": "libdevmapper1.02.1",
         "installedVersion": "2:1.02.185-3ubuntu3.2",
@@ -2114,6 +2130,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
+      },
+      {
+        "id": "CVE-2026-102633",
+        "pkg": "libexpat1",
+        "installedVersion": "2.6.1-2ubuntu0.6",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
       {
         "id": "CVE-2025-15269",
@@ -2308,12 +2332,28 @@
         "title": "gstreamer: GStreamer rtpL16depay Heap-based Buffer Overflow Remote Code Execution Vulnerability"
       },
       {
+        "id": "CVE-2026-119842",
+        "pkg": "libgstreamer-plugins-base1.0-0",
+        "installedVersion": "1.24.2-1ubuntu0.5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gst-plugins-base: gst-plugins-base: NULL-pointer dereference in mDVDsub subtitle parser via missing closing-brace check"
+      },
+      {
         "id": "CVE-2026-85150",
         "pkg": "libgstreamer-plugins-base1.0-0",
         "installedVersion": "1.24.2-1ubuntu0.5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gstreamer1-plugins-base: gstreamer: NULL/invalid-pointer dereference in gst_rtsp_message_parse_auth_credentials() when parsing a crafted Digest Authorization/WWW-Authenticate header"
+      },
+      {
+        "id": "CVE-2026-86476",
+        "pkg": "libgstreamer-plugins-base1.0-0",
+        "installedVersion": "1.24.2-1ubuntu0.5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gstreamer1-plugins-base: gst-plugins-base: heap buffer overflow via unvalidated GstVideoMeta plane extents in gst_video_frame_map_id and video_meta_deserialize"
       },
       {
         "id": "CVE-2026-22693",
@@ -2514,14 +2554,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
-      },
-      {
-        "id": "CVE-2019-9545",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.11",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "poppler: recursive function call in JBIG2Stream::readTextRegion() in JBIG2Stream.cc causing denial of service"
       },
       {
         "id": "CVE-2026-107161",
@@ -3068,6 +3100,14 @@
         "title": "ffmpeg: FFmpeg: Information disclosure or denial of service via crafted AV1 RTP packet"
       },
       {
+        "id": "CVE-2026-8461",
+        "pkg": "libswresample4",
+        "installedVersion": "7:6.1.1-3ubuntu5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: FFmpeg: Remote code execution via out-of-bounds write in MagicYUV decoder"
+      },
+      {
         "id": "CVE-2025-12343",
         "pkg": "libswresample4",
         "installedVersion": "7:6.1.1-3ubuntu5",
@@ -3316,22 +3356,6 @@
         "title": "A vulnerability classified as critical was found in libzvbi up to 0.2. ..."
       },
       {
-        "id": "CVE-2026-18374",
-        "pkg": "locales",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
-      },
-      {
-        "id": "CVE-2026-89092",
-        "pkg": "locales",
-        "installedVersion": "2.39-0ubuntu8.9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "glibc: nscd stack overflow leads to degraded DNS resolution"
-      },
-      {
         "id": "CVE-2024-56433",
         "pkg": "login",
         "installedVersion": "1:4.13+dfsg1-4ubuntu3.2",
@@ -3346,14 +3370,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise"
-      },
-      {
-        "id": "CVE-2026-82560",
-        "pkg": "perl-base",
-        "installedVersion": "5.38.2-3.2ubuntu0.6",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
       },
       {
         "id": "CVE-2026-93311",
@@ -3378,14 +3394,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
-      },
-      {
-        "id": "CVE-2019-9545",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.11",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "poppler: recursive function call in JBIG2Stream::readTextRegion() in JBIG2Stream.cc causing denial of service"
       },
       {
         "id": "CVE-2026-40228",
@@ -3526,7 +3534,7 @@
     ]
   },
   "app": {
-    "total": 61,
+    "total": 62,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -3591,6 +3599,14 @@
         "fixedVersion": "33.7.2",
         "severity": "HIGH",
         "title": "com.google.guava/guava: Google Guava: Denial of Service via unthrottled memory allocation during deserialization"
+      },
+      {
+        "id": "CVE-2026-59171",
+        "pkg": "org.json:json",
+        "installedVersion": "20231013",
+        "fixedVersion": "20260719",
+        "severity": "MEDIUM",
+        "title": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS"
       },
       {
         "id": "CVE-2026-75140",
