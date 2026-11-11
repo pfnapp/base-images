@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-10T08:04:46.701Z",
+  "scannedAt": "2026-11-11T07:33:12.236Z",
   "system": {
-    "total": 1217,
+    "total": 1284,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -4876,6 +4876,62 @@
         "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
+        "id": "CVE-2026-107364",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
         "id": "CVE-2026-112321",
         "pkg": "libgssapi-krb5-2",
         "installedVersion": "1.21.3-5+deb13u1",
@@ -4900,12 +4956,36 @@
         "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
       },
       {
+        "id": "CVE-2026-118380",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
         "id": "CVE-2026-119079",
         "pkg": "libgssapi-krb5-2",
         "installedVersion": "1.21.3-5+deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
       },
       {
         "id": "CVE-2026-107708",
@@ -4922,6 +5002,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
       },
       {
         "id": "CVE-2018-5709",
@@ -4988,6 +5092,62 @@
         "title": "libjxl v0.5.0 is affected by a Assertion failed issue in lib/jxl/image ..."
       },
       {
+        "id": "CVE-2026-107364",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
         "id": "CVE-2026-112321",
         "pkg": "libk5crypto3",
         "installedVersion": "1.21.3-5+deb13u1",
@@ -5012,12 +5172,36 @@
         "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
       },
       {
+        "id": "CVE-2026-118380",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
         "id": "CVE-2026-119079",
         "pkg": "libk5crypto3",
         "installedVersion": "1.21.3-5+deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
       },
       {
         "id": "CVE-2026-107708",
@@ -5034,6 +5218,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
       },
       {
         "id": "CVE-2018-5709",
@@ -5068,6 +5276,62 @@
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
       },
       {
+        "id": "CVE-2026-107364",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
         "id": "CVE-2026-112321",
         "pkg": "libkrb5-3",
         "installedVersion": "1.21.3-5+deb13u1",
@@ -5092,12 +5356,36 @@
         "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
       },
       {
+        "id": "CVE-2026-118380",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
         "id": "CVE-2026-119079",
         "pkg": "libkrb5-3",
         "installedVersion": "1.21.3-5+deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
       },
       {
         "id": "CVE-2026-107708",
@@ -5114,6 +5402,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
       },
       {
         "id": "CVE-2018-5709",
@@ -5148,6 +5460,62 @@
         "title": "krb5: krb5: integer underflow in berval2tl_data() leads to heap out-of-bounds read"
       },
       {
+        "id": "CVE-2026-107364",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
         "id": "CVE-2026-112321",
         "pkg": "libkrb5support0",
         "installedVersion": "1.21.3-5+deb13u1",
@@ -5172,12 +5540,36 @@
         "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
       },
       {
+        "id": "CVE-2026-118380",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
         "id": "CVE-2026-119079",
         "pkg": "libkrb5support0",
         "installedVersion": "1.21.3-5+deb13u1",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
       },
       {
         "id": "CVE-2026-107708",
@@ -5194,6 +5586,30 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
       },
       {
         "id": "CVE-2018-5709",
@@ -5401,7 +5817,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -5417,7 +5833,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -5425,7 +5841,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -5433,7 +5849,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50585",
@@ -5449,7 +5865,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50587",
@@ -5473,7 +5889,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50713",
@@ -6866,6 +7282,46 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107496"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88822"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88823"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95691"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95692"
       },
       {
         "id": "CVE-2026-102010",
@@ -8652,6 +9108,46 @@
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107496"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88822"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88823"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95691"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95692"
+      },
+      {
         "id": "CVE-2026-84782",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -8754,6 +9250,46 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-107496"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88822"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-88823"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95691"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-95692"
       },
       {
         "id": "CVE-2007-5686",
@@ -10414,7 +10950,7 @@
         "installedVersion": "3.14.3",
         "fixedVersion": "3.14.4",
         "severity": "HIGH",
-        "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use"
+        "title": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio an ..."
       },
       {
         "id": "CVE-2026-111063",

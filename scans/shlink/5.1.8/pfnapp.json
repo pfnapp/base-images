@@ -1,8 +1,177 @@
 {
-  "scannedAt": "2026-11-10T08:06:30.184Z",
+  "scannedAt": "2026-11-11T07:34:32.390Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 21,
+    "cves": [
+      {
+        "id": "CVE-2026-107364",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
+        "id": "CVE-2026-112321",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths"
+      },
+      {
+        "id": "CVE-2026-112322",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated CPU DoS via AUTH_GSSAPI client states cleanup"
+      },
+      {
+        "id": "CVE-2026-112323",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
+      },
+      {
+        "id": "CVE-2026-118380",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
+        "id": "CVE-2026-119079",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-40355",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT Kerberos 5: Denial of Service via NULL pointer dereference in NegoEx mechanism"
+      },
+      {
+        "id": "CVE-2026-40356",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT Kerberos 5 (krb5): Denial of Service via integer underflow and out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
+      }
+    ]
   },
   "app": {
     "total": 15,
@@ -99,7 +268,7 @@
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "5.4.0, 6.2.0, 8.1.0, 8.1.11, 5.2.0, 6.4.0, 7.3.0, 7.4.23, 4.4.0, 6.1.0, 6.3.0, 6.4.50, 7.4.0, 5.0.0, 5.3.0, 5.4.56, 7.1.0, 7.2.0, 5.1.0",
+        "fixedVersion": "7.3.0, 5.3.0, 5.4.0, 7.4.23, 8.1.0, 4.4.0, 5.2.0, 5.4.56, 6.2.0, 6.3.0, 6.4.0, 6.4.50, 7.2.0, 5.0.0, 5.1.0, 6.1.0, 7.1.0, 7.4.0, 8.1.11",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -107,15 +276,15 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "5.2.0, 5.3.0, 5.4.56, 6.1.0, 7.1.0, 5.0.0, 6.2.0, 6.3.0, 6.4.0, 6.4.50, 7.4.23, 8.1.11, 4.4.0, 5.1.0, 7.2.0, 8.1.0, 5.4.0, 7.3.0, 7.4.0",
-        "severity": "LOW",
-        "title": "symfony/http-client: symfony/http-client: Internal network enumeration via DNS rebinding"
+        "fixedVersion": "7.1.0, 5.1.0, 5.2.0, 5.3.0, 6.2.0, 6.4.0, 7.3.0, 6.4.50, 7.4.0, 5.4.56, 6.1.0, 6.3.0, 7.4.23, 8.1.0, 8.1.11, 4.4.0, 5.0.0, 5.4.0, 7.2.0",
+        "severity": "UNKNOWN",
+        "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
       {
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "5.4.0, 6.4.0, 7.2.0, 5.4.56, 6.1.0, 7.1.0, 3.0.0, 4.0.0, 5.0.0, 5.2.0, 6.2.0, 6.4.50, 8.1.0, 5.1.0, 5.3.0, 6.3.0, 7.3.0, 7.4.0, 7.4.23, 8.1.11",
+        "fixedVersion": "3.0.0, 5.4.0, 6.2.0, 4.0.0, 5.1.0, 6.3.0, 7.2.0, 7.4.0, 5.0.0, 5.2.0, 5.3.0, 5.4.56, 6.1.0, 7.4.23, 8.1.0, 6.4.0, 7.3.0, 8.1.11, 6.4.50, 7.1.0",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -123,7 +292,7 @@
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "7.4.23, 8.1.0, 5.2.0, 6.3.0, 7.2.0, 8.1.11, 7.1.0, 3.0.0, 4.0.0, 5.0.0, 5.1.0, 5.4.0, 5.4.56, 6.4.0, 5.3.0, 6.1.0, 6.2.0, 6.4.50, 7.3.0, 7.4.0",
+        "fixedVersion": "7.1.0, 7.3.0, 8.1.11, 3.0.0, 7.2.0, 7.4.0, 8.1.0, 4.0.0, 5.2.0, 6.1.0, 7.4.23, 5.0.0, 5.1.0, 5.4.0, 5.4.56, 6.2.0, 6.4.0, 5.3.0, 6.3.0, 6.4.50",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-10T08:05:45.699Z",
+  "scannedAt": "2026-11-11T07:33:57.845Z",
   "system": {
-    "total": 591,
+    "total": 606,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -388,12 +388,28 @@
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
       },
       {
+        "id": "CVE-2026-96674",
+        "pkg": "libasound2-data",
+        "installedVersion": "1.2.11-1ubuntu0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
+      },
+      {
         "id": "CVE-2026-90781",
         "pkg": "libasound2t64",
         "installedVersion": "1.2.11-1ubuntu0.3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
+      },
+      {
+        "id": "CVE-2026-96674",
+        "pkg": "libasound2t64",
+        "installedVersion": "1.2.11-1ubuntu0.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
       },
       {
         "id": "CVE-2026-54371",
@@ -2284,6 +2300,14 @@
         "title": "cJSON: cJSON: Memory corruption via use after free in cJSONUtils_MergePatch"
       },
       {
+        "id": "CVE-2026-55480",
+        "pkg": "libcups2t64",
+        "installedVersion": "2.4.7-1.2ubuntu7.14",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cups: cups: Arbitrary file overwrite via insecure temporary file handling"
+      },
+      {
         "id": "CVE-2026-86409",
         "pkg": "libcurl3t64-gnutls",
         "installedVersion": "8.5.0-2ubuntu10.15",
@@ -2812,6 +2836,22 @@
         "title": "libgcrypt: vulnerable to Marvin Attack"
       },
       {
+        "id": "CVE-2026-18090",
+        "pkg": "libgdk-pixbuf-2.0-0",
+        "installedVersion": "2.42.10+dfsg-3ubuntu3.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gdk-pixbuf: gdk-pixbuf: heap out-of-bounds read in uncompress() via crafted ICNS RLE block"
+      },
+      {
+        "id": "CVE-2026-18090",
+        "pkg": "libgdk-pixbuf2.0-common",
+        "installedVersion": "2.42.10+dfsg-3ubuntu3.3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gdk-pixbuf: gdk-pixbuf: heap out-of-bounds read in uncompress() via crafted ICNS RLE block"
+      },
+      {
         "id": "CVE-2026-86469",
         "pkg": "libglib2.0-0t64",
         "installedVersion": "2.80.0-6ubuntu3.9",
@@ -2868,6 +2908,14 @@
         "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
       },
       {
+        "id": "CVE-2026-107778",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.20.1-6ubuntu2.10",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
         "id": "CVE-2026-111183",
         "pkg": "libgstreamer-plugins-base1.0-0",
         "installedVersion": "1.24.2-1ubuntu0.5",
@@ -2922,6 +2970,38 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "icu: Stack buffer overflow in the SRBRoot::addTag function"
+      },
+      {
+        "id": "CVE-2026-82522",
+        "pkg": "libjxl0.7",
+        "installedVersion": "0.7.0-10.2ubuntu6.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libjxl: libjxl: Information disclosure and arbitrary metadata injection via integer underflow"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.20.1-6ubuntu2.10",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.20.1-6ubuntu2.10",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.20.1-6ubuntu2.10",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
       },
       {
         "id": "CVE-2025-27810",
@@ -3178,6 +3258,30 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "libpython3.12-minimal",
+        "installedVersion": "3.12.3-1ubuntu0.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "libpython3.12-stdlib",
+        "installedVersion": "3.12.3-1ubuntu0.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "libpython3.12t64",
+        "installedVersion": "3.12.3-1ubuntu0.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
       },
       {
         "id": "CVE-2026-96889",
@@ -4505,7 +4609,7 @@
         "installedVersion": "5.38.2-3.2ubuntu0.3",
         "fixedVersion": "5.38.2-3.2ubuntu0.4",
         "severity": "MEDIUM",
-        "title": "HTTP::Tiny: HTTP::Tiny: Information disclosure via cross-origin redirect of credential headers"
+        "title": "perl-HTTP-Tiny: HTTP::Tiny: Information disclosure via cross-origin redirect of credential headers"
       },
       {
         "id": "CVE-2026-102620",
@@ -4578,6 +4682,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "python3.12",
+        "installedVersion": "3.12.3-1ubuntu0.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "python3.12-minimal",
+        "installedVersion": "3.12.3-1ubuntu0.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
       },
       {
         "id": "CVE-2026-40228",

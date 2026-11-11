@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-10T08:06:55.841Z",
+  "generatedAt": "2026-11-11T07:34:46.652Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
@@ -50,7 +50,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -94,7 +94,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -138,7 +138,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -182,7 +182,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -226,7 +226,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -279,7 +279,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -323,7 +323,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -367,7 +367,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -411,7 +411,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -455,7 +455,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -499,7 +499,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -552,7 +552,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -596,7 +596,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -631,11 +631,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 21,
-              "medium": 140,
+              "high": 61,
+              "medium": 152,
               "low": 157,
               "fixable": 0,
-              "total": 318
+              "total": 380
             },
             "app": {
               "critical": 0,
@@ -648,54 +648,54 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-112321",
+              "id": "CVE-2026-107364",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths",
+              "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112322",
+              "id": "CVE-2026-112315",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated CPU DoS via AUTH_GSSAPI client states cleanup",
+              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112323",
+              "id": "CVE-2026-112316",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests",
+              "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-119079",
+              "id": "CVE-2026-112317",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding",
+              "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112321",
-              "pkg": "libk5crypto3",
+              "id": "CVE-2026-112318",
+              "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths",
+              "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers",
               "layer": "system"
             }
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -721,11 +721,11 @@
           "vulnerabilities": {
             "system": {
               "critical": 0,
-              "high": 21,
-              "medium": 140,
+              "high": 61,
+              "medium": 152,
               "low": 157,
               "fixable": 0,
-              "total": 318
+              "total": 380
             },
             "app": {
               "critical": 0,
@@ -738,54 +738,54 @@
           },
           "topCves": [
             {
-              "id": "CVE-2026-112321",
+              "id": "CVE-2026-107364",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths",
+              "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112322",
+              "id": "CVE-2026-112315",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated CPU DoS via AUTH_GSSAPI client states cleanup",
+              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112323",
+              "id": "CVE-2026-112316",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests",
+              "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-119079",
+              "id": "CVE-2026-112317",
               "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding",
+              "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path",
               "layer": "system"
             },
             {
-              "id": "CVE-2026-112321",
-              "pkg": "libk5crypto3",
+              "id": "CVE-2026-112318",
+              "pkg": "libgssapi-krb5-2",
               "installedVersion": "1.20.1-2+deb12u5",
               "fixedVersion": "None",
               "severity": "HIGH",
-              "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths",
+              "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers",
               "layer": "system"
             }
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -838,7 +838,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -882,14 +882,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": null,
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "1.26.10",
-            "latestPatchDate": "2026-10-19",
+            "latestPatch": "1.26.11",
+            "latestPatchDate": "2026-11-10",
             "source": "endoflife.date"
           }
         },
@@ -926,14 +926,14 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": null,
             "isEol": false,
             "isLts": false,
             "ltsFrom": null,
-            "latestPatch": "1.27.3",
-            "latestPatchDate": "2026-10-19",
+            "latestPatch": "1.27.4",
+            "latestPatchDate": "2026-11-10",
             "source": "endoflife.date"
           }
         }
@@ -979,7 +979,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1023,7 +1023,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1077,7 +1077,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1121,7 +1121,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1165,7 +1165,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1209,7 +1209,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1253,7 +1253,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1297,7 +1297,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1341,7 +1341,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1385,7 +1385,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1464,7 +1464,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1508,7 +1508,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1552,7 +1552,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1596,7 +1596,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1640,7 +1640,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1729,7 +1729,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1773,7 +1773,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1817,7 +1817,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1861,7 +1861,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1905,7 +1905,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1949,7 +1949,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1993,7 +1993,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2037,7 +2037,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2116,7 +2116,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-10T08:06:55.841Z",
+          "scannedAt": "2026-11-11T07:34:46.652Z",
           "eol": {
             "date": null,
             "isEol": false,

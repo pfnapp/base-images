@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-10T08:01:42.169Z",
+  "scannedAt": "2026-11-11T07:30:28.046Z",
   "system": {
     "total": 3,
     "cves": [
@@ -30,7 +30,7 @@
     ]
   },
   "app": {
-    "total": 338,
+    "total": 343,
     "cves": [
       {
         "id": "CVE-2026-118779",
@@ -73,6 +73,22 @@
         "title": "node-forge: node-forge: Server or client impersonation via improper handling of deprecated certificate extensions"
       },
       {
+        "id": "CVE-2026-119191",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.1",
+        "severity": "HIGH",
+        "title": "node-forge: node-forge: Denial of Service via nested ASN.1 BIT STRING decoding"
+      },
+      {
+        "id": "CVE-2026-119192",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.1",
+        "severity": "HIGH",
+        "title": "Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding"
+      },
+      {
         "id": "CVE-2026-85393",
         "pkg": "node-forge",
         "installedVersion": "1.4.0",
@@ -105,12 +121,36 @@
         "title": "node-forge: node-forge: Cryptographic authentication bypass via unvalidated AES-GCM tag length"
       },
       {
+        "id": "CVE-2026-119189",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.1",
+        "severity": "MEDIUM",
+        "title": "node-forge: node-forge: Certificate validation bypass via unenforced path length constraints"
+      },
+      {
+        "id": "CVE-2026-118774",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.1",
+        "severity": "LOW",
+        "title": "node-forge: node-forge: Signature policy bypass via improper certificate parameter selection"
+      },
+      {
         "id": "CVE-2026-118775",
         "pkg": "node-forge",
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.1",
         "severity": "LOW",
         "title": "node-forge: node-forge: Authorization bypass via improper OID encoding"
+      },
+      {
+        "id": "CVE-2026-118776",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.1",
+        "severity": "LOW",
+        "title": "node-forge: node-forge: Data integrity failure via improper PKCS#7 padding validation"
       },
       {
         "id": "CVE-2026-118780",
