@@ -1,4 +1,4 @@
-ARG TAG=2.5.9
+ARG TAG=2.5.11
 FROM docker.io/louislam/uptime-kuma:${TAG} AS upstream
 
 FROM golang:1.27-alpine AS healthcheck-builder

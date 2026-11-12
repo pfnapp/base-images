@@ -28,13 +28,18 @@
       "image": "louislam/uptime-kuma",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "2.5.11",
         "2.5.10",
         "2.5.9",
         "2.5.8",
-        "2.5.7",
-        "2.5.6"
+        "2.5.7"
       ],
       "deprecated_versions": [
+        {
+          "tag": "2.5.6",
+          "droppedAt": "2026-11-12",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 2.5.11 immediately."
+        },
         {
           "tag": "2.5.5",
           "droppedAt": "2026-11-12",
