@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-11T07:31:16.426Z",
+  "scannedAt": "2026-11-12T07:59:40.544Z",
   "system": {
-    "total": 540,
+    "total": 556,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -436,6 +436,54 @@
         "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
+        "id": "CVE-2026-105437",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
+      },
+      {
         "id": "CVE-2018-1000021",
         "pkg": "git",
         "installedVersion": "1:2.39.5-0+deb12u3",
@@ -458,6 +506,54 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "git: The sideband payload is passed unfiltered to the terminal in git"
+      },
+      {
+        "id": "CVE-2026-105437",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git-man",
+        "installedVersion": "1:2.39.5-0+deb12u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
       },
       {
         "id": "CVE-2018-1000021",
@@ -796,6 +892,22 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -986,6 +1098,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
+      },
+      {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3137,7 +3265,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-107496"
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3145,7 +3273,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88822"
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
         "id": "CVE-2026-88823",
@@ -3153,7 +3281,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88823"
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
         "id": "CVE-2026-95691",
@@ -3161,7 +3289,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95691"
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
         "id": "CVE-2026-95692",
@@ -3169,7 +3297,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95692"
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -3753,7 +3881,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-107496"
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3761,7 +3889,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88822"
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
         "id": "CVE-2026-88823",
@@ -3769,7 +3897,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88823"
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
         "id": "CVE-2026-95691",
@@ -3777,7 +3905,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95691"
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
         "id": "CVE-2026-95692",
@@ -3785,7 +3913,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95692"
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -4305,7 +4433,7 @@
         "installedVersion": "1:1.2.13.dfsg-1",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal"
+        "title": "zlib: zlib 1.2.11 through 1.3.2 Heap Buffer Overflow via Stale gzwrite Pointer After Failed Write"
       },
       {
         "id": "CVE-2026-85091",
@@ -4326,7 +4454,7 @@
     ]
   },
   "app": {
-    "total": 32,
+    "total": 33,
     "cves": [
       {
         "id": "CVE-2026-102277",
@@ -4359,6 +4487,14 @@
         "fixedVersion": "3.4.17",
         "severity": "LOW",
         "title": "DOMPurify: SMIL attributeName=href guard is skipped when PARSER_MEDIA_TYPE is application/xhtml+xml"
+      },
+      {
+        "id": "CVE-2026-126066",
+        "pkg": "fast-xml-parser",
+        "installedVersion": "5.11.2",
+        "fixedVersion": "5.12.0",
+        "severity": "LOW",
+        "title": "fast-xml-parser: fast-xml-parser: Denial of Service via quadratic rescanning of unterminated tags"
       },
       {
         "id": "CVE-2026-118773",

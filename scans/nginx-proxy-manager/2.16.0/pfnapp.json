@@ -1,8 +1,24 @@
 {
-  "scannedAt": "2026-11-11T07:34:19.671Z",
+  "scannedAt": "2026-11-12T08:03:00.070Z",
   "system": {
-    "total": 1669,
+    "total": 1697,
     "cves": [
+      {
+        "id": "CVE-2026-119618",
+        "pkg": "apache2-utils",
+        "installedVersion": "2.4.69-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "httpd:2.4/mod_http2: mod_http2: httpd: Remote code execution in mod_http2"
+      },
+      {
+        "id": "CVE-2026-109163",
+        "pkg": "apache2-utils",
+        "installedVersion": "2.4.69-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "httpd: httpd: Denial of Service via stack-based buffer overflow in mod_vhost_alias"
+      },
       {
         "id": "CVE-2001-1534",
         "pkg": "apache2-utils",
@@ -66,6 +82,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "httpd: mod_negotiation CRLF injection via untrusted file names in directories with MultiViews enabled"
+      },
+      {
+        "id": "CVE-2026-106023",
+        "pkg": "apache2-utils",
+        "installedVersion": "2.4.69-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "NULL pointer dereference vulnerability in Apache HTTP Server's mod_md  ..."
       },
       {
         "id": "CVE-2011-3374",
@@ -2492,6 +2516,54 @@
         "title": "gcc: Out-of-bounds read in std::from_chars"
       },
       {
+        "id": "CVE-2026-105437",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
+      },
+      {
         "id": "CVE-2018-1000021",
         "pkg": "git",
         "installedVersion": "1:2.47.3-0+deb13u1",
@@ -2514,6 +2586,54 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "git: The sideband payload is passed unfiltered to the terminal in git"
+      },
+      {
+        "id": "CVE-2026-105437",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
       },
       {
         "id": "CVE-2018-1000021",
@@ -3780,6 +3900,22 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -3956,6 +4092,22 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -4132,6 +4284,22 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
@@ -4306,6 +4474,22 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
+      },
+      {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -9025,7 +9209,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-107496"
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -9033,7 +9217,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88822"
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
         "id": "CVE-2026-88823",
@@ -9041,7 +9225,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88823"
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
         "id": "CVE-2026-95691",
@@ -9049,7 +9233,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95691"
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
         "id": "CVE-2026-95692",
@@ -9057,7 +9241,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95692"
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -9532,12 +9716,28 @@
         "title": "kernel: bluetooth: use-after-free vulnerability in af_bluetooth.c"
       },
       {
+        "id": "CVE-2024-21963",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.115-2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "[AMD IOMMU Out-of-Bounds Device Table Read]"
+      },
+      {
         "id": "CVE-2024-58015",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.115-2",
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: wifi: ath12k: Fix for out-of bound access error"
+      },
+      {
+        "id": "CVE-2026-0004",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.115-2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "[TSA variant: TSA-Fill]"
       },
       {
         "id": "CVE-2026-23102",
@@ -9650,6 +9850,14 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "kernel: kernel: Unauthorized network device access via missing permission checks on ownerless TUN/TAP devices"
+      },
+      {
+        "id": "CVE-2026-99288",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.115-2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of Service via race condition in TCP socket lookup"
       },
       {
         "id": "CVE-2019-15213",
@@ -11340,6 +11548,22 @@
         "title": "kernel: kernel: Denial of Service via premature connection tracking expiration on TCP RST packets"
       },
       {
+        "id": "CVE-2026-99286",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.115-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: xen-netback: Denial of Service via race condition during connection cleanup"
+      },
+      {
+        "id": "CVE-2026-99287",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.115-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: xen-netback: Denial of Service via double unmapping of shared data rings"
+      },
+      {
         "id": "CVE-2004-0230",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.115-2",
@@ -12449,7 +12673,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-107496"
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -12457,7 +12681,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88822"
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
         "id": "CVE-2026-88823",
@@ -12465,7 +12689,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88823"
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
         "id": "CVE-2026-95691",
@@ -12473,7 +12697,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95691"
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
         "id": "CVE-2026-95692",
@@ -12481,7 +12705,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95692"
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-107496",
@@ -12489,7 +12713,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-107496"
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -12497,7 +12721,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88822"
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
         "id": "CVE-2026-88823",
@@ -12505,7 +12729,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-88823"
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
         "id": "CVE-2026-95691",
@@ -12513,7 +12737,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95691"
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
         "id": "CVE-2026-95692",
@@ -12521,7 +12745,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-95692"
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2007-5686",

@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-11-11T07:34:42.084Z",
+  "scannedAt": "2026-11-12T08:03:21.756Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 1,
+    "total": 2,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -14,6 +14,14 @@
         "fixedVersion": "0.58.1-0.20261009181718-2f1f834330b2",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.3",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       }
     ]
   }

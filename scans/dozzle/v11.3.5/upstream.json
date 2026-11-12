@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-11-11T07:34:44.962Z",
+  "scannedAt": "2026-11-12T08:03:24.677Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 3,
+    "total": 4,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -30,6 +30,14 @@
         "fixedVersion": "0.62.0",
         "severity": "MEDIUM",
         "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.3",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       }
     ]
   }

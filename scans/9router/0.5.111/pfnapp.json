@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-11T07:30:20.715Z",
+  "scannedAt": "2026-11-12T07:58:43.358Z",
   "system": {
     "total": 5,
     "cves": [
@@ -46,7 +46,7 @@
     ]
   },
   "app": {
-    "total": 343,
+    "total": 350,
     "cves": [
       {
         "id": "CVE-2026-118779",
@@ -145,6 +145,30 @@
         "title": "node-forge: node-forge: Certificate validation bypass via unenforced path length constraints"
       },
       {
+        "id": "CVE-2026-125332",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.3",
+        "severity": "MEDIUM",
+        "title": "node-forge: node-forge: Denial of Service via unsupported TLS ServerHello compression method"
+      },
+      {
+        "id": "CVE-2026-125333",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.3",
+        "severity": "MEDIUM",
+        "title": "node-forge: node-forge: Denial of Service via inefficient regular expression in HTTP header parsing"
+      },
+      {
+        "id": "CVE-2026-125334",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.3",
+        "severity": "MEDIUM",
+        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+      },
+      {
         "id": "CVE-2026-118774",
         "pkg": "node-forge",
         "installedVersion": "1.4.0",
@@ -183,6 +207,14 @@
         "fixedVersion": "1.4.1",
         "severity": "LOW",
         "title": "node-forge: node-forge: Denial of Service via infinite loop on negative input"
+      },
+      {
+        "id": "CVE-2026-125335",
+        "pkg": "node-forge",
+        "installedVersion": "1.4.0",
+        "fixedVersion": "1.4.3",
+        "severity": "LOW",
+        "title": "node-forge: node-forge: Signature verification bypass via unvalidated small-order Ed25519 public keys"
       },
       {
         "id": "CVE-2025-58063",
@@ -1193,6 +1225,14 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.24.4",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
         "id": "CVE-2026-26958",
         "pkg": "filippo.io/edwards25519",
         "installedVersion": "v1.1.0",
@@ -2025,6 +2065,14 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.1",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
         "id": "CVE-2026-26958",
         "pkg": "filippo.io/edwards25519",
         "installedVersion": "v1.1.0",
@@ -2791,6 +2839,14 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.1",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       }
     ]
   }

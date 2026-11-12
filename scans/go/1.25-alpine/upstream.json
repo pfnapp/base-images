@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-11-11T07:35:05.970Z",
+  "scannedAt": "2026-11-12T08:03:45.777Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 90,
+    "total": 99,
     "cves": [
       {
         "id": "CVE-2026-56866",
@@ -88,84 +88,12 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
-        "id": "CVE-2026-56866",
+        "id": "CVE-2026-97054",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56857",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "LOW",
-        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       },
       {
         "id": "CVE-2026-56866",
@@ -248,84 +176,12 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
-        "id": "CVE-2026-56866",
+        "id": "CVE-2026-97054",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56857",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "LOW",
-        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       },
       {
         "id": "CVE-2026-56866",
@@ -408,84 +264,12 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
-        "id": "CVE-2026-56866",
+        "id": "CVE-2026-97054",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56857",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "LOW",
-        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       },
       {
         "id": "CVE-2026-56866",
@@ -568,84 +352,12 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
-        "id": "CVE-2026-56866",
+        "id": "CVE-2026-97054",
         "pkg": "stdlib",
         "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
-      },
-      {
-        "id": "CVE-2026-78659",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
-      },
-      {
-        "id": "CVE-2026-78660",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
-      },
-      {
-        "id": "CVE-2026-78663",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
-      },
-      {
-        "id": "CVE-2026-94439",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
-      },
-      {
-        "id": "CVE-2026-94440",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
-      },
-      {
-        "id": "CVE-2026-94448",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
-      },
-      {
-        "id": "CVE-2026-97030",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
-      },
-      {
-        "id": "CVE-2026-97032",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "MEDIUM",
-        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
-      },
-      {
-        "id": "CVE-2026-56857",
-        "pkg": "stdlib",
-        "installedVersion": "v1.25.14",
-        "fixedVersion": "1.26.9, 1.27.2",
-        "severity": "LOW",
-        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       },
       {
         "id": "CVE-2026-56866",
@@ -726,6 +438,366 @@
         "fixedVersion": "1.26.9, 1.27.2",
         "severity": "LOW",
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "LOW",
+        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "LOW",
+        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "LOW",
+        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
+        "id": "CVE-2026-56866",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang: Cross-user response poisoning via desynchronized HTTP CONNECT connections"
+      },
+      {
+        "id": "CVE-2026-78659",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang.org/x/net/http2: golang: net/http: Denial of Service via HTTP/2 trailer header memory exhaustion"
+      },
+      {
+        "id": "CVE-2026-78660",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: golang.org/x/net/http2: net/http: HTTP response smuggling via malformed HTTP/2 framing headers"
+      },
+      {
+        "id": "CVE-2026-78663",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: golang: flow control limit bypass via double refund in HTTP/2 server"
+      },
+      {
+        "id": "CVE-2026-94439",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: golang: net/http: HTTP request smuggling via improper handling of HTTP/1 CONNECT responses"
+      },
+      {
+        "id": "CVE-2026-94440",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/textproto: mime/multipart: golang: golang: Denial of Service via memory limit bypass in multipart form parsing"
+      },
+      {
+        "id": "CVE-2026-94448",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: golang: cross-site scripting via consecutive expressions in JavaScript template literals"
+      },
+      {
+        "id": "CVE-2026-97030",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "html/template: golang: html/template: Cross-site scripting via improper escaping of yield keyword"
+      },
+      {
+        "id": "CVE-2026-97032",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "MEDIUM",
+        "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
+      },
+      {
+        "id": "CVE-2026-56857",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.9, 1.27.2",
+        "severity": "LOW",
+        "title": "os: golang: golang: Directory traversal via Windows junction handling"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.25.14",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       }
     ]
   }

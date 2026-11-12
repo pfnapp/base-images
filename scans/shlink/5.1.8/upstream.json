@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-11T07:34:32.390Z",
+  "scannedAt": "2026-11-12T08:03:11.934Z",
   "system": {
     "total": 71,
     "cves": [
@@ -574,7 +574,7 @@
     ]
   },
   "app": {
-    "total": 7,
+    "total": 8,
     "cves": [
       {
         "id": "GO-2026-5932",
@@ -601,10 +601,18 @@
         "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
       },
       {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.3",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "UNKNOWN",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "7.3.0, 5.3.0, 5.4.0, 7.4.23, 8.1.0, 4.4.0, 5.2.0, 5.4.56, 6.2.0, 6.3.0, 6.4.0, 6.4.50, 7.2.0, 5.0.0, 5.1.0, 6.1.0, 7.1.0, 7.4.0, 8.1.11",
+        "fixedVersion": "5.3.0, 5.4.0, 6.4.0, 8.1.11, 4.4.0, 5.2.0, 5.4.56, 6.1.0, 6.2.0, 6.3.0, 7.1.0, 7.3.0, 5.0.0, 5.1.0, 6.4.50, 7.2.0, 7.4.0, 7.4.23, 8.1.0",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -612,7 +620,7 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "7.1.0, 5.1.0, 5.2.0, 5.3.0, 6.2.0, 6.4.0, 7.3.0, 6.4.50, 7.4.0, 5.4.56, 6.1.0, 6.3.0, 7.4.23, 8.1.0, 8.1.11, 4.4.0, 5.0.0, 5.4.0, 7.2.0",
+        "fixedVersion": "5.4.0, 4.4.0, 5.1.0, 5.3.0, 5.4.56, 6.2.0, 6.4.0, 6.4.50, 8.1.11, 5.2.0, 6.1.0, 6.3.0, 7.3.0, 7.4.23, 7.1.0, 7.2.0, 5.0.0, 7.4.0, 8.1.0",
         "severity": "UNKNOWN",
         "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
@@ -620,7 +628,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "3.0.0, 5.4.0, 6.2.0, 4.0.0, 5.1.0, 6.3.0, 7.2.0, 7.4.0, 5.0.0, 5.2.0, 5.3.0, 5.4.56, 6.1.0, 7.4.23, 8.1.0, 6.4.0, 7.3.0, 8.1.11, 6.4.50, 7.1.0",
+        "fixedVersion": "8.1.0, 3.0.0, 5.3.0, 6.3.0, 6.4.50, 7.1.0, 4.0.0, 5.1.0, 5.4.0, 6.1.0, 6.4.0, 7.3.0, 5.4.56, 7.4.0, 8.1.11, 5.0.0, 5.2.0, 6.2.0, 7.2.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -628,7 +636,7 @@
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.9",
-        "fixedVersion": "7.1.0, 7.3.0, 8.1.11, 3.0.0, 7.2.0, 7.4.0, 8.1.0, 4.0.0, 5.2.0, 6.1.0, 7.4.23, 5.0.0, 5.1.0, 5.4.0, 5.4.56, 6.2.0, 6.4.0, 5.3.0, 6.3.0, 6.4.50",
+        "fixedVersion": "5.4.0, 6.2.0, 6.4.0, 6.4.50, 7.1.0, 7.4.0, 5.1.0, 6.1.0, 7.2.0, 8.1.11, 3.0.0, 4.0.0, 5.0.0, 5.2.0, 5.3.0, 5.4.56, 6.3.0, 7.4.23, 7.3.0, 8.1.0",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }
