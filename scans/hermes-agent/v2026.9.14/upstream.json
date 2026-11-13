@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-12T08:01:47.348Z",
+  "scannedAt": "2026-11-13T07:39:51.316Z",
   "system": {
-    "total": 5345,
+    "total": 5351,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -8788,6 +8788,30 @@
         "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
       },
       {
+        "id": "TEMP-1153842-A0EC76",
+        "pkg": "libdbus-1-3",
+        "installedVersion": "1.16.2-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[RHEL-239613, dbus#587: local denial of service via EPIPE]"
+      },
+      {
+        "id": "TEMP-1153843-36094F",
+        "pkg": "libdbus-1-3",
+        "installedVersion": "1.16.2-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[RHEL-239294, dbus#586: denial of service when nonce-tcp: transport is used]"
+      },
+      {
+        "id": "TEMP-1153844-83400A",
+        "pkg": "libdbus-1-3",
+        "installedVersion": "1.16.2-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[RHEL-239602, dbus#589: denial of service by opening a large number of autostart requests]"
+      },
+      {
         "id": "CVE-2024-25260",
         "pkg": "libelf1t64",
         "installedVersion": "0.192-4",
@@ -11193,7 +11217,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -11201,7 +11225,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50579",
@@ -11217,7 +11241,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50581",
@@ -11249,7 +11273,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -11289,7 +11313,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-54435",
@@ -11297,7 +11321,7 @@
         "installedVersion": "3.6.5-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-54441",
@@ -13972,6 +13996,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-42772",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -14052,6 +14084,38 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+      },
+      {
         "id": "CVE-2026-35189",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -14066,46 +14130,6 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -15372,6 +15396,30 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
+        "id": "CVE-2026-56438",
+        "pkg": "libva-drm2",
+        "installedVersion": "2.22.0-3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Uncontrolled search path for the libva software for all versions withi ..."
+      },
+      {
+        "id": "CVE-2026-56438",
+        "pkg": "libva-x11-2",
+        "installedVersion": "2.22.0-3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Uncontrolled search path for the libva software for all versions withi ..."
+      },
+      {
+        "id": "CVE-2026-56438",
+        "pkg": "libva2",
+        "installedVersion": "2.22.0-3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Uncontrolled search path for the libva software for all versions withi ..."
+      },
+      {
         "id": "CVE-2026-88806",
         "pkg": "libx11-6",
         "installedVersion": "2:1.8.12-1",
@@ -16292,6 +16340,14 @@
         "title": "kernel: KVM: s390: vsie: zero stale crypto bits"
       },
       {
+        "id": "CVE-2026-80926",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+      },
+      {
         "id": "CVE-2026-80951",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.105-1",
@@ -16714,6 +16770,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
         "title": "kernel: netfilter: nf_conntrack: use get_unaligned_be32() in tcp_sack()"
+      },
+      {
+        "id": "CVE-2026-98107",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.105-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: Bluetooth: L2CAP: fix out-of-bounds write in l2cap_ecred_connect"
       },
       {
         "id": "CVE-2026-98110",
@@ -20914,14 +20978,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: vlan: fix skb_under_panic and races when toggling HW VLAN offload"
-      },
-      {
-        "id": "CVE-2026-80926",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
       },
       {
         "id": "CVE-2026-80928",
@@ -29682,14 +29738,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: net: ethernet: oa_tc6: Improve the error recovery"
-      },
-      {
-        "id": "CVE-2026-98107",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.105-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: Bluetooth: L2CAP: fix out-of-bounds write in l2cap_ecred_connect"
       },
       {
         "id": "CVE-2026-98108",
@@ -40636,6 +40684,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-42772",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -40716,6 +40772,38 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+      },
+      {
         "id": "CVE-2026-35189",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -40730,46 +40818,6 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-84782",
@@ -40780,6 +40828,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-42772",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -40860,6 +40916,38 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+      },
+      {
         "id": "CVE-2026-35189",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -40874,46 +40962,6 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -42766,7 +42814,7 @@
     ]
   },
   "app": {
-    "total": 204,
+    "total": 206,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -43809,6 +43857,14 @@
         "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
+        "id": "CVE-2026-128067",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size"
+      },
+      {
         "id": "CVE-2026-96637",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -43943,6 +43999,14 @@
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "pillow: Pillow: Information disclosure via improper memory alignment during Arrow export"
+      },
+      {
+        "id": "CVE-2026-128066",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data"
       },
       {
         "id": "CVE-2026-96636",

@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-12T08:03:09.537Z",
+  "scannedAt": "2026-11-13T07:41:09.473Z",
   "system": {
     "total": 6967,
     "cves": [
@@ -7,7 +7,7 @@
         "id": "CVE-2026-119618",
         "pkg": "apache2-utils",
         "installedVersion": "2.4.67-1~deb13u2",
-        "fixedVersion": "None",
+        "fixedVersion": "2.4.71-1~deb13u1",
         "severity": "CRITICAL",
         "title": "httpd:2.4/mod_http2: mod_http2: httpd: Remote code execution in mod_http2"
       },
@@ -111,7 +111,7 @@
         "id": "CVE-2026-109163",
         "pkg": "apache2-utils",
         "installedVersion": "2.4.67-1~deb13u2",
-        "fixedVersion": "None",
+        "fixedVersion": "2.4.71-1~deb13u1",
         "severity": "MEDIUM",
         "title": "httpd: httpd: Denial of Service via stack-based buffer overflow in mod_vhost_alias"
       },
@@ -343,7 +343,7 @@
         "id": "CVE-2026-106023",
         "pkg": "apache2-utils",
         "installedVersion": "2.4.67-1~deb13u2",
-        "fixedVersion": "None",
+        "fixedVersion": "2.4.71-1~deb13u1",
         "severity": "UNKNOWN",
         "title": "NULL pointer dereference vulnerability in Apache HTTP Server's mod_md  ..."
       },
@@ -11044,6 +11044,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-18798",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.6-1~deb13u1",
@@ -11178,6 +11186,38 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14457",
@@ -11322,46 +11362,6 @@
         "fixedVersion": "3.5.6-1~deb13u2",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -12788,12 +12788,28 @@
         "title": "kernel: gfs2: fix use-after-free in gfs2_qd_dealloc"
       },
       {
+        "id": "CVE-2026-63822",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.95-1",
+        "severity": "HIGH",
+        "title": "kernel: wifi: ath11k: fix warning when unbinding"
+      },
+      {
         "id": "CVE-2026-63824",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.95-1",
         "severity": "HIGH",
         "title": "kernel: KEYS: fix overflow in keyctl_pkey_params_get_2()"
+      },
+      {
+        "id": "CVE-2026-63826",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.95-1",
+        "severity": "HIGH",
+        "title": "kernel: fbdev: fix use-after-free in store_modes()"
       },
       {
         "id": "CVE-2026-63829",
@@ -12826,6 +12842,14 @@
         "fixedVersion": "6.12.95-1",
         "severity": "HIGH",
         "title": "kernel: ntfs3: reject direct userspace writes to reserved $LX* xattrs"
+      },
+      {
+        "id": "CVE-2026-63838",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.94-1",
+        "severity": "HIGH",
+        "title": "kernel: ASoC: rsnd: Fix potential out-of-bounds access of component_dais[]"
       },
       {
         "id": "CVE-2026-63869",
@@ -13722,6 +13746,46 @@
         "fixedVersion": "6.12.96-1",
         "severity": "HIGH",
         "title": "kernel: staging: rtl8723bs: fix heap buffer overflow in rtw_cfg80211_set_wpa_ie()"
+      },
+      {
+        "id": "CVE-2026-64455",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "HIGH",
+        "title": "kernel: USB: chaoskey: Fix slab-use-after-free in chaoskey_release()"
+      },
+      {
+        "id": "CVE-2026-64470",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "HIGH",
+        "title": "kernel: Bluetooth: btusb: fix use-after-free on marvell probe failure"
+      },
+      {
+        "id": "CVE-2026-64471",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "HIGH",
+        "title": "kernel: Bluetooth: btusb: fix use-after-free on registration failure"
+      },
+      {
+        "id": "CVE-2026-64477",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "HIGH",
+        "title": "kernel: x86,fs/resctrl: Prevent out-of-bounds access while offlining CPU when SNC enabled"
+      },
+      {
+        "id": "CVE-2026-64487",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "HIGH",
+        "title": "kernel: ALSA: caiaq: fix out-of-bounds read in the Traktor Kontrol S4 input parser"
       },
       {
         "id": "CVE-2026-64530",
@@ -14692,6 +14756,14 @@
         "title": "kernel: KVM: s390: vsie: zero stale crypto bits"
       },
       {
+        "id": "CVE-2026-80926",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+      },
+      {
         "id": "CVE-2026-80951",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -15114,6 +15186,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
         "title": "kernel: netfilter: nf_conntrack: use get_unaligned_be32() in tcp_sack()"
+      },
+      {
+        "id": "CVE-2026-98107",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: Bluetooth: L2CAP: fix out-of-bounds write in l2cap_ecred_connect"
       },
       {
         "id": "CVE-2026-98110",
@@ -19980,12 +20060,12 @@
         "title": "kernel: f2fs: fix to do sanity check on f2fs_get_node_folio_ra()"
       },
       {
-        "id": "CVE-2026-63822",
+        "id": "CVE-2026-63821",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.95-1",
         "severity": "MEDIUM",
-        "title": "kernel: wifi: ath11k: fix warning when unbinding"
+        "title": "kernel: wifi: rtw88: usb: fix memory leaks on USB write failures"
       },
       {
         "id": "CVE-2026-63823",
@@ -19994,14 +20074,6 @@
         "fixedVersion": "6.12.95-1",
         "severity": "MEDIUM",
         "title": "kernel: keys: Pin request_key_auth payload in instantiate paths"
-      },
-      {
-        "id": "CVE-2026-63826",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.95-1",
-        "severity": "MEDIUM",
-        "title": "kernel: fbdev: fix use-after-free in store_modes()"
       },
       {
         "id": "CVE-2026-63832",
@@ -20034,14 +20106,6 @@
         "fixedVersion": "6.12.95-1",
         "severity": "MEDIUM",
         "title": "kernel: batman-adv: tp_meter: avoid divide-by-zero for dec_cwnd"
-      },
-      {
-        "id": "CVE-2026-63838",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.94-1",
-        "severity": "MEDIUM",
-        "title": "kernel: ASoC: rsnd: Fix potential out-of-bounds access of component_dais[]"
       },
       {
         "id": "CVE-2026-63842",
@@ -22684,20 +22748,20 @@
         "title": "kernel: usb: dwc3: run gadget disconnect from sleepable suspend context"
       },
       {
-        "id": "CVE-2026-64455",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "MEDIUM",
-        "title": "kernel: USB: chaoskey: Fix slab-use-after-free in chaoskey_release()"
-      },
-      {
         "id": "CVE-2026-64456",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.96-1",
         "severity": "MEDIUM",
         "title": "kernel: hwrng: virtio: clamp device-reported used.len at copy_data()"
+      },
+      {
+        "id": "CVE-2026-64457",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: virtio_pci: fix vq info pointer lookup via wrong index"
       },
       {
         "id": "CVE-2026-64458",
@@ -22708,12 +22772,28 @@
         "title": "kernel: mm/damon/ops-common: handle extreme intervals in damon_hot_score()"
       },
       {
+        "id": "CVE-2026-64461",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.100-1",
+        "severity": "MEDIUM",
+        "title": "kernel: PCI: mediatek: Fix IRQ domain leak when port fails to enable"
+      },
+      {
         "id": "CVE-2026-64463",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.96-1",
         "severity": "MEDIUM",
         "title": "kernel: usb: typec: tcpci_rt1711h: unregister TCPCI port with devres"
+      },
+      {
+        "id": "CVE-2026-64465",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: usb: xhci: Fix sleep in atomic context in xhci_free_streams()"
       },
       {
         "id": "CVE-2026-64468",
@@ -22732,22 +22812,6 @@
         "title": "kernel: binder: fix UAF in binder_thread_release()"
       },
       {
-        "id": "CVE-2026-64470",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "MEDIUM",
-        "title": "kernel: Bluetooth: btusb: fix use-after-free on marvell probe failure"
-      },
-      {
-        "id": "CVE-2026-64471",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "MEDIUM",
-        "title": "kernel: Bluetooth: btusb: fix use-after-free on registration failure"
-      },
-      {
         "id": "CVE-2026-64472",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22764,6 +22828,14 @@
         "title": "kernel: vfio: Remove device debugfs before releasing devres"
       },
       {
+        "id": "CVE-2026-64474",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: vfio: prevent infinite loop in vfio_mig_get_next_state() on blocked arc"
+      },
+      {
         "id": "CVE-2026-64475",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22772,12 +22844,12 @@
         "title": "kernel: vfio/pci: Release the VGA arbiter client on register_device() failure"
       },
       {
-        "id": "CVE-2026-64477",
+        "id": "CVE-2026-64476",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.96-1",
         "severity": "MEDIUM",
-        "title": "kernel: x86,fs/resctrl: Prevent out-of-bounds access while offlining CPU when SNC enabled"
+        "title": "kernel: vfio/pci: Latch disable_idle_d3 per device"
       },
       {
         "id": "CVE-2026-64478",
@@ -22788,12 +22860,12 @@
         "title": "kernel: ALSA: usb-audio: avoid kobject path lookup in DualSense match"
       },
       {
-        "id": "CVE-2026-64479",
+        "id": "CVE-2026-64480",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.96-1",
         "severity": "MEDIUM",
-        "title": "kernel: ALSA: seq: Fix uninitialised heap leak in snd_seq_event_dup()"
+        "title": "kernel: ALSA: ice1712: check snd_ctl_new1() return value"
       },
       {
         "id": "CVE-2026-64481",
@@ -22818,14 +22890,6 @@
         "fixedVersion": "6.12.96-1",
         "severity": "MEDIUM",
         "title": "kernel: ALSA: es1938: check snd_ctl_new1() return value"
-      },
-      {
-        "id": "CVE-2026-64487",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "MEDIUM",
-        "title": "kernel: ALSA: caiaq: fix out-of-bounds read in the Traktor Kontrol S4 input parser"
       },
       {
         "id": "CVE-2026-64490",
@@ -22860,6 +22924,14 @@
         "title": "kernel: iio: accel: bmc150: clamp the device-reported FIFO frame count"
       },
       {
+        "id": "CVE-2026-64505",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: usb: gadget: function: rndis: add length check for header"
+      },
+      {
         "id": "CVE-2026-64507",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -22876,12 +22948,28 @@
         "title": "kernel: bpf: Support for hardening against JIT spraying"
       },
       {
+        "id": "CVE-2026-64509",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.100-1",
+        "severity": "MEDIUM",
+        "title": "kernel: rust: block: fix GenDisk cleanup paths"
+      },
+      {
         "id": "CVE-2026-64510",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.100-1",
         "severity": "MEDIUM",
         "title": "kernel: ACPI: NFIT: core: Fix acpi_nfit_init() error cleanup"
+      },
+      {
+        "id": "CVE-2026-64511",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.96-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ACPI: NFIT: core: Fix possible NULL pointer dereference"
       },
       {
         "id": "CVE-2026-64515",
@@ -31538,14 +31626,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: vlan: fix skb_under_panic and races when toggling HW VLAN offload"
-      },
-      {
-        "id": "CVE-2026-80926",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
       },
       {
         "id": "CVE-2026-80928",
@@ -40316,14 +40396,6 @@
         "title": "kernel: net: ethernet: oa_tc6: Improve the error recovery"
       },
       {
-        "id": "CVE-2026-98107",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: Bluetooth: L2CAP: fix out-of-bounds write in l2cap_ecred_connect"
-      },
-      {
         "id": "CVE-2026-98108",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -46548,14 +46620,6 @@
         "title": "kernel: block: Avoid mounting the bdev pseudo-filesystem in userspace"
       },
       {
-        "id": "CVE-2026-63821",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.95-1",
-        "severity": "LOW",
-        "title": "kernel: wifi: rtw88: usb: fix memory leaks on USB write failures"
-      },
-      {
         "id": "CVE-2026-63825",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -46772,22 +46836,6 @@
         "title": "kernel: staging: vme_user: bound slave read/write to the kern_buf size"
       },
       {
-        "id": "CVE-2026-64457",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: virtio_pci: fix vq info pointer lookup via wrong index"
-      },
-      {
-        "id": "CVE-2026-64461",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.100-1",
-        "severity": "LOW",
-        "title": "kernel: PCI: mediatek: Fix IRQ domain leak when port fails to enable"
-      },
-      {
         "id": "CVE-2026-64462",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -46796,36 +46844,12 @@
         "title": "kernel: PCI: altera: Fix resource leaks on probe failure"
       },
       {
-        "id": "CVE-2026-64465",
+        "id": "CVE-2026-64479",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
         "fixedVersion": "6.12.96-1",
         "severity": "LOW",
-        "title": "kernel: usb: xhci: Fix sleep in atomic context in xhci_free_streams()"
-      },
-      {
-        "id": "CVE-2026-64474",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: vfio: prevent infinite loop in vfio_mig_get_next_state() on blocked arc"
-      },
-      {
-        "id": "CVE-2026-64476",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: vfio/pci: Latch disable_idle_d3 per device"
-      },
-      {
-        "id": "CVE-2026-64480",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: ALSA: ice1712: check snd_ctl_new1() return value"
+        "title": "kernel: ALSA: seq: Fix uninitialised heap leak in snd_seq_event_dup()"
       },
       {
         "id": "CVE-2026-64482",
@@ -46906,30 +46930,6 @@
         "fixedVersion": "6.12.96-1",
         "severity": "LOW",
         "title": "kernel: iio: accel: kxsd9: fix runtime PM imbalance on write_raw() error"
-      },
-      {
-        "id": "CVE-2026-64505",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: usb: gadget: function: rndis: add length check for header"
-      },
-      {
-        "id": "CVE-2026-64509",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.100-1",
-        "severity": "LOW",
-        "title": "kernel: rust: block: fix GenDisk cleanup paths"
-      },
-      {
-        "id": "CVE-2026-64511",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.96-1",
-        "severity": "LOW",
-        "title": "kernel: ACPI: NFIT: core: Fix possible NULL pointer dereference"
       },
       {
         "id": "CVE-2026-64512",
@@ -53540,6 +53540,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-18798",
         "pkg": "openssl",
         "installedVersion": "3.5.6-1~deb13u1",
@@ -53674,6 +53682,38 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14457",
@@ -53818,46 +53858,6 @@
         "fixedVersion": "3.5.6-1~deb13u2",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14456",
@@ -53884,6 +53884,14 @@
         "title": "openssl: compat-openssl: openssl: Information disclosure via DTLS handshake retransmission"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-18798",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.6-1~deb13u1",
@@ -54018,6 +54026,38 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14457",
@@ -54162,46 +54202,6 @@
         "fixedVersion": "3.5.6-1~deb13u2",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
-      },
-      {
-        "id": "CVE-2026-107496",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -55742,7 +55742,7 @@
     ]
   },
   "app": {
-    "total": 98,
+    "total": 100,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -55759,6 +55759,22 @@
         "fixedVersion": "6.2.1",
         "severity": "HIGH",
         "title": "basic-ftp: basic-ftp: Denial of Service via crafted Unix directory listings"
+      },
+      {
+        "id": "CVE-2026-126345",
+        "pkg": "basic-ftp",
+        "installedVersion": "5.3.1",
+        "fixedVersion": "6.2.4",
+        "severity": "MEDIUM",
+        "title": "basic-ftp: Uncaught TypeError in MLSD directory-listing parser via __proto__ fact name causes DoS in Client.list()"
+      },
+      {
+        "id": "CVE-2026-126346",
+        "pkg": "basic-ftp",
+        "installedVersion": "5.3.1",
+        "fixedVersion": "6.2.3",
+        "severity": "MEDIUM",
+        "title": "basic-ftp: Uncaught exception crashes the Node.js process when a password (or resumed-download path) contains CR/LF"
       },
       {
         "id": "CVE-2026-111181",

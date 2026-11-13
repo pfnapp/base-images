@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-12T07:59:50.390Z",
+  "scannedAt": "2026-11-13T07:38:11.317Z",
   "system": {
     "total": 556,
     "cves": [
@@ -3252,19 +3252,11 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
-        "id": "CVE-2025-27587",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
@@ -3272,7 +3264,7 @@
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
@@ -3280,7 +3272,7 @@
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
@@ -3288,7 +3280,7 @@
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
@@ -3296,8 +3288,16 @@
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+      },
+      {
+        "id": "CVE-2025-27587",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -3868,19 +3868,11 @@
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
       },
       {
-        "id": "CVE-2025-27587",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
@@ -3888,7 +3880,7 @@
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
       },
       {
@@ -3896,7 +3888,7 @@
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
       },
       {
@@ -3904,7 +3896,7 @@
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
       },
       {
@@ -3912,8 +3904,16 @@
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+      },
+      {
+        "id": "CVE-2025-27587",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -4454,8 +4454,24 @@
     ]
   },
   "app": {
-    "total": 33,
+    "total": 40,
     "cves": [
+      {
+        "id": "CVE-2026-126210",
+        "pkg": "@hono/node-server",
+        "installedVersion": "2.1.3",
+        "fixedVersion": "2.1.6, 1.19.18",
+        "severity": "MEDIUM",
+        "title": "@hono/node-server: Backslash in the request path is parsed as a path separator, bypassing path-based access control at a reverse proxy"
+      },
+      {
+        "id": "CVE-2026-126343",
+        "pkg": "@hono/node-server",
+        "installedVersion": "2.1.3",
+        "fixedVersion": "2.1.6",
+        "severity": "MEDIUM",
+        "title": "@hono/node-server: Unhandled `ECONNRESET` on the socket during an asynchronous WebSocket upgrade crashes the process"
+      },
       {
         "id": "CVE-2026-102277",
         "pkg": "brace-expansion",
@@ -4511,6 +4527,46 @@
         "fixedVersion": "14.0.2",
         "severity": "MEDIUM",
         "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
+      },
+      {
+        "id": "CVE-2026-126355",
+        "pkg": "hono",
+        "installedVersion": "4.13.12",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`)"
+      },
+      {
+        "id": "CVE-2026-126356",
+        "pkg": "hono",
+        "installedVersion": "4.13.12",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "Hono: `validator('form')` skips validation for `multipart/form-data` requests with extra parameters"
+      },
+      {
+        "id": "CVE-2026-126357",
+        "pkg": "hono",
+        "installedVersion": "4.13.12",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix"
+      },
+      {
+        "id": "CVE-2026-126358",
+        "pkg": "hono",
+        "installedVersion": "4.13.12",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "Hono: RegExpRouter skips wildcard middleware for some route sets and for paths with an encoded line terminator"
+      },
+      {
+        "id": "CVE-2026-126359",
+        "pkg": "hono",
+        "installedVersion": "4.13.12",
+        "fixedVersion": "4.13.16",
+        "severity": "LOW",
+        "title": "Hono: `css` helper does not escape a closing tag split between the template and an interpolated value, allowing HTML injection"
       },
       {
         "id": "CVE-2026-101910",

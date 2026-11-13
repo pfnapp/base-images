@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-12T08:02:30.908Z",
+  "scannedAt": "2026-11-13T07:40:32.788Z",
   "system": {
     "total": 457,
     "cves": [
@@ -3662,7 +3662,7 @@
     ]
   },
   "app": {
-    "total": 62,
+    "total": 64,
     "cves": [
       {
         "id": "CVE-2026-89407",
@@ -4001,6 +4001,14 @@
         "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
       },
       {
+        "id": "CVE-2026-128067",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "HIGH",
+        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size"
+      },
+      {
         "id": "CVE-2026-96637",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -4135,6 +4143,14 @@
         "fixedVersion": "13.0.0",
         "severity": "MEDIUM",
         "title": "pillow: Pillow: Information disclosure via improper memory alignment during Arrow export"
+      },
+      {
+        "id": "CVE-2026-128066",
+        "pkg": "pillow",
+        "installedVersion": "12.3.0",
+        "fixedVersion": "13.0.0",
+        "severity": "MEDIUM",
+        "title": "Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data"
       },
       {
         "id": "CVE-2026-96636",
