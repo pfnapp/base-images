@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# PFNApp hardened image for Dozzle v11.4.2
+# PFNApp hardened image for Dozzle v11.4.3
 #
 # Rebuild the release source with the fixed golang.org/x/net version, then
 # overlay only the binary onto the matching upstream runtime image.
@@ -12,7 +12,7 @@ RUN git clone -q --depth 1 --branch "v${DOZZLE_VERSION}" \
       https://github.com/amir20/dozzle.git /dozzle
 
 # --- Stage 2: upstream runtime, also used to extract default TLS assets -------
-FROM docker.io/amir20/dozzle:v11.4.2 AS upstream
+FROM docker.io/amir20/dozzle:v11.4.3 AS upstream
 
 # --- Stage 3: frontend (baked into the Go binary via go:embed) ----------------
 FROM oven/bun:1.4.2-alpine AS assets
