@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-13T07:41:09.473Z",
+  "scannedAt": "2026-11-14T07:25:11.851Z",
   "system": {
-    "total": 6967,
+    "total": 6969,
     "cves": [
       {
         "id": "CVE-2026-119618",
@@ -106,6 +106,14 @@
         "fixedVersion": "2.4.69-1~deb13u1",
         "severity": "HIGH",
         "title": "httpd: httpd: Authentication bypass via credential replay in mod_auth_digest"
+      },
+      {
+        "id": "CVE-2026-106023",
+        "pkg": "apache2-utils",
+        "installedVersion": "2.4.67-1~deb13u2",
+        "fixedVersion": "2.4.71-1~deb13u1",
+        "severity": "MEDIUM",
+        "title": "NULL pointer dereference vulnerability in Apache HTTP Server's mod_md  ..."
       },
       {
         "id": "CVE-2026-109163",
@@ -338,14 +346,6 @@
         "fixedVersion": "2.4.69-1~deb13u1",
         "severity": "LOW",
         "title": "httpd: httpd: Denial of Service via crafted HTTP response bodies in mod_proxy_html"
-      },
-      {
-        "id": "CVE-2026-106023",
-        "pkg": "apache2-utils",
-        "installedVersion": "2.4.67-1~deb13u2",
-        "fixedVersion": "2.4.71-1~deb13u1",
-        "severity": "UNKNOWN",
-        "title": "NULL pointer dereference vulnerability in Apache HTTP Server's mod_md  ..."
       },
       {
         "id": "CVE-2026-109518",
@@ -2706,6 +2706,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "GnuPG: Incorrect cryptographic message parsing"
+      },
+      {
+        "id": "CVE-2026-91094",
+        "pkg": "dpkg",
+        "installedVersion": "1.22.22",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A directory traversal bug was discovered when unpacking 3.0 (quilt) so ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -11905,7 +11913,7 @@
         "installedVersion": "6.12.90-2",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "[AMD IOMMU Out-of-Bounds Device Table Read]"
+        "title": "An out-of-bounds read vulnerability in the IOMMU could allow a malicio ..."
       },
       {
         "id": "CVE-2024-58015",
@@ -12041,7 +12049,7 @@
         "installedVersion": "6.12.90-2",
         "fixedVersion": "None",
         "severity": "HIGH",
-        "title": "[TSA variant: TSA-Fill]"
+        "title": "A transient execution vulnerability in some AMD processors may allow a ..."
       },
       {
         "id": "CVE-2026-100072",
@@ -15100,6 +15108,14 @@
         "title": "kernel: KVM: nVMX: Always flush vpid02 on first use"
       },
       {
+        "id": "CVE-2026-89965",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: nvdimm/btt: reject an arena whose nfree is below the lane count"
+      },
+      {
         "id": "CVE-2026-89972",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -15130,6 +15146,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
         "title": "kernel: net: skbuff: don't skb_tx_error() the source skb in skb_zerocopy()"
+      },
+      {
+        "id": "CVE-2026-90071",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: net/sched: sch_teql: restore skb->dev on the slave failure path"
       },
       {
         "id": "CVE-2026-90111",
@@ -15164,6 +15188,22 @@
         "title": "kernel: PCI/sysfs: Add lockdown checks to legacy I/O and memory handlers"
       },
       {
+        "id": "CVE-2026-90414",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: IB/isert: reject PDUs declaring more data than was received"
+      },
+      {
+        "id": "CVE-2026-93207",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: SUNRPC: Zero rpc_gss_wire_cred at svcauth_gss_decode_credbody() entry"
+      },
+      {
         "id": "CVE-2026-93288",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -15186,6 +15226,14 @@
         "fixedVersion": "6.12.111-1",
         "severity": "HIGH",
         "title": "kernel: netfilter: nf_conntrack: use get_unaligned_be32() in tcp_sack()"
+      },
+      {
+        "id": "CVE-2026-97564",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: smb: client: reject userspace cifs.idmap descriptions"
       },
       {
         "id": "CVE-2026-98107",
@@ -15260,14 +15308,6 @@
         "title": "kernel: kernel: arbitrary code execution via out-of-bounds stack access in scsi_cdl_enable()"
       },
       {
-        "id": "CVE-2026-98260",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "kernel: exec: Cleanup POSIX timers right after de_thread()"
-      },
-      {
         "id": "CVE-2026-98275",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -15319,7 +15359,7 @@
         "id": "CVE-2026-98466",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: KVM: arm64: Transfer the hyp stack pages out of the host stage-2"
       },
@@ -15330,14 +15370,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
         "title": "kernel: net: openvswitch: conntrack: fix helper UAF due to extensions realloc"
-      },
-      {
-        "id": "CVE-2026-98524",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.113-1",
-        "severity": "HIGH",
-        "title": "kernel: rds: ib: Clear the sg list when mapping an MR fails"
       },
       {
         "id": "CVE-2026-98532",
@@ -15391,7 +15423,7 @@
         "id": "CVE-2026-98715",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: KVM: SVM: Preserve TLB control (i.e. pending TLB flush) on failed VMRUN"
       },
@@ -15447,7 +15479,7 @@
         "id": "CVE-2026-98853",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: net: gso: limit recursive IP-in-IP segmentation"
       },
@@ -15503,7 +15535,7 @@
         "id": "CVE-2026-99109",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: smb: client: reject SetEA requests that do not fit the request buffer"
       },
@@ -15583,7 +15615,7 @@
         "id": "CVE-2026-99281",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: kernel: Unauthorized network device access via missing permission checks on ownerless TUN/TAP devices"
       },
@@ -15599,7 +15631,7 @@
         "id": "CVE-2026-99288",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: kernel: Denial of Service via race condition in TCP socket lookup"
       },
@@ -34007,7 +34039,7 @@
         "id": "CVE-2026-89866",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: media: chips-media: wave5: Resume device before setting EOS flag"
       },
@@ -34532,14 +34564,6 @@
         "title": "kernel: parisc: eisa: Fix infinite loop when parsing invalid IRQ value"
       },
       {
-        "id": "CVE-2026-89965",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: nvdimm/btt: reject an arena whose nfree is below the lane count"
-      },
-      {
         "id": "CVE-2026-89968",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -35002,14 +35026,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: ASoC: dapm: Fix off-by-one check on the second enum channel"
-      },
-      {
-        "id": "CVE-2026-90071",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: net/sched: sch_teql: restore skb->dev on the slave failure path"
       },
       {
         "id": "CVE-2026-90073",
@@ -36628,14 +36644,6 @@
         "title": "kernel: IB/isert: reject login PDUs declaring more data than was received"
       },
       {
-        "id": "CVE-2026-90414",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: IB/isert: reject PDUs declaring more data than was received"
-      },
-      {
         "id": "CVE-2026-90416",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -36863,7 +36871,7 @@
         "id": "CVE-2026-92499",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: ext4: validate readdir offset before accessing dirent"
       },
@@ -37802,14 +37810,6 @@
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: iommu/arm-smmu-v3: Manage teardown with devm"
-      },
-      {
-        "id": "CVE-2026-93207",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: SUNRPC: Zero rpc_gss_wire_cred at svcauth_gss_decode_credbody() entry"
       },
       {
         "id": "CVE-2026-93211",
@@ -39090,14 +39090,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: smb: client: reject out-of-bounds DataOffset in CIFSSMBRead()"
-      },
-      {
-        "id": "CVE-2026-97564",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: smb: client: reject userspace cifs.idmap descriptions"
       },
       {
         "id": "CVE-2026-97565",
@@ -40719,7 +40711,7 @@
         "id": "CVE-2026-98180",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: drm/msm: RCU-free the scheduler-containing ring and VM objects"
       },
@@ -40999,7 +40991,7 @@
         "id": "CVE-2026-98228",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: mips: select CONFIG_WEAK_REORDERING_BEYOND_LLSC from CONFIG_EYEQ"
       },
@@ -41146,6 +41138,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
+      },
+      {
+        "id": "CVE-2026-98260",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: exec: Cleanup POSIX timers right after de_thread()"
       },
       {
         "id": "CVE-2026-98261",
@@ -41831,7 +41831,7 @@
         "id": "CVE-2026-98408",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: watchdog: rzv2h: Avoid division by zero"
       },
@@ -41951,7 +41951,7 @@
         "id": "CVE-2026-98439",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: smb/server: cancel async requests when closing connection"
       },
@@ -41999,7 +41999,7 @@
         "id": "CVE-2026-98449",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: smb: client: delete compound mids on send failure before unlock"
       },
@@ -42346,6 +42346,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: drm/client: fix restore of partially initialized client"
+      },
+      {
+        "id": "CVE-2026-98524",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: rds: ib: Clear the sg list when mapping an MR fails"
       },
       {
         "id": "CVE-2026-98525",
@@ -43047,7 +43055,7 @@
         "id": "CVE-2026-98674",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: iio: adc: adi-axi-adc: Initialize state mutex"
       },
@@ -43207,7 +43215,7 @@
         "id": "CVE-2026-98714",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: KVM: SVM: Update control fields on #VMEXIT if and only if VMRUN succeeded"
       },
@@ -43583,7 +43591,7 @@
         "id": "CVE-2026-98786",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: drm/amd/display: guard dc_sink dereferences in MST mode validation"
       },
@@ -44047,7 +44055,7 @@
         "id": "CVE-2026-98863",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: KVM: x86: Re-pend GET_NESTED_STATE_PAGES if getting said pages fails"
       },
@@ -44364,6 +44372,14 @@
         "title": "kernel: parisc: Increase kernel stack size to 32kb"
       },
       {
+        "id": "CVE-2026-98920",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "kernel: netfs: Fix missing alloc tagging of direct mempool allocations"
+      },
+      {
         "id": "CVE-2026-98923",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -44591,7 +44607,7 @@
         "id": "CVE-2026-98978",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: namespace: never expire a locked mount"
       },
@@ -44647,7 +44663,7 @@
         "id": "CVE-2026-98989",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: namespace: check a recursive bind mount for mount namespace loops"
       },
@@ -44799,7 +44815,7 @@
         "id": "CVE-2026-99021",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: regulator: of: fill in supply names in of_regulator_bulk_get_all()"
       },
@@ -45039,7 +45055,7 @@
         "id": "CVE-2026-99076",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Information disclosure via IPv6 UDP route exception cache side channel"
       },
@@ -45095,7 +45111,7 @@
         "id": "CVE-2026-99086",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: dm-integrity: validate the superblock on resume"
       },
@@ -45103,7 +45119,7 @@
         "id": "CVE-2026-99087",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: dm-integrity: fix NULL pointer dereference when the 'R' flag is used"
       },
@@ -45223,7 +45239,7 @@
         "id": "CVE-2026-99122",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via unvalidated packet source in VMCI sockets"
       },
@@ -45351,7 +45367,7 @@
         "id": "CVE-2026-99146",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via unvalidated DMC firmware load address in i915 driver"
       },
@@ -45815,7 +45831,7 @@
         "id": "CVE-2026-99270",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via use-after-free in TCP socket migration"
       },
@@ -45823,7 +45839,7 @@
         "id": "CVE-2026-99271",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of service via use-after-free in ALSA Line 6 audio driver"
       },
@@ -45831,7 +45847,7 @@
         "id": "CVE-2026-99273",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: ksmbd: Denial of Service via out-of-bounds write in get_file_stream_info()"
       },
@@ -45839,7 +45855,7 @@
         "id": "CVE-2026-99274",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of service via empty truncated responses in SMB client"
       },
@@ -45855,7 +45871,7 @@
         "id": "CVE-2026-99282",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via use-after-free in sch_teql"
       },
@@ -45863,7 +45879,7 @@
         "id": "CVE-2026-99283",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via premature connection tracking expiration on TCP RST packets"
       },
@@ -45879,7 +45895,7 @@
         "id": "CVE-2026-99286",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: xen-netback: Denial of Service via race condition during connection cleanup"
       },
@@ -45887,7 +45903,7 @@
         "id": "CVE-2026-99287",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: xen-netback: Denial of Service via double unmapping of shared data rings"
       },
@@ -51719,7 +51735,7 @@
         "id": "CVE-2026-98176",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: drm/amdkfd: Avoid integer underflow with ffs in EOP ring size calc"
       },
@@ -51727,7 +51743,7 @@
         "id": "CVE-2026-98177",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: drm/amdkfd: Avoid integer underflow in EOP ring size calculation"
       },
@@ -52463,7 +52479,7 @@
         "id": "CVE-2026-98682",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: drain and invalidate before server-side copy/clone"
       },
@@ -52471,7 +52487,7 @@
         "id": "CVE-2026-98683",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: flush dirty data before zeroing a range"
       },
@@ -52479,7 +52495,7 @@
         "id": "CVE-2026-98684",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: flush and commit data before querying allocated ranges"
       },
@@ -52487,7 +52503,7 @@
         "id": "CVE-2026-98685",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: discard post-EOF pagecache when extending a file via clone range"
       },
@@ -52839,7 +52855,7 @@
         "id": "CVE-2026-98996",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: fs: don't silently unmount busy mounts"
       },
@@ -52855,7 +52871,7 @@
         "id": "CVE-2026-99026",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: net: team: free skb when broadcast has no txable port"
       },
@@ -53039,7 +53055,7 @@
         "id": "CVE-2026-99172",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
-        "fixedVersion": "None",
+        "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: ipc: drop the mqueue mount with kern_unmount() on setup failure"
       },
@@ -55742,7 +55758,7 @@
     ]
   },
   "app": {
-    "total": 100,
+    "total": 104,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -56519,6 +56535,38 @@
         "fixedVersion": "84.1.0",
         "severity": "LOW",
         "title": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description"
+      },
+      {
+        "id": "CVE-2026-126190",
+        "pkg": "soupsieve",
+        "installedVersion": "2.8.4",
+        "fixedVersion": "4.0.0",
+        "severity": "HIGH",
+        "title": "Soup Sieve: Polynomial-time denial of service in the descendant combinator"
+      },
+      {
+        "id": "CVE-2026-126191",
+        "pkg": "soupsieve",
+        "installedVersion": "2.8.4",
+        "fixedVersion": "3.0.2",
+        "severity": "HIGH",
+        "title": "Soup Sieve: Exponential ReDoS in selector compilation via \\9-run in CSS_ESCAPES/IDENTIFIER"
+      },
+      {
+        "id": "CVE-2026-126192",
+        "pkg": "soupsieve",
+        "installedVersion": "2.8.4",
+        "fixedVersion": "2.10.0",
+        "severity": "MEDIUM",
+        "title": "Soup Sieve: General sibling combinator inside :has() matches untrusted HTML in quadratic time"
+      },
+      {
+        "id": "CVE-2026-126193",
+        "pkg": "soupsieve",
+        "installedVersion": "2.8.4",
+        "fixedVersion": "3.0.2",
+        "severity": "MEDIUM",
+        "title": "Soup Sieve: Uncontrolled recursion in CSS parser lets nested pseudo-class selectors exhaust the Python call stack"
       },
       {
         "id": "CVE-2026-85999",

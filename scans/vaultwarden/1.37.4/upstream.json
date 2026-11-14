@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-13T07:39:54.985Z",
+  "scannedAt": "2026-11-14T07:24:01.900Z",
   "system": {
-    "total": 438,
+    "total": 434,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -418,6 +418,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "diffutils: heap‑based buffer overflow due to multiple signed integer overflows in line‑mapping calculations"
+      },
+      {
+        "id": "CVE-2026-91094",
+        "pkg": "dpkg",
+        "installedVersion": "1.22.22",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A directory traversal bug was discovered when unpacking 3.0 (quilt) so ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -2332,420 +2340,380 @@
         "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
       },
       {
-        "id": "CVE-2026-116303",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in PostgreSQL type conversion allows a database  ..."
-      },
-      {
         "id": "CVE-2026-116304",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL coordination of anonymous RECORD type ide ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in parallel worker coordination"
       },
       {
         "id": "CVE-2026-116306",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL composite-value field assignment allows a ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via composite-value field assignment type confusion"
       },
       {
         "id": "CVE-2026-116307",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL plperl allows an object creator to execut ..."
-      },
-      {
-        "id": "CVE-2026-116308",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Buffer over-read in PostgreSQL dict_int allows a database user to disc ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
       },
       {
         "id": "CVE-2026-116309",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL plperl may allow an object creator to exe ..."
-      },
-      {
-        "id": "CVE-2026-116310",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL COPY FROM error reporting allows a databa ..."
-      },
-      {
-        "id": "CVE-2026-116311",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in PostgreSQL DROP OWNED allows a role to remove ..."
-      },
-      {
-        "id": "CVE-2026-116312",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Inconsistent transition-capture state in PostgreSQL MERGE allows a tab ..."
-      },
-      {
-        "id": "CVE-2026-116313",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Untrusted search path in PostgreSQL vacuumdb allows a database owner t ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in PL/Perl"
       },
       {
         "id": "CVE-2026-116314",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper input validation in PostgreSQL pg_restore allows a non-plain  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via crafted archive in pg_restore"
       },
       {
         "id": "CVE-2026-116315",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Heap-based buffer overflow in PostgreSQL tsvector_delete() allows a da ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in tsvector_delete()"
       },
       {
         "id": "CVE-2026-116316",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper protection of alternate path in PostgreSQL security-restricte ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Privilege escalation via unqualified type resolution in temporary schema"
       },
       {
         "id": "CVE-2026-116317",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Heap-based buffer overflow in PostgreSQL ts_rank_cd() may allow a data ..."
-      },
-      {
-        "id": "CVE-2026-116318",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQL injection in PostgreSQL pg_dump allows an object creator to execut ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in ts_rank_cd()"
       },
       {
         "id": "CVE-2026-116319",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL plperl allows an object creator to execut ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
       },
       {
         "id": "CVE-2026-116320",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL plperl allows an object creator to execut ..."
-      },
-      {
-        "id": "CVE-2026-116321",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper null termination in PostgreSQL array element assignment allow ..."
-      },
-      {
-        "id": "CVE-2026-116322",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper locking in PostgreSQL startup processing allows an unauthenti ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Perl"
       },
       {
         "id": "CVE-2026-116323",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL pltcl allows an object creator to execute ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Tcl"
       },
       {
         "id": "CVE-2026-116325",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQL injection in PostgreSQL reindexdb allows an object creator to exec ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution in reindexdb via crafted index name"
       },
       {
         "id": "CVE-2026-116326",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Uncaught exceptions in PostgreSQL plperl allow an object creator to ca ..."
-      },
-      {
-        "id": "CVE-2026-116327",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Exposure of sensitive information in PostgreSQL security_barrier proce ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via uncaught exceptions in PL/Perl"
       },
       {
         "id": "CVE-2026-116328",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Integer wraparound in PostgreSQL generation memory contexts allows a d ..."
-      },
-      {
-        "id": "CVE-2026-116329",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL statistics import allows a table maintain ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in memory contexts"
       },
       {
         "id": "CVE-2026-116330",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Untrusted data inclusion in PostgreSQL pg_dump tar-format restore.sql  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via predictable restriction key in pg_dump restore script"
       },
       {
         "id": "CVE-2026-116331",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL min/max aggregate optimization allows an  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via aggregate optimization type confusion"
       },
       {
         "id": "CVE-2026-116332",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL portal setup allows an object creator to  ..."
-      },
-      {
-        "id": "CVE-2026-116333",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Buffer over-read in PostgreSQL parallel B-tree scans allows an object  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free during portal setup"
       },
       {
         "id": "CVE-2026-116335",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL operator commutator and negator links all ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via operator link type confusion"
       },
       {
         "id": "CVE-2026-116336",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Operation on a dropped index in PostgreSQL REINDEX CONCURRENTLY allows ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via dropped index in REINDEX CONCURRENTLY"
       },
       {
         "id": "CVE-2026-120139",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Integer wraparound in PostgreSQL in-memory tuple-size calculations all ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in tuple-size calculations"
       },
       {
         "id": "CVE-2026-120141",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL materialized set-returning functions allo ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in materialized set-returning functions"
       },
       {
         "id": "CVE-2026-120142",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL anonymous RECORD types allows an object c ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in anonymous RECORD types"
       },
       {
         "id": "CVE-2026-120143",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL trigger functions allows an object creato ..."
-      },
-      {
-        "id": "CVE-2026-120144",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion from incomplete PostgreSQL type-cache invalidation allo ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in trigger functions"
       },
       {
         "id": "CVE-2026-120145",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in PostgreSQL logical replication allows a compr ..."
-      },
-      {
-        "id": "CVE-2026-120146",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Missing authorization in PostgreSQL REASSIGN OWNED allows a role grant ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via system catalog replication target"
       },
       {
         "id": "CVE-2026-120147",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in the PostgreSQL dblink extension allows an object cre ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in dblink extension"
       },
       {
         "id": "CVE-2026-120148",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL extended statistics allows an object crea ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in extended statistics"
       },
       {
         "id": "CVE-2026-120149",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Heap-based buffer overflow in PostgreSQL foreign batch inserts allows  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via foreign batch inserts"
       },
       {
         "id": "CVE-2026-120150",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL expanded-record domain checks allows an o ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in expanded-record domain checks"
       },
       {
         "id": "CVE-2026-120151",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL plpgsql record-field assignment allows an ..."
-      },
-      {
-        "id": "CVE-2026-120152",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use after free in PostgreSQL pg_show_all_settings() allows a database  ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via PL/pgSQL type confusion"
       },
       {
         "id": "CVE-2026-120153",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "SQL injection in PostgreSQL extension-script substitutions allows an a ..."
-      },
-      {
-        "id": "CVE-2026-120154",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper protection in PostgreSQL INSERT ... ON CONFLICT allows an att ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via SQL injection in extension-script substitutions"
       },
       {
         "id": "CVE-2026-14661",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "External control of file name in PostgreSQL dblink and CREATE/ALTER SU ..."
-      },
-      {
-        "id": "CVE-2026-16237",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Improper protection in PostgreSQL INSERT ... ON CONFLICT on auto-updat ..."
-      },
-      {
-        "id": "CVE-2026-16240",
-        "pkg": "libpq5",
-        "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Use of externally-controlled format string in PostgreSQL pg_basebackup ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Persistent Denial of Service via arbitrary file append in sslkeylogfile parameter"
       },
       {
         "id": "CVE-2026-18447",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL SQL-language functions allows an object c ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in SQL-language functions"
       },
       {
         "id": "CVE-2026-6460",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Type confusion in PostgreSQL allows an object creator to execute arbit ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in data definition commands"
       },
       {
         "id": "CVE-2026-6467",
         "pkg": "libpq5",
         "installedVersion": "17.11-0+deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Uncontrolled search path element in PostgreSQL CREATE EXTENSION allows ..."
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via uncontrolled search path in extension management"
+      },
+      {
+        "id": "CVE-2026-116308",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via zero-length token in dict_int"
+      },
+      {
+        "id": "CVE-2026-116310",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in COPY FROM error reporting"
+      },
+      {
+        "id": "CVE-2026-116311",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: row-level security bypass via DROP OWNED"
+      },
+      {
+        "id": "CVE-2026-116312",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Incorrect trigger row processing via partitioned table MERGE"
+      },
+      {
+        "id": "CVE-2026-116321",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: server memory disclosure via improper null termination in array element assignment"
+      },
+      {
+        "id": "CVE-2026-116327",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via security barrier view bypass"
+      },
+      {
+        "id": "CVE-2026-116333",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via buffer over-read in parallel B-tree scans"
+      },
+      {
+        "id": "CVE-2026-120146",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Authorization bypass via REASSIGN OWNED command"
+      },
+      {
+        "id": "CVE-2026-120152",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in pg_show_all_settings()"
+      },
+      {
+        "id": "CVE-2026-120154",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Row-level security bypass via INSERT ON CONFLICT DO UPDATE"
+      },
+      {
+        "id": "CVE-2026-16237",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Security restriction bypass via INSERT ON CONFLICT on auto-updatable views"
+      },
+      {
+        "id": "CVE-2026-116303",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "LOW",
+        "title": "postgresql: PostgreSQL: Unauthorized execution of restricted cast functions via type conversion operations"
+      },
+      {
+        "id": "CVE-2026-16240",
+        "pkg": "libpq5",
+        "installedVersion": "17.11-0+deb13u1",
+        "fixedVersion": "17.12-0+deb13u1",
+        "severity": "LOW",
+        "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
       },
       {
         "id": "CVE-2026-107161",

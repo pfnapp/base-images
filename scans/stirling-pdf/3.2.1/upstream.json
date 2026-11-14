@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-13T07:40:32.787Z",
+  "scannedAt": "2026-11-14T07:24:37.915Z",
   "system": {
-    "total": 607,
+    "total": 633,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -2092,6 +2092,14 @@
         "title": "bzip2: bzip2: Denial of Service in bzip2recover via a specially crafted file"
       },
       {
+        "id": "CVE-2026-18374",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
+      },
+      {
         "id": "CVE-2026-19499",
         "pkg": "libc-bin",
         "installedVersion": "2.39-0ubuntu8.8",
@@ -2140,6 +2148,54 @@
         "title": "glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state"
       },
       {
+        "id": "CVE-2026-84243",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Arbitrary code execution via directory traversal in LANGUAGE environment variable"
+      },
+      {
+        "id": "CVE-2026-8674",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc-bin",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
+      },
+      {
+        "id": "CVE-2026-18374",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
+      },
+      {
         "id": "CVE-2026-19499",
         "pkg": "libc6",
         "installedVersion": "2.39-0ubuntu8.8",
@@ -2186,6 +2242,46 @@
         "fixedVersion": "2.39-0ubuntu8.9",
         "severity": "MEDIUM",
         "title": "glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state"
+      },
+      {
+        "id": "CVE-2026-84243",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Arbitrary code execution via directory traversal in LANGUAGE environment variable"
+      },
+      {
+        "id": "CVE-2026-8674",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "libc6",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2017-7475",
@@ -2948,6 +3044,14 @@
         "title": "gstreamer1-plugins-base: gst-plugins-base: heap buffer overflow via unvalidated GstVideoMeta plane extents in gst_video_frame_map_id and video_meta_deserialize"
       },
       {
+        "id": "CVE-2026-125704",
+        "pkg": "libgstreamer1.0-0",
+        "installedVersion": "1.24.2-1ubuntu0.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gstreamer: gstreamer: Use-after-free in GStreamer core buffer value deserialization"
+      },
+      {
         "id": "CVE-2026-22693",
         "pkg": "libharfbuzz-icu0",
         "installedVersion": "8.3.0-2build2",
@@ -3106,6 +3210,14 @@
         "fixedVersion": "0.25.3-4ubuntu2.2",
         "severity": "MEDIUM",
         "title": "p11-kit: Integer overflow in RPC attribute-array length calculation can under-allocate nested attribute storage on 32 bit systems"
+      },
+      {
+        "id": "CVE-2026-121876",
+        "pkg": "libpam-systemd",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
       },
       {
         "id": "CVE-2026-40228",
@@ -3940,12 +4052,28 @@
         "title": "FFmpeg: Double-Free Vulnerability in FFmpeg TensorFlow DNN Backend"
       },
       {
+        "id": "CVE-2026-121876",
+        "pkg": "libsystemd-shared",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
+      },
+      {
         "id": "CVE-2026-40228",
         "pkg": "libsystemd-shared",
         "installedVersion": "255.4-1ubuntu8.17",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
+      },
+      {
+        "id": "CVE-2026-121876",
+        "pkg": "libsystemd0",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
       },
       {
         "id": "CVE-2026-40228",
@@ -4042,6 +4170,14 @@
         "fixedVersion": "6.4+20240113-1ubuntu2.2",
         "severity": "LOW",
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-121876",
+        "pkg": "libudev1",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
       },
       {
         "id": "CVE-2026-40228",
@@ -4332,6 +4468,14 @@
         "title": "A vulnerability classified as critical was found in libzvbi up to 0.2. ..."
       },
       {
+        "id": "CVE-2026-18374",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string"
+      },
+      {
         "id": "CVE-2026-19499",
         "pkg": "locales",
         "installedVersion": "2.39-0ubuntu8.8",
@@ -4378,6 +4522,46 @@
         "fixedVersion": "2.39-0ubuntu8.9",
         "severity": "MEDIUM",
         "title": "glibc: Non-progress DoS in EUC_JISX0213 -> UCS-4 conversion state"
+      },
+      {
+        "id": "CVE-2026-84243",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Arbitrary code execution via directory traversal in LANGUAGE environment variable"
+      },
+      {
+        "id": "CVE-2026-8674",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc DNS stub resolver: Denial of Service via long search domain in configuration"
+      },
+      {
+        "id": "CVE-2026-86805",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Privilege escalation and arbitrary code execution via TOCTOU race condition in dynamic loader"
+      },
+      {
+        "id": "CVE-2026-95818",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Local attacker can cause denial of service and information disclosure via stack-based buffer overflow."
+      },
+      {
+        "id": "CVE-2026-97399",
+        "pkg": "locales",
+        "installedVersion": "2.39-0ubuntu8.8",
+        "fixedVersion": "2.39-0ubuntu8.12",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
         "id": "CVE-2024-56433",
@@ -4708,6 +4892,14 @@
         "title": "python: Python/Expat: Denial of Service via crafted XML document"
       },
       {
+        "id": "CVE-2026-121876",
+        "pkg": "systemd",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
+      },
+      {
         "id": "CVE-2026-40228",
         "pkg": "systemd",
         "installedVersion": "255.4-1ubuntu8.17",
@@ -4716,12 +4908,28 @@
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
+        "id": "CVE-2026-121876",
+        "pkg": "systemd-dev",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
+      },
+      {
         "id": "CVE-2026-40228",
         "pkg": "systemd-dev",
         "installedVersion": "255.4-1ubuntu8.17",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
+      },
+      {
+        "id": "CVE-2026-121876",
+        "pkg": "systemd-sysv",
+        "installedVersion": "255.4-1ubuntu8.17",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
       },
       {
         "id": "CVE-2026-40228",

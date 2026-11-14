@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-13T07:39:48.647Z",
+  "scannedAt": "2026-11-14T07:23:56.226Z",
   "system": {
-    "total": 1322,
+    "total": 1323,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -442,6 +442,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "github.com/moby/moby: Moby's Firewalld reload removes bridge network isolation"
+      },
+      {
+        "id": "CVE-2026-91094",
+        "pkg": "dpkg",
+        "installedVersion": "1.22.22",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A directory traversal bug was discovered when unpacking 3.0 (quilt) so ..."
       },
       {
         "id": "CVE-2026-58049",
@@ -4468,7 +4476,7 @@
         "title": "dbus: dbus-daemon: dbus-daemon aborts (reply_serial != 0) when a broadcast from the driver cannot be delivered to a monitored bus"
       },
       {
-        "id": "TEMP-1153842-A0EC76",
+        "id": "CVE-2026-128987",
         "pkg": "libdbus-1-3",
         "installedVersion": "1.16.2-2",
         "fixedVersion": "None",
@@ -5969,7 +5977,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50580",
@@ -5993,7 +6001,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50584",
@@ -6009,7 +6017,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50586",
@@ -6041,7 +6049,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50713",
@@ -10228,6 +10236,54 @@
         "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
       },
       {
+        "id": "CVE-2026-109091",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A buffer overflow in handlingEDID Display-Range descriptors in X.Org x ..."
+      },
+      {
+        "id": "CVE-2026-109092",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Incorrectly handled negative sizes when processingProcXvShmPutImage re ..."
+      },
+      {
+        "id": "CVE-2026-109093",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A stack buffer overflow inProcXTestFakeInput DeviceValuator handling i ..."
+      },
+      {
+        "id": "CVE-2026-109095",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A integer overflow inglamor Xv Image Size handling in X.Org xwayland b ..."
+      },
+      {
+        "id": "CVE-2026-109096",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Incorrect handling of negative returns fromddQueryImageAttributes()  w ..."
+      },
+      {
+        "id": "CVE-2026-109903",
+        "pkg": "xserver-common",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A buffer overread caused by casting a negative integer to CARD32 inXvQ ..."
+      },
+      {
         "id": "CVE-2026-88812",
         "pkg": "xserver-common",
         "installedVersion": "2:21.1.16-1.3+deb13u4",
@@ -10316,60 +10372,12 @@
         "title": "xorg-x11-server: xorg-x11-server: Denial of Service via use-after-free in gesture event handling"
       },
       {
-        "id": "CVE-2026-109091",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server EDID DS_RANGES Out-Of-Bounds Write]"
-      },
-      {
-        "id": "CVE-2026-109092",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[ X.Org Server XvShmPutImage Shared-Memory Bounds Overflow]"
-      },
-      {
-        "id": "CVE-2026-109093",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XTestFakeInput Valuator Stack Out-Of-Bounds Write]"
-      },
-      {
         "id": "CVE-2026-109094",
         "pkg": "xserver-common",
         "installedVersion": "2:21.1.16-1.3+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[ X.Org Server XRes QueryResourceBytes Swap Path Size Overflow]"
-      },
-      {
-        "id": "CVE-2026-109095",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server glamor Xv Image Size Integer Overflow]"
-      },
-      {
-        "id": "CVE-2026-109096",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XvPutImage Negative Image Size Length Bypass]"
-      },
-      {
-        "id": "CVE-2026-109903",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XvQueryImageAttributes Negative Size Reply]"
+        "title": "A integer overflow that can lead to a buffer overrread in theXRes Quer ..."
       },
       {
         "id": "CVE-2026-109904",
@@ -10377,7 +10385,7 @@
         "installedVersion": "2:21.1.16-1.3+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[X.Org Server XRes QueryClientIds Request Size Overflow]"
+        "title": "A buffer overread caused by an integer-overflow inProc/SProcXResQueryC ..."
       },
       {
         "id": "CVE-2023-5574",
@@ -10388,6 +10396,54 @@
         "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
       },
       {
+        "id": "CVE-2026-109091",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A buffer overflow in handlingEDID Display-Range descriptors in X.Org x ..."
+      },
+      {
+        "id": "CVE-2026-109092",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Incorrectly handled negative sizes when processingProcXvShmPutImage re ..."
+      },
+      {
+        "id": "CVE-2026-109093",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A stack buffer overflow inProcXTestFakeInput DeviceValuator handling i ..."
+      },
+      {
+        "id": "CVE-2026-109095",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A integer overflow inglamor Xv Image Size handling in X.Org xwayland b ..."
+      },
+      {
+        "id": "CVE-2026-109096",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "Incorrect handling of negative returns fromddQueryImageAttributes()  w ..."
+      },
+      {
+        "id": "CVE-2026-109903",
+        "pkg": "xvfb",
+        "installedVersion": "2:21.1.16-1.3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "A buffer overread caused by casting a negative integer to CARD32 inXvQ ..."
+      },
+      {
         "id": "CVE-2026-88812",
         "pkg": "xvfb",
         "installedVersion": "2:21.1.16-1.3+deb13u4",
@@ -10476,60 +10532,12 @@
         "title": "xorg-x11-server: xorg-x11-server: Denial of Service via use-after-free in gesture event handling"
       },
       {
-        "id": "CVE-2026-109091",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server EDID DS_RANGES Out-Of-Bounds Write]"
-      },
-      {
-        "id": "CVE-2026-109092",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[ X.Org Server XvShmPutImage Shared-Memory Bounds Overflow]"
-      },
-      {
-        "id": "CVE-2026-109093",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XTestFakeInput Valuator Stack Out-Of-Bounds Write]"
-      },
-      {
         "id": "CVE-2026-109094",
         "pkg": "xvfb",
         "installedVersion": "2:21.1.16-1.3+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[ X.Org Server XRes QueryResourceBytes Swap Path Size Overflow]"
-      },
-      {
-        "id": "CVE-2026-109095",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server glamor Xv Image Size Integer Overflow]"
-      },
-      {
-        "id": "CVE-2026-109096",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XvPutImage Negative Image Size Length Bypass]"
-      },
-      {
-        "id": "CVE-2026-109903",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.16-1.3+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[X.Org Server XvQueryImageAttributes Negative Size Reply]"
+        "title": "A integer overflow that can lead to a buffer overrread in theXRes Quer ..."
       },
       {
         "id": "CVE-2026-109904",
@@ -10537,7 +10545,7 @@
         "installedVersion": "2:21.1.16-1.3+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[X.Org Server XRes QueryClientIds Request Size Overflow]"
+        "title": "A buffer overread caused by an integer-overflow inProc/SProcXResQueryC ..."
       },
       {
         "id": "DSA-6549-1",
@@ -10582,7 +10590,7 @@
     ]
   },
   "app": {
-    "total": 206,
+    "total": 208,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -11457,6 +11465,14 @@
         "title": "opentelemetry-api: opentelemetry-api: Denial of Service via regular expression backtracking in header parsing"
       },
       {
+        "id": "CVE-2026-126360",
+        "pkg": "opentelemetry-api",
+        "installedVersion": "1.39.1",
+        "fixedVersion": "1.45.2",
+        "severity": "MEDIUM",
+        "title": "OpenTelemetry Python API: Denial of service through quadratic-time traceparent parsing"
+      },
+      {
         "id": "CVE-2026-112393",
         "pkg": "pillow",
         "installedVersion": "12.3.0",
@@ -11887,6 +11903,14 @@
         "fixedVersion": "6.6",
         "severity": "LOW",
         "title": "tornado: tornado: Open redirect via crafted request paths in RedirectHandler URL templates"
+      },
+      {
+        "id": "CVE-2026-126347",
+        "pkg": "tornado",
+        "installedVersion": "6.5.8",
+        "fixedVersion": "6.6.1",
+        "severity": "LOW",
+        "title": "Tornado: Open redirect via triple-slash redirect paths"
       },
       {
         "id": "CVE-2026-97688",
