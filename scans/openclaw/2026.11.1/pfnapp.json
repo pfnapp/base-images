@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-15T07:35:41.393Z",
+  "scannedAt": "2026-11-16T07:42:06.007Z",
   "system": {
-    "total": 574,
+    "total": 588,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -418,6 +418,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "gcc-12-base",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -1748,6 +1756,14 @@
         "title": "gcc: Integer wrap in `std"
       },
       {
+        "id": "CVE-2026-125709",
+        "pkg": "libgcc-s1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "12.2.0-14+deb12u1",
@@ -1858,6 +1874,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libgomp1",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -2924,6 +2948,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3018,6 +3050,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -3076,6 +3116,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3172,12 +3220,36 @@
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
       },
       {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
+      },
+      {
         "id": "CVE-2026-19552",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+      },
+      {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
       },
       {
         "id": "CVE-2026-13595",
@@ -3418,6 +3490,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libstdc++6",
+        "installedVersion": "12.2.0-14+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -4188,6 +4268,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4282,6 +4370,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -4340,6 +4436,14 @@
         "title": "python: cpython: Python configparser: Configuration injection via crafted multi-line input"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4434,6 +4538,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",

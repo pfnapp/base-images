@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-15T07:36:48.876Z",
+  "scannedAt": "2026-11-16T07:43:14.458Z",
   "system": {
-    "total": 1498,
+    "total": 1939,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -436,6 +436,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "ffmpeg",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -690,6 +730,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -972,6 +1028,326 @@
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
       },
       {
+        "id": "CVE-2026-125217",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "ffmpeg",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "gcc-14-base",
         "installedVersion": "14.2.0-19",
@@ -1002,6 +1378,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -1292,6 +1676,14 @@
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
+        "id": "CVE-2026-125709",
+        "pkg": "libatomic1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libatomic1",
         "installedVersion": "14.2.0-19",
@@ -1524,6 +1916,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libavcodec61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -1778,6 +2210,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -2058,6 +2506,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libavcodec61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-125204",
@@ -2076,6 +2844,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libavdevice61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2330,6 +3138,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -2610,6 +3434,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libavdevice61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-125204",
@@ -2628,6 +3772,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libavfilter10",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -2882,6 +4066,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -3162,6 +4362,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libavfilter10",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-125204",
@@ -3180,6 +4700,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libavformat61",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -3434,6 +4994,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -3714,6 +5290,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libavformat61",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-125204",
@@ -3732,6 +5628,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libavutil59",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -3986,6 +5922,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -4266,6 +6218,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libavutil59",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-3184",
@@ -5812,6 +8084,14 @@
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
+        "id": "CVE-2026-125709",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libgcc-s1",
         "installedVersion": "14.2.0-19",
@@ -5906,6 +8186,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libgfortran5",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -6106,6 +8394,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
       },
       {
         "id": "CVE-2026-95619",
@@ -7025,7 +9321,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-49300",
@@ -7049,7 +9345,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50581",
@@ -7057,7 +9353,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50583",
@@ -7081,7 +9377,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "[Unknown description]"
       },
       {
         "id": "CVE-2026-50586",
@@ -7105,7 +9401,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-50640",
@@ -7137,7 +9433,7 @@
         "installedVersion": "3.6.6-0.1~deb13u1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-73064",
@@ -7492,6 +9788,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libpostproc58",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -7746,6 +10082,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -8028,6 +10380,326 @@
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
       },
       {
+        "id": "CVE-2026-125217",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libpostproc58",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "libpython3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8090,6 +10762,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cpython: POP3 command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
         "id": "CVE-2026-114583",
@@ -8210,6 +10890,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -8284,6 +10972,14 @@
         "title": "cpython: POP3 command injection in user-controlled commands"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "libpython3.13-stdlib",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -8402,6 +11098,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -8420,12 +11124,28 @@
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+      },
+      {
         "id": "CVE-2026-107161",
         "pkg": "libsasl2-modules-db",
         "installedVersion": "2.1.28+dfsg1-9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
       },
       {
         "id": "CVE-2023-45927",
@@ -8692,6 +11412,14 @@
         "title": "gcc: Stack overflow in std::bitset on libstdc++"
       },
       {
+        "id": "CVE-2026-125709",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
         "id": "CVE-2026-95619",
         "pkg": "libstdc++6",
         "installedVersion": "14.2.0-19",
@@ -8724,6 +11452,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libswresample5",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -8978,6 +11746,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -9258,6 +12042,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libswresample5",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-125204",
@@ -9276,6 +12380,46 @@
         "title": "ffmpeg: heap buffer overflow via DVD subtitle encoder"
       },
       {
+        "id": "CVE-2026-125229",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: out-of-bounds memory access in Huffyuv/FFVHUFF median predictor"
+      },
+      {
+        "id": "CVE-2026-125233",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via DVB subtitle encoder"
+      },
+      {
+        "id": "CVE-2026-125244",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: VVC decoder out-of-bounds write via sh_entry_points()"
+      },
+      {
+        "id": "CVE-2026-125250",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via GIF encoder"
+      },
+      {
+        "id": "CVE-2026-125262",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "ffmpeg: heap buffer overflow via LCEVC enhancement decoding"
+      },
+      {
         "id": "CVE-2026-58049",
         "pkg": "libswscale8",
         "installedVersion": "7:7.1.5-0+deb13u1",
@@ -9530,6 +12674,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: out-of-bounds read in Musepack SV7 decoder"
+      },
+      {
+        "id": "CVE-2026-125261",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: SGI encoder out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-125264",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "ffmpeg: CPU exhaustion via JPEG XL parser TOC count"
       },
       {
         "id": "CVE-2026-18393",
@@ -9810,6 +12970,326 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "FFmpeg through 9.0.2 contains an out-of-bounds write vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125217",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory use vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125218",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125219",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125220",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode ..."
+      },
+      {
+        "id": "CVE-2026-125221",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability  ..."
+      },
+      {
+        "id": "CVE-2026-125222",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap ..."
+      },
+      {
+        "id": "CVE-2026-125224",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in lib ..."
+      },
+      {
+        "id": "CVE-2026-125225",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability ..."
+      },
+      {
+        "id": "CVE-2026-125226",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulner ..."
+      },
+      {
+        "id": "CVE-2026-125227",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_sc ..."
+      },
+      {
+        "id": "CVE-2026-125228",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds rea ..."
+      },
+      {
+        "id": "CVE-2026-125230",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125231",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerabi ..."
+      },
+      {
+        "id": "CVE-2026-125232",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in esti ..."
+      },
+      {
+        "id": "CVE-2026-125234",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in wav ..."
+      },
+      {
+        "id": "CVE-2026-125235",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavco ..."
+      },
+      {
+        "id": "CVE-2026-125236",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_fra ..."
+      },
+      {
+        "id": "CVE-2026-125237",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125238",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a reachable assertion vulnerability in l ..."
+      },
+      {
+        "id": "CVE-2026-125239",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125240",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpe ..."
+      },
+      {
+        "id": "CVE-2026-125241",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125242",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125243",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulne ..."
+      },
+      {
+        "id": "CVE-2026-125245",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_ ..."
+      },
+      {
+        "id": "CVE-2026-125246",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs ..."
+      },
+      {
+        "id": "CVE-2026-125247",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng ..."
+      },
+      {
+        "id": "CVE-2026-125248",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in ..."
+      },
+      {
+        "id": "CVE-2026-125249",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_ ..."
+      },
+      {
+        "id": "CVE-2026-125251",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in the ..."
+      },
+      {
+        "id": "CVE-2026-125252",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcode ..."
+      },
+      {
+        "id": "CVE-2026-125253",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow in cbs_vp9_split_fra ..."
+      },
+      {
+        "id": "CVE-2026-125254",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in the  ..."
+      },
+      {
+        "id": "CVE-2026-125255",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a use after free vulnerability in libavc ..."
+      },
+      {
+        "id": "CVE-2026-125256",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125257",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an off-by-one heap overflow vulnerabilit ..."
+      },
+      {
+        "id": "CVE-2026-125258",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a division by zero vulnerability in dovi ..."
+      },
+      {
+        "id": "CVE-2026-125259",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains an integer overflow vulnerability in ff_ ..."
+      },
+      {
+        "id": "CVE-2026-125260",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in  ..."
+      },
+      {
+        "id": "CVE-2026-125263",
+        "pkg": "libswscale8",
+        "installedVersion": "7:7.1.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "FFmpeg 9.0 through 9.0.2 built with liblcevc_dec fails to validate LCE ..."
       },
       {
         "id": "CVE-2026-15059",
@@ -11060,6 +14540,14 @@
         "title": "cpython: POP3 command injection in user-controlled commands"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "python3.13",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -11178,6 +14666,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -11252,6 +14748,14 @@
         "title": "cpython: POP3 command injection in user-controlled commands"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "python3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -11370,6 +14874,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -11444,6 +14956,14 @@
         "title": "cpython: POP3 command injection in user-controlled commands"
       },
       {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.13-venv",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
         "id": "CVE-2026-114583",
         "pkg": "python3.13-venv",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -11562,6 +15082,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.13-venv",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
