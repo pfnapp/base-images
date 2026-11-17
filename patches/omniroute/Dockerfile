@@ -1,4 +1,4 @@
-ARG TAG=3.8.53
+ARG TAG=3.8.54
 FROM docker.io/diegosouzapw/omniroute:${TAG}
 
 USER root
