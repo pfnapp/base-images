@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-11-17T13:25:29.495Z",
+    "generatedAt": "2026-11-17T22:24:55.508Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 58,
+    "totalMonitoredVersions": 59,
     "runAsRootCount": 40,
     "criticalVulnerabilityCount": 117,
-    "highVulnerabilityCount": 931,
-    "pfnappScannedCount": 52,
+    "highVulnerabilityCount": 932,
+    "pfnappScannedCount": 53,
     "totalCveReduction": 783
   },
   "applications": [
@@ -73672,9 +73672,145 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "3.8.54",
+          "fullRef": "diegosouzapw/omniroute:3.8.54",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": false,
+            "configuredUser": "node",
+            "uidLabel": "node"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 0,
+                "high": 3,
+                "medium": 99,
+                "low": 68,
+                "fixable": 0,
+                "total": 184
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 4,
+                "low": 0,
+                "fixable": 0,
+                "total": 5
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 3,
+                "medium": 99,
+                "low": 68,
+                "fixable": 0,
+                "total": 184,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-119373",
+                    "pkg": "libsqlite3-0",
+                    "installedVersion": "3.46.1-7+deb13u2",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-119373"
+                  },
+                  {
+                    "id": "CVE-2026-119374",
+                    "pkg": "libsqlite3-0",
+                    "installedVersion": "3.46.1-7+deb13u2",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-119374"
+                  },
+                  {
+                    "id": "CVE-2026-119379",
+                    "pkg": "libsqlite3-0",
+                    "installedVersion": "3.46.1-7+deb13u2",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-119379"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 2,
+                "low": 0,
+                "fixable": 0,
+                "total": 2,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": 0,
+                "high": 0,
+                "medium": 0,
+                "low": 0,
+                "total": 0
+              },
+              "app": {
+                "critical": 0,
+                "high": -1,
+                "medium": -2,
+                "low": 0,
+                "total": -3
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-112366"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-119373",
+              "pkg": "libsqlite3-0",
+              "installedVersion": "3.46.1-7+deb13u2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-119373"
+            },
+            {
+              "id": "CVE-2026-119374",
+              "pkg": "libsqlite3-0",
+              "installedVersion": "3.46.1-7+deb13u2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-119374"
+            },
+            {
+              "id": "CVE-2026-119379",
+              "pkg": "libsqlite3-0",
+              "installedVersion": "3.46.1-7+deb13u2",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-119379"
+            }
+          ],
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-17T22:24:55.508Z"
+        },
+        {
           "tag": "3.8.53",
           "fullRef": "diegosouzapw/omniroute:3.8.53",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -75217,7 +75353,7 @@
         {
           "tag": "3.8.52",
           "fullRef": "diegosouzapw/omniroute:3.8.52",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -76938,7 +77074,7 @@
         {
           "tag": "3.8.51",
           "fullRef": "diegosouzapw/omniroute:3.8.51",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -79899,7 +80035,7 @@
         {
           "tag": "3.8.50",
           "fullRef": "diegosouzapw/omniroute:3.8.50",
-          "rank": 4,
+          "rank": 5,
           "lifecycleStatus": "AGING",
           "lifecycleBadge": "🟠",
           "lifecycleAdvice": "Plan upgrade to latest",
