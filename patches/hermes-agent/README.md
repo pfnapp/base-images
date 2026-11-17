@@ -4,9 +4,10 @@
 **PFNApp:** `ghcr.io/pfnapp/hermes-agent:v2026.9.24`
 
 ## What changed
-
 - OS packages upgraded via `apt-get upgrade`
 - Build toolchain removed from runtime image (`gcc`, `g++`, `cpp`, `make`, `cmake`, `python3-dev`, `libffi-dev`, `libc6-dev`, `linux-libc-dev`, `binutils`)
+- Python runtime dependencies upgraded, including `PyJWT>=2.14.0`
+- Node runtime dependencies forced to patched versions (`@grpc/grpc-js>=1.14.5`, `source-map-js>=1.2.2`, `undici` 6.28.1/7.29.1)
 
 ## Services exposed by the sample compose
 
