@@ -1,4 +1,5 @@
-FROM ghcr.io/openclaw/openclaw:2026.11.3
+ARG TAG=2026.11.5
+FROM openclaw/openclaw:${TAG}
 
 USER root
 RUN apt-get update && \

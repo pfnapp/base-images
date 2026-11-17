@@ -20,6 +20,7 @@ RUN apt-get update && \
         "@grpc/grpc-js":"^1.14.5", \
         "axios":"^1.20.0", \
         "tar":"^7.5.21", \
+        "jsonata":"^2.2.1", \
         "protobufjs":"^7.5.5", \
         "ws":"^8.21.0", \
         "mysql2":"^3.22.0", \
@@ -32,6 +33,7 @@ RUN apt-get update && \
         "body-parser":"^1.20.9", \
         "follow-redirects":"^1.16.2", \
         "glob":"^10.5.0", \
+        "jsonata":"^2.2.1", \
         "lodash":"^4.18.0", \
         "minimatch":"^9.0.6", \
         "undici":"^6.29.1" }; \

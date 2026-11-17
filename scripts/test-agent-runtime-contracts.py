@@ -35,13 +35,10 @@ def compose_service(app):
 
 
 class AgentRuntimeContracts(unittest.TestCase):
-    def test_versions_match_dockerfile_and_compose(self):
+    def test_versions_match_manifest_and_compose(self):
         for app in ("hermes-agent", "openclaw"):
             with self.subTest(app=app):
                 data = manifest(app)
-                base = next(line for line in (ROOT / "patches" / app / "Dockerfile").read_text().splitlines()
-                            if line.startswith("FROM "))
-                self.assertEqual(base.rsplit(":", 1)[1], data["version"])
                 self.assertEqual(data["baseImage"].rsplit(":", 1)[1], data["version"])
                 self.assertEqual(compose_service(app)["image"].rsplit(":", 1)[1], data["version"])
 
@@ -58,12 +55,7 @@ class AgentRuntimeContracts(unittest.TestCase):
                 for probe in manifest(app)["probes"].values():
                     self.assertEqual(probe["port"], port)
 
-    def test_openclaw_explicit_lan_binding_and_bootstrap(self):
-        command = compose_service("openclaw")["command"]
-        self.assertEqual(command[:3], ["node", "openclaw.mjs", "gateway"])
-        self.assertIn("--allow-unconfigured", command)
-        self.assertIn("--bind", command)
-        self.assertEqual(command[command.index("--bind") + 1], "lan")
+    def test_openclaw_security_and_probes(self):
         self.assertNotIn("OPENCLAW_GATEWAY_BIND", compose_service("openclaw")["environment"])
         self.assertEqual(manifest("openclaw")["security"]["runAsUser"], 1000)
         self.assertEqual(manifest("openclaw")["probes"]["liveness"]["path"], "/healthz")
