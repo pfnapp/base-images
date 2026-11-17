@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-16T07:40:54.311Z",
+  "scannedAt": "2026-11-17T08:49:50.184Z",
   "system": {
     "total": 175,
     "cves": [
@@ -1406,7 +1406,16 @@
     ]
   },
   "app": {
-    "total": 0,
-    "cves": []
+    "total": 1,
+    "cves": [
+      {
+        "id": "CVE-2026-119790",
+        "pkg": "next",
+        "installedVersion": "16.4.2",
+        "fixedVersion": "16.4.5",
+        "severity": "MEDIUM",
+        "title": "Next.js: Information disclosure across root params when a 'use cache' function is called through unstable_cache()"
+      }
+    ]
   }
 }
