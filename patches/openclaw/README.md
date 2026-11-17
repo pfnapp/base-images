@@ -1,7 +1,9 @@
 # PFNApp — OpenClaw Hardened Image & Control UI
 
-**Upstream:** `docker.io/openclaw/openclaw:2026.9.6`  
-**PFNApp:** `ghcr.io/pfnapp/openclaw:2026.9.6`
+**Upstream:** `docker.io/openclaw/openclaw:2026.11.5`  
+**PFNApp:** `ghcr.io/pfnapp/openclaw:2026.11.5`
+
+The Dockerfile accepts `--build-arg TAG=...`; the release workflow passes the selected observatory tag. Issue #364 reports vulnerable dependencies in version 2026.11.4. Upstream ships prebuilt UI assets, so replacing packages in `node_modules` alone does not remediate bundled copies. Debian packages without a published Bookworm fix, including the Git findings in that issue, likewise remain unresolved. Rebuild and scan the actual image before treating any finding as resolved.
 
 ## Arsitektur: Control UI & Onboarding vs Hermes Dashboard
 
@@ -75,7 +77,7 @@ spec:
     fsGroup: 1000
   containers:
     - name: openclaw
-      image: ghcr.io/pfnapp/openclaw:2026.9.6
+      image: ghcr.io/pfnapp/openclaw:2026.11.5
       # No command/args: the image ENTRYPOINT (tini + pfnapp-entrypoint.sh)
       # and CMD (gateway --allow-unconfigured --bind lan) are the full contract.
       securityContext:
