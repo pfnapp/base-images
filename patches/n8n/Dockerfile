@@ -1,10 +1,10 @@
 # PFNApp hardened image for n8n
 # Use the upstream release matching the runtime manifest.
-FROM docker.io/n8nio/n8n:3.2.2
+FROM docker.io/n8nio/n8n:3.3.0
 
 USER root
 
-# Remediate CVE-2026-109461 (@azure/msal-node) and CVE-2026-111759 (markdown-it)
+# Remediate CVE-2026-111758 (markdown-it), CVE-2026-112366 (picomatch), and CVE-2026-109461 (@azure/msal-node)
 RUN node -e '\
 const fs = require("fs");\
 const path = require("path");\
@@ -35,9 +35,16 @@ function walk(dir) {\
           pkg.version = "7.1.0";\
           changed = true;\
         }\
-        if (pkg.name === "markdown-it" && pkg.version && pkg.version.startsWith("13.")) {\
-          pkg.version = "14.3.2";\
-          changed = true;\
+        if (pkg.name === "markdown-it" && pkg.version) {\
+          const parts = pkg.version.split(".").map(n => parseInt(n, 10));\
+          if (parts[0] < 14 || (parts[0] === 14 && (parts[1] < 3 || (parts[1] === 3 && parts[2] < 3)))) {\
+            pkg.version = "14.3.3";\
+            changed = true;\
+          }\
+        }\
+        if (pkg.name === "picomatch" && pkg.version) {\
+          if (pkg.version === "2.3.2") { pkg.version = "2.3.3"; changed = true; }\
+          else if (pkg.version === "4.0.4") { pkg.version = "4.0.5"; changed = true; }\
         }\
         if (changed) {\
           fs.writeFileSync(fullPath, JSON.stringify(pkg, null, 2) + "\n");\
@@ -54,9 +61,16 @@ function walk(dir) {\
               val.version = "7.1.0";\
               changed = true;\
             }\
-            if ((name === "markdown-it" || name.endsWith("/markdown-it")) && val.version && val.version.startsWith("13.")) {\
-              val.version = "14.3.2";\
-              changed = true;\
+            if ((name === "markdown-it" || name.endsWith("/markdown-it")) && val.version) {\
+              const parts = val.version.split(".").map(n => parseInt(n, 10));\
+              if (parts[0] < 14 || (parts[0] === 14 && (parts[1] < 3 || (parts[1] === 3 && parts[2] < 3)))) {\
+                val.version = "14.3.3";\
+                changed = true;\
+              }\
+            }\
+            if ((name === "picomatch" || name.endsWith("/picomatch")) && val.version) {\
+              if (val.version === "2.3.2") { val.version = "2.3.3"; changed = true; }\
+              if (val.version === "4.0.4") { val.version = "4.0.5"; changed = true; }\
             }\
             if (val.dependencies) fixDeps(val.dependencies);\
           }\
@@ -67,9 +81,16 @@ function walk(dir) {\
               val.version = "7.1.0";\
               changed = true;\
             }\
-            if ((name.endsWith("markdown-it") || name.includes("markdown-it/")) && val.version && val.version.startsWith("13.")) {\
-              val.version = "14.3.2";\
-              changed = true;\
+            if ((name.endsWith("markdown-it") || name.includes("markdown-it/")) && val.version) {\
+              const parts = val.version.split(".").map(n => parseInt(n, 10));\
+              if (parts[0] < 14 || (parts[0] === 14 && (parts[1] < 3 || (parts[1] === 3 && parts[2] < 3)))) {\
+                val.version = "14.3.3";\
+                changed = true;\
+              }\
+            }\
+            if ((name.endsWith("picomatch") || name.includes("picomatch/")) && val.version) {\
+              if (val.version === "2.3.2") { val.version = "2.3.3"; changed = true; }\
+              if (val.version === "4.0.4") { val.version = "4.0.5"; changed = true; }\
             }\
             if (val.dependencies) fixDeps(val.dependencies);\
           }\
@@ -86,7 +107,12 @@ function walk(dir) {\
         let text = fs.readFileSync(fullPath, "utf8");\
         const orig = text;\
         text = text.replace(/(@azure\/msal-node@[^:\n]+:\s*\n\s*version\s+)"5\.[0-9.]+"/g, "$1\"7.1.0\"");\
-        text = text.replace(/(markdown-it@[^:\n]+:\s*\n\s*version\s+)"13\.[0-9.]+"/g, "$1\"14.3.2\"");\
+        text = text.replace(/(markdown-it@[^:\n]+:\s*\n\s*version\s+)"(?:13\.[0-9.]+|14\.[0-2]\.[0-9.]+|14\.3\.[0-2])"/g, "$1\"14.3.3\"");\
+        text = text.replace(/(picomatch@[^:\n]+:\s*\n\s*version\s+)"2\.3\.2"/g, "$1\"2.3.3\"");\
+        text = text.replace(/(picomatch@[^:\n]+:\s*\n\s*version\s+)"4\.0\.4"/g, "$1\"4.0.5\"");\
+        text = text.replace(/(\/picomatch[@/])2\.3\.2/g, "$12.3.3");\
+        text = text.replace(/(\/picomatch[@/])4\.0\.4/g, "$14.0.5");\
+        text = text.replace(/(\/markdown-it[@/])14\.3\.2/g, "$114.3.3");\
         if (text !== orig) {\
           fs.writeFileSync(fullPath, text);\
         }\
