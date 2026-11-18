@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-17T08:54:39.905Z",
+  "generatedAt": "2026-11-18T08:19:39.266Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
     "totalVersions": 42,
     "criticalCount": 0,
-    "highCount": 0,
+    "highCount": 21,
     "cleanCount": 20
   },
   "baseImages": [
@@ -40,17 +40,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -84,17 +94,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -128,17 +148,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -172,17 +202,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 12,
               "low": 1,
               "fixable": 13,
-              "total": 13
+              "total": 14
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -216,17 +256,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -279,7 +329,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -323,7 +373,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -367,7 +417,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -411,7 +461,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -455,7 +505,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -499,7 +549,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -552,7 +602,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -596,7 +646,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -635,7 +685,7 @@
               "medium": 165,
               "low": 159,
               "fixable": 0,
-              "total": 393
+              "total": 399
             },
             "app": {
               "critical": 0,
@@ -695,7 +745,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -725,7 +775,7 @@
               "medium": 165,
               "low": 159,
               "fixable": 0,
-              "total": 393
+              "total": 399
             },
             "app": {
               "critical": 0,
@@ -785,7 +835,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -829,7 +879,7 @@
             "app": {
               "critical": 0,
               "high": 0,
-              "medium": 81,
+              "medium": 90,
               "low": 9,
               "fixable": 99,
               "total": 99
@@ -838,7 +888,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -882,7 +932,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -926,7 +976,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -979,7 +1029,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1023,7 +1073,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1067,17 +1117,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1111,17 +1171,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1155,17 +1225,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1199,17 +1279,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 12,
               "low": 1,
               "fixable": 13,
-              "total": 13
+              "total": 14
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1243,17 +1333,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1287,17 +1387,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1331,17 +1441,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 12,
               "low": 1,
               "fixable": 13,
-              "total": 13
+              "total": 14
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1375,17 +1495,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1464,7 +1594,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1508,7 +1638,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1552,7 +1682,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1596,7 +1726,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1640,7 +1770,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1719,17 +1849,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1763,17 +1903,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1807,17 +1957,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1851,17 +2011,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1895,17 +2065,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1939,17 +2119,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 12,
               "low": 1,
               "fixable": 13,
-              "total": 13
+              "total": 14
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.3",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1983,17 +2173,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.4",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2027,17 +2227,27 @@
             },
             "app": {
               "critical": 0,
-              "high": 0,
+              "high": 1,
               "medium": 2,
               "low": 0,
               "fixable": 2,
-              "total": 2
+              "total": 3
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-112366",
+              "pkg": "picomatch",
+              "installedVersion": "4.0.5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2116,7 +2326,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-17T08:54:39.905Z",
+          "scannedAt": "2026-11-18T08:19:39.266Z",
           "eol": {
             "date": null,
             "isEol": false,

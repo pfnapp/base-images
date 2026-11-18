@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-17T08:54:11.390Z",
+  "scannedAt": "2026-11-18T08:19:18.520Z",
   "system": {
-    "total": 4525,
+    "total": 4535,
     "cves": [
       {
         "id": "CVE-2026-119618",
@@ -9924,6 +9924,30 @@
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "libstdc++-14-dev",
         "installedVersion": "14.2.0-19",
@@ -11412,6 +11436,30 @@
         "title": "kernel: smb: client: reject userspace cifs.idmap descriptions"
       },
       {
+        "id": "CVE-2026-98077",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: netfilter: nf_conntrack_sip: fix OOB read in sip_skip_whitespace()"
+      },
+      {
+        "id": "CVE-2026-98088",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: scsi: mpt3sas: Avoid out-of-bounds cpumask_of_node() call in _base_assign_reply_queues()"
+      },
+      {
+        "id": "CVE-2026-98103",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: igmp: convert struct ip_sf_list to RCU"
+      },
+      {
         "id": "CVE-2026-98107",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -11482,6 +11530,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
         "title": "kernel: kernel: arbitrary code execution via out-of-bounds stack access in scsi_cdl_enable()"
+      },
+      {
+        "id": "CVE-2026-98257",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "HIGH",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
       },
       {
         "id": "CVE-2026-98275",
@@ -23796,14 +23852,6 @@
         "title": "kernel: tracing/probes: Fix use-after-free on field name/type of events with multiple probes"
       },
       {
-        "id": "CVE-2026-98077",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: netfilter: nf_conntrack_sip: fix OOB read in sip_skip_whitespace()"
-      },
-      {
         "id": "CVE-2026-98078",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -23812,12 +23860,28 @@
         "title": "kernel: ipvs: fix reversed sequence option serialization"
       },
       {
+        "id": "CVE-2026-98079",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: btrfs: zstd: fix lost wakeup when waiting for a workspace"
+      },
+      {
         "id": "CVE-2026-98080",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: btrfs: do not force reloc root creation during qgroup_account_snapshot()"
+      },
+      {
+        "id": "CVE-2026-98081",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "MEDIUM",
+        "title": "kernel: btrfs: zoned: finish active block group cleanup if call_zone_finish() fails"
       },
       {
         "id": "CVE-2026-98082",
@@ -23860,12 +23924,12 @@
         "title": "kernel: ALSA: ump: do not touch legacy_rmidi before it exists"
       },
       {
-        "id": "CVE-2026-98088",
+        "id": "CVE-2026-98087",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
+        "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "kernel: scsi: mpt3sas: Avoid out-of-bounds cpumask_of_node() call in _base_assign_reply_queues()"
+        "title": "kernel: sched/rt,dl: Skip migrate-disabled tasks when picking a push candidate"
       },
       {
         "id": "CVE-2026-98089",
@@ -23948,20 +24012,20 @@
         "title": "kernel: ipv6: mcast: use rcu_assign_pointer() for __rcu list updates"
       },
       {
+        "id": "CVE-2026-98101",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.113-1",
+        "severity": "MEDIUM",
+        "title": "kernel: ipv6: mcast: use copy-on-write RCU updates in ip6_mc_source()"
+      },
+      {
         "id": "CVE-2026-98102",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.111-1",
         "severity": "MEDIUM",
         "title": "kernel: ipv6: mcast: fix RCU list diversion in ip6_mc_del1_src()"
-      },
-      {
-        "id": "CVE-2026-98103",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: igmp: convert struct ip_sf_list to RCU"
       },
       {
         "id": "CVE-2026-98104",
@@ -24722,14 +24786,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: tcp: exclude old ACKs from tcp fast path"
-      },
-      {
-        "id": "CVE-2026-98257",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  r ..."
       },
       {
         "id": "CVE-2026-98260",
@@ -29500,6 +29556,166 @@
         "title": "kernel: kernel: xen-netback: Denial of Service via double unmapping of shared data rings"
       },
       {
+        "id": "CVE-2026-99290",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+      },
+      {
+        "id": "CVE-2026-99292",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-99294",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-99295",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-99296",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
+      },
+      {
+        "id": "CVE-2026-99297",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-99298",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-99299",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-99300",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+      },
+      {
+        "id": "CVE-2026-99301",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+      },
+      {
+        "id": "CVE-2026-99302",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-99303",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
+        "id": "CVE-2026-99304",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+      },
+      {
+        "id": "CVE-2026-99305",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+      },
+      {
+        "id": "CVE-2026-99306",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+      },
+      {
+        "id": "CVE-2026-99307",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+      },
+      {
+        "id": "CVE-2026-99308",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+      },
+      {
+        "id": "CVE-2026-99309",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+      },
+      {
+        "id": "CVE-2026-99310",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-99311",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+      },
+      {
         "id": "CVE-2004-0230",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -33020,38 +33236,6 @@
         "title": "kernel: bonding: do not clear curr_active_slave prematurely when releasing all slaves"
       },
       {
-        "id": "CVE-2026-98079",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "kernel: btrfs: zstd: fix lost wakeup when waiting for a workspace"
-      },
-      {
-        "id": "CVE-2026-98081",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "LOW",
-        "title": "kernel: btrfs: zoned: finish active block group cleanup if call_zone_finish() fails"
-      },
-      {
-        "id": "CVE-2026-98087",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "kernel: sched/rt,dl: Skip migrate-disabled tasks when picking a push candidate"
-      },
-      {
-        "id": "CVE-2026-98101",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.113-1",
-        "severity": "LOW",
-        "title": "kernel: ipv6: mcast: use copy-on-write RCU updates in ip6_mc_source()"
-      },
-      {
         "id": "CVE-2026-98176",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -34460,166 +34644,6 @@
         "title": "[Kernel: Unprivileged user can freeze journald]"
       },
       {
-        "id": "CVE-2026-99290",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[ksmbd: fix use-after-free after a failed durable reconnect]"
-      },
-      {
-        "id": "CVE-2026-99292",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[smb: client: fix slab-out-of-bounds write in id_mode_to_cifs_acl()]"
-      },
-      {
-        "id": "CVE-2026-99294",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[netfilter: nft_fwd_netdev: use recursion counter in neigh egress path]"
-      },
-      {
-        "id": "CVE-2026-99295",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[smb: client: stop processing a read response after a receive error]"
-      },
-      {
-        "id": "CVE-2026-99296",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[libceph: bound mon_command ack decode to front len]"
-      },
-      {
-        "id": "CVE-2026-99297",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[media: em28xx: fix double free in em28xx_alloc_urbs]"
-      },
-      {
-        "id": "CVE-2026-99298",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[net: ipv4: add zero check for snd_cwnd_clamp]"
-      },
-      {
-        "id": "CVE-2026-99299",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[media: em28xx: reject audio endpoint with zero packet size]"
-      },
-      {
-        "id": "CVE-2026-99300",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[media: go7007: only set audio_enabled if go7007_snd_init() succeeded]"
-      },
-      {
-        "id": "CVE-2026-99301",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[virtio_net: atomically disable rx mode work]"
-      },
-      {
-        "id": "CVE-2026-99302",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[nvmet-rdma: reject short connection requests]"
-      },
-      {
-        "id": "CVE-2026-99303",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[speakup: Fix NULL pointer dereference on VT switch + selection]"
-      },
-      {
-        "id": "CVE-2026-99304",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[ceph: fix integer overflow in the snap trace bounds check]"
-      },
-      {
-        "id": "CVE-2026-99305",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[fbdev: udlfb: don't rebuild the mode list while the framebuffer is in use]"
-      },
-      {
-        "id": "CVE-2026-99306",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[ceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks]"
-      },
-      {
-        "id": "CVE-2026-99307",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[ceph: require the dentry lease record to cover struct ceph_mds_reply_lease]"
-      },
-      {
-        "id": "CVE-2026-99308",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[usb: xhci: Fix bounce buffer overflow]"
-      },
-      {
-        "id": "CVE-2026-99309",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[ksmbd: fix overflow in dacloffset bounds check in build_sec_desc()]"
-      },
-      {
-        "id": "CVE-2026-99310",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[nfsd: hold cl_lock in client_has_openowners()]"
-      },
-      {
-        "id": "CVE-2026-99311",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "UNKNOWN",
-        "title": "[udf: fix return value for non-recorded-allocated extents in udf_map_block()]"
-      },
-      {
         "id": "CVE-2026-3184",
         "pkg": "login",
         "installedVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
@@ -35076,6 +35100,30 @@
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+      },
+      {
         "id": "CVE-2026-84782",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -35218,6 +35266,30 @@
         "fixedVersion": "3.5.7-1~deb13u3",
         "severity": "LOW",
         "title": "openssl: openssl: Traffic amplification Denial of Service via QUIC packet over-accounting"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -36156,6 +36228,14 @@
         "title": "unzip: Null pointer dereference in Unicode strings code"
       },
       {
+        "id": "TEMP-1153750-98581D",
+        "pkg": "unzip",
+        "installedVersion": "6.0-29+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Parsing of \"up\" extra field needs some hardening]"
+      },
+      {
         "id": "CVE-2026-3184",
         "pkg": "util-linux",
         "installedVersion": "2.41.5-0+deb13u1",
@@ -36206,7 +36286,7 @@
     ]
   },
   "app": {
-    "total": 104,
+    "total": 106,
     "cves": [
       {
         "id": "CVE-2026-48758",
@@ -36577,12 +36657,28 @@
         "title": "MySQL2: Unbounded zlib inflate in compressed MySQL protocol handler allows decompression-bomb DoS"
       },
       {
+        "id": "CVE-2026-112366",
+        "pkg": "picomatch",
+        "installedVersion": "4.0.3",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
+      },
+      {
         "id": "CVE-2026-33672",
         "pkg": "picomatch",
         "installedVersion": "4.0.3",
         "fixedVersion": "4.0.4, 3.0.2, 2.3.2",
         "severity": "MEDIUM",
         "title": "picomatch: Picomatch: Data integrity compromised via method injection with crafted POSIX bracket expressions"
+      },
+      {
+        "id": "CVE-2026-112366",
+        "pkg": "picomatch",
+        "installedVersion": "4.0.4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
       },
       {
         "id": "CVE-2026-104844",
