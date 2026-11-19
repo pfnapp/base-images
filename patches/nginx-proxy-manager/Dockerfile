@@ -1,4 +1,4 @@
-FROM docker.io/jc21/nginx-proxy-manager:2.17.0
+FROM docker.io/jc21/nginx-proxy-manager:2.17.1
 RUN apt-get update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get purge -y --auto-remove git git-man dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpgconf gpgsm && \
