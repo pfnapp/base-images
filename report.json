@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.0.0",
   "summary": {
-    "generatedAt": "2026-11-18T08:12:31.940Z",
+    "generatedAt": "2026-11-19T03:28:28.392Z",
     "scanner": "Aqua Trivy",
     "supportWindowPolicy": "N-4 (Max 5 active versions)",
     "totalApplications": 17,
-    "totalMonitoredVersions": 59,
+    "totalMonitoredVersions": 60,
     "runAsRootCount": 40,
     "criticalVulnerabilityCount": 119,
-    "highVulnerabilityCount": 973,
-    "pfnappScannedCount": 54,
+    "highVulnerabilityCount": 974,
+    "pfnappScannedCount": 55,
     "totalCveReduction": 168
   },
   "applications": [
@@ -207019,9 +207019,177 @@
       "registry": "docker.io",
       "monitoredVersions": [
         {
+          "tag": "2.17.1",
+          "fullRef": "jc21/nginx-proxy-manager:2.17.1",
+          "rank": 1,
+          "lifecycleStatus": "LATEST",
+          "lifecycleBadge": "🟢",
+          "lifecycleAdvice": "Recommended active release",
+          "security": {
+            "runAsRoot": true,
+            "configuredUser": "root",
+            "uidLabel": "0 (root)"
+          },
+          "vulnerabilities": {
+            "upstream": {
+              "system": {
+                "critical": 1,
+                "high": 130,
+                "medium": 586,
+                "low": 965,
+                "fixable": 0,
+                "total": 1733
+              },
+              "app": {
+                "critical": 0,
+                "high": 1,
+                "medium": 15,
+                "low": 2,
+                "fixable": 0,
+                "total": 18
+              }
+            },
+            "pfnapp": {
+              "scanned": true,
+              "system": {
+                "critical": 0,
+                "high": 107,
+                "medium": 544,
+                "low": 879,
+                "fixable": 0,
+                "total": 1581,
+                "topCves": [
+                  {
+                    "id": "CVE-2026-113351",
+                    "pkg": "libexpat1",
+                    "installedVersion": "2.9.0-1~deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-113351"
+                  },
+                  {
+                    "id": "CVE-2026-115506",
+                    "pkg": "libexpat1",
+                    "installedVersion": "2.9.0-1~deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-115506"
+                  },
+                  {
+                    "id": "CVE-2026-117610",
+                    "pkg": "libexpat1",
+                    "installedVersion": "2.9.0-1~deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-117610"
+                  },
+                  {
+                    "id": "CVE-2026-118370",
+                    "pkg": "libexpat1",
+                    "installedVersion": "2.9.0-1~deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-118370"
+                  },
+                  {
+                    "id": "CVE-2026-107364",
+                    "pkg": "libgssapi-krb5-2",
+                    "installedVersion": "1.21.3-5+deb13u1",
+                    "fixedVersion": "None",
+                    "severity": "HIGH",
+                    "title": "CVE-2026-107364"
+                  }
+                ],
+                "allCves": []
+              },
+              "app": {
+                "critical": 0,
+                "high": 0,
+                "medium": 1,
+                "low": 0,
+                "fixable": 0,
+                "total": 1,
+                "topCves": [],
+                "allCves": []
+              }
+            },
+            "reduction": {
+              "system": {
+                "critical": -1,
+                "high": -23,
+                "medium": -42,
+                "low": -86,
+                "total": -152
+              },
+              "app": {
+                "critical": 0,
+                "high": -1,
+                "medium": -14,
+                "low": -2,
+                "total": -17
+              }
+            }
+          },
+          "topAppCves": [
+            {
+              "id": "CVE-2026-102990",
+              "pkg": "basic-ftp",
+              "installedVersion": "5.3.1",
+              "fixedVersion": "6.2.1",
+              "severity": "HIGH",
+              "title": "CVE-2026-102990"
+            }
+          ],
+          "topSystemCves": [
+            {
+              "id": "CVE-2026-24882",
+              "pkg": "dirmngr",
+              "installedVersion": "2.4.7-21+deb13u1+b5",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-24882"
+            },
+            {
+              "id": "CVE-2026-105437",
+              "pkg": "git",
+              "installedVersion": "1:2.47.3-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-105437"
+            },
+            {
+              "id": "CVE-2026-111760",
+              "pkg": "git",
+              "installedVersion": "1:2.47.3-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-111760"
+            },
+            {
+              "id": "CVE-2026-114466",
+              "pkg": "git",
+              "installedVersion": "1:2.47.3-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-114466"
+            },
+            {
+              "id": "CVE-2026-105437",
+              "pkg": "git-man",
+              "installedVersion": "1:2.47.3-0+deb13u1",
+              "fixedVersion": "None",
+              "severity": "HIGH",
+              "title": "CVE-2026-105437"
+            }
+          ],
+          "posture": "APP HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-19T03:28:28.392Z"
+        },
+        {
           "tag": "2.17.0",
           "fullRef": "jc21/nginx-proxy-manager:2.17.0",
-          "rank": 1,
+          "rank": 2,
           "lifecycleStatus": "LATEST",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Recommended active release",
@@ -219702,7 +219870,7 @@
         {
           "tag": "2.16.0",
           "fullRef": "jc21/nginx-proxy-manager:2.16.0",
-          "rank": 2,
+          "rank": 3,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
@@ -234359,7 +234527,7 @@
         {
           "tag": "2.15.1",
           "fullRef": "jc21/nginx-proxy-manager:2.15.1",
-          "rank": 3,
+          "rank": 4,
           "lifecycleStatus": "SUPPORTED",
           "lifecycleBadge": "🟢",
           "lifecycleAdvice": "Actively maintained",
