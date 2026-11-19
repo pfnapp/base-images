@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-18T08:19:30.115Z",
+  "scannedAt": "2026-11-19T08:28:27.742Z",
   "system": {
-    "total": 24,
+    "total": 34,
     "cves": [
       {
         "id": "CVE-2026-14456",
@@ -10,6 +10,14 @@
         "fixedVersion": "3.5.8-r0",
         "severity": "HIGH",
         "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
         "id": "CVE-2026-18798",
@@ -34,6 +42,38 @@
         "fixedVersion": "3.5.8-r0",
         "severity": "MEDIUM",
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14457",
@@ -92,6 +132,14 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded memory growth in QUIC server"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
         "id": "CVE-2026-18798",
         "pkg": "libssl3",
         "installedVersion": "3.5.7-r0",
@@ -114,6 +162,38 @@
         "fixedVersion": "3.5.8-r0",
         "severity": "MEDIUM",
         "title": "openssl: invalid pointer dereference in CMP server via crafted protectionAlg"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.7-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
         "id": "CVE-2026-14457",
@@ -198,7 +278,7 @@
     ]
   },
   "app": {
-    "total": 71,
+    "total": 70,
     "cves": [
       {
         "id": "CVE-2026-101916",
@@ -471,14 +551,6 @@
         "fixedVersion": "16.3.8",
         "severity": "LOW",
         "title": "next: Next.js: Information disclosure via unrestricted cross-site requests"
-      },
-      {
-        "id": "CVE-2026-112366",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.3",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
       },
       {
         "id": "CVE-2026-33672",

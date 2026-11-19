@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-18T08:18:40.870Z",
+  "scannedAt": "2026-11-19T08:27:25.954Z",
   "system": {
-    "total": 569,
+    "total": 506,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -10,78 +10,6 @@
         "fixedVersion": "2.8.4ubuntu0.1",
         "severity": "HIGH",
         "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
-      },
-      {
-        "id": "CVE-2026-86409",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: stale SigV4 headers sent unintended"
-      },
-      {
-        "id": "CVE-2026-86414",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: leaking host credentials to HTTP proxy"
-      },
-      {
-        "id": "CVE-2026-87862",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: HSTS cache import drops longer-lived child"
-      },
-      {
-        "id": "CVE-2026-87863",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: Hsts Response Erases Persisted Entries"
-      },
-      {
-        "id": "CVE-2026-87864",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: FTP wildcard write callback mixup"
-      },
-      {
-        "id": "CVE-2026-92389",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: TFTP direction confusion"
-      },
-      {
-        "id": "CVE-2026-92391",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: curl_mime_free stack overflow by recursion"
-      },
-      {
-        "id": "CVE-2026-94266",
-        "pkg": "curl",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
       },
       {
         "id": "CVE-2026-102473",
@@ -388,12 +316,12 @@
         "title": "apt: apt: Remote code execution via hard link reuse during package download retries"
       },
       {
-        "id": "CVE-2026-16517",
+        "id": "CVE-2026-17591",
         "pkg": "libarchive13t64",
-        "installedVersion": "3.7.2-2ubuntu0.8",
-        "fixedVersion": "3.7.2-2ubuntu0.9",
+        "installedVersion": "3.7.2-2ubuntu0.9",
+        "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "libarchive: libarchive: Signed Integer Overflow in archive_write_zip_header"
+        "title": "libarchive: libarchive: use-after-free via aliased Mac metadata copy"
       },
       {
         "id": "CVE-2026-90781",
@@ -2156,14 +2084,6 @@
         "title": "FFmpeg: Double-Free Vulnerability in FFmpeg TensorFlow DNN Backend"
       },
       {
-        "id": "CVE-2026-111497",
-        "pkg": "libbrotli1",
-        "installedVersion": "1.1.0-2build2",
-        "fixedVersion": "1.1.0-2ubuntu0.1",
-        "severity": "HIGH",
-        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
-      },
-      {
         "id": "CVE-2026-18374",
         "pkg": "libc-bin",
         "installedVersion": "2.39-0ubuntu8.9",
@@ -2276,6 +2196,14 @@
         "title": "cairo: Stack-based buffer overflow via parsing of crafted WebKitGTK+ document"
       },
       {
+        "id": "CVE-2025-50422",
+        "pkg": "libcairo-gobject2",
+        "installedVersion": "1.18.0-3build1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "poppler: Poppler crash on malformed input"
+      },
+      {
         "id": "CVE-2017-7475",
         "pkg": "libcairo2",
         "installedVersion": "1.18.0-3build1",
@@ -2290,6 +2218,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "cairo: Stack-based buffer overflow via parsing of crafted WebKitGTK+ document"
+      },
+      {
+        "id": "CVE-2025-50422",
+        "pkg": "libcairo2",
+        "installedVersion": "1.18.0-3build1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "poppler: Poppler crash on malformed input"
       },
       {
         "id": "CVE-2023-26819",
@@ -2396,150 +2332,6 @@
         "title": "cups: OpenPrinting CUPS: Heap out-of-bounds read in cupsUTF32ToUTF8() via missing source-length bound"
       },
       {
-        "id": "CVE-2026-86409",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: stale SigV4 headers sent unintended"
-      },
-      {
-        "id": "CVE-2026-86414",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: leaking host credentials to HTTP proxy"
-      },
-      {
-        "id": "CVE-2026-87862",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: HSTS cache import drops longer-lived child"
-      },
-      {
-        "id": "CVE-2026-87863",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: Hsts Response Erases Persisted Entries"
-      },
-      {
-        "id": "CVE-2026-87864",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: FTP wildcard write callback mixup"
-      },
-      {
-        "id": "CVE-2026-92389",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: TFTP direction confusion"
-      },
-      {
-        "id": "CVE-2026-92391",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: curl_mime_free stack overflow by recursion"
-      },
-      {
-        "id": "CVE-2026-94266",
-        "pkg": "libcurl3t64-gnutls",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
-      },
-      {
-        "id": "CVE-2026-86409",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: stale SigV4 headers sent unintended"
-      },
-      {
-        "id": "CVE-2026-86414",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: leaking host credentials to HTTP proxy"
-      },
-      {
-        "id": "CVE-2026-87862",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: HSTS cache import drops longer-lived child"
-      },
-      {
-        "id": "CVE-2026-87863",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: Hsts Response Erases Persisted Entries"
-      },
-      {
-        "id": "CVE-2026-87864",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
-      },
-      {
-        "id": "CVE-2026-92388",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: FTP wildcard write callback mixup"
-      },
-      {
-        "id": "CVE-2026-92389",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: TFTP direction confusion"
-      },
-      {
-        "id": "CVE-2026-92391",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: curl_mime_free stack overflow by recursion"
-      },
-      {
-        "id": "CVE-2026-94266",
-        "pkg": "libcurl4t64",
-        "installedVersion": "8.5.0-2ubuntu10.15",
-        "fixedVersion": "8.5.0-2ubuntu10.16",
-        "severity": "LOW",
-        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
-      },
-      {
         "id": "CVE-2026-19617",
         "pkg": "libdevmapper1.02.1",
         "installedVersion": "2:1.02.185-3ubuntu3.2",
@@ -2594,6 +2386,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
+      },
+      {
+        "id": "CVE-2026-93990",
+        "pkg": "libexpat1",
+        "installedVersion": "2.6.1-2ubuntu0.6",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: Expat: XML Injection via Malformed UTF-16 Input"
       },
       {
         "id": "CVE-2025-15269",
@@ -2724,14 +2524,6 @@
         "title": "fontforge: Fontforge memory leak"
       },
       {
-        "id": "CVE-2026-95512",
-        "pkg": "libfreetype6",
-        "installedVersion": "2.13.2+dfsg-1ubuntu0.1",
-        "fixedVersion": "2.13.2+dfsg-1ubuntu0.2",
-        "severity": "MEDIUM",
-        "title": "freetype: FreeType: Denial of Service via repeated subroutine allocations in CID font loader"
-      },
-      {
         "id": "CVE-2026-16768",
         "pkg": "libgdk-pixbuf-2.0-0",
         "installedVersion": "2.42.10+dfsg-3ubuntu3.3",
@@ -2782,7 +2574,7 @@
       {
         "id": "CVE-2026-86469",
         "pkg": "libglib2.0-0t64",
-        "installedVersion": "2.80.0-6ubuntu3.9",
+        "installedVersion": "2.80.0-6ubuntu3.10",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glib2: TOCTOU Symlink Race in `G_FILE_CREATE_REPLACE_DESTINATION` Fallback Path"
@@ -2790,7 +2582,7 @@
       {
         "id": "CVE-2026-86469",
         "pkg": "libglib2.0-data",
-        "installedVersion": "2.80.0-6ubuntu3.9",
+        "installedVersion": "2.80.0-6ubuntu3.10",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "glib2: TOCTOU Symlink Race in `G_FILE_CREATE_REPLACE_DESTINATION` Fallback Path"
@@ -2924,6 +2716,14 @@
         "title": "icu: Stack buffer overflow in the SRBRoot::addTag function"
       },
       {
+        "id": "CVE-2018-10126",
+        "pkg": "libjpeg-turbo8",
+        "installedVersion": "2.1.5-2ubuntu2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "libtiff: NULL pointer dereference in the jpeg_fdct_16x16 function in jfdctint.c"
+      },
+      {
         "id": "CVE-2026-82522",
         "pkg": "libjxl0.7",
         "installedVersion": "0.7.0-10.2ubuntu6.1",
@@ -3038,7 +2838,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "libpam-systemd",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -3046,66 +2846,10 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "libpam-systemd",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
-        "id": "CVE-2026-103111",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "pcre2: pcre2: Out-of-bounds write via crafted regular expression"
-      },
-      {
-        "id": "CVE-2026-86145",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "pcre2: PCRE2: Out-of-bounds write allows arbitrary code execution via crafted regular expressions"
-      },
-      {
-        "id": "CVE-2026-89156",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "PCRE2: PCRE2: Out-of-bounds read via invalid UTF data during JIT fallback"
-      },
-      {
-        "id": "CVE-2026-89157",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "pcre2: PCRE2: Out-of-bounds write via large pattern input"
-      },
-      {
-        "id": "CVE-2026-89158",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "PCRE2: PCRE2: Out-of-bounds write via integer overflow on 32-bit platforms"
-      },
-      {
-        "id": "CVE-2026-89160",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "pcre2: PCRE2: Denial of Service via out-of-bounds read during invalid UTF matching"
-      },
-      {
-        "id": "CVE-2026-89161",
-        "pkg": "libpcre2-8-0",
-        "installedVersion": "10.42-4ubuntu2.1",
-        "fixedVersion": "10.42-4ubuntu2.2",
-        "severity": "MEDIUM",
-        "title": "pcre2: PCRE2: Memory corruption vulnerability in pcre2_jit_match"
       },
       {
         "id": "CVE-2023-37769",
@@ -3116,73 +2860,17 @@
         "title": "stress-test master commit e4c878 was discovered to contain a FPE vulne ..."
       },
       {
-        "id": "CVE-2026-46675",
-        "pkg": "libpng16-16t64",
-        "installedVersion": "1.6.43-5ubuntu0.6",
-        "fixedVersion": "1.6.43-5ubuntu0.7",
-        "severity": "MEDIUM",
-        "title": "libpng: libpng: Use-after-free in sequential reader when png_read_end called without reading image rows"
-      },
-      {
-        "id": "CVE-2026-102620",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
-      },
-      {
-        "id": "CVE-2026-102621",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
-      },
-      {
-        "id": "CVE-2026-107705",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.11",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Denial of Service via stack-based buffer overflow in PDF decryption"
-      },
-      {
         "id": "CVE-2026-93311",
         "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
       },
       {
-        "id": "CVE-2026-93312",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
-      },
-      {
-        "id": "CVE-2026-93313",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Poppler: Remote integer overflow vulnerability"
-      },
-      {
-        "id": "CVE-2026-93314",
-        "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Poppler: Remote integer overflow vulnerability"
-      },
-      {
         "id": "CVE-2026-93653",
         "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: poppler: unbounded CPU loop in SplashOutputDev::tilingPatternFill via unvalidated tiling-pattern repeat count (denial of service)"
@@ -3190,7 +2878,7 @@
       {
         "id": "CVE-2019-9543",
         "pkg": "libpoppler134",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
@@ -3218,14 +2906,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "python: Python/Expat: Denial of Service via crafted XML document"
-      },
-      {
-        "id": "CVE-2026-96889",
-        "pkg": "librsvg2-2",
-        "installedVersion": "2.58.0+dfsg-1build1",
-        "fixedVersion": "2.58.0+dfsg-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "librsvg: Use-after-free when XML includes have duplicated entities"
       },
       {
         "id": "CVE-2026-107161",
@@ -3814,7 +3494,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "libsystemd-shared",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -3822,7 +3502,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "libsystemd-shared",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -3830,7 +3510,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "libsystemd0",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -3838,7 +3518,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "libsystemd0",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -3924,6 +3604,14 @@
         "title": "tesseract: Tesseract: Denial of Service via crafted model with empty stack dereference"
       },
       {
+        "id": "CVE-2026-12912",
+        "pkg": "libtiff6",
+        "installedVersion": "4.5.1+git230720-4ubuntu2.5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtiff: libtiff: Heap-based buffer overflow via crafted PixarLog-compressed TIFF image"
+      },
+      {
         "id": "CVE-2026-4775",
         "pkg": "libtiff6",
         "installedVersion": "4.5.1+git230720-4ubuntu2.5",
@@ -3934,7 +3622,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "libudev1",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -3942,7 +3630,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "libudev1",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -3972,102 +3660,6 @@
         "title": "NULL pointer dereference in some Intel(R) oneVPL software before versi ..."
       },
       {
-        "id": "CVE-2026-88806",
-        "pkg": "libx11-6",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-      },
-      {
-        "id": "CVE-2026-94283",
-        "pkg": "libx11-6",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
-      },
-      {
-        "id": "CVE-2026-94284",
-        "pkg": "libx11-6",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
-      },
-      {
-        "id": "CVE-2026-94285",
-        "pkg": "libx11-6",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
-      },
-      {
-        "id": "CVE-2026-88806",
-        "pkg": "libx11-data",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-      },
-      {
-        "id": "CVE-2026-94283",
-        "pkg": "libx11-data",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
-      },
-      {
-        "id": "CVE-2026-94284",
-        "pkg": "libx11-data",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
-      },
-      {
-        "id": "CVE-2026-94285",
-        "pkg": "libx11-data",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
-      },
-      {
-        "id": "CVE-2026-88806",
-        "pkg": "libx11-xcb1",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-      },
-      {
-        "id": "CVE-2026-94283",
-        "pkg": "libx11-xcb1",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM attribute parser"
-      },
-      {
-        "id": "CVE-2026-94284",
-        "pkg": "libx11-xcb1",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in XIM trigger-key registration parser"
-      },
-      {
-        "id": "CVE-2026-94285",
-        "pkg": "libx11-xcb1",
-        "installedVersion": "2:1.8.7-1build1",
-        "fixedVersion": "2:1.8.7-1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
-      },
-      {
         "id": "CVE-2025-25467",
         "pkg": "libx264-164",
         "installedVersion": "2:0.164.3108+git31e19f9-1",
@@ -4076,44 +3668,12 @@
         "title": "Insufficient tracking and releasing of allocated used memory in libx26 ..."
       },
       {
-        "id": "CVE-2026-76781",
-        "pkg": "libxml2",
-        "installedVersion": "2.9.14+dfsg-1.3ubuntu3.9",
-        "fixedVersion": "2.9.14+dfsg-1.3ubuntu3.10",
+        "id": "CVE-2026-93541",
+        "pkg": "libxi6",
+        "installedVersion": "2:1.8.1-1build1",
+        "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "libxml2: libxml2: NULL pointer dereference parsing nextCatalog without catalog attribute"
-      },
-      {
-        "id": "CVE-2026-86138",
-        "pkg": "libxml2",
-        "installedVersion": "2.9.14+dfsg-1.3ubuntu3.9",
-        "fixedVersion": "2.9.14+dfsg-1.3ubuntu3.10",
-        "severity": "MEDIUM",
-        "title": "libxml2: libxml2: Arbitrary code execution via heap-based buffer overflow"
-      },
-      {
-        "id": "CVE-2026-86142",
-        "pkg": "libxml2",
-        "installedVersion": "2.9.14+dfsg-1.3ubuntu3.9",
-        "fixedVersion": "2.9.14+dfsg-1.3ubuntu3.10",
-        "severity": "MEDIUM",
-        "title": "libxml2: libxml2: Heap-based buffer overflow in xmlXPtrEval due to xpointer length saturation"
-      },
-      {
-        "id": "CVE-2026-86143",
-        "pkg": "libxml2",
-        "installedVersion": "2.9.14+dfsg-1.3ubuntu3.9",
-        "fixedVersion": "2.9.14+dfsg-1.3ubuntu3.10",
-        "severity": "MEDIUM",
-        "title": "libxml2: libxml2: Data integrity issues due to integer overflow in write callbacks"
-      },
-      {
-        "id": "CVE-2026-86144",
-        "pkg": "libxml2",
-        "installedVersion": "2.9.14+dfsg-1.3ubuntu3.9",
-        "fixedVersion": "2.9.14+dfsg-1.3ubuntu3.10",
-        "severity": "MEDIUM",
-        "title": "libxml2: libxml2: Information disclosure, SSRF, or denial of service due to improper parseFlags propagation."
+        "title": "libXi: Out-of-bounds read in libXi's XQueryDeviceState()"
       },
       {
         "id": "CVE-2026-88807",
@@ -4138,14 +3698,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libxslt: libxml2: Heap Use-After-Free in libxslt caused by atype corruption in xmlAttrPtr"
-      },
-      {
-        "id": "CVE-2026-94286",
-        "pkg": "libxtst6",
-        "installedVersion": "2:1.2.3-1.1build1",
-        "fixedVersion": "2:1.2.3-1.1ubuntu0.1",
-        "severity": "MEDIUM",
-        "title": "libXtst: libXtst: Denial of Service via out-of-bounds read in RECORD reply parser"
       },
       {
         "id": "CVE-2025-2173",
@@ -4300,65 +3852,17 @@
         "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
       },
       {
-        "id": "CVE-2026-102620",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Data corruption via integer overflow in FoFiTrueType::cvtSfnts"
-      },
-      {
-        "id": "CVE-2026-102621",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Denial of Service via integer overflow in SplashClip"
-      },
-      {
-        "id": "CVE-2026-107705",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.11",
-        "severity": "MEDIUM",
-        "title": "poppler: poppler: Denial of Service via stack-based buffer overflow in PDF decryption"
-      },
-      {
         "id": "CVE-2026-93311",
         "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: Freedesktop Poppler: Denial of service via integer overflow in SampledFunction"
       },
       {
-        "id": "CVE-2026-93312",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Freedesktop Poppler: Denial of Service via null pointer dereference in JBIG2Stream::rewind function"
-      },
-      {
-        "id": "CVE-2026-93313",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Poppler: Remote integer overflow vulnerability"
-      },
-      {
-        "id": "CVE-2026-93314",
-        "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
-        "fixedVersion": "24.02.0-1ubuntu9.10",
-        "severity": "MEDIUM",
-        "title": "poppler: Poppler: Remote integer overflow vulnerability"
-      },
-      {
         "id": "CVE-2026-93653",
         "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "poppler: poppler: unbounded CPU loop in SplashOutputDev::tilingPatternFill via unvalidated tiling-pattern repeat count (denial of service)"
@@ -4366,7 +3870,7 @@
       {
         "id": "CVE-2019-9543",
         "pkg": "poppler-utils",
-        "installedVersion": "24.02.0-1ubuntu9.9",
+        "installedVersion": "24.02.0-1ubuntu9.11",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
@@ -4390,7 +3894,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "systemd",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -4398,7 +3902,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "systemd",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -4406,7 +3910,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "systemd-dev",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -4414,7 +3918,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "systemd-dev",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -4422,7 +3926,7 @@
       {
         "id": "CVE-2026-121876",
         "pkg": "systemd-sysv",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sandboxed-containers: kernel: systemd-gpt-auto-generator: Guest Data Leakage in Confidential Computing (Sandboxed Containers)"
@@ -4430,7 +3934,7 @@
       {
         "id": "CVE-2026-40228",
         "pkg": "systemd-sysv",
-        "installedVersion": "255.4-1ubuntu8.17",
+        "installedVersion": "255.4-1ubuntu8.18",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
@@ -4534,7 +4038,7 @@
       {
         "id": "CVE-2023-5574",
         "pkg": "xserver-common",
-        "installedVersion": "2:21.1.12-1ubuntu1.8",
+        "installedVersion": "2:21.1.12-1ubuntu1.9",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
@@ -4542,88 +4046,16 @@
       {
         "id": "CVE-2023-5574",
         "pkg": "xvfb",
-        "installedVersion": "2:21.1.12-1ubuntu1.8",
+        "installedVersion": "2:21.1.12-1ubuntu1.9",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
-      },
-      {
-        "id": "CVE-2026-85091",
-        "pkg": "zlib1g",
-        "installedVersion": "1:1.3.dfsg-3.1ubuntu2.2",
-        "fixedVersion": "1:1.3.dfsg-3.1ubuntu2.3",
-        "severity": "MEDIUM",
-        "title": "zlib: zlib: Heap buffer overflow in gz_vacate() allows arbitrary code execution"
       }
     ]
   },
   "app": {
-    "total": 64,
+    "total": 1,
     "cves": [
-      {
-        "id": "CVE-2026-89407",
-        "pkg": "com.fasterxml.jackson.core:jackson-core",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.18.11, 2.21.7, 2.22.3",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
-      },
-      {
-        "id": "CVE-2026-89425",
-        "pkg": "com.fasterxml.jackson.core:jackson-core",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.21.7, 2.22.3, 2.18.11",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
-      },
-      {
-        "id": "CVE-2026-68497",
-        "pkg": "com.fasterxml.jackson.core:jackson-databind",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.18.10, 2.21.6, 2.22.2",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: CPU Denial of Service via unbounded numeric parsing"
-      },
-      {
-        "id": "CVE-2026-91776",
-        "pkg": "com.fasterxml.jackson.core:jackson-databind",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.18.11, 2.21.7, 2.22.3",
-        "severity": "HIGH",
-        "title": "jackson-databind: com.fasterxml.jackson/jackson-core: jackson-databind: Denial of Service via unbounded cache growth in TypeDeserializerBase"
-      },
-      {
-        "id": "CVE-2026-91777",
-        "pkg": "com.fasterxml.jackson.core:jackson-databind",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.21.7, 2.18.11, 2.22.3",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core:jackson-databind: Jackson-databind: Denial of Service via quadratic forward-reference completion"
-      },
-      {
-        "id": "CVE-2026-19032",
-        "pkg": "com.fasterxml.jackson.core:jackson-databind",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.18.10, 2.21.6, 2.22.2",
-        "severity": "MEDIUM",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: Jackson-databind: Uncontrolled URI scheme resolution in Path deserialization"
-      },
-      {
-        "id": "CVE-2026-83557",
-        "pkg": "com.fasterxml.jackson.core:jackson-databind",
-        "installedVersion": "2.21.5",
-        "fixedVersion": "2.18.10, 2.21.6, 2.22.2",
-        "severity": "MEDIUM",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: Path traversal via incomplete type validation"
-      },
-      {
-        "id": "CVE-2026-102554",
-        "pkg": "com.google.guava:guava",
-        "installedVersion": "33.6.0-jre",
-        "fixedVersion": "33.7.2",
-        "severity": "HIGH",
-        "title": "com.google.guava/guava: Google Guava: Denial of Service via unthrottled memory allocation during deserialization"
-      },
       {
         "id": "CVE-2026-59171",
         "pkg": "org.json:json",
@@ -4631,446 +4063,6 @@
         "fixedVersion": "20260719",
         "severity": "MEDIUM",
         "title": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS"
-      },
-      {
-        "id": "CVE-2026-75140",
-        "pkg": "org.jsoup:jsoup",
-        "installedVersion": "1.15.3",
-        "fixedVersion": "1.23.2",
-        "severity": "HIGH",
-        "title": "org.jsoup/jsoup: jsoup: Denial of Service via deeply nested XML documents"
-      },
-      {
-        "id": "CVE-2026-71497",
-        "pkg": "org.jsoup:jsoup",
-        "installedVersion": "1.15.3",
-        "fixedVersion": "1.23.1",
-        "severity": "MEDIUM",
-        "title": "org.jsoup/jsoup: jsoup: Cross-site scripting via malformed HTML tag names"
-      },
-      {
-        "id": "CVE-2026-75140",
-        "pkg": "org.jsoup:jsoup",
-        "installedVersion": "1.15.4",
-        "fixedVersion": "1.23.2",
-        "severity": "HIGH",
-        "title": "org.jsoup/jsoup: jsoup: Denial of Service via deeply nested XML documents"
-      },
-      {
-        "id": "CVE-2026-71497",
-        "pkg": "org.jsoup:jsoup",
-        "installedVersion": "1.15.4",
-        "fixedVersion": "1.23.1",
-        "severity": "MEDIUM",
-        "title": "org.jsoup/jsoup: jsoup: Cross-site scripting via malformed HTML tag names"
-      },
-      {
-        "id": "CVE-2026-89407",
-        "pkg": "tools.jackson.core:jackson-core",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.7, 3.2.2",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson/jackson-core: tools.jackson.core/jackson-core: Jackson-core: Denial of Service via regular expression backtracking"
-      },
-      {
-        "id": "CVE-2026-89425",
-        "pkg": "tools.jackson.core:jackson-core",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.7, 3.2.3",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-core: Jackson-core: Denial of Service via unbounded StringBuilder growth during malformed token processing"
-      },
-      {
-        "id": "CVE-2026-68497",
-        "pkg": "tools.jackson.core:jackson-databind",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.2.2, 3.1.6",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: CPU Denial of Service via unbounded numeric parsing"
-      },
-      {
-        "id": "CVE-2026-91776",
-        "pkg": "tools.jackson.core:jackson-databind",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.7, 3.2.3",
-        "severity": "HIGH",
-        "title": "jackson-databind: com.fasterxml.jackson/jackson-core: jackson-databind: Denial of Service via unbounded cache growth in TypeDeserializerBase"
-      },
-      {
-        "id": "CVE-2026-91777",
-        "pkg": "tools.jackson.core:jackson-databind",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.7, 3.2.3",
-        "severity": "HIGH",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core:jackson-databind: Jackson-databind: Denial of Service via quadratic forward-reference completion"
-      },
-      {
-        "id": "CVE-2026-19032",
-        "pkg": "tools.jackson.core:jackson-databind",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.6, 3.2.2",
-        "severity": "MEDIUM",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: Jackson-databind: Uncontrolled URI scheme resolution in Path deserialization"
-      },
-      {
-        "id": "CVE-2026-83557",
-        "pkg": "tools.jackson.core:jackson-databind",
-        "installedVersion": "3.1.5",
-        "fixedVersion": "3.1.6, 3.2.2",
-        "severity": "MEDIUM",
-        "title": "com.fasterxml.jackson.core/jackson-databind: tools.jackson.core/jackson-databind: jackson-databind: Path traversal via incomplete type validation"
-      },
-      {
-        "id": "CVE-2026-111497",
-        "pkg": "brotli",
-        "installedVersion": "1.2.0",
-        "fixedVersion": "1.2.1",
-        "severity": "CRITICAL",
-        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
-      },
-      {
-        "id": "CVE-2026-112393",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "CRITICAL",
-        "title": "pillow: Pillow: Heap buffer overflow in _tiffWriteProc when saving TIFF to BytesIO"
-      },
-      {
-        "id": "CVE-2026-112398",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "CRITICAL",
-        "title": "pillow: Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution"
-      },
-      {
-        "id": "CVE-2026-112403",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "CRITICAL",
-        "title": "pillow: Pillow: Heap buffer overflow in ImagingJpegDecode"
-      },
-      {
-        "id": "CVE-2026-112900",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "CRITICAL",
-        "title": "pillow: Pillow: Argument Injection in Ghostscript call, potentially leading into RCE"
-      },
-      {
-        "id": "CVE-2026-96639",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "CRITICAL",
-        "title": "pillow: Pillow multi-frame loaders can reuse stale native image storage after mode transitions"
-      },
-      {
-        "id": "CVE-2026-112390",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via infinite loop during crafted MIC image parsing"
-      },
-      {
-        "id": "CVE-2026-112392",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via zero-size images in rank filters"
-      },
-      {
-        "id": "CVE-2026-112397",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via out-of-bounds memory access on zero-width images"
-      },
-      {
-        "id": "CVE-2026-112399",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of service via crafted APNG image"
-      },
-      {
-        "id": "CVE-2026-112400",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via memory exhaustion from crafted GIF image"
-      },
-      {
-        "id": "CVE-2026-112402",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of service via double free during image transformation"
-      },
-      {
-        "id": "CVE-2026-112404",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in TIFF decoding"
-      },
-      {
-        "id": "CVE-2026-112405",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via null pointer dereference in Image.merge()"
-      },
-      {
-        "id": "CVE-2026-112406",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via infinite loop during PDF page rewriting"
-      },
-      {
-        "id": "CVE-2026-112892",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via unbounded memory expansion in MSP image decoder"
-      },
-      {
-        "id": "CVE-2026-112893",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via invalid pointer free during font rendering"
-      },
-      {
-        "id": "CVE-2026-112894",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via crafted multi-frame image conversion"
-      },
-      {
-        "id": "CVE-2026-112895",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of service via crafted PDF during append operations"
-      },
-      {
-        "id": "CVE-2026-112896",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in TIFF encoder"
-      },
-      {
-        "id": "CVE-2026-112897",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Information disclosure via uninitialized buffer in TIFF decoding"
-      },
-      {
-        "id": "CVE-2026-112902",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "Pillow: Memory disclosure and segfault in libtiff encoder via crafted TIFF tags"
-      },
-      {
-        "id": "CVE-2026-128067",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size"
-      },
-      {
-        "id": "CVE-2026-96637",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via decompression bomb bypass in SPIDER images"
-      },
-      {
-        "id": "CVE-2026-96640",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via duplicate page references in PDF files"
-      },
-      {
-        "id": "CVE-2026-96642",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via negative archive member size in TarIO"
-      },
-      {
-        "id": "CVE-2026-96643",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Denial of Service via repeated EXIF headers"
-      },
-      {
-        "id": "CVE-2026-96644",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: Pillow: Denial of Service via out-of-bounds read in metafile parser"
-      },
-      {
-        "id": "CVE-2026-96778",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "pillow: pillow: Arbitrary code execution via JPEG encoder buffer overflow"
-      },
-      {
-        "id": "GHSA-78g4-xqwv-q3g8",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "HIGH",
-        "title": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()"
-      },
-      {
-        "id": "CVE-2026-112391",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: Pillow: Denial of Service via unbounded recursion in PDF parser"
-      },
-      {
-        "id": "CVE-2026-112394",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Information disclosure via out-of-bounds read in raw decoders"
-      },
-      {
-        "id": "CVE-2026-112395",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Information disclosure via crafted tiled TIFF image"
-      },
-      {
-        "id": "CVE-2026-112396",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: arbitrary code execution via heap use-after-free during TIFF encoding"
-      },
-      {
-        "id": "CVE-2026-112401",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Denial of Service via crafted GIF comments"
-      },
-      {
-        "id": "CVE-2026-112891",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Denial of Service via large GIF comments"
-      },
-      {
-        "id": "CVE-2026-112898",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: Pillow: Information disclosure via empty palette quantization"
-      },
-      {
-        "id": "CVE-2026-112899",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0,  ..."
-      },
-      {
-        "id": "CVE-2026-112901",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: Pillow: Denial of Service via crafted XBM image header"
-      },
-      {
-        "id": "CVE-2026-114501",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: Pillow: Information disclosure via improper memory alignment during Arrow export"
-      },
-      {
-        "id": "CVE-2026-128066",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data"
-      },
-      {
-        "id": "CVE-2026-96636",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Denial of Service via decompression bomb check bypass in multi-frame images"
-      },
-      {
-        "id": "CVE-2026-96638",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Denial of Service via crafted RLE BMP image"
-      },
-      {
-        "id": "CVE-2026-96641",
-        "pkg": "pillow",
-        "installedVersion": "12.3.0",
-        "fixedVersion": "13.0.0",
-        "severity": "MEDIUM",
-        "title": "pillow: pillow: Denial of Service via integer overflow in text-width calculation"
       }
     ]
   }

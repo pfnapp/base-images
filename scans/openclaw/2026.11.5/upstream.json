@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-18T08:15:07.266Z",
+  "scannedAt": "2026-11-19T08:25:26.626Z",
   "system": {
-    "total": 575,
+    "total": 584,
     "cves": [
       {
         "id": "CVE-2026-54370",
@@ -652,6 +652,14 @@
         "title": "bzip2: bzip2: Denial of Service in bzip2recover via a specially crafted file"
       },
       {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -820,6 +828,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -828,20 +844,36 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-115819",
-        "pkg": "libc-bin",
+        "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
         "id": "CVE-2026-18374",
@@ -1012,6 +1044,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -1020,20 +1060,28 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
-        "id": "CVE-2026-115819",
+        "id": "CVE-2026-121758",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3316,12 +3364,36 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3356,28 +3428,12 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-95690",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -3900,12 +3956,36 @@
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3940,28 +4020,20 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
+        "id": "CVE-2026-95690",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+      },
+      {
         "id": "CVE-2026-107493",
-        "pkg": "openssl",
+        "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-107496",
@@ -3970,6 +4042,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -4004,28 +4092,12 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-95690",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -4606,7 +4678,7 @@
     ]
   },
   "app": {
-    "total": 33,
+    "total": 30,
     "cves": [
       {
         "id": "CVE-2026-126210",
@@ -4767,30 +4839,6 @@
         "fixedVersion": "11.0.1",
         "severity": "MEDIUM",
         "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
-      },
-      {
-        "id": "CVE-2026-112366",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.5",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
-      },
-      {
-        "id": "CVE-2026-112366",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.7",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
-      },
-      {
-        "id": "CVE-2026-112366",
-        "pkg": "picomatch",
-        "installedVersion": "4.0.7",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "picomatch: picomatch: Denial of Service via single-branch repeated extglob patterns"
       },
       {
         "id": "CVE-2026-104844",

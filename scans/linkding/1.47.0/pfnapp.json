@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-18T08:18:47.464Z",
+  "scannedAt": "2026-11-19T08:27:53.684Z",
   "system": {
-    "total": 1542,
+    "total": 1565,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -708,6 +708,14 @@
         "title": "bzip2: bzip2: Denial of Service in bzip2recover via a specially crafted file"
       },
       {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -876,6 +884,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -884,20 +900,36 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-115819",
-        "pkg": "libc-bin",
+        "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
         "id": "CVE-2026-18374",
@@ -1068,6 +1100,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -1076,20 +1116,36 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc-dev-bin",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc-dev-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-115819",
-        "pkg": "libc-dev-bin",
+        "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
         "id": "CVE-2026-18374",
@@ -1260,6 +1316,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -1268,20 +1332,36 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-115819",
-        "pkg": "libc6",
+        "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
         "id": "CVE-2026-18374",
@@ -1452,6 +1532,14 @@
         "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
       },
       {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
@@ -1460,20 +1548,28 @@
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
       },
       {
-        "id": "CVE-2026-100290",
+        "id": "CVE-2026-121757",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "The regcomp and regexec functions in the GNU C Library version 2.3 to  ..."
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
-        "id": "CVE-2026-115819",
+        "id": "CVE-2026-121758",
         "pkg": "libc6-dev",
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Calling the wide scanf family of functions (swscanf, fwscanf, wscanf,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc6-dev",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3716,12 +3812,36 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl-dev",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "libssl-dev",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl-dev",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "libssl-dev",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3756,28 +3876,20 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
+        "id": "CVE-2026-95690",
+        "pkg": "libssl-dev",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+      },
+      {
         "id": "CVE-2026-107493",
-        "pkg": "libssl-dev",
+        "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl-dev",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "libssl-dev",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-107496",
@@ -3786,6 +3898,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -3820,28 +3948,12 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-95690",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -4610,6 +4722,30 @@
         "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: kernel: Denial of Service via race condition in TCP socket lookup"
+      },
+      {
+        "id": "CVE-2026-99302",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of Service via truncated RDMA connection requests"
+      },
+      {
+        "id": "CVE-2026-99304",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of Service via integer overflow in Ceph snap trace bounds check"
+      },
+      {
+        "id": "CVE-2026-99310",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of Service via use-after-free in nfsd"
       },
       {
         "id": "CVE-2019-15213",
@@ -6418,6 +6554,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "kernel: wifi: iwlwifi: mld: validate sta_mask before ffs() in BA session handlers"
+      },
+      {
+        "id": "CVE-2026-64513",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: KVM: x86: Unconditionally recompute CR8 intercept on PPR update"
       },
       {
         "id": "CVE-2026-64520",
@@ -8556,6 +8700,14 @@
         "title": "kernel: bpf: Mark signal tracepoint siginfo arguments as scalar"
       },
       {
+        "id": "CVE-2026-98067",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-2",
+        "severity": "MEDIUM",
+        "title": "kernel: erofs: disable LZ4 rolling decompression for now"
+      },
+      {
         "id": "CVE-2026-98079",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -10044,36 +10196,12 @@
         "title": "kernel: kernel: Privilege escalation via race condition in Bluetooth L2CAP"
       },
       {
-        "id": "CVE-2026-99247",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
-      },
-      {
         "id": "CVE-2026-99249",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.115-1",
         "severity": "MEDIUM",
         "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-99250",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
-      },
-      {
-        "id": "CVE-2026-99251",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  D ..."
       },
       {
         "id": "CVE-2026-99255",
@@ -10185,7 +10313,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
+        "title": "kernel: ksmbd: Denial of Service via use-after-free during durable handle reconnect"
       },
       {
         "id": "CVE-2026-99292",
@@ -10193,7 +10321,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of Service via out-of-bounds write in SMB client"
       },
       {
         "id": "CVE-2026-99294",
@@ -10201,7 +10329,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: Denial of Service via stack overflow in Netfilter egress forwarding"
       },
       {
         "id": "CVE-2026-99295",
@@ -10209,7 +10337,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+        "title": "kernel: kernel: Denial of service via use-after-free during SMB read error handling"
       },
       {
         "id": "CVE-2026-99296",
@@ -10217,7 +10345,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  l ..."
+        "title": "kernel: kernel: Denial of Service via truncated monitor replies in libceph"
       },
       {
         "id": "CVE-2026-99297",
@@ -10225,7 +10353,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: kernel: Denial of Service via double-free in em28xx media driver"
       },
       {
         "id": "CVE-2026-99298",
@@ -10233,7 +10361,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: Denial of Service via division by zero in IPv4 route metrics"
       },
       {
         "id": "CVE-2026-99299",
@@ -10241,7 +10369,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: kernel: em28xx: Denial of Service via zero-sized audio endpoint"
       },
       {
         "id": "CVE-2026-99300",
@@ -10249,7 +10377,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  m ..."
+        "title": "kernel: kernel: Denial of Service via null pointer dereference in go7007 driver"
       },
       {
         "id": "CVE-2026-99301",
@@ -10257,15 +10385,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
-      },
-      {
-        "id": "CVE-2026-99302",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: virtio_net: Denial of Service via use-after-free race condition"
       },
       {
         "id": "CVE-2026-99303",
@@ -10273,15 +10393,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
-        "id": "CVE-2026-99304",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: kernel: Denial of Service via null pointer dereference in Speakup driver"
       },
       {
         "id": "CVE-2026-99305",
@@ -10289,7 +10401,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  f ..."
+        "title": "kernel: kernel: Denial of Service via use-after-free in udlfb driver"
       },
       {
         "id": "CVE-2026-99306",
@@ -10297,7 +10409,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: kernel: ceph: Denial of Service via crafted MDS map"
       },
       {
         "id": "CVE-2026-99307",
@@ -10305,7 +10417,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  c ..."
+        "title": "kernel: kernel: ceph: Denial of Service via out-of-bounds read during lease parsing"
       },
       {
         "id": "CVE-2026-99308",
@@ -10313,7 +10425,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: kernel: Buffer overflow in xHCI driver via crafted USB endpoint descriptors"
       },
       {
         "id": "CVE-2026-99309",
@@ -10321,15 +10433,7 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  k ..."
-      },
-      {
-        "id": "CVE-2026-99310",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+        "title": "kernel: kernel: ksmbd: out-of-bounds read via DACL offset integer overflow"
       },
       {
         "id": "CVE-2026-99311",
@@ -10337,7 +10441,63 @@
         "installedVersion": "6.12.113-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  u ..."
+        "title": "kernel: kernel: Denial of Service via corrupted UDF filesystem symlink"
+      },
+      {
+        "id": "CVE-2026-99312",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: kvm: Denial of service via stale MMU context during INIT emulation"
+      },
+      {
+        "id": "CVE-2026-99314",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via NULL pointer dereference in ALSA US122L driver"
+      },
+      {
+        "id": "CVE-2026-99315",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via NULL pointer dereference in ALSA US122L driver"
+      },
+      {
+        "id": "CVE-2026-99316",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via null pointer dereference in ALSA usx2y driver"
+      },
+      {
+        "id": "CVE-2026-99317",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via race condition in ALSA hwdep DSP loader"
+      },
+      {
+        "id": "CVE-2026-99318",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of Service via use-after-free in ALSA BCD2000 driver"
+      },
+      {
+        "id": "CVE-2026-99319",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "kernel: kernel: Denial of service via retried DSP firmware load in ALSA usx2y driver"
       },
       {
         "id": "CVE-2004-0230",
@@ -10970,14 +11130,6 @@
         "fixedVersion": "6.12.115-2",
         "severity": "LOW",
         "title": "kernel: smb/client: fix chown/chgrp with SMB3 POSIX Extensions"
-      },
-      {
-        "id": "CVE-2026-64513",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "kernel: KVM: x86: Unconditionally recompute CR8 intercept on PPR update"
       },
       {
         "id": "CVE-2026-68081",
@@ -11620,14 +11772,6 @@
         "title": "kernel: bpf: Reject legacy packet loads from callbacks"
       },
       {
-        "id": "CVE-2026-98067",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.113-1",
-        "fixedVersion": "6.12.115-2",
-        "severity": "LOW",
-        "title": "kernel: erofs: disable LZ4 rolling decompression for now"
-      },
-      {
         "id": "CVE-2026-98073",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -11996,6 +12140,30 @@
         "title": "kernel: kernel: Keyring restriction bypass via race condition in key_reject_and_link()"
       },
       {
+        "id": "CVE-2026-99247",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  t ..."
+      },
+      {
+        "id": "CVE-2026-99250",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  p ..."
+      },
+      {
+        "id": "CVE-2026-99251",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.113-1",
+        "fixedVersion": "6.12.115-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  D ..."
+      },
+      {
         "id": "CVE-2026-99254",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.113-1",
@@ -12084,12 +12252,36 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -12124,28 +12316,20 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
+        "id": "CVE-2026-95690",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+      },
+      {
         "id": "CVE-2026-107493",
-        "pkg": "openssl",
+        "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-107496",
@@ -12154,6 +12338,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
       },
       {
         "id": "CVE-2026-88822",
@@ -12188,28 +12388,12 @@
         "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-95690",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
-      },
-      {
-        "id": "CVE-2026-35190",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2007-5686",
