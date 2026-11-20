@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-11-19T08:28:35.408Z",
+  "generatedAt": "2026-11-20T08:15:05.698Z",
   "scanner": "Aqua Trivy",
   "summary": {
     "totalImages": 10,
     "totalVersions": 42,
     "criticalCount": 0,
-    "highCount": 0,
+    "highCount": 9,
     "cleanCount": 20
   },
   "baseImages": [
@@ -33,10 +33,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -50,7 +50,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -77,10 +77,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -94,7 +94,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -121,10 +121,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -138,7 +138,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2029-04-30",
             "isEol": false,
@@ -182,7 +182,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -226,7 +226,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -260,12 +260,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -276,56 +276,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -350,12 +304,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -366,56 +320,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -440,12 +348,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -456,56 +364,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -530,12 +392,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -546,56 +408,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -639,7 +455,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2022-11-28",
             "isEol": true,
@@ -683,7 +499,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -736,7 +552,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -763,10 +579,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -780,7 +596,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -816,10 +632,10 @@
             "system": {
               "critical": 0,
               "high": 64,
-              "medium": 173,
+              "medium": 167,
               "low": 161,
               "fixable": 0,
-              "total": 407
+              "total": 404
             },
             "app": {
               "critical": 0,
@@ -879,7 +695,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -906,10 +722,10 @@
             "system": {
               "critical": 0,
               "high": 64,
-              "medium": 173,
+              "medium": 167,
               "low": 161,
               "fixable": 0,
-              "total": 407
+              "total": 404
             },
             "app": {
               "critical": 0,
@@ -969,7 +785,7 @@
           ],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-10-31",
             "isEol": false,
@@ -1005,24 +821,70 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
-              "high": 0,
-              "medium": 90,
+              "high": 9,
+              "medium": 81,
               "low": 9,
               "fixable": 99,
               "total": 99
             }
           },
-          "topCves": [],
-          "posture": "MEDIUM RISK",
-          "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "topCves": [
+            {
+              "id": "CVE-2026-97054",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.11, 1.27.4",
+              "severity": "HIGH",
+              "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ...",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-97054",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.11, 1.27.4",
+              "severity": "HIGH",
+              "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ...",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-97054",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.11, 1.27.4",
+              "severity": "HIGH",
+              "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ...",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-97054",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.11, 1.27.4",
+              "severity": "HIGH",
+              "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ...",
+              "layer": "app"
+            },
+            {
+              "id": "CVE-2026-97054",
+              "pkg": "stdlib",
+              "installedVersion": "v1.25.14",
+              "fixedVersion": "1.26.11, 1.27.4",
+              "severity": "HIGH",
+              "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ...",
+              "layer": "app"
+            }
+          ],
+          "posture": "HIGH RISK",
+          "postureBadge": "🟠",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-08-19",
             "isEol": true,
@@ -1049,10 +911,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1066,7 +928,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1093,10 +955,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1110,7 +972,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": null,
             "isEol": false,
@@ -1146,10 +1008,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 15,
+              "medium": 0,
               "low": 0,
-              "fixable": 15,
-              "total": 15
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1163,7 +1025,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-10-31",
             "isEol": false,
@@ -1190,10 +1052,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 15,
+              "medium": 0,
               "low": 0,
-              "fixable": 15,
-              "total": 15
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1207,7 +1069,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -1261,7 +1123,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1288,10 +1150,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1305,7 +1167,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1332,10 +1194,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1349,7 +1211,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -1393,7 +1255,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1437,7 +1299,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1464,10 +1326,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1481,7 +1343,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -1525,7 +1387,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -1569,7 +1431,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -1648,7 +1510,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-12-31",
             "isEol": true,
@@ -1673,12 +1535,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1689,56 +1551,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-12-31",
             "isEol": false,
@@ -1763,12 +1579,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1779,56 +1595,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-12-31",
             "isEol": false,
@@ -1853,12 +1623,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1869,56 +1639,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-12-31",
             "isEol": false,
@@ -1943,12 +1667,12 @@
           },
           "vulnerabilities": {
             "system": {
-              "critical": 3,
-              "high": 3,
-              "medium": 18,
+              "critical": 0,
+              "high": 0,
+              "medium": 0,
               "low": 0,
-              "fixable": 24,
-              "total": 24
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -1959,56 +1683,10 @@
               "total": 0
             }
           },
-          "topCves": [
-            {
-              "id": "CVE-2026-121810",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX use-after-free in worker process when using HTTP/3",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123007",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "nginx: NGINX flow control window overflow in HTTP/2",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-123633",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "CRITICAL",
-              "title": "When NGINX Plus or NGINX Open Source is configured to use HTTP/2 for c ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-113425",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When NGINX Plus or NGINX Open Source is configured as a mail proxy, un ...",
-              "layer": "system"
-            },
-            {
-              "id": "CVE-2026-118899",
-              "pkg": "nginx",
-              "installedVersion": "1.30.6-r0",
-              "fixedVersion": "1.30.7-r0",
-              "severity": "HIGH",
-              "title": "When using the listen directive with the ssl parameter in the htt ...",
-              "layer": "system"
-            }
-          ],
+          "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2029-12-31",
             "isEol": false,
@@ -2097,7 +1775,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2124,10 +1802,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2141,7 +1819,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2168,10 +1846,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2185,7 +1863,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2028-04-30",
             "isEol": false,
@@ -2229,7 +1907,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2256,10 +1934,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2273,7 +1951,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2317,7 +1995,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2025-04-30",
             "isEol": false,
@@ -2361,7 +2039,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2026-04-30",
             "isEol": false,
@@ -2388,10 +2066,10 @@
             "system": {
               "critical": 0,
               "high": 0,
-              "medium": 10,
+              "medium": 0,
               "low": 0,
-              "fixable": 10,
-              "total": 10
+              "fixable": 0,
+              "total": 0
             },
             "app": {
               "critical": 0,
@@ -2405,7 +2083,7 @@
           "topCves": [],
           "posture": "MEDIUM RISK",
           "postureBadge": "🟡",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": "2027-04-30",
             "isEol": false,
@@ -2484,7 +2162,7 @@
           "topCves": [],
           "posture": "COMPLIANT",
           "postureBadge": "🟢",
-          "scannedAt": "2026-11-19T08:28:35.408Z",
+          "scannedAt": "2026-11-20T08:15:05.698Z",
           "eol": {
             "date": null,
             "isEol": false,

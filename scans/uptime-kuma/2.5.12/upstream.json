@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-19T08:24:03.467Z",
+  "scannedAt": "2026-11-20T08:04:52.517Z",
   "system": {
-    "total": 1928,
+    "total": 1918,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -9484,6 +9484,14 @@
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
+      },
+      {
         "id": "CVE-2026-115819",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -9714,6 +9722,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
+      },
+      {
+        "id": "CVE-2026-126765",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2017-7475",
@@ -10520,7 +10536,7 @@
         "pkg": "libfontenc1",
         "installedVersion": "1:1.1.4-1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "HIGH",
         "title": "A heap buffer overflow in reading encoding files in X.Org libfontenc b ..."
       },
       {
@@ -10938,6 +10954,30 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
+      },
+      {
+        "id": "CVE-2026-127039",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The certificate authentication info handling in gnutls from 2.5.9 up t ..."
+      },
+      {
+        "id": "CVE-2026-127040",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The RSA-PSK ClientKeyExchange handler in gnutls before 3.8.14 does not ..."
+      },
+      {
+        "id": "CVE-2026-127231",
+        "pkg": "libgnutls30",
+        "installedVersion": "3.7.9-2+deb12u7",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A double free in the X.509 name constraints enforcement of GnuTLS 3.8. ..."
       },
       {
         "id": "CVE-2026-107364",
@@ -12380,14 +12420,6 @@
         "title": "procps: ps buffer overflow"
       },
       {
-        "id": "CVE-2026-11940",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "python: cpython: CPython: tarfile extraction filter bypass allows escaping the destination directory"
-      },
-      {
         "id": "CVE-2026-7210",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -12436,12 +12468,12 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-114583",
+        "id": "CVE-2026-115559",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-116566",
@@ -12508,14 +12540,6 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-115791",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -12546,14 +12570,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
-      },
-      {
-        "id": "CVE-2026-11940",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "python: cpython: CPython: tarfile extraction filter bypass allows escaping the destination directory"
       },
       {
         "id": "CVE-2026-7210",
@@ -12604,12 +12620,12 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-114583",
+        "id": "CVE-2026-115559",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-116566",
@@ -12676,14 +12692,6 @@
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-115791",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -12714,6 +12722,14 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "CVE-2026-132138",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
       },
       {
         "id": "CVE-2026-129483",
@@ -12722,6 +12738,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+      },
+      {
+        "id": "CVE-2026-132138",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
       },
       {
         "id": "CVE-2026-129483",
@@ -12964,52 +12988,20 @@
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
-        "id": "CVE-2026-124709",
+        "id": "CVE-2026-84786",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
       },
       {
-        "id": "CVE-2026-35190",
+        "id": "CVE-2026-95690",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2025-27587",
@@ -13018,14 +13010,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
-      },
-      {
-        "id": "CVE-2026-95690",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -14172,6 +14156,14 @@
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "nscd",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
+      },
+      {
         "id": "CVE-2026-107493",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
@@ -14188,52 +14180,20 @@
         "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
       },
       {
-        "id": "CVE-2026-124709",
+        "id": "CVE-2026-84786",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
       },
       {
-        "id": "CVE-2026-35190",
+        "id": "CVE-2026-95690",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
-      },
-      {
-        "id": "CVE-2026-95691",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
-      },
-      {
-        "id": "CVE-2026-95692",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2025-27587",
@@ -14242,14 +14202,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
-      },
-      {
-        "id": "CVE-2026-95690",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
       },
       {
         "id": "CVE-2007-5686",
@@ -14660,14 +14612,6 @@
         "title": "urllib3: urllib3 Streaming API improperly handles highly compressed data"
       },
       {
-        "id": "CVE-2026-11940",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "python: cpython: CPython: tarfile extraction filter bypass allows escaping the destination directory"
-      },
-      {
         "id": "CVE-2026-7210",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -14716,12 +14660,12 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-114583",
+        "id": "CVE-2026-115559",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-116566",
@@ -14786,14 +14730,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
-      },
-      {
-        "id": "CVE-2026-115559",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-115791",
@@ -14828,14 +14764,6 @@
         "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
       },
       {
-        "id": "CVE-2026-11940",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "python: cpython: CPython: tarfile extraction filter bypass allows escaping the destination directory"
-      },
-      {
         "id": "CVE-2026-7210",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -14884,12 +14812,12 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-114583",
+        "id": "CVE-2026-115559",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-116566",
@@ -14954,14 +14882,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Python: Performance degradation in XML processing due to quadratic time complexity"
-      },
-      {
-        "id": "CVE-2026-115559",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
       },
       {
         "id": "CVE-2026-115791",
@@ -16377,6 +16297,14 @@
         "title": "crypto/tls: golang: Golang crypto/tls: Denial of Service via indefinite KeyUpdate messages"
       },
       {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.20.5",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "HIGH",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
         "id": "CVE-2023-29406",
         "pkg": "stdlib",
         "installedVersion": "v1.20.5",
@@ -16809,14 +16737,6 @@
         "title": "net/http: net/http/internal/http2: golang: golang.org/x/net/http2: net/http: Denial of Service via concurrent HPACK encoder modification"
       },
       {
-        "id": "CVE-2026-97054",
-        "pkg": "stdlib",
-        "installedVersion": "v1.20.5",
-        "fixedVersion": "1.26.11, 1.27.4",
-        "severity": "MEDIUM",
-        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
-      },
-      {
         "id": "CVE-2024-45341",
         "pkg": "stdlib",
         "installedVersion": "v1.20.5",
@@ -16893,7 +16813,7 @@
         "pkg": "stdlib",
         "installedVersion": "v1.27.3",
         "fixedVersion": "1.26.11, 1.27.4",
-        "severity": "MEDIUM",
+        "severity": "HIGH",
         "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
       }
     ]

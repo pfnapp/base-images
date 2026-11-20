@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-19T08:27:39.195Z",
+  "scannedAt": "2026-11-20T08:09:41.386Z",
   "system": {
-    "total": 664,
+    "total": 668,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -2748,6 +2748,14 @@
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
       {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.6.1-2ubuntu0.4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
         "id": "CVE-2026-32776",
         "pkg": "libexpat1",
         "installedVersion": "2.6.1-2ubuntu0.4",
@@ -2922,6 +2930,14 @@
         "fixedVersion": "2.6.1-2ubuntu0.6",
         "severity": "MEDIUM",
         "title": "libexpat: libexpat: Memory corruption vulnerability allows arbitrary code execution or denial of service"
+      },
+      {
+        "id": "CVE-2026-77214",
+        "pkg": "libexpat1",
+        "installedVersion": "2.6.1-2ubuntu0.4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "expat: expat: Information disclosure via heap buffer over-read in XML_ParseBuffer"
       },
       {
         "id": "CVE-2026-93990",
@@ -3239,7 +3255,7 @@
         "id": "CVE-2026-125704",
         "pkg": "libgstreamer1.0-0",
         "installedVersion": "1.24.2-1ubuntu0.1",
-        "fixedVersion": "None",
+        "fixedVersion": "1.24.2-1ubuntu0.2",
         "severity": "MEDIUM",
         "title": "gstreamer: gstreamer: Use-after-free in GStreamer core buffer value deserialization"
       },
@@ -3618,6 +3634,22 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-116741",
+        "pkg": "libspeex1",
+        "installedVersion": "1.2.1-2ubuntu2.24.04.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "speex: speex: Denial of Service via out-of-bounds write"
+      },
+      {
+        "id": "CVE-2026-119373",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.45.1-1ubuntu2.8",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
       },
       {
         "id": "CVE-2026-55868",
