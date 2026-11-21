@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-20T08:07:20.383Z",
+  "scannedAt": "2026-11-21T08:02:35.138Z",
   "system": {
-    "total": 590,
+    "total": 592,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -916,6 +916,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
@@ -946,14 +954,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-115819",
@@ -1156,6 +1156,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -1186,14 +1194,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -3036,14 +3036,6 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-116566",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3068,6 +3060,22 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-124249",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
         "id": "CVE-2026-3446",
         "pkg": "libpython3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3082,6 +3090,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "libpython3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
       },
       {
         "id": "CVE-2026-12003",
@@ -3114,22 +3130,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
-      },
-      {
-        "id": "CVE-2026-124249",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
-      },
-      {
-        "id": "CVE-2026-16052",
-        "pkg": "libpython3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -3188,14 +3188,6 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-116566",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3220,6 +3212,22 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-124249",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
         "id": "CVE-2026-3446",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3234,6 +3242,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "libpython3.11-stdlib",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
       },
       {
         "id": "CVE-2026-12003",
@@ -3268,22 +3284,6 @@
         "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
       },
       {
-        "id": "CVE-2026-124249",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
-      },
-      {
-        "id": "CVE-2026-16052",
-        "pkg": "libpython3.11-stdlib",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
-      },
-      {
         "id": "CVE-2026-19552",
         "pkg": "libpython3.11-stdlib",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -3305,7 +3305,7 @@
         "installedVersion": "2.1.28+dfsg-10+deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-132138",
@@ -3321,7 +3321,7 @@
         "installedVersion": "2.1.28+dfsg-10+deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-13595",
@@ -3492,20 +3492,12 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
-        "id": "CVE-2026-107493",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-84786",
@@ -3513,7 +3505,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -3521,7 +3513,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2025-27587",
@@ -3530,6 +3522,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2026-102010",
@@ -3660,6 +3660,14 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc-common",
+        "installedVersion": "1.3.3+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
+      },
+      {
         "id": "CVE-2026-85231",
         "pkg": "libtirpc-common",
         "installedVersion": "1.3.3+ds-1",
@@ -3674,6 +3682,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libtirpc: libtirpc: Denial of Service via unbounded memory allocation during portmapper response decoding"
+      },
+      {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc3",
+        "installedVersion": "1.3.3+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
       },
       {
         "id": "CVE-2026-85231",
@@ -4108,20 +4124,12 @@
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
       },
       {
-        "id": "CVE-2026-107493",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-84786",
@@ -4129,7 +4137,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -4137,7 +4145,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2025-27587",
@@ -4146,6 +4154,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2007-5686",
@@ -4324,14 +4340,6 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-116566",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4356,6 +4364,22 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-124249",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
         "id": "CVE-2026-3446",
         "pkg": "python3.11",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4370,6 +4394,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "python3.11",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
       },
       {
         "id": "CVE-2026-12003",
@@ -4402,22 +4434,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
-      },
-      {
-        "id": "CVE-2026-124249",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
-      },
-      {
-        "id": "CVE-2026-16052",
-        "pkg": "python3.11",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -4476,14 +4492,6 @@
         "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
       },
       {
-        "id": "CVE-2026-115559",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "IMAP4.starttls() wraps the socket in TLS but leaves self._readbuf, ima ..."
-      },
-      {
         "id": "CVE-2026-116566",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4508,6 +4516,22 @@
         "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
       },
       {
+        "id": "CVE-2026-124249",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
         "id": "CVE-2026-3446",
         "pkg": "python3.11-minimal",
         "installedVersion": "3.11.2-6+deb12u9",
@@ -4522,6 +4546,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "python3.11-minimal",
+        "installedVersion": "3.11.2-6+deb12u9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
       },
       {
         "id": "CVE-2026-12003",
@@ -4554,22 +4586,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
-      },
-      {
-        "id": "CVE-2026-124249",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "http.cookiejar.CookieJar deleted a stored cookie when a response carri ..."
-      },
-      {
-        "id": "CVE-2026-16052",
-        "pkg": "python3.11-minimal",
-        "installedVersion": "3.11.2-6+deb12u9",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The http.cookies.Morsel class allows separator semicolons in attribute ..."
       },
       {
         "id": "CVE-2026-19552",
@@ -4798,7 +4814,7 @@
         "installedVersion": "4.13.12",
         "fixedVersion": "4.13.16",
         "severity": "MEDIUM",
-        "title": "Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`)"
+        "title": "hono: hono: Cross-Site Request Forgery protection bypass via hyperlink auditing ping requests"
       },
       {
         "id": "CVE-2026-126356",
@@ -4806,7 +4822,7 @@
         "installedVersion": "4.13.12",
         "fixedVersion": "4.13.16",
         "severity": "MEDIUM",
-        "title": "Hono: `validator('form')` skips validation for `multipart/form-data` requests with extra parameters"
+        "title": "hono: Hono: Form validation bypass via crafted Content-Type header"
       },
       {
         "id": "CVE-2026-126357",
@@ -4814,7 +4830,7 @@
         "installedVersion": "4.13.12",
         "fixedVersion": "4.13.16",
         "severity": "MEDIUM",
-        "title": "Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix"
+        "title": "hono: Hono: Authorization bypass via improper path forwarding in mounted routes"
       },
       {
         "id": "CVE-2026-126358",
@@ -4822,7 +4838,7 @@
         "installedVersion": "4.13.12",
         "fixedVersion": "4.13.16",
         "severity": "MEDIUM",
-        "title": "Hono: RegExpRouter skips wildcard middleware for some route sets and for paths with an encoded line terminator"
+        "title": "hono: hono: Authorization bypass via wildcard middleware omission in RegExpRouter"
       },
       {
         "id": "CVE-2026-126359",
@@ -4830,7 +4846,7 @@
         "installedVersion": "4.13.12",
         "fixedVersion": "4.13.16",
         "severity": "LOW",
-        "title": "Hono: `css` helper does not escape a closing tag split between the template and an interpolated value, allowing HTML injection"
+        "title": "hono: hono: Cross-site scripting via improper tag sanitization in CSS helper"
       },
       {
         "id": "CVE-2026-101910",

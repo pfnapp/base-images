@@ -1,11 +1,2029 @@
 {
-  "scannedAt": "2026-11-20T08:13:44.511Z",
+  "scannedAt": "2026-11-21T08:06:37.988Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 243,
+    "cves": [
+      {
+        "id": "CVE-2026-111497",
+        "pkg": "brotli-libs",
+        "installedVersion": "1.2.0-r1",
+        "fixedVersion": "1.2.1-r0",
+        "severity": "CRITICAL",
+        "title": "brotli: Out-of-Bounds Write in Google Brotli Decoder"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86411",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: FTP connection reuse inherits client-certificate"
+      },
+      {
+        "id": "CVE-2026-86412",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie erases cookie jar"
+      },
+      {
+        "id": "CVE-2026-86413",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Negotiate credentials sent to redirected origin"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-86415",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: auto client cert connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-87861",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94265",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "curl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-107364",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC DoS based on ASN.1 decoder read overrun"
+      },
+      {
+        "id": "CVE-2026-112315",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS in RPCSEC_GSS buffer decode failure"
+      },
+      {
+        "id": "CVE-2026-112316",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory leak DoS in xdr_krb5_tl_data() decode failure"
+      },
+      {
+        "id": "CVE-2026-112317",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB keytab key decryption error path"
+      },
+      {
+        "id": "CVE-2026-112318",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated DoS exploiting dereference of null policy name pointers"
+      },
+      {
+        "id": "CVE-2026-112319",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind authenticated memory exhaustion DoS via unbounded RPC XDR allocation"
+      },
+      {
+        "id": "CVE-2026-112320",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via GSS-RPC auth flavor switching"
+      },
+      {
+        "id": "CVE-2026-112321",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory leak DoS via AUTH_GSSAPI_INIT error paths"
+      },
+      {
+        "id": "CVE-2026-112322",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated CPU DoS via AUTH_GSSAPI client states cleanup"
+      },
+      {
+        "id": "CVE-2026-112323",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 kadmind unauthenticated memory exhaustion via failed AUTH_GSSAPI_INIT requests"
+      },
+      {
+        "id": "CVE-2026-118380",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: kadmind: request alteration and protected information disclosure"
+      },
+      {
+        "id": "CVE-2026-119079",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic ASN.1 SEQUENCE OF decoding"
+      },
+      {
+        "id": "CVE-2026-40355",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT Kerberos 5: Denial of Service via NULL pointer dereference in NegoEx mechanism"
+      },
+      {
+        "id": "CVE-2026-40356",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: MIT Kerberos 5 (krb5): Denial of Service via integer underflow and out-of-bounds read"
+      },
+      {
+        "id": "CVE-2026-71199",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Alteration of authentication indicators in CAMMAC container"
+      },
+      {
+        "id": "CVE-2026-71200",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "HIGH",
+        "title": "krb5: Unauthenticated KDC NULL pointer dereference KDC DoS via crafted PKINIT pre-auth request"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2026-107884",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: Unauthorized key reset of protected principal via kpasswd"
+      },
+      {
+        "id": "CVE-2026-111423",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: Improper authorization via flawed PAC checksum verification"
+      },
+      {
+        "id": "CVE-2026-112314",
+        "pkg": "krb5-libs",
+        "installedVersion": "1.22.2-r1",
+        "fixedVersion": "1.22.3-r0",
+        "severity": "MEDIUM",
+        "title": "krb5: MIT krb5 GSS-RPC client memory leak on XID mismatch retries"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-92392",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "HIGH",
+        "title": "curl: curl: HTTP/2 upload Use-After-Free"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86411",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: FTP connection reuse inherits client-certificate"
+      },
+      {
+        "id": "CVE-2026-86412",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie erases cookie jar"
+      },
+      {
+        "id": "CVE-2026-86413",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Negotiate credentials sent to redirected origin"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-86415",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: auto client cert connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-87861",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: cross-origin reuse of a Negotiate connection"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94265",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: Authorization: Negotiate sent to foreign origin"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl",
+        "installedVersion": "8.22.0-r0",
+        "fixedVersion": "8.23.0-r0",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-116304",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in parallel worker coordination"
+      },
+      {
+        "id": "CVE-2026-116306",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via composite-value field assignment type confusion"
+      },
+      {
+        "id": "CVE-2026-116307",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116309",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116313",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via untrusted search path in vacuumdb"
+      },
+      {
+        "id": "CVE-2026-116314",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via crafted archive in pg_restore"
+      },
+      {
+        "id": "CVE-2026-116315",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in tsvector_delete()"
+      },
+      {
+        "id": "CVE-2026-116316",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Privilege escalation via unqualified type resolution in temporary schema"
+      },
+      {
+        "id": "CVE-2026-116317",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in ts_rank_cd()"
+      },
+      {
+        "id": "CVE-2026-116318",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution via improper constraint quoting in pg_dump"
+      },
+      {
+        "id": "CVE-2026-116319",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116320",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116323",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Tcl"
+      },
+      {
+        "id": "CVE-2026-116325",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution in reindexdb via crafted index name"
+      },
+      {
+        "id": "CVE-2026-116326",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via uncaught exceptions in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116328",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in memory contexts"
+      },
+      {
+        "id": "CVE-2026-116329",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via nested SET DATA TYPE during statistics import"
+      },
+      {
+        "id": "CVE-2026-116330",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via predictable restriction key in pg_dump restore script"
+      },
+      {
+        "id": "CVE-2026-116331",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via aggregate optimization type confusion"
+      },
+      {
+        "id": "CVE-2026-116332",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free during portal setup"
+      },
+      {
+        "id": "CVE-2026-116335",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via operator link type confusion"
+      },
+      {
+        "id": "CVE-2026-116336",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via dropped index in REINDEX CONCURRENTLY"
+      },
+      {
+        "id": "CVE-2026-120139",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in tuple-size calculations"
+      },
+      {
+        "id": "CVE-2026-120141",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in materialized set-returning functions"
+      },
+      {
+        "id": "CVE-2026-120142",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in anonymous RECORD types"
+      },
+      {
+        "id": "CVE-2026-120143",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in trigger functions"
+      },
+      {
+        "id": "CVE-2026-120144",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via incomplete type-cache invalidation"
+      },
+      {
+        "id": "CVE-2026-120145",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via system catalog replication target"
+      },
+      {
+        "id": "CVE-2026-120147",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in dblink extension"
+      },
+      {
+        "id": "CVE-2026-120148",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in extended statistics"
+      },
+      {
+        "id": "CVE-2026-120149",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via foreign batch inserts"
+      },
+      {
+        "id": "CVE-2026-120150",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in expanded-record domain checks"
+      },
+      {
+        "id": "CVE-2026-120151",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via PL/pgSQL type confusion"
+      },
+      {
+        "id": "CVE-2026-120153",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via SQL injection in extension-script substitutions"
+      },
+      {
+        "id": "CVE-2026-14661",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Persistent Denial of Service via arbitrary file append in sslkeylogfile parameter"
+      },
+      {
+        "id": "CVE-2026-18447",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in SQL-language functions"
+      },
+      {
+        "id": "CVE-2026-6460",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in data definition commands"
+      },
+      {
+        "id": "CVE-2026-6467",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via uncontrolled search path in extension management"
+      },
+      {
+        "id": "CVE-2026-116308",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via zero-length token in dict_int"
+      },
+      {
+        "id": "CVE-2026-116310",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in COPY FROM error reporting"
+      },
+      {
+        "id": "CVE-2026-116311",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: row-level security bypass via DROP OWNED"
+      },
+      {
+        "id": "CVE-2026-116312",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Incorrect trigger row processing via partitioned table MERGE"
+      },
+      {
+        "id": "CVE-2026-116321",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: server memory disclosure via improper null termination in array element assignment"
+      },
+      {
+        "id": "CVE-2026-116322",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Denial of Service via improper locking during startup processing"
+      },
+      {
+        "id": "CVE-2026-116327",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via security barrier view bypass"
+      },
+      {
+        "id": "CVE-2026-116333",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via buffer over-read in parallel B-tree scans"
+      },
+      {
+        "id": "CVE-2026-120146",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Authorization bypass via REASSIGN OWNED command"
+      },
+      {
+        "id": "CVE-2026-120152",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in pg_show_all_settings()"
+      },
+      {
+        "id": "CVE-2026-120154",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Row-level security bypass via INSERT ON CONFLICT DO UPDATE"
+      },
+      {
+        "id": "CVE-2026-16237",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Security restriction bypass via INSERT ON CONFLICT on auto-updatable views"
+      },
+      {
+        "id": "CVE-2026-116303",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: PostgreSQL: Unauthorized execution of restricted cast functions via type conversion operations"
+      },
+      {
+        "id": "CVE-2026-16240",
+        "pkg": "libpq",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-86144",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r3",
+        "severity": "HIGH",
+        "title": "libxml2: libxml2: Information disclosure, SSRF, or denial of service due to improper parseFlags propagation."
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-116304",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in parallel worker coordination"
+      },
+      {
+        "id": "CVE-2026-116306",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via composite-value field assignment type confusion"
+      },
+      {
+        "id": "CVE-2026-116307",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116309",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116313",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via untrusted search path in vacuumdb"
+      },
+      {
+        "id": "CVE-2026-116314",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via crafted archive in pg_restore"
+      },
+      {
+        "id": "CVE-2026-116315",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in tsvector_delete()"
+      },
+      {
+        "id": "CVE-2026-116316",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Privilege escalation via unqualified type resolution in temporary schema"
+      },
+      {
+        "id": "CVE-2026-116317",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in ts_rank_cd()"
+      },
+      {
+        "id": "CVE-2026-116318",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution via improper constraint quoting in pg_dump"
+      },
+      {
+        "id": "CVE-2026-116319",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116320",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116323",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Tcl"
+      },
+      {
+        "id": "CVE-2026-116325",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution in reindexdb via crafted index name"
+      },
+      {
+        "id": "CVE-2026-116326",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via uncaught exceptions in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116328",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in memory contexts"
+      },
+      {
+        "id": "CVE-2026-116329",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via nested SET DATA TYPE during statistics import"
+      },
+      {
+        "id": "CVE-2026-116330",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via predictable restriction key in pg_dump restore script"
+      },
+      {
+        "id": "CVE-2026-116331",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via aggregate optimization type confusion"
+      },
+      {
+        "id": "CVE-2026-116332",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free during portal setup"
+      },
+      {
+        "id": "CVE-2026-116335",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via operator link type confusion"
+      },
+      {
+        "id": "CVE-2026-116336",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via dropped index in REINDEX CONCURRENTLY"
+      },
+      {
+        "id": "CVE-2026-120139",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in tuple-size calculations"
+      },
+      {
+        "id": "CVE-2026-120141",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in materialized set-returning functions"
+      },
+      {
+        "id": "CVE-2026-120142",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in anonymous RECORD types"
+      },
+      {
+        "id": "CVE-2026-120143",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in trigger functions"
+      },
+      {
+        "id": "CVE-2026-120144",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via incomplete type-cache invalidation"
+      },
+      {
+        "id": "CVE-2026-120145",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via system catalog replication target"
+      },
+      {
+        "id": "CVE-2026-120147",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in dblink extension"
+      },
+      {
+        "id": "CVE-2026-120148",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in extended statistics"
+      },
+      {
+        "id": "CVE-2026-120149",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via foreign batch inserts"
+      },
+      {
+        "id": "CVE-2026-120150",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in expanded-record domain checks"
+      },
+      {
+        "id": "CVE-2026-120151",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via PL/pgSQL type confusion"
+      },
+      {
+        "id": "CVE-2026-120153",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via SQL injection in extension-script substitutions"
+      },
+      {
+        "id": "CVE-2026-14661",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Persistent Denial of Service via arbitrary file append in sslkeylogfile parameter"
+      },
+      {
+        "id": "CVE-2026-18447",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in SQL-language functions"
+      },
+      {
+        "id": "CVE-2026-6460",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in data definition commands"
+      },
+      {
+        "id": "CVE-2026-6467",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via uncontrolled search path in extension management"
+      },
+      {
+        "id": "CVE-2026-116308",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via zero-length token in dict_int"
+      },
+      {
+        "id": "CVE-2026-116310",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in COPY FROM error reporting"
+      },
+      {
+        "id": "CVE-2026-116311",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: row-level security bypass via DROP OWNED"
+      },
+      {
+        "id": "CVE-2026-116312",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Incorrect trigger row processing via partitioned table MERGE"
+      },
+      {
+        "id": "CVE-2026-116321",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: server memory disclosure via improper null termination in array element assignment"
+      },
+      {
+        "id": "CVE-2026-116322",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Denial of Service via improper locking during startup processing"
+      },
+      {
+        "id": "CVE-2026-116327",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via security barrier view bypass"
+      },
+      {
+        "id": "CVE-2026-116333",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via buffer over-read in parallel B-tree scans"
+      },
+      {
+        "id": "CVE-2026-120146",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Authorization bypass via REASSIGN OWNED command"
+      },
+      {
+        "id": "CVE-2026-120152",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in pg_show_all_settings()"
+      },
+      {
+        "id": "CVE-2026-120154",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Row-level security bypass via INSERT ON CONFLICT DO UPDATE"
+      },
+      {
+        "id": "CVE-2026-16237",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Security restriction bypass via INSERT ON CONFLICT on auto-updatable views"
+      },
+      {
+        "id": "CVE-2026-116303",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: PostgreSQL: Unauthorized execution of restricted cast functions via type conversion operations"
+      },
+      {
+        "id": "CVE-2026-16240",
+        "pkg": "postgresql18",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
+      },
+      {
+        "id": "CVE-2026-116304",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in parallel worker coordination"
+      },
+      {
+        "id": "CVE-2026-116306",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via composite-value field assignment type confusion"
+      },
+      {
+        "id": "CVE-2026-116307",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116309",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116313",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via untrusted search path in vacuumdb"
+      },
+      {
+        "id": "CVE-2026-116314",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via crafted archive in pg_restore"
+      },
+      {
+        "id": "CVE-2026-116315",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in tsvector_delete()"
+      },
+      {
+        "id": "CVE-2026-116316",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Privilege escalation via unqualified type resolution in temporary schema"
+      },
+      {
+        "id": "CVE-2026-116317",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via heap-based buffer overflow in ts_rank_cd()"
+      },
+      {
+        "id": "CVE-2026-116318",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution via improper constraint quoting in pg_dump"
+      },
+      {
+        "id": "CVE-2026-116319",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in plperl"
+      },
+      {
+        "id": "CVE-2026-116320",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116323",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in PL/Tcl"
+      },
+      {
+        "id": "CVE-2026-116325",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary SQL execution in reindexdb via crafted index name"
+      },
+      {
+        "id": "CVE-2026-116326",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via uncaught exceptions in PL/Perl"
+      },
+      {
+        "id": "CVE-2026-116328",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in memory contexts"
+      },
+      {
+        "id": "CVE-2026-116329",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via nested SET DATA TYPE during statistics import"
+      },
+      {
+        "id": "CVE-2026-116330",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via predictable restriction key in pg_dump restore script"
+      },
+      {
+        "id": "CVE-2026-116331",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via aggregate optimization type confusion"
+      },
+      {
+        "id": "CVE-2026-116332",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free during portal setup"
+      },
+      {
+        "id": "CVE-2026-116335",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via operator link type confusion"
+      },
+      {
+        "id": "CVE-2026-116336",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via dropped index in REINDEX CONCURRENTLY"
+      },
+      {
+        "id": "CVE-2026-120139",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via integer wraparound in tuple-size calculations"
+      },
+      {
+        "id": "CVE-2026-120141",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in materialized set-returning functions"
+      },
+      {
+        "id": "CVE-2026-120142",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in anonymous RECORD types"
+      },
+      {
+        "id": "CVE-2026-120143",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in trigger functions"
+      },
+      {
+        "id": "CVE-2026-120144",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: PostgreSQL: Arbitrary code execution via incomplete type-cache invalidation"
+      },
+      {
+        "id": "CVE-2026-120145",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via system catalog replication target"
+      },
+      {
+        "id": "CVE-2026-120147",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in dblink extension"
+      },
+      {
+        "id": "CVE-2026-120148",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in extended statistics"
+      },
+      {
+        "id": "CVE-2026-120149",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via foreign batch inserts"
+      },
+      {
+        "id": "CVE-2026-120150",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via use-after-free in expanded-record domain checks"
+      },
+      {
+        "id": "CVE-2026-120151",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via PL/pgSQL type confusion"
+      },
+      {
+        "id": "CVE-2026-120153",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: arbitrary code execution via SQL injection in extension-script substitutions"
+      },
+      {
+        "id": "CVE-2026-14661",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Persistent Denial of Service via arbitrary file append in sslkeylogfile parameter"
+      },
+      {
+        "id": "CVE-2026-18447",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in SQL-language functions"
+      },
+      {
+        "id": "CVE-2026-6460",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Arbitrary code execution via type confusion in data definition commands"
+      },
+      {
+        "id": "CVE-2026-6467",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "HIGH",
+        "title": "postgresql: postgresql: Privilege escalation via uncontrolled search path in extension management"
+      },
+      {
+        "id": "CVE-2026-116308",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via zero-length token in dict_int"
+      },
+      {
+        "id": "CVE-2026-116310",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in COPY FROM error reporting"
+      },
+      {
+        "id": "CVE-2026-116311",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: row-level security bypass via DROP OWNED"
+      },
+      {
+        "id": "CVE-2026-116312",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Incorrect trigger row processing via partitioned table MERGE"
+      },
+      {
+        "id": "CVE-2026-116321",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: server memory disclosure via improper null termination in array element assignment"
+      },
+      {
+        "id": "CVE-2026-116322",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Denial of Service via improper locking during startup processing"
+      },
+      {
+        "id": "CVE-2026-116327",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via security barrier view bypass"
+      },
+      {
+        "id": "CVE-2026-116333",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via buffer over-read in parallel B-tree scans"
+      },
+      {
+        "id": "CVE-2026-120146",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Authorization bypass via REASSIGN OWNED command"
+      },
+      {
+        "id": "CVE-2026-120152",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Information disclosure via use-after-free in pg_show_all_settings()"
+      },
+      {
+        "id": "CVE-2026-120154",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: PostgreSQL: Row-level security bypass via INSERT ON CONFLICT DO UPDATE"
+      },
+      {
+        "id": "CVE-2026-16237",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "MEDIUM",
+        "title": "postgresql: postgresql: Security restriction bypass via INSERT ON CONFLICT on auto-updatable views"
+      },
+      {
+        "id": "CVE-2026-116303",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: PostgreSQL: Unauthorized execution of restricted cast functions via type conversion operations"
+      },
+      {
+        "id": "CVE-2026-16240",
+        "pkg": "postgresql18-client",
+        "installedVersion": "18.6-r0",
+        "fixedVersion": "18.7-r0",
+        "severity": "LOW",
+        "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
+      },
+      {
+        "id": "CVE-2026-4738",
+        "pkg": "zlib",
+        "installedVersion": "1.3.2-r1",
+        "fixedVersion": "1.4-r0",
+        "severity": "MEDIUM",
+        "title": "Improper Restriction of Operations within the Bounds of a Memory Buffe ..."
+      }
+    ]
   },
   "app": {
-    "total": 0,
-    "cves": []
+    "total": 9,
+    "cves": [
+      {
+        "id": "GO-2026-5932",
+        "pkg": "golang.org/x/crypto",
+        "installedVersion": "v0.57.0",
+        "fixedVersion": "0.58.1-0.20261009181718-2f1f834330b2",
+        "severity": "UNKNOWN",
+        "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-78661",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.60.0",
+        "fixedVersion": "0.62.0",
+        "severity": "HIGH",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Denial of Service via crafted HTML input"
+      },
+      {
+        "id": "CVE-2026-97045",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.60.0",
+        "fixedVersion": "0.62.0",
+        "severity": "MEDIUM",
+        "title": "golang.org/x/net/html: golang.org/x/net/html: Cross-Site Scripting via improper namespace handling during HTML rendering"
+      },
+      {
+        "id": "CVE-2026-97054",
+        "pkg": "stdlib",
+        "installedVersion": "v1.27.3",
+        "fixedVersion": "1.26.11, 1.27.4",
+        "severity": "MEDIUM",
+        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+      },
+      {
+        "id": "CVE-2026-121971",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.9",
+        "fixedVersion": "6.4.50, 7.2.0, 8.1.0, 5.0.0, 5.1.0, 6.2.0, 6.3.0, 7.1.0, 7.3.0, 4.4.0, 5.3.0, 5.4.0, 5.4.56, 6.1.0, 8.1.11, 5.2.0, 6.4.0, 7.4.0, 7.4.23",
+        "severity": "HIGH",
+        "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
+      },
+      {
+        "id": "CVE-2026-123119",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.9",
+        "fixedVersion": "4.4.0, 6.2.0, 6.3.0, 7.2.0, 5.0.0, 5.1.0, 5.4.56, 6.4.0, 6.4.50, 8.1.11, 5.3.0, 7.4.23, 8.1.0, 5.2.0, 5.4.0, 6.1.0, 7.1.0, 7.3.0, 7.4.0",
+        "severity": "UNKNOWN",
+        "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
+      },
+      {
+        "id": "CVE-2026-118514",
+        "pkg": "symfony/http-foundation",
+        "installedVersion": "v8.1.9",
+        "fixedVersion": "3.0.0, 5.1.0, 5.4.0, 7.3.0, 7.4.23, 5.3.0, 5.4.56, 6.1.0, 6.2.0, 6.3.0, 7.2.0, 8.1.0, 5.2.0, 6.4.0, 7.1.0, 4.0.0, 5.0.0, 6.4.50, 7.4.0, 8.1.11",
+        "severity": "UNKNOWN",
+        "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
+      },
+      {
+        "id": "CVE-2026-121619",
+        "pkg": "symfony/http-foundation",
+        "installedVersion": "v8.1.9",
+        "fixedVersion": "7.4.23, 8.1.0, 8.1.11, 7.3.0, 7.4.0",
+        "severity": "UNKNOWN",
+        "title": "The \"private_ranges\" Trusted Proxies Shortcut Trusts Clients Presenting an IPv4-Mapped, 6to4, Teredo or NAT64 Address as Reverse Proxies"
+      },
+      {
+        "id": "CVE-2026-123792",
+        "pkg": "symfony/yaml",
+        "installedVersion": "v8.1.9",
+        "fixedVersion": "3.0.0, 5.0.0, 6.3.0, 8.1.11, 4.0.0, 5.1.0, 5.3.0, 5.4.0, 5.4.56, 6.1.0, 7.3.0, 5.2.0, 6.2.0, 6.4.0, 7.1.0, 7.4.23, 6.4.50, 7.2.0, 7.4.0, 8.1.0",
+        "severity": "UNKNOWN",
+        "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
+      }
+    ]
   }
 }

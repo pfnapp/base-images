@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-20T08:15:40.689Z",
+  "scannedAt": "2026-11-21T08:07:39.344Z",
   "system": {
-    "total": 404,
+    "total": 406,
     "cves": [
       {
         "id": "CVE-2011-3374",
@@ -772,6 +772,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc-bin",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-bin",
         "installedVersion": "2.36-9+deb12u14",
@@ -802,14 +810,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc-bin",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-115819",
@@ -1012,6 +1012,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc6",
+        "installedVersion": "2.36-9+deb12u14",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6",
         "installedVersion": "2.36-9+deb12u14",
@@ -1042,14 +1050,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc6",
-        "installedVersion": "2.36-9+deb12u14",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -2425,7 +2425,7 @@
         "installedVersion": "2.1.28+dfsg-10+deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-132138",
@@ -2441,7 +2441,7 @@
         "installedVersion": "2.1.28+dfsg-10+deb12u1",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-13595",
@@ -2612,20 +2612,12 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
-        "id": "CVE-2026-107493",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-84786",
@@ -2633,7 +2625,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -2641,7 +2633,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2025-27587",
@@ -2650,6 +2642,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2026-102010",
@@ -2780,6 +2780,14 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc-common",
+        "installedVersion": "1.3.3+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
+      },
+      {
         "id": "CVE-2026-85231",
         "pkg": "libtirpc-common",
         "installedVersion": "1.3.3+ds-1",
@@ -2794,6 +2802,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libtirpc: libtirpc: Denial of Service via unbounded memory allocation during portmapper response decoding"
+      },
+      {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc3",
+        "installedVersion": "1.3.3+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
       },
       {
         "id": "CVE-2026-85231",
@@ -2996,20 +3012,12 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
-        "id": "CVE-2026-107493",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-84786",
@@ -3017,7 +3025,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -3025,7 +3033,7 @@
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2025-27587",
@@ -3034,6 +3042,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "OpenSSL 3.0.0 through 3.3.2 on the PowerPC architecture is vulnerable  ..."
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2007-5686",

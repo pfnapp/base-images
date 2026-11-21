@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-20T08:08:50.209Z",
+  "scannedAt": "2026-11-21T08:04:30.566Z",
   "system": {
     "total": 457,
     "cves": [
@@ -700,6 +700,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u4",
@@ -730,14 +738,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-115819",
@@ -924,6 +924,14 @@
         "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
       },
       {
+        "id": "CVE-2026-126765",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
         "id": "CVE-2026-97399",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u4",
@@ -954,14 +962,6 @@
         "fixedVersion": "None",
         "severity": "UNKNOWN",
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
-      },
-      {
-        "id": "CVE-2026-126765",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u4",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The glob functions in the GNU C Library versions 2.44 and earlier may  ..."
       },
       {
         "id": "CVE-2026-10536",
@@ -2769,7 +2769,7 @@
         "installedVersion": "2.1.28+dfsg1-9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-107161",
@@ -2793,7 +2793,7 @@
         "installedVersion": "2.1.28+dfsg1-9",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerabil ..."
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
       },
       {
         "id": "CVE-2026-3184",
@@ -2924,12 +2924,12 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-124709",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-107496",
@@ -2937,15 +2937,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-35190",
@@ -2953,7 +2945,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
         "id": "CVE-2026-84786",
@@ -2961,23 +2953,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -2985,7 +2961,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2026-95691",
@@ -2993,7 +2969,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
       },
       {
         "id": "CVE-2026-95692",
@@ -3001,7 +2977,31 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
         "id": "CVE-2026-102010",
@@ -3372,12 +3372,12 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
-        "id": "CVE-2026-107493",
+        "id": "CVE-2026-124709",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-107496",
@@ -3385,15 +3385,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-35190",
@@ -3401,7 +3393,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
         "id": "CVE-2026-84786",
@@ -3409,23 +3401,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -3433,7 +3409,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2026-95691",
@@ -3441,7 +3417,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
       },
       {
         "id": "CVE-2026-95692",
@@ -3449,15 +3425,39 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
       },
       {
         "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-124709",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: When an application passes a stack to PEM_X509_INFO_rea ..."
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-107496",
@@ -3465,15 +3465,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: A QUIC server that rejects a stream opened by the peer  ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-35190",
@@ -3481,7 +3473,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A server configured with the Suite B certificate flag t ..."
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
         "id": "CVE-2026-84786",
@@ -3489,23 +3481,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "A DANE-enabled TLS client may crash by dereferencing a NULL pointer wh ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u3",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
       },
       {
         "id": "CVE-2026-95690",
@@ -3513,7 +3489,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Receiving crafted out-of-sequence DTLS handshake fragments may cause O ..."
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
       },
       {
         "id": "CVE-2026-95691",
@@ -3521,7 +3497,7 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
       },
       {
         "id": "CVE-2026-95692",
@@ -3529,7 +3505,31 @@
         "installedVersion": "3.5.7-1~deb13u3",
         "fixedVersion": "None",
         "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
         "id": "CVE-2007-5686",

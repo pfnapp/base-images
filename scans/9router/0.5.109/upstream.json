@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-20T08:05:49.720Z",
+  "scannedAt": "2026-11-21T08:00:41.198Z",
   "system": {
-    "total": 35,
+    "total": 36,
     "cves": [
       {
         "id": "CVE-2026-107496",
@@ -9,23 +9,7 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libcrypto3",
-        "installedVersion": "3.5.9-r0",
-        "fixedVersion": "3.5.9-r1",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libcrypto3",
-        "installedVersion": "3.5.9-r0",
-        "fixedVersion": "3.5.9-r1",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-95691",
@@ -33,7 +17,7 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
       },
       {
         "id": "CVE-2026-95692",
@@ -41,7 +25,23 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
         "id": "CVE-2026-113351",
@@ -81,23 +81,7 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: Encrypting a CMS message to an EC certificate whose gro ..."
-      },
-      {
-        "id": "CVE-2026-88822",
-        "pkg": "libssl3",
-        "installedVersion": "3.5.9-r0",
-        "fixedVersion": "3.5.9-r1",
-        "severity": "MEDIUM",
-        "title": "Issue summary: QUIC, when performing automated peer detection, may all ..."
-      },
-      {
-        "id": "CVE-2026-88823",
-        "pkg": "libssl3",
-        "installedVersion": "3.5.9-r0",
-        "fixedVersion": "3.5.9-r1",
-        "severity": "MEDIUM",
-        "title": "Issue summary: The AES-GCM-SIV implementation treats a zero-length Add ..."
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
         "id": "CVE-2026-95691",
@@ -105,7 +89,7 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: A retransmitted QUIC CRYPTO frame can release packet st ..."
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
       },
       {
         "id": "CVE-2026-95692",
@@ -113,7 +97,31 @@
         "installedVersion": "3.5.9-r0",
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
-        "title": "Issue summary: Setting an AES-GCM-SIV IV shorter than the expected non ..."
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.9-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-86144",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r3",
+        "severity": "HIGH",
+        "title": "libxml2: libxml2: Information disclosure, SSRF, or denial of service due to improper parseFlags propagation."
       },
       {
         "id": "CVE-2026-115488",
@@ -374,7 +382,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "15.5.29, 16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: HttpOnly cookie exposure through internal response header on Next.js Edge runtime routes"
+        "title": "next: Next.js: Information disclosure via internal cookie header exposure"
       },
       {
         "id": "CVE-2026-119347",
@@ -382,7 +390,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "15.5.29, 16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: SVG rejection bypass in the image optimization"
+        "title": "next: Next.js: Denial of Service via improper SVG processing"
       },
       {
         "id": "CVE-2026-119348",
@@ -390,7 +398,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "16.4.5, 15.5.29",
         "severity": "MEDIUM",
-        "title": "Next.js: Cross-client response injection and disclosure in self-hosted Next.js applications forwarding fetched responses"
+        "title": "next: Next.js: Information disclosure via HTTP response desynchronization"
       },
       {
         "id": "CVE-2026-119349",
@@ -398,7 +406,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: Cross-user cache disclosure and poisoning in Next.js use cache with binary arguments"
+        "title": "next: Next.js: Information disclosure via improper cache key generation for binary arguments"
       },
       {
         "id": "CVE-2026-119350",
@@ -406,7 +414,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: Cache poisoning of shared fallback shells in Cache Components via request-supplied placeholder route params"
+        "title": "next: Next.js: Shared fallback shell cache poisoning via crafted route parameter request"
       },
       {
         "id": "CVE-2026-119351",
@@ -414,7 +422,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: Cache leak across root param values in nested 'use cache' functions via delayed inner stream metadata"
+        "title": "next: Next.js: information disclosure via improper cache key generation"
       },
       {
         "id": "CVE-2026-119790",
@@ -422,7 +430,7 @@
         "installedVersion": "16.4.2",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
-        "title": "Next.js: Information disclosure across root params when a 'use cache' function is called through unstable_cache()"
+        "title": "next: Next.js: Information disclosure via cross-request cache deduplication race condition"
       },
       {
         "id": "CVE-2026-118779",
@@ -542,7 +550,7 @@
         "installedVersion": "1.4.0",
         "fixedVersion": "1.4.3",
         "severity": "MEDIUM",
-        "title": "Forge (also called node-forge) is a native implementation of Transport ..."
+        "title": "node-forge: node-forge: Denial of Service via unexpected TLS handshake records"
       },
       {
         "id": "CVE-2026-118774",

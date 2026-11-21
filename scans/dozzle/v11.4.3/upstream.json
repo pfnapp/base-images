@@ -1,11 +1,20 @@
 {
-  "scannedAt": "2026-11-20T08:14:35.370Z",
+  "scannedAt": "2026-11-21T08:06:57.339Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 0,
-    "cves": []
+    "total": 1,
+    "cves": [
+      {
+        "id": "CVE-2026-128085",
+        "pkg": "go.opentelemetry.io/otel/trace",
+        "installedVersion": "v1.45.0",
+        "fixedVersion": "1.47.0",
+        "severity": "MEDIUM",
+        "title": "go.opentelemetry.io/otel/sdk: go.opentelemetry.io/otel/sdk/log: go.opentelemetry.io/otel/trace: OpenTelemetry-Go: Denial of Service via attribute truncation bypass using Unicode replacement characters"
+      }
+    ]
   }
 }
