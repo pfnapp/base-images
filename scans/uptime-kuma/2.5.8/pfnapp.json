@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-21T07:59:55.821Z",
+  "scannedAt": "2026-11-22T07:46:24.882Z",
   "system": {
-    "total": 2000,
+    "total": 2006,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -9420,6 +9420,14 @@
         "title": "avahi: avahi-daemon: Avahi: Denial of Service via D-Bus method call"
       },
       {
+        "id": "CVE-2026-59987",
+        "pkg": "libavahi-client3",
+        "installedVersion": "0.8-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "avahi: Avahi: Denial of Service via crafted domain name over D-Bus"
+      },
+      {
         "id": "CVE-2024-52615",
         "pkg": "libavahi-common-data",
         "installedVersion": "0.8-10+deb12u1",
@@ -9484,6 +9492,14 @@
         "title": "avahi: avahi-daemon: Avahi: Denial of Service via D-Bus method call"
       },
       {
+        "id": "CVE-2026-59987",
+        "pkg": "libavahi-common-data",
+        "installedVersion": "0.8-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "avahi: Avahi: Denial of Service via crafted domain name over D-Bus"
+      },
+      {
         "id": "CVE-2024-52615",
         "pkg": "libavahi-common3",
         "installedVersion": "0.8-10+deb12u1",
@@ -9546,6 +9562,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "avahi: avahi-daemon: Avahi: Denial of Service via D-Bus method call"
+      },
+      {
+        "id": "CVE-2026-59987",
+        "pkg": "libavahi-common3",
+        "installedVersion": "0.8-10+deb12u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "avahi: Avahi: Denial of Service via crafted domain name over D-Bus"
       },
       {
         "id": "CVE-2026-13595",
@@ -10330,14 +10354,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "cups: cups: argument injection in mailto notifier via notify-recipient-uri"
-      },
-      {
-        "id": "CVE-2026-55467",
-        "pkg": "libcups2",
-        "installedVersion": "2.4.2-3+deb12u9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "cups: cups: Denial of Service via unsanitized fax job attributes"
       },
       {
         "id": "CVE-2026-87876",
@@ -13348,6 +13364,14 @@
         "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
+        "id": "CVE-2026-121482",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
@@ -13378,6 +13402,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-121481",
+        "pkg": "libssl3",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Out-of-bounds write via integer overflow in EVP_EncodeBlock()"
       },
       {
         "id": "CVE-2026-102010",
@@ -14556,6 +14588,14 @@
         "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
       },
       {
+        "id": "CVE-2026-121482",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
@@ -14586,6 +14626,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-121481",
+        "pkg": "openssl",
+        "installedVersion": "3.0.22-1~deb12u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Out-of-bounds write via integer overflow in EVP_EncodeBlock()"
       },
       {
         "id": "CVE-2007-5686",
@@ -16342,7 +16390,7 @@
         "installedVersion": "v1.27.3",
         "fixedVersion": "1.26.11, 1.27.4",
         "severity": "MEDIUM",
-        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+        "title": "net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests"
       },
       {
         "id": "CVE-2026-128085",
@@ -16390,7 +16438,7 @@
         "installedVersion": "v1.27.3",
         "fixedVersion": "1.26.11, 1.27.4",
         "severity": "MEDIUM",
-        "title": "For HTTP/1 servers, when MaxBytesReader's limit is exceeded, \"Connecti ..."
+        "title": "net/http: golang: net/http: Denial of Service via race condition when handling oversized HTTP/1 requests"
       }
     ]
   }
