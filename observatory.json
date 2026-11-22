@@ -402,13 +402,18 @@
       "image": "stirlingtools/stirling-pdf",
       "tag_pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "active_versions": [
+        "3.5.0",
         "3.4.0",
         "3.3.0",
         "3.2.2",
-        "3.2.1",
-        "3.2.0"
+        "3.2.1"
       ],
       "deprecated_versions": [
+        {
+          "tag": "3.2.0",
+          "droppedAt": "2026-11-22",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 3.5.0 immediately."
+        },
         {
           "tag": "3.1.0",
           "droppedAt": "2026-11-19",
