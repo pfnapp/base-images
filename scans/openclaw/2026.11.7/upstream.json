@@ -1,0 +1,4325 @@
+{
+  "scannedAt": "2026-11-23T08:37:27.458Z",
+  "system": {
+    "total": 509,
+    "cves": [
+      {
+        "id": "CVE-2026-54370",
+        "pkg": "acl",
+        "installedVersion": "2.3.2-2+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2011-3374",
+        "pkg": "apt",
+        "installedVersion": "3.0.4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "It was found that apt-key in apt, all versions, do not correctly valid ..."
+      },
+      {
+        "id": "TEMP-0841856-B18BAF",
+        "pkg": "bash",
+        "installedVersion": "5.2.37-2+b10",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "[Privilege escalation possible to other user than root]"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "bsdutils",
+        "installedVersion": "1:2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "bsdutils",
+        "installedVersion": "1:2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2017-18018",
+        "pkg": "coreutils",
+        "installedVersion": "9.7-3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "coreutils: race condition vulnerability in chown and chgrp"
+      },
+      {
+        "id": "CVE-2025-5278",
+        "pkg": "coreutils",
+        "installedVersion": "9.7-3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "coreutils: Heap Buffer Under-Read in GNU Coreutils sort via Key Specification"
+      },
+      {
+        "id": "CVE-2026-56391",
+        "pkg": "coreutils",
+        "installedVersion": "9.7-3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "coreutils: GNU coreutils uniq: Denial of Service and information disclosure via out-of-bounds read with multibyte input"
+      },
+      {
+        "id": "CVE-2026-56392",
+        "pkg": "coreutils",
+        "installedVersion": "9.7-3",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "coreutils: GNU coreutils unexpand: Denial of Service via crafted tab stop values"
+      },
+      {
+        "id": "CVE-2026-10536",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free vulnerability leading to Denial of Service"
+      },
+      {
+        "id": "CVE-2026-11856",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect Digest authentication header reuse"
+      },
+      {
+        "id": "CVE-2026-19931",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
+      },
+      {
+        "id": "CVE-2026-8926",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect .netrc password lookup"
+      },
+      {
+        "id": "CVE-2026-8932",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-9079",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure due to failure to clear proxy authentication credentials"
+      },
+      {
+        "id": "CVE-2026-9080",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-9545",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure via cached SSL session and early data"
+      },
+      {
+        "id": "CVE-2025-10966",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Curl missing SFTP host verification with wolfSSH backend"
+      },
+      {
+        "id": "CVE-2025-14017",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Security bypass due to global TLS option changes in multi-threaded LDAPS transfers"
+      },
+      {
+        "id": "CVE-2025-15079",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Host verification bypass during SSH transfers"
+      },
+      {
+        "id": "CVE-2025-15224",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libssh key passphrase bypass without agent set"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-13608",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Authentication bypass in OpenLDAP SASL negotiation via Man-in-the-Middle (MITM) attack"
+      },
+      {
+        "id": "CVE-2026-18924",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
+      },
+      {
+        "id": "CVE-2026-80255",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
+        "id": "CVE-2026-82208",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+      },
+      {
+        "id": "CVE-2026-82209",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-9547",
+        "pkg": "curl",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
+      },
+      {
+        "id": "CVE-2026-102473",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-12",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "dash: dash: Super-polynomial backtracking in pmatch when libc fnmatch is disabled"
+      },
+      {
+        "id": "CVE-2026-102474",
+        "pkg": "dash",
+        "installedVersion": "0.5.12-12",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "dash: dash: Heap out-of-bounds write in conv_escape via undersized Unicode escape reservation"
+      },
+      {
+        "id": "CVE-2026-53910",
+        "pkg": "diffutils",
+        "installedVersion": "1:3.10-4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "diffutils: heap‑based buffer overflow due to multiple signed integer overflows in line‑mapping calculations"
+      },
+      {
+        "id": "CVE-2026-91094",
+        "pkg": "dpkg",
+        "installedVersion": "1.22.22",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A directory traversal bug was discovered when unpacking 3.0 (quilt) so ..."
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "gcc-14-base",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
+        "id": "CVE-2026-105437",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
+      },
+      {
+        "id": "CVE-2018-1000021",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: client prints server-sent ANSI escape codes to the terminal, allowing for unverified messages to potentially execute arbitrary commands"
+      },
+      {
+        "id": "CVE-2022-24975",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: The --mirror option for git leaks secret for deleted content, aka the \"GitBleed\""
+      },
+      {
+        "id": "CVE-2024-52005",
+        "pkg": "git",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: The sideband payload is passed unfiltered to the terminal in git"
+      },
+      {
+        "id": "CVE-2026-105437",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Heap corruption via integer overflow in merge size calculations"
+      },
+      {
+        "id": "CVE-2026-111760",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: Git: Arbitrary code execution via unsafe submodule metadata during recursive clones"
+      },
+      {
+        "id": "CVE-2026-114466",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "git: git: Arbitrary file system access via fast-import features"
+      },
+      {
+        "id": "CVE-2026-113408",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Unintended file writes via malformed unborn HEAD advertisement"
+      },
+      {
+        "id": "CVE-2026-114467",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of service via commit messages with multiple GPG signatures"
+      },
+      {
+        "id": "CVE-2026-114469",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "git: git: Denial of Service via binary patch size validation bypass"
+      },
+      {
+        "id": "CVE-2018-1000021",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: client prints server-sent ANSI escape codes to the terminal, allowing for unverified messages to potentially execute arbitrary commands"
+      },
+      {
+        "id": "CVE-2022-24975",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: The --mirror option for git leaks secret for deleted content, aka the \"GitBleed\""
+      },
+      {
+        "id": "CVE-2024-52005",
+        "pkg": "git-man",
+        "installedVersion": "1:2.47.3-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "git: The sideband payload is passed unfiltered to the terminal in git"
+      },
+      {
+        "id": "CVE-2026-54370",
+        "pkg": "libacl1",
+        "installedVersion": "2.3.2-2+b1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "acl: TOCTOU Symlink Traversal via getfacl/setfacl"
+      },
+      {
+        "id": "CVE-2011-3374",
+        "pkg": "libapt-pkg7.0",
+        "installedVersion": "3.0.4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "It was found that apt-key in apt, all versions, do not correctly valid ..."
+      },
+      {
+        "id": "CVE-2026-54371",
+        "pkg": "libattr1",
+        "installedVersion": "1:2.5.2-3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "attr: attr: Symlink Traversal Privilege Escalation via getfattr and setfattr"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "libblkid1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "libblkid1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2026-42250",
+        "pkg": "libbz2-1.0",
+        "installedVersion": "1.0.8-6",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "bzip2: bzip2: Denial of Service in bzip2recover via a specially crafted file"
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
+      },
+      {
+        "id": "CVE-2026-84243",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Arbitrary code execution via directory traversal in LANGUAGE environment variable"
+      },
+      {
+        "id": "CVE-2010-4756",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions"
+      },
+      {
+        "id": "CVE-2018-20796",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2019-1010022",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: stack guard protection bypass"
+      },
+      {
+        "id": "CVE-2019-1010023",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: running ldd on malicious ELF leads to code execution because of wrong size computation"
+      },
+      {
+        "id": "CVE-2019-1010024",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: ASLR bypass using cache of thread stack and heap"
+      },
+      {
+        "id": "CVE-2019-1010025",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: information disclosure of heap addresses of pthread_created thread"
+      },
+      {
+        "id": "CVE-2019-9192",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-100290",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
+        "id": "CVE-2026-126765",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
+        "id": "CVE-2026-121757",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
+      },
+      {
+        "id": "CVE-2026-115819",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
+      },
+      {
+        "id": "CVE-2026-84243",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Arbitrary code execution via directory traversal in LANGUAGE environment variable"
+      },
+      {
+        "id": "CVE-2010-4756",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glob implementation can cause excessive CPU and memory consumption due to crafted glob expressions"
+      },
+      {
+        "id": "CVE-2018-20796",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2019-1010022",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: stack guard protection bypass"
+      },
+      {
+        "id": "CVE-2019-1010023",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: running ldd on malicious ELF leads to code execution because of wrong size computation"
+      },
+      {
+        "id": "CVE-2019-1010024",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: ASLR bypass using cache of thread stack and heap"
+      },
+      {
+        "id": "CVE-2019-1010025",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: information disclosure of heap addresses of pthread_created thread"
+      },
+      {
+        "id": "CVE-2019-9192",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1 in posix/regexec.c"
+      },
+      {
+        "id": "CVE-2026-100290",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via memory allocation failure during regular expression processing"
+      },
+      {
+        "id": "CVE-2026-126765",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "glibc: glibc: Denial of Service via double free in glob functions"
+      },
+      {
+        "id": "CVE-2026-121757",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
+      },
+      {
+        "id": "CVE-2026-121758",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+      },
+      {
+        "id": "CVE-2026-124024",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
+      },
+      {
+        "id": "CVE-2026-10536",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free vulnerability leading to Denial of Service"
+      },
+      {
+        "id": "CVE-2026-11856",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect Digest authentication header reuse"
+      },
+      {
+        "id": "CVE-2026-19931",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
+      },
+      {
+        "id": "CVE-2026-8926",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect .netrc password lookup"
+      },
+      {
+        "id": "CVE-2026-8932",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-9079",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure due to failure to clear proxy authentication credentials"
+      },
+      {
+        "id": "CVE-2026-9080",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-9545",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure via cached SSL session and early data"
+      },
+      {
+        "id": "CVE-2025-10966",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Curl missing SFTP host verification with wolfSSH backend"
+      },
+      {
+        "id": "CVE-2025-14017",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Security bypass due to global TLS option changes in multi-threaded LDAPS transfers"
+      },
+      {
+        "id": "CVE-2025-15079",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Host verification bypass during SSH transfers"
+      },
+      {
+        "id": "CVE-2025-15224",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libssh key passphrase bypass without agent set"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-13608",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Authentication bypass in OpenLDAP SASL negotiation via Man-in-the-Middle (MITM) attack"
+      },
+      {
+        "id": "CVE-2026-18924",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
+      },
+      {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
+        "id": "CVE-2026-82208",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+      },
+      {
+        "id": "CVE-2026-82209",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-9547",
+        "pkg": "libcurl3t64-gnutls",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
+      },
+      {
+        "id": "CVE-2026-10536",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free vulnerability leading to Denial of Service"
+      },
+      {
+        "id": "CVE-2026-11856",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect Digest authentication header reuse"
+      },
+      {
+        "id": "CVE-2026-19931",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: libcurl: Information disclosure via incorrect connection reuse with Negotiate authentication"
+      },
+      {
+        "id": "CVE-2026-8926",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: Information disclosure via incorrect .netrc password lookup"
+      },
+      {
+        "id": "CVE-2026-8932",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Security feature bypass due to improper mTLS connection reuse"
+      },
+      {
+        "id": "CVE-2026-9079",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure due to failure to clear proxy authentication credentials"
+      },
+      {
+        "id": "CVE-2026-9080",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Use-after-free via curl_easy_pause() in CURLMOPT_SOCKETFUNCTION callback"
+      },
+      {
+        "id": "CVE-2026-92388",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "curl: curl: FTP wildcard write callback mixup"
+      },
+      {
+        "id": "CVE-2026-9545",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libcurl: libcurl: Information disclosure via cached SSL session and early data"
+      },
+      {
+        "id": "CVE-2025-10966",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Curl missing SFTP host verification with wolfSSH backend"
+      },
+      {
+        "id": "CVE-2025-14017",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Security bypass due to global TLS option changes in multi-threaded LDAPS transfers"
+      },
+      {
+        "id": "CVE-2025-15079",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: Host verification bypass during SSH transfers"
+      },
+      {
+        "id": "CVE-2025-15224",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libssh key passphrase bypass without agent set"
+      },
+      {
+        "id": "CVE-2026-107928",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: info leak uploading over WebSockets with GnuTLS"
+      },
+      {
+        "id": "CVE-2026-107929",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: local interface connection reuse mixup"
+      },
+      {
+        "id": "CVE-2026-13608",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Authentication bypass in OpenLDAP SASL negotiation via Man-in-the-Middle (MITM) attack"
+      },
+      {
+        "id": "CVE-2026-18924",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Use-after-free in HTTP/2 Server Push with shared connections"
+      },
+      {
+        "id": "CVE-2026-80229",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Memory corruption vulnerability via OpenSSL 3 provider use-after-free"
+      },
+      {
+        "id": "CVE-2026-80230",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Public key pinning bypass allows unauthenticated connections"
+      },
+      {
+        "id": "CVE-2026-80255",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Information disclosure due to secure cookie attribute bypass"
+      },
+      {
+        "id": "CVE-2026-82208",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Improper certificate validation when using wolfSSL CA cache"
+      },
+      {
+        "id": "CVE-2026-82209",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: libcurl: Information disclosure via improper Public Suffix List boundary check"
+      },
+      {
+        "id": "CVE-2026-86409",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: stale SigV4 headers sent unintended"
+      },
+      {
+        "id": "CVE-2026-86410",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: redirect to SFTP or SCP bypasses host verification"
+      },
+      {
+        "id": "CVE-2026-86414",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: leaking host credentials to HTTP proxy"
+      },
+      {
+        "id": "CVE-2026-87862",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: HSTS cache import drops longer-lived child"
+      },
+      {
+        "id": "CVE-2026-87863",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Hsts Response Erases Persisted Entries"
+      },
+      {
+        "id": "CVE-2026-87864",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: IMAP APPEND plus CRLF conversion command injection"
+      },
+      {
+        "id": "CVE-2026-87865",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: knownhost callback mismatches key as missing"
+      },
+      {
+        "id": "CVE-2026-87866",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: wolfSSL public-key pinning bypass"
+      },
+      {
+        "id": "CVE-2026-92386",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: server-set cookie aborts cookie jar load"
+      },
+      {
+        "id": "CVE-2026-92387",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: never-ending loop via server response omission"
+      },
+      {
+        "id": "CVE-2026-92389",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: TFTP direction confusion"
+      },
+      {
+        "id": "CVE-2026-92390",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: -J no-clobber guarantee bypassed with 103 early hints"
+      },
+      {
+        "id": "CVE-2026-92391",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: curl_mime_free stack overflow by recursion"
+      },
+      {
+        "id": "CVE-2026-94266",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: password leak in CURLINFO_EFFECTIVE_URL"
+      },
+      {
+        "id": "CVE-2026-9547",
+        "pkg": "libcurl4t64",
+        "installedVersion": "8.14.1-2+deb13u7",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "curl: curl: Man-in-the-middle attack via SSH host key bypass"
+      },
+      {
+        "id": "CVE-2026-113351",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
+      },
+      {
+        "id": "CVE-2026-115506",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via delayed entity amplification detection"
+      },
+      {
+        "id": "CVE-2026-117610",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
+      },
+      {
+        "id": "CVE-2026-118370",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
+      },
+      {
+        "id": "CVE-2025-66382",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libexpat: libexpat: Denial of service via crafted file processing"
+      },
+      {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
+        "id": "CVE-2026-128241",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
+      },
+      {
+        "id": "CVE-2026-134703",
+        "pkg": "libexpat1",
+        "installedVersion": "2.9.0-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgcc-s1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
+        "id": "CVE-2011-3389",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)"
+      },
+      {
+        "id": "CVE-2026-67693",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Information disclosure via contradictory Key Usage and Extended Key Usage extensions"
+      },
+      {
+        "id": "CVE-2026-88647",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Information disclosure via hostname verification bypass"
+      },
+      {
+        "id": "CVE-2026-88648",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: Cross-domain certificate restriction bypass via incomplete X.509 validation"
+      },
+      {
+        "id": "CVE-2026-95184",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: legitimate user certificates incorrectly rejected causing denial of service"
+      },
+      {
+        "id": "CVE-2026-95210",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnutls: gnutls: certificates with invalid extensions incorrectly accepted"
+      },
+      {
+        "id": "CVE-2026-127039",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The certificate authentication info handling in gnutls from 2.5.9 up t ..."
+      },
+      {
+        "id": "CVE-2026-127040",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "The RSA-PSK ClientKeyExchange handler in gnutls before 3.8.14 does not ..."
+      },
+      {
+        "id": "CVE-2026-127231",
+        "pkg": "libgnutls30t64",
+        "installedVersion": "3.8.9-3+deb13u4",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "A double free in the X.509 name constraints enforcement of GnuTLS 3.8. ..."
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libgomp1",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2018-5709",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c"
+      },
+      {
+        "id": "CVE-2024-26458",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c"
+      },
+      {
+        "id": "CVE-2024-26461",
+        "pkg": "libgssapi-krb5-2",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2018-5709",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c"
+      },
+      {
+        "id": "CVE-2024-26458",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c"
+      },
+      {
+        "id": "CVE-2024-26461",
+        "pkg": "libk5crypto3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2018-5709",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c"
+      },
+      {
+        "id": "CVE-2024-26458",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c"
+      },
+      {
+        "id": "CVE-2024-26461",
+        "pkg": "libkrb5-3",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c"
+      },
+      {
+        "id": "CVE-2026-107708",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via malformed PAC in S4U2Proxy requests"
+      },
+      {
+        "id": "CVE-2026-107778",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "krb5: krb5: Denial of Service via crafted forwarded credentials"
+      },
+      {
+        "id": "CVE-2018-5709",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c"
+      },
+      {
+        "id": "CVE-2024-26458",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/rpc/pmap_rmt.c"
+      },
+      {
+        "id": "CVE-2024-26461",
+        "pkg": "libkrb5support0",
+        "installedVersion": "1.21.3-5+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "krb5: Memory leak at /krb5/src/lib/gssapi/krb5/k5sealv3.c"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "liblastlog2-2",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "liblastlog2-2",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2015-3276",
+        "pkg": "libldap2",
+        "installedVersion": "2.6.10+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openldap: incorrect multi-keyword mode cipherstring parsing"
+      },
+      {
+        "id": "CVE-2017-14159",
+        "pkg": "libldap2",
+        "installedVersion": "2.6.10+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openldap: Privilege escalation via PID file manipulation"
+      },
+      {
+        "id": "CVE-2017-17740",
+        "pkg": "libldap2",
+        "installedVersion": "2.6.10+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openldap: contrib/slapd-modules/nops/nops.c attempts to free stack buffer allowing remote attackers to cause a denial of service"
+      },
+      {
+        "id": "CVE-2020-15719",
+        "pkg": "libldap2",
+        "installedVersion": "2.6.10+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openldap: Certificate validation incorrectly matches name against CN-ID"
+      },
+      {
+        "id": "CVE-2026-22185",
+        "pkg": "libldap2",
+        "installedVersion": "2.6.10+dfsg-1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "OpenLDAP: OpenLDAP LMDB: Denial of Service and Information Disclosure via Heap Buffer Underflow"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "libmount1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "libmount1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2025-6141",
+        "pkg": "libncursesw6",
+        "installedVersion": "6.5+20250216-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-13757",
+        "pkg": "libp11-kit0",
+        "installedVersion": "0.25.5-3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "p11-kit: Stack exhaustion via unbounded recursion in RPC attribute parsing"
+      },
+      {
+        "id": "CVE-2026-18938",
+        "pkg": "libp11-kit0",
+        "installedVersion": "0.25.5-3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "p11-kit: Integer overflow in RPC attribute-array length calculation can under-allocate nested attribute storage on 32 bit systems"
+      },
+      {
+        "id": "CVE-2026-54411",
+        "pkg": "libpam-modules",
+        "installedVersion": "1.7.0-5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-54411",
+        "pkg": "libpam-modules-bin",
+        "installedVersion": "1.7.0-5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-54411",
+        "pkg": "libpam-runtime",
+        "installedVersion": "1.7.0-5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-54411",
+        "pkg": "libpam0g",
+        "installedVersion": "1.7.0-5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "linux-pam: Plaintext password recovery via timing discrepancy in pam_userdb module"
+      },
+      {
+        "id": "CVE-2026-15534",
+        "pkg": "libperl5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "perl: Perl: Arbitrary code execution via out-of-bounds memory access in regular expression engine."
+      },
+      {
+        "id": "CVE-2026-82560",
+        "pkg": "libperl5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
+      },
+      {
+        "id": "CVE-2011-4116",
+        "pkg": "libperl5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-15308",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Use-after-free of a server-side SSLContext when sni_callback switches contexts"
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-82049",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python tarfile module: File modification and content disclosure via crafted archives"
+      },
+      {
+        "id": "CVE-2025-12781",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: base64.b64decode() always accepts \"+/\" characters, despite setting altchars"
+      },
+      {
+        "id": "CVE-2025-15366",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: IMAP command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2025-15367",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: POP3 command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Security bypass via null byte truncation in socket.getaddrinfo()"
+      },
+      {
+        "id": "CVE-2026-12345",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
+        "id": "CVE-2026-124249",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-15310",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
+        "id": "CVE-2026-15806",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Information disclosure due to incorrect URL scheme matching"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
+        "id": "CVE-2026-17084",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python stringprep module: Incorrect domain name processing breaks IDNA interoperability"
+      },
+      {
+        "id": "CVE-2026-19672",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Directory traversal allows creation of empty directories outside extraction destination"
+      },
+      {
+        "id": "CVE-2026-87910",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Security filter bypass allows arbitrary file write"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
+      },
+      {
+        "id": "CVE-2026-12003",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
+      },
+      {
+        "id": "CVE-2026-18503",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Denial of Service via super-linear regular expression work in csv.Sniffer.sniff()"
+      },
+      {
+        "id": "CVE-2026-3479",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-115791",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
+      },
+      {
+        "id": "CVE-2026-19552",
+        "pkg": "libpython3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "CVE-2026-15308",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Use-after-free of a server-side SSLContext when sni_callback switches contexts"
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-82049",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python tarfile module: File modification and content disclosure via crafted archives"
+      },
+      {
+        "id": "CVE-2025-12781",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: base64.b64decode() always accepts \"+/\" characters, despite setting altchars"
+      },
+      {
+        "id": "CVE-2025-15366",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: IMAP command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2025-15367",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: POP3 command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2026-103995",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Security bypass via null byte truncation in socket.getaddrinfo()"
+      },
+      {
+        "id": "CVE-2026-12345",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
+        "id": "CVE-2026-124249",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-15310",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
+        "id": "CVE-2026-15806",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Information disclosure due to incorrect URL scheme matching"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
+        "id": "CVE-2026-17084",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python stringprep module: Incorrect domain name processing breaks IDNA interoperability"
+      },
+      {
+        "id": "CVE-2026-19672",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Directory traversal allows creation of empty directories outside extraction destination"
+      },
+      {
+        "id": "CVE-2026-87910",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Security filter bypass allows arbitrary file write"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
+      },
+      {
+        "id": "CVE-2026-12003",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
+      },
+      {
+        "id": "CVE-2026-18503",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Denial of Service via super-linear regular expression work in csv.Sniffer.sniff()"
+      },
+      {
+        "id": "CVE-2026-3479",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-115791",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
+      },
+      {
+        "id": "CVE-2026-19552",
+        "pkg": "libpython3.13-stdlib",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-132138",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
+      },
+      {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-2",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
+      },
+      {
+        "id": "CVE-2026-107161",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
+      },
+      {
+        "id": "CVE-2026-132138",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
+      },
+      {
+        "id": "CVE-2026-129483",
+        "pkg": "libsasl2-modules-db",
+        "installedVersion": "2.1.28+dfsg1-9",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "cyrus-sasl: Cyrus SASL through 2.1.28 SRP Authentication Bypass via plugins/srp.c"
+      },
+      {
+        "id": "TEMP-0000000-402D17",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-4q85-33p6-j5g6: Incorrect 64-bit comparison merge in libseccomp can weaken seccomp filters]"
+      },
+      {
+        "id": "TEMP-0000000-414660",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-35x7-vh54-jvqf: Incorrect accumulator reloads when comparing arguments can lead to erroneous actions]"
+      },
+      {
+        "id": "TEMP-0000000-43231F",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-2hqh-5c36-grrm: Oversized seccomp filters can trigger libseccomp heap corruption]"
+      },
+      {
+        "id": "TEMP-0000000-AE2C66",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-84vx-jqqr-h4f2: Unmatched seccomp transaction rejections can result in a segmentation fault]"
+      },
+      {
+        "id": "TEMP-0000000-ED49F3",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-q75f-27j4-2h7j: Missing syscall-number load in BPF filter can bypass seccomp restrictions]"
+      },
+      {
+        "id": "TEMP-0000000-F88C7E",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-qxh5-4cq9-6mjx: Crafted seccomp rules can trigger an infinite loop in libseccomp]"
+      },
+      {
+        "id": "TEMP-0000000-FCA4C0",
+        "pkg": "libseccomp2",
+        "installedVersion": "2.6.0-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[GHSA-46fr-jh49-xvhx: Oversized seccomp filters can trigger libseccomp double free]"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "libsmartcols1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "libsmartcols1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2026-119373",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
+      },
+      {
+        "id": "CVE-2026-119374",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index"
+      },
+      {
+        "id": "CVE-2026-119379",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "sqlite: sqlite: Arbitrary code execution via crafted session changesets"
+      },
+      {
+        "id": "CVE-2026-119371",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from deeply nested Common Table Expressions"
+      },
+      {
+        "id": "CVE-2026-119372",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in full-text search"
+      },
+      {
+        "id": "CVE-2026-119375",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Information disclosure via undersized WAL page size"
+      },
+      {
+        "id": "CVE-2026-119376",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion from chained COLLATE operators"
+      },
+      {
+        "id": "CVE-2026-119378",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via use-after-free in R-Tree extension"
+      },
+      {
+        "id": "CVE-2026-119591",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: sqlite: Denial of Service via stack exhaustion in countOfViewOptimization()"
+      },
+      {
+        "id": "CVE-2026-50812",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: SQLite: Denial of Service via malformed changeset in Session Extension"
+      },
+      {
+        "id": "CVE-2026-50813",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "sqlite: SQLite: Information disclosure via Session Extension changeset merge path"
+      },
+      {
+        "id": "CVE-2021-45346",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "sqlite: crafted SQL query allows a malicious user to obtain sensitive information"
+      },
+      {
+        "id": "CVE-2025-70873",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "sqlite: SQLite: Information Disclosure via Crafted ZIP File"
+      },
+      {
+        "id": "CVE-2026-119377",
+        "pkg": "libsqlite3-0",
+        "installedVersion": "3.46.1-7+deb13u2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-121482",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
+      },
+      {
+        "id": "CVE-2026-84786",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
+      },
+      {
+        "id": "CVE-2026-95690",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-121481",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Out-of-bounds write via integer overflow in EVP_EncodeBlock()"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-102010",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc-toolset-15-gcc: gcc: gcc-toolset-16: gcc: Denial of Service via use-after-free in binary heap erase_if"
+      },
+      {
+        "id": "CVE-2026-114690",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Confirmed out-of-bounds read/write in libstdc++ parallel `std"
+      },
+      {
+        "id": "CVE-2026-114691",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Integer wrap in `std"
+      },
+      {
+        "id": "CVE-2026-115455",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: Stack overflow in std::bitset on libstdc++"
+      },
+      {
+        "id": "CVE-2026-125709",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libstdc++: overflow leaves streambuf in inconsistent state on I/O error."
+      },
+      {
+        "id": "CVE-2026-95619",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "gcc: libstdc++ integer overflow in `new` operator"
+      },
+      {
+        "id": "CVE-2026-115456",
+        "pkg": "libstdc++6",
+        "installedVersion": "14.2.0-19",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gcc: Out-of-bounds read in std::from_chars"
+      },
+      {
+        "id": "CVE-2026-15059",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "systemd: systemd-oomd: Unprivileged users can terminate arbitrary processes via IPC API"
+      },
+      {
+        "id": "CVE-2013-4392",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "systemd: TOCTOU race condition when updating file permissions and SELinux security contexts"
+      },
+      {
+        "id": "CVE-2023-31437",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can modify a seale ..."
+      },
+      {
+        "id": "CVE-2023-31438",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can truncate a sea ..."
+      },
+      {
+        "id": "CVE-2023-31439",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
+      },
+      {
+        "id": "CVE-2026-40228",
+        "pkg": "libsystemd0",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
+      },
+      {
+        "id": "CVE-2025-6141",
+        "pkg": "libtinfo6",
+        "installedVersion": "6.5+20250216-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc-common",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
+      },
+      {
+        "id": "CVE-2026-85231",
+        "pkg": "libtirpc-common",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: Denial of service via unbounded memory allocation during RPCSEC_GSS decoding"
+      },
+      {
+        "id": "CVE-2026-85977",
+        "pkg": "libtirpc-common",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: Denial of Service via unbounded memory allocation during portmapper response decoding"
+      },
+      {
+        "id": "CVE-2026-104357",
+        "pkg": "libtirpc3t64",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: SunRPC UDP datagram-boundary violation (stale buffer bytes decoded as current request)"
+      },
+      {
+        "id": "CVE-2026-85231",
+        "pkg": "libtirpc3t64",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: Denial of service via unbounded memory allocation during RPCSEC_GSS decoding"
+      },
+      {
+        "id": "CVE-2026-85977",
+        "pkg": "libtirpc3t64",
+        "installedVersion": "1.3.6+ds-1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libtirpc: libtirpc: Denial of Service via unbounded memory allocation during portmapper response decoding"
+      },
+      {
+        "id": "CVE-2026-15059",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "systemd: systemd-oomd: Unprivileged users can terminate arbitrary processes via IPC API"
+      },
+      {
+        "id": "CVE-2013-4392",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "systemd: TOCTOU race condition when updating file permissions and SELinux security contexts"
+      },
+      {
+        "id": "CVE-2023-31437",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can modify a seale ..."
+      },
+      {
+        "id": "CVE-2023-31438",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can truncate a sea ..."
+      },
+      {
+        "id": "CVE-2023-31439",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
+      },
+      {
+        "id": "CVE-2026-40228",
+        "pkg": "libudev1",
+        "installedVersion": "257.13-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "libuuid1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "libuuid1",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "login",
+        "installedVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "login",
+        "installedVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2007-5686",
+        "pkg": "login.defs",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "initscripts in rPath Linux 1 sets insecure permissions for the /var/lo ..."
+      },
+      {
+        "id": "CVE-2024-56433",
+        "pkg": "login.defs",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise"
+      },
+      {
+        "id": "TEMP-0628843-DBAD28",
+        "pkg": "login.defs",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "[more related to CVE-2005-4890]"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "mount",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "mount",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2025-6141",
+        "pkg": "ncurses-base",
+        "installedVersion": "6.5+20250216-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2025-6141",
+        "pkg": "ncurses-bin",
+        "installedVersion": "6.5+20250216-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-60002",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "CRITICAL",
+        "title": "openssh: OpenSSH: Use-after-free vulnerability during host key re-exchange on the client side"
+      },
+      {
+        "id": "CVE-2026-106553",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Credential disclosure via failed GSSAPI authentication"
+      },
+      {
+        "id": "CVE-2026-106555",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Information disclosure via GSSAPI authentication state persistence"
+      },
+      {
+        "id": "CVE-2026-106583",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: openssh: Command injection via unvalidated command-line username"
+      },
+      {
+        "id": "CVE-2026-59999",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH sshd: Security bypass due to incorrect handling of forwarding and tunneling options"
+      },
+      {
+        "id": "CVE-2026-60000",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssh: OpenSSH: Denial of Service via excessive GSSAPI authentication attempts"
+      },
+      {
+        "id": "CVE-2026-106552",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: openssh: Arbitrary file write via directory traversal during sftp recursive copy"
+      },
+      {
+        "id": "CVE-2026-106585",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: openssh: Denial of service via oversized decompressed packets"
+      },
+      {
+        "id": "CVE-2026-106586",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Security restriction bypass via unenforced restrict directive in tunnel forwarding"
+      },
+      {
+        "id": "CVE-2026-59995",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: sftp client allows attacker to control downloaded file location"
+      },
+      {
+        "id": "CVE-2026-59996",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: `scp` file misplacement vulnerability during remote copy"
+      },
+      {
+        "id": "CVE-2026-59997",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: SFTP security bypass due to command-line argument parsing flaw"
+      },
+      {
+        "id": "CVE-2026-59998",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Undocumented GSSAPIStrictAcceptorCheck behavior impacts security in Windows Active Directory"
+      },
+      {
+        "id": "CVE-2026-60001",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Brute-force attacks facilitated due to insufficient authentication delay"
+      },
+      {
+        "id": "CVE-2026-73282",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Information disclosure and data corruption via use-after-free in ssh client"
+      },
+      {
+        "id": "CVE-2026-73283",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssh: OpenSSH: Tunnel forwarding restriction bypass"
+      },
+      {
+        "id": "CVE-2007-2243",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "OpenSSH 4.6 and earlier, when ChallengeResponseAuthentication is enabl ..."
+      },
+      {
+        "id": "CVE-2007-2768",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "OpenSSH, when using OPIE (One-Time Passwords in Everything) for PAM, a ..."
+      },
+      {
+        "id": "CVE-2008-3234",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "sshd in OpenSSH 4 on Debian GNU/Linux, and the 20070303 OpenSSH snapsh ..."
+      },
+      {
+        "id": "CVE-2016-20012",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: Public key information leak"
+      },
+      {
+        "id": "CVE-2018-15919",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: User enumeration via malformed packets in authentication requests"
+      },
+      {
+        "id": "CVE-2019-6110",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: Acceptance and display of arbitrary stderr allows for spoofing of scp client output"
+      },
+      {
+        "id": "CVE-2020-14145",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: Observable discrepancy leading to an information leak in the algorithm negotiation"
+      },
+      {
+        "id": "CVE-2020-15778",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: scp allows command injection when using backtick characters in the destination argument"
+      },
+      {
+        "id": "CVE-2026-106582",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: openssh: Information disclosure via shared compression side-channel"
+      },
+      {
+        "id": "CVE-2026-106584",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: openssh: Incorrect certificate expiration times via Daylight Saving Time mishandling"
+      },
+      {
+        "id": "CVE-2026-106587",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: Improper access control via misinterpretation of disabled configuration options"
+      },
+      {
+        "id": "CVE-2026-123158",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: Password authentication bypass via password hash misinterpretation"
+      },
+      {
+        "id": "CVE-2026-55654",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: Heap out-of-bounds read in Red Hat Enterprise Linux versions of OpenSSH GSSAPI indicator cleanup due to missing NULL sentinel termination"
+      },
+      {
+        "id": "CVE-2026-73281",
+        "pkg": "openssh-client",
+        "installedVersion": "1:10.0p1-7+deb13u4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-121482",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
+      },
+      {
+        "id": "CVE-2026-84786",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
+      },
+      {
+        "id": "CVE-2026-95690",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-121481",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Out-of-bounds write via integer overflow in EVP_EncodeBlock()"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-121482",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
+      },
+      {
+        "id": "CVE-2026-35190",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
+      },
+      {
+        "id": "CVE-2026-84786",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via NULL pointer dereference during DANE TLSA record processing"
+      },
+      {
+        "id": "CVE-2026-95690",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of service via crafted out-of-sequence DTLS handshake fragments"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
+      },
+      {
+        "id": "CVE-2026-121481",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Out-of-bounds write via integer overflow in EVP_EncodeBlock()"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2007-5686",
+        "pkg": "passwd",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "initscripts in rPath Linux 1 sets insecure permissions for the /var/lo ..."
+      },
+      {
+        "id": "CVE-2024-56433",
+        "pkg": "passwd",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "shadow-utils: Default subordinate ID configuration in /etc/login.defs could lead to compromise"
+      },
+      {
+        "id": "TEMP-0628843-DBAD28",
+        "pkg": "passwd",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "[more related to CVE-2005-4890]"
+      },
+      {
+        "id": "CVE-2026-15534",
+        "pkg": "perl",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "perl: Perl: Arbitrary code execution via out-of-bounds memory access in regular expression engine."
+      },
+      {
+        "id": "CVE-2026-82560",
+        "pkg": "perl",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
+      },
+      {
+        "id": "CVE-2011-4116",
+        "pkg": "perl",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-15534",
+        "pkg": "perl-base",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "perl: Perl: Arbitrary code execution via out-of-bounds memory access in regular expression engine."
+      },
+      {
+        "id": "CVE-2026-82560",
+        "pkg": "perl-base",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
+      },
+      {
+        "id": "CVE-2011-4116",
+        "pkg": "perl-base",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-15534",
+        "pkg": "perl-modules-5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "perl: Perl: Arbitrary code execution via out-of-bounds memory access in regular expression engine."
+      },
+      {
+        "id": "CVE-2026-82560",
+        "pkg": "perl-modules-5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
+      },
+      {
+        "id": "CVE-2011-4116",
+        "pkg": "perl-modules-5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-15308",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Use-after-free of a server-side SSLContext when sni_callback switches contexts"
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-82049",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python tarfile module: File modification and content disclosure via crafted archives"
+      },
+      {
+        "id": "CVE-2025-12781",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: base64.b64decode() always accepts \"+/\" characters, despite setting altchars"
+      },
+      {
+        "id": "CVE-2025-15366",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: IMAP command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2025-15367",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: POP3 command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Security bypass via null byte truncation in socket.getaddrinfo()"
+      },
+      {
+        "id": "CVE-2026-12345",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
+        "id": "CVE-2026-124249",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-15310",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
+        "id": "CVE-2026-15806",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Information disclosure due to incorrect URL scheme matching"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
+        "id": "CVE-2026-17084",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python stringprep module: Incorrect domain name processing breaks IDNA interoperability"
+      },
+      {
+        "id": "CVE-2026-19672",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Directory traversal allows creation of empty directories outside extraction destination"
+      },
+      {
+        "id": "CVE-2026-87910",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Security filter bypass allows arbitrary file write"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
+      },
+      {
+        "id": "CVE-2026-12003",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
+      },
+      {
+        "id": "CVE-2026-18503",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Denial of Service via super-linear regular expression work in csv.Sniffer.sniff()"
+      },
+      {
+        "id": "CVE-2026-3479",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-115791",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
+      },
+      {
+        "id": "CVE-2026-19552",
+        "pkg": "python3.13",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "CVE-2026-15308",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python: CPU Denial of Service in HTML parser via repeated unterminated markup declarations"
+      },
+      {
+        "id": "CVE-2026-19445",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Use-after-free of a server-side SSLContext when sni_callback switches contexts"
+      },
+      {
+        "id": "CVE-2026-19553",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: python: Certificate verification bypass via missing server_hostname validation in SSLContext.wrap_bio()"
+      },
+      {
+        "id": "CVE-2026-7210",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python/Expat: Denial of Service via crafted XML document"
+      },
+      {
+        "id": "CVE-2026-82049",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "python: Python tarfile module: File modification and content disclosure via crafted archives"
+      },
+      {
+        "id": "CVE-2025-12781",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: base64.b64decode() always accepts \"+/\" characters, despite setting altchars"
+      },
+      {
+        "id": "CVE-2025-15366",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: IMAP command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2025-15367",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "cpython: POP3 command injection in user-controlled commands"
+      },
+      {
+        "id": "CVE-2026-103995",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Misinterpretation of HTTP responses via invalid chunk parsing"
+      },
+      {
+        "id": "CVE-2026-114583",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file write via tarfile extraction filter bypass"
+      },
+      {
+        "id": "CVE-2026-116566",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Security bypass via null byte truncation in socket.getaddrinfo()"
+      },
+      {
+        "id": "CVE-2026-12345",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Arbitrary file deletion via race condition during temporary directory cleanup"
+      },
+      {
+        "id": "CVE-2026-124249",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Unauthorized cross-domain cookie deletion via expired Set-Cookie headers"
+      },
+      {
+        "id": "CVE-2026-15310",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Denial of Service via crafted zip file memory pre-allocation"
+      },
+      {
+        "id": "CVE-2026-15806",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python: Information disclosure due to incorrect URL scheme matching"
+      },
+      {
+        "id": "CVE-2026-16052",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: python: Cookie restriction bypass via unescaped semicolons in http.cookies.Morsel"
+      },
+      {
+        "id": "CVE-2026-17084",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python stringprep module: Incorrect domain name processing breaks IDNA interoperability"
+      },
+      {
+        "id": "CVE-2026-19672",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Directory traversal allows creation of empty directories outside extraction destination"
+      },
+      {
+        "id": "CVE-2026-87910",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "python: Python tarfile module: Security filter bypass allows arbitrary file write"
+      },
+      {
+        "id": "CVE-2026-115557",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Distrust compromised eMudhra intermediate certificates in Python ssl module"
+      },
+      {
+        "id": "CVE-2026-115559",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: python: Response injection in imaplib via unpurged buffer during STARTTLS"
+      },
+      {
+        "id": "CVE-2026-12003",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Privilege escalation due to insecure VPATH handling in Windows legacy installers"
+      },
+      {
+        "id": "CVE-2026-18503",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python: Denial of Service via super-linear regular expression work in csv.Sniffer.sniff()"
+      },
+      {
+        "id": "CVE-2026-3479",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "python: Python pkgutil.get_data(): Path Traversal via improper resource argument validation"
+      },
+      {
+        "id": "CVE-2026-115791",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When tarfile or zipfile command line interface (CLI) is used to  decom ..."
+      },
+      {
+        "id": "CVE-2026-19552",
+        "pkg": "python3.13-minimal",
+        "installedVersion": "3.13.5-2+deb13u5",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "When ca_certs parameter was supplied to ssl.get_server_certificate() f ..."
+      },
+      {
+        "id": "TEMP-0517018-A83CE6",
+        "pkg": "sysvinit-utils",
+        "installedVersion": "3.14-4",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "[sysvinit: no-root option in expert installer exposes locally exploitable security flaw]"
+      },
+      {
+        "id": "CVE-2026-18477",
+        "pkg": "tar",
+        "installedVersion": "1.35+dfsg-3.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tar: tar: TOCTOU in incremental dumpdir 'X' rename handling allows restore path escape"
+      },
+      {
+        "id": "CVE-2026-18508",
+        "pkg": "tar",
+        "installedVersion": "1.35+dfsg-3.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tar: tar: --one-top-level hardlink targets not confined to top-level directory enabling arbitrary file overwrite"
+      },
+      {
+        "id": "CVE-2026-5704",
+        "pkg": "tar",
+        "installedVersion": "1.35+dfsg-3.1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "tar: tar: Hidden file injection via crafted archives"
+      },
+      {
+        "id": "CVE-2005-2541",
+        "pkg": "tar",
+        "installedVersion": "1.35+dfsg-3.1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "tar: does not properly warn the user when extracting setuid or setgid files"
+      },
+      {
+        "id": "TEMP-0290435-0B57B5",
+        "pkg": "tar",
+        "installedVersion": "1.35+dfsg-3.1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "[tar's rmt command may have undesired side effects]"
+      },
+      {
+        "id": "CVE-2026-3184",
+        "pkg": "util-linux",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "util-linux: util-linux: Access control bypass due to improper hostname canonicalization"
+      },
+      {
+        "id": "CVE-2022-0563",
+        "pkg": "util-linux",
+        "installedVersion": "2.41.5-0+deb13u1",
+        "fixedVersion": "None",
+        "severity": "LOW",
+        "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      }
+    ]
+  },
+  "app": {
+    "total": 30,
+    "cves": [
+      {
+        "id": "CVE-2026-126210",
+        "pkg": "@hono/node-server",
+        "installedVersion": "2.1.5",
+        "fixedVersion": "2.1.6, 1.19.18",
+        "severity": "MEDIUM",
+        "title": "@hono/node-server: Backslash in the request path is parsed as a path separator, bypassing path-based access control at a reverse proxy"
+      },
+      {
+        "id": "CVE-2026-126343",
+        "pkg": "@hono/node-server",
+        "installedVersion": "2.1.5",
+        "fixedVersion": "2.1.6",
+        "severity": "MEDIUM",
+        "title": "@hono/node-server: Unhandled `ECONNRESET` on the socket during an asynchronous WebSocket upgrade crashes the process"
+      },
+      {
+        "id": "CVE-2026-102277",
+        "pkg": "brace-expansion",
+        "installedVersion": "5.0.9",
+        "fixedVersion": "5.0.12, 3.0.9, 2.1.7, 1.1.21",
+        "severity": "MEDIUM",
+        "title": "brace-expansion: brace-expansion: Denial of Service via crafted brace patterns"
+      },
+      {
+        "id": "CVE-2026-126066",
+        "pkg": "fast-xml-parser",
+        "installedVersion": "5.11.2",
+        "fixedVersion": "5.12.0",
+        "severity": "LOW",
+        "title": "fast-xml-parser: fast-xml-parser: Denial of Service via quadratic rescanning of unterminated tags"
+      },
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "13.0.6",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
+      },
+      {
+        "id": "CVE-2026-118773",
+        "pkg": "glob",
+        "installedVersion": "13.0.7",
+        "fixedVersion": "14.0.2",
+        "severity": "MEDIUM",
+        "title": "glob: glob: Denial of Service (DoS) via incomplete traversal cancellation"
+      },
+      {
+        "id": "CVE-2026-126355",
+        "pkg": "hono",
+        "installedVersion": "4.13.13",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "hono: hono: Cross-Site Request Forgery protection bypass via hyperlink auditing ping requests"
+      },
+      {
+        "id": "CVE-2026-126356",
+        "pkg": "hono",
+        "installedVersion": "4.13.13",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "hono: Hono: Form validation bypass via crafted Content-Type header"
+      },
+      {
+        "id": "CVE-2026-126357",
+        "pkg": "hono",
+        "installedVersion": "4.13.13",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "hono: Hono: Authorization bypass via improper path forwarding in mounted routes"
+      },
+      {
+        "id": "CVE-2026-126358",
+        "pkg": "hono",
+        "installedVersion": "4.13.13",
+        "fixedVersion": "4.13.16",
+        "severity": "MEDIUM",
+        "title": "hono: hono: Authorization bypass via wildcard middleware omission in RegExpRouter"
+      },
+      {
+        "id": "CVE-2026-126359",
+        "pkg": "hono",
+        "installedVersion": "4.13.13",
+        "fixedVersion": "4.13.16",
+        "severity": "LOW",
+        "title": "hono: hono: Cross-site scripting via improper tag sanitization in CSS helper"
+      },
+      {
+        "id": "CVE-2026-101910",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Security boundary bypass via unclassified NAT64 local-use address range"
+      },
+      {
+        "id": "CVE-2026-101911",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via unbounded IPv6 address parsing"
+      },
+      {
+        "id": "CVE-2026-101912",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Access control bypass via cross-family subnet comparison"
+      },
+      {
+        "id": "CVE-2026-101913",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.5.1",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Security bypass via incomplete IPv6 link-local address validation"
+      },
+      {
+        "id": "CVE-2026-111997",
+        "pkg": "ip-address",
+        "installedVersion": "10.5.0",
+        "fixedVersion": "10.7.4",
+        "severity": "MEDIUM",
+        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
+      },
+      {
+        "id": "CVE-2026-118772",
+        "pkg": "joi",
+        "installedVersion": "18.2.9",
+        "fixedVersion": "17.13.9, 18.3.1",
+        "severity": "HIGH",
+        "title": "joi: joi: Denial of Service via inefficient regular expression in email validation"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "10.2.5",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "10.2.6",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
+      },
+      {
+        "id": "CVE-2026-118764",
+        "pkg": "minimatch",
+        "installedVersion": "10.2.6",
+        "fixedVersion": "11.0.1",
+        "severity": "MEDIUM",
+        "title": "minimatch: minimatch: Denial of Service via crafted glob pattern expansion"
+      },
+      {
+        "id": "CVE-2026-104844",
+        "pkg": "postcss-selector-parser",
+        "installedVersion": "7.1.4",
+        "fixedVersion": "7.1.6, 6.1.5",
+        "severity": "MEDIUM",
+        "title": "postcss-selector-parser: postcss-selector-parser: Denial of Service via crafted CSS selectors"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-85024",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled error in WebSocket permessage-deflate decompression"
+      },
+      {
+        "id": "CVE-2026-18540",
+        "pkg": "undici",
+        "installedVersion": "6.28.0",
+        "fixedVersion": "6.28.1, 7.29.1, 8.10.2",
+        "severity": "LOW",
+        "title": "undici: undici: HTTP response splitting via retry interceptor"
+      },
+      {
+        "id": "CVE-2026-109829",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "HIGH",
+        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
+      },
+      {
+        "id": "CVE-2026-109841",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
+      },
+      {
+        "id": "CVE-2026-109924",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
+      },
+      {
+        "id": "CVE-2026-109932",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
+      },
+      {
+        "id": "CVE-2026-87029",
+        "pkg": "undici",
+        "installedVersion": "8.11.2",
+        "fixedVersion": "7.30.1, 8.12.2",
+        "severity": "MEDIUM",
+        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
+      }
+    ]
+  }
+}
