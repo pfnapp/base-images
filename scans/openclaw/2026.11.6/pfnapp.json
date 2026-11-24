@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-23T08:37:39.369Z",
+  "scannedAt": "2026-11-24T10:43:32.802Z",
   "system": {
-    "total": 581,
+    "total": 586,
     "cves": [
       {
         "id": "CVE-2026-54370",
@@ -660,6 +660,14 @@
         "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
+        "id": "CVE-2026-121757",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in CP949 character conversion"
+      },
+      {
         "id": "CVE-2026-84243",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u5",
@@ -738,14 +746,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via double free in glob functions"
-      },
-      {
-        "id": "CVE-2026-121757",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u5",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
         "id": "CVE-2026-121758",
@@ -772,6 +772,14 @@
         "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
+        "id": "CVE-2026-121757",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in CP949 character conversion"
+      },
+      {
         "id": "CVE-2026-84243",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u5",
@@ -850,14 +858,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via double free in glob functions"
-      },
-      {
-        "id": "CVE-2026-121757",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u5",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
         "id": "CVE-2026-121758",
@@ -3252,6 +3252,14 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
+        "id": "CVE-2026-107494",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
+      },
+      {
         "id": "CVE-2026-124709",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.9-1~deb13u1",
@@ -3612,6 +3620,14 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
+        "id": "TEMP-1154946-473926",
+        "pkg": "login.defs",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[shadow: Security fix for newgidmap]"
+      },
+      {
         "id": "CVE-2026-3184",
         "pkg": "mount",
         "installedVersion": "2.41.5-0+deb13u1",
@@ -3865,7 +3881,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "openssh: OpenSSH: Password authentication bypass via password hash misinterpretation"
+        "title": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without ..."
       },
       {
         "id": "CVE-2026-55654",
@@ -3882,6 +3898,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssh: OpenSSH: ssh-agent allows remote execution of local operations"
+      },
+      {
+        "id": "CVE-2026-107494",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
       },
       {
         "id": "CVE-2026-124709",
@@ -3978,6 +4002,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-107494",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
       },
       {
         "id": "CVE-2026-124709",
@@ -4098,6 +4130,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[more related to CVE-2005-4890]"
+      },
+      {
+        "id": "TEMP-1154946-473926",
+        "pkg": "passwd",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[shadow: Security fix for newgidmap]"
       },
       {
         "id": "CVE-2026-15534",

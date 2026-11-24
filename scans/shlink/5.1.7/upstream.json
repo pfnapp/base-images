@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-23T08:42:02.918Z",
+  "scannedAt": "2026-11-24T10:47:22.671Z",
   "system": {
-    "total": 193,
+    "total": 208,
     "cves": [
       {
         "id": "CVE-2026-33630",
@@ -130,6 +130,46 @@
         "fixedVersion": "8.14.1-r4",
         "severity": "LOW",
         "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
         "id": "CVE-2026-5773",
@@ -684,6 +724,46 @@
         "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
       },
       {
+        "id": "CVE-2026-107496",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
         "id": "CVE-2026-107891",
         "pkg": "musl",
         "installedVersion": "1.2.5-r12",
@@ -698,6 +778,46 @@
         "fixedVersion": "1.2.5-r13",
         "severity": "HIGH",
         "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
+      },
+      {
+        "id": "CVE-2026-107496",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
+      },
+      {
+        "id": "CVE-2026-95691",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: openssl: Denial of Service via overlapping QUIC CRYPTO frame processing"
+      },
+      {
+        "id": "CVE-2026-95692",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "MEDIUM",
+        "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-88822",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: openssl: Information disclosure via uninitialized memory in QUIC peer detection"
+      },
+      {
+        "id": "CVE-2026-88823",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r1",
+        "severity": "LOW",
+        "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
         "id": "CVE-2026-116304",
@@ -1550,7 +1670,7 @@
     ]
   },
   "app": {
-    "total": 62,
+    "total": 63,
     "cves": [
       {
         "id": "CVE-2026-45045",
@@ -1743,6 +1863,14 @@
         "fixedVersion": "0.58.1-0.20261009181718-2f1f834330b2",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-39821",
+        "pkg": "golang.org/x/net",
+        "installedVersion": "v0.56.0",
+        "fixedVersion": "0.57.0",
+        "severity": "HIGH",
+        "title": "golang.org/x/net/idna: golang: net/http: golang.org/x/net/idna: Privilege escalation via incorrect Punycode label processing"
       },
       {
         "id": "CVE-2026-78661",
@@ -2012,7 +2140,7 @@
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "5.3.0, 5.4.56, 6.1.0, 6.2.0, 7.3.0, 8.1.0, 8.1.11, 6.3.0, 7.1.0, 7.4.0, 7.4.23, 6.4.50, 7.2.0, 5.0.0, 5.1.0, 5.4.0, 6.4.0, 4.4.0, 5.2.0",
+        "fixedVersion": "7.1.0, 5.0.0, 5.4.56, 6.1.0, 6.3.0, 6.4.0, 8.1.0, 5.2.0, 5.4.0, 7.4.23, 6.4.50, 7.2.0, 5.1.0, 5.3.0, 6.2.0, 7.3.0, 8.1.11, 4.4.0, 7.4.0",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -2020,7 +2148,7 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "5.4.56, 6.3.0, 7.1.0, 7.2.0, 8.1.0, 5.3.0, 5.4.0, 6.1.0, 6.4.50, 7.4.0, 7.4.23, 8.1.11, 4.4.0, 5.2.0, 6.2.0, 6.4.0, 7.3.0, 5.0.0, 5.1.0",
+        "fixedVersion": "7.3.0, 6.4.0, 7.4.0, 7.4.23, 8.1.11, 4.4.0, 5.4.0, 6.2.0, 8.1.0, 5.0.0, 6.1.0, 6.4.50, 7.1.0, 7.2.0, 5.1.0, 5.2.0, 5.3.0, 5.4.56, 6.3.0",
         "severity": "UNKNOWN",
         "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
@@ -2028,7 +2156,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "3.0.0, 5.0.0, 5.1.0, 5.3.0, 6.3.0, 7.1.0, 7.2.0, 7.4.23, 4.0.0, 6.2.0, 7.3.0, 7.4.0, 8.1.0, 5.4.56, 6.1.0, 8.1.11, 5.2.0, 5.4.0, 6.4.0, 6.4.50",
+        "fixedVersion": "4.0.0, 5.1.0, 6.3.0, 7.3.0, 5.4.0, 6.2.0, 6.4.0, 7.2.0, 7.4.0, 3.0.0, 5.0.0, 5.2.0, 5.4.56, 6.4.50, 7.1.0, 8.1.0, 5.3.0, 6.1.0, 7.4.23, 8.1.11",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -2036,7 +2164,7 @@
         "id": "CVE-2026-121619",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.3.0, 7.4.0, 7.4.23, 8.1.0, 8.1.11",
+        "fixedVersion": "7.4.0, 7.4.23, 8.1.0, 8.1.11, 7.3.0",
         "severity": "UNKNOWN",
         "title": "The \"private_ranges\" Trusted Proxies Shortcut Trusts Clients Presenting an IPv4-Mapped, 6to4, Teredo or NAT64 Address as Reverse Proxies"
       },
@@ -2044,7 +2172,7 @@
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "4.0.0, 5.4.0, 7.1.0, 7.4.0, 3.0.0, 5.3.0, 6.2.0, 7.2.0, 7.3.0, 5.1.0, 5.2.0, 5.4.56, 6.1.0, 6.3.0, 8.1.0, 5.0.0, 6.4.0, 6.4.50, 7.4.23, 8.1.11",
+        "fixedVersion": "7.4.0, 8.1.0, 5.0.0, 5.2.0, 5.4.0, 6.3.0, 6.4.0, 7.3.0, 5.1.0, 5.3.0, 6.1.0, 4.0.0, 7.4.23, 8.1.11, 3.0.0, 5.4.56, 6.2.0, 6.4.50, 7.1.0, 7.2.0",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }

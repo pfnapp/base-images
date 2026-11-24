@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-23T08:37:15.090Z",
+  "scannedAt": "2026-11-24T10:43:14.444Z",
   "system": {
-    "total": 293,
+    "total": 298,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -300,6 +300,14 @@
         "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
+        "id": "CVE-2026-121757",
+        "pkg": "libc-bin",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in CP949 character conversion"
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc-bin",
         "installedVersion": "2.41-12+deb13u3",
@@ -506,14 +514,6 @@
         "fixedVersion": "2.41-12+deb13u5",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
-      },
-      {
-        "id": "CVE-2026-121757",
-        "pkg": "libc-bin",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
         "id": "CVE-2026-121758",
@@ -540,6 +540,14 @@
         "title": "glibc: glibc: Memory corruption via out-of-bounds write in wide scanf functions"
       },
       {
+        "id": "CVE-2026-121757",
+        "pkg": "libc6",
+        "installedVersion": "2.41-12+deb13u3",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "glibc: glibc: Denial of Service via out-of-bounds read in CP949 character conversion"
+      },
+      {
         "id": "CVE-2026-18374",
         "pkg": "libc6",
         "installedVersion": "2.41-12+deb13u3",
@@ -746,14 +754,6 @@
         "fixedVersion": "2.41-12+deb13u5",
         "severity": "LOW",
         "title": "glibc: glibc: Denial of Service via out-of-bounds read in strncasecmp"
-      },
-      {
-        "id": "CVE-2026-121757",
-        "pkg": "libc6",
-        "installedVersion": "2.41-12+deb13u3",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "Converting crafted CP949 input to UTF-8 character encoding and ignorin ..."
       },
       {
         "id": "CVE-2026-121758",
@@ -1260,6 +1260,14 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
+        "id": "CVE-2026-107494",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
+      },
+      {
         "id": "CVE-2026-124709",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -1676,6 +1684,14 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
+        "id": "TEMP-1154946-473926",
+        "pkg": "login.defs",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[shadow: Security fix for newgidmap]"
+      },
+      {
         "id": "CVE-2026-3184",
         "pkg": "mount",
         "installedVersion": "2.41.5-0+deb13u1",
@@ -1706,6 +1722,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
+      },
+      {
+        "id": "CVE-2026-107494",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
       },
       {
         "id": "CVE-2026-124709",
@@ -1906,6 +1930,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-107494",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
       },
       {
         "id": "CVE-2026-124709",
@@ -2130,6 +2162,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[more related to CVE-2005-4890]"
+      },
+      {
+        "id": "TEMP-1154946-473926",
+        "pkg": "passwd",
+        "installedVersion": "1:4.17.4-2",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[shadow: Security fix for newgidmap]"
       },
       {
         "id": "CVE-2026-13221",
