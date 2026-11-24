@@ -1,4 +1,4 @@
-ARG TAG=2026.11.6
+ARG TAG=2026.11.8
 FROM openclaw/openclaw:${TAG}
 
 USER root
