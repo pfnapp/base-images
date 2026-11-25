@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-24T10:46:41.411Z",
+  "scannedAt": "2026-11-25T09:35:58.620Z",
   "system": {
     "total": 1519,
     "cves": [
@@ -5184,7 +5184,7 @@
         "pkg": "libexpat1",
         "installedVersion": "2.9.0-1~deb13u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
       },
       {
@@ -5192,7 +5192,7 @@
         "pkg": "libexpat1",
         "installedVersion": "2.9.0-1~deb13u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
       },
       {
@@ -5200,7 +5200,7 @@
         "pkg": "libexpat1",
         "installedVersion": "2.9.0-1~deb13u1",
         "fixedVersion": "None",
-        "severity": "UNKNOWN",
+        "severity": "MEDIUM",
         "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
       },
       {
@@ -7876,6 +7876,14 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "libstdc++-14-dev",
         "installedVersion": "14.2.0-19",
@@ -8028,14 +8036,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd-shared",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-15059",
         "pkg": "libsystemd0",
         "installedVersion": "257.13-1~deb13u1",
@@ -8074,14 +8074,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd0",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "CVE-2025-6141",
@@ -8244,14 +8236,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libudev1",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-3184",
         "pkg": "libuuid1",
         "installedVersion": "2.41.5-0+deb13u1",
@@ -8266,6 +8250,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "util-linux: partial disclosure of arbitrary files in chfn and chsh when compiled with libreadline"
+      },
+      {
+        "id": "CVE-2026-124851",
+        "pkg": "libzstd1",
+        "installedVersion": "1.5.7+dfsg-1",
+        "fixedVersion": "1.5.7+dfsg-1+deb13u1",
+        "severity": "HIGH",
+        "title": "zstd: Zstandard Information Disclosure via Uninitialized Buffer"
       },
       {
         "id": "CVE-2013-7445",
@@ -10988,7 +10980,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "login.defs",
         "installedVersion": "1:4.17.4-2",
         "fixedVersion": "None",
@@ -11132,6 +11124,14 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2026-107494",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.9-1~deb13u1",
@@ -11236,6 +11236,14 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2007-5686",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
@@ -11260,7 +11268,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
         "fixedVersion": "None",
@@ -12066,14 +12074,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "systemd",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "TEMP-0517018-A83CE6",

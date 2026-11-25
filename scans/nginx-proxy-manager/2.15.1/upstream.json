@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-24T10:47:12.061Z",
+  "scannedAt": "2026-11-25T09:36:18.607Z",
   "system": {
     "total": 7489,
     "cves": [
@@ -17,7 +17,7 @@
         "installedVersion": "2.4.67-1~deb13u2",
         "fixedVersion": "2.4.71-1~deb13u1",
         "severity": "HIGH",
-        "title": "httpd: httpd: Denial of Service via NULL pointer dereference in mod_md"
+        "title": "mod_md: httpd: Denial of Service via NULL pointer dereference in mod_md"
       },
       {
         "id": "CVE-2026-34355",
@@ -7492,6 +7492,30 @@
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
       },
       {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.7.1-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
+        "id": "CVE-2026-128241",
+        "pkg": "libexpat1",
+        "installedVersion": "2.7.1-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
+      },
+      {
+        "id": "CVE-2026-134703",
+        "pkg": "libexpat1",
+        "installedVersion": "2.7.1-2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
+      },
+      {
         "id": "CVE-2026-32776",
         "pkg": "libexpat1",
         "installedVersion": "2.7.1-2",
@@ -7642,30 +7666,6 @@
         "fixedVersion": "2.8.2-1~deb13u1",
         "severity": "LOW",
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
-      },
-      {
-        "id": "CVE-2026-124317",
-        "pkg": "libexpat1",
-        "installedVersion": "2.7.1-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
-      },
-      {
-        "id": "CVE-2026-128241",
-        "pkg": "libexpat1",
-        "installedVersion": "2.7.1-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
-      },
-      {
-        "id": "CVE-2026-134703",
-        "pkg": "libexpat1",
-        "installedVersion": "2.7.1-2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
       },
       {
         "id": "CVE-2026-102010",
@@ -11908,6 +11908,14 @@
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2026-102010",
         "pkg": "libstdc++-14-dev",
         "installedVersion": "14.2.0-19",
@@ -12060,14 +12068,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd-shared",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-15059",
         "pkg": "libsystemd0",
         "installedVersion": "257.13-1~deb13u1",
@@ -12106,14 +12106,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd0",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "CVE-2025-13151",
@@ -12284,14 +12276,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libudev1",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-53612",
         "pkg": "libuuid1",
         "installedVersion": "2.41-5",
@@ -12410,6 +12394,14 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
+      },
+      {
+        "id": "CVE-2026-124851",
+        "pkg": "libzstd1",
+        "installedVersion": "1.5.7+dfsg-1",
+        "fixedVersion": "1.5.7+dfsg-1+deb13u1",
+        "severity": "HIGH",
+        "title": "zstd: Zstandard Information Disclosure via Uninitialized Buffer"
       },
       {
         "id": "CVE-2026-98432",
@@ -16498,6 +16490,14 @@
         "fixedVersion": "6.12.117-1",
         "severity": "HIGH",
         "title": "kernel: kernel: panthor: Use-after-free via race condition in panthor_group_destroy()"
+      },
+      {
+        "id": "CVE-2026-99491",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.90-2",
+        "fixedVersion": "6.12.117-1",
+        "severity": "HIGH",
+        "title": "kernel: kernel: Denial of service via use-after-free in Wacom HID driver"
       },
       {
         "id": "CVE-2026-99531",
@@ -48044,14 +48044,6 @@
         "title": "kernel: kernel: Denial of Service via use-after-free in Wacom HID driver"
       },
       {
-        "id": "CVE-2026-99491",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.90-2",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "kernel: kernel: Denial of service via use-after-free in Wacom HID driver"
-      },
-      {
         "id": "CVE-2026-99492",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.90-2",
@@ -57108,7 +57100,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "login.defs",
         "installedVersion": "1:4.17.4-2",
         "fixedVersion": "None",
@@ -57409,7 +57401,7 @@
         "installedVersion": "1:10.0p1-7+deb13u4",
         "fixedVersion": "None",
         "severity": "LOW",
-        "title": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without ..."
+        "title": "openssh: OpenSSH: Password authentication bypass via password hash misinterpretation"
       },
       {
         "id": "CVE-2026-55654",
@@ -57836,6 +57828,14 @@
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2026-107494",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.6-1~deb13u1",
@@ -58244,6 +58244,14 @@
         "title": "openssl: OpenSSL: Denial of Service due to heap out-of-bounds read in CMS password-based decryption"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.6-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
+      },
+      {
         "id": "CVE-2007-5686",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
@@ -58268,7 +58276,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
         "fixedVersion": "None",
@@ -59714,14 +59722,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "systemd",
-        "installedVersion": "257.13-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "TEMP-0517018-A83CE6",

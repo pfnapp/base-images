@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-24T10:47:22.671Z",
+  "scannedAt": "2026-11-25T09:36:25.590Z",
   "system": {
     "total": 208,
     "cves": [
@@ -1670,7 +1670,7 @@
     ]
   },
   "app": {
-    "total": 63,
+    "total": 66,
     "cves": [
       {
         "id": "CVE-2026-45045",
@@ -2137,10 +2137,18 @@
         "title": "os: golang: golang: Directory traversal via Windows junction handling"
       },
       {
+        "id": "CVE-2026-135803",
+        "pkg": "symfony/filesystem",
+        "installedVersion": "v8.1.6",
+        "fixedVersion": "8.1.11, 6.1.0, 6.3.0, 6.4.0, 7.1.0, 7.2.0, 7.3.0, 7.4.0, 7.4.23, 5.4.56, 6.2.0, 6.4.50, 8.1.0",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-135803: Filesystem Path Treats Any Prefix Before \"://\" as a Root, Letting Paths Escape Their Base Directory"
+      },
+      {
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.1.0, 5.0.0, 5.4.56, 6.1.0, 6.3.0, 6.4.0, 8.1.0, 5.2.0, 5.4.0, 7.4.23, 6.4.50, 7.2.0, 5.1.0, 5.3.0, 6.2.0, 7.3.0, 8.1.11, 4.4.0, 7.4.0",
+        "fixedVersion": "4.4.0, 5.2.0, 5.4.56, 6.4.0, 6.4.50, 5.1.0, 6.3.0, 7.3.0, 8.1.0, 5.0.0, 5.3.0, 6.1.0, 7.4.23, 8.1.11, 5.4.0, 6.2.0, 7.1.0, 7.2.0, 7.4.0",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -2148,7 +2156,7 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.3.0, 6.4.0, 7.4.0, 7.4.23, 8.1.11, 4.4.0, 5.4.0, 6.2.0, 8.1.0, 5.0.0, 6.1.0, 6.4.50, 7.1.0, 7.2.0, 5.1.0, 5.2.0, 5.3.0, 5.4.56, 6.3.0",
+        "fixedVersion": "7.3.0, 7.4.23, 8.1.0, 8.1.11, 4.4.0, 6.2.0, 6.4.0, 7.2.0, 5.1.0, 5.2.0, 5.3.0, 5.4.0, 6.1.0, 6.3.0, 7.1.0, 5.4.56, 6.4.50, 7.4.0, 5.0.0",
         "severity": "UNKNOWN",
         "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
@@ -2156,7 +2164,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "4.0.0, 5.1.0, 6.3.0, 7.3.0, 5.4.0, 6.2.0, 6.4.0, 7.2.0, 7.4.0, 3.0.0, 5.0.0, 5.2.0, 5.4.56, 6.4.50, 7.1.0, 8.1.0, 5.3.0, 6.1.0, 7.4.23, 8.1.11",
+        "fixedVersion": "3.0.0, 4.0.0, 5.0.0, 5.1.0, 6.3.0, 7.4.23, 8.1.11, 6.1.0, 6.4.0, 7.1.0, 7.4.0, 8.1.0, 5.4.0, 5.4.56, 5.2.0, 5.3.0, 6.2.0, 6.4.50, 7.2.0, 7.3.0",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -2164,15 +2172,31 @@
         "id": "CVE-2026-121619",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.4.0, 7.4.23, 8.1.0, 8.1.11, 7.3.0",
+        "fixedVersion": "8.1.0, 8.1.11, 7.3.0, 7.4.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "The \"private_ranges\" Trusted Proxies Shortcut Trusts Clients Presenting an IPv4-Mapped, 6to4, Teredo or NAT64 Address as Reverse Proxies"
+      },
+      {
+        "id": "CVE-2026-135801",
+        "pkg": "symfony/http-foundation",
+        "installedVersion": "v8.1.7",
+        "fixedVersion": "7.4.0, 7.4.23, 8.1.0, 8.1.11, 5.4.56, 6.4.50",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-135801: Path Rules Enforced in Front of PHP Can Be Bypassed by Appending the Path to the Script Name"
+      },
+      {
+        "id": "CVE-2026-135802",
+        "pkg": "symfony/http-foundation",
+        "installedVersion": "v8.1.7",
+        "fixedVersion": "4.2.0, 5.1.0, 5.3.0, 6.3.0, 7.4.23, 2.6.0, 5.0.0, 5.4.0, 7.2.0, 7.3.0, 2.1.0, 7.4.0, 8.1.0, 2.5.0, 5.2.0, 5.4.56, 4.0.0, 2.8.0, 8.1.11, 2.3.0, 3.0.0, 3.2.0, 6.1.0, 6.4.0, 6.4.50, 7.1.0, 2.2.0, 2.4.0, 3.4.0, 4.4.0, 6.2.0, 4.1.0, 4.3.0, 2.7.0, 3.1.0, 3.3.0",
+        "severity": "UNKNOWN",
+        "title": "CVE-2026-135802: Generated URLs Can Point to a Host Chosen by the Client"
       },
       {
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "7.4.0, 8.1.0, 5.0.0, 5.2.0, 5.4.0, 6.3.0, 6.4.0, 7.3.0, 5.1.0, 5.3.0, 6.1.0, 4.0.0, 7.4.23, 8.1.11, 3.0.0, 5.4.56, 6.2.0, 6.4.50, 7.1.0, 7.2.0",
+        "fixedVersion": "3.0.0, 5.0.0, 5.4.0, 6.1.0, 7.2.0, 7.3.0, 7.4.23, 7.1.0, 4.0.0, 5.1.0, 5.3.0, 5.4.56, 6.3.0, 6.4.50, 7.4.0, 8.1.0, 8.1.11, 5.2.0, 6.2.0, 6.4.0",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }

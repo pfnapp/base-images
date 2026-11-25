@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-24T10:41:44.649Z",
+  "scannedAt": "2026-11-25T09:32:32.331Z",
   "system": {
-    "total": 2133,
+    "total": 2126,
     "cves": [
       {
         "id": "CVE-2026-59180",
@@ -2522,6 +2522,14 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "chromium-browser: Out of bounds read in Tint"
+      },
+      {
+        "id": "CVE-2026-134401",
+        "pkg": "chromium",
+        "installedVersion": "156.0.8078.73-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Variations"
       },
       {
         "id": "CVE-2026-76024",
@@ -7178,6 +7186,14 @@
         "fixedVersion": "None",
         "severity": "HIGH",
         "title": "chromium-browser: Out of bounds read in Tint"
+      },
+      {
+        "id": "CVE-2026-134401",
+        "pkg": "chromium-common",
+        "installedVersion": "156.0.8078.73-1~deb12u1",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "chromium-browser: Improper input validation in Variations"
       },
       {
         "id": "CVE-2026-76024",
@@ -11708,6 +11724,30 @@
         "title": "libexpat: libexpat: Denial of service via crafted file processing"
       },
       {
+        "id": "CVE-2026-124317",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
+      },
+      {
+        "id": "CVE-2026-128241",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
+      },
+      {
+        "id": "CVE-2026-134703",
+        "pkg": "libexpat1",
+        "installedVersion": "2.5.0-1+deb12u5",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
+      },
+      {
         "id": "CVE-2023-52426",
         "pkg": "libexpat1",
         "installedVersion": "2.5.0-1+deb12u5",
@@ -11722,30 +11762,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "libexpat: expat: libexpat: Denial of Service via hash flooding with crafted XML"
-      },
-      {
-        "id": "CVE-2026-124317",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u5",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "libexpat through 2.10.0 contains an out-of-bounds read vulnerability i ..."
-      },
-      {
-        "id": "CVE-2026-128241",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u5",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "The xmlwf tool in libexpat through 2.10.0 contains a symlink following ..."
-      },
-      {
-        "id": "CVE-2026-134703",
-        "pkg": "libexpat1",
-        "installedVersion": "2.5.0-1+deb12u5",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "libexpat through 2.10.0 contains an improper Unicode handling vulnerab ..."
       },
       {
         "id": "CVE-2026-13595",
@@ -13580,14 +13596,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libpam-systemd",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2025-6020",
         "pkg": "libpam0g",
         "installedVersion": "1.5.2-6+deb12u2",
@@ -14332,28 +14340,12 @@
         "title": "sqlite: sqlite: Authorization bypass via USING clause in JOIN queries"
       },
       {
-        "id": "CVE-2026-107494",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
-      },
-      {
-        "id": "CVE-2026-121482",
-        "pkg": "libssl3",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
       },
       {
         "id": "CVE-2026-84786",
@@ -14492,14 +14484,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd-shared",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-15059",
         "pkg": "libsystemd0",
         "installedVersion": "252.39-1~deb12u2",
@@ -14538,14 +14522,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "libsystemd0",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "CVE-2025-13151",
@@ -14850,14 +14826,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "libudev1",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "CVE-2026-13595",
@@ -15193,7 +15161,15 @@
         "installedVersion": "0.2.5-1",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "[Unknown description]"
+        "title": "Title Not Available"
+      },
+      {
+        "id": "CVE-2026-124851",
+        "pkg": "libzstd1",
+        "installedVersion": "1.5.4+dfsg2-5",
+        "fixedVersion": "None",
+        "severity": "HIGH",
+        "title": "zstd: Zstandard Information Disclosure via Uninitialized Buffer"
       },
       {
         "id": "CVE-2007-5686",
@@ -15220,7 +15196,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "login",
         "installedVersion": "1:4.13+dfsg1-1+deb12u2",
         "fixedVersion": "None",
@@ -15580,28 +15556,12 @@
         "title": "Converting crafted input from UCS-4 to IBM1390 or IBM1399 character en ..."
       },
       {
-        "id": "CVE-2026-107494",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.0.22-1~deb12u2",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "openssl: openssl: Denial of Service via crafted EC certificate in CMS encryption"
-      },
-      {
-        "id": "CVE-2026-121482",
-        "pkg": "openssl",
-        "installedVersion": "3.0.22-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "openssl: openssl: Denial of Service via crafted CMS or PKCS#7 SignedData message"
       },
       {
         "id": "CVE-2026-84786",
@@ -15668,7 +15628,7 @@
         "title": "[more related to CVE-2005-4890]"
       },
       {
-        "id": "TEMP-1154946-473926",
+        "id": "CVE-2026-135901",
         "pkg": "passwd",
         "installedVersion": "1:4.13+dfsg1-1+deb12u2",
         "fixedVersion": "None",
@@ -16844,14 +16804,6 @@
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
       },
       {
-        "id": "CVE-2026-40228",
-        "pkg": "systemd",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
-      },
-      {
         "id": "CVE-2026-15059",
         "pkg": "systemd-sysv",
         "installedVersion": "252.39-1~deb12u2",
@@ -16890,14 +16842,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "An issue was discovered in systemd 253. An attacker can modify the con ..."
-      },
-      {
-        "id": "CVE-2026-40228",
-        "pkg": "systemd-sysv",
-        "installedVersion": "252.39-1~deb12u2",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "systemd: systemd-journald: Unintended output to user terminals via logger command"
       },
       {
         "id": "TEMP-0517018-A83CE6",
