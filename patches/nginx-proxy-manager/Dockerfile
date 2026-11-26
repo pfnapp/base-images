@@ -1,10 +1,10 @@
 FROM docker.io/jc21/nginx-proxy-manager:2.17.1
 RUN apt-get update && \
-    apt-get upgrade -y --no-install-recommends && \
+    apt-get dist-upgrade -y --no-install-recommends && \
     apt-get purge -y --auto-remove git git-man dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpgconf gpgsm && \
     apt-get autoremove -y && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     /opt/certbot/bin/pip install --no-cache-dir --upgrade 'certifi>=2026.10.18' 'filelock>=4.2.1' 'cryptography>=50.0.0' 'pyOpenSSL' 'msgpack>=1.2.1' && \
     rm -rf /opt/certbot/lib/python*/site-packages/pip* /opt/certbot/bin/pip* /root/.cache && \
     cd /app && \
