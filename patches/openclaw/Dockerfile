@@ -1,4 +1,4 @@
-ARG TAG=2026.11.9
+ARG TAG=2026.11.10
 FROM openclaw/openclaw:${TAG}
 
 USER root
@@ -6,6 +6,10 @@ RUN apt-get update && \
     apt-mark manual ca-certificates 2>/dev/null || true && \
     apt-get dist-upgrade -y --no-install-recommends && \
     apt-get purge -y --auto-remove git git-man && \
+    EXPAT_PYTHON_PKGS="$(dpkg-query -W -f='${Package} ' 'libexpat*' 'python3*' 'libpython3*' 2>/dev/null || true)" && \
+    if [ -n "$EXPAT_PYTHON_PKGS" ]; then \
+      apt-get purge -y --auto-remove $EXPAT_PYTHON_PKGS; \
+    fi && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
     for dir in /app/node_modules/.pnpm/joi@18.2.*/node_modules/joi; do \
