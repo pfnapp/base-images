@@ -132,3 +132,107 @@ CVE-2026-85746
 CVE-2026-86047
 CVE-2026-92262
 CVE-2026-97380
+
+# ==============================================================================
+# Hermes Agent + OpenClaw (Debian 13 trixie) — ACCEPTED RESIDUAL RISK (UNFIXABLE)
+#
+# Scope: patches/hermes-agent and patches/openclaw.
+# Root cause: Debian Security Tracker reports no fixed version (Fixed Version: None)
+# for packages these runtimes need and which we deliberately do NOT purge:
+#   python3.13 / libpython3.13*  -> OpenClaw skills (skill-creator, model-usage) and Hermes venv
+#   libexpat1                    -> python3 / xml consumers
+#   ffmpeg + libav*/libsw*       -> Hermes TTS / audio transcription tools
+#   docker-cli                   -> Hermes docker terminal backend
+#   libxml2, libcjson1, xvfb, libx11*, libxi6, libfontenc1, libxrender1 -> Hermes browser/media stack
+#   openssh-client, git          -> Hermes terminal/ssh backend, git tooling
+#   openssl, libsqlite3-0        -> runtime TLS / storage
+# Purging them breaks features, so risk is accepted until Debian ships fixes.
+# RE-REVIEW: drop an entry as soon as Debian publishes a fixed version.
+# ==============================================================================
+CVE-2023-5574
+CVE-2026-105437
+CVE-2026-106553
+CVE-2026-106555
+CVE-2026-106583
+CVE-2026-107494
+CVE-2026-109089
+CVE-2026-109090
+CVE-2026-109092
+CVE-2026-109094
+CVE-2026-109095
+CVE-2026-109096
+CVE-2026-109908
+CVE-2026-111760
+CVE-2026-113351
+CVE-2026-114466
+CVE-2026-115506
+CVE-2026-117610
+CVE-2026-118370
+CVE-2026-119373
+CVE-2026-119374
+CVE-2026-119379
+CVE-2026-124709
+CVE-2026-125204
+CVE-2026-125209
+CVE-2026-125229
+CVE-2026-125233
+CVE-2026-125244
+CVE-2026-125250
+CVE-2026-125262
+CVE-2026-135706
+CVE-2026-135709
+CVE-2026-135723
+CVE-2026-135736
+CVE-2026-135739
+CVE-2026-135743
+CVE-2026-15308
+CVE-2026-16554
+CVE-2026-19445
+CVE-2026-19553
+CVE-2026-23949
+CVE-2026-29036
+CVE-2026-34980
+CVE-2026-36849
+CVE-2026-37555
+CVE-2026-52490
+CVE-2026-55453
+CVE-2026-58049
+CVE-2026-59999
+CVE-2026-60000
+CVE-2026-60002
+CVE-2026-64830
+CVE-2026-64832
+CVE-2026-64833
+CVE-2026-64834
+CVE-2026-64835
+CVE-2026-66036
+CVE-2026-66039
+CVE-2026-66040
+CVE-2026-66041
+CVE-2026-6653
+CVE-2026-67215
+CVE-2026-67216
+CVE-2026-70628
+CVE-2026-70632
+CVE-2026-7210
+CVE-2026-74860
+CVE-2026-75141
+CVE-2026-75142
+CVE-2026-75143
+CVE-2026-75144
+CVE-2026-75146
+CVE-2026-82049
+CVE-2026-86138
+CVE-2026-86139
+CVE-2026-86140
+CVE-2026-86142
+CVE-2026-86143
+CVE-2026-86144
+CVE-2026-87933
+CVE-2026-88806
+CVE-2026-88807
+CVE-2026-88812
+CVE-2026-92543
+CVE-2026-93516
+CVE-2026-93521
+CVE-2026-93523
