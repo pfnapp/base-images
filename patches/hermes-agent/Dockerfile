@@ -1,17 +1,16 @@
 FROM nousresearch/hermes-agent:v2026.9.24
 RUN apt-get update && \
     apt-get dist-upgrade -y --no-install-recommends && \
-    apt-get purge -y --auto-remove \
+    apt-get remove -y --auto-remove \
         gcc g++ cpp make cmake \
         python3-dev libffi-dev \
-        libc6-dev linux-libc-dev binutils \
-        docker-cli ffmpeg && \
-    apt-get autoremove -y --purge && \
+        libc6-dev linux-libc-dev binutils && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     uv pip install --python /opt/hermes/.venv/bin/python --upgrade \
         'anyio>=4.14.2' 'httpcore2>=2.10.0' 'httpx2>=2.12.0' 'PyJWT>=2.14.0' \
         'aiohttp>=3.14.4' 'brotlicffi>=1.2.1.0' 'certifi>=2026.10.18' \
-        'mcp>=2.2.0' 'oauthlib>=4.0.1' 'pillow>=13.0.0' 'pyasn1>=0.6.5' 'tornado>=6.5.9' && \
+        'mcp>=2.2.0' 'oauthlib>=4.0.1' 'pillow>=13.0.0' 'pyasn1>=0.6.5' 'tornado>=6.5.9' 'urllib3>=2.8.0' && \
     cd /opt/hermes && \
     rm -f package-lock.json && \
     node -e "const fs=require('fs'); const file='package.json'; const pkg=JSON.parse(fs.readFileSync(file)); pkg.overrides={...pkg.overrides, 'source-map-js':'^1.2.2', 'vite':'^8.2.4', 'undici':'^8.12.2', 'undici@^6':'^6.29.1', 'undici@^7':'^7.30.1', '@grpc/grpc-js':'^1.14.5', 'brace-expansion':'^5.0.11', 'tar':'^7.5.21'}; fs.writeFileSync(file, JSON.stringify(pkg, null, 2)+'\\n')" && \
