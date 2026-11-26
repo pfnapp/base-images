@@ -6,10 +6,13 @@ RUN apt-get update && \
     apt-mark manual ca-certificates 2>/dev/null || true && \
     apt-get dist-upgrade -y --no-install-recommends && \
     apt-get purge -y --auto-remove git git-man && \
-    EXPAT_PYTHON_PKGS="$(dpkg-query -W -f='${Package} ' 'libexpat*' 'python3*' 'libpython3*' 2>/dev/null || true)" && \
-    if [ -n "$EXPAT_PYTHON_PKGS" ]; then \
-      apt-get purge -y --auto-remove $EXPAT_PYTHON_PKGS; \
-    fi && \
+    for dir in $(find /app/node_modules/.pnpm -type d -path '*/node_modules/undici' -prune); do \
+      if grep -q '"version": "6\.29\.0"' "$dir/package.json" 2>/dev/null; then \
+        mkdir -p /tmp/undici6 && npm pack undici@6.29.1 --pack-destination /tmp/undici6 && \
+        tar -xzf /tmp/undici6/undici-*.tgz -C /tmp/undici6 && \
+        rm -rf "$dir"/* && cp -r /tmp/undici6/package/* "$dir"/ && rm -rf /tmp/undici6; \
+      fi; \
+    done && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
     for dir in /app/node_modules/.pnpm/joi@18.2.*/node_modules/joi; do \
