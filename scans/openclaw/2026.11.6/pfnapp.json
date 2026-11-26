@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-25T09:34:01.617Z",
+  "scannedAt": "2026-11-26T09:13:52.825Z",
   "system": {
-    "total": 588,
+    "total": 590,
     "cves": [
       {
         "id": "CVE-2026-54370",
@@ -753,7 +753,7 @@
         "installedVersion": "2.41-12+deb13u5",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -865,7 +865,7 @@
         "installedVersion": "2.41-12+deb13u5",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -2604,6 +2604,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "libperl5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-15308",
         "pkg": "libpython3.13-minimal",
         "installedVersion": "3.13.5-2+deb13u5",
@@ -3026,14 +3034,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
-      },
-      {
-        "id": "CVE-2026-132138",
-        "pkg": "libsasl2-2",
-        "installedVersion": "2.1.28+dfsg1-9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
       },
       {
         "id": "CVE-2026-129483",
@@ -3050,14 +3050,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
-      },
-      {
-        "id": "CVE-2026-132138",
-        "pkg": "libsasl2-modules-db",
-        "installedVersion": "2.1.28+dfsg1-9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
       },
       {
         "id": "CVE-2026-129483",
@@ -3292,6 +3284,14 @@
         "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.9-1~deb13u1",
@@ -3354,14 +3354,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-84785",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.9-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
       },
       {
         "id": "CVE-2026-102010",
@@ -3623,7 +3615,7 @@
         "id": "CVE-2026-135901",
         "pkg": "login.defs",
         "installedVersion": "1:4.17.4-2",
-        "fixedVersion": "None",
+        "fixedVersion": "1:4.17.4-2+deb13u1",
         "severity": "UNKNOWN",
         "title": "[shadow: Security fix for newgidmap]"
       },
@@ -3940,6 +3932,14 @@
         "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "openssl",
         "installedVersion": "3.5.9-1~deb13u1",
@@ -4002,14 +4002,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-84785",
-        "pkg": "openssl",
-        "installedVersion": "3.5.9-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
       },
       {
         "id": "CVE-2026-107494",
@@ -4052,6 +4044,14 @@
         "title": "openssl: openssl: Denial of Service via out-of-bounds read during TLS key-share processing"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.9-1~deb13u1",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.9-1~deb13u1",
@@ -4116,14 +4116,6 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
-        "id": "CVE-2026-84785",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.9-1~deb13u1",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
-      },
-      {
         "id": "CVE-2007-5686",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
@@ -4151,7 +4143,7 @@
         "id": "CVE-2026-135901",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
-        "fixedVersion": "None",
+        "fixedVersion": "1:4.17.4-2+deb13u1",
         "severity": "UNKNOWN",
         "title": "[shadow: Security fix for newgidmap]"
       },
@@ -4180,6 +4172,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "perl",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-15534",
         "pkg": "perl-base",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -4204,6 +4204,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "perl-base",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-15534",
         "pkg": "perl-modules-5.40",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -4226,6 +4234,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-40558",
+        "pkg": "perl-modules-5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2026-15308",

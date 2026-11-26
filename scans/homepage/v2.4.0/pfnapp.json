@@ -1,11 +1,11 @@
 {
-  "scannedAt": "2026-11-25T09:36:30.089Z",
+  "scannedAt": "2026-11-26T09:18:00.552Z",
   "system": {
     "total": 0,
     "cves": []
   },
   "app": {
-    "total": 21,
+    "total": 8,
     "cves": [
       {
         "id": "CVE-2026-126066",
@@ -16,65 +16,9 @@
         "title": "fast-xml-parser: fast-xml-parser: Denial of Service via quadratic rescanning of unterminated tags"
       },
       {
-        "id": "CVE-2026-111755",
-        "pkg": "follow-redirects",
-        "installedVersion": "1.16.0",
-        "fixedVersion": "1.16.1",
-        "severity": "HIGH",
-        "title": "follow-redirects: follow-redirects: Information disclosure via improper regular expression escaping in sensitive header filtering"
-      },
-      {
-        "id": "CVE-2026-111756",
-        "pkg": "follow-redirects",
-        "installedVersion": "1.16.0",
-        "fixedVersion": "1.16.1",
-        "severity": "HIGH",
-        "title": "follow-redirects: follow-redirects: Information disclosure via array-formatted headers during cross-origin redirects"
-      },
-      {
-        "id": "CVE-2026-116689",
-        "pkg": "follow-redirects",
-        "installedVersion": "1.16.0",
-        "fixedVersion": "1.16.2",
-        "severity": "HIGH",
-        "title": "follow-redirects: follow-redirects: Information disclosure via cross-origin redirects"
-      },
-      {
-        "id": "CVE-2026-111997",
-        "pkg": "ip-address",
-        "installedVersion": "10.7.2",
-        "fixedVersion": "10.7.4",
-        "severity": "MEDIUM",
-        "title": "ip-address: ip-address: Denial of Service via excessive percent characters in IPv6 address input"
-      },
-      {
-        "id": "GHSA-2464-fhr4-w9xw",
-        "pkg": "next",
-        "installedVersion": "16.3.8",
-        "fixedVersion": "15.5.28, 16.4.1",
-        "severity": "CRITICAL",
-        "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used"
-      },
-      {
-        "id": "GHSA-673q-mjm6-r5xr",
-        "pkg": "next",
-        "installedVersion": "16.3.8",
-        "fixedVersion": "16.4.1",
-        "severity": "CRITICAL",
-        "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays"
-      },
-      {
-        "id": "CVE-2026-94482",
-        "pkg": "next",
-        "installedVersion": "16.3.8",
-        "fixedVersion": "15.5.28, 16.4.1",
-        "severity": "HIGH",
-        "title": "next: Next.js: Denial of Service via crafted requests targeting Server Actions"
-      },
-      {
         "id": "CVE-2026-119346",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "15.5.29, 16.4.5",
         "severity": "MEDIUM",
         "title": "next: Next.js: Information disclosure via internal cookie header exposure"
@@ -82,7 +26,7 @@
       {
         "id": "CVE-2026-119347",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "15.5.29, 16.4.5",
         "severity": "MEDIUM",
         "title": "next: Next.js: Denial of Service via improper SVG processing"
@@ -90,7 +34,7 @@
       {
         "id": "CVE-2026-119348",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "16.4.5, 15.5.29",
         "severity": "MEDIUM",
         "title": "next: Next.js: Information disclosure via HTTP response desynchronization"
@@ -98,15 +42,23 @@
       {
         "id": "CVE-2026-119349",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
         "title": "next: Next.js: Information disclosure via improper cache key generation for binary arguments"
       },
       {
+        "id": "CVE-2026-119350",
+        "pkg": "next",
+        "installedVersion": "16.4.1",
+        "fixedVersion": "16.4.5",
+        "severity": "MEDIUM",
+        "title": "next: Next.js: Shared fallback shell cache poisoning via crafted route parameter request"
+      },
+      {
         "id": "CVE-2026-119351",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
         "title": "next: Next.js: information disclosure via improper cache key generation"
@@ -114,66 +66,10 @@
       {
         "id": "CVE-2026-119790",
         "pkg": "next",
-        "installedVersion": "16.3.8",
+        "installedVersion": "16.4.1",
         "fixedVersion": "16.4.5",
         "severity": "MEDIUM",
         "title": "next: Next.js: Information disclosure via cross-request cache deduplication race condition"
-      },
-      {
-        "id": "CVE-2026-116576",
-        "pkg": "systeminformation",
-        "installedVersion": "5.33.13",
-        "fixedVersion": "5.33.16",
-        "severity": "HIGH",
-        "title": "systeminformation: systeminformation: Command injection via improper quotation mark sanitization"
-      },
-      {
-        "id": "CVE-2026-116673",
-        "pkg": "systeminformation",
-        "installedVersion": "5.33.13",
-        "fixedVersion": "5.33.14",
-        "severity": "LOW",
-        "title": "systeminformation: systeminformation: Information disclosure via path traversal in network statistics"
-      },
-      {
-        "id": "CVE-2026-109829",
-        "pkg": "undici",
-        "installedVersion": "8.11.2",
-        "fixedVersion": "7.30.1, 8.12.2",
-        "severity": "HIGH",
-        "title": "undici: undici: Cache poisoning and information disclosure via improper cross-origin redirect caching"
-      },
-      {
-        "id": "CVE-2026-109841",
-        "pkg": "undici",
-        "installedVersion": "8.11.2",
-        "fixedVersion": "7.30.1, 8.12.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Subresource Integrity bypass via non-lowercase algorithm tokens"
-      },
-      {
-        "id": "CVE-2026-109924",
-        "pkg": "undici",
-        "installedVersion": "8.11.2",
-        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via memory exhaustion in EventSource client"
-      },
-      {
-        "id": "CVE-2026-109932",
-        "pkg": "undici",
-        "installedVersion": "8.11.2",
-        "fixedVersion": "6.29.1, 7.30.1, 8.12.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via unbounded WebSocket PONG buffering"
-      },
-      {
-        "id": "CVE-2026-87029",
-        "pkg": "undici",
-        "installedVersion": "8.11.2",
-        "fixedVersion": "7.30.1, 8.12.2",
-        "severity": "MEDIUM",
-        "title": "undici: undici: Denial of Service via unhandled exception in decompress interceptor"
       }
     ]
   }

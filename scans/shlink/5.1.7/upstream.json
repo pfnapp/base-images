@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-25T09:36:25.590Z",
+  "scannedAt": "2026-11-26T09:17:53.934Z",
   "system": {
-    "total": 208,
+    "total": 214,
     "cves": [
       {
         "id": "CVE-2026-33630",
@@ -132,6 +132,14 @@
         "title": "curl: libcurl: Improper certificate validation due to cached TLS settings reuse"
       },
       {
+        "id": "CVE-2026-124709",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "libcrypto3",
         "installedVersion": "3.5.8-r0",
@@ -154,6 +162,14 @@
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libcrypto3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2026-88822",
@@ -724,6 +740,14 @@
         "title": "postgresql: postgresql: Information disclosure in pg_basebackup via crafted backup manifest"
       },
       {
+        "id": "CVE-2026-124709",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "libssl3",
         "installedVersion": "3.5.8-r0",
@@ -746,6 +770,14 @@
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "libssl3",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2026-88822",
@@ -780,6 +812,14 @@
         "title": "musl: musl: Arbitrary code execution via integer overflow in regcomp"
       },
       {
+        "id": "CVE-2026-124709",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "HIGH",
+        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
+      },
+      {
         "id": "CVE-2026-107496",
         "pkg": "openssl",
         "installedVersion": "3.5.8-r0",
@@ -802,6 +842,14 @@
         "fixedVersion": "3.5.9-r1",
         "severity": "MEDIUM",
         "title": "openssl: OpenSSL: Denial of Service via out-of-bounds read in AES-GCM-SIV"
+      },
+      {
+        "id": "CVE-2026-107493",
+        "pkg": "openssl",
+        "installedVersion": "3.5.8-r0",
+        "fixedVersion": "3.5.9-r2",
+        "severity": "LOW",
+        "title": "openssl: openssl: Denial of Service via malformed PEM data in PEM_X509_INFO_read_bio_ex"
       },
       {
         "id": "CVE-2026-88822",
@@ -2140,7 +2188,7 @@
         "id": "CVE-2026-135803",
         "pkg": "symfony/filesystem",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "8.1.11, 6.1.0, 6.3.0, 6.4.0, 7.1.0, 7.2.0, 7.3.0, 7.4.0, 7.4.23, 5.4.56, 6.2.0, 6.4.50, 8.1.0",
+        "fixedVersion": "7.3.0, 7.4.0, 6.1.0, 6.4.0, 7.1.0, 7.4.23, 8.1.0, 8.1.11, 5.4.56, 6.2.0, 6.3.0, 6.4.50, 7.2.0",
         "severity": "UNKNOWN",
         "title": "CVE-2026-135803: Filesystem Path Treats Any Prefix Before \"://\" as a Root, Letting Paths Escape Their Base Directory"
       },
@@ -2148,7 +2196,7 @@
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "4.4.0, 5.2.0, 5.4.56, 6.4.0, 6.4.50, 5.1.0, 6.3.0, 7.3.0, 8.1.0, 5.0.0, 5.3.0, 6.1.0, 7.4.23, 8.1.11, 5.4.0, 6.2.0, 7.1.0, 7.2.0, 7.4.0",
+        "fixedVersion": "7.2.0, 5.0.0, 6.3.0, 7.4.0, 8.1.0, 8.1.11, 5.1.0, 7.1.0, 4.4.0, 5.3.0, 5.4.0, 6.1.0, 7.3.0, 7.4.23, 5.2.0, 5.4.56, 6.2.0, 6.4.0, 6.4.50",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -2156,7 +2204,7 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.3.0, 7.4.23, 8.1.0, 8.1.11, 4.4.0, 6.2.0, 6.4.0, 7.2.0, 5.1.0, 5.2.0, 5.3.0, 5.4.0, 6.1.0, 6.3.0, 7.1.0, 5.4.56, 6.4.50, 7.4.0, 5.0.0",
+        "fixedVersion": "5.1.0, 6.4.50, 8.1.11, 5.2.0, 5.4.0, 6.1.0, 6.2.0, 6.4.0, 7.4.0, 4.4.0, 5.0.0, 5.4.56, 6.3.0, 7.1.0, 7.2.0, 7.3.0, 8.1.0, 5.3.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
@@ -2164,7 +2212,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "3.0.0, 4.0.0, 5.0.0, 5.1.0, 6.3.0, 7.4.23, 8.1.11, 6.1.0, 6.4.0, 7.1.0, 7.4.0, 8.1.0, 5.4.0, 5.4.56, 5.2.0, 5.3.0, 6.2.0, 6.4.50, 7.2.0, 7.3.0",
+        "fixedVersion": "4.0.0, 6.1.0, 6.4.50, 7.3.0, 8.1.0, 5.1.0, 5.3.0, 6.3.0, 6.4.0, 7.1.0, 7.2.0, 8.1.11, 5.2.0, 5.4.56, 7.4.0, 3.0.0, 5.0.0, 5.4.0, 6.2.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -2172,7 +2220,7 @@
         "id": "CVE-2026-121619",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "8.1.0, 8.1.11, 7.3.0, 7.4.0, 7.4.23",
+        "fixedVersion": "7.3.0, 7.4.0, 7.4.23, 8.1.0, 8.1.11",
         "severity": "UNKNOWN",
         "title": "The \"private_ranges\" Trusted Proxies Shortcut Trusts Clients Presenting an IPv4-Mapped, 6to4, Teredo or NAT64 Address as Reverse Proxies"
       },
@@ -2188,7 +2236,7 @@
         "id": "CVE-2026-135802",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "4.2.0, 5.1.0, 5.3.0, 6.3.0, 7.4.23, 2.6.0, 5.0.0, 5.4.0, 7.2.0, 7.3.0, 2.1.0, 7.4.0, 8.1.0, 2.5.0, 5.2.0, 5.4.56, 4.0.0, 2.8.0, 8.1.11, 2.3.0, 3.0.0, 3.2.0, 6.1.0, 6.4.0, 6.4.50, 7.1.0, 2.2.0, 2.4.0, 3.4.0, 4.4.0, 6.2.0, 4.1.0, 4.3.0, 2.7.0, 3.1.0, 3.3.0",
+        "fixedVersion": "7.4.0, 2.1.0, 5.0.0, 5.4.0, 5.4.56, 6.2.0, 6.3.0, 7.2.0, 8.1.0, 3.1.0, 4.1.0, 4.3.0, 2.4.0, 2.6.0, 4.0.0, 6.1.0, 7.1.0, 2.2.0, 3.0.0, 2.3.0, 4.4.0, 5.2.0, 6.4.0, 2.7.0, 3.4.0, 5.1.0, 6.4.50, 7.3.0, 7.4.23, 8.1.11, 3.3.0, 4.2.0, 2.5.0, 2.8.0, 3.2.0, 5.3.0",
         "severity": "UNKNOWN",
         "title": "CVE-2026-135802: Generated URLs Can Point to a Host Chosen by the Client"
       },
@@ -2196,7 +2244,7 @@
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "3.0.0, 5.0.0, 5.4.0, 6.1.0, 7.2.0, 7.3.0, 7.4.23, 7.1.0, 4.0.0, 5.1.0, 5.3.0, 5.4.56, 6.3.0, 6.4.50, 7.4.0, 8.1.0, 8.1.11, 5.2.0, 6.2.0, 6.4.0",
+        "fixedVersion": "6.1.0, 6.4.0, 7.2.0, 3.0.0, 5.0.0, 5.3.0, 5.4.0, 5.4.56, 7.3.0, 7.4.23, 8.1.11, 4.0.0, 5.2.0, 6.2.0, 6.3.0, 6.4.50, 7.1.0, 7.4.0, 8.1.0, 5.1.0",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }

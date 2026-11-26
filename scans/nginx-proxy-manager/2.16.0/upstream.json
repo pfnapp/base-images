@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-25T09:36:10.397Z",
+  "scannedAt": "2026-11-26T09:17:29.935Z",
   "system": {
-    "total": 4978,
+    "total": 4986,
     "cves": [
       {
         "id": "CVE-2026-119618",
@@ -4233,7 +4233,7 @@
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -4457,7 +4457,7 @@
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -4681,7 +4681,7 @@
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -4905,7 +4905,7 @@
         "installedVersion": "2.41-12+deb13u4",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Converting crafted ISO-2022-CN-EXT input to UTF-8 character encoding,  ..."
+        "title": "Converting crafted ISO-2022-CN-EXT input in the GNU C Library version  ..."
       },
       {
         "id": "CVE-2026-124024",
@@ -8732,6 +8732,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "libperl5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-18739",
         "pkg": "libpopt0",
         "installedVersion": "1.19+dfsg-2",
@@ -9236,14 +9244,6 @@
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
       },
       {
-        "id": "CVE-2026-132138",
-        "pkg": "libsasl2-2",
-        "installedVersion": "2.1.28+dfsg1-9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
-      },
-      {
         "id": "CVE-2026-129483",
         "pkg": "libsasl2-2",
         "installedVersion": "2.1.28+dfsg1-9",
@@ -9258,14 +9258,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cyrus-sasl: Heap buffer overflow in cyrus-sasl add_to_challenge() allows malicious server to crash or compromise DIGEST-MD5 clients"
-      },
-      {
-        "id": "CVE-2026-132138",
-        "pkg": "libsasl2-modules-db",
-        "installedVersion": "2.1.28+dfsg1-9",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cyrus-sasl: SCRAM channel-binding NULL dereference allows remote denial of service"
       },
       {
         "id": "CVE-2026-129483",
@@ -10140,6 +10132,14 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "libssl3t64",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "libssl3t64",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -10218,14 +10218,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-84785",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
       },
       {
         "id": "CVE-2026-102010",
@@ -11874,6 +11866,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
         "title": "kernel: net: xfrm: reject unrepresentable espintcp transport headers"
+      },
+      {
+        "id": "CVE-2026-98439",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "HIGH",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-98442",
@@ -23316,14 +23316,6 @@
         "title": "kernel: xfs: don't leak new_bp if xfs_btree_bload_drop_buf fails"
       },
       {
-        "id": "CVE-2026-97547",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: xfs: fix exchange-range reflink flag clearing issue with INO1_WRITTEN"
-      },
-      {
         "id": "CVE-2026-97551",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26268,14 +26260,6 @@
         "title": "kernel: EDAC/altera: Use parent device for devres in altr_portb_setup()"
       },
       {
-        "id": "CVE-2026-98439",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "kernel: smb/server: cancel async requests when closing connection"
-      },
-      {
         "id": "CVE-2026-98440",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -26314,14 +26298,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: xfs: don't let memory failures leak blocks and kill repairs"
-      },
-      {
-        "id": "CVE-2026-98449",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "kernel: smb: client: delete compound mids on send failure before unlock"
       },
       {
         "id": "CVE-2026-98452",
@@ -27396,6 +27372,14 @@
         "title": "kernel: smb: client: split cifsFileInfo bitfields to avoid shared-byte RMW races"
       },
       {
+        "id": "CVE-2026-98685",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
         "id": "CVE-2026-98687",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -27530,14 +27514,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: KVM: arm64: Apply the fine-grained UNDEFs without FEAT_FGT"
-      },
-      {
-        "id": "CVE-2026-98714",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "kernel: KVM: SVM: Update control fields on #VMEXIT if and only if VMRUN succeeded"
       },
       {
         "id": "CVE-2026-98717",
@@ -29377,7 +29353,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "kernel: kernel: Information disclosure via IPv6 UDP route exception cache side channel"
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
       },
       {
         "id": "CVE-2026-99077",
@@ -32746,14 +32722,6 @@
         "fixedVersion": "6.12.118-1",
         "severity": "MEDIUM",
         "title": "kernel: kernel: Denial of Service via USB disconnect in 9P gadget transport"
-      },
-      {
-        "id": "CVE-2026-99782",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.118-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
       },
       {
         "id": "CVE-2026-99783",
@@ -36796,6 +36764,14 @@
         "title": "kernel: xfs: release orphanage dir inode if chown fails"
       },
       {
+        "id": "CVE-2026-98449",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
+      },
+      {
         "id": "CVE-2026-98450",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
@@ -37089,7 +37065,7 @@
         "installedVersion": "6.12.107-1",
         "fixedVersion": "6.12.117-1",
         "severity": "LOW",
-        "title": "kernel: smb: client: drain and invalidate before server-side copy/clone"
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-98683",
@@ -37106,14 +37082,6 @@
         "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: flush and commit data before querying allocated ranges"
-      },
-      {
-        "id": "CVE-2026-98685",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.107-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "LOW",
-        "title": "kernel: smb: client: discard post-EOF pagecache when extending a file via clone range"
       },
       {
         "id": "CVE-2026-98686",
@@ -37146,6 +37114,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "LOW",
         "title": "kernel: wifi: iwlegacy: 3945: free EEPROM data on remove"
+      },
+      {
+        "id": "CVE-2026-98714",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  K ..."
       },
       {
         "id": "CVE-2026-98728",
@@ -38068,12 +38044,76 @@
         "title": "kernel: kernel: Denial of Service via memory leak in 9P USB gadget transport"
       },
       {
+        "id": "CVE-2026-99782",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.118-1",
+        "severity": "LOW",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
         "id": "TEMP-0000000-F7A20F",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.107-1",
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "[Kernel: Unprivileged user can freeze journald]"
+      },
+      {
+        "id": "CVE-2026-99805",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.118-1",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  n ..."
+      },
+      {
+        "id": "CVE-2026-99806",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-99807",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-99808",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  B ..."
+      },
+      {
+        "id": "CVE-2026-99809",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+      },
+      {
+        "id": "CVE-2026-99810",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
+      },
+      {
+        "id": "CVE-2026-99811",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.107-1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "In the Linux kernel, the following vulnerability has been resolved:  v ..."
       },
       {
         "id": "CVE-2026-3184",
@@ -38119,7 +38159,7 @@
         "id": "CVE-2026-135901",
         "pkg": "login.defs",
         "installedVersion": "1:4.17.4-2",
-        "fixedVersion": "None",
+        "fixedVersion": "1:4.17.4-2+deb13u1",
         "severity": "UNKNOWN",
         "title": "[shadow: Security fix for newgidmap]"
       },
@@ -38524,6 +38564,14 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "openssl",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -38602,14 +38650,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-84785",
-        "pkg": "openssl",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
       },
       {
         "id": "CVE-2026-107494",
@@ -38740,6 +38780,14 @@
         "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC connection identifier backlog"
       },
       {
+        "id": "CVE-2026-84785",
+        "pkg": "openssl-provider-legacy",
+        "installedVersion": "3.5.7-1~deb13u2",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Issue summary: A QUIC peer that sends many small out-of-order STREAM f ..."
+      },
+      {
         "id": "CVE-2026-84786",
         "pkg": "openssl-provider-legacy",
         "installedVersion": "3.5.7-1~deb13u2",
@@ -38820,14 +38868,6 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
-        "id": "CVE-2026-84785",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.7-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "UNKNOWN",
-        "title": "[Unbounded Out-of-Order Fragment Reassembly in QUIC Streams]"
-      },
-      {
         "id": "CVE-2007-5686",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
@@ -38855,7 +38895,7 @@
         "id": "CVE-2026-135901",
         "pkg": "passwd",
         "installedVersion": "1:4.17.4-2",
-        "fixedVersion": "None",
+        "fixedVersion": "1:4.17.4-2+deb13u1",
         "severity": "UNKNOWN",
         "title": "[shadow: Security fix for newgidmap]"
       },
@@ -38940,6 +38980,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "perl",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-15534",
         "pkg": "perl-base",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -38964,6 +39012,14 @@
         "title": "perl: File:: Temp insecure temporary file handling"
       },
       {
+        "id": "CVE-2026-40558",
+        "pkg": "perl-base",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
+      },
+      {
         "id": "CVE-2026-15534",
         "pkg": "perl-modules-5.40",
         "installedVersion": "5.40.1-6+deb13u1",
@@ -38986,6 +39042,14 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "perl: File:: Temp insecure temporary file handling"
+      },
+      {
+        "id": "CVE-2026-40558",
+        "pkg": "perl-modules-5.40",
+        "installedVersion": "5.40.1-6+deb13u1",
+        "fixedVersion": "None",
+        "severity": "UNKNOWN",
+        "title": "Title Not Available"
       },
       {
         "id": "CVE-2025-8869",
