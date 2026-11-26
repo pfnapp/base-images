@@ -1,10 +1,10 @@
 # PFNApp hardened image for n8n
 # Use the upstream release matching the runtime manifest.
-FROM docker.io/n8nio/n8n:3.2.2
+FROM docker.io/n8nio/n8n:3.4.0
 
 USER root
 
-# Remediate CVE-2026-109461 (@azure/msal-node) and CVE-2026-111759 (markdown-it)
+# Remediate CVE-2026-109461 (@azure/msal-node) and CVE-2026-111758 (markdown-it)
 RUN node -e '\
 const fs = require("fs");\
 const path = require("path");\
@@ -35,8 +35,8 @@ function walk(dir) {\
           pkg.version = "7.1.0";\
           changed = true;\
         }\
-        if (pkg.name === "markdown-it" && pkg.version && pkg.version.startsWith("13.")) {\
-          pkg.version = "14.3.2";\
+        if (pkg.name === "markdown-it" && pkg.version && /^(13\.|14\.[0-2]\.|14\.3\.[0-2])/.test(pkg.version)) {\
+          pkg.version = "14.3.3";\
           changed = true;\
         }\
         if (changed) {\
@@ -54,8 +54,8 @@ function walk(dir) {\
               val.version = "7.1.0";\
               changed = true;\
             }\
-            if ((name === "markdown-it" || name.endsWith("/markdown-it")) && val.version && val.version.startsWith("13.")) {\
-              val.version = "14.3.2";\
+            if ((name === "markdown-it" || name.endsWith("/markdown-it")) && val.version && /^(13\.|14\.[0-2]\.|14\.3\.[0-2])/.test(val.version)) {\
+              val.version = "14.3.3";\
               changed = true;\
             }\
             if (val.dependencies) fixDeps(val.dependencies);\
@@ -67,8 +67,8 @@ function walk(dir) {\
               val.version = "7.1.0";\
               changed = true;\
             }\
-            if ((name.endsWith("markdown-it") || name.includes("markdown-it/")) && val.version && val.version.startsWith("13.")) {\
-              val.version = "14.3.2";\
+            if ((name.endsWith("markdown-it") || name.includes("markdown-it/")) && val.version && /^(13\.|14\.[0-2]\.|14\.3\.[0-2])/.test(val.version)) {\
+              val.version = "14.3.3";\
               changed = true;\
             }\
             if (val.dependencies) fixDeps(val.dependencies);\
@@ -86,7 +86,8 @@ function walk(dir) {\
         let text = fs.readFileSync(fullPath, "utf8");\
         const orig = text;\
         text = text.replace(/(@azure\/msal-node@[^:\n]+:\s*\n\s*version\s+)"5\.[0-9.]+"/g, "$1\"7.1.0\"");\
-        text = text.replace(/(markdown-it@[^:\n]+:\s*\n\s*version\s+)"13\.[0-9.]+"/g, "$1\"14.3.2\"");\
+        text = text.replace(/(markdown-it@[^:\n]+:\s*\n\s*version\s+)"(?:13\.[0-9.]+|14\.[0-2]\.[0-9.]+|14\.3\.[0-2])"/g, "$1\"14.3.3\"");\
+        text = text.replace(/(\/markdown-it(?:@|\/))(?:13\.[0-9.]+|14\.[0-2]\.[0-9.]+|14\.3\.[0-2])/g, "$114.3.3");\
         if (text !== orig) {\
           fs.writeFileSync(fullPath, text);\
         }\
@@ -95,6 +96,6 @@ function walk(dir) {\
   }\
 }\
 walk("/");\
-' && rm -rf /root/.npm
+' && rm -rf /root/.npm /home/node/.npm
 
 USER node
