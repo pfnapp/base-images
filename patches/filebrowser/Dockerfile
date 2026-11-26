@@ -47,9 +47,9 @@ WORKDIR /src
 COPY --from=source /src /src
 # Upstream go.mod pins x/crypto v0.54.0 / x/image v0.44.0 — bump to the fixed
 # versions (golang:1.27 supplies the stdlib fix: >= 1.26.6 equivalent line).
-ARG X_CRYPTO_VERSION=v0.57.0
+ARG X_CRYPTO_VERSION=v0.58.0
 ARG X_IMAGE_VERSION=v0.46.0
-ARG X_NET_VERSION=v0.60.0
+ARG X_NET_VERSION=v0.62.0
 RUN go get "golang.org/x/crypto@${X_CRYPTO_VERSION}" \
            "golang.org/x/image@${X_IMAGE_VERSION}" \
            "golang.org/x/net@${X_NET_VERSION}"

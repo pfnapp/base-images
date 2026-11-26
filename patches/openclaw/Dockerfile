@@ -8,9 +8,21 @@ RUN apt-get update && \
     apt-get purge -y --auto-remove git git-man && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
-    (npm install --no-audit --no-fund joi@18.3.1 undici@8.12.2 2>/dev/null || true) && \
-    (npm prune --omit=dev 2>/dev/null || true) && \
-    chown -R node:node node_modules 2>/dev/null || true && \
+    for dir in /app/node_modules/.pnpm/joi@18.2.*/node_modules/joi; do \
+      if [ -d "$dir" ]; then \
+        mkdir -p /tmp/joi && npm pack joi@18.3.1 --pack-destination /tmp/joi && \
+        tar -xzf /tmp/joi/joi-*.tgz -C /tmp/joi && \
+        rm -rf "$dir"/* && cp -r /tmp/joi/package/* "$dir"/ && rm -rf /tmp/joi; \
+      fi; \
+    done && \
+    for dir in /app/node_modules/.pnpm/undici@8.11.*/node_modules/undici; do \
+      if [ -d "$dir" ]; then \
+        mkdir -p /tmp/undici && npm pack undici@8.12.3 --pack-destination /tmp/undici && \
+        tar -xzf /tmp/undici/undici-*.tgz -C /tmp/undici && \
+        rm -rf "$dir"/* && cp -r /tmp/undici/package/* "$dir"/ && rm -rf /tmp/undici; \
+      fi; \
+    done && \
+    chown -R node:node /app/node_modules 2>/dev/null || true && \
     rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /root/.npm
 
 USER node
