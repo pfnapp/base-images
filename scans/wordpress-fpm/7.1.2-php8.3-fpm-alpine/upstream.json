@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-26T09:10:16.237Z",
+  "scannedAt": "2026-11-27T09:25:46.297Z",
   "system": {
-    "total": 98,
+    "total": 99,
     "cves": [
       {
         "id": "CVE-2026-111497",
@@ -524,38 +524,6 @@
         "title": "libde265 is an open source implementation of the h.265 video codec. Ve ..."
       },
       {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat",
-        "installedVersion": "2.8.5-r0",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "HIGH",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
-      },
-      {
-        "id": "CVE-2026-115506",
-        "pkg": "libexpat",
-        "installedVersion": "2.8.5-r0",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "HIGH",
-        "title": "expat: expat: Denial of Service via delayed entity amplification detection"
-      },
-      {
-        "id": "CVE-2026-117610",
-        "pkg": "libexpat",
-        "installedVersion": "2.8.5-r0",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "HIGH",
-        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
-      },
-      {
-        "id": "CVE-2026-118370",
-        "pkg": "libexpat",
-        "installedVersion": "2.8.5-r0",
-        "fixedVersion": "2.10.0-r0",
-        "severity": "HIGH",
-        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
-      },
-      {
         "id": "CVE-2026-77214",
         "pkg": "libexpat",
         "installedVersion": "2.8.5-r0",
@@ -644,14 +612,6 @@
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
       },
       {
-        "id": "CVE-2026-88806",
-        "pkg": "libx11",
-        "installedVersion": "1.8.13-r0",
-        "fixedVersion": "1.8.14-r0",
-        "severity": "HIGH",
-        "title": "libX11: libX11: Heap-based buffer overflow via malicious X server"
-      },
-      {
         "id": "CVE-2026-94283",
         "pkg": "libx11",
         "installedVersion": "1.8.13-r0",
@@ -676,12 +636,60 @@
         "title": "libX11: libX11: Denial of Service via out-of-bounds read in byte-oriented codeset parser"
       },
       {
-        "id": "CVE-2026-86144",
+        "id": "CVE-2026-11979",
         "pkg": "libxml2",
         "installedVersion": "2.13.9-r2",
-        "fixedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r5",
         "severity": "HIGH",
-        "title": "libxml2: libxml2: Information disclosure, SSRF, or denial of service due to improper parseFlags propagation."
+        "title": "libxml2: libxml2: Arbitrary code execution in xmlcatalog utility via buffer overflow"
+      },
+      {
+        "id": "CVE-2026-0990",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via uncontrolled recursion in XML catalog processing"
+      },
+      {
+        "id": "CVE-2026-1757",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r5",
+        "severity": "MEDIUM",
+        "title": "libxml2: Memory Leak Leading to Local Denial of Service in xmllint Interactive Shell"
+      },
+      {
+        "id": "CVE-2026-86137",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via out-of-bounds read in xmlFAParsePosCharGroup"
+      },
+      {
+        "id": "CVE-2026-0989",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r5",
+        "severity": "LOW",
+        "title": "libxml2: Unbounded RelaxNG Include Recursion Leading to Stack Overflow"
+      },
+      {
+        "id": "CVE-2026-0992",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service via crafted XML catalogs"
+      },
+      {
+        "id": "CVE-2026-86141",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r2",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service due to NULL pointer dereference in xmlRegNewParserCtxt"
       },
       {
         "id": "CVE-2026-107891",

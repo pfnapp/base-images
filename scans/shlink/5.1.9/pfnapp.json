@@ -1,11 +1,68 @@
 {
-  "scannedAt": "2026-11-26T09:17:46.656Z",
+  "scannedAt": "2026-11-27T09:30:12.551Z",
   "system": {
-    "total": 0,
-    "cves": []
+    "total": 7,
+    "cves": [
+      {
+        "id": "CVE-2026-11979",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r5",
+        "severity": "HIGH",
+        "title": "libxml2: libxml2: Arbitrary code execution in xmlcatalog utility via buffer overflow"
+      },
+      {
+        "id": "CVE-2026-0990",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via uncontrolled recursion in XML catalog processing"
+      },
+      {
+        "id": "CVE-2026-1757",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r5",
+        "severity": "MEDIUM",
+        "title": "libxml2: Memory Leak Leading to Local Denial of Service in xmllint Interactive Shell"
+      },
+      {
+        "id": "CVE-2026-86137",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via out-of-bounds read in xmlFAParsePosCharGroup"
+      },
+      {
+        "id": "CVE-2026-0989",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r5",
+        "severity": "LOW",
+        "title": "libxml2: Unbounded RelaxNG Include Recursion Leading to Stack Overflow"
+      },
+      {
+        "id": "CVE-2026-0992",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service via crafted XML catalogs"
+      },
+      {
+        "id": "CVE-2026-86141",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r3",
+        "fixedVersion": "2.13.9-r4",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service due to NULL pointer dereference in xmlRegNewParserCtxt"
+      }
+    ]
   },
   "app": {
-    "total": 10,
+    "total": 14,
     "cves": [
       {
         "id": "CVE-2026-45045",
@@ -86,6 +143,38 @@
         "fixedVersion": "0.58.1-0.20261009181718-2f1f834330b2",
         "severity": "UNKNOWN",
         "title": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues"
+      },
+      {
+        "id": "CVE-2026-133750",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.11",
+        "fixedVersion": "7.4.24, 8.1.0, 8.1.12",
+        "severity": "UNKNOWN",
+        "title": "Since Symfony 7.4, CachingHttpClient can cache the responses of HTTP c ..."
+      },
+      {
+        "id": "CVE-2026-133757",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.11",
+        "fixedVersion": "5.4.57, 6.4.51, 7.2.0, 7.3.0, 7.4.0, 7.4.24, 8.1.0, 8.1.12",
+        "severity": "UNKNOWN",
+        "title": "Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpCli ..."
+      },
+      {
+        "id": "CVE-2026-133758",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.11",
+        "fixedVersion": "7.3.0, 7.4.0, 7.4.24, 8.1.0, 8.1.12, 5.4.57, 6.4.51, 7.2.0",
+        "severity": "UNKNOWN",
+        "title": "Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpCli ..."
+      },
+      {
+        "id": "CVE-2026-134792",
+        "pkg": "symfony/http-client",
+        "installedVersion": "v8.1.11",
+        "fixedVersion": "5.4.0, 6.2.0, 7.1.0, 7.2.0, 5.0.0, 6.3.0, 6.4.0, 7.4.24, 8.1.0, 5.2.0, 6.4.51, 7.3.0, 5.1.0, 5.3.0, 5.4.57, 6.1.0, 7.4.0, 8.1.12",
+        "severity": "UNKNOWN",
+        "title": "When the proxy option isn't set, HttpClient takes the proxy from envir ..."
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-26T09:16:59.186Z",
+  "scannedAt": "2026-11-27T09:29:44.607Z",
   "system": {
-    "total": 4688,
+    "total": 4677,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -4668,30 +4668,6 @@
         "title": "util-linux: util-linux: Heap buffer overread in setpwnam() when processing 256-byte usernames"
       },
       {
-        "id": "CVE-2026-119373",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
-      },
-      {
-        "id": "CVE-2026-119374",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index"
-      },
-      {
-        "id": "CVE-2026-119379",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.46.1-7",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "sqlite: sqlite: Arbitrary code execution via crafted session changesets"
-      },
-      {
         "id": "CVE-2025-7709",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.46.1-7",
@@ -4834,22 +4810,6 @@
         "fixedVersion": "1.11.1-1+deb13u2",
         "severity": "MEDIUM",
         "title": "libssh2: libssh2: Arbitrary code execution via heap buffer overflow during SSH negotiation"
-      },
-      {
-        "id": "CVE-2026-107494",
-        "pkg": "libssl-dev",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl-dev",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-14456",
@@ -5130,22 +5090,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-107494",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "libssl3t64",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-14456",
@@ -7044,6 +6988,14 @@
         "title": "kernel: smb: client: reject userspace cifs.idmap descriptions"
       },
       {
+        "id": "CVE-2026-97573",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.111-1",
+        "severity": "HIGH",
+        "title": "kernel: bnxt_en: Handle buffer allocation failure in bnxt_rx_ring_reset()"
+      },
+      {
         "id": "CVE-2026-98066",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -7210,14 +7162,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "HIGH",
         "title": "kernel: net: xfrm: reject unrepresentable espintcp transport headers"
-      },
-      {
-        "id": "CVE-2026-98439",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "HIGH",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-98442",
@@ -21308,14 +21252,6 @@
         "title": "kernel: bnxt_en: Propagate RX ring init failures in bnxt_init_nic()"
       },
       {
-        "id": "CVE-2026-97573",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.111-1",
-        "severity": "MEDIUM",
-        "title": "kernel: bnxt_en: Handle buffer allocation failure in bnxt_rx_ring_reset()"
-      },
-      {
         "id": "CVE-2026-97574",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -24132,6 +24068,14 @@
         "title": "kernel: EDAC/altera: Use parent device for devres in altr_portb_setup()"
       },
       {
+        "id": "CVE-2026-98439",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "kernel: smb/server: cancel async requests when closing connection"
+      },
+      {
         "id": "CVE-2026-98440",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -24170,6 +24114,14 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: xfs: don't let memory failures leak blocks and kill repairs"
+      },
+      {
+        "id": "CVE-2026-98449",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "MEDIUM",
+        "title": "kernel: smb: client: delete compound mids on send failure before unlock"
       },
       {
         "id": "CVE-2026-98452",
@@ -25242,14 +25194,6 @@
         "fixedVersion": "6.12.113-1",
         "severity": "MEDIUM",
         "title": "kernel: smb: client: split cifsFileInfo bitfields to avoid shared-byte RMW races"
-      },
-      {
-        "id": "CVE-2026-98685",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
       },
       {
         "id": "CVE-2026-98687",
@@ -27225,7 +27169,7 @@
         "installedVersion": "6.12.101-1",
         "fixedVersion": "6.12.117-1",
         "severity": "MEDIUM",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  i ..."
+        "title": "kernel: kernel: Information disclosure via IPv6 UDP route exception cache side channel"
       },
       {
         "id": "CVE-2026-99077",
@@ -35100,14 +35044,6 @@
         "title": "kernel: xfs: release orphanage dir inode if chown fails"
       },
       {
-        "id": "CVE-2026-98449",
-        "pkg": "linux-libc-dev",
-        "installedVersion": "6.12.101-1",
-        "fixedVersion": "6.12.117-1",
-        "severity": "LOW",
-        "title": "In the Linux kernel, the following vulnerability has been resolved:  s ..."
-      },
-      {
         "id": "CVE-2026-98450",
         "pkg": "linux-libc-dev",
         "installedVersion": "6.12.101-1",
@@ -35418,6 +35354,14 @@
         "fixedVersion": "6.12.117-1",
         "severity": "LOW",
         "title": "kernel: smb: client: flush and commit data before querying allocated ranges"
+      },
+      {
+        "id": "CVE-2026-98685",
+        "pkg": "linux-libc-dev",
+        "installedVersion": "6.12.101-1",
+        "fixedVersion": "6.12.117-1",
+        "severity": "LOW",
+        "title": "kernel: smb: client: discard post-EOF pagecache when extending a file via clone range"
       },
       {
         "id": "CVE-2026-98686",
@@ -36612,22 +36556,6 @@
         "title": "gnu-ncurses: ncurses Stack Buffer Overflow"
       },
       {
-        "id": "CVE-2026-107494",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
-      },
-      {
         "id": "CVE-2026-14456",
         "pkg": "openssl",
         "installedVersion": "3.5.6-1~deb13u2",
@@ -36906,22 +36834,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
-      },
-      {
-        "id": "CVE-2026-107494",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: OpenSSL: Denial of Service via unbounded QUIC frame queueing"
-      },
-      {
-        "id": "CVE-2026-124709",
-        "pkg": "openssl-provider-legacy",
-        "installedVersion": "3.5.6-1~deb13u2",
-        "fixedVersion": "None",
-        "severity": "HIGH",
-        "title": "openssl: openssl: Denial of Service via memory leak in QUIC stream handling"
       },
       {
         "id": "CVE-2026-14456",
@@ -37377,7 +37289,7 @@
         "installedVersion": "5.40.1-6",
         "fixedVersion": "None",
         "severity": "UNKNOWN",
-        "title": "Title Not Available"
+        "title": "CVE-2026-40558"
       },
       {
         "id": "CVE-2026-5958",

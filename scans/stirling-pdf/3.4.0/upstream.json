@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-26T09:16:23.394Z",
+  "scannedAt": "2026-11-27T09:29:22.560Z",
   "system": {
-    "total": 640,
+    "total": 560,
     "cves": [
       {
         "id": "CVE-2026-109518",
@@ -375,7 +375,7 @@
         "id": "CVE-2026-90781",
         "pkg": "libasound2-data",
         "installedVersion": "1.2.11-1ubuntu0.3",
-        "fixedVersion": "None",
+        "fixedVersion": "1.2.11-1ubuntu0.5",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
       },
@@ -383,7 +383,7 @@
         "id": "CVE-2026-96674",
         "pkg": "libasound2-data",
         "installedVersion": "1.2.11-1ubuntu0.3",
-        "fixedVersion": "None",
+        "fixedVersion": "1.2.11-1ubuntu0.5",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
       },
@@ -391,7 +391,7 @@
         "id": "CVE-2026-90781",
         "pkg": "libasound2t64",
         "installedVersion": "1.2.11-1ubuntu0.3",
-        "fixedVersion": "None",
+        "fixedVersion": "1.2.11-1ubuntu0.5",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Denial of Service via off-by-one stack buffer overflow"
       },
@@ -399,7 +399,7 @@
         "id": "CVE-2026-96674",
         "pkg": "libasound2t64",
         "installedVersion": "1.2.11-1ubuntu0.3",
-        "fixedVersion": "None",
+        "fixedVersion": "1.2.11-1ubuntu0.5",
         "severity": "MEDIUM",
         "title": "alsa-lib: alsa-lib: Integer Overflow via Crafted Topology Files"
       },
@@ -860,60 +860,12 @@
         "title": "FFmpeg: FFmpeg: Integer overflow and out-of-bounds write via CENC subsample data"
       },
       {
-        "id": "CVE-2026-58049",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream"
-      },
-      {
         "id": "CVE-2026-6385",
         "pkg": "libavcodec60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Denial of Service and potential arbitrary code execution via signed integer overflow in DVD subtitle parser"
-      },
-      {
-        "id": "CVE-2026-64830",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer."
-      },
-      {
-        "id": "CVE-2026-64832",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder"
-      },
-      {
-        "id": "CVE-2026-64833",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer"
-      },
-      {
-        "id": "CVE-2026-64834",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: Denial of Service via crafted RTP/ASF stream"
-      },
-      {
-        "id": "CVE-2026-64835",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files"
       },
       {
         "id": "CVE-2026-65703",
@@ -948,36 +900,12 @@
         "title": "FFmpeg: FFmpeg: Arbitrary Code Execution via Crafted Video Frame"
       },
       {
-        "id": "CVE-2026-66036",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter"
-      },
-      {
         "id": "CVE-2026-66038",
         "pkg": "libavcodec60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "FFmpeg: Information disclosure via malformed zlib video stream"
-      },
-      {
-        "id": "CVE-2026-66039",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file"
-      },
-      {
-        "id": "CVE-2026-70628",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser"
       },
       {
         "id": "CVE-2026-70629",
@@ -988,60 +916,12 @@
         "title": "ffmpeg: FFmpeg: Information disclosure via uninitialized heap memory read in RSCC decoder"
       },
       {
-        "id": "CVE-2026-70632",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File"
-      },
-      {
         "id": "CVE-2026-71212",
         "pkg": "libavcodec60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "xidown (a yt-dlp/ffmpeg GUI wrapper) builds its yt-dlp command-li ..."
-      },
-      {
-        "id": "CVE-2026-75141",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Heap buffer overflow via crafted HEVC input file during muxing"
-      },
-      {
-        "id": "CVE-2026-75142",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer"
-      },
-      {
-        "id": "CVE-2026-75143",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader"
-      },
-      {
-        "id": "CVE-2026-75144",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit"
-      },
-      {
-        "id": "CVE-2026-75146",
-        "pkg": "libavcodec60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
         "id": "CVE-2026-75147",
@@ -1452,60 +1332,12 @@
         "title": "FFmpeg: FFmpeg: Integer overflow and out-of-bounds write via CENC subsample data"
       },
       {
-        "id": "CVE-2026-58049",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream"
-      },
-      {
         "id": "CVE-2026-6385",
         "pkg": "libavformat60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Denial of Service and potential arbitrary code execution via signed integer overflow in DVD subtitle parser"
-      },
-      {
-        "id": "CVE-2026-64830",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer."
-      },
-      {
-        "id": "CVE-2026-64832",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder"
-      },
-      {
-        "id": "CVE-2026-64833",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer"
-      },
-      {
-        "id": "CVE-2026-64834",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: Denial of Service via crafted RTP/ASF stream"
-      },
-      {
-        "id": "CVE-2026-64835",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files"
       },
       {
         "id": "CVE-2026-65703",
@@ -1540,36 +1372,12 @@
         "title": "FFmpeg: FFmpeg: Arbitrary Code Execution via Crafted Video Frame"
       },
       {
-        "id": "CVE-2026-66036",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter"
-      },
-      {
         "id": "CVE-2026-66038",
         "pkg": "libavformat60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "FFmpeg: Information disclosure via malformed zlib video stream"
-      },
-      {
-        "id": "CVE-2026-66039",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file"
-      },
-      {
-        "id": "CVE-2026-70628",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser"
       },
       {
         "id": "CVE-2026-70629",
@@ -1580,60 +1388,12 @@
         "title": "ffmpeg: FFmpeg: Information disclosure via uninitialized heap memory read in RSCC decoder"
       },
       {
-        "id": "CVE-2026-70632",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File"
-      },
-      {
         "id": "CVE-2026-71212",
         "pkg": "libavformat60",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "xidown (a yt-dlp/ffmpeg GUI wrapper) builds its yt-dlp command-li ..."
-      },
-      {
-        "id": "CVE-2026-75141",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Heap buffer overflow via crafted HEVC input file during muxing"
-      },
-      {
-        "id": "CVE-2026-75142",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer"
-      },
-      {
-        "id": "CVE-2026-75143",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader"
-      },
-      {
-        "id": "CVE-2026-75144",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit"
-      },
-      {
-        "id": "CVE-2026-75146",
-        "pkg": "libavformat60",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
         "id": "CVE-2026-75147",
@@ -2044,60 +1804,12 @@
         "title": "FFmpeg: FFmpeg: Integer overflow and out-of-bounds write via CENC subsample data"
       },
       {
-        "id": "CVE-2026-58049",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream"
-      },
-      {
         "id": "CVE-2026-6385",
         "pkg": "libavutil58",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Denial of Service and potential arbitrary code execution via signed integer overflow in DVD subtitle parser"
-      },
-      {
-        "id": "CVE-2026-64830",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer."
-      },
-      {
-        "id": "CVE-2026-64832",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder"
-      },
-      {
-        "id": "CVE-2026-64833",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer"
-      },
-      {
-        "id": "CVE-2026-64834",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: Denial of Service via crafted RTP/ASF stream"
-      },
-      {
-        "id": "CVE-2026-64835",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files"
       },
       {
         "id": "CVE-2026-65703",
@@ -2132,36 +1844,12 @@
         "title": "FFmpeg: FFmpeg: Arbitrary Code Execution via Crafted Video Frame"
       },
       {
-        "id": "CVE-2026-66036",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter"
-      },
-      {
         "id": "CVE-2026-66038",
         "pkg": "libavutil58",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "FFmpeg: Information disclosure via malformed zlib video stream"
-      },
-      {
-        "id": "CVE-2026-66039",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file"
-      },
-      {
-        "id": "CVE-2026-70628",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser"
       },
       {
         "id": "CVE-2026-70629",
@@ -2172,60 +1860,12 @@
         "title": "ffmpeg: FFmpeg: Information disclosure via uninitialized heap memory read in RSCC decoder"
       },
       {
-        "id": "CVE-2026-70632",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File"
-      },
-      {
         "id": "CVE-2026-71212",
         "pkg": "libavutil58",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "xidown (a yt-dlp/ffmpeg GUI wrapper) builds its yt-dlp command-li ..."
-      },
-      {
-        "id": "CVE-2026-75141",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Heap buffer overflow via crafted HEVC input file during muxing"
-      },
-      {
-        "id": "CVE-2026-75142",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer"
-      },
-      {
-        "id": "CVE-2026-75143",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader"
-      },
-      {
-        "id": "CVE-2026-75144",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit"
-      },
-      {
-        "id": "CVE-2026-75146",
-        "pkg": "libavutil58",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
         "id": "CVE-2026-75147",
@@ -2444,52 +2084,12 @@
         "title": "cJSON: out-of-bounds access in decode_array_index_from_pointer() in cJSON_Utils.c via crafted JSON pointer strings"
       },
       {
-        "id": "CVE-2026-16554",
-        "pkg": "libcjson1",
-        "installedVersion": "1.7.17-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cJSON: cJSON: Remote code execution due to integer overflow via crafted JSON"
-      },
-      {
-        "id": "CVE-2026-29036",
-        "pkg": "libcjson1",
-        "installedVersion": "1.7.17-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cJSON: cJSON: Data corruption and unauthorized modification via JSON Pointer escape decoding"
-      },
-      {
-        "id": "CVE-2026-67215",
-        "pkg": "libcjson1",
-        "installedVersion": "1.7.17-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cJSON: cJSON: Denial of Service via uncontrolled recursion in JSON Patch application"
-      },
-      {
-        "id": "CVE-2026-67216",
-        "pkg": "libcjson1",
-        "installedVersion": "1.7.17-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cJSON: Denial of Service due to inefficient JSON object comparison"
-      },
-      {
         "id": "CVE-2026-67217",
         "pkg": "libcjson1",
         "installedVersion": "1.7.17-1",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "cJSON: cJSON: Data destruction due to non-atomic JSON Patch application"
-      },
-      {
-        "id": "CVE-2026-87933",
-        "pkg": "libcjson1",
-        "installedVersion": "1.7.17-1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "cJSON: cJSON: Memory corruption via use after free in cJSONUtils_MergePatch"
       },
       {
         "id": "CVE-2026-55480",
@@ -2578,38 +2178,6 @@
         "fixedVersion": "2.6.1-2ubuntu0.7",
         "severity": "MEDIUM",
         "title": "expat: expat: Denial of Service via integer overflow in expat_realloc"
-      },
-      {
-        "id": "CVE-2026-113351",
-        "pkg": "libexpat1",
-        "installedVersion": "2.6.1-2ubuntu0.6",
-        "fixedVersion": "2.6.1-2ubuntu0.7",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset"
-      },
-      {
-        "id": "CVE-2026-115506",
-        "pkg": "libexpat1",
-        "installedVersion": "2.6.1-2ubuntu0.6",
-        "fixedVersion": "2.6.1-2ubuntu0.7",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via delayed entity amplification detection"
-      },
-      {
-        "id": "CVE-2026-117610",
-        "pkg": "libexpat1",
-        "installedVersion": "2.6.1-2ubuntu0.6",
-        "fixedVersion": "2.6.1-2ubuntu0.7",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing"
-      },
-      {
-        "id": "CVE-2026-118370",
-        "pkg": "libexpat1",
-        "installedVersion": "2.6.1-2ubuntu0.6",
-        "fixedVersion": "2.6.1-2ubuntu0.7",
-        "severity": "MEDIUM",
-        "title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing"
       },
       {
         "id": "CVE-2026-124317",
@@ -3684,6 +3252,14 @@
         "title": "stress-test master commit e4c878 was discovered to contain a FPE vulne ..."
       },
       {
+        "id": "CVE-2026-131844",
+        "pkg": "libpoppler134",
+        "installedVersion": "24.02.0-1ubuntu9.11",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Poppler through 26.11.0 contains an uncontrolled memory allocatio ..."
+      },
+      {
         "id": "CVE-2026-93311",
         "pkg": "libpoppler134",
         "installedVersion": "24.02.0-1ubuntu9.11",
@@ -3706,30 +3282,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
-      },
-      {
-        "id": "CVE-2026-7210",
-        "pkg": "libpython3.12-minimal",
-        "installedVersion": "3.12.3-1ubuntu0.17",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "python: Python/Expat: Denial of Service via crafted XML document"
-      },
-      {
-        "id": "CVE-2026-7210",
-        "pkg": "libpython3.12-stdlib",
-        "installedVersion": "3.12.3-1ubuntu0.17",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "python: Python/Expat: Denial of Service via crafted XML document"
-      },
-      {
-        "id": "CVE-2026-7210",
-        "pkg": "libpython3.12t64",
-        "installedVersion": "3.12.3-1ubuntu0.17",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "python: Python/Expat: Denial of Service via crafted XML document"
       },
       {
         "id": "CVE-2026-112060",
@@ -3788,22 +3340,6 @@
         "title": "sqlite: sqlite: Denial of Service via use-after-free in full-text search"
       },
       {
-        "id": "CVE-2026-119373",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.45.1-1ubuntu2.8",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5"
-      },
-      {
-        "id": "CVE-2026-119374",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.45.1-1ubuntu2.8",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index"
-      },
-      {
         "id": "CVE-2026-119375",
         "pkg": "libsqlite3-0",
         "installedVersion": "3.45.1-1ubuntu2.8",
@@ -3834,14 +3370,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "sqlite: sqlite: Denial of Service via use-after-free in R-Tree extension"
-      },
-      {
-        "id": "CVE-2026-119379",
-        "pkg": "libsqlite3-0",
-        "installedVersion": "3.45.1-1ubuntu2.8",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "sqlite: sqlite: Arbitrary code execution via crafted session changesets"
       },
       {
         "id": "CVE-2026-119591",
@@ -4252,60 +3780,12 @@
         "title": "FFmpeg: FFmpeg: Integer overflow and out-of-bounds write via CENC subsample data"
       },
       {
-        "id": "CVE-2026-58049",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Memory corruption via crafted RASC video stream"
-      },
-      {
         "id": "CVE-2026-6385",
         "pkg": "libswresample4",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "ffmpeg: FFmpeg: Denial of Service and potential arbitrary code execution via signed integer overflow in DVD subtitle parser"
-      },
-      {
-        "id": "CVE-2026-64830",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via heap buffer overflow in VobSub subtitle demuxer."
-      },
-      {
-        "id": "CVE-2026-64832",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video file in NVDEC hardware decoder"
-      },
-      {
-        "id": "CVE-2026-64833",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in S/PDIF muxer"
-      },
-      {
-        "id": "CVE-2026-64834",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: Denial of Service via crafted RTP/ASF stream"
-      },
-      {
-        "id": "CVE-2026-64835",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "FFmpeg: FFmpeg: Arbitrary code execution, information disclosure, or denial of service via crafted ADX/AAX audio files"
       },
       {
         "id": "CVE-2026-65703",
@@ -4340,36 +3820,12 @@
         "title": "FFmpeg: FFmpeg: Arbitrary Code Execution via Crafted Video Frame"
       },
       {
-        "id": "CVE-2026-66036",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted video in vf_hqdn3d filter"
-      },
-      {
         "id": "CVE-2026-66038",
         "pkg": "libswresample4",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "FFmpeg: Information disclosure via malformed zlib video stream"
-      },
-      {
-        "id": "CVE-2026-66039",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted CAF file"
-      },
-      {
-        "id": "CVE-2026-70628",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary code execution via crafted WTV file in DVB subtitle parser"
       },
       {
         "id": "CVE-2026-70629",
@@ -4380,60 +3836,12 @@
         "title": "ffmpeg: FFmpeg: Information disclosure via uninitialized heap memory read in RSCC decoder"
       },
       {
-        "id": "CVE-2026-70632",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Arbitrary Code Execution in CFHD Decoder via Crafted AVI File"
-      },
-      {
         "id": "CVE-2026-71212",
         "pkg": "libswresample4",
         "installedVersion": "7:6.1.1-3ubuntu5",
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "xidown (a yt-dlp/ffmpeg GUI wrapper) builds its yt-dlp command-li ..."
-      },
-      {
-        "id": "CVE-2026-75141",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Heap buffer overflow via crafted HEVC input file during muxing"
-      },
-      {
-        "id": "CVE-2026-75142",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Stack Buffer Overflow in MPEG-PS Muxer"
-      },
-      {
-        "id": "CVE-2026-75143",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg Heap Buffer Overflow via RIST Protocol Reader"
-      },
-      {
-        "id": "CVE-2026-75144",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Memory corruption via crafted Dirac data unit"
-      },
-      {
-        "id": "CVE-2026-75146",
-        "pkg": "libswresample4",
-        "installedVersion": "7:6.1.1-3ubuntu5",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "ffmpeg: FFmpeg: Information disclosure and denial of service via out-of-bounds read in DASH demuxer"
       },
       {
         "id": "CVE-2026-75147",
@@ -4583,7 +3991,7 @@
         "id": "CVE-2026-12912",
         "pkg": "libtiff6",
         "installedVersion": "4.5.1+git230720-4ubuntu2.5",
-        "fixedVersion": "None",
+        "fixedVersion": "4.5.1+git230720-4ubuntu2.6",
         "severity": "MEDIUM",
         "title": "libtiff: libtiff: Heap-based buffer overflow via crafted PixarLog-compressed TIFF image"
       },
@@ -4591,7 +3999,7 @@
         "id": "CVE-2026-4775",
         "pkg": "libtiff6",
         "installedVersion": "4.5.1+git230720-4ubuntu2.5",
-        "fixedVersion": "None",
+        "fixedVersion": "4.5.1+git230720-4ubuntu2.6",
         "severity": "MEDIUM",
         "title": "libtiff: libtiff: Arbitrary code execution or denial of service via signed integer overflow in TIFF file processing"
       },
@@ -4644,22 +4052,6 @@
         "title": "Insufficient tracking and releasing of allocated used memory in libx26 ..."
       },
       {
-        "id": "CVE-2026-109089",
-        "pkg": "libxi6",
-        "installedVersion": "2:1.8.1-1build1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "libXi: libXi: Arbitrary code execution via DEVICE_RESOLUTION heap-based buffer overflow"
-      },
-      {
-        "id": "CVE-2026-109090",
-        "pkg": "libxi6",
-        "installedVersion": "2:1.8.1-1build1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "libXi: libXi: Arbitrary code execution via oversized DEVICE_ENABLE reply"
-      },
-      {
         "id": "CVE-2026-93541",
         "pkg": "libxi6",
         "installedVersion": "2:1.8.1-1build1",
@@ -4671,7 +4063,7 @@
         "id": "CVE-2026-93542",
         "pkg": "libxi6",
         "installedVersion": "2:1.8.1-1build1",
-        "fixedVersion": "None",
+        "fixedVersion": "2:1.8.1-1ubuntu0.1",
         "severity": "MEDIUM",
         "title": "libXi: libXi: Denial of Service via out-of-bounds read during XI2 class parsing"
       },
@@ -4679,7 +4071,7 @@
         "id": "CVE-2026-93543",
         "pkg": "libxi6",
         "installedVersion": "2:1.8.1-1build1",
-        "fixedVersion": "None",
+        "fixedVersion": "2:1.8.1-1ubuntu0.1",
         "severity": "MEDIUM",
         "title": "libXi: libXi: Denial of Service via out-of-bounds read in XI2 class parser"
       },
@@ -4714,14 +4106,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "libXi: libXi: Denial of Service via out-of-bounds read in XI2 event processing"
-      },
-      {
-        "id": "CVE-2026-88807",
-        "pkg": "libxrender1",
-        "installedVersion": "1:0.9.10-1.1build1",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "libXrender: libXrender: Code injection via heap overflow in RenderQueryPictFormats"
       },
       {
         "id": "CVE-2025-10911",
@@ -4916,6 +4300,14 @@
         "title": "Pod::Text versions before 6.1.1 for Perl allow CPU and memory exhausti ..."
       },
       {
+        "id": "CVE-2026-131844",
+        "pkg": "poppler-utils",
+        "installedVersion": "24.02.0-1ubuntu9.11",
+        "fixedVersion": "None",
+        "severity": "MEDIUM",
+        "title": "Poppler through 26.11.0 contains an uncontrolled memory allocatio ..."
+      },
+      {
         "id": "CVE-2026-93311",
         "pkg": "poppler-utils",
         "installedVersion": "24.02.0-1ubuntu9.11",
@@ -4938,22 +4330,6 @@
         "fixedVersion": "None",
         "severity": "LOW",
         "title": "poppler: recursive function call in JBIG2Stream::readGenericBitmap() in JBIG2Stream.cc causing denial of service"
-      },
-      {
-        "id": "CVE-2026-7210",
-        "pkg": "python3.12",
-        "installedVersion": "3.12.3-1ubuntu0.17",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "python: Python/Expat: Denial of Service via crafted XML document"
-      },
-      {
-        "id": "CVE-2026-7210",
-        "pkg": "python3.12-minimal",
-        "installedVersion": "3.12.3-1ubuntu0.17",
-        "fixedVersion": "None",
-        "severity": "MEDIUM",
-        "title": "python: Python/Expat: Denial of Service via crafted XML document"
       },
       {
         "id": "CVE-2026-121876",
@@ -5106,22 +4482,6 @@
         "fixedVersion": "None",
         "severity": "MEDIUM",
         "title": "tesseract: Tesseract: Denial of Service via crafted model with empty stack dereference"
-      },
-      {
-        "id": "CVE-2023-5574",
-        "pkg": "xserver-common",
-        "installedVersion": "2:21.1.12-1ubuntu1.9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
-      },
-      {
-        "id": "CVE-2023-5574",
-        "pkg": "xvfb",
-        "installedVersion": "2:21.1.12-1ubuntu1.9",
-        "fixedVersion": "None",
-        "severity": "LOW",
-        "title": "xorg-x11-server: Use-after-free bug in DamageDestroy"
       }
     ]
   },
