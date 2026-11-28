@@ -410,13 +410,19 @@
       "image": "neosmemo/memos",
       "tag_pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$",
       "active_versions": [
+        "26.11.3",
         "26.11.2",
         "26.11.1",
         "26.11",
-        "26.10",
-        "0.31.0"
+        "26.10"
       ],
-      "deprecated_versions": []
+      "deprecated_versions": [
+        {
+          "tag": "0.31.0",
+          "droppedAt": "2026-11-28",
+          "advisory": "UNSUPPORTED: Version fell outside the 5-release support window. Upgrade to 26.11.3 immediately."
+        }
+      ]
     },
     {
       "id": "filebrowser",
