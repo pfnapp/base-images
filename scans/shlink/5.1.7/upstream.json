@@ -1,7 +1,7 @@
 {
-  "scannedAt": "2026-11-27T09:30:17.071Z",
+  "scannedAt": "2026-11-28T08:47:11.204Z",
   "system": {
-    "total": 211,
+    "total": 218,
     "cves": [
       {
         "id": "CVE-2026-33630",
@@ -778,6 +778,62 @@
         "fixedVersion": "3.5.9-r1",
         "severity": "LOW",
         "title": "openssl: OpenSSL: Message authentication bypass via zero-length AAD update"
+      },
+      {
+        "id": "CVE-2026-11979",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "HIGH",
+        "title": "libxml2: libxml2: Arbitrary code execution in xmlcatalog utility via buffer overflow"
+      },
+      {
+        "id": "CVE-2026-0990",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via uncontrolled recursion in XML catalog processing"
+      },
+      {
+        "id": "CVE-2026-1757",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "MEDIUM",
+        "title": "libxml2: Memory Leak Leading to Local Denial of Service in xmllint Interactive Shell"
+      },
+      {
+        "id": "CVE-2026-86137",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "MEDIUM",
+        "title": "libxml2: libxml2: Denial of Service via out-of-bounds read in xmlFAParsePosCharGroup"
+      },
+      {
+        "id": "CVE-2026-0989",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "LOW",
+        "title": "libxml2: Unbounded RelaxNG Include Recursion Leading to Stack Overflow"
+      },
+      {
+        "id": "CVE-2026-0992",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service via crafted XML catalogs"
+      },
+      {
+        "id": "CVE-2026-86141",
+        "pkg": "libxml2",
+        "installedVersion": "2.13.9-r1",
+        "fixedVersion": "2.13.9-r2",
+        "severity": "LOW",
+        "title": "libxml2: libxml2: Denial of Service due to NULL pointer dereference in xmlRegNewParserCtxt"
       },
       {
         "id": "CVE-2026-107891",
@@ -2164,15 +2220,15 @@
         "id": "CVE-2026-135803",
         "pkg": "symfony/filesystem",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "7.2.0, 7.4.0, 7.4.23, 8.1.0, 6.1.0, 6.4.0, 7.1.0, 7.3.0, 8.1.11, 5.4.56, 6.2.0, 6.3.0, 6.4.50",
+        "fixedVersion": "6.1.0, 6.2.0, 6.4.0, 6.4.50, 7.4.0, 7.4.23, 8.1.0, 8.1.11, 5.4.56, 6.3.0, 7.1.0, 7.2.0, 7.3.0",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-135803: Filesystem Path Treats Any Prefix Before \"://\" as a Root, Letting Paths Escape Their Base Directory"
+        "title": "Most methods of Symfony\\Component\\Filesystem\\Path rely on Path::split( ..."
       },
       {
         "id": "CVE-2026-121971",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "5.1.0, 5.2.0, 5.4.56, 7.2.0, 7.4.0, 7.4.23, 4.4.0, 5.0.0, 5.4.0, 6.2.0, 6.4.0, 8.1.0, 6.1.0, 7.3.0, 8.1.11, 5.3.0, 6.3.0, 6.4.50, 7.1.0",
+        "fixedVersion": "5.3.0, 5.4.56, 6.3.0, 8.1.11, 5.0.0, 6.2.0, 6.4.0, 7.1.0, 7.2.0, 5.1.0, 5.2.0, 5.4.0, 6.1.0, 7.4.0, 7.3.0, 7.4.23, 8.1.0, 6.4.50, 4.4.0",
         "severity": "HIGH",
         "title": "symfony/http-client: symfony/http-client: Information disclosure via relative URL handling"
       },
@@ -2180,7 +2236,7 @@
         "id": "CVE-2026-123119",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "8.1.11, 4.4.0, 6.3.0, 6.4.0, 7.4.23, 5.3.0, 6.1.0, 6.2.0, 7.2.0, 7.4.0, 5.0.0, 5.4.0, 6.4.50, 7.1.0, 5.1.0, 5.2.0, 5.4.56, 7.3.0, 8.1.0",
+        "fixedVersion": "5.4.56, 6.4.0, 5.1.0, 6.1.0, 8.1.11, 5.0.0, 5.2.0, 6.2.0, 6.4.50, 7.2.0, 7.3.0, 6.3.0, 7.1.0, 7.4.0, 7.4.23, 8.1.0, 4.4.0, 5.3.0, 5.4.0",
         "severity": "UNKNOWN",
         "title": "The Symfony HttpClient componentNoPrivateNetworkHttpClientdoes not pin ..."
       },
@@ -2204,7 +2260,7 @@
         "id": "CVE-2026-133758",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.3.0, 7.4.0, 7.4.24, 8.1.0, 8.1.12, 5.4.57, 6.4.51, 7.2.0",
+        "fixedVersion": "6.4.51, 7.2.0, 7.3.0, 7.4.0, 7.4.24, 8.1.0, 8.1.12, 5.4.57",
         "severity": "UNKNOWN",
         "title": "Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpCli ..."
       },
@@ -2212,7 +2268,7 @@
         "id": "CVE-2026-134792",
         "pkg": "symfony/http-client",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "5.4.0, 6.2.0, 7.1.0, 7.2.0, 5.0.0, 6.3.0, 6.4.0, 7.4.24, 8.1.0, 5.2.0, 6.4.51, 7.3.0, 5.1.0, 5.3.0, 5.4.57, 6.1.0, 7.4.0, 8.1.12",
+        "fixedVersion": "5.2.0, 6.4.51, 5.1.0, 5.4.0, 6.2.0, 6.3.0, 7.1.0, 8.1.12, 5.0.0, 6.4.0, 7.2.0, 7.4.24, 8.1.0, 7.3.0, 5.3.0, 5.4.57, 6.1.0, 7.4.0",
         "severity": "UNKNOWN",
         "title": "When the proxy option isn't set, HttpClient takes the proxy from envir ..."
       },
@@ -2220,7 +2276,7 @@
         "id": "CVE-2026-118514",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "3.0.0, 5.1.0, 6.3.0, 7.1.0, 8.1.0, 8.1.11, 4.0.0, 5.3.0, 5.4.0, 5.4.56, 6.1.0, 6.2.0, 6.4.0, 7.4.23, 5.0.0, 5.2.0, 6.4.50, 7.2.0, 7.3.0, 7.4.0",
+        "fixedVersion": "4.0.0, 5.3.0, 6.4.0, 7.1.0, 7.2.0, 8.1.11, 3.0.0, 5.4.0, 5.4.56, 6.2.0, 6.3.0, 5.0.0, 5.2.0, 6.1.0, 7.3.0, 8.1.0, 5.1.0, 6.4.50, 7.4.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "In Symfony http-foundation prior to versions 5.4.56, 6.4.50, 7.4.23, a ..."
       },
@@ -2228,7 +2284,7 @@
         "id": "CVE-2026-121619",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "7.3.0, 7.4.0, 7.4.23, 8.1.0, 8.1.11",
+        "fixedVersion": "8.1.0, 8.1.11, 7.3.0, 7.4.0, 7.4.23",
         "severity": "UNKNOWN",
         "title": "The \"private_ranges\" Trusted Proxies Shortcut Trusts Clients Presenting an IPv4-Mapped, 6to4, Teredo or NAT64 Address as Reverse Proxies"
       },
@@ -2236,7 +2292,7 @@
         "id": "CVE-2026-133748",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "5.4.0, 5.4.57, 6.2.0, 6.3.0, 6.4.0, 7.3.0, 7.4.23, 3.0.0, 4.0.0, 5.0.0, 5.1.0, 5.2.0, 6.1.0, 7.2.0, 6.4.50, 7.1.0, 8.1.0, 5.3.0, 7.4.0, 8.1.11",
+        "fixedVersion": "4.0.0, 7.1.0, 3.0.0, 5.0.0, 5.2.0, 6.3.0, 6.4.0, 7.2.0, 5.3.0, 6.2.0, 7.4.0, 7.4.23, 8.1.0, 8.1.11, 5.1.0, 5.4.0, 5.4.57, 6.1.0, 6.4.50, 7.3.0",
         "severity": "UNKNOWN",
         "title": "NoPrivateNetworkHttpClient accepts a list of subnets to block instead  ..."
       },
@@ -2244,23 +2300,23 @@
         "id": "CVE-2026-135801",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "6.4.50, 7.4.0, 7.4.23, 8.1.0, 8.1.11, 5.4.56",
+        "fixedVersion": "8.1.0, 8.1.11, 5.4.56, 6.4.50, 7.4.0, 7.4.23",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-135801: Path Rules Enforced in Front of PHP Can Be Bypassed by Appending the Path to the Script Name"
+        "title": "Since the fix for CVE-2025-64500, Request::getPathInfo() strips the sc ..."
       },
       {
         "id": "CVE-2026-135802",
         "pkg": "symfony/http-foundation",
         "installedVersion": "v8.1.7",
-        "fixedVersion": "2.1.0, 2.4.0, 5.1.0, 5.4.56, 8.1.11, 2.3.0, 3.0.0, 6.4.50, 4.2.0, 6.2.0, 2.2.0, 3.3.0, 6.1.0, 6.4.0, 7.1.0, 2.7.0, 3.4.0, 4.1.0, 5.4.0, 6.3.0, 7.4.0, 2.8.0, 4.0.0, 4.4.0, 7.2.0, 2.6.0, 3.2.0, 4.3.0, 5.0.0, 5.3.0, 7.4.23, 8.1.0, 2.5.0, 3.1.0, 5.2.0, 7.3.0",
+        "fixedVersion": "7.3.0, 7.4.23, 4.3.0, 5.1.0, 5.3.0, 3.4.0, 2.1.0, 6.1.0, 7.1.0, 6.2.0, 7.2.0, 4.2.0, 2.4.0, 2.6.0, 2.8.0, 4.1.0, 7.4.0, 2.3.0, 4.4.0, 5.2.0, 6.3.0, 2.5.0, 5.0.0, 5.4.0, 5.4.56, 6.4.0, 8.1.0, 8.1.11, 3.2.0, 3.3.0, 4.0.0, 3.1.0, 2.2.0, 2.7.0, 3.0.0, 6.4.50",
         "severity": "UNKNOWN",
-        "title": "CVE-2026-135802: Generated URLs Can Point to a Host Chosen by the Client"
+        "title": "When Request::getBaseUrl() does not find the script name at the start  ..."
       },
       {
         "id": "CVE-2026-123792",
         "pkg": "symfony/yaml",
         "installedVersion": "v8.1.6",
-        "fixedVersion": "8.1.11, 5.4.0, 6.2.0, 6.4.0, 7.4.0, 5.1.0, 5.4.56, 7.3.0, 7.4.23, 8.1.0, 3.0.0, 5.0.0, 5.2.0, 5.3.0, 6.1.0, 6.4.50, 7.1.0, 7.2.0, 4.0.0, 6.3.0",
+        "fixedVersion": "3.0.0, 4.0.0, 5.2.0, 6.1.0, 6.2.0, 6.4.50, 7.1.0, 8.1.0, 5.0.0, 5.1.0, 5.4.56, 6.3.0, 6.4.0, 7.4.23, 8.1.11, 5.3.0, 7.3.0, 7.4.0, 5.4.0, 7.2.0",
         "severity": "UNKNOWN",
         "title": "The Symfony Yaml componentsInlineandParser, parse some YAML documents  ..."
       }
